@@ -126,6 +126,14 @@ footer {
     background-color: #004080;
     color: white;
 }
+.privacy a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: hsla(0, 0%, 0%, 0.49);
+}
+.privacy a:hover{
+    color: hsl(0, 0%, 0%);
+}
 
 
 @media (max-width: 768px) {
