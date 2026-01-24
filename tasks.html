@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RONNY BEST-TASKS</title>
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.32.1/minified.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <h1>Ronny Best – Advanced Math Tasks</h1>
+    <p>Practice • Solve • Learn step-by-step</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>Select Topic</h2>
+        <select id="topicSelect">
+            <option value="">Choose task category</option>
+            <option value="differentiation">Differentiation</option>
+            <option value="integration">Integration</option>
+            <option value="matrices">Matrices</option>
+            <option value="vectors">Vectors</option>
+            <option value="areas">Areas of shapes</option>
+            <option value="volumes">Volumes of solids</option>
+        </select>
+        <button id="generateTaskBtn">Generate Task</button>
+    </section>
+
+    <section>
+        <h2>Task</h2>
+        <div id="taskDisplay" class="math"></div>
+        <input type="text" id="answerInput" placeholder="Enter your answer here">
+        <button id="submitAnswer">Check Answer</button>
+        <div id="resultDisplay"></div>
+        <div id="solutionSteps" class="math"></div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Ask Any Math Question</h2>
+        <textarea id="freeQuestion" placeholder="Type any mathematics question here..."></textarea>
+        <button id="solveFreeQuestion">Solve Question</button>
+        <div id="freeAnswer"></div>
+        <div id="freeSteps"></div>
+    </section>
+
+    <section>
+        <h3>Upload or Scan Question</h3>
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="scanImageBtn">Scan & Solve</button>
+        <div id="ocrStatus"></div>
+        <div id="userQuestion" class="math"></div>
+        <div id="userSolution" class="math"></div>
+    </section>
+</div>
+
+<script src="tasks.js"></script>
+</body>
+</html>

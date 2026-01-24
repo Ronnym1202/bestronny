@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mind Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">
+    <link rel="stylesheet" href="mind.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 Mind Teaser Games</h1>
+    <p>Sharpen your brain while having fun!</p>
+</header>
+
+<div class="container">
+
+    <nav id="gameMenu">
+        <button onclick="showGame('memory')">Number Memory</button>
+        <button onclick="showGame('balance')">Equation Balancer</button>
+        <button onclick="showGame('prime')">Prime or Composite</button>
+        <button onclick="showGame('fraction')">Fraction Matcher</button>
+        <button onclick="showGame('speed')">Speed Math</button>
+        <button onclick="showGame('pattern')">Pattern Predictor</button>
+    </nav>
+
+    <!-- GAME SCREENS -->
+
+    <!-- 1 NUMBER MEMORY -->
+    <section id="memory" class="game">
+        <h2>Number Memory</h2>
+        <p>Memorize the number shown and type it correctly.</p>
+        <div id="memoryDisplay" class="screen"></div>
+        <input type="text" id="memoryInput" placeholder="Enter number">
+        <button onclick="checkMemory()">Submit</button>
+        <p id="memoryResult"></p>
+    </section>
+
+    <!-- 2 EQUATION BALANCER -->
+    <section id="balance" class="game">
+        <h2>Equation Balancer</h2>
+        <p>Fill the missing number to make both sides equal.</p>
+        <div id="balanceQuestion" class="screen"></div>
+        <input type="number" id="balanceInput">
+        <button onclick="checkBalance()">Check</button>
+        <p id="balanceResult"></p>
+    </section>
+
+    <!-- 3 PRIME OR COMPOSITE -->
+    <section id="prime" class="game">
+        <h2>Prime or Composite?</h2>
+        <div id="primeNumber" class="screen"></div>
+        <button onclick="answerPrime(true)">Prime</button>
+        <button onclick="answerPrime(false)">Composite</button>
+        <p id="primeResult"></p>
+    </section>
+
+    <!-- 4 FRACTION MATCH -->
+    <section id="fraction" class="game">
+        <h2>Fraction Matcher</h2>
+        <p>Which fraction is equal?</p>
+        <div id="fractionQuestion" class="screen"></div>
+        <div id="fractionOptions"></div>
+        <p id="fractionResult"></p>
+    </section>
+
+    <!-- 5 SPEED MATH -->
+    <section id="speed" class="game">
+        <h2>Speed Math</h2>
+        <p>Solve as many as possible before time ends!</p>
+        <div id="speedQuestion" class="screen"></div>
+        <input id="speedInput" type="number">
+        <button onclick="checkSpeed()">Answer</button>
+        <p id="speedScore"></p>
+    </section>
+
+    <!-- 6 PATTERN GAME -->
+    <section id="pattern" class="game">
+        <h2>Pattern Predictor</h2>
+        <p>Find the next number in the sequence.</p>
+        <div id="patternQuestion" class="screen"></div>
+        <input id="patternInput" type="number">
+        <button onclick="checkPattern()">Check</button>
+        <p id="patternResult"></p>
+    </section>
+
+</div>
+
+<script src="mind.js"></script>
+</body>
+</html>
