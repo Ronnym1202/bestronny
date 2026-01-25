@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="index.css">
-        <link rel="icon" type="image/png" href="IMAGES/P.png">
-        <title>RONNY BEST LOGIN</title>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RONNY BEST APP</title>
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">
+    <link rel="stylesheet" href="index.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
      crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="container">
-            <h2>RONNY BEST LOGIN</h2>
-            <div class="signimg">
-                <img src="IMAGES/P2.png" alt="MATH IMAGE">
-                <p>IMPROVE YOUR MATH</p>
-            </div>
-            <div class="box1" >
-                <h3 id="title">SIGN IN</h3>
-                <label for="text">Username:</label>
-                <input type="text" id="username" placeholder="Enter Username...">
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter Password...">
-                <button id="signbtn">Sign In</button>
+</head>
+<body>
+    <header>
+        <h2 id="welcome"></h2>
+        <h1>RONNY BEST APP</h1>
+        <p>Welcome to Ronny Best App Improve Your Math.</p>
+    </header>
 
-                <p id="signtext">
-                    New Here? <span onclick="toggleForm()">SIGN UP</span>
-                </p>
-                <p id="message" class="message"></p>
-            </div>
-        </div>
+   <nav class="portal-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="main.html">Math Lessons</a></li>  
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="profile.html">Profile</a></li> 
+        <li><button id="log" onclick="logout()">Logout</button></li>
+    </ul>
+</nav>
 
-        <script src="index.js"></script>
-    </body>
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h2>MAIN</h2>
+                <p>Check Main Navigations Here.</p>
+                <a href="main.html">Go to Main</a>
+            </div>
+            <div class="card">
+                <h2>TASKS</h2>
+                <p>Here You Can Access Tasks.</p>
+                <a href="tasks.html">View Tasks</a>
+            </div>
+            <div class="card">
+                <h2>Other</h2>
+                <p>Mind tease from here.</p>
+                <a href="mind.html">View the programs</a>
+            </div>
+            <div class="card">
+                <h2>PROFILE</h2>
+                <p>Access Your Profile From Here.</p>
+                <a href="profile.html">View Your Profile</a>
+            </div>
+        </section>
+        <section class="public-lessons">
+    <h2>📚 Start Learning Math Now!</h2>
+    <p class="subtitle">Free math resources for students of all levels</p>
+    
+    <div class="lesson-grid">
+        <a href="main.html#trigonometric" class="lesson-card">
+            <div class="card-icon">📐</div>
+            <h3>Trigonometry</h3>
+            <p>Learn sine, cosine, tangent formulas and identities with step-by-step explanations.</p>
+            <span class="start-link">Start Learning →</span>
+        </a>
+        
+        <a href="main.html#algebra" class="lesson-card">
+            <div class="card-icon">🔢</div>
+            <h3>Algebra</h3>
+            <p>Master equations, functions, and complex numbers from basics to advanced topics.</p>
+            <span class="start-link">Start Learning →</span>
+        </a>
+        
+        <a href="main.html#differentiation" class="lesson-card">
+            <div class="card-icon">📈</div>
+            <h3>Calculus</h3>
+            <p>Differentiation and integration techniques with practical applications.</p>
+            <span class="start-link">Start Learning →</span>
+        </a>
+        
+        <a href="tasks.html" class="lesson-card">
+            <div class="card-icon">✏️</div>
+            <h3>Practice Problems</h3>
+            <p>Test your skills with interactive exercises and instant feedback.</p>
+            <span class="start-link">Start Practicing →</span>
+        </a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ronny Math App | For Students & Interested Members</p>
+        <h4>CALL US:</h4>
+        <h4>EMAIL: <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a></h4>
+        <h4>TEL.: +254-799188900</h4>
+        <p>WE VALUE YOU</p>
+        <h2 class="privacy"><a href="privacy.html">Privacy Policy</a></h2>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
 </html>

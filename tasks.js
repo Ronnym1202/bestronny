@@ -1,4 +1,22 @@
-
+document.addEventListener("DOMContentLoaded", function() {
+    const welcomeDiv = document.getElementById("welcomeMessage");
+    if (welcomeDiv) {
+        const user = localStorage.getItem("currentUser");
+        if (!user) {
+            welcomeDiv.innerHTML = 
+                '<p style="background:#fff3cd; padding:8px; border-radius:5px; margin:10px 0;">' +
+                '👋 <strong>Practice as guest!</strong> ' +
+                '<a href="login.html" style="color:#007bff; font-weight:bold;">Login</a> ' +
+                'to save your progress and track achievements.' +
+                '</p>';
+        } else {
+            welcomeDiv.innerHTML = 
+                '<p style="background:#d4edda; padding:8px; border-radius:5px; margin:10px 0;">' +
+                '👋 Welcome back, <strong>' + user + '</strong>! Your progress is being saved.' +
+                '</p>';
+        }
+    }
+});
 const topics = ['differentiation', 'integration', 'matrices', 'vectors', 'areas', 'volumes'];
 
 const taskFormulas = {
