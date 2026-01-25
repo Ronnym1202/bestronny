@@ -1,6 +1,8 @@
 const user = localStorage.getItem("currentUser");
 if(!user) {
-    window.location.href = "login.html";
+    if(window.location.pathname.includes("profile.html")) {
+        window.location.href = "login.html";
+    }
 }
 // --------- PROFILE TAB HANDLING ---------
 document.querySelectorAll(".tab").forEach(btn => {
