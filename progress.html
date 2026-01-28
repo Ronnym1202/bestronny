@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Progress Tracker - Ronny Best</title>
+    <link rel="stylesheet" href="progress.css">
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-box">
+            <div class="math-header">
+                <h1>📊 Your Math Progress</h1>
+                <p class="subtitle">Track your learning achievements automatically</p>
+            </div>
+
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <h3>Problems Solved</h3>
+                    <div class="stat-number" id="totalSolved">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Accuracy</h3>
+                    <div class="stat-number" id="accuracyRate">0%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Learning Time</h3>
+                    <div class="stat-number" id="learningTime">0 min</div>
+                </div>
+            </div>
+
+            <div class="auto-track-note">
+                <p>✅ <strong>No Login Required:</strong> Progress saves automatically in your browser</p>
+                <p>🎮 <strong>Play Any Game:</strong> All progress is tracked automatically</p>
+                <p>📱 <strong>Works Offline:</strong> Data stays on your device only</p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="mind.html" class="action-btn">Play Math Games</a>
+                <a href="tasks.html" class="action-btn">Practice Problems</a>
+                <a href="index.html" class="secondary-btn">Back to Home</a>
+            </div>
+            <div class="view-detailed">
+    <a href="achievements.html" style="color: #0066cc; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">
+        📈 View Detailed Progress Report →
+    </a>
+</div>
+<div class="progress-tips" style="background: #e8f4f8; border-radius: 10px; padding: 20px; margin: 25px 0; border-left: 5px solid #17a2b8;">
+    <h4 style="color: #004080; margin-bottom: 10px;">💡 Tips to Maximize Progress:</h4>
+    <ul style="margin-left: 20px; color: #555;">
+        <li>Solve <strong>10+ problems</strong> to earn your first badge</li>
+        <li>Maintain <strong>80%+ accuracy</strong> for special rewards</li>
+        <li>Try <strong>different topics</strong> to unlock all badges</li>
+        <li>Check back daily to track your improvement</li>
+    </ul>
+</div>
+<div id="badgePreview" style="text-align: center; margin: 25px 0; padding: 20px; background: #fff8e1; border-radius: 10px; border: 2px dashed #ffc107; display: none;">
+    <h4 style="color: #004080; margin-bottom: 10px;">🏆 Your Latest Achievement:</h4>
+    <div id="latestBadge" style="font-size: 1.2em; font-weight: bold; color: #2E7D32;"></div>
+    <a href="achievements.html" style="display: inline-block; margin-top: 10px; color: #0066cc; font-weight: bold;">View All Achievements →</a>
+</div>
+            <div class="privacy-note">
+                <p>Your progress data stays on your device. View our <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script src="shared.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load progress data
+        if (typeof MathProgress !== 'undefined') {
+            const stats = MathProgress.getStats();
+            
+            // Update stats display
+            document.getElementById('totalSolved').textContent = stats.totalSolved || 0;
+            document.getElementById('accuracyRate').textContent = (stats.accuracy || 0) + '%';
+            
+            // Calculate learning time (estimate: 2 minutes per problem)
+            const learningMinutes = (stats.totalSolved || 0) * 2;
+            document.getElementById('learningTime').textContent = learningMinutes + ' min';
+            
+            // If user has no progress yet, show encouragement
+            if (stats.totalSolved === 0) {
+                const note = document.querySelector('.auto-track-note');
+                if (note) {
+                    note.innerHTML += `
+                        <div style="margin-top: 15px; padding: 15px; background: #fff3cd; border-radius: 8px;">
+                            <p style="color: #856404; margin: 0;">
+                                <strong>🎯 Get Started:</strong> Solve your first problem to see your progress here!
+                            </p>
+                        </div>
+                    `;
+                }
+            }
+        } else {
+            // MathProgress not loaded
+            console.log("Progress tracking not available");
+            document.querySelector('.auto-track-note').innerHTML += `
+                <div style="margin-top: 15px; padding: 15px; background: #f8d7da; border-radius: 8px;">
+                    <p style="color: #721c24; margin: 0;">
+                        <strong>⚠️ Note:</strong> Progress tracking requires JavaScript. Enable it for full features.
+                    </p>
+                </div>
+            `;
+        }
+        
+        // Add animation to stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(stat => {
+            const originalText = stat.textContent;
+            stat.textContent = '0';
+            
+            setTimeout(() => {
+                let current = 0;
+                const target = parseInt(originalText) || 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = originalText;
+                        clearInterval(timer);
+                    } else {
+                        if (originalText.includes('%')) {
+                            stat.textContent = Math.round(current) + '%';
+                        } else if (originalText.includes('min')) {
+                            stat.textContent = Math.round(current) + ' min';
+                        } else {
+                            stat.textContent = Math.round(current);
+                        }
+                    }
+                }, 50);
+            }, 500);
+        });
+    });
+if (stats.badges && stats.badges.length > 0) {
+    const badgePreview = document.getElementById('badgePreview');
+    const latestBadge = document.getElementById('latestBadge');
+    
+    if (badgePreview && latestBadge) {
+        badgePreview.style.display = 'block';
+        latestBadge.textContent = stats.badges[stats.badges.length - 1];
+    }
+}
+</script>
+</body>
+</html>

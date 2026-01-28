@@ -5,15 +5,9 @@
     <title>RONNY BEST-TASKS</title>
     <link rel="stylesheet" href="tasks.css">
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.32.1/minified.js"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+    <script src="shared.js"></script>
+    <!-- REMOVED AdSense code during review process -->
+<!-- Will be added back after approval -->
 </head>
 <body>
 
@@ -24,6 +18,60 @@
 </header>
 
 <div class="container">
+     <section class="intro-content">
+        <h2>Mathematics Practice Platform</h2>
+        <p>This interactive platform helps you practice and master mathematics through:</p>
+        <ul>
+            <li><strong>Generated Practice Problems:</strong> Get custom problems in differentiation, integration, matrices, and more</li>
+            <li><strong>Step-by-Step Solutions:</strong> Every problem includes detailed solution steps</li>
+            <li><strong>Interactive Learning:</strong> Check your answers instantly with feedback</li>
+            <li><strong>Question Scanner:</strong> Upload or take photos of math problems to get solutions</li>
+        </ul>
+        <p><strong>How to use this platform:</strong></p>
+        <ol>
+            <li>Select a topic from the dropdown menu</li>
+            <li>Click "Generate Task" to get a practice problem</li>
+            <li>Solve it yourself, then check your answer</li>
+            <li>View the step-by-step solution to learn the method</li>
+        </ol>
+        <p>All content is designed to help students from high school to university level improve their math skills.</p>
+    </section>
+    <section class="sample-problems">
+        <h2>Sample Practice Problems</h2>
+        
+        <div class="problem-card">
+            <h3>Differentiation Example</h3>
+            <p>Find the derivative of: \( f(x) = 3x^4 - 2x^2 + 5x - 7 \)</p>
+            <div class="solution">
+                <p><strong>Solution:</strong> Using power rule: \( f'(x) = 12x^3 - 4x + 5 \)</p>
+                <p><strong>Step-by-step:</strong></p>
+                <ol>
+                    <li>\( \frac{d}{dx}(3x^4) = 3 \cdot 4x^{3} = 12x^3 \)</li>
+                    <li>\( \frac{d}{dx}(-2x^2) = -2 \cdot 2x = -4x \)</li>
+                    <li>\( \frac{d}{dx}(5x) = 5 \)</li>
+                    <li>\( \frac{d}{dx}(-7) = 0 \)</li>
+                    <li>Combine: \( f'(x) = 12x^3 - 4x + 5 \)</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="problem-card">
+            <h3>Integration Example</h3>
+            <p>Evaluate: \( \int (2x^3 - 3x + 4) \, dx \)</p>
+            <div class="solution">
+                <p><strong>Solution:</strong> \( \frac{1}{2}x^4 - \frac{3}{2}x^2 + 4x + C \)</p>
+            </div>
+        </div>
+        
+        <div class="problem-card">
+            <h3>Matrix Example</h3>
+            <p>Find the determinant of: \( \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix} \)</p>
+            <div class="solution">
+                <p><strong>Solution:</strong> \( (3 \times 4) - (2 \times 1) = 12 - 2 = 10 \)</p>
+            </div>
+        </div>
+    </section>
+    <h1 style="text-align: center;">NOW TRY HERE</h1>
     <section>
         <h2>Select Topic</h2>
         <select id="topicSelect">
@@ -37,8 +85,8 @@
         </select>
         <button id="generateTaskBtn">Generate Task</button>
     </section>
-
     <section>
+        <h2>Generate New Practice Problem</h2>
         <h2>Task</h2>
         <div id="taskDisplay" class="math"></div>
         <input type="text" id="answerInput" placeholder="Enter your answer here">

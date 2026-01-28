@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RONNY BEST – MAIN</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+    <script src="shared.js"></script>
+    <!-- REMOVED AdSense code during review process -->
+<!-- Will be added back after approval -->
 </head>
 
 <body>
@@ -21,24 +23,24 @@
 <nav id="sidebar"><br><br><br>
     <h2>TOPICS</h2>
     <ul>
-        <li onclick="showSection('trigonometric')">Trigonometric</li>
-        <li onclick="showSection('algebra')">Algebra</li>
-        <li onclick="showSection('conics')">Conics</li>
-        <li onclick="showSection('statistics')">Statistics</li>
-        <li onclick="showSection('differentiation')">Differentiation</li>
-        <li onclick="showSection('integration')">Integration</li>
-        <li onclick="showSection('vectors')">Vectors</li>
-        <li onclick="showSection('matrices')">Matrices</li>
-        <li onclick="showSection('areas')">Areas of Shapes</li>
-        <li onclick="showSection('volumes')">Volumes of Shapes</li>
-        <li onclick="showSection('limits')">Limits & Continuity</li>
-        <li onclick="showSection('complex')">Complex Numbers</li>
-        <li onclick="showSection('series')">Sequences & Series</li>
+        <li onclick="scrollToSection('trigonometric')">Trigonometric</li>
+        <li onclick="scrollToSection('algebra')">Algebra</li>
+        <li onclick="scrollToSection('conics')">Conics</li>
+        <li onclick="scrollToSection('statistics')">Statistics</li>
+        <li onclick="scrollToSection('differentiation')">Differentiation</li>
+        <li onclick="scrollToSection('integration')">Integration</li>
+        <li onclick="scrollToSection('vectors')">Vectors</li>
+        <li onclick="scrollToSection('matrices')">Matrices</li>
+        <li onclick="scrollToSection('areas')">Areas of Shapes</li>
+        <li onclick="scrollToSection('volumes')">Volumes of Shapes</li>
+        <li onclick="scrollToSection('limits')">Limits & Continuity</li>
+        <li onclick="scrollToSection('complex')">Complex Numbers</li>
+        <li onclick="scrollToSection('series')">Sequences & Series</li>
     </ul>
 </nav>
 
 <main id="content"><br><br>
-<section id="trigonometric" class="topic-section">
+<section id="trigonometric" class="topic-section active">
     <h2>Trigonometry</h2>
     <div class="card"> 
         <h3>(a). Trigonometry Ratios From a Right-angled Triangle </h3> 
@@ -169,7 +171,7 @@
     </div>
 </section>
 
-<section id="algebra" class="topic-section">
+<section id="algebra" class="topic-section active">
     <h2>Algebra</h2>
 
     <div class="card">
@@ -256,8 +258,9 @@
         <ul>
             <h6>One Variable</h6>
             <li>ax + b = 0 => x = -b/a</li>
-            <h6>Two Variable</h6>
-            <li></li>
+            <h6>Two Variables</h6>
+            <li>ax + by = c (Standard form)</li>
+            <li>Slope-intercept form: y = mx + b</li>
         </ul>
         <h4>SIMULTANEOUS EQUATIONS</h4>
         <H6>Two Linear Equations</H6>
@@ -317,7 +320,7 @@
         </ul>
     </div>
 </section>
-<section id="conics" class="topic-section">
+<section id="conics" class="topic-section active">
     <h2>Conics</h2>
     <div class="card">
         <h3>GENERAL CONICS CONCEPTS</h3>
@@ -442,7 +445,7 @@
             <li>Center: (h, k)</li>
             <li>Foci:</li>
             <ul>
-                <li>(h ± c,k), c<sup>2</sup> = a<sup>2 + b<sup>2</sup></li>
+                <li>(h ± c, k), c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></li>
             </ul>
             <li>Eccentricity:</li>
             <ul>
@@ -480,40 +483,42 @@
         </ul>
     </div>
 </section>
-
-<section id="statistics" class="topic-section">
+<section id="statistics" class="topic-section active">
     <h2>Statistics</h2>
 
     <div class="card">
         <h3>Measures of Central Tendency</h3>
+        <p>These are values that describe the center of a data set:</p>
         <ul>
-            <li>Mean</li>
-            <li>Median</li>
-            <li>Mode</li>
+            <li><strong>Mean:</strong> The average of all numbers. Formula: Mean = (Σx) / n</li>
+            <li><strong>Median:</strong> The middle value when data is ordered. For odd n: middle value; for even n: average of two middle values.</li>
+            <li><strong>Mode:</strong> The most frequently occurring value in a data set.</li>
         </ul>
+        <p><strong>Example:</strong> For data [2, 4, 4, 6, 8]: Mean = (2+4+4+6+8)/5 = 4.8, Median = 4, Mode = 4.</p>
     </div>
 
     <div class="card">
         <h3>Measures of Dispersion</h3>
+        <p>These measure how spread out the data is:</p>
         <ul>
-            <li>Range</li>
-            <li>Variance</li>
-            <li>Standard deviation</li>
-            <li>Interquartile range</li>
+            <li><strong>Range:</strong> Difference between highest and lowest values.</li>
+            <li><strong>Variance:</strong> Average of squared differences from mean. σ² = Σ(x - μ)²/n</li>
+            <li><strong>Standard Deviation:</strong> Square root of variance. σ = √[Σ(x - μ)²/n]</li>
+            <li><strong>Interquartile Range (IQR):</strong> Difference between Q3 (75th percentile) and Q1 (25th percentile).</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>Probability</h3>
+        <h3>Probability Basics</h3>
+        <p>Probability measures how likely an event is to occur (0 to 1):</p>
         <ul>
-            <li>Mutually exclusive events</li>
-            <li>Independent events</li>
-            <li>Conditional probability</li>
+            <li><strong>Mutually Exclusive Events:</strong> Cannot occur together. P(A∪B) = P(A) + P(B)</li>
+            <li><strong>Independent Events:</strong> Occurrence of one doesn't affect the other. P(A∩B) = P(A) × P(B)</li>
+            <li><strong>Conditional Probability:</strong> Probability of A given B. P(A|B) = P(A∩B) / P(B)</li>
         </ul>
     </div>
 </section>
-
-<section id="differentiation" class="topic-section">
+<section id="differentiation" class="topic-section active">
     <h2>Differentiation</h2>
     <div class="card"> <h3>Definition</h3> <p> Differentiation is the process of finding the derivative of a function. The derivative represents the instantaneous rate of change. </p> </div> <div class="card"> <h3>Basic Rules</h3> <ul> <li>Power Rule: d/dx (xⁿ) = n xⁿ⁻¹</li> <li>Product Rule: (uv)' = u'v + uv'</li> <li>Quotient Rule: (u/v)' = (u'v − uv') / v²</li> <li>Chain Rule: d/dx f(g(x)) = f’(g(x))·g’(x)</li> </ul> </div> <div class="card"> <h3>Trigonometric Derivatives</h3> <ul> <li>d/dx(sin x) = cos x</li> <li>d/dx(cos x) = −sin x</li> <li>d/dx(tan x) = sec²x</li> </ul> </div> <div class="card"> <h3>Exponential & Logarithmic Derivatives</h3> <ul> <li>d/dx(eˣ) = eˣ</li> <li>d/dx(ln x) = 1/x</li> <li>d/dx(aˣ) = aˣ ln(a)</li> </ul> </div>
     <div class="card">
@@ -527,7 +532,7 @@
     </div>
 </section>
 
-<section id="integration" class="topic-section">
+<section id="integration" class="topic-section active">
     <h2>Integration</h2>
     <div class="card"> <h3>Definition</h3> <p> Integration is the process of finding the antiderivative or area under a curve. </p> </div> <div class="card"> <h3>Basic Integrals</h3> <ul> <li>∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C</li> <li>∫ eˣ dx = eˣ + C</li> <li>∫ 1/x dx = ln|x| + C</li> </ul> </div> <div class="card"> <h3>Methods of Integration</h3> <ul> <li>Substitution</li> <li>Integration by Parts</li> <li>Partial Fractions</li> <li>Trigonometric Integrals</li> </ul> </div>
     <div class="card">
@@ -539,44 +544,81 @@
         </ul>
     </div>
 </section>
-<section id="vectors" class="topic-section">
-     <h2>Vectors</h2>
-      <div class="card"> 
-        <h3>Vector Basics</h3> 
-        <p>A vector has magnitude and direction.</p>
-     </div> 
-     <div class="card"> 
-        <h3>Operations</h3> 
-        <ul> 
-            <li>Addition</li> 
-            <li>Scalar Multiplication</li> 
-            <li>Dot Product</li>
-            <li>Cross Product</li> 
+<section id="vectors" class="topic-section active">
+    <h2>Vectors</h2>
+    
+    <div class="card">
+        <h3>Vector Basics</h3>
+        <p>A vector has both magnitude (length) and direction. Represented as <strong>v = (x, y, z)</strong> or <strong>v = ai + bj + ck</strong>.</p>
+        <p><strong>Magnitude:</strong> |v| = √(x² + y² + z²)</p>
+        <p><strong>Unit Vector:</strong> û = v / |v| (has magnitude 1)</p>
+    </div>
+    
+    <div class="card">
+        <h3>Vector Operations</h3>
+        <ul>
+            <li><strong>Addition:</strong> (a,b) + (c,d) = (a+c, b+d)</li>
+            <li><strong>Scalar Multiplication:</strong> k(a,b) = (ka, kb)</li>
+            <li><strong>Dot Product:</strong> a·b = |a||b|cosθ = a₁b₁ + a₂b₂ + a₃b₃</li>
+            <li><strong>Cross Product:</strong> a×b = |a||b|sinθ n̂ (results in perpendicular vector)</li>
         </ul>
-     </div>
-     </section>
-<section id="matrices" class="topic-section"> 
+        <p><strong>Applications:</strong> Physics (force, velocity), Computer Graphics, Engineering.</p>
+    </div>
+</section>
+<section id="matrices" class="topic-section active"> 
     <h2>Matrices</h2> 
+    
+    <div class="card">
+        <h3>What is a Matrix?</h3>
+        <p>A matrix is a rectangular array of numbers arranged in rows and columns. Represented as A = [a<sub>ij</sub>] where i = row, j = column.</p>
+        <p><strong>Example 2×3 matrix:</strong> A = 
+            \begin{bmatrix}
+            1 & 3 & 5 \\
+            2 & 4 & 6
+            \end{bmatrix}
+        </p>
+    </div>
+    
     <div class="card"> 
         <h3>Matrix Types</h3> 
         <ul> 
-            <li>Square Matrix</li> 
-            <li>Diagonal Matrix</li> 
-            <li>Identity Matrix</li> 
-            <li>Zero Matrix</li> 
+            <li><strong>Square Matrix:</strong> Same number of rows and columns (n×n)</li> 
+            <li><strong>Diagonal Matrix:</strong> All non-diagonal elements are zero</li> 
+            <li><strong>Identity Matrix (I):</strong> Diagonal matrix with all 1's on diagonal</li> 
+            <li><strong>Zero/Null Matrix:</strong> All elements are zero</li> 
+            <li><strong>Symmetric Matrix:</strong> A = A<sup>T</sup> (equal to its transpose)</li>
         </ul> 
     </div> 
+    
     <div class="card"> 
-        <h3>Operations</h3> 
-        <ul> <li>Addition</li> 
-            <li>Multiplication</li> 
-            <li>Transpose</li> 
-            <li>Inverse</li> 
-            <li>Determinant</li> 
-        </ul> 
-    </div> 
+        <h3>Matrix Operations</h3> 
+        <ul>
+            <li><strong>Addition/Subtraction:</strong> Matrices must have same dimensions. Add corresponding elements.</li>
+            <li><strong>Multiplication:</strong> For A (m×n) × B (n×p), result is (m×p). <em>Not commutative:</em> AB ≠ BA</li>
+            <li><strong>Transpose (A<sup>T</sup>):</strong> Rows become columns and vice versa</li>
+            <li><strong>Determinant:</strong> Scalar value for square matrices. For 2×2: det = ad - bc</li>
+            <li><strong>Inverse (A<sup>-1</sup>):</strong> Only for square matrices with non-zero determinant. AA<sup>-1</sup> = I</li>
+        </ul>
+        <p><strong>Example 2×2 determinant:</strong> For matrix 
+            \begin{bmatrix}
+            a & b \\
+            c & d
+            \end{bmatrix}
+            , det = ad - bc
+        </p>
+    </div>
+    
+    <div class="card">
+        <h3>Applications of Matrices</h3>
+        <ul>
+            <li><strong>Solving Systems of Equations:</strong> Using Gaussian elimination or inverse matrices</li>
+            <li><strong>Computer Graphics:</strong> Transformations (rotation, scaling, translation)</li>
+            <li><strong>Economics:</strong> Input-output models, Markov chains</li>
+            <li><strong>Physics/Engineering:</strong> Stress tensors, quantum mechanics</li>
+        </ul>
+    </div>
 </section>
-<section id="areas" class="topic-section"> 
+<section id="areas" class="topic-section active"> 
     <h2>Areas of Shapes</h2>
      <ul> 
         <li>Triangle: ½ b h</li> 
@@ -586,8 +628,14 @@
         <li>Sphere: 4πr³</li> 
         <li>Cone: πrl(l is the slant height)</li> 
     </ul> 
+    <div class="card">
+    <h3>Area Calculations Explained</h3>
+    <p><strong>Triangle:</strong> ½ × base × height. Derived from rectangle area.</p>
+    <p><strong>Circle:</strong> π × radius². π ≈ 3.14159.</p>
+    <p><strong>Trapezium:</strong> Average of parallel sides × height.</p>
+</div>
 </section> 
-<section id="volumes" class="topic-section"> 
+<section id="volumes" class="topic-section active"> 
     <h2>Volumes of Solids</h2> 
     <ul> 
         <li>Cube: a³</li> 
@@ -597,39 +645,221 @@
         <li>Cone: 1/3 πr²h</li> 
         <li>Pyramid: 1/3 Ah(where A is area of base & h, vertical height)</li>
      </ul> 
+     <div class="card">
+    <h3>Volume Applications</h3>
+    <p>Volumes measure 3D space. <br>
+        <strong>Cylinder:</strong> Base area × height. <br> <strong>Sphere:</strong> 4/3 πr³. <br> <strong>Cone/Pyramid:</strong> ⅓ × base area × height.</p><br>
+    <p><strong>Real-world examples:</strong> Calculating water tank capacity, material quantities, packaging sizes.</p>
+</div>
     </section>
-    <section id="limits" class="topic-section">
-        <h2>LIMITS AND CONTINUITY</h2>
-        <div class="card">
-            <h4>DIFINITION OF LIMIT</h4>
-            <ul>
-                <li>x→alim​f(x)=L</li>
-            </ul>
-        </div>
-    </section>
-
-<section id="complex" class="topic-section">
-    <h2>Complex Numbers</h2>
-
+   <section id="limits" class="topic-section active">
+    <h2>Limits and Continuity</h2>
+    
     <div class="card">
-        <h3>Basics</h3>
+        <h3>Definition of Limit</h3>
+        <p>The limit of f(x) as x approaches a is L, written as: 
+        <strong>lim<sub>x→a</sub> f(x) = L</strong></p>
+        <p>This means: As x gets arbitrarily close to a (but not equal to a), f(x) gets arbitrarily close to L.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Limit Laws & Properties</h3>
         <ul>
-            <li>i² = −1</li>
-            <li>z = a + bi</li>
-            <li>Conjugate: z̅ = a − bi</li>
-            <li>|z| = √(a² + b²)</li>
+            <li><strong>Sum/Difference:</strong> lim[f(x) ± g(x)] = lim f(x) ± lim g(x)</li>
+            <li><strong>Product:</strong> lim[f(x) · g(x)] = lim f(x) · lim g(x)</li>
+            <li><strong>Quotient:</strong> lim[f(x)/g(x)] = lim f(x)/lim g(x), if lim g(x) ≠ 0</li>
+            <li><strong>Power:</strong> lim[f(x)]<sup>n</sup> = [lim f(x)]<sup>n</sup></li>
         </ul>
     </div>
-
+    
     <div class="card">
-        <h3>Polar Form</h3>
+        <h3>Special Limits</h3>
         <ul>
-            <li>z = r(cos θ + i sin θ)</li>
-            <li>De Moivre’s theorem</li>
+            <li><strong>lim<sub>x→0</sub> sin(x)/x = 1</strong> (Important trigonometric limit)</li>
+            <li><strong>lim<sub>x→∞</sub> (1 + 1/x)<sup>x</sup> = e</strong> (Definition of e)</li>
+            <li><strong>lim<sub>x→0</sub> (e<sup>x</sup> - 1)/x = 1</strong></li>
+            <li><strong>lim<sub>x→0</sub> (ln(1+x))/x = 1</strong></li>
         </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Continuity</h3>
+        <p>A function f is continuous at x = a if:</p>
+        <ol>
+            <li>f(a) is defined</li>
+            <li>lim<sub>x→a</sub> f(x) exists</li>
+            <li>lim<sub>x→a</sub> f(x) = f(a)</li>
+        </ol>
+        <p><strong>Types of Discontinuity:</strong></p>
+        <ul>
+            <li><strong>Removable:</strong> Hole in graph (limit exists but f(a) undefined or different)</li>
+            <li><strong>Jump:</strong> Left and right limits exist but are different</li>
+            <li><strong>Infinite:</strong> Vertical asymptote</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Practical Examples</h3>
+        <p><strong>Example 1:</strong> Find lim<sub>x→3</sub> (x² - 9)/(x - 3)</p>
+        <p><strong>Solution:</strong> Factor: (x-3)(x+3)/(x-3) = x+3 → limit = 6</p>
+        <p><strong>Example 2:</strong> Is f(x) = 1/x continuous at x = 0?</p>
+        <p><strong>Answer:</strong> No, infinite discontinuity (vertical asymptote).</p>
     </div>
 </section>
 
+<section id="complex" class="topic-section active">
+    <h2>Complex Numbers</h2>
+    
+    <div class="card">
+        <h3>Basics of Complex Numbers</h3>
+        <p>Complex numbers extend real numbers to solve equations like x² + 1 = 0.</p>
+        <ul>
+            <li><strong>Imaginary Unit:</strong> i = √(-1), so i² = -1</li>
+            <li><strong>Standard Form:</strong> z = a + bi, where a = real part, b = imaginary part</li>
+            <li><strong>Conjugate:</strong> z̅ = a - bi (change sign of imaginary part)</li>
+            <li><strong>Modulus/Absolute Value:</strong> |z| = √(a² + b²) (distance from origin)</li>
+        </ul>
+        <p><strong>Example:</strong> z = 3 + 4i has |z| = √(3² + 4²) = 5, conjugate = 3 - 4i</p>
+    </div>
+    
+    <div class="card">
+        <h3>Operations with Complex Numbers</h3>
+        <ul>
+            <li><strong>Addition:</strong> (a+bi) + (c+di) = (a+c) + (b+d)i</li>
+            <li><strong>Subtraction:</strong> (a+bi) - (c+di) = (a-c) + (b-d)i</li>
+            <li><strong>Multiplication:</strong> (a+bi)(c+di) = (ac-bd) + (ad+bc)i</li>
+            <li><strong>Division:</strong> Multiply numerator and denominator by conjugate:
+                (a+bi)/(c+di) = [(a+bi)(c-di)]/(c²+d²)
+            </li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Polar & Exponential Forms</h3>
+        <p><strong>Polar Form:</strong> z = r(cos θ + i sin θ) where:</p>
+        <ul>
+            <li>r = |z| = √(a²+b²) (modulus)</li>
+            <li>θ = arg(z) = tan⁻¹(b/a) (argument/angle)</li>
+        </ul>
+        <p><strong>Exponential Form:</strong> z = re<sup>iθ</sup> (Euler's formula: e<sup>iθ</sup> = cos θ + i sin θ)</p>
+        <p><strong>De Moivre's Theorem:</strong> (cos θ + i sin θ)<sup>n</sup> = cos(nθ) + i sin(nθ)</p>
+    </div>
+    
+    <div class="card">
+        <h3>Applications of Complex Numbers</h3>
+        <ul>
+            <li><strong>Electrical Engineering:</strong> AC circuit analysis (phasors)</li>
+            <li><strong>Quantum Mechanics:</strong> Wave functions are complex-valued</li>
+            <li><strong>Signal Processing:</strong> Fourier transforms use complex exponentials</li>
+            <li><strong>Fractals:</strong> Mandelbrot set uses complex iteration</li>
+            <li><strong>Control Theory:</strong> Root locus analysis</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Complex Roots of Equations</h3>
+        <p>Every polynomial of degree n has exactly n complex roots (counting multiplicity).</p>
+        <p><strong>Example:</strong> Find roots of x² + 4 = 0</p>
+        <p><strong>Solution:</strong> x² = -4 → x = ±√(-4) = ±2i</p>
+        <p><strong>Complex Conjugate Root Theorem:</strong> If a+bi is a root of a polynomial with real coefficients, then a-bi is also a root.</p>
+    </div>
+</section>
+<section id="series" class="topic-section active">
+    <h2>Sequences and Series</h2>
+    
+    <div class="card">
+        <h3>What are Sequences and Series?</h3>
+        <p>A <strong>sequence</strong> is an ordered list of numbers following a specific pattern. A <strong>series</strong> is the sum of the terms of a sequence.</p>
+        <p><strong>Example Sequence:</strong> 2, 4, 6, 8, 10, ... (even numbers)</p>
+        <p><strong>Corresponding Series:</strong> 2 + 4 + 6 + 8 + 10 + ...</p>
+    </div>
+    
+    <div class="card">
+        <h3>Types of Sequences</h3>
+        <ul>
+            <li><strong>Arithmetic Sequence:</strong> Each term differs from the previous by a constant (common difference, d).
+                <p>Formula: a<sub>n</sub> = a<sub>1</sub> + (n-1)d</p>
+            </li>
+            <li><strong>Geometric Sequence:</strong> Each term is multiplied by a constant (common ratio, r).
+                <p>Formula: a<sub>n</sub> = a<sub>1</sub> × r<sup>(n-1)</sup></p>
+            </li>
+            <li><strong>Harmonic Sequence:</strong> Reciprocals of an arithmetic sequence.</li>
+            <li><strong>Fibonacci Sequence:</strong> Each term is the sum of the two preceding terms: 0, 1, 1, 2, 3, 5, 8, ...</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Arithmetic Series Formulas</h3>
+        <p>Sum of first n terms:</p>
+        <ul>
+            <li>S<sub>n</sub> = n/2 × [2a + (n-1)d]</li>
+            <li>S<sub>n</sub> = n/2 × (a + l) where l = last term</li>
+        </ul>
+        <p><strong>Example:</strong> Find sum of first 10 terms: 3, 7, 11, 15, ...</p>
+        <p><strong>Solution:</strong> a=3, d=4, n=10 → S<sub>10</sub> = 10/2 × [2×3 + (10-1)×4] = 5 × [6 + 36] = 210</p>
+    </div>
+    
+    <div class="card">
+        <h3>Geometric Series Formulas</h3>
+        <p>Sum of first n terms:</p>
+        <ul>
+            <li>S<sub>n</sub> = a × (r<sup>n</sup> - 1)/(r - 1) for r ≠ 1</li>
+            <li>S<sub>n</sub> = a × (1 - r<sup>n</sup>)/(1 - r) for |r| < 1</li>
+        </ul>
+        <p><strong>Infinite Geometric Series</strong> (when |r| < 1):</p>
+        <ul>
+            <li>S<sub>∞</sub> = a/(1 - r)</li>
+        </ul>
+        <p><strong>Example:</strong> Sum of 2 + 1 + ½ + ¼ + ... (infinite)</p>
+        <p><strong>Solution:</strong> a=2, r=½ → S<sub>∞</sub> = 2/(1-½) = 4</p>
+    </div>
+    
+    <div class="card">
+        <h3>Special Series Formulas</h3>
+        <ul>
+            <li><strong>Sum of first n natural numbers:</strong> Σn = n(n+1)/2</li>
+            <li><strong>Sum of squares:</strong> Σn² = n(n+1)(2n+1)/6</li>
+            <li><strong>Sum of cubes:</strong> Σn³ = [n(n+1)/2]²</li>
+        </ul>
+        <p><strong>Example:</strong> Sum of squares from 1 to 5:</p>
+        <p>1² + 2² + 3² + 4² + 5² = 5×6×11/6 = 55</p>
+    </div>
+    
+    <div class="card">
+        <h3>Convergence and Divergence</h3>
+        <ul>
+            <li><strong>Convergent Series:</strong> Sum approaches a finite limit (e.g., 1 + ½ + ¼ + ⅛ + ... = 2)</li>
+            <li><strong>Divergent Series:</strong> Sum grows without bound (e.g., 1 + 2 + 3 + 4 + ...)</li>
+            <li><strong>Tests for Convergence:</strong>
+                <ul>
+                    <li>Geometric series test</li>
+                    <li>Comparison test</li>
+                    <li>Ratio test</li>
+                    <li>Integral test</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Applications of Sequences & Series</h3>
+        <ul>
+            <li><strong>Finance:</strong> Compound interest calculations (geometric series)</li>
+            <li><strong>Physics:</strong> Harmonic motion, wave patterns</li>
+            <li><strong>Computer Science:</strong> Algorithm analysis, time complexity</li>
+            <li><strong>Engineering:</strong> Signal processing, Fourier series</li>
+            <li><strong>Economics:</strong> GDP growth models, investment returns</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Practice Problems</h3>
+        <p><strong>Problem 1:</strong> Find the 15th term of arithmetic sequence: 5, 9, 13, 17, ...</p>
+        <p><strong>Problem 2:</strong> Sum the geometric series: 3 + 6 + 12 + ... up to 8 terms</p>
+        <p><strong>Problem 3:</strong> Does the infinite series 1 + ½ + ⅓ + ¼ + ... converge?</p>
+        <p><em>Answers: 1) 61, 2) 765, 3) Diverges (harmonic series)</em></p>
+    </div>
+</section>
 </main>
 </div>
 <footer style="text-align:center; margin-top:30px;">

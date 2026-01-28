@@ -3,56 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RONNY BEST APP</title>
+    <title>Ronny Best - Free Mathematics Learning platform</title>
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
     <link rel="stylesheet" href="index.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+    <script src="shared.js"></script>
+    <!-- REMOVED AdSense code during review process -->
+<!-- Will be added back after approval -->
 </head>
 <body>
     <header>
         <h2 id="welcome"></h2>
-        <h1>RONNY BEST APP</h1>
-        <p>Welcome to Ronny Best App Improve Your Math.</p>
+        <h1>RONNY BEST</h1>
+        <p>Welcome to Ronny Best Improve Your Math.</p>
     </header>
-
    <nav class="portal-nav">
     <ul>
         <li><a href="index.html">Home</a></li> 
         <li><a href="main.html">Math Lessons</a></li>  
         <li><a href="tasks.html">Practice</a></li>
         <li><a href="mind.html">Brain Games</a></li>
-        <li><a href="profile.html">Profile</a></li> 
-        <li><button id="log" onclick="logout()">Logout</button></li>
+        <li><a href="achievements.html">My Achievements</a></li>
+        <li><a href="progress.html">Track Learning</a></li> 
     </ul>
 </nav>
+ <section class="intro-content">
+  <h2>Learn Mathematics Clearly and Confidently</h2>
 
+  <p>
+    Ronny Best is an educational platform designed to help students understand
+    mathematics concepts in a clear, practical, and engaging way. The website provides
+    step-by-step explanations, worked examples, and practice exercises covering topics
+    such as algebra, trigonometry, calculus, and more.
+  </p>
+
+  <p>
+    This platform is suitable for high school students, college learners, teachers,
+    and anyone interested in strengthening their mathematical skills. All lessons are
+    carefully structured to promote understanding rather than memorization.
+  </p>
+
+  <p>
+    Whether you are revising for exams, learning mathematics for the first time, or
+    improving problem-solving skills, Ronny Best App offers free and accessible
+    resources to support your learning journey.
+  </p>
+  </section>
     <main>
         <section class="cards">
-            <div class="card">
-                <h2>MAIN</h2>
-                <p>Check Main Navigations Here.</p>
-                <a href="main.html">Go to Main</a>
-            </div>
-            <div class="card">
-                <h2>TASKS</h2>
-                <p>Here You Can Access Tasks.</p>
-                <a href="tasks.html">View Tasks</a>
-            </div>
-            <div class="card">
-                <h2>Other</h2>
-                <p>Mind tease from here.</p>
-                <a href="mind.html">View the programs</a>
-            </div>
-            <div class="card">
-                <h2>PROFILE</h2>
-                <p>Access Your Profile From Here.</p>
-                <a href="profile.html">View Your Profile</a>
-            </div>
-        </section>
+    <div class="card">
+        <h2>📘 Math Lessons</h2>
+        <p>Access structured lessons with step-by-step examples, diagrams, and real-world applications. Topics include Algebra, Trigonometry, Calculus, and more — designed for all learning levels.</p>
+        <a href="main.html">Start Learning →</a>
+    </div>
+    <div class="card">
+        <h2>📝 Practice Exercises</h2>
+        <p>Reinforce your math skills with guided problems, instant feedback, and detailed solutions. Includes quizzes, worksheets, and adaptive challenges to track improvement.</p>
+        <a href="tasks.html">Begin Practice →</a>
+    </div>
+    <div class="card">
+        <h2>🧠 Brain Games</h2>
+        <p>Sharpen your logical thinking and problem-solving abilities with interactive puzzles, math-based games, and timed challenges — learning made fun and engaging.</p>
+        <a href="mind.html">Play Games →</a>
+    </div>
+</section>
         <section class="public-lessons">
     <h2>📚 Start Learning Math Now!</h2>
     <p class="subtitle">Free math resources for students of all levels</p>
+    <p>
+  Each topic includes clear explanations, formulas, worked examples,
+  and guided practice to help learners build confidence and accuracy
+  in mathematics.
+</p>
+
     
     <div class="lesson-grid">
         <a href="main.html#trigonometric" class="lesson-card">
@@ -84,10 +106,36 @@
         </a>
     </div>
 </section>
+<section class="progress-promo">
+    <h2>Track Your Math Learning!</h2>
+    <p>Play games and solve problems to earn achievements and track your progress.</p>
+    <a href="achievements.html" class="progress-btn">View My Achievements</a>
+</section>
+<section class="features">
+    <h2>Why Choose Ronny Best Math Platform?</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>✅ Step-by-Step Explanations</h3>
+            <p>Every concept is broken down into simple, understandable steps with real-world examples.</p>
+        </div>
+        <div class="feature">
+            <h3>✅ Free & Accessible</h3>
+            <p>All resources are completely free. No subscriptions, no hidden fees.</p>
+        </div>
+        <div class="feature">
+            <h3>✅ Suitable for All Levels</h3>
+            <p>From high school basics to college-level mathematics, we cover it all.</p>
+        </div>
+        <div class="feature">
+            <h3>✅ Practice with Feedback</h3>
+            <p>Interactive exercises help you apply what you've learned immediately.</p>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ronny Math App | For Students & Interested Members</p>
+        <p>&copy; 2026 Ronny Math | For Students & Interested Members</p>
         <div style="margin-top:15px;" class="footerinfo">
   <a href="about.html" style="color:#fff; margin:0 10px;">About Us</a>
   <a href="contact.html" style="color:#fff; margin:0 10px;">Contact Us</a>
@@ -99,6 +147,42 @@
         <p>WE VALUE YOU</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="index.js">
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+            const progress = MathProgress.getProgress();
+            if (progress.badges.length === 1 && progress.totalSolved === 0) {
+                console.log("Setting up sample progress for new user...");
+                progress.activity = [
+                    'Started learning mathematics with Ronny Best Platform',
+                    '✓ Solved calculus problem: Differentiate y = 3x^3 + 2x^2 + 5x',
+                    '📖 Viewed topic: Trigonometry formulas and identities',
+                    '✓ Solved algebra problem: Find determinant of [[2,3],[1,4]]',
+                    '🎮 Played Math Puzzle: Won with score 85',
+                    '✓ Solved geometry problem: Area of circle radius 5',
+                    '📖 Viewed topic: Integration techniques',
+                    '✓ Solved calculus problem: Integrate ∫(2x^2 + 3x) dx',
+                    '🏅 Earned badge: Problem Solver (10+ problems solved)',
+                    '✓ Solved algebra problem: Matrix multiplication'
+                ];
+                
+                // Add sample stats
+                progress.totalSolved = 8;
+                progress.correct = 7;
+                progress.accuracy = 88;
+                progress.topics.algebra = 75;
+                progress.topics.geometry = 65;
+                progress.topics.calculus = 85;
+                progress.topics.trigonometry = 70;
+                progress.topics.matrices = 60;
+                progress.badges = ['Math Learner', 'Problem Solver', 'Accuracy Star'];
+                
+                MathProgress.saveProgress(progress);
+            }
+        } catch (error) {
+            console.log("Progress system not available:", error);
+        }
+    });
+    </script>
 </body>
 </html>

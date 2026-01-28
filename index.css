@@ -35,6 +35,14 @@ header p {
     margin: 5px 0 0;
     font-size: 1em;
 }
+.intro-content {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    line-height: 1.7;
+}
 
 
 .portal-nav {
@@ -59,7 +67,7 @@ header p {
     padding: 12px 20px;
     color: white;
     text-decoration: none;
-    transition: background- 0.3s;
+    transition: background-color 0.3s;
 }
 
 .portal-nav a:hover {
@@ -100,7 +108,7 @@ main {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background- 0.3s;
+    transition: background-color 0.3s;
 }
 
 .card a:hover {
@@ -125,6 +133,13 @@ footer {
     padding: 15px 10px;
     background-color: #004080;
     color: white;
+}
+footer a {
+    color: hsl(207, 100%, 82%);
+    text-decoration: underline;
+}
+footer a:hover {
+    color: hsl(0, 0%, 100%);
 }
 .public-lessons {
     padding: 30px 20px;

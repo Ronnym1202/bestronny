@@ -4,8 +4,6 @@ body{
     background:hsl(218, 100%, 98%);
     color:hsl(0, 0%, 13%);
 }
-
-/* ===== HEADER ===== */
 header{
     position:fixed;
     text-align: center;
@@ -17,25 +15,17 @@ header{
     padding:12px 20px;
     z-index:1000;
 }
-
-/* ===== SIDEBAR ===== */
 #sidebar{
     width:260px;
     background:hsl(0, 1%, 31%);
     color: hsl(0, 0%, 100%);
     font-weight: bold;
     box-shadow:2px 2px 8px hsla(0, 0%, 0%, 0.1);
-
-    /* keeps it below the header */
     position:fixed;
     top:60px;
-
     bottom:0;
-
-    /* 💡 THIS FIXES THE SCROLL PROBLEM */
     overflow-y:auto;
     overflow-x:hidden;
-
     padding-top:20px;
 }
 
@@ -54,37 +44,33 @@ header{
 #sidebar li:hover{
     background:hsl(222, 79%, 57%);
 }
-
-/* ===== MAIN CONTENT AREA ===== */
 main{
     background-color: hsla(60, 56%, 91%, 0.763);
-
-    /* space for sidebar */
     margin-left:280px;
-
-    /* space for header */
     padding-top:90px;
-
     padding-bottom:40px;
     width:calc(100% - 280px);
 }
-
-/* ===== TOPIC SECTIONS ===== */
 .topic-section{
-    display:none;
-    animation:fade .3s ease-in;
+    display: block !important;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
-.topic-section.active{
-    display:block;
+.topic-section.active {
+    display: block;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
 @keyframes fade{
     from{opacity:0}
     to{opacity:1}
 }
-
-/* ===== CARDS ===== */
 .card{
     background-color: hsl(33, 100%, 88%);
     padding:15px;
@@ -95,6 +81,48 @@ main{
 .active-topic{
     background:hsl(222, 100%, 60%);
 }
-
+@media (max-width: 768px) {
+    #sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 20px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header {
+        position: relative;
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 769px) {
+    #sidebar {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        width: 260px;
+        overflow-y: auto;
+    }
+    
+    main {
+        margin-left: 280px;
+        width: calc(100% - 280px);
+    }
+}
 
 

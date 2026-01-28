@@ -1,16 +1,17 @@
-const user = localStorage.getItem("currentUser");
-if(user) {
-    document.getElementById("welcome").innerText = "HI, "+user+" IMPROVE YOUR MATH PERFOMANCE HERE!";
-} else {
-    document.getElementById("welcome").innerText = "WELCOME! IMPROVE YOUR MATH SKILLS HERE!";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const welcome = document.getElementById("welcome");
+    const user = localStorage.getItem("currentUser");
 
-const users = JSON.parse(localStorage.getItem("users"))||{};
-const currentUser = users[user];
+    if (user && user !== "null" && user !== "undefined") {
+        welcome.innerText =
+        "WELCOME BACK! IMPROVE YOUR MATH PERFORMANCE HERE.";
+    } else {
+        welcome.innerText =
+        "WELCOME! IMPROVE YOUR MATH SKILLS HERE.";
+    }
+});
 
-document.getElementById("welcome").innerText = "HI, "+user+" IMPROVE YOUR MATH PERFOMANCE HERE!";
-
-function logout(){
+function logout() {
     localStorage.removeItem("currentUser");
-    window.location.href="index.html";
+    window.location.href = "index.html";
 }
