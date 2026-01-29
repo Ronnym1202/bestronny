@@ -146,37 +146,12 @@
         <h4>TEL.: +254-799188900</h4>
         <p>WE VALUE YOU</p>
     </footer>
-
     <script src="index.js">
     document.addEventListener('DOMContentLoaded', function() {
         try {
             const progress = MathProgress.getProgress();
-            if (progress.badges.length === 1 && progress.totalSolved === 0) {
-                console.log("Setting up sample progress for new user...");
-                progress.activity = [
-                    'Started learning mathematics with Ronny Best Platform',
-                    '✓ Solved calculus problem: Differentiate y = 3x^3 + 2x^2 + 5x',
-                    '📖 Viewed topic: Trigonometry formulas and identities',
-                    '✓ Solved algebra problem: Find determinant of [[2,3],[1,4]]',
-                    '🎮 Played Math Puzzle: Won with score 85',
-                    '✓ Solved geometry problem: Area of circle radius 5',
-                    '📖 Viewed topic: Integration techniques',
-                    '✓ Solved calculus problem: Integrate ∫(2x^2 + 3x) dx',
-                    '🏅 Earned badge: Problem Solver (10+ problems solved)',
-                    '✓ Solved algebra problem: Matrix multiplication'
-                ];
-                
-                // Add sample stats
-                progress.totalSolved = 8;
-                progress.correct = 7;
-                progress.accuracy = 88;
-                progress.topics.algebra = 75;
-                progress.topics.geometry = 65;
-                progress.topics.calculus = 85;
-                progress.topics.trigonometry = 70;
-                progress.topics.matrices = 60;
-                progress.badges = ['Math Learner', 'Problem Solver', 'Accuracy Star'];
-                
+            if (progress.activity.length === 0) {
+                progress.activity.push('Started learning mathematics with Ronny Best Platform');
                 MathProgress.saveProgress(progress);
             }
         } catch (error) {

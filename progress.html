@@ -68,19 +68,15 @@
     <script src="shared.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Load progress data
         if (typeof MathProgress !== 'undefined') {
             const stats = MathProgress.getStats();
             
-            // Update stats display
             document.getElementById('totalSolved').textContent = stats.totalSolved || 0;
             document.getElementById('accuracyRate').textContent = (stats.accuracy || 0) + '%';
             
-            // Calculate learning time (estimate: 2 minutes per problem)
             const learningMinutes = (stats.totalSolved || 0) * 2;
             document.getElementById('learningTime').textContent = learningMinutes + ' min';
             
-            // If user has no progress yet, show encouragement
             if (stats.totalSolved === 0) {
                 const note = document.querySelector('.auto-track-note');
                 if (note) {
@@ -94,7 +90,6 @@
                 }
             }
         } else {
-            // MathProgress not loaded
             console.log("Progress tracking not available");
             document.querySelector('.auto-track-note').innerHTML += `
                 <div style="margin-top: 15px; padding: 15px; background: #f8d7da; border-radius: 8px;">
@@ -104,8 +99,6 @@
                 </div>
             `;
         }
-        
-        // Add animation to stats
         const statNumbers = document.querySelectorAll('.stat-number');
         statNumbers.forEach(stat => {
             const originalText = stat.textContent;

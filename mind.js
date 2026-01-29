@@ -2,54 +2,51 @@
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeDiv = document.getElementById("welcomeMessage");
     if (welcomeDiv) {
-       const welcomeDiv = document.getElementById("welcomeMessage");
-if (welcomeDiv) {
-    if (typeof MathProgress !== 'undefined') {
-        const stats = MathProgress.getStats();
-        
-        if (stats.totalSolved > 0) {
-            welcomeDiv.innerHTML = `
-                <div style="background:linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding:12px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #155724;">
-                    <div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;">
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.totalSolved}</div>
-                            <div style="font-size:0.9em; color:#555;">Problems Solved</div>
+        if (typeof MathProgress !== 'undefined') {
+            const stats = MathProgress.getStats();
+            
+            if (stats.totalSolved > 0) {
+                welcomeDiv.innerHTML = `
+                    <div style="background:linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding:12px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #155724;">
+                        <div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;">
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.totalSolved}</div>
+                                <div style="font-size:0.9em; color:#555;">Problems Solved</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.accuracy}%</div>
+                                <div style="font-size:0.9em; color:#555;">Accuracy</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.badges.length}</div>
+                                <div style="font-size:0.9em; color:#555;">Badges</div>
+                            </div>
                         </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.accuracy}%</div>
-                            <div style="font-size:0.9em; color:#555;">Accuracy</div>
-                        </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.badges.length}</div>
-                            <div style="font-size:0.9em; color:#555;">Badges</div>
+                        <a href="achievements.html" style="display:inline-block; margin-top:10px; background:#004080; color:white; padding:6px 15px; border-radius:6px; text-decoration:none; font-weight:bold;">
+                            View Full Progress →
+                        </a>
+                    </div>
+                `;
+            } else {
+                welcomeDiv.innerHTML = `
+                    <div style="background:#f8f9fa; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px dashed #004080;">
+                        <h3 style="color:#004080; margin-bottom:10px;">🎓 Welcome to Ronny Best Math!</h3>
+                        <p style="color:#555; margin-bottom:15px;">Free math learning platform - no login required!</p>
+                        <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">✅ Auto-save progress</span>
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">🏆 Earn badges</span>
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">📈 Track improvement</span>
                         </div>
                     </div>
-                    <a href="achievements.html" style="display:inline-block; margin-top:10px; background:#004080; color:white; padding:6px 15px; border-radius:6px; text-decoration:none; font-weight:bold;">
-                        View Full Progress →
-                    </a>
-                </div>
-            `;
+                `;
+            }
         } else {
             welcomeDiv.innerHTML = `
-                <div style="background:#f8f9fa; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px dashed #004080;">
-                    <h3 style="color:#004080; margin-bottom:10px;">🎓 Welcome to Ronny Best Math!</h3>
-                    <p style="color:#555; margin-bottom:15px;">Free math learning platform - no login required!</p>
-                    <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">✅ Auto-save progress</span>
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">🏆 Earn badges</span>
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">📈 Track improvement</span>
-                    </div>
+                <div style="background:#fff3cd; padding:12px; border-radius:10px; margin:15px 0; text-align:center;">
+                    <strong>Free Math Learning Platform</strong> - Start learning now!
                 </div>
             `;
         }
-    } else {
-        welcomeDiv.innerHTML = `
-            <div style="background:#fff3cd; padding:12px; border-radius:10px; margin:15px 0; text-align:center;">
-                <strong>Free Math Learning Platform</strong> - Start learning now!
-            </div>
-        `;
-    }
-}
     }
     showGame('memory');
     initializeMemory();

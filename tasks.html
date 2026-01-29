@@ -8,6 +8,29 @@
     <script src="shared.js"></script>
     <!-- REMOVED AdSense code during review process -->
 <!-- Will be added back after approval -->
+ <style>
+@media (max-width: 768px) {
+    #taskDisplay, .math, #solutionSteps {
+        font-size: 1.3em !important;
+        padding: 15px !important;
+    }
+    
+    button, select, #answerInput {
+        font-size: 1.2em !important;
+        padding: 15px !important;
+        height: 50px !important;
+        min-height: 50px !important;
+    }
+    
+    .problem-card, .sample-problems, .intro-content {
+        font-size: 1.1em !important;
+        padding: 20px !important;
+    }
+}
+input, select, textarea {
+    font-size: 16px;
+}
+</style>
 </head>
 <body>
 
@@ -41,25 +64,25 @@
         
         <div class="problem-card">
             <h3>Differentiation Example</h3>
-            <p>Find the derivative of: \( f(x) = 3x^4 - 2x^2 + 5x - 7 \)</p>
+            <p>Find the derivative of: ( f(x) = 3x^4 - 2x^2 + 5x - 7 )</p>
             <div class="solution">
-                <p><strong>Solution:</strong> Using power rule: \( f'(x) = 12x^3 - 4x + 5 \)</p>
+                <p><strong>Solution:</strong> Using power rule: ( f'(x) = 12x^3 - 4x + 5 )</p>
                 <p><strong>Step-by-step:</strong></p>
                 <ol>
-                    <li>\( \frac{d}{dx}(3x^4) = 3 \cdot 4x^{3} = 12x^3 \)</li>
-                    <li>\( \frac{d}{dx}(-2x^2) = -2 \cdot 2x = -4x \)</li>
-                    <li>\( \frac{d}{dx}(5x) = 5 \)</li>
-                    <li>\( \frac{d}{dx}(-7) = 0 \)</li>
-                    <li>Combine: \( f'(x) = 12x^3 - 4x + 5 \)</li>
+                    <li>( d/dx(3x^4) = 3 dot 4x^3 = 12x^3 )</li>
+                    <li>( d/dx(-2x^2) = -2 dot 2x = -4x )</li>
+                    <li>( d/dx(5x) = 5 )</li>
+                    <li>( d/dx(-7) = 0 )</li>
+                    <li>Combine: ( f'(x) = 12x^3 - 4x + 5 )</li>
                 </ol>
             </div>
         </div>
         
         <div class="problem-card">
             <h3>Integration Example</h3>
-            <p>Evaluate: \( \int (2x^3 - 3x + 4) \, dx \)</p>
+            <p>Evaluate: int (2x^3 - 3x + 4) , dx</p>
             <div class="solution">
-                <p><strong>Solution:</strong> \( \frac{1}{2}x^4 - \frac{3}{2}x^2 + 4x + C \)</p>
+                <p><strong>Solution:</strong> (1/2 x^4 - 3 / 2 x^2 + 4x + C )</p>
             </div>
         </div>
         

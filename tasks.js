@@ -1,60 +1,55 @@
 console.log("✅ tasks.js LOADED");
 console.log("MathProgress available?", typeof MathProgress !== 'undefined');
-
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeDiv = document.getElementById("welcomeMessage");
     if (welcomeDiv) {
- const welcomeDiv = document.getElementById("welcomeMessage");
-if (welcomeDiv) {
-    if (typeof MathProgress !== 'undefined') {
-        const stats = MathProgress.getStats();
-        
-        if (stats.totalSolved > 0) {
-            welcomeDiv.innerHTML = `
-                <div style="background:linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding:12px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #155724;">
-                    <div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;">
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.totalSolved}</div>
-                            <div style="font-size:0.9em; color:#555;">Problems Solved</div>
+        if (typeof MathProgress !== 'undefined') {
+            const stats = MathProgress.getStats();
+            
+            if (stats.totalSolved > 0) {
+                welcomeDiv.innerHTML = `
+                    <div style="background:linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding:12px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #155724;">
+                        <div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;">
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.totalSolved}</div>
+                                <div style="font-size:0.9em; color:#555;">Problems Solved</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.accuracy}%</div>
+                                <div style="font-size:0.9em; color:#555;">Accuracy</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.badges.length}</div>
+                                <div style="font-size:0.9em; color:#555;">Badges</div>
+                            </div>
                         </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.accuracy}%</div>
-                            <div style="font-size:0.9em; color:#555;">Accuracy</div>
-                        </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.8em; font-weight:bold; color:#004080;">${stats.badges.length}</div>
-                            <div style="font-size:0.9em; color:#555;">Badges</div>
+                        <a href="achievements.html" style="display:inline-block; margin-top:10px; background:#004080; color:white; padding:6px 15px; border-radius:6px; text-decoration:none; font-weight:bold;">
+                            View Full Progress →
+                        </a>
+                    </div>
+                `;
+            } else {
+                welcomeDiv.innerHTML = `
+                    <div style="background:#f8f9fa; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px dashed #004080;">
+                        <h3 style="color:#004080; margin-bottom:10px;">🎓 Welcome to Ronny Best Math!</h3>
+                        <p style="color:#555; margin-bottom:15px;">Free math learning platform - no login required!</p>
+                        <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">✅ Auto-save progress</span>
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">🏆 Earn badges</span>
+                            <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">📈 Track improvement</span>
                         </div>
                     </div>
-                    <a href="achievements.html" style="display:inline-block; margin-top:10px; background:#004080; color:white; padding:6px 15px; border-radius:6px; text-decoration:none; font-weight:bold;">
-                        View Full Progress →
-                    </a>
-                </div>
-            `;
+                `;
+            }
         } else {
             welcomeDiv.innerHTML = `
-                <div style="background:#f8f9fa; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px dashed #004080;">
-                    <h3 style="color:#004080; margin-bottom:10px;">🎓 Welcome to Ronny Best Math!</h3>
-                    <p style="color:#555; margin-bottom:15px;">Free math learning platform - no login required!</p>
-                    <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">✅ Auto-save progress</span>
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">🏆 Earn badges</span>
-                        <span style="background:#e7f3ff; padding:5px 12px; border-radius:20px; font-size:0.9em;">📈 Track improvement</span>
-                    </div>
+                <div style="background:#fff3cd; padding:12px; border-radius:10px; margin:15px 0; text-align:center;">
+                    <strong>Free Math Learning Platform</strong> - Start learning now!
                 </div>
             `;
         }
-    } else {
-        welcomeDiv.innerHTML = `
-            <div style="background:#fff3cd; padding:12px; border-radius:10px; margin:15px 0; text-align:center;">
-                <strong>Free Math Learning Platform</strong> - Start learning now!
-            </div>
-        `;
-    }
-}
     }
 });
-
 const topics = ['differentiation', 'integration', 'matrices', 'vectors', 'areas', 'volumes'];
 
 const taskFormulas = {
@@ -215,8 +210,6 @@ document.getElementById("generateTaskBtn").onclick = () => {
         answerInput.value = "";
         resultDisplay.innerHTML = "";
         solutionSteps.innerHTML = "";
-        
-        // Record topic viewing
         if (typeof MathProgress !== 'undefined') {
             const topicNames = {
                 'differentiation': 'Differentiation',
@@ -275,17 +268,14 @@ document.getElementById("submitAnswer").onclick = () => {
             isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
         }
         
-        // Update display based on correctness
         if (isCorrect) {
             resultDisplay.innerHTML = "✓ Correct! Well done!";
             resultDisplay.style.color = "green";
-            
-            // Record achievement
+        
             if (typeof MathProgress !== 'undefined') {
                 console.log("🎯 Recording correct answer for topic:", currentTopic);
                 const problemDesc = currentTask.q.substring(0, 50) + '...';
                 
-                // Map to broader categories for progress
                 const topicMap = {
                     'differentiation': 'calculus',
                     'integration': 'calculus',
@@ -298,7 +288,6 @@ document.getElementById("submitAnswer").onclick = () => {
                 const progressTopic = topicMap[currentTopic] || 'algebra';
                 MathProgress.recordProblemSolved(progressTopic, true, problemDesc);
                 
-                // Show achievement notification
                 setTimeout(() => {
                     const notification = document.createElement('div');
                     notification.style.cssText = 'position:fixed; top:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:10px; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.2);';
@@ -314,7 +303,6 @@ document.getElementById("submitAnswer").onclick = () => {
             resultDisplay.innerHTML = "✗ Incorrect. Try again!";
             resultDisplay.style.color = "red";
             
-            // Record incorrect attempt too
             if (typeof MathProgress !== 'undefined') {
                 const problemDesc = currentTask.q.substring(0, 50) + '...';
                 const topicMap = {
@@ -812,7 +800,6 @@ solveFreeQuestionBtn.onclick = () => {
         const result = mathSolver.solve(q);
         freeAnswer.innerHTML = `<strong>${result.answer}</strong>`;
         
-        // Record activity for free questions
         if (typeof MathProgress !== 'undefined') {
             MathProgress.recordTopicViewed("Custom Problem Solving");
         }
@@ -851,7 +838,6 @@ function evaluateSimpleExpression(expr) {
     }
 }
 
-// Initialize topic select options
 if (topicSelect) {
     topics.forEach(topic => {
         const option = document.createElement('option');
