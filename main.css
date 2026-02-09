@@ -27,6 +27,14 @@ header{
     overflow-y:auto;
     overflow-x:hidden;
     padding-top:20px;
+    width: 240px;
+    flex-shrink: 0;
+}
+.content-area {
+  display: flex;
+}
+.main-container {
+  flex: 1;
 }
 
 #sidebar ul{
@@ -51,6 +59,34 @@ main{
     padding-bottom:40px;
     width:calc(100% - 280px);
 }
+.main-container {
+  padding: 20px;
+  background-color: #fdfdfd;
+}
+
+.page-intro {
+  background-color: #f4f7ff;
+  border-left: 6px solid #1e5eff;
+  padding: 18px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.page-intro h2 {
+  margin-top: 0;
+  font-size: 21px;
+  color: #1e5eff;
+}
+
+.page-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 10px;
+}
+
 .topic-section{
     display: block !important;
     margin-bottom: 40px;
