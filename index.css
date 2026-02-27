@@ -1,6 +1,13 @@
-body{
+/* Base Styles */
+body {
     background-color: hsl(33, 100%, 88%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 html {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,15 +17,7 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
+/* Header Styles */
 header {
     background-color: #004080;
     color: white;
@@ -35,16 +34,8 @@ header p {
     margin: 5px 0 0;
     font-size: 1em;
 }
-.intro-content {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    line-height: 1.7;
-}
 
-
+/* Navigation */
 .portal-nav {
     background-color: #0066cc;
 }
@@ -74,35 +65,249 @@ header p {
     background-color: #0055a5;
 }
 
-
+/* Main Content */
 main {
     flex: 1;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
+/* NEW STYLES FOR MATH CONTENT */
+
+/* Featured Lesson Section */
+.featured-lesson {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.featured-lesson h2 {
+    color: #004080;
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.featured-lesson .subtitle {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.lesson-content h3 {
+    color: #0066cc;
+    margin: 25px 0 15px 0;
+    font-size: 1.4em;
+}
+
+.math-formula {
+    background: #f0f7ff;
+    padding: 15px;
+    border-left: 5px solid #004080;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.math-formula p {
+    margin: 5px 0;
+}
+
+.solution-steps {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 1px solid #e0e0e0;
+}
+
+.solution-steps p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.mistakes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mistakes-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff0f0;
+    border-radius: 5px;
+    border-left: 4px solid #ff4444;
+}
+
+.practice-problems {
+    background: #f0fff0;
+    padding: 20px 20px 20px 40px;
+    border-radius: 10px;
+    border-left: 5px solid #44aa44;
+}
+
+.practice-problems li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.answer-hint {
+    color: #0066cc;
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.learn-more:hover {
+    background: #0066cc;
+}
+
+/* Algebra Preview Section */
+.algebra-preview {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.algebra-preview h2 {
+    color: #004080;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.algebra-content h3 {
+    color: #0066cc;
+    margin: 20px 0 10px 0;
+}
+
+/* Trigonometry Preview Section */
+.trigonometry-preview {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.trigonometry-preview h2 {
+    color: white;
+    border-bottom: 3px solid rgba(255,255,255,0.5);
+    padding-bottom: 10px;
+}
+
+.trig-content h3 {
+    color: rgba(255,255,255,0.9);
+    margin: 20px 0 10px 0;
+}
+
+.trig-formulas {
+    list-style: none;
+    padding: 0;
+}
+
+.trig-formulas li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+.trig-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.trig-table th {
+    background: #004080;
+    color: white;
+    padding: 12px;
+}
+
+.trig-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.trig-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Calculus Preview Section */
+.calculus-preview {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.calculus-preview h2 {
+    color: #004080;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.calculus-content h3 {
+    color: #0066cc;
+    margin: 20px 0 10px 0;
+}
+
+/* Cards Section Updated */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
 }
 
 .card {
     background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
+    border-radius: 15px;
+    padding: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h2 {
     margin-top: 0;
+    color: #004080;
+    font-size: 1.5em;
 }
 
 .card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 8px 15px;
     background-color: #004080;
     color: white;
@@ -114,33 +319,51 @@ main {
 .card a:hover {
     background-color: #00264d;
 }
-#log{
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    margin-left: 15px;
-    margin-top: 12px;
-    font-size: 1em;
-    text-align: center;
-    display: block;
-}
-#log:hover {
-    background-color: #00264d;
+
+/* Features Section */
+.features {
+    background: #f5f5f5;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px 0;
 }
 
-footer {
+.features h2 {
     text-align: center;
-    padding: 15px 10px;
-    background-color: #004080;
-    color: white;
+    color: #004080;
+    margin-bottom: 30px;
 }
-footer a {
-    color: hsl(207, 100%, 82%);
-    text-decoration: underline;
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
-footer a:hover {
-    color: hsl(0, 0%, 100%);
+
+.feature {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
+.feature h3 {
+    color: #0066cc;
+    margin-top: 0;
+}
+
+/* Intro Content (keep but update) */
+.intro-content {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    line-height: 1.7;
+    display: none; /* HIDE THIS - we have better content now */
+}
+
+/* Public Lessons Section */
 .public-lessons {
     padding: 30px 20px;
     text-align: center;
@@ -211,24 +434,114 @@ footer a:hover {
     display: inline-block;
     margin-top: 10px;
 }
+
+/* Progress Promo */
+.progress-promo {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #004080 0%, #0066cc 100%);
+    color: white;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.progress-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #004080;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.progress-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #004080;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #99ccff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footerinfo {
+    margin: 15px 0;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
+    .portal-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portal-nav li {
+        width: 100%;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .lesson-grid {
         grid-template-columns: 1fr;
     }
     
-    .public-lessons h2 {
-        font-size: 1.8em;
+    .featured-lesson h2 {
+        font-size: 1.6em;
+    }
+    
+    .trig-table {
+        font-size: 0.9em;
+    }
+    
+    .math-formula {
+        font-size: 1em;
+        overflow-x: auto;
     }
 }
 
-
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
     }
-
-    .portal-nav ul {
-        flex-direction: column;
+    
+    .featured-lesson,
+    .algebra-preview,
+    .trigonometry-preview,
+    .calculus-preview {
+        padding: 20px;
+    }
+    
+    .practice-problems {
+        padding: 15px;
+    }
+    
+    .answer-hint {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
     }
 }
