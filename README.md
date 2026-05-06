@@ -1,7 +1,7 @@
  BestRonny Mathematics Website
 
   Live Demo
-https://ronnybest.netlify.app
+https://bestronny.netlify.app
 
  Project Overview
 BestRonny is a functional mathematics website designed to help users explore and solve various mathematical problems easily. The platform provides a simple and user-friendly interface for performing calculations and understanding mathematical concepts.
