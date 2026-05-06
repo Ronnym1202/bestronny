@@ -33,7 +33,7 @@ This project was developed as part of my self-learning journey in web developmen
 - Deploying a live project using Netlify
 
  GitHub Repository
-https://github.com/yourusername
+https://github.com/Ronnym1202
 
 
  Author
