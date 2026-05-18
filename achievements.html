@@ -3,260 +3,663 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Achievements - Ronny Best</title>
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); overflow: hidden; }
-        .achievements-header { background: linear-gradient(135deg, #004080 0%, #0066cc 100%); color: white; padding: 40px; text-align: center; }
-        .achievements-header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        .achievements-header p { opacity: 0.9; font-size: 1.1em; }
-        .stats-summary { display: flex; justify-content: space-around; padding: 30px; background: #f8f9fa; border-bottom: 2px solid #e2e8f0; }
-        .stat-item { text-align: center; }
-        .stat-label { display: block; color: #666; font-size: 14px; margin-bottom: 5px; }
-        .stat-value { font-size: 2.5em; font-weight: bold; color: #004080; }
-        .achievements-section, .progress-section, .recent-activity { padding: 30px; }
-        h2 { color: #004080; margin-bottom: 20px; font-size: 1.8em; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .badges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-        .badge { background: #f0f7ff; border: 2px solid #cce5ff; border-radius: 10px; padding: 20px; text-align: center; font-weight: bold; color: #004080; }
-        .progress-bars { margin: 20px 0; }
-        .progress-item { margin: 25px 0; }
-        .progress-bar { height: 25px; background: #e2e8f0; border-radius: 12px; overflow: hidden; margin-top: 10px; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #00aaff, #004080); border-radius: 12px; text-align: right; padding-right: 10px; color: white; font-weight: bold; line-height: 25px; transition: width 1s; }
-        .activity-list { background: #f8f9fa; border-radius: 10px; padding: 20px; }
-        .activity-item { padding: 12px; border-bottom: 1px solid #e2e8f0; }
-        .activity-item:last-child { border-bottom: none; }
-        .action-buttons { text-align: center; padding: 30px; background: #f8f9fa; border-top: 2px solid #e2e8f0; }
-        .reset-btn, .home-btn { padding: 15px 30px; margin: 0 10px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
-        .reset-btn { background: #e74c3c; color: white; }
-        .home-btn { background: #004080; color: white; }
-        .page-footer { text-align: center; padding: 25px; color: #666; border-top: 2px solid #e2e8f0; }
-        .page-footer a { color: #004080; text-decoration: none; margin: 0 10px; }
-        @media (max-width: 768px) { .stats-summary { flex-direction: column; gap: 20px; } .badges-grid { grid-template-columns: repeat(2, 1fr); } }
-    </style>
+    <title>Achievements | Ronny Best Mathematics</title>
+    <meta name="description" content="Track your mathematics progress, earned badges, and topic mastery on the Ronny Best Mathematics platform.">
+
+    <!-- AdSense -->
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">             
     <script src="shared.js"></script>
+
+    <style>
+        :root {
+            --bisque:        #ffe4c4;
+            --bisque-dark:   #f5d0a9;
+            --bisque-deeper: #e8b98a;
+            --bisque-light:  #fff9f3;
+            --brown:         #7b4a1e;
+            --brown-dark:    #4a2508;
+            --brown-mid:     #a0622a;
+            --amber:         #c97b0a;
+            --green:         #2e6645;
+            --green-light:   #3d8559;
+            --blue:          #1a56a0;
+            --blue-light:    #2a6cbf;
+            --text:          #2e1a0c;
+            --muted:         #7a5c42;
+            --border:        rgba(123,74,30,0.15);
+            --card:          #fffcf7;
+            --shadow:        0 4px 24px rgba(74,37,8,0.10);
+            --radius:        14px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bisque-light);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* NAV */
+        nav {
+            background: var(--brown-dark);
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            box-shadow: 0 2px 18px rgba(74,37,8,.4);
+        }
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--bisque);
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--bisque-deeper); }
+        .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
+        .nav-links a { color: rgba(255,228,196,.7); text-decoration: none; font-size: .87rem; font-weight: 600; transition: color .2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--bisque); }
+        .nav-cta { background: var(--green) !important; color: #fff !important; padding: .4rem 1rem; border-radius: 7px; }
+        .nav-cta:hover { background: var(--green-light) !important; }
+
+        /* HERO */
+        .page-hero {
+            background: linear-gradient(160deg, var(--brown-dark) 0%, #1a3d6e 100%);
+            padding: 3.5rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 80% 20%, rgba(255,228,196,.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-icon {
+            font-size: 3rem;
+            margin-bottom: .75rem;
+            display: block;
+            position: relative;
+        }
+        .page-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            color: var(--bisque);
+            font-weight: 700;
+            position: relative;
+        }
+        .page-hero p {
+            color: rgba(255,228,196,.6);
+            margin-top: .5rem;
+            font-size: .95rem;
+            position: relative;
+        }
+
+        /* LAYOUT */
+        .page-body {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* AD SLOTS */
+        .ad-slot {
+            border: 1px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            overflow: hidden;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            text-align: center;
+        }
+
+        /*  CARDS */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            box-shadow: var(--shadow);
+        }
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--brown-dark);
+            margin-bottom: 1.2rem;
+            padding-bottom: .6rem;
+            border-bottom: 2px solid var(--bisque-dark);
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        /* STAT STRIP */
+        .stats-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .stat-box {
+            background: var(--bisque-light);
+            border: 1.5px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.25rem 1rem;
+            text-align: center;
+            transition: transform .18s, box-shadow .18s;
+        }
+        .stat-box:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+        .stat-box .val {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--brown-dark);
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1;
+        }
+        .stat-box .lbl {
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--muted);
+            font-weight: 700;
+            margin-top: .35rem;
+        }
+        .stat-box.accent-green .val { color: var(--green); }
+        .stat-box.accent-amber .val  { color: var(--amber); }
+        .stat-box.accent-blue  .val  { color: var(--blue); }
+
+        /* HOW IT WORKS */
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .how-item {
+            background: var(--bisque-light);
+            border: 1px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.1rem 1.2rem;
+        }
+        .how-item .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--brown-dark);
+            color: var(--bisque);
+            font-size: .8rem;
+            font-weight: 800;
+            margin-bottom: .5rem;
+        }
+        .how-item strong { display: block; color: var(--brown-dark); font-size: .9rem; margin-bottom: .25rem; }
+        .how-item p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+        /* BADGES */
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: .75rem;
+        }
+        .badge-item {
+            background: var(--bisque-light);
+            border: 2px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.1rem .8rem;
+            text-align: center;
+            transition: transform .18s, box-shadow .18s, border-color .18s;
+        }
+        .badge-item:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--amber); }
+        .badge-item .badge-icon { font-size: 1.8rem; display: block; margin-bottom: .4rem; }
+        .badge-item .badge-name { font-size: .8rem; font-weight: 700; color: var(--brown-dark); line-height: 1.3; }
+        .badge-item.locked { opacity: .45; filter: grayscale(.6); }
+
+        /* PROGRESS BARS */
+        .progress-list { display: flex; flex-direction: column; gap: 1.1rem; }
+        .prog-row {}
+        .prog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .35rem;
+        }
+        .prog-label { font-size: .88rem; font-weight: 700; color: var(--brown); }
+        .prog-pct   { font-size: .8rem; font-weight: 700; color: var(--muted); }
+        .prog-track {
+            height: 12px;
+            background: var(--bisque-dark);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        .prog-fill {
+            height: 100%;
+            border-radius: 99px;
+            width: 0;
+            transition: width 1.1s cubic-bezier(.4,0,.2,1);
+        }
+        .prog-fill.c-blue   { background: linear-gradient(90deg, var(--blue), #60a5fa); }
+        .prog-fill.c-green  { background: linear-gradient(90deg, var(--green), #4ade80); }
+        .prog-fill.c-amber  { background: linear-gradient(90deg, var(--amber), #fbbf24); }
+        .prog-fill.c-purple { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+        .prog-fill.c-teal   { background: linear-gradient(90deg, #0f766e, #2dd4bf); }
+        .prog-fill.c-rose   { background: linear-gradient(90deg, #be123c, #fb7185); }
+        .prog-fill.c-brown  { background: linear-gradient(90deg, var(--brown-dark), var(--brown-mid)); }
+
+        /* ACTIVITY FEED */
+        .activity-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .75rem;
+            padding: .8rem 0;
+            border-bottom: 1px solid var(--bisque-dark);
+            font-size: .88rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .activity-item:last-child { border-bottom: none; }
+        .activity-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--bisque-deeper);
+            flex-shrink: 0;
+            margin-top: .35rem;
+        }
+        .activity-item.correct .activity-dot { background: var(--green); }
+        .activity-item.incorrect .activity-dot { background: #dc2626; }
+        .activity-item.badge .activity-dot { background: var(--amber); }
+
+        /* QUICK NAV */
+        .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            justify-content: center;
+        }
+        .qnav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            padding: .6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: .88rem;
+            font-weight: 700;
+            transition: opacity .18s, transform .15s;
+        }
+        .qnav-btn:hover { opacity: .88; transform: translateY(-1px); }
+        .qnav-btn.navy   { background: var(--brown-dark); color: var(--bisque); }
+        .qnav-btn.green  { background: var(--green);      color: #fff; }
+        .qnav-btn.purple { background: #7c3aed;            color: #fff; }
+        .qnav-btn.teal   { background: #0f766e;            color: #fff; }
+
+        /* RESET / ACTION BUTTONS */
+        .action-bar {
+            display: flex;
+            gap: .75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-reset {
+            padding: .7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            background: #dc2626;
+            color: #fff;
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background .18s;
+        }
+        .btn-reset:hover { background: #b91c1c; }
+        .btn-home {
+            padding: .7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--brown-dark);
+            color: var(--bisque);
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: background .18s;
+        }
+        .btn-home:hover { background: #3a1c05; }
+
+        /*  FOOTER  */
+        footer {
+            background: var(--brown-dark);
+            color: rgba(255,228,196,.45);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+        footer a { color: var(--bisque-deeper); text-decoration: none; padding: 0 .4rem; }
+        footer a:hover { color: var(--bisque); text-decoration: underline; }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+        }
+        .empty-state p { font-size: .93rem; }
+        .empty-state a { color: var(--blue); font-weight: 700; }
+
+        /* RESPONSIVE */
+        @media (max-width: 640px) {
+            nav { padding: 0 1rem; }
+            .nav-links { display: none; }
+            .page-body { padding: 1rem .9rem 3rem; }
+            .card { padding: 1.2rem 1rem; }
+            .stats-strip { grid-template-columns: 1fr 1fr; }
+            .badges-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
 </head>
-<header class="achievements-header">
-    <h1>🏆 Math Achievement System Demo</h1>
-    <p>Preview of progress tracking for math learners</p>
-</header>
 <body>
-           <div class="intro-explanation" style="padding: 25px; background: #f0f8ff; border-bottom: 2px solid #cce5ff;">
-    <h3 style="color: #004080; margin-bottom: 10px;">📊 How This Achievement System Works</h3>
-    <p style="line-height: 1.6; margin-bottom: 15px;">This achievement tracker helps math students monitor their learning progress across different topics:</p>
-    <ul style="margin-left: 20px; line-height: 1.6;">
-        <li><strong>Solve Practice Problems:</strong> Each problem solved in the <a href="tasks.html" style="color: #0066cc; font-weight: bold;">Practice Section</a> updates your stats</li>
-        <li><strong>Earn Badges:</strong> Complete specific challenges to unlock achievement badges</li>
-        <li><strong>Track Progress:</strong> Visual progress bars show mastery in Algebra, Geometry, and Calculus</li>
-        <li><strong>View Activity:</strong> See your recent learning activities and accomplishments</li>
+
+<nav>
+    <a href="/" class="nav-logo">Ronny Best <span>∑</span></a>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="main.html">Lessons</a></li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="achievements.html" class="active">Achievements</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
-    <p style="margin-top: 15px; font-style: italic; color: #555;">The data shown is sample data. When you start solving problems, your personal progress will be saved here.</p>
+</nav>
+
+<div class="page-hero">
+    <span class="hero-icon">🏆</span>
+    <h1>Your Achievements</h1>
+    <p>Track badges, topic mastery, and your full learning journey</p>
 </div>
 
-        <div class="stats-summary">
-            <div class="stat-item">
-                <span class="stat-label">Total Solved</span>
-                <span class="stat-value" id="totalProblems">0</span>
+<div class="page-body">
+
+    <!-- Ad — top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="6601000001"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="stats-strip">
+        <div class="stat-box accent-blue">
+            <div class="val" id="totalProblems">—</div>
+            <div class="lbl">Problems Solved</div>
+        </div>
+        <div class="stat-box accent-green">
+            <div class="val" id="correctAnswers">—</div>
+            <div class="lbl">Correct Answers</div>
+        </div>
+        <div class="stat-box accent-amber">
+            <div class="val" id="accuracyScore">—</div>
+            <div class="lbl">Accuracy</div>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="card">
+        <h2 class="card-title">📊 How Achievements Work</h2>
+        <div class="how-grid">
+            <div class="how-item">
+                <span class="step-num">1</span>
+                <strong>Solve Practice Problems</strong>
+                <p>Each problem solved in the <a href="tasks.html" style="color:var(--blue);font-weight:700;">Practice Section</a> automatically updates your stats here.</p>
             </div>
-            <div class="stat-item">
-                <span class="stat-label">Correct Answers</span>
-                <span class="stat-value" id="correctAnswers">0</span>
+            <div class="how-item">
+                <span class="step-num">2</span>
+                <strong>Earn Badges</strong>
+                <p>Unlock achievement badges by hitting milestones — accuracy targets, problems solved, and topic mastery.</p>
             </div>
-            <div class="stat-item">
-                <span class="stat-label">Accuracy</span>
-                <span class="stat-value" id="accuracyScore">0%</span>
+            <div class="how-item">
+                <span class="step-num">3</span>
+                <strong>Track Progress</strong>
+                <p>Visual progress bars show your mastery across all seven topic areas, updating in real time.</p>
+            </div>
+            <div class="how-item">
+                <span class="step-num">4</span>
+                <strong>No Login Needed</strong>
+                <p>Everything saves automatically in your browser — no account required, fully private.</p>
             </div>
         </div>
-
-        <section class="achievements-section">
-            <h2>🎖️ Earned Badges</h2>
-            <div id="badgesContainer" class="badges-grid"></div>
-        </section>
-
-        <section class="progress-section">
-            <h2>📈 Topic Progress</h2>
-            <div class="progress-bars">
-                <div class="progress-item">
-                    <span>Algebra</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="algebraProgress">0%</div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <span>Geometry</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="geometryProgress">0%</div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <span>Calculus</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="calculusProgress">0%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="recent-activity">
-            <h2>📝 Recent Activity</h2>
-            <div id="activityList" class="activity-list"></div>
-        </section>
-<div class="quick-navigation" style="text-align: center; margin: 30px 0; padding: 20px; background: #f0f8ff; border-radius: 10px; border: 2px solid #cce5ff;">
-    <h3 style="color: #004080; margin-bottom: 15px;">🚀 Quick Navigation</h3>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
-        <a href="progress.html" class="nav-link" style="background: #004080; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-            📊 Progress Home
-        </a>
-        <a href="tasks.html" class="nav-link" style="background: #28a745; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-            📝 Practice Problems
-        </a>
-        <a href="mind.html" class="nav-link" style="background: #6f42c1; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-            🎮 Brain Games
-        </a>
-        <a href="main.html" class="nav-link" style="background: #17a2b8; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-            📚 Math Lessons
-        </a>
     </div>
+
+    <!-- Badges -->
+    <div class="card">
+        <h2 class="card-title">🎖️ Earned Badges</h2>
+        <div id="badgesContainer" class="badges-grid">
+            <div class="empty-state"><p>No badges yet — <a href="tasks.html">solve a problem</a> to earn your first!</p></div>
+        </div>
+    </div>
+
+    <!-- Ad — mid -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block;text-align:center"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="6601000002"
+             data-ad-format="rectangle"
+             data-full-width-responsive="false"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Topic Progress -->
+    <div class="card">
+        <h2 class="card-title">📈 Topic Progress</h2>
+        <div class="progress-list">
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Algebra</span><span class="prog-pct" id="pct-algebra">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-blue" id="bar-algebra"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Geometry</span><span class="prog-pct" id="pct-geometry">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-green" id="bar-geometry"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Calculus</span><span class="prog-pct" id="pct-calculus">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-amber" id="bar-calculus"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Trigonometry</span><span class="prog-pct" id="pct-trigonometry">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-purple" id="bar-trigonometry"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Matrices</span><span class="prog-pct" id="pct-matrices">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-teal" id="bar-matrices"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Vectors</span><span class="prog-pct" id="pct-vectors">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-rose" id="bar-vectors"></div></div>
+            </div>
+            <div class="prog-row">
+                <div class="prog-meta"><span class="prog-label">Statistics</span><span class="prog-pct" id="pct-statistics">0%</span></div>
+                <div class="prog-track"><div class="prog-fill c-brown" id="bar-statistics"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="card">
+        <h2 class="card-title">🕒 Recent Activity</h2>
+        <div id="activityList" class="activity-feed">
+            <div class="empty-state"><p>No activity yet. <a href="tasks.html">Start practising</a> to see your history here.</p></div>
+        </div>
+    </div>
+
+    <!-- Quick nav -->
+    <div class="card" style="text-align:center;">
+        <h2 class="card-title" style="justify-content:center;">🧭 Quick Navigation</h2>
+        <div class="quick-nav">
+            <a href="progress.html" class="qnav-btn navy">📊 Progress Home</a>
+            <a href="tasks.html"    class="qnav-btn green">✏️ Practice Problems</a>
+            <a href="mind.html"     class="qnav-btn purple">🧠 Brain Games</a>
+            <a href="main.html"     class="qnav-btn teal">📚 Math Lessons</a>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="action-bar">
+        <button onclick="handleReset()" class="btn-reset">🗑 Reset My Progress</button>
+        <a href="index.html" class="btn-home">← Back to Home</a>
+    </div>
+
 </div>
-        <div class="action-buttons">
-            <button onclick="resetProgress()" class="reset-btn">Reset My Progress</button>
-            <a href="index.html" class="home-btn">Back to Home</a>
-        </div>
 
-        <footer class="page-footer">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="index.html">Home</a> | 
-            <a href="main.html">Math Lessons</a>
-        </footer>
-    </div>
+<footer>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> &middot;
+        <a href="index.html">Home</a> &middot;
+        <a href="main.html">Math Lessons</a> &middot;
+        <a href="tasks.html">Practice</a>
+    </p>
+    <p>&copy; 2025 Ronny Best Mathematics — Free Maths Education for Everyone</p>
+</footer>
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log("DOM loaded, checking MathProgress...");
-        console.log("MathProgress exists:", typeof MathProgress !== 'undefined');
-        setTimeout(() => {
-            try {
-                const stats = MathProgress.getStats();
-                console.log("Stats retrieved:", stats);
-                if (stats.totalSolved === 0 && stats.badges.length <= 1) {
-                    console.log("Loading sample data for demonstration...");
-                    const sampleStats = {
-                        totalSolved: 24,
-                        correct: 21,
-                        accuracy: 88,
-                        topics: {
-                            algebra: 85,
-                            geometry: 70,
-                            calculus: 90,
-                            trigonometry: 75,
-                            matrices: 65,
-                            vectors: 60,
-                            statistics: 55
-                        },
-                        badges: ['Math Learner', 'Problem Solver', 'Accuracy Star', 'Algebra Explorer'],
-                        activity: [
-                            'Started learning mathematics with Ronny Best Platform',
-                            '✓ Solved calculus problem: Differentiate y = 3x^3 + 2x^2 + 5x',
-                            '📖 Viewed topic: Trigonometry formulas and identities',
-                            '✓ Solved algebra problem: Find determinant of [[2,3],[1,4]]',
-                            '🎮 Played Math Puzzle: Won with score 85',
-                            '✓ Solved geometry problem: Area of circle radius 5',
-                            '📖 Viewed topic: Integration techniques',
-                            '✓ Solved calculus problem: Integrate ∫(2x^2 + 3x) dx',
-                            '🏅 Earned badge: Problem Solver (10+ problems solved)',
-                            '✓ Solved algebra problem: Matrix multiplication'
-                        ].reverse(),
-                        gamesPlayed: 3,
-                        gamesWon: 2
-                    };
-                    updateDisplay(sampleStats);
-                } else {
-                    updateDisplay(stats);
-                }
-                
-            } catch (error) {
-                console.error("Error loading progress:", error);
-                showError();
-            }
-        }, 100);
-        function updateDisplay(stats) {
-            console.log("Updating display with:", stats);
-            document.getElementById('totalProblems').textContent = stats.totalSolved;
-            document.getElementById('correctAnswers').textContent = stats.correct;
-            document.getElementById('accuracyScore').textContent = `${stats.accuracy}%`;
-            requestAnimationFrame(() => {
-                const algebraElem = document.getElementById('algebraProgress');
-                const geometryElem = document.getElementById('geometryProgress');
-                const calculusElem = document.getElementById('calculusProgress');
-                animateProgressBar(algebraElem, stats.topics.algebra || 0);
-                animateProgressBar(geometryElem, stats.topics.geometry || 0);
-                animateProgressBar(calculusElem, stats.topics.calculus || 0);
-            });
-            const badgesContainer = document.getElementById('badgesContainer');
-            badgesContainer.innerHTML = '';
-            if (stats.badges && stats.badges.length > 0) {
-                stats.badges.forEach(badge => {
-                    const badgeDiv = document.createElement('div');
-                    badgeDiv.className = 'badge';
-                    badgeDiv.textContent = badge;
-                    badgesContainer.appendChild(badgeDiv);
-                });
-            } else {
-                badgesContainer.innerHTML = '<div class="badge">No badges yet</div>';
-            }
-            const activityList = document.getElementById('activityList');
-            activityList.innerHTML = '';
-            if (stats.activity && stats.activity.length > 0) {
-                stats.activity.forEach(item => {
-                    const div = document.createElement('div');
-                    div.className = 'activity-item';
-                    div.textContent = item;
-                    activityList.appendChild(div);
-                });
-            } else {
-                activityList.innerHTML = '<div class="activity-item">No activity yet. Start solving problems!</div>';
-            }
-        }
-        function animateProgressBar(element, targetPercent) {
-            let current = 0;
-            const duration = 1000;
-            const increment = targetPercent / (duration / 16); // 60fps
-            
-            function step() {
-                current += increment;
-                if (current >= targetPercent) {
-                    current = targetPercent;
-                    element.style.width = `${current}%`;
-                    element.textContent = `${Math.round(current)}%`;
-                    return;
-                }
-                element.style.width = `${current}%`;
-                element.textContent = `${Math.round(current)}%`;
-                requestAnimationFrame(step);
-            }
-            requestAnimationFrame(step);
-        }
-        function showError() {
-            const container = document.querySelector('.container');
-            const errorDiv = document.createElement('div');
-            errorDiv.style.cssText = 'background: #ffe6e6; border: 2px solid #ff4444; border-radius: 10px; padding: 20px; margin: 20px; text-align: center;';
-            errorDiv.innerHTML = `
-                <h3 style="color: #cc0000;">⚠️ Progress Tracking Temporarily Unavailable</h3>
-                <p>We're having trouble loading your progress data. This is a demo preview.</p>
-                <p>When you start solving problems in the Practice section, your progress will be saved here.</p>
-                <button onclick="location.reload()" style="background: #004080; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 10px; cursor: pointer;">Refresh Page</button>
-            `;
-            container.insertBefore(errorDiv, container.firstChild);
-        }
-        window.resetProgress = function() {
-            if (confirm('Reset ALL progress and badges? This cannot be undone.')) {
-                MathProgress.resetProgress();
-                setTimeout(() => {
-                    location.reload();
-                }, 500);
-            }
-        };
+/* ── BADGE DEFINITIONS ── */
+const BADGE_META = {
+    "Math Learner":       { icon: "📗", desc: "Welcome badge" },
+    "Problem Solver":     { icon: "🧩", desc: "10+ problems solved" },
+    "Practice Champion":  { icon: "🏅", desc: "50+ problems solved" },
+    "Century Scholar":    { icon: "💯", desc: "100+ problems solved" },
+    "Accuracy Star":      { icon: "⭐", desc: "80%+ accuracy" },
+    "Precision Master":   { icon: "🎯", desc: "95%+ accuracy" },
+    "Algebra Expert":     { icon: "🔢", desc: "Algebra mastery" },
+    "Calculus Master":    { icon: "∫",  desc: "Calculus mastery" },
+    "Geometry Pro":       { icon: "📐", desc: "Geometry mastery" },
+    "Trig Wizard":        { icon: "📡", desc: "Trigonometry mastery" },
+    "Algebra Explorer":   { icon: "🔭", desc: "Algebra explorer" },
+};
+
+const SAMPLE = {
+    totalSolved: 24, correct: 21, accuracy: 88,
+    topics: { algebra:85, geometry:70, calculus:90, trigonometry:75, matrices:65, vectors:60, statistics:55 },
+    badges: ["Math Learner","Problem Solver","Accuracy Star","Algebra Explorer"],
+    activity: [
+        "✓ Solved calculus: Differentiate y = 3x³ + 2x² + 5x",
+        "📖 Viewed topic: Trigonometry formulas",
+        "✓ Solved algebra: Determinant of [[2,3],[1,4]]",
+        "🎮 Played Math Puzzle — Won (score 85)",
+        "✓ Solved geometry: Area of circle radius 5",
+        "📖 Viewed topic: Integration techniques",
+        "✓ Solved calculus: ∫(2x² + 3x) dx",
+        "🏅 Badge earned: Problem Solver",
+        "✓ Solved algebra: Matrix multiplication",
+        "✓ Solved vectors: Magnitude of (3, 4, 0)"
+    ]
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    let data;
+    try {
+        const stats = MathProgress.getStats();
+        data = (stats.totalSolved === 0 && stats.badges.length <= 1) ? SAMPLE : stats;
+    } catch {
+        data = SAMPLE;
+    }
+    renderAll(data);
+});
+
+function renderAll(data) {
+    /* Stats */
+    animCount("totalProblems",  data.totalSolved);
+    animCount("correctAnswers", data.correct);
+    document.getElementById("accuracyScore").textContent = data.accuracy + "%";
+
+    /* Topic bars */
+    const topics = data.topics || {};
+    const keys = ["algebra","geometry","calculus","trigonometry","matrices","vectors","statistics"];
+    requestAnimationFrame(() => {
+        keys.forEach(k => {
+            const pct = topics[k] || 0;
+            const bar = document.getElementById("bar-" + k);
+            const lbl = document.getElementById("pct-" + k);
+            if (bar) { setTimeout(() => { bar.style.width = pct + "%"; }, 120); }
+            if (lbl) lbl.textContent = pct + "%";
+        });
     });
+
+    /* Badges */
+    const grid = document.getElementById("badgesContainer");
+    if (data.badges && data.badges.length > 0) {
+        grid.innerHTML = data.badges.map(name => {
+            const meta = BADGE_META[name] || { icon: "🏆", desc: "" };
+            return `<div class="badge-item">
+                <span class="badge-icon">${meta.icon}</span>
+                <div class="badge-name">${name}</div>
+            </div>`;
+        }).join("");
+    }
+
+    /* Activity */
+    const feed = document.getElementById("activityList");
+    const acts = data.activity || [];
+    if (acts.length > 0) {
+        feed.innerHTML = acts.slice(0, 15).map(item => {
+            let cls = "";
+            if (item.startsWith("✓")) cls = "correct";
+            else if (item.startsWith("✗")) cls = "incorrect";
+            else if (item.includes("badge") || item.includes("Badge")) cls = "badge";
+            return `<div class="activity-item ${cls}"><div class="activity-dot"></div><span>${escapeHTML(item)}</span></div>`;
+        }).join("");
+    }
+}
+
+function animCount(id, target) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let current = 0;
+    const step = Math.max(1, Math.round(target / 40));
+    const t = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current;
+        if (current >= target) clearInterval(t);
+    }, 30);
+}
+
+function handleReset() {
+    if (!confirm("Reset ALL progress and badges? This cannot be undone.")) return;
+    try { MathProgress.resetProgress(); } catch {}
+    setTimeout(() => location.reload(), 300);
+}
+
+function escapeHTML(s) {
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+}
 </script>
 </body>
 </html>

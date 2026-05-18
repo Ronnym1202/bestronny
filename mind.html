@@ -3,416 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Brain Games - Ronny Best</title>
+    <title>Math Brain Games – Ronny Best</title>
     <link rel="stylesheet" href="mind.css">
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <script src="shared.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- TOP LEADERBOARD AD -->
+<div class="ad-slot ad-top" aria-label="Advertisement">
+    <ins class="adsbygoogle" style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
 <header>
-    <div class="header-content">
-        <h1>🧠 Math Brain Games & Puzzles</h1>
-        <div id="welcomeMessage"></div>
-        <p class="subtitle">Sharpen your mathematical thinking through challenging puzzles and games!</p>
+    <div class="header-inner">
+        <div class="header-badge">✦ Free · No Login · Curriculum-Aligned ✦</div>
+        <h1>Math Brain Games</h1>
+        <p class="subtitle">Arithmetic · Algebra · Logic · Calculus</p>
+        <div id="statsBar"></div>
     </div>
 </header>
 
-<div class="container">
-    <section class="intro-section">
-        <h2>🎯 Educational Math Games</h2>
-        <p>These unique brain games are designed to develop mathematical reasoning, logical thinking, and problem-solving skills. Each game focuses on different areas of mathematics:</p>
-        
-        <div class="game-categories">
-            <div class="category-card">
-                <h3>🔢 Arithmetic & Numbers</h3>
-                <p>Number sense, prime numbers, fractions, mental math</p>
-            </div>
-            <div class="category-card">
-                <h3>📐 Algebra & Patterns</h3>
-                <p>Equations, functions, sequences, pattern recognition</p>
-            </div>
-            <div class="category-card">
-                <h3>📊 Geometry & Logic</h3>
-                <p>Spatial reasoning, deductive logic, geometric construction</p>
-            </div>
-            <div class="category-card">
-                <h3>∞ Advanced Mathematics</h3>
-                <p>Calculus, series, matrices, higher-order thinking</p>
-            </div>
+<div class="page-wrap">
+
+    <!-- SIDEBAR AD LEFT -->
+    <aside class="ad-sidebar" aria-label="Advertisement">
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="2222222222"
+             data-ad-format="auto"></ins>
+    </aside>
+
+    <main class="main-col">
+
+        <!-- GAME TABS -->
+        <nav id="gameMenu" role="tablist" aria-label="Select a game">
+            <button onclick="showGame('memory',this)" class="tab active" role="tab">
+                <span class="tab-icon">🧠</span><span class="tab-label">Memory</span>
+            </button>
+            <button onclick="showGame('speed',this)" class="tab" role="tab">
+                <span class="tab-icon">⚡</span><span class="tab-label">Speed Math</span>
+            </button>
+            <button onclick="showGame('prime',this)" class="tab" role="tab">
+                <span class="tab-icon">🔢</span><span class="tab-label">Prime Hunt</span>
+            </button>
+            <button onclick="showGame('fraction',this)" class="tab" role="tab">
+                <span class="tab-icon">➗</span><span class="tab-label">Fractions</span>
+            </button>
+            <button onclick="showGame('pattern',this)" class="tab" role="tab">
+                <span class="tab-icon">📈</span><span class="tab-label">Patterns</span>
+            </button>
+            <button onclick="showGame('balance',this)" class="tab" role="tab">
+                <span class="tab-icon">⚖️</span><span class="tab-label">Balancer</span>
+            </button>
+            <button onclick="showGame('twentyfour',this)" class="tab" role="tab">
+                <span class="tab-icon">🃏</span><span class="tab-label">Make 24</span>
+            </button>
+            <button onclick="showGame('countdown',this)" class="tab" role="tab">
+                <span class="tab-icon">🎯</span><span class="tab-label">Countdown</span>
+            </button>
+            <button onclick="showGame('sudoku',this)" class="tab" role="tab">
+                <span class="tab-icon">🔲</span><span class="tab-label">Mini Sudoku</span>
+            </button>
+            <button onclick="showGame('series',this)" class="tab" role="tab">
+                <span class="tab-icon">∞</span><span class="tab-label">Series</span>
+            </button>
+        </nav>
+
+        <!-- INLINE AD (between nav and games) -->
+        <div class="ad-slot ad-inline" aria-label="Advertisement">
+            <ins class="adsbygoogle" style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="3333333333"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
         </div>
-        
-        <div class="educational-note">
-            <h4>📚 Educational Value:</h4>
-            <p>These games align with mathematics curriculum standards and develop:</p>
-            <ul>
-                <li><strong>Critical Thinking:</strong> Analyzing problems systematically</li>
-                <li><strong>Problem Solving:</strong> Developing multiple solution strategies</li>
-                <li><strong>Logical Reasoning:</strong> Making deductions from given information</li>
-                <li><strong>Mathematical Fluency:</strong> Building confidence with numbers and operations</li>
-            </ul>
-        </div>
-    </section>
-    <nav id="gameMenu">
-        <button onclick="showGame('memory')" class="active">🔢 Number Memory</button>
-        <button onclick="showGame('balance')">⚖️ Equation Balancer</button>
-        <button onclick="showGame('prime')">🔢 Prime/Composite</button>
-        <button onclick="showGame('fraction')">➗ Fraction Match</button>
-        <button onclick="showGame('speed')">⏱️ Speed Math</button>
-        <button onclick="showGame('pattern')">📈 Pattern Predictor</button>
-        <button onclick="showGame('maze')">🧩 Math Maze</button>
-        <button onclick="showGame('function')">🔄 Function Transformer</button>
-        <button onclick="showGame('polygon')">📐 Polygon Constructor</button>
-        <button onclick="showGame('series')">∞ Series Converger</button>
-        <button onclick="showGame('matrixpath')">🧭 Matrix Pathfinder</button>
-        <button onclick="showGame('derivatived')">🕵️ Derivative Detective</button>
-    </nav>
-    <div class="games-container">
-        
-        <!-- 1. NUMBER MEMORY -->
-        <section id="memory" class="game active">
-            <div class="game-header">
-                <h2>🔢 Number Memory Challenge</h2>
-                <p class="game-description">Memorize the number shown and type it correctly. Difficulty increases with each correct answer!</p>
-            </div>
-            <div class="game-content">
-                <div id="memoryDisplay" class="number-display-container">
-                    <div class="number-display-large">???</div>
-                </div>
-                <div class="game-controls">
-                    <input type="text" id="memoryInput" placeholder="Enter the number you saw" maxlength="10">
-                    <button onclick="checkMemory()" class="action-btn">Submit Answer</button>
-                    <button onclick="generateMemoryNumber()" class="secondary-btn">New Number</button>
-                </div>
-                <div id="memoryResult" class="result-message"></div>
-                <div class="game-stats">
-                    <p><strong>Level:</strong> <span id="memoryLevel">1</span> | <strong>Digits:</strong> <span id="memoryDigits">3</span></p>
-                </div>
-            </div>
-        </section>
 
-        <!-- 2. EQUATION BALANCER -->
-        <section id="balance" class="game">
-            <div class="game-header">
-                <h2>⚖️ Equation Balancer</h2>
-                <p class="game-description">Fill in the missing number to make both sides of the equation equal.</p>
-            </div>
-            <div class="game-content">
-                <div id="balanceQuestion" class="equation-display">
-                    <div class="equation-large">2 + 3 = 4 + ?</div>
-                </div>
-                <div class="game-controls">
-                    <input type="number" id="balanceInput" placeholder="Enter missing number">
-                    <button onclick="checkBalance()" class="action-btn">Check Balance</button>
-                    <button onclick="generateBalanceEquation()" class="secondary-btn">New Equation</button>
-                </div>
-                <div id="balanceResult" class="result-message"></div>
-            </div>
-        </section>
+        <div class="games-wrap">
 
-        <!-- 3. PRIME OR COMPOSITE -->
-        <section id="prime" class="game">
-            <div class="game-header">
-                <h2>🔢 Prime or Composite?</h2>
-                <p class="game-description">Quickly identify whether the number is prime (only divisible by 1 and itself) or composite.</p>
-            </div>
-            <div class="game-content">
-                <div id="primeNumber" class="number-display-container">
-                    <div class="number-display-huge">42</div>
+            <!-- ① NUMBER MEMORY -->
+            <section id="memory" class="game active" role="tabpanel">
+                <div class="game-header">
+                    <h2>🧠 Number Memory</h2>
+                    <p>Watch the number flash, then type it from memory. Each correct answer adds a digit.</p>
                 </div>
-                <div class="game-controls dual-buttons">
-                    <button onclick="answerPrime(true)" class="prime-btn">Prime Number</button>
-                    <button onclick="answerPrime(false)" class="composite-btn">Composite Number</button>
+                <div class="game-body">
+                    <div class="display-card" id="memoryDisplay">
+                        <span class="display-num" id="memoryNum">???</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Level <strong id="memoryLevel">1</strong></span>
+                        <span class="pill">Digits <strong id="memoryDigits">3</strong></span>
+                        <span class="pill pill-fire">🔥 Streak <strong id="memoryStreak">0</strong></span>
+                    </div>
+                    <div class="control-row">
+                        <input type="text" id="memoryInput" placeholder="Enter the number…" maxlength="12" autocomplete="off">
+                        <button onclick="checkMemory()" class="btn-primary">Submit</button>
+                        <button onclick="generateMemoryNumber()" class="btn-ghost">New</button>
+                    </div>
+                    <div class="result" id="memoryResult"></div>
                 </div>
-                <div id="primeResult" class="result-message"></div>
-                <div class="hint-box">
-                    <p><strong>Hint:</strong> Prime numbers have exactly two divisors: 1 and themselves.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 4. FRACTION MATCHER -->
-        <section id="fraction" class="game">
-            <div class="game-header">
-                <h2>➗ Fraction Matcher</h2>
-                <p class="game-description">Find the fraction that is equivalent to the given fraction.</p>
-            </div>
-            <div class="game-content">
-                <div id="fractionQuestion" class="equation-display">
-                    <div class="fraction-large">Find equivalent to 1/2</div>
+            <!-- ② SPEED MATH -->
+            <section id="speed" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>⚡ Speed Math</h2>
+                    <p>Solve as many problems as you can in <strong>60 seconds</strong>!</p>
                 </div>
-                <div id="fractionOptions" class="options-grid">
-                </div>
-                <div id="fractionResult" class="result-message"></div>
-            </div>
-        </section>
-
-        <!-- 5. SPEED MATH -->
-        <section id="speed" class="game">
-            <div class="game-header">
-                <h2>⏱️ Speed Math Challenge</h2>
-                <p class="game-description">Solve as many problems as you can in 30 seconds! Test your mental math speed.</p>
-            </div>
-            <div class="game-content">
-                <div class="timer-display">
-                    <div class="timer-circle">
-                        <span id="speedTimer">30</span>s
-                    </div>
-                </div>
-                <div id="speedQuestion" class="equation-display">
-                    <div class="equation-xlarge">7 × 8 = ?</div>
-                </div>
-                <div class="game-controls">
-                    <input type="number" id="speedInput" placeholder="Your answer">
-                    <button onclick="checkSpeed()" class="action-btn">Submit</button>
-                    <button onclick="startSpeedTimer()" class="start-btn">Start Timer</button>
-                </div>
-                <div class="score-display">
-                    <p><strong>Score:</strong> <span id="speedScore">0</span> points</p>
-                    <p><strong>Problems Solved:</strong> <span id="speedSolved">0</span></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. PATTERN PREDICTOR -->
-        <section id="pattern" class="game">
-            <div class="game-header">
-                <h2>📈 Pattern Predictor</h2>
-                <p class="game-description">Identify the pattern and predict the next number in the sequence.</p>
-            </div>
-            <div class="game-content">
-                <div id="patternQuestion" class="sequence-display">
-                    <div class="sequence">2, 4, 6, 8, ?</div>
-                </div>
-                <div class="game-controls">
-                    <input type="number" id="patternInput" placeholder="Next number">
-                    <button onclick="checkPattern()" class="action-btn">Check Pattern</button>
-                    <button onclick="generatePattern()" class="secondary-btn">New Sequence</button>
-                </div>
-                <div id="patternResult" class="result-message"></div>
-                <div class="pattern-types">
-                    <p><strong>Common Patterns:</strong> Arithmetic, Geometric, Square Numbers, Fibonacci</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. MATH MAZE SOLVER -->
-        <section id="maze" class="game">
-            <div class="game-header">
-                <h2>🧩 Math Maze Solver</h2>
-                <p class="game-description">Navigate through the maze by solving equations at each intersection.</p>
-            </div>
-            <div class="game-content maze-content">
-                <div class="maze-container">
-                    <div class="maze-grid" id="mazeGrid">
-                    </div>
-                    <div class="maze-info">
-                        <h4>Maze Information</h4>
-                        <p><strong>Current Position:</strong> <span id="mazePos">Start (0,0)</span></p>
-                        <p><strong>Score:</strong> <span id="mazeScore">0</span> points</p>
-                        <p><strong>Equation to solve:</strong></p>
-                        <div class="equation-box" id="mazeEquation">2x + 5 = 15</div>
-                        <input type="number" id="mazeAnswer" placeholder="Enter x value">
-                        <button onclick="solveMazeStep()" class="action-btn">Move Forward</button>
-                        <button onclick="generateMathMaze()" class="secondary-btn">New Maze</button>
-                    </div>
-                </div>
-                <div id="mazeResult" class="result-message"></div>
-            </div>
-        </section>
-
-        <!-- 8. FUNCTION TRANSFORMER -->
-        <section id="function" class="game">
-            <div class="game-header">
-                <h2>🔄 Function Transformer</h2>
-                <p class="game-description">Transform the given function through operations to match the target function.</p>
-            </div>
-            <div class="game-content">
-                <div class="function-display">
-                    <div class="function-box">
-                        <p><strong>Start Function:</strong></p>
-                        <div class="function-equation" id="startFunc">f(x) = x²</div>
-                    </div>
-                    <div class="function-box">
-                        <p><strong>Target Function:</strong></p>
-                        <div class="function-equation" id="targetFunc">g(x) = (x+3)² - 4</div>
-                    </div>
-                </div>
-                <div class="transform-controls">
-                    <p><strong>Transformations:</strong></p>
-                    <div class="transform-buttons">
-                        <button onclick="applyTransform('shiftH', 1)">← Shift Left</button>
-                        <button onclick="applyTransform('shiftH', -1)">Shift Right →</button>
-                        <button onclick="applyTransform('shiftV', 1)">↑ Shift Up</button>
-                        <button onclick="applyTransform('shiftV', -1)">Shift Down ↓</button>
-                        <button onclick="applyTransform('stretch', 2)">Stretch ×2</button>
-                        <button onclick="applyTransform('compress', 0.5)">Compress ÷2</button>
-                        <button onclick="applyTransform('reflect', 'x')">Reflect X</button>
-                        <button onclick="applyTransform('reflect', 'y')">Reflect Y</button>
-                    </div>
-                </div>
-                <div class="current-function">
-                    <p><strong>Current Function:</strong></p>
-                    <div class="function-equation" id="currentFunc">f(x) = x²</div>
-                </div>
-                <div class="game-controls">
-                    <button onclick="checkFunctionMatch()" class="action-btn">Check Match</button>
-                    <button onclick="newFunctionPuzzle()" class="secondary-btn">New Puzzle</button>
-                    <p><strong>Moves Left:</strong> <span id="functionMoves">5</span></p>
-                </div>
-                <div id="functionResult" class="result-message"></div>
-            </div>
-        </section>
-
-        <!-- 9. POLYGON CONSTRUCTOR -->
-        <section id="polygon" class="game">
-            <div class="game-header">
-                <h2>📐 Polygon Constructor</h2>
-                <p class="game-description">Construct a polygon that satisfies all geometric constraints.</p>
-            </div>
-            <div class="game-content polygon-content">
-                <div class="polygon-container">
-                    <div class="canvas-container">
-                        <canvas id="polygonCanvas" width="400" height="300"></canvas>
-                    </div>
-                    <div class="constraints-container">
-                        <h4>Constraints:</h4>
-                        <ul class="constraints-list">
-                            <li id="constraint1">• Vertex A at (0,0)</li>
-                            <li id="constraint2">• Vertex B at (5,0)</li>
-                            <li id="constraint3">• Side AB = 5 units</li>
-                            <li id="constraint4">• Interior angle at B = 90°</li>
-                            <li id="constraint5">• Area must be 12.5 units²</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="polygon-controls">
-                    <button onclick="addVertex()" class="action-btn">Add Vertex</button>
-                    <button onclick="removeVertex()" class="secondary-btn">Remove Vertex</button>
-                    <button onclick="checkPolygon()" class="action-btn">Check Solution</button>
-                    <button onclick="newPolygonPuzzle()" class="secondary-btn">New Polygon</button>
-                </div>
-                <div id="polygonResult" class="result-message"></div>
-            </div>
-        </section>
-
-        <!-- 10. INFINITE SERIES CONVERGER -->
-        <section id="series" class="game">
-            <div class="game-header">
-                <h2>∞ Infinite Series Converger</h2>
-                <p class="game-description">Determine if the infinite series converges or diverges using convergence tests.</p>
-            </div>
-            <div class="game-content">
-                <div class="series-display">
-                    <p><strong>Series:</strong></p>
-                    <div class="series-equation">
-                        ∑ <span id="seriesTerm">1/n²</span> from n=1 to ∞
-                    </div>
-                </div>
-                <div class="convergence-tests">
-                    <p><strong>Select Convergence Test:</strong></p>
-                    <div class="test-buttons">
-                        <button onclick="applyTest('comparison')">Comparison Test</button>
-                        <button onclick="applyTest('ratio')">Ratio Test</button>
-                        <button onclick="applyTest('root')">Root Test</button>
-                        <button onclick="applyTest('integral')">Integral Test</button>
-                        <button onclick="applyTest('alternating')">Alternating Series</button>
-                    </div>
-                </div>
-                <div class="analysis-box">
-                    <p><strong>Your Analysis:</strong></p>
-                    <textarea id="seriesAnalysis" rows="3" placeholder="Explain your reasoning and calculations..."></textarea>
-                </div>
-                <div class="verdict-buttons">
-                    <button onclick="submitVerdict(true)" class="converge-btn">Converges</button>
-                    <button onclick="submitVerdict(false)" class="diverge-btn">Diverges</button>
-                </div>
-                <div id="seriesResult" class="result-message"></div>
-                <button onclick="newSeriesPuzzle()" class="secondary-btn">New Series</button>
-            </div>
-        </section>
-
-        <!-- 11. MATRIX PATHFINDER -->
-        <section id="matrixpath" class="game">
-            <div class="game-header">
-                <h2>🧭 Matrix Pathfinder</h2>
-                <p class="game-description">Navigate through matrix cells by performing operations to reach the target value.</p>
-            </div>
-            <div class="game-content matrix-content">
-                <div class="matrix-container">
-                    <div class="matrix-display" id="pathMatrix">
-                    </div>
-                    <div class="path-info">
-                        <h4>Path Information</h4>
-                        <p><strong>Current Position:</strong> <span id="pathPos">(1,1)</span></p>
-                        <p><strong>Current Value:</strong> <span id="pathValue">5</span></p>
-                        <p><strong>Target Value:</strong> <span id="pathTarget">24</span></p>
-                        <div class="operation-buttons">
-                            <p><strong>Operations:</strong></p>
-                            <button onclick="pathOperation('addRow')">Add Row</button>
-                            <button onclick="pathOperation('multiplyCol')">Multiply Column</button>
-                            <button onclick="pathOperation('transpose')">Transpose Step</button>
-                            <button onclick="pathOperation('determinant')">Take Determinant</button>
+                <div class="game-body">
+                    <div class="timer-wrap">
+                        <svg class="timer-ring" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="52" class="ring-fill" id="timerRingFill"/>
+                        </svg>
+                        <div class="timer-inner">
+                            <span id="speedTimer">60</span>
+                            <small>sec</small>
                         </div>
                     </div>
-                </div>
-                <div class="matrix-controls">
-                    <button onclick="checkMatrixPath()" class="action-btn">Check if Target Reached</button>
-                    <button onclick="newMatrixPath()" class="secondary-btn">New Matrix Path</button>
-                </div>
-                <div id="matrixPathResult" class="result-message"></div>
-            </div>
-        </section>
-
-        <!-- 12. DERIVATIVE DETECTIVE -->
-        <section id="derivatived" class="game">
-            <div class="game-header">
-                <h2>🕵️ Derivative Detective</h2>
-                <p class="game-description">Given clues about f'(x), reconstruct the original function f(x). Solve the calculus mystery!</p>
-            </div>
-            <div class="game-content detective-content">
-                <div class="detective-container">
-                    <div class="clues-box">
-                        <h4>Clues about f'(x):</h4>
-                        <ul class="clues-list">
-                            <li id="clue1">• f'(0) = 2</li>
-                            <li id="clue2">• f'(x) has roots at x = -1, 3</li>
-                            <li id="clue3">• f'(x) > 0 for x < -1</li>
-                            <li id="clue4">• ∫f'(x)dx from 0 to 2 = 5</li>
-                            <li id="clue5">• f''(1) = -4</li>
-                        </ul>
+                    <div class="display-card eq-card" id="speedQuestion">
+                        <span class="display-eq">Press ▶ Start!</span>
                     </div>
-                    <div class="solution-box">
-                        <h4>Your Solution:</h4>
-                        <p><strong>Your hypothesis for f(x):</strong></p>
-                        <input type="text" id="detectiveFunction" placeholder="e.g., x³ - 2x² + 3x + C" class="function-input">
-                        <p><strong>Constant of Integration (C):</strong></p>
-                        <input type="number" id="detectiveConstant" placeholder="Enter C value" class="constant-input">
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="speedScore">0</strong></span>
+                        <span class="pill">Solved <strong id="speedSolved">0</strong></span>
+                        <span class="pill pill-fire">🏆 Best <strong id="speedBest">0</strong></span>
+                    </div>
+                    <div class="control-row">
+                        <input type="number" id="speedInput" placeholder="Answer…" autocomplete="off">
+                        <button onclick="checkSpeed()" class="btn-primary">Submit</button>
+                        <button onclick="startSpeedTimer()" class="btn-start">▶ Start</button>
+                    </div>
+                    <div class="result" id="speedResult"></div>
+                </div>
+            </section>
+
+            <!-- ③ PRIME HUNT -->
+            <section id="prime" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>🔢 Prime Hunt</h2>
+                    <p>Is the number <strong>prime</strong> or <strong>composite</strong>? Streak bonus for fast answers!</p>
+                </div>
+                <div class="game-body">
+                    <div class="display-card huge-num">
+                        <span id="primeNum">—</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="primeScore">0</strong></span>
+                        <span class="pill pill-fire">🔥 Streak <strong id="primeStreak">0</strong></span>
+                    </div>
+                    <div class="dual-btns">
+                        <button onclick="answerPrime(true)" class="btn-yes">✓ Prime</button>
+                        <button onclick="answerPrime(false)" class="btn-no">✗ Composite</button>
+                    </div>
+                    <div class="hint-strip">A prime has exactly <em>two</em> divisors: 1 and itself.</div>
+                    <div class="result" id="primeResult"></div>
+                </div>
+            </section>
+
+            <!-- ④ FRACTION MATCHER -->
+            <section id="fraction" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>➗ Fraction Match</h2>
+                    <p>Pick the fraction <em>equivalent</em> to the one shown.</p>
+                </div>
+                <div class="game-body">
+                    <div class="display-card">
+                        <span class="display-frac" id="fractionTarget">—</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="fractionScore">0</strong></span>
+                    </div>
+                    <div class="options-grid" id="fractionOptions"></div>
+                    <div class="result" id="fractionResult"></div>
+                </div>
+            </section>
+
+            <!-- ⑤ PATTERN PREDICTOR -->
+            <section id="pattern" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>📈 Pattern Predictor</h2>
+                    <p>Spot the rule, predict the next number in the sequence.</p>
+                </div>
+                <div class="game-body">
+                    <div class="display-card seq-card">
+                        <span class="display-seq" id="patternSeq">—</span>
+                        <span class="display-blank">?</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill pill-fire">🔥 Streak <strong id="patternStreak">0</strong></span>
+                    </div>
+                    <div class="control-row">
+                        <input type="number" id="patternInput" placeholder="Next number…" autocomplete="off">
+                        <button onclick="checkPattern()" class="btn-primary">Check</button>
+                        <button onclick="generatePattern()" class="btn-ghost">Skip</button>
+                    </div>
+                    <div class="hint-strip" id="patternHint" style="display:none"></div>
+                    <div class="result" id="patternResult"></div>
+                </div>
+            </section>
+
+            <!-- ⑥ EQUATION BALANCER -->
+            <section id="balance" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>⚖️ Equation Balancer</h2>
+                    <p>Find the missing value to make both sides equal.</p>
+                </div>
+                <div class="game-body">
+                    <div class="display-card eq-card">
+                        <span class="display-eq" id="balanceEq">—</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill pill-fire">🔥 Streak <strong id="balanceStreak">0</strong></span>
+                    </div>
+                    <div class="control-row">
+                        <input type="number" id="balanceInput" placeholder="Missing value…" autocomplete="off">
+                        <button onclick="checkBalance()" class="btn-primary">Balance ⚖️</button>
+                        <button onclick="generateBalanceEquation()" class="btn-ghost">New</button>
+                    </div>
+                    <div class="result" id="balanceResult"></div>
+                </div>
+            </section>
+
+            <!-- ⑦ MAKE 24 -->
+            <section id="twentyfour" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>🃏 Make 24</h2>
+                    <p>Use all four cards with +, −, ×, ÷ (and brackets) to make exactly <strong>24</strong>.</p>
+                </div>
+                <div class="game-body">
+                    <div class="card-row" id="cardsRow"></div>
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="t24Score">0</strong></span>
+                        <span class="pill pill-fire">🏆 Best <strong id="t24Best">0</strong></span>
+                    </div>
+                    <div class="t24-entry">
+                        <label>Your expression (use all 4 numbers):</label>
+                        <input type="text" id="t24Input" placeholder="e.g. (8 − 2) × (6 − 2)" autocomplete="off">
+                    </div>
+                    <div class="control-row">
+                        <button onclick="checkMake24()" class="btn-primary">Submit</button>
+                        <button onclick="newMake24()" class="btn-ghost">New Cards</button>
+                        <button onclick="revealMake24()" class="btn-hint">💡 Hint</button>
+                    </div>
+                    <div class="result" id="t24Result"></div>
+                </div>
+            </section>
+
+            <!-- ⑧ COUNTDOWN NUMBERS -->
+            <section id="countdown" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>🎯 Countdown Numbers</h2>
+                    <p>Reach the <strong>target</strong> using any subset of the six numbers. You don't have to use them all.</p>
+                </div>
+                <div class="game-body">
+                    <div class="countdown-header">
+                        <div class="cd-target-wrap">
+                            <div class="cd-label">TARGET</div>
+                            <div class="cd-target" id="cdTarget">—</div>
+                        </div>
+                        <div class="cd-timer-wrap">
+                            <div class="cd-label">TIME</div>
+                            <div class="cd-time" id="cdTimer">45</div>
+                        </div>
+                    </div>
+                    <div class="card-row" id="cdNumbers"></div>
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="cdScore">0</strong></span>
+                    </div>
+                    <div class="t24-entry">
+                        <label>Your expression:</label>
+                        <input type="text" id="cdInput" placeholder="e.g. (100 + 25) × 3 − 75" autocomplete="off">
+                    </div>
+                    <div class="control-row">
+                        <button onclick="checkCountdown()" class="btn-primary">Submit</button>
+                        <button onclick="startCountdownTimer()" class="btn-start">▶ Start</button>
+                        <button onclick="newCountdown()" class="btn-ghost">New Round</button>
+                    </div>
+                    <div class="result" id="cdResult"></div>
+                </div>
+            </section>
+
+            <!-- ⑨ MINI SUDOKU (4×4) -->
+            <section id="sudoku" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>🔲 Mini Sudoku</h2>
+                    <p>Fill the 4×4 grid so each row, column and 2×2 box contains 1–4 exactly once.</p>
+                </div>
+                <div class="game-body">
+                    <div class="sudoku-outer">
+                        <div class="sudoku-grid" id="sudokuGrid"></div>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Solved <strong id="sudokuSolved">0</strong></span>
+                        <span class="pill" id="sudokuTimerPill">⏱ 0s</span>
+                    </div>
+                    <div class="control-row">
+                        <button onclick="checkSudoku()" class="btn-primary">Check ✓</button>
+                        <button onclick="newSudoku()" class="btn-ghost">New Puzzle</button>
+                        <button onclick="solveSudoku()" class="btn-hint">💡 Solve</button>
+                    </div>
+                    <div class="result" id="sudokuResult"></div>
+                </div>
+            </section>
+
+            <!-- ⑩ SERIES CONVERGER -->
+            <section id="series" class="game" role="tabpanel">
+                <div class="game-header">
+                    <h2>∞ Series Converger</h2>
+                    <p>Decide whether the infinite series <strong>converges</strong> or <strong>diverges</strong>.</p>
+                </div>
+                <div class="game-body">
+                    <div class="display-card series-card">
+                        <div class="series-sigma">∑</div>
+                        <div class="series-term" id="seriesTerm">—</div>
+                        <div class="series-range">from n = 1 to ∞</div>
+                    </div>
+                    <div class="test-shelf">
+                        <p class="shelf-label">Apply a convergence test:</p>
+                        <div class="test-btns">
+                            <button onclick="applyTest('comparison')">Comparison</button>
+                            <button onclick="applyTest('ratio')">Ratio</button>
+                            <button onclick="applyTest('integral')">Integral</button>
+                            <button onclick="applyTest('alternating')">Alternating</button>
+                            <button onclick="applyTest('ptest')">p-Series</button>
+                        </div>
+                    </div>
+                    <textarea id="seriesAnalysis" rows="3" placeholder="Write your reasoning…"></textarea>
+                    <div class="pill-row">
+                        <span class="pill">Score <strong id="seriesScore">0</strong></span>
+                    </div>
+                    <div class="dual-btns">
+                        <button onclick="submitVerdict(true)" class="btn-yes">Converges ✓</button>
+                        <button onclick="submitVerdict(false)" class="btn-no">Diverges ✗</button>
+                    </div>
+                    <div class="result" id="seriesResult"></div>
+                    <div style="text-align:center;margin-top:16px">
+                        <button onclick="newSeriesPuzzle()" class="btn-ghost">New Series</button>
                     </div>
                 </div>
-                <div class="detective-controls">
-                    <button onclick="checkDerivativeSolution()" class="action-btn">Solve Mystery</button>
-                    <button onclick="newDerivativeMystery()" class="secondary-btn">New Mystery</button>
-                </div>
-                <div id="detectiveResult" class="result-message"></div>
-            </div>
-        </section>
+            </section>
 
-    </div>
-    <footer class="page-footer">
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="index.html">Home</a> | 
-            <a href="main.html">Math Lessons</a> | 
-            <a href="tasks.html">Practice Problems</a>
+        </div><!-- /games-wrap -->
+
+        <!-- BOTTOM AD -->
+        <div class="ad-slot ad-bottom" aria-label="Advertisement">
+            <ins class="adsbygoogle" style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="4444444444"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
         </div>
-        <p class="copyright">© 2025 Ronny Best Math Learning Platform. All games are original educational content.</p>
-    </footer>
-</div>
+
+        <footer class="page-footer">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="index.html">Home</a>
+                <a href="main.html">Math Lessons</a>
+                <a href="tasks.html">Practice</a>
+            </div>
+            <p>© 2025 Ronny Best Math Learning Platform · All games are original educational content.</p>
+        </footer>
+
+    </main>
+
+    <!-- SIDEBAR AD RIGHT -->
+    <aside class="ad-sidebar" aria-label="Advertisement">
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="5555555555"
+             data-ad-format="auto"></ins>
+    </aside>
+
+</div><!-- /page-wrap -->
 
 <script src="mind.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>

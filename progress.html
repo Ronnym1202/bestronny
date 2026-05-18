@@ -3,137 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Progress Tracker - Ronny Best</title>
-    <link rel="stylesheet" href="progress.css">
+    <title>Progress Tracker | Ronny Best Mathematics</title>
+    <meta name="description" content="Track your mathematics learning progress on Ronny Best Mathematics — no login required.">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
+    <script src="shared.js"></script>
+
+    <style>
+        :root {
+            --bisque:        #ffe4c4;
+            --bisque-dark:   #f5d0a9;
+            --bisque-deeper: #e8b98a;
+            --bisque-light:  #fff9f3;
+            --brown:         #7b4a1e;
+            --brown-dark:    #4a2508;
+            --brown-mid:     #a0622a;
+            --amber:         #c97b0a;
+            --green:         #2e6645;
+            --green-light:   #3d8559;
+            --blue:          #1a56a0;
+            --text:          #2e1a0c;
+            --muted:         #7a5c42;
+            --card:          #fffcf7;
+            --shadow:        0 4px 24px rgba(74,37,8,.10);
+            --radius:        14px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bisque-light);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ── NAV ── */
+        nav {
+            background: var(--brown-dark);
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            position: sticky; top: 0; z-index: 200;
+            box-shadow: 0 2px 18px rgba(74,37,8,.4);
+        }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .nav-logo span { color: var(--bisque-deeper); }
+        .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
+        .nav-links a { color: rgba(255,228,196,.7); text-decoration: none; font-size: .87rem; font-weight: 600; transition: color .2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--bisque); }
+        .nav-cta { background: var(--green) !important; color: #fff !important; padding: .4rem 1rem; border-radius: 7px; }
+        .nav-cta:hover { background: var(--green-light) !important; }
+
+        /* ── HERO ── */
+        .page-hero {
+            background: linear-gradient(160deg, var(--brown-dark) 0%, #1a3d6e 100%);
+            padding: 3.5rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 80% 20%, rgba(255,228,196,.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-icon { font-size: 3rem; display: block; margin-bottom: .75rem; position: relative; }
+        .page-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            color: var(--bisque); font-weight: 700;
+            position: relative;
+        }
+        .page-hero p { color: rgba(255,228,196,.6); margin-top: .5rem; font-size: .95rem; position: relative; }
+
+        /* ── PAGE BODY ── */
+        .page-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* ── AD SLOT ── */
+        .ad-slot {
+            border: 1px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            overflow: hidden;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            text-align: center;
+        }
+
+        /* ── STAT CARDS ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1.5px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.4rem 1rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform .18s;
+        }
+        .stat-card:hover { transform: translateY(-3px); }
+        .stat-card .sc-label {
+            font-size: .72rem;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            color: var(--muted);
+            font-weight: 700;
+            margin-bottom: .35rem;
+        }
+        .stat-card .sc-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--brown-dark);
+        }
+        .stat-card:nth-child(1) .sc-val { color: var(--blue); }
+        .stat-card:nth-child(2) .sc-val { color: var(--green); }
+        .stat-card:nth-child(3) .sc-val { color: var(--amber); }
+
+        /* ── MAIN CARD ── */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--bisque-dark);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            box-shadow: var(--shadow);
+        }
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--brown-dark);
+            margin-bottom: 1.1rem;
+            padding-bottom: .6rem;
+            border-bottom: 2px solid var(--bisque-dark);
+        }
+
+        /* ── PRIVACY PILLS ── */
+        .privacy-pills {
+            display: flex;
+            flex-direction: column;
+            gap: .65rem;
+        }
+        .pill-row {
+            display: flex;
+            align-items: flex-start;
+            gap: .65rem;
+            background: var(--bisque-light);
+            border: 1px solid var(--bisque-dark);
+            border-radius: 10px;
+            padding: .75rem 1rem;
+            font-size: .9rem;
+        }
+        .pill-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: .05rem; }
+        .pill-row strong { color: var(--brown-dark); }
+        .pill-row p { color: var(--muted); font-size: .83rem; margin-top: .15rem; line-height: 1.5; }
+
+        /* ── TIPS ── */
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: .65rem;
+        }
+        .tip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .65rem;
+            padding: .7rem 1rem;
+            background: var(--bisque-light);
+            border: 1px solid var(--bisque-dark);
+            border-left: 4px solid var(--amber);
+            border-radius: 0 10px 10px 0;
+            font-size: .88rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .tip-item strong { color: var(--brown-dark); }
+
+        /* ── LATEST BADGE ── */
+        .badge-spotlight {
+            background: linear-gradient(135deg, var(--bisque-light) 0%, #fff8ec 100%);
+            border: 2px dashed var(--amber);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .badge-spotlight h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--brown-dark);
+            margin-bottom: .5rem;
+        }
+        .badge-spotlight .badge-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--green);
+        }
+        .badge-spotlight a { color: var(--blue); font-weight: 700; text-decoration: none; font-size: .88rem; display: inline-block; margin-top: .65rem; }
+        .badge-spotlight a:hover { text-decoration: underline; }
+
+        /* ── ACTION BUTTONS ── */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .7rem 1.3rem;
+            border-radius: 9px;
+            font-size: .9rem;
+            font-weight: 700;
+            font-family: inherit;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: opacity .18s, transform .15s;
+        }
+        .btn:hover { opacity: .88; transform: translateY(-1px); }
+        .btn-navy   { background: var(--brown-dark); color: var(--bisque); }
+        .btn-green  { background: var(--green);      color: #fff; }
+        .btn-ghost  { background: transparent; border: 2px solid var(--bisque-dark); color: var(--brown); }
+        .btn-ghost:hover { background: var(--bisque-light); }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--brown-dark);
+            color: rgba(255,228,196,.45);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+        footer a { color: var(--bisque-deeper); text-decoration: none; padding: 0 .4rem; }
+        footer a:hover { color: var(--bisque); text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            nav { padding: 0 1rem; }
+            .nav-links { display: none; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-card:last-child { grid-column: 1 / -1; }
+            .page-body { padding: 1rem .9rem 3rem; }
+            .card { padding: 1.2rem 1rem; }
+        }
+    </style>
 </head>
 <body>
-    <div class="progress-container">
-        <div class="progress-box">
-            <div class="math-header">
-                <h1>📊 Your Math Progress</h1>
-                <p class="subtitle">Track your learning achievements automatically</p>
-            </div>
 
-            <div class="progress-stats">
-                <div class="stat-card">
-                    <h3>Problems Solved</h3>
-                    <div class="stat-number" id="totalSolved">0</div>
-                </div>
-                <div class="stat-card">
-                    <h3>Accuracy</h3>
-                    <div class="stat-number" id="accuracyRate">0%</div>
-                </div>
-                <div class="stat-card">
-                    <h3>Learning Time</h3>
-                    <div class="stat-number" id="learningTime">0 min</div>
-                </div>
-            </div>
-
-            <div class="auto-track-note">
-                <p>✅ <strong>No Login Required:</strong> Progress saves automatically in your browser</p>
-                <p>🎮 <strong>Play Any Game:</strong> All progress is tracked automatically</p>
-                <p>📱 <strong>Works Offline:</strong> Data stays on your device only</p>
-            </div>
-
-            <div class="action-buttons">
-                <a href="mind.html" class="action-btn">Play Math Games</a>
-                <a href="tasks.html" class="action-btn">Practice Problems</a>
-                <a href="index.html" class="secondary-btn">Back to Home</a>
-            </div>
-            <div class="view-detailed">
-    <a href="achievements.html" style="color: #0066cc; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">
-        📈 View Detailed Progress Report →
-    </a>
-</div>
-<div class="progress-tips" style="background: #e8f4f8; border-radius: 10px; padding: 20px; margin: 25px 0; border-left: 5px solid #17a2b8;">
-    <h4 style="color: #004080; margin-bottom: 10px;">💡 Tips to Maximize Progress:</h4>
-    <ul style="margin-left: 20px; color: #555;">
-        <li>Solve <strong>10+ problems</strong> to earn your first badge</li>
-        <li>Maintain <strong>80%+ accuracy</strong> for special rewards</li>
-        <li>Try <strong>different topics</strong> to unlock all badges</li>
-        <li>Check back daily to track your improvement</li>
+<nav>
+    <a href="/" class="nav-logo">Ronny Best <span>∑</span></a>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="main.html">Lessons</a></li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
+</nav>
+
+<div class="page-hero">
+    <span class="hero-icon">📊</span>
+    <h1>Your Math Progress</h1>
+    <p>All progress saves automatically — no login, no account needed</p>
 </div>
-<div id="badgePreview" style="text-align: center; margin: 25px 0; padding: 20px; background: #fff8e1; border-radius: 10px; border: 2px dashed #ffc107; display: none;">
-    <h4 style="color: #004080; margin-bottom: 10px;">🏆 Your Latest Achievement:</h4>
-    <div id="latestBadge" style="font-size: 1.2em; font-weight: bold; color: #2E7D32;"></div>
-    <a href="achievements.html" style="display: inline-block; margin-top: 10px; color: #0066cc; font-weight: bold;">View All Achievements →</a>
-</div>
-            <div class="privacy-note">
-                <p>Your progress data stays on your device. View our <a href="privacy.html">Privacy Policy</a>.</p>
-            </div>
+
+<div class="page-body">
+
+    <!-- Ad — top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="7701000001"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="sc-label">Problems Solved</div>
+            <div class="sc-val" id="totalSolved">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="sc-label">Accuracy</div>
+            <div class="sc-val" id="accuracyRate">0%</div>
+        </div>
+        <div class="stat-card">
+            <div class="sc-label">Study Time</div>
+            <div class="sc-val" id="learningTime">0m</div>
         </div>
     </div>
-    <script src="shared.js"></script>
+
+    <!-- How it saves -->
+    <div class="card">
+        <h2 class="card-title">🔒 How Your Progress is Saved</h2>
+        <div class="privacy-pills">
+            <div class="pill-row">
+                <span class="pill-icon">✅</span>
+                <div><strong>No Login Required</strong><p>Progress saves automatically in your browser's local storage — no account needed.</p></div>
+            </div>
+            <div class="pill-row">
+                <span class="pill-icon">🎮</span>
+                <div><strong>Play Any Game or Solve Any Problem</strong><p>Every problem and game you complete is recorded instantly.</p></div>
+            </div>
+            <div class="pill-row">
+                <span class="pill-icon">🔒</span>
+                <div><strong>Works Offline</strong><p>Data stays on your device only — never sent to any server.</p></div>
+            </div>
+        </div>
+        <div id="newUserNote"></div>
+    </div>
+
+    <!-- Tips -->
+    <div class="card">
+        <h2 class="card-title">💡 Tips to Maximise Progress</h2>
+        <div class="tips-list">
+            <div class="tip-item"><span>🧩</span><span>Solve <strong>10+ problems</strong> to earn your first achievement badge.</span></div>
+            <div class="tip-item"><span>⭐</span><span>Maintain <strong>80% or higher accuracy</strong> to unlock the Accuracy Star badge.</span></div>
+            <div class="tip-item"><span>📚</span><span>Try <strong>different topics</strong> — each one has its own progress bar and mastery badges.</span></div>
+            <div class="tip-item"><span>🔄</span><span>Return regularly — consistent practice is the fastest path to mastery.</span></div>
+        </div>
+    </div>
+
+    <!-- Latest badge spotlight -->
+    <div class="badge-spotlight" id="badgeSpotlight" style="display:none;">
+        <h3>🏆 Latest Achievement Unlocked</h3>
+        <div class="badge-name" id="latestBadge"></div>
+        <a href="achievements.html">View all achievements →</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="card">
+        <h2 class="card-title">🚀 Where to Next?</h2>
+        <div class="actions">
+            <a href="tasks.html"       class="btn btn-green">✏️ Practice Problems</a>
+            <a href="achievements.html" class="btn btn-navy">🏆 Full Achievements</a>
+            <a href="mind.html"        class="btn btn-ghost">🧠 Brain Games</a>
+            <a href="main.html"        class="btn btn-ghost">📚 Math Lessons</a>
+            <a href="index.html"       class="btn btn-ghost">← Home</a>
+        </div>
+    </div>
+
+    <!-- Ad — bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="7701000002"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <p style="text-align:center;font-size:.8rem;color:var(--muted);">Your progress data stays on your device only. <a href="privacy.html" style="color:var(--blue);">Privacy Policy</a></p>
+
+</div>
+
+<footer>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> &middot;
+        <a href="index.html">Home</a> &middot;
+        <a href="main.html">Math Lessons</a> &middot;
+        <a href="tasks.html">Practice</a>
+    </p>
+    <p>&copy; 2025 Ronny Best Mathematics — Free Maths Education for Everyone</p>
+</footer>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typeof MathProgress !== 'undefined') {
-            const stats = MathProgress.getStats();
-            
-            document.getElementById('totalSolved').textContent = stats.totalSolved || 0;
-            document.getElementById('accuracyRate').textContent = (stats.accuracy || 0) + '%';
-            
-            const learningMinutes = (stats.totalSolved || 0) * 2;
-            document.getElementById('learningTime').textContent = learningMinutes + ' min';
-            
-            if (stats.totalSolved === 0) {
-                const note = document.querySelector('.auto-track-note');
-                if (note) {
-                    note.innerHTML += `
-                        <div style="margin-top: 15px; padding: 15px; background: #fff3cd; border-radius: 8px;">
-                            <p style="color: #856404; margin: 0;">
-                                <strong>🎯 Get Started:</strong> Solve your first problem to see your progress here!
-                            </p>
-                        </div>
-                    `;
-                }
-            }
-        } else {
-            console.log("Progress tracking not available");
-            document.querySelector('.auto-track-note').innerHTML += `
-                <div style="margin-top: 15px; padding: 15px; background: #f8d7da; border-radius: 8px;">
-                    <p style="color: #721c24; margin: 0;">
-                        <strong>⚠️ Note:</strong> Progress tracking requires JavaScript. Enable it for full features.
-                    </p>
-                </div>
-            `;
+document.addEventListener("DOMContentLoaded", function () {
+    let stats = { totalSolved: 0, accuracy: 0, badges: [], activity: [] };
+    try {
+        if (typeof MathProgress !== "undefined") {
+            stats = MathProgress.getStats();
         }
-        const statNumbers = document.querySelectorAll('.stat-number');
-        statNumbers.forEach(stat => {
-            const originalText = stat.textContent;
-            stat.textContent = '0';
-            
-            setTimeout(() => {
-                let current = 0;
-                const target = parseInt(originalText) || 0;
-                const increment = target / 30;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = originalText;
-                        clearInterval(timer);
-                    } else {
-                        if (originalText.includes('%')) {
-                            stat.textContent = Math.round(current) + '%';
-                        } else if (originalText.includes('min')) {
-                            stat.textContent = Math.round(current) + ' min';
-                        } else {
-                            stat.textContent = Math.round(current);
-                        }
-                    }
-                }, 50);
-            }, 500);
-        });
-    });
-if (stats.badges && stats.badges.length > 0) {
-    const badgePreview = document.getElementById('badgePreview');
-    const latestBadge = document.getElementById('latestBadge');
-    
-    if (badgePreview && latestBadge) {
-        badgePreview.style.display = 'block';
-        latestBadge.textContent = stats.badges[stats.badges.length - 1];
+    } catch (e) {
+        console.warn("Progress unavailable:", e);
     }
+
+    /* Animate stat counters */
+    animCount("totalSolved",   stats.totalSolved || 0, "");
+    animCount("accuracyRate",  stats.accuracy    || 0, "%");
+
+    const mins = (stats.totalSolved || 0) * 2;
+    animCount("learningTime",  mins, "m");
+
+    /* New user note */
+    if ((stats.totalSolved || 0) === 0) {
+        const el = document.getElementById("newUserNote");
+        if (el) {
+            el.innerHTML = `<div style="margin-top:1rem;padding:.85rem 1rem;background:#fff3cd;border:1px solid #f0c040;border-radius:10px;font-size:.88rem;color:#7a5c00;">
+                <strong>🎯 Get started:</strong> Solve your first practice problem and your progress will appear here automatically!
+                <a href="tasks.html" style="color:var(--blue);font-weight:700;margin-left:.35rem;">Go to practice →</a>
+            </div>`;
+        }
+    }
+
+    /* Latest badge spotlight */
+    const badges = stats.badges || [];
+    if (badges.length > 1) {
+        const latest = badges[badges.length - 1];
+        const spotlight = document.getElementById("badgeSpotlight");
+        const lbl = document.getElementById("latestBadge");
+        if (spotlight && lbl) {
+            lbl.textContent = latest;
+            spotlight.style.display = "block";
+        }
+    }
+});
+
+function animCount(id, target, suffix) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (target === 0) { el.textContent = "0" + suffix; return; }
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 40));
+    const t = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current + suffix;
+        if (current >= target) clearInterval(t);
+    }, 35);
 }
 </script>
 </body>

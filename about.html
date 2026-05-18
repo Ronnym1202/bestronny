@@ -1,86 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us | Ronny Best App</title>
-  <link rel="icon" type="image/png" href="IMAGES/P2.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: bisque;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-    }
-    h1 {
-      color: #222;
-      text-align: center;
-    }
-    p {
-      color: #444;
-      font-size: 16px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 40px;
-    }
-    footer a {
-      margin: 0 8px;
-      text-decoration: none;
-      color: #333;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Ronny Best Mathematics</title>
+<meta name="description" content="Learn about Ronny Best, the mathematician and educator behind Kenya's leading free mathematics learning platform for high school and college students.">
+
+<!-- AdSense -->
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="IMAGES/P2.png">
+<style>
+:root {
+    --bisque:#ffe4c4; --bisque-dark:#f5d0a9; --bisque-deeper:#e8b98a;
+    --bisque-light:#fff9f3; --brown:#7b4a1e; --brown-dark:#4a2508;
+    --brown-mid:#a0622a; --amber:#c97b0a; --green:#2e6645;
+    --green-light:#3d8559; --text:#3b2010; --muted:#8a6a50;
+    --white:#ffffff; --card:#fffcf7;
+    --ad-border:#f5d0a9;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; background: var(--bisque-light); color: var(--text); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+    background: var(--brown-dark);
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 2px 18px rgba(74,37,8,.4);
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+.nav-logo span { color: var(--bisque-deeper); }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,228,196,.7); text-decoration: none; font-size: .87rem; font-weight: 600; transition: color .2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--bisque); }
+.nav-cta { background: var(--green) !important; color: #fff !important; padding: .42rem 1.1rem; border-radius: 8px; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--green-light) !important; }
+
+/* ── AD SLOTS ── */
+.ad-slot {
+    max-width: 1060px;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+.ad-inner {
+    border: 1px solid var(--ad-border);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+/* ── HERO ── */
+.hero {
+    background: var(--brown-dark);
+    padding: 5rem 2.5rem 4.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 80% 20%, rgba(255,228,196,.07) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 60% at 20% 90%, rgba(200,120,10,.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+.breadcrumb { color: var(--bisque-deeper); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; position: relative; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 700; line-height: 1.1; position: relative; animation: fadeUp .5s .1s ease both; }
+.hero h1 em { font-style: italic; color: var(--bisque-deeper); }
+.hero-sub { color: rgba(255,228,196,.58); font-size: 1rem; max-width: 520px; margin: 1.1rem auto 0; line-height: 1.8; position: relative; animation: fadeUp .5s .2s ease both; }
+
+/* ── PROFILE LAYOUT ── */
+.profile-wrap {
+    max-width: 1060px;
+    margin: -1.5rem auto 0;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2.8rem;
+    align-items: start;
+}
+
+/* ── PROFILE CARD ── */
+.profile-card {
+    background: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(74,37,8,.1);
+    border: 2px solid var(--bisque-dark);
+    position: sticky;
+    top: 80px;
+    animation: fadeUp .6s .3s ease both;
+}
+.pc-head {
+    background: var(--brown-dark);
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    position: relative;
+}
+.pc-head::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: var(--card);
+    clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid rgba(255,228,196,.3);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    background: var(--brown-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.avatar-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--bisque);
+    display: none;
+}
+
+.pc-name { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.35rem; font-weight: 700; }
+.pc-title { color: var(--bisque-deeper); font-size: .8rem; margin-top: .3rem; font-weight: 600; letter-spacing: .03em; }
+
+.pc-body { padding: 1.6rem 1.6rem 1.8rem; }
+.stat-row { display: flex; justify-content: space-between; align-items: center; padding: .75rem 0; border-bottom: 1px solid rgba(123,74,30,.08); }
+.stat-row:last-of-type { border-bottom: none; }
+.stat-lbl { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+.stat-val { color: var(--brown-dark); font-weight: 700; font-size: .9rem; }
+
+.contact-btn {
+    display: block;
+    width: 100%;
+    padding: .85rem;
+    background: var(--green);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .93rem;
+    margin-top: 1.4rem;
+    transition: background .2s, transform .15s;
+}
+.contact-btn:hover { background: var(--green-light); transform: translateY(-1px); }
+
+/* ── STORY CARDS ── */
+.story { display: flex; flex-direction: column; gap: 1.8rem; padding-top: 1.8rem; animation: fadeUp .6s .4s ease both; }
+.sc {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 2rem 2.2rem;
+    box-shadow: 0 4px 24px rgba(74,37,8,.07);
+    border: 2px solid var(--bisque-dark);
+    border-left: 5px solid var(--bisque-deeper);
+    transition: transform .2s, box-shadow .2s;
+}
+.sc:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(74,37,8,.1); }
+.sc:nth-child(2) { border-left-color: var(--green); }
+.sc:nth-child(3) { border-left-color: var(--amber); }
+.sc:nth-child(4) { border-left-color: var(--brown-mid); }
+
+.card-lbl { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--bisque-deeper); margin-bottom: .45rem; }
+.sc:nth-child(2) .card-lbl { color: var(--green); }
+.sc:nth-child(3) .card-lbl { color: var(--amber); }
+.sc:nth-child(4) .card-lbl { color: var(--brown-mid); }
+
+.sc h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; color: var(--brown-dark); margin-bottom: .85rem; font-weight: 700; }
+.sc p { color: var(--muted); line-height: 1.82; font-size: .93rem; }
+.sc p + p { margin-top: .75rem; }
+
+/* ── QUOTE ── */
+.quote-block {
+    background: var(--brown-dark);
+    border-radius: 14px;
+    padding: 2rem 2.2rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.3rem;
+}
+.quote-block::before {
+    content: '"';
+    position: absolute;
+    top: -1rem;
+    left: .8rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7rem;
+    color: rgba(255,228,196,.08);
+    line-height: 1;
+}
+.qt { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--bisque); line-height: 1.72; position: relative; z-index: 1; font-style: italic; }
+.qa { color: var(--bisque-deeper); font-size: .82rem; font-weight: 700; margin-top: .9rem; letter-spacing: .04em; }
+
+/* ── VALUES ── */
+.values-sec { max-width: 1060px; margin: 0 auto; padding: 0 2rem 5rem; }
+.vals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.4rem; margin-top: 2.8rem; }
+.vc {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 1.7rem;
+    box-shadow: 0 4px 20px rgba(74,37,8,.07);
+    border: 2px solid var(--bisque-dark);
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+.vc:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(74,37,8,.12); }
+.vc-icon { font-size: 2rem; margin-bottom: .85rem; display: block; }
+.vc h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--brown-dark); font-weight: 700; margin-bottom: .4rem; }
+.vc p { color: var(--muted); font-size: .85rem; line-height: 1.65; }
+
+/* ── FOOTER ── */
+footer { background: #2e1505; color: rgba(255,228,196,.42); text-align: center; padding: 2.4rem 2rem; font-size: .83rem; }
+.fl { margin-bottom: .75rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .1rem; }
+footer a { color: var(--bisque-deeper); text-decoration: none; padding: 0 .5rem; }
+footer a:hover { color: var(--bisque); text-decoration: underline; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 800px) {
+    .profile-wrap { grid-template-columns: 1fr; }
+    .profile-card { position: static; }
+    .nav-links { display: none; }
+    .profile-wrap { padding: 0 1.2rem 4rem; }
+}
+</style>
 </head>
 <body>
 
-<div class="container">
-  <h1>About Us</h1>
+<nav>
+    <a href="/" class="nav-logo">Ronny Best <span>∑</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="main.html">Math Lessons</a></li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+</nav>
 
-  <p>
-    Ronny Best App is an educational website created to help students and learners
-    understand mathematics concepts in a simple and practical way.
-  </p>
-
-  <p>
-    The website focuses on providing clear explanations, examples, practice questions,
-    and interactive tools that make learning mathematics easier and more enjoyable.
-    It is designed for high school students, college students, teachers, and
-    self-learners.
-  </p>
-
-  <p>
-    This platform was developed and is maintained by Ronny, with the goal of improving
-    mathematical understanding and problem-solving skills through technology.
-  </p>
-
-  <p>
-    We are committed to providing accurate, original, and helpful educational content.
-  </p>
+<div class="ad-slot">
+    <div class="ad-inner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="4444444444"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 </div>
-<div class="container">
-    <h3>About Ronny Best</h3>
-    <p>I've been studying advanced mathematics for over a decade, helping hundreds of students 
-    master challenging concepts. This site represents my collection of the most important 
-    formulas, explanations, and examples that have proven most helpful to my students.</p>
-    <p>My teaching philosophy: <em>"Mathematics isn't about memorizing formulas—it's about 
-    understanding patterns and developing problem-solving skills."</em></p>
+
+<section class="hero">
+    <div class="breadcrumb">About Us</div>
+    <h1>The Mind Behind<br><em>Ronny Best Mathematics</em></h1>
+    <p class="hero-sub">A passionate educator helping students across Africa and beyond unlock the beauty of mathematics — one step at a time.</p>
+</section>
+
+<div class="profile-wrap">
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="profile-card">
+            <div class="pc-head">
+                <div class="avatar">
+                    <img
+                        src="IMAGES/profile.jpeg"
+                        alt="Ronny Best — Mathematics Educator"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                    >
+                    <span class="avatar-initials" aria-hidden="true">RB</span>
+                </div>
+                <div class="pc-name">Ronny Best</div>
+                <div class="pc-title">Mathematics Educator &amp; Platform Founder</div>
+            </div>
+            <div class="pc-body">
+                <div class="stat-row"><span class="stat-lbl">Based In</span><span class="stat-val">Nairobi, Kenya 🇰🇪</span></div>
+                <div class="stat-row"><span class="stat-lbl">Experience</span><span class="stat-val">10+ Years Teaching</span></div>
+                <div class="stat-row"><span class="stat-lbl">Specialization</span><span class="stat-val">Advanced Mathematics</span></div>
+                <div class="stat-row"><span class="stat-lbl">Students Helped</span><span class="stat-val">Hundreds &amp; counting</span></div>
+                <div class="stat-row"><span class="stat-lbl">Topics Covered</span><span class="stat-val">13+ Math Areas</span></div>
+                <div class="stat-row"><span class="stat-lbl">Platform Access</span><span class="stat-val">100% Free</span></div>
+                <a href="contact.html" class="contact-btn">✉ Get In Touch</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Story -->
+    <div class="story">
+        <div class="sc">
+            <div class="card-lbl">Our Story</div>
+            <h2>How It All Started</h2>
+            <p>Ronny Best Mathematics was born out of a simple but powerful frustration: quality math education was too expensive, too inaccessible, and too intimidating for most students in Kenya and across Africa.</p>
+            <p>After more than a decade of teaching mathematics to high school and college students, Ronny Mwenda noticed a pattern — students weren't struggling because they lacked intelligence. They were struggling because they didn't have access to clear, step-by-step explanations they could revisit at their own pace.</p>
+            <p>This platform was created to change that. Every lesson, example, and practice problem on this site is the result of years of classroom experience, refined to be as clear and approachable as possible.</p>
+        </div>
+
+        <div class="sc">
+            <div class="card-lbl">Our Mission</div>
+            <h2>Mathematics for Every Student</h2>
+            <p>We believe mathematics is not an elite subject reserved for the naturally gifted. It is a skill — and like any skill, it can be learned with the right guidance, patience, and practice.</p>
+            <p>Our mission is to provide every student — regardless of their background, school, or financial situation — with the same quality of mathematics instruction they would get from a private tutor. For free. Forever.</p>
+            <div class="quote-block">
+                <p class="qt">Mathematics isn't about memorising formulas — it's about understanding patterns and developing problem-solving skills that last a lifetime.</p>
+                <p class="qa">— Ronny Best, Founder</p>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="card-lbl">What We Offer</div>
+            <h2>A Complete Learning Experience</h2>
+            <p>From foundational algebra to university-level calculus and complex numbers, Ronny Best Mathematics covers the full spectrum of high school and early college mathematics. Every topic includes detailed explanations, worked examples, practice problems, and real-world applications.</p>
+            <p>We also offer interactive brain games, a progress tracker, and achievement badges to keep learning engaging and motivating. Our content is specifically aligned with East African curricula while remaining globally relevant.</p>
+        </div>
+
+        <div class="sc">
+            <div class="card-lbl">Our Commitment</div>
+            <h2>Always Free, Always Improving</h2>
+            <p>This platform will always be free. We are supported by responsible advertising (Google AdSense) that allows us to keep the lights on without ever charging students. Every lesson you read helps keep this resource alive for the next student who needs it.</p>
+            <p>We are constantly updating content, fixing errors, and adding new topics based on feedback from students and teachers. If you spot anything that could be improved, we always want to hear from you.</p>
+        </div>
+    </div>
 </div>
+
+<div class="ad-slot">
+    <div class="ad-inner">
+        <ins class="adsbygoogle"
+             style="display:block;text-align:center"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="5555555555"
+             data-ad-format="rectangle"
+             data-full-width-responsive="false"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<!-- Values -->
+<section class="values-sec">
+    <div style="text-align:center;">
+        <div style="font-size:.73rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem;">What We Stand For</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,2.6rem);color:var(--brown-dark);font-weight:700;">Our Core Values</h2>
+    </div>
+    <div class="vals-grid">
+        <div class="vc"><span class="vc-icon">🎓</span><h3>Free Education</h3><p>All lessons, examples, and practice problems are completely free — no subscriptions, no paywalls.</p></div>
+        <div class="vc"><span class="vc-icon">🔍</span><h3>Clarity First</h3><p>Every explanation is written to be understood, not just read. Complex ideas broken into simple logical steps.</p></div>
+        <div class="vc"><span class="vc-icon">🌍</span><h3>Accessibility</h3><p>Designed for students everywhere — whether you're in Nairobi, Lagos, London, or anywhere else in the world.</p></div>
+        <div class="vc"><span class="vc-icon">📈</span><h3>Real Progress</h3><p>We track your learning journey so you can see how far you've come and where to focus next.</p></div>
+    </div>
+</section>
 
 <footer>
-  <a href="about.html">About Us</a> |
-  <a href="contact.html">Contact Us</a> |
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms & Conditions</a>
+    <div class="fl">
+        <a href="about.html">About Us</a>|<a href="contact.html">Contact Us</a>|<a href="privacy.html">Privacy Policy</a>|<a href="terms.html">Terms of Use</a>|<a href="sitemap.html">Sitemap</a>
+    </div>
+    <p>&copy; 2025 Ronny Best Mathematics — Free Maths Education for Everyone &nbsp;|&nbsp; ronnymwenda89@gmail.com &nbsp;|&nbsp; +254-799188900</p>
 </footer>
 
 </body>

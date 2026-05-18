@@ -5,93 +5,486 @@
   <title>Terms & Conditions | Ronny Best App</title>
   <link rel="icon" type="image/png" href="IMAGES/P2.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms and Conditions for Ronny Best App. Read our usage policies, content guidelines, and legal information.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bisque: #FFE4C4;
+      --bisque-dark: #F5D5A8;
+      --bisque-deeper: #E8C48A;
+      --bisque-light: #FFF5E8;
+      --ink: #2C1A0E;
+      --ink-mid: #4A3728;
+      --ink-light: #7A6352;
+      --accent: #B5632A;
+      --accent-light: #D4814A;
+      --white: #FFFDF9;
+      --border: rgba(181, 99, 42, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: bisque;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      font-family: 'Source Serif 4', Georgia, serif;
+      background-color: var(--bisque);
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(255,255,255,0.45) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 90%, rgba(181,99,42,0.08) 0%, transparent 50%);
+      color: var(--ink);
+      line-height: 1.75;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-    }
-    h1 {
+
+    /* TOP BAR */
+    .topbar {
+      background: var(--ink);
+      color: var(--bisque-light);
       text-align: center;
-      color: #222;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      font-weight: 300;
     }
-    h2 {
-      color: #333;
-      margin-top: 25px;
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(44,26,14,0.07);
     }
-    p {
-      color: #444;
-      font-size: 16px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 40px;
-    }
-    footer a {
-      margin: 0 8px;
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
       text-decoration: none;
-      color: #333;
+      letter-spacing: -0.01em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+      text-decoration: none;
+      margin-left: 28px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    /* HERO BANNER */
+    .hero {
+      background: linear-gradient(135deg, var(--bisque-dark) 0%, var(--bisque-deeper) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 20px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B5632A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.6;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(181,99,42,0.1);
+      border: 1px solid rgba(181,99,42,0.25);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .hero-meta {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+      position: relative;
+    }
+
+    /* LAYOUT */
+    .page-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* SIDEBAR TOC */
+    .toc {
+      position: sticky;
+      top: 80px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 20px rgba(44,26,14,0.06);
+    }
+
+    .toc-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      padding: 0;
+    }
+
+    .toc ol li {
+      counter-increment: toc-counter;
+      margin-bottom: 6px;
+    }
+
+    .toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero) ".";
+      font-size: 0.65rem;
+      color: var(--bisque-deeper);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .toc a {
+      font-size: 0.78rem;
+      color: var(--ink-mid);
+      text-decoration: none;
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--accent); }
+
+    /* MAIN CONTENT */
+    .content {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 52px;
+      box-shadow: 0 4px 32px rgba(44,26,14,0.07);
+    }
+
+    .intro-block {
+      background: linear-gradient(135deg, var(--bisque-light) 0%, var(--bisque) 100%);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-num {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      background: var(--bisque);
+      border: 1px solid var(--bisque-deeper);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-top: 2px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 0.96rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+    }
+
+    /* LAST UPDATED BADGE */
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bisque);
+      border: 1px solid var(--bisque-deeper);
+      color: var(--ink-light);
+      font-size: 0.72rem;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 36px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .update-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-light);
+      border-radius: 50%;
+    }
+
+    /*  FOOTER */
+    footer {
+      background: var(--ink);
+      color: var(--bisque-light);
+      margin-top: 0;
+    }
+
+    .footer-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--bisque);
+      letter-spacing: -0.01em;
+    }
+
+    .footer-logo span { color: var(--accent-light); }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 4px;
+      list-style: none;
+    }
+
+    .footer-nav li { display: flex; align-items: center; }
+
+    .footer-nav li:not(:last-child)::after {
+      content: '·';
+      color: var(--ink-light);
+      margin-left: 4px;
+      font-size: 1rem;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      color: rgba(255,245,232,0.7);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+      padding: 4px 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .footer-nav a:hover { color: var(--bisque); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,245,232,0.35);
+      letter-spacing: 0.04em;
+    }
+
+    /*  RESPONSIVE */
+    @media (max-width: 720px) {
+      header { padding: 14px 20px; }
+      nav { display: none; }
+      .page-wrap { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding: 30px 24px; border-radius: 12px; }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Terms & Conditions</h1>
+<div class="topbar">Ronny Best &mdash; Your trusted learning resource</div>
 
-  <p>
-    By accessing and using Ronny Best App, you agree to the following terms and conditions.
-    If you do not agree with any part of these terms, please do not use the website.
-  </p>
+<header>
+  <a class="logo" href="index.html">Ronny <span>Best</span> App</a>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
 
-  <h2>Use of Content</h2>
-  <p>
-    All content on this website is provided for educational purposes only.
-    You may use the materials for personal learning but may not reproduce,
-    distribute, or sell the content without permission.
-  </p>
+<section class="hero">
+  <div class="hero-eyebrow">Legal</div>
+  <h1>Terms &amp; Conditions</h1>
+  <p class="hero-meta">Please read these terms carefully before using our services.</p>
+</section>
 
-  <h2>Accuracy of Information</h2>
-  <p>
-    We strive to ensure that all information provided is accurate and up to date.
-    However, we do not guarantee the completeness or correctness of the content.
-  </p>
+<div class="page-wrap">
 
-  <h2>External Links</h2>
-  <p>
-    This website may contain links to external websites.
-    We are not responsible for the content or practices of those sites.
-  </p>
+  <!-- Sidebar TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#use-of-content">Use of Content</a></li>
+      <li><a href="#accuracy">Accuracy of Information</a></li>
+      <li><a href="#external-links">External Links</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#changes">Changes to Terms</a></li>
+    </ol>
+  </aside>
 
-  <h2>Limitation of Liability</h2>
-  <p>
-    Ronny Best App shall not be held responsible for any losses or damages
-    arising from the use of this website.
-  </p>
+  <!-- Main Content -->
+  <main class="content">
 
-  <h2>Changes to Terms</h2>
-  <p>
-    These terms may be updated at any time without prior notice.
-    Continued use of the website means you accept the updated terms.
-  </p>
+    <span class="update-badge">Last updated: May 2025</span>
+
+    <div class="intro-block">
+      By accessing and using <strong>Ronny Best</strong>, you agree to the following terms and conditions.
+      If you do not agree with any part of these terms, please discontinue use of the website immediately.
+    </div>
+
+    <div class="section" id="use-of-content">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2>Use of Content</h2>
+      </div>
+      <p>
+        All content on this website is provided for educational purposes only.
+        You may use the materials for personal learning but may not reproduce,
+        distribute, or sell any content without explicit written permission from Ronny Best App.
+      </p>
+    </div>
+
+    <div class="section" id="accuracy">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <h2>Accuracy of Information</h2>
+      </div>
+      <p>
+        We strive to ensure that all information provided is accurate and up to date.
+        However, we do not guarantee the completeness or correctness of the content,
+        and we recommend verifying critical information with authoritative sources.
+      </p>
+    </div>
+
+    <div class="section" id="external-links">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <h2>External Links</h2>
+      </div>
+      <p>
+        This website may contain links to external websites for reference or informational purposes.
+        We are not responsible for the content, accuracy, or privacy practices of those third-party sites,
+        and inclusion of any link does not imply endorsement.
+      </p>
+    </div>
+
+    <div class="section" id="liability">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <h2>Limitation of Liability</h2>
+      </div>
+      <p>
+        Ronny Best website shall not be held responsible for any direct, indirect, incidental, or consequential
+        losses or damages arising from the use or inability to use this website, including reliance on any
+        information published herein.
+      </p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <h2>Changes to Terms</h2>
+      </div>
+      <p>
+        These terms may be updated at any time without prior notice.
+        Your continued use of the website following any changes constitutes your acceptance
+        of the revised terms. We encourage you to review this page periodically.
+      </p>
+    </div>
+
+  </main>
 </div>
 
 <footer>
-  <a href="about.html">About Us</a> |
-  <a href="contact.html">Contact Us</a> |
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms & Conditions</a>
+  <div class="footer-inner">
+    <div class="footer-logo">Ronny <span>Best</span> web</div>
+    <ul class="footer-nav">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2025 Ronny Best. All rights reserved.</p>
+  </div>
 </footer>
 
 </body>

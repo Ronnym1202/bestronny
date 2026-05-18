@@ -1,150 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RONNY BEST-TASKS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Problems | Ronny Best Mathematics</title>
+    <meta name="description" content="Practice differentiation, integration, matrices, vectors and more with step-by-step solutions. Free interactive math problems for high school and university students.">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="tasks.css">
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="shared.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
- <style>
-@media (max-width: 768px) {
-    #taskDisplay, .math, #solutionSteps {
-        font-size: 1.3em !important;
-        padding: 15px !important;
-    }
-    
-    button, select, #answerInput {
-        font-size: 1.2em !important;
-        padding: 15px !important;
-        height: 50px !important;
-        min-height: 50px !important;
-    }
-    
-    .problem-card, .sample-problems, .intro-content {
-        font-size: 1.1em !important;
-        padding: 20px !important;
-    }
-}
-input, select, textarea {
-    font-size: 16px;
-}
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Ronny Best – Advanced Math Tasks</h1>
-    <div id="welcomeMessage"></div>
-    <p>Practice • Solve • Learn step-by-step</p>
+    <div class="header-inner">
+        <a href="/" class="site-logo">Ronny Best <span>∑</span></a>
+        <nav class="header-nav">
+            <a href="/">Home</a>
+            <a href="main.html">Lessons</a>
+            <a href="tasks.html" class="active">Practice</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="nav-cta">Contact</a>
+        </nav>
+    </div>
+    <div class="hero-block">
+        <h1>Advanced Math Practice</h1>
+        <p>Generate problems · Check answers · Learn step by step</p>
+        <div id="welcomeMessage"></div>
+    </div>
 </header>
 
-<div class="container">
-     <section class="intro-content">
-        <h2>Mathematics Practice Platform</h2>
-        <p>This interactive platform helps you practice and master mathematics through:</p>
-        <ul>
-            <li><strong>Generated Practice Problems:</strong> Get custom problems in differentiation, integration, matrices, and more</li>
-            <li><strong>Step-by-Step Solutions:</strong> Every problem includes detailed solution steps</li>
-            <li><strong>Interactive Learning:</strong> Check your answers instantly with feedback</li>
-            <li><strong>Question Scanner:</strong> Upload or take photos of math problems to get solutions</li>
-        </ul>
-        <p><strong>How to use this platform:</strong></p>
-        <ol>
-            <li>Select a topic from the dropdown menu</li>
-            <li>Click "Generate Task" to get a practice problem</li>
-            <li>Solve it yourself, then check your answer</li>
-            <li>View the step-by-step solution to learn the method</li>
-        </ol>
-        <p>All content is designed to help students from high school to university level improve their math skills.</p>
-    </section>
-    <section class="sample-problems">
-        <h2>Sample Practice Problems</h2>
-        
-        <div class="problem-card">
-            <h3>Differentiation Example</h3>
-            <p>Find the derivative of: ( f(x) = 3x^4 - 2x^2 + 5x - 7 )</p>
-            <div class="solution">
-                <p><strong>Solution:</strong> Using power rule: ( f'(x) = 12x^3 - 4x + 5 )</p>
-                <p><strong>Step-by-step:</strong></p>
-                <ol>
-                    <li>( d/dx(3x^4) = 3 dot 4x^3 = 12x^3 )</li>
-                    <li>( d/dx(-2x^2) = -2 dot 2x = -4x )</li>
-                    <li>( d/dx(5x) = 5 )</li>
-                    <li>( d/dx(-7) = 0 )</li>
-                    <li>Combine: ( f'(x) = 12x^3 - 4x + 5 )</li>
-                </ol>
-            </div>
+<div class="page-wrap">
+
+    <!-- Ad slot — top leaderboard -->
+    <div class="ad-slot ad-top" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="1111111111"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Intro -->
+    <section class="card intro-card">
+        <h2>What You Can Do Here</h2>
+        <p>This platform helps you practice and master mathematics through generated problems, instant answer checking, and detailed step-by-step solutions. Topics range from high school to university level.</p>
+        <div class="feature-grid">
+            <div class="feature-item"><i class="fas fa-random" aria-hidden="true"></i><span>Generated problems with every click</span></div>
+            <div class="feature-item"><i class="fas fa-list-ol" aria-hidden="true"></i><span>Full step-by-step solutions</span></div>
+            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i><span>Instant answer feedback</span></div>
+            <div class="feature-item"><i class="fas fa-camera" aria-hidden="true"></i><span>Photo scanner for your own problems</span></div>
         </div>
-        
-        <div class="problem-card">
-            <h3>Integration Example</h3>
-            <p>Evaluate: int (2x^3 - 3x + 4) , dx</p>
-            <div class="solution">
-                <p><strong>Solution:</strong> (1/2 x^4 - 3 / 2 x^2 + 4x + C )</p>
-            </div>
-        </div>
-        
-        <div class="problem-card">
-            <h3>Matrix Example</h3>
-            <p>Find the determinant of: \( \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix} \)</p>
-            <div class="solution">
-                <p><strong>Solution:</strong> \( (3 \times 4) - (2 \times 1) = 12 - 2 = 10 \)</p>
-            </div>
-        </div>
-    </section>
-    <h1 style="text-align: center;">NOW TRY HERE</h1>
-    <section>
-        <h2>Select Topic</h2>
-        <select id="topicSelect">
-            <option value="">Choose task category</option>
-            <option value="differentiation">Differentiation</option>
-            <option value="integration">Integration</option>
-            <option value="matrices">Matrices</option>
-            <option value="vectors">Vectors</option>
-            <option value="areas">Areas of shapes</option>
-            <option value="volumes">Volumes of solids</option>
-        </select>
-        <button id="generateTaskBtn">Generate Task</button>
-    </section>
-    <section>
-        <h2>Generate New Practice Problem</h2>
-        <h2>Task</h2>
-        <div id="taskDisplay" class="math"></div>
-        <input type="text" id="answerInput" placeholder="Enter your answer here">
-        <button id="submitAnswer">Check Answer</button>
-        <div id="resultDisplay"></div>
-        <div id="solutionSteps" class="math"></div>
     </section>
 
-    <hr>
+    <!-- Sample problems -->
+    <section class="card">
+        <h2>Sample Problems</h2>
+        <div class="samples-grid">
+            <div class="problem-card">
+                <h3><i class="fas fa-square-root-alt" aria-hidden="true"></i> Differentiation</h3>
+                <p>Find the derivative of \( f(x) = 3x^4 - 2x^2 + 5x - 7 \)</p>
+                <div class="solution">
+                    <strong>Answer:</strong> \( f'(x) = 12x^3 - 4x + 5 \)
+                    <ol>
+                        <li>\( \frac{d}{dx}(3x^4) = 12x^3 \)</li>
+                        <li>\( \frac{d}{dx}(-2x^2) = -4x \)</li>
+                        <li>\( \frac{d}{dx}(5x) = 5 \), \( \frac{d}{dx}(-7) = 0 \)</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="problem-card">
+                <h3><i class="fas fa-infinity" aria-hidden="true"></i> Integration</h3>
+                <p>Evaluate \( \int (2x^3 - 3x + 4)\, dx \)</p>
+                <div class="solution">
+                    <strong>Answer:</strong> \( \tfrac{1}{2}x^4 - \tfrac{3}{2}x^2 + 4x + C \)
+                </div>
+            </div>
+            <div class="problem-card">
+                <h3><i class="fas fa-th" aria-hidden="true"></i> Matrices</h3>
+                <p>Find \( \det\begin{pmatrix}1&2\\3&5\end{pmatrix} \)</p>
+                <div class="solution">
+                    <strong>Answer:</strong> \( (1)(5) - (2)(3) = 5 - 6 = -1 \)
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section>
-        <h2>Ask Any Math Question</h2>
-        <textarea id="freeQuestion" placeholder="Type any mathematics question here..."></textarea>
-        <button id="solveFreeQuestion">Solve Question</button>
-        <div id="freeAnswer"></div>
+    <!-- Ad slot — mid-page rectangle -->
+    <div class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block;text-align:center"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="2222222222"
+             data-ad-format="rectangle"
+             data-full-width-responsive="false"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Practice generator -->
+    <section class="card practice-section" id="try">
+        <h2>Try a Problem</h2>
+
+        <div class="topic-row">
+            <div class="select-wrap">
+                <label for="topicSelect">Choose a topic</label>
+                <select id="topicSelect">
+                    <option value="">— Select topic —</option>
+                    <option value="differentiation">Differentiation</option>
+                    <option value="integration">Integration</option>
+                    <option value="matrices">Matrices</option>
+                    <option value="vectors">Vectors</option>
+                    <option value="areas">Areas of Shapes</option>
+                    <option value="volumes">Volumes of Solids</option>
+                </select>
+            </div>
+            <button id="generateTaskBtn" class="btn btn-primary">
+                <i class="fas fa-dice" aria-hidden="true"></i> Generate Problem
+            </button>
+        </div>
+
+        <div id="taskDisplay" class="math-display" aria-live="polite"></div>
+
+        <div class="answer-row" id="answerRow" style="display:none">
+            <input type="text" id="answerInput" placeholder="Enter your answer…" autocomplete="off">
+            <button id="submitAnswer" class="btn btn-accent">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Check
+            </button>
+        </div>
+
+        <div id="resultDisplay" aria-live="assertive"></div>
+        <div id="solutionSteps" class="math-display solution-display"></div>
+    </section>
+
+    <!-- Free question -->
+    <section class="card">
+        <h2><i class="fas fa-keyboard" aria-hidden="true"></i> Ask Any Math Question</h2>
+        <p class="section-hint">Type any maths question in plain English or using standard notation. Powered by AI for detailed solutions.</p>
+        <textarea id="freeQuestion" placeholder="e.g. Differentiate y = 3x² + 5x · cos(x) using the product rule" rows="3"></textarea>
+        <button id="solveFreeQuestion" class="btn btn-primary">
+            <i class="fas fa-brain" aria-hidden="true"></i> Solve with AI
+        </button>
+        <div id="freeAnswer" aria-live="polite"></div>
         <div id="freeSteps"></div>
     </section>
 
-    <section>
-        <h3>Upload or Scan Question</h3>
-        <input type="file" id="imageInput" accept="image/*">
-        <button id="scanImageBtn">Scan & Solve</button>
-        <div id="ocrStatus"></div>
-        <div id="userQuestion" class="math"></div>
-        <div id="userSolution" class="math"></div>
+    <!-- Ad slot — before scanner -->
+    <div class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="3333333333"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Image scanner -->
+    <section class="card scanner-section">
+        <h2><i class="fas fa-camera-retro" aria-hidden="true"></i> Scan a Question</h2>
+        <p class="section-hint">Upload or photograph a printed or handwritten math problem and get an instant solution.</p>
+
+        <label class="file-label" for="imageInput">
+            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+            <span>Click to upload or drag an image here</span>
+            <small>JPEG · PNG · WEBP</small>
+        </label>
+        <input type="file" id="imageInput" accept="image/*" aria-label="Upload math problem image">
+
+        <button id="scanImageBtn" class="btn btn-primary scan-btn">
+            <i class="fas fa-search" aria-hidden="true"></i> Scan &amp; Solve
+        </button>
+
+        <div id="ocrStatus" role="status"></div>
+        <div id="userQuestion" class="math-display"></div>
+        <div id="userSolution" class="math-display"></div>
     </section>
+
 </div>
+
 <footer>
-<p style="text-align:center; margin-top:20px;">
-    <a href="privacy.html">Privacy Policy</a>
-</p>
+    <p>
+        <a href="/">Home</a> &middot;
+        <a href="main.html">Lessons</a> &middot;
+        <a href="about.html">About</a> &middot;
+        <a href="contact.html">Contact</a> &middot;
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
 </footer>
+
 <script src="tasks.js"></script>
 </body>
 </html>

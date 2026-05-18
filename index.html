@@ -3,273 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronny Best - Free Mathematics Learning Platform with Step-by-Step Lessons</title>
-    <meta name="description" content="Learn mathematics free with Ronny Best. Step-by-step algebra, trigonometry, calculus lessons with examples, practice problems, and solutions. For high school and college students.">
-    <meta name="keywords" content="mathematics, algebra lessons, trigonometry tutorial, calculus guide, free math help, quadratic equations, sine cosine tangent, differentiation examples">
+    <title>Ronny Best Mathematics | Free Step-by-Step Math Lessons</title>
+    <meta name="description" content="Master mathematics with Ronny Best — free step-by-step algebra, trigonometry, calculus and statistics lessons with worked examples, practice problems, and solutions for high school and college students.">
+    <meta name="keywords" content="mathematics, algebra lessons, trigonometry tutorial, calculus guide, free math help, quadratic equations, step by step math, high school math">
+    <meta name="author" content="Ronny Best">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (improves credibility with Google) -->
+    <meta property="og:title" content="Ronny Best Mathematics | Free Step-by-Step Math Lessons">
+    <meta property="og:description" content="Free step-by-step algebra, trigonometry, calculus and statistics lessons with worked examples and practice problems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Ronnym1202/bestronny/blob/master/index.html">
+    <meta property="og:image" content="IMAGES/P2.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://github.com/Ronnym1202/bestronny/blob/master/index.html">
+
     <link rel="icon" type="image/png" href="IMAGES/P2.png">
     <link rel="stylesheet" href="index.css">
-    <!-- NO AdSense code until approved -->
+
+    <!-- Fonts: Playfair Display + Source Serif 4 + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:wght@300;400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "description": "Free step-by-step math lessons for high school and college students covering algebra, trigonometry, calculus, and statistics.",
+      "url": "https://github.com/Ronnym1202/bestronny",
+      "email": "ronnymwenda89@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Ronny Best"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free mathematics lessons and practice problems"
+      }
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <h2 id="welcome"></h2>
-        <h1>RONNY BEST MATHEMATICS</h1>
-        <p>Free Step-by-Step Math Lessons with Examples and Practice Problems</p>
+
+    <!-- ===== SITE HEADER ===== -->
+    <header class="site-header">
+        <div class="header-content">
+            <p id="welcome" class="welcome-message" aria-live="polite"></p>
+            <h1 class="site-title">RONNY BEST <span class="highlight">MATHEMATICS</span></h1>
+            <p class="tagline">Free Step-by-Step Math Lessons with Examples &amp; Practice Problems</p>
+        </div>
     </header>
-    
-    <nav class="portal-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li> 
-            <li><a href="main.html">Math Lessons</a></li>  
-            <li><a href="tasks.html">Practice Problems</a></li>
-            <li><a href="mind.html">Brain Games</a></li>
-            <li><a href="achievements.html">My Achievements</a></li>
-            <li><a href="progress.html">Learning Progress</a></li> 
-        </ul>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="main.html">Math Lessons</a></li>
+                <li><a href="tasks.html">Practice Problems</a></li>
+                <li><a href="mind.html">Brain Games</a></li>
+                <li><a href="achievements.html">My Achievements</a></li>
+                <li><a href="progress.html">Learning Progress</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <!-- SECTION 1: FEATURED MATH LESSON - REAL CONTENT -->
-        <section class="featured-lesson">
-            <h2>📐 Today's Free Math Lesson: Solving Quadratic Equations</h2>
-            <p class="subtitle">Complete step-by-step guide with examples for high school students</p>
-            
-            <div class="lesson-content">
-                <h3>What is a Quadratic Equation?</h3>
-                <p>A quadratic equation is any equation that can be written in the form:</p>
-                <div class="math-formula">
-                    <p><strong>ax² + bx + c = 0</strong></p>
-                    <p>where a, b, and c are constants, and a ≠ 0</p>
-                </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content" id="main-content">
 
-                <h3>Method 1: Factoring (When Possible)</h3>
-                <p><strong>Example 1:</strong> Solve x² + 5x + 6 = 0</p>
-                <div class="solution-steps">
-                    <p><strong>Step 1:</strong> Find two numbers that multiply to give c (6) and add to give b (5)</p>
-                    <p>Numbers: 2 and 3 because 2 × 3 = 6 and 2 + 3 = 5</p>
-                    <p><strong>Step 2:</strong> Rewrite as: (x + 2)(x + 3) = 0</p>
-                    <p><strong>Step 3:</strong> Set each factor to zero: x + 2 = 0 or x + 3 = 0</p>
-                    <p><strong>Step 4:</strong> Solve: x = -2 or x = -3</p>
-                    <p><strong>Answer:</strong> x = -2, x = -3</p>
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h2 id="hero-heading">Master Mathematics with <span class="hero-highlight">Step-by-Step</span> Guidance</h2>
+                <p>Join thousands of students learning algebra, trigonometry, calculus, and more — completely free, no sign-up needed.</p>
+                <div class="hero-stats" role="list">
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Worked Examples</span>
+                    </div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Practice Problems</span>
+                    </div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Free Access</span>
+                    </div>
                 </div>
-
-                <h3>Method 2: Quadratic Formula (Works for All)</h3>
-                <div class="math-formula">
-                    <p><strong>x = [-b ± √(b² - 4ac)] / 2a</strong></p>
-                </div>
-                <p><strong>Example 2:</strong> Solve 2x² - 4x - 6 = 0</p>
-                <div class="solution-steps">
-                    <p><strong>Step 1:</strong> Identify a = 2, b = -4, c = -6</p>
-                    <p><strong>Step 2:</strong> Calculate discriminant: b² - 4ac = (-4)² - 4(2)(-6)</p>
-                    <p>= 16 + 48 = 64</p>
-                    <p><strong>Step 3:</strong> Apply formula: x = [4 ± √64] / 4</p>
-                    <p>= [4 ± 8] / 4</p>
-                    <p><strong>Step 4:</strong> Solve: x = (4 + 8)/4 = 3 or x = (4 - 8)/4 = -1</p>
-                    <p><strong>Answer:</strong> x = 3, x = -1</p>
-                </div>
-
-                <h3>Common Mistakes to Avoid</h3>
-                <ul class="mistakes-list">
-                    <li>❌ Forgetting to set the equation to zero first</li>
-                    <li>❌ Incorrect signs when using quadratic formula</li>
-                    <li>❌ Forgetting the ± symbol gives two solutions</li>
-                    <li>❌ Not checking if factoring is possible before using formula</li>
-                </ul>
-
-                <h3>Practice Problems (Try These Yourself)</h3>
-                <ol class="practice-problems">
-                    <li>x² + 7x + 12 = 0 <span class="answer-hint">(Answer: x = -3, x = -4)</span></li>
-                    <li>x² - 5x + 6 = 0 <span class="answer-hint">(Answer: x = 2, x = 3)</span></li>
-                    <li>2x² + 5x - 3 = 0 <span class="answer-hint">(Answer: x = 1/2, x = -3)</span></li>
-                    <li>3x² - 2x - 5 = 0 <span class="answer-hint">(Answer: x = -1, x = 5/3)</span></li>
-                </ol>
-                <p><a href="main.html#quadratic-equations" class="learn-more">Get more quadratic equation lessons →</a></p>
             </div>
         </section>
 
-        <!-- SECTION 2: ALGEBRA BASICS - MORE REAL CONTENT -->
-        <section class="algebra-preview">
-            <h2>🔢 Algebra Fundamentals: Working with Variables</h2>
-            
-            <div class="algebra-content">
-                <h3>Simplifying Algebraic Expressions</h3>
-                <p><strong>Rule:</strong> Combine like terms (terms with the same variable and exponent)</p>
-                
-                <p><strong>Example 1:</strong> Simplify 3x + 5y - 2x + 3y</p>
-                <div class="solution-steps">
-                    <p><strong>Step 1:</strong> Group like terms: (3x - 2x) + (5y + 3y)</p>
-                    <p><strong>Step 2:</strong> Combine: x + 8y</p>
-                    <p><strong>Answer:</strong> x + 8y</p>
-                </div>
+        <!-- Featured Lesson -->
+        <section class="featured-lesson" aria-labelledby="featured-heading">
+            <div class="section-header">
+                <span class="section-tag">Featured Lesson</span>
+                <h2 id="featured-heading">Solving Quadratic Equations: Complete Guide</h2>
+                <p class="section-subtitle">Master factoring, the quadratic formula, and discriminant analysis</p>
+            </div>
 
-                <p><strong>Example 2:</strong> Simplify 4a² + 3a - 2a² + 5a - 7</p>
-                <div class="solution-steps">
-                    <p><strong>Step 1:</strong> Group like terms: (4a² - 2a²) + (3a + 5a) - 7</p>
-                    <p><strong>Step 2:</strong> Combine: 2a² + 8a - 7</p>
-                    <p><strong>Answer:</strong> 2a² + 8a - 7</p>
-                </div>
+            <div class="lesson-showcase">
+                <div class="lesson-main">
 
-                <h3>Solving Linear Equations</h3>
-                <p><strong>Example:</strong> Solve 2x + 5 = 13</p>
-                <div class="solution-steps">
-                    <p><strong>Step 1:</strong> Subtract 5 from both sides: 2x = 8</p>
-                    <p><strong>Step 2:</strong> Divide both sides by 2: x = 4</p>
-                    <p><strong>Answer:</strong> x = 4</p>
+                    <!-- Concept Card -->
+                    <div class="concept-card" style="margin-bottom:1.5rem;">
+                        <h3>What is a Quadratic Equation?</h3>
+                        <p>Any equation that can be written in the standard form:</p>
+                        <div class="formula-card">
+                            <div class="formula">ax&sup2; + bx + c = 0</div>
+                            <p class="formula-note">where a, b, c are real number constants, and a &ne; 0</p>
+                        </div>
+                    </div>
+
+                    <!-- Methods Grid -->
+                    <div class="methods-grid">
+
+                        <!-- Method 1: Factoring -->
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h3>Method 1: Factoring</h3>
+                            </div>
+                            <p class="method-example">Example: x&sup2; + 5x + 6 = 0</p>
+                            <div class="steps-list">
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 1">1</span>
+                                    <p>Find two numbers that multiply to 6 and add to 5 &rarr; 2 and 3</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 2">2</span>
+                                    <p>Rewrite as: (x + 2)(x + 3) = 0</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 3">3</span>
+                                    <p>Set each factor to zero: x + 2 = 0 &nbsp;or&nbsp; x + 3 = 0</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 4">4</span>
+                                    <p>Solve: x = &minus;2 &nbsp;or&nbsp; x = &minus;3</p>
+                                </div>
+                            </div>
+                            <div class="answer-badge">Answer: x = &minus;2, x = &minus;3</div>
+                        </div>
+
+                        <!-- Method 2: Quadratic Formula -->
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h3>Method 2: Quadratic Formula</h3>
+                            </div>
+                            <div class="formula-card small">
+                                <div class="formula">x = [&minus;b &plusmn; &radic;(b&sup2; &minus; 4ac)] / 2a</div>
+                            </div>
+                            <p class="method-example">Example: 2x&sup2; &minus; 4x &minus; 6 = 0</p>
+                            <div class="steps-list">
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 1">1</span>
+                                    <p>Identify: a = 2, b = &minus;4, c = &minus;6</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 2">2</span>
+                                    <p>Discriminant: b&sup2; &minus; 4ac = 16 + 48 = 64</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 3">3</span>
+                                    <p>x = [4 &plusmn; &radic;64] / 4 = [4 &plusmn; 8] / 4</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number" aria-label="Step 4">4</span>
+                                    <p>Solve: x = 3 &nbsp;or&nbsp; x = &minus;1</p>
+                                </div>
+                            </div>
+                            <div class="answer-badge">Answer: x = 3, x = &minus;1</div>
+                        </div>
+                    </div>
+
+                    <!-- Mistakes & Practice -->
+                    <div class="lesson-extras">
+                        <div class="mistakes-box">
+                            <h4>Common Mistakes to Avoid</h4>
+                            <ul class="mistakes-list">
+                                <li>Forgetting to set the equation to zero first</li>
+                                <li>Incorrect signs when substituting into the quadratic formula</li>
+                                <li>Forgetting that &plusmn; gives two separate solutions</li>
+                                <li>Not checking whether factoring is possible before using the formula</li>
+                            </ul>
+                        </div>
+
+                        <div class="practice-box">
+                            <h4>Practice Problems</h4>
+                            <div class="problem-grid">
+                                <div class="problem-item">
+                                    <span class="problem">x&sup2; + 7x + 12 = 0</span>
+                                    <span class="solution">x = &minus;3, &minus;4</span>
+                                </div>
+                                <div class="problem-item">
+                                    <span class="problem">x&sup2; &minus; 5x + 6 = 0</span>
+                                    <span class="solution">x = 2, 3</span>
+                                </div>
+                                <div class="problem-item">
+                                    <span class="problem">2x&sup2; + 5x &minus; 3 = 0</span>
+                                    <span class="solution">x = &frac12;, &minus;3</span>
+                                </div>
+                                <div class="problem-item">
+                                    <span class="problem">3x&sup2; &minus; 2x &minus; 5 = 0</span>
+                                    <span class="solution">x = &minus;1, 5/3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="main.html#quadratic-equations" class="btn-primary">
+                        <span>More Quadratic Equation Lessons</span>
+                        <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+
                 </div>
-                <p><a href="main.html#algebra">More algebra lessons →</a></p>
             </div>
         </section>
 
-        <!-- SECTION 3: TRIGONOMETRY PREVIEW -->
-        <section class="trigonometry-preview">
-            <h2>📐 Trigonometry: Sine, Cosine, and Tangent Explained</h2>
-            
-            <div class="trig-content">
-                <h3>Right Triangle Ratios</h3>
-                <p>For a right triangle with angle θ:</p>
-                <ul class="trig-formulas">
-                    <li><strong>sin θ</strong> = opposite / hypotenuse</li>
-                    <li><strong>cos θ</strong> = adjacent / hypotenuse</li>
-                    <li><strong>tan θ</strong> = opposite / adjacent</li>
-                </ul>
+        <!-- Topics Grid -->
+        <section class="topics-section" aria-labelledby="topics-heading">
+            <div class="section-header centered">
+                <span class="section-tag">Explore All Topics</span>
+                <h2 id="topics-heading">Master Mathematics, One Topic at a Time</h2>
+                <p class="section-subtitle">Choose a subject and follow clear, structured lessons from basics to advanced concepts.</p>
+            </div>
 
-                <h3>Common Angle Values</h3>
-                <table class="trig-table">
-                    <tr>
-                        <th>Angle θ</th>
-                        <th>sin θ</th>
-                        <th>cos θ</th>
-                        <th>tan θ</th>
-                    </tr>
-                    <tr>
-                        <td>0°</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>30°</td>
-                        <td>1/2</td>
-                        <td>√3/2</td>
-                        <td>1/√3</td>
-                    </tr>
-                    <tr>
-                        <td>45°</td>
-                        <td>√2/2</td>
-                        <td>√2/2</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>60°</td>
-                        <td>√3/2</td>
-                        <td>1/2</td>
-                        <td>√3</td>
-                    </tr>
-                    <tr>
-                        <td>90°</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>undefined</td>
-                    </tr>
-                </table>
+            <div class="topics-grid">
 
-                <h3>Example Problem</h3>
-                <p><strong>Find sin(30°), cos(30°), and tan(30°)</strong></p>
-                <div class="solution-steps">
-                    <p>From the table above:</p>
-                    <p>sin(30°) = 1/2 = 0.5</p>
-                    <p>cos(30°) = √3/2 ≈ 0.866</p>
-                    <p>tan(30°) = 1/√3 ≈ 0.577</p>
-                </div>
-                <p><a href="main.html#trigonometry">Full trigonometry lessons →</a></p>
+                <article class="topic-card algebra">
+                    <div class="card-header">
+                        <h3>Algebra Fundamentals</h3>
+                    </div>
+                    <div class="card-preview">
+                        <p class="preview-example">Simplify: 3x + 5y &minus; 2x + 3y</p>
+                        <div class="preview-solution">
+                            <span class="solution-label">=</span>
+                            <span class="solution-value">x + 8y</span>
+                        </div>
+                    </div>
+                    <ul class="topic-list">
+                        <li>Linear equations &amp; inequalities</li>
+                        <li>Quadratic equations &amp; factoring</li>
+                        <li>Systems of equations</li>
+                        <li>Exponents &amp; logarithms</li>
+                    </ul>
+                    <a href="main.html#algebra" class="card-link">Explore Algebra &rarr;</a>
+                </article>
+
+                <article class="topic-card trigonometry">
+                    <div class="card-header">
+                        <h3>Trigonometry</h3>
+                    </div>
+                    <div class="card-preview">
+                        <p class="preview-example">sin(30&deg;), cos(30&deg;), tan(30&deg;)</p>
+                        <div class="preview-solution">
+                            <span class="solution-value">&frac12;, &radic;3/2, 1/&radic;3</span>
+                        </div>
+                    </div>
+                    <ul class="topic-list">
+                        <li>Sine, cosine, tangent ratios</li>
+                        <li>Unit circle &amp; identities</li>
+                        <li>Solving triangles</li>
+                        <li>Trigonometric equations</li>
+                    </ul>
+                    <a href="main.html#trigonometry" class="card-link">Explore Trigonometry &rarr;</a>
+                </article>
+
+                <article class="topic-card calculus">
+                    <div class="card-header">
+                        <h3>Calculus</h3>
+                    </div>
+                    <div class="card-preview">
+                        <p class="preview-example">f(x) = x&sup4; &rarr; f&prime;(x) = ?</p>
+                        <div class="preview-solution">
+                            <span class="solution-label">=</span>
+                            <span class="solution-value">4x&sup3;</span>
+                        </div>
+                    </div>
+                    <ul class="topic-list">
+                        <li>Limits &amp; continuity</li>
+                        <li>Differentiation rules</li>
+                        <li>Integration methods</li>
+                        <li>Applications (area, volume)</li>
+                    </ul>
+                    <a href="main.html#calculus" class="card-link">Explore Calculus &rarr;</a>
+                </article>
+
+                <article class="topic-card statistics">
+                    <div class="card-header">
+                        <h3>Statistics</h3>
+                    </div>
+                    <div class="card-preview">
+                        <p class="preview-example">Mean of [2, 4, 4, 6, 8]</p>
+                        <div class="preview-solution">
+                            <span class="solution-label">=</span>
+                            <span class="solution-value">4.8</span>
+                        </div>
+                    </div>
+                    <ul class="topic-list">
+                        <li>Mean, median, mode</li>
+                        <li>Probability basics</li>
+                        <li>Standard deviation</li>
+                        <li>Data analysis</li>
+                    </ul>
+                    <a href="main.html#statistics" class="card-link">Explore Statistics &rarr;</a>
+                </article>
             </div>
         </section>
 
-        <!-- SECTION 4: CALCULUS INTRODUCTION -->
-        <section class="calculus-preview">
-            <h2>📈 Calculus: Introduction to Differentiation</h2>
-            
-            <div class="calculus-content">
-                <h3>The Power Rule</h3>
-                <div class="math-formula">
-                    <p>If f(x) = xⁿ, then f'(x) = n·xⁿ⁻¹</p>
+        <!-- Quick Examples Showcase -->
+        <section class="examples-showcase" aria-labelledby="examples-heading">
+            <div class="section-header centered">
+                <span class="section-tag">Quick Examples</span>
+                <h2 id="examples-heading">See Mathematics in Action</h2>
+                <p class="section-subtitle">Real problems, solved step by step — exactly how they appear in exams.</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h4>Algebra: Linear Equations</h4>
+                    <div class="example-math">
+                        <p>2x + 5 = 13</p>
+                        <div class="example-steps">
+                            <p>2x = 8</p>
+                            <p><strong>x = 4</strong></p>
+                        </div>
+                    </div>
                 </div>
 
-                <h3>Examples</h3>
-                <div class="solution-steps">
-                    <p><strong>Example 1:</strong> Find derivative of f(x) = x⁴</p>
-                    <p>f'(x) = 4x³</p>
-                    
-                    <p><strong>Example 2:</strong> Find derivative of f(x) = 3x²</p>
-                    <p>f'(x) = 3 × 2x = 6x</p>
-                    
-                    <p><strong>Example 3:</strong> Find derivative of f(x) = 5x³ + 2x² - 7x + 4</p>
-                    <p>f'(x) = 15x² + 4x - 7</p>
+                <div class="example-card">
+                    <h4>Trigonometry: Right Triangle</h4>
+                    <div class="example-math">
+                        <p>sin &theta; = opposite / hypotenuse</p>
+                        <p>cos &theta; = adjacent / hypotenuse</p>
+                        <p>tan &theta; = opposite / adjacent</p>
+                    </div>
                 </div>
-                <p><a href="main.html#calculus">More calculus lessons →</a></p>
+
+                <div class="example-card">
+                    <h4>Calculus: Power Rule</h4>
+                    <div class="example-math">
+                        <p>d/dx (5x&sup3; + 2x&sup2; &minus; 7x + 4)</p>
+                        <div class="example-steps">
+                            <p><strong>= 15x&sup2; + 4x &minus; 7</strong></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION 5: CARDS (Keep but enhance) -->
-        <section class="cards">
-            <h2>📚 Explore All Math Topics</h2>
-            <div class="card">
-                <h2>📘 Algebra Lessons</h2>
-                <p>Linear equations, quadratic equations, factoring, systems of equations, inequalities, polynomials, exponents, and logarithms. Each topic includes 5+ worked examples.</p>
-                <a href="main.html#algebra">Start Algebra →</a>
+        <!-- Features Section -->
+        <section class="features-section" aria-labelledby="features-heading">
+            <div class="section-header centered">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 id="features-heading">Everything You Need to Succeed</h2>
             </div>
-            <div class="card">
-                <h2>📐 Trigonometry</h2>
-                <p>Sine, cosine, tangent, unit circle, trigonometric identities, solving triangles, radians vs degrees, graphs of trig functions, and inverse trig functions.</p>
-                <a href="main.html#trigonometry">Start Trigonometry →</a>
-            </div>
-            <div class="card">
-                <h2>📈 Calculus</h2>
-                <p>Limits, derivatives, power rule, product rule, chain rule, integration, definite integrals, area under curve, and real-world applications.</p>
-                <a href="main.html#calculus">Start Calculus →</a>
-            </div>
-            <div class="card">
-                <h2>📊 Statistics</h2>
-                <p>Mean, median, mode, standard deviation, probability, permutations, combinations, normal distribution, and data analysis.</p>
-                <a href="main.html#statistics">Start Statistics →</a>
-            </div>
-        </section>
-
-        <!-- SECTION 6: WHY CHOOSE US (Brief) -->
-        <section class="features">
-            <h2>Why Students Choose Ronny Best Mathematics</h2>
             <div class="features-grid">
-                <div class="feature">
-                    <h3>✅ 100+ Worked Examples</h3>
-                    <p>Every concept includes multiple solved problems with detailed steps.</p>
+                <div class="feature-card">
+                    <h3>100+ Worked Examples</h3>
+                    <p>Every concept includes multiple solved problems with detailed, step-by-step explanations you can follow at your own pace.</p>
                 </div>
-                <div class="feature">
-                    <h3>✅ Free Access</h3>
-                    <p>All lessons, practice problems, and solutions are completely free.</p>
+                <div class="feature-card">
+                    <h3>Free &amp; Forever</h3>
+                    <p>All lessons, practice problems, and solutions are completely free — no subscriptions, no hidden fees, no account required.</p>
                 </div>
-                <div class="feature">
-                    <h3>✅ Practice Problems</h3>
-                    <p>Test your understanding with exercises and check your answers.</p>
+                <div class="feature-card">
+                    <h3>Practice Problems</h3>
+                    <p>Test your understanding with graded exercises designed to mirror real exam questions across all topics.</p>
                 </div>
-                <div class="feature">
-                    <h3>✅ Progress Tracking</h3>
-                    <p>Monitor your learning journey and earn achievements.</p>
+                <div class="feature-card">
+                    <h3>Track Your Progress</h3>
+                    <p>Monitor your learning journey, earn achievements, and watch your mathematical confidence grow over time.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="cta-content">
+                <h2 id="cta-heading">Ready to Master Mathematics?</h2>
+                <p>Start with our comprehensive step-by-step lessons, sharpen your skills with practice problems, and track your progress along the way.</p>
+                <div class="cta-buttons">
+                    <a href="main.html" class="btn-primary large">Start Learning Now</a>
+                    <a href="tasks.html" class="btn-secondary large">Try Practice Problems</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Ronny Best Mathematics | Free Math Education for Everyone</p>
-        <div style="margin-top:15px;" class="footerinfo">
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-            <a href="sitemap.html">Sitemap</a>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Ronny Best Mathematics</h3>
+                <p>Free math education for everyone, everywhere.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </nav>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a></p>
+                <p>Phone: <a href="tel:+254799188900">+254 799 188 900</a></p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Ronny Best Mathematics. All rights reserved.</p>
+                <p class="footer-mission">Helping high school and college students master mathematics through clear, step-by-step explanations.</p>
+            </div>
         </div>
-        <p>Contact: <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a> | Phone: +254-799188900</p>
-        <p>We help high school and college students master mathematics through clear, step-by-step explanations.</p>
     </footer>
 
     <script src="shared.js"></script>

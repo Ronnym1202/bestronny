@@ -13,15 +13,19 @@ function scrollToSection(id) {
         }
     }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".topic-section");
     sections.forEach(section => {
         section.style.display = 'block';
     });
+    
     const firstItem = document.querySelector("#sidebar li");
     if (firstItem) {
         firstItem.classList.add("active-topic");
     }
+    
+    if (typeof MathProgress !== 'undefined') {
+        MathProgress.recordTopicViewed('Main Mathematics Page');
+    }
 });
-
-
