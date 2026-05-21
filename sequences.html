@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequences & Series | Ronny Best Mathematics</title>
+  <meta name="description" content="From arithmetic sequences to power series">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">∑</span>
+  <h1>Sequences & Series</h1>
+  <p class="hero-sub">From arithmetic sequences to power series</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Sequences & Series</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Beginner</li>
+      <li><a href="#seq-intro">Sequences</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#seq-arithmetic">Arithmetic Series</a></li>
+      <li><a href="#seq-geometric">Geometric Series</a></li>
+      <li><a href="#seq-special">Special Series</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#seq-convergence">Convergence Tests</a></li>
+      <li><a href="#seq-power">Power Series</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="seq-intro" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📋</span><h2>Sequences</h2><span class="level-badge badge-primary">Beginner</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <p>A sequence is an ordered list of numbers following a pattern. We denote the nth term as aₙ.</p>
+          <h3>Types of Sequences</h3>
+          <table class="formula-table">
+            <tr><th>Type</th><th>Rule</th><th>Example</th></tr>
+            <tr><td>Arithmetic</th><td>aₙ = a + (n−1)d</th><td>2, 5, 8, 11, ... (d=3)</th></tr>
+            <tr><td>Geometric</th><td>aₙ = arⁿ⁻¹</th><td>3, 6, 12, 24, ... (r=2)</th></tr>
+            <tr><td>Fibonacci</th><td>aₙ = aₙ₋₁ + aₙ₋₂</th><td>1,1,2,3,5,8,13,...</th></tr>
+            <tr><td>Quadratic</th><td>aₙ = an² + bn + c</th><td>1,4,9,16,25,... (perfect squares)</th></tr>
+          </table>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Find 15th term of 7, 11, 15, 19, ...</div>
+              <p class="soln">a=7, d=4. a₁₅ = 7 + 14×4 = 7 + 56 = 63</p></div>
+            <div class="example-card"><div class="example-label">Example — Find 10th term of 3, 6, 12, 24, ...</div>
+              <p class="soln">a=3, r=2. a₁₀ = 3 × 2⁹ = 3 × 512 = 1536</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seq-arithmetic" class="topic-section">
+      <div class="section-header"><span class="sec-icon">➕</span><h2>Arithmetic Series</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            nth term: aₙ = a + (n−1)d<br>
+            Sum of n terms: Sₙ = n/2 × (2a + (n−1)d) = n/2 × (first + last)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1 — Sum 1+2+3+...+100</div>
+              <p class="soln">a=1, d=1, n=100. S = 100/2(2+99) = 50×101 = 5050</p></div>
+            <div class="example-card"><div class="example-label">Example 2 — How many terms for sum = 1225?</div>
+              <p>Sequence: 7, 9, 11, ...</p>
+              <p class="soln">a=7, d=2. n/2(14+2(n−1)) = 1225 → n² + 6n − 1225 = 0 → n = 35 (taking positive root)</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seq-geometric" class="topic-section">
+      <div class="section-header"><span class="sec-icon">✖️</span><h2>Geometric Series</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            nth term: aₙ = arⁿ⁻¹<br>
+            Sum n terms: Sₙ = a(rⁿ−1)/(r−1) for r ≠ 1<br>
+            Infinite sum: S∞ = a/(1−r) provided |r| &lt; 1
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1 — Sum 8 terms of 3, 6, 12, ...</div>
+              <p class="soln">a=3, r=2, n=8. S₈ = 3(2⁸−1)/(2−1) = 3(255) = 765</p></div>
+            <div class="example-card"><div class="example-label">Example 2 — Infinite series 8 + 4 + 2 + 1 + ...</div>
+              <p class="soln">a=8, r=1/2. S∞ = 8/(1−1/2) = 16</p></div>
+            <div class="example-card"><div class="example-label">Example 3 — Show 0.999... = 1</div>
+              <p class="soln">0.999... = 9/10 + 9/100 + ... = (9/10)/(1−1/10) = (9/10)/(9/10) = 1 ✓</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seq-special" class="topic-section">
+      <div class="section-header"><span class="sec-icon">⭐</span><h2>Special Series & Summation Formulas</h2><span class="level-badge badge-secondary">A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Σ 1 = n &nbsp;&nbsp; Σ r = n(n+1)/2 &nbsp;&nbsp; Σ r² = n(n+1)(2n+1)/6<br>
+            Σ r³ = [n(n+1)/2]² = (Σr)²<br>
+            Telescoping series: Σ [f(r)−f(r+1)] = f(1)−f(n+1)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Σ r² from r=1 to 10</div>
+              <p class="soln">10×11×21/6 = 385</p></div>
+            <div class="example-card"><div class="example-label">Example — Σ r³ from r=1 to 5</div>
+              <p class="soln">= (5×6/2)² = 15² = 225. Check: 1+8+27+64+125 = 225 ✓</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seq-convergence" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔬</span><h2>Convergence Tests</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <table class="formula-table">
+            <tr><th>Test</th><th>Condition for Convergence</th></tr>
+            <tr><td>nth term test</th><td>lim aₙ ≠ 0 → diverges (if lim = 0, test fails)</th></tr>
+            <tr><td>Geometric series</th><td>|r| &lt; 1</th></tr>
+            <tr><td>p-series Σ 1/nᵖ</th><td>p &gt; 1</th></tr>
+            <tr><td>Ratio test</th><td>L = lim|aₙ₊₁/aₙ|. L&lt;1 converge, L&gt;1 diverge, L=1 inconclusive</th></tr>
+            <tr><td>Root test</th><td>L = lim|aₙ|^(1/n). Same rules as ratio test</th></tr>
+            <tr><td>Integral test</th><td>Σf(n) and ∫f(x)dx converge/diverge together (f positive, decreasing)</th></tr>
+            <tr><td>Comparison test</th><td>0 ≤ aₙ ≤ bₙ: if Σbₙ converges → Σaₙ converges</th></tr>
+            <tr><td>Alternating series</th><td>aₙ decreasing → 0 → converges (Leibniz test)</th></tr>
+          </table>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Σ n!/nⁿ — ratio test</div>
+              <p class="soln">L = lim (n+1)!/(n+1)^(n+1) × nⁿ/n! = lim nⁿ/(n+1)ⁿ = 1/e &lt; 1. Converges.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seq-power" class="topic-section">
+      <div class="section-header"><span class="sec-icon">⚡</span><h2>Power Series & Radius of Convergence</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Power series: Σ aₙ(x−c)ⁿ = a₀ + a₁(x−c) + a₂(x−c)² + ...<br>
+            Radius of convergence: R = 1/lim|aₙ₊₁/aₙ| (ratio test on coefficients)<br>
+            Interval of convergence: (c−R, c+R) — check endpoints separately
+          </div>
+          <div class="sub"><h3>Common Maclaurin Series</h3>
+            <div class="formula-box">
+              eˣ = 1 + x + x²/2! + x³/3! + ... (R=∞)<br>
+              sin x = x − x³/3! + x⁵/5! − ... (R=∞)<br>
+              cos x = 1 − x²/2! + x⁴/4! − ... (R=∞)<br>
+              ln(1+x) = x − x²/2 + x³/3 − ... (R=1, −1&lt;x≤1)<br>
+              (1+x)ⁿ = 1 + nx + n(n−1)x²/2! + ... (R=1)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="complex.html" class="topic-nav-btn prev">← Complex Numbers</a>
+      <a href="../main.html" class="topic-nav-btn next">All Topics →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

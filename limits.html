@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limits & Continuity | Ronny Best Mathematics</title>
+  <meta name="description" content="From intuitive limits to epsilon-delta proofs">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">🎯</span>
+  <h1>Limits & Continuity</h1>
+  <p class="hero-sub">From intuitive limits to epsilon-delta proofs</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Limits & Continuity</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Secondary</li>
+      <li><a href="#lim-intro">Introduction to Limits</a></li>
+      <li><a href="#lim-laws">Limit Laws</a></li>
+      <li><a href="#lim-special">Special Limits</a></li>
+      <li><a href="#lim-continuity">Continuity</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#lim-epsilon">Epsilon-Delta</a></li>
+      <li><a href="#lim-sequences">Limits of Sequences</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="lim-intro" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🎯</span><h2>Introduction to Limits</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <p>lim_{x→a} f(x) = L means: as x gets arbitrarily close to a (but NOT equal to a), f(x) approaches L.</p>
+          <div class="formula-box highlight">
+            One-sided limits:<br>
+            lim_{x→a⁻} f(x) — left-hand limit (approach from below)<br>
+            lim_{x→a⁺} f(x) — right-hand limit (approach from above)<br>
+            Limit exists iff: lim_{x→a⁻} f(x) = lim_{x→a⁺} f(x) = L
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1 — Direct substitution</div>
+              <p>lim_{x→3} (x² + 2x − 1)</p>
+              <p class="soln">= 9 + 6 − 1 = 14</p></div>
+            <div class="example-card"><div class="example-label">Example 2 — Indeterminate form 0/0</div>
+              <p>lim_{x→2} (x²−4)/(x−2)</p>
+              <p class="soln">Factor: (x−2)(x+2)/(x−2) = x+2. Limit = 4.</p></div>
+            <div class="example-card"><div class="example-label">Example 3 — Infinity</div>
+              <p>lim_{x→∞} (3x²+2)/(x²−1)</p>
+              <p class="soln">Divide by x²: (3+2/x²)/(1−1/x²) → 3/1 = 3</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lim-laws" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📋</span><h2>Limit Laws</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Sum/Difference: lim[f ± g] = lim f ± lim g<br>
+            Product: lim[fg] = (lim f)(lim g)<br>
+            Quotient: lim[f/g] = lim f / lim g (if lim g ≠ 0)<br>
+            Power: lim[f(x)]ⁿ = [lim f(x)]ⁿ<br>
+            Squeeze theorem: g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L → lim f = L
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lim-special" class="topic-section">
+      <div class="section-header"><span class="sec-icon">⭐</span><h2>Special Limits</h2><span class="level-badge badge-secondary">A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            lim_{x→0} sin x / x = 1 &nbsp;&nbsp; lim_{x→0} (1−cos x)/x = 0<br>
+            lim_{x→0} (eˣ−1)/x = 1 &nbsp;&nbsp; lim_{x→0} ln(1+x)/x = 1<br>
+            lim_{x→∞} (1 + 1/x)ˣ = e &nbsp;&nbsp; lim_{x→0} (1+x)^(1/x) = e
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — lim sin(3x)/x as x→0</div>
+              <p class="soln">= 3 × lim sin(3x)/(3x) = 3 × 1 = 3</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>L'Hôpital's Rule</h3>
+          <div class="formula-box">For 0/0 or ∞/∞ forms: lim f(x)/g(x) = lim f′(x)/g′(x)</div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — lim (x−sinx)/x³ as x→0</div>
+              <p class="soln">Apply L'Hôpital 3 times: → (1−cosx)/3x² → sinx/6x → cosx/6 = 1/6</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lim-continuity" class="topic-section">
+      <div class="section-header"><span class="sec-icon">〰️</span><h2>Continuity</h2><span class="level-badge badge-secondary">A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>f is continuous at x = a iff:</h3>
+          <ol class="sub"><li>f(a) is defined</li><li>lim_{x→a} f(x) exists</li><li>lim_{x→a} f(x) = f(a)</li></ol>
+          <h3>Types of Discontinuity</h3>
+          <table class="formula-table">
+            <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+            <tr><td>Removable</th><td>Hole; limit exists but f(a) ≠ limit</td><td>f(x) = (x²−1)/(x−1)</td></tr>
+            <tr><td>Jump</th><td>Left and right limits exist but differ</td><td>Floor function</td></tr>
+            <tr><td>Infinite</th><td>Vertical asymptote</td><td>f(x) = 1/x at 0</td></tr>
+            <tr><td>Oscillatory</th><td>Function oscillates infinitely</td><td>sin(1/x) at 0</td></tr>
+          </table>
+          <div class="callout tip"><span class="callout-icon">💡</span><span><strong>Intermediate Value Theorem:</strong> If f is continuous on [a,b] and f(a) &lt; k &lt; f(b), then ∃ c ∈ (a,b) with f(c) = k.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lim-epsilon" class="topic-section">
+      <div class="section-header"><span class="sec-icon">ε</span><h2>Epsilon-Delta Definition</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            lim_{x→a} f(x) = L means: ∀ε &gt; 0, ∃δ &gt; 0 such that 0 &lt; |x−a| &lt; δ implies |f(x)−L| &lt; ε
+          </div>
+          <p>This is the rigorous mathematical foundation of limits. Given any tolerance ε around L, we can find a δ-neighbourhood around a that maps inside the ε-band.</p>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Prove lim_{x→2} (3x−1) = 5</div>
+              <p class="soln">Need |3x−1−5| &lt; ε. |3x−6| = 3|x−2| &lt; ε. Choose δ = ε/3. Then |x−2| &lt; δ → |f(x)−5| = 3|x−2| &lt; 3(ε/3) = ε ✓</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lim-sequences" class="topic-section">
+      <div class="section-header"><span class="sec-icon">∞</span><h2>Limits of Sequences & Series</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Sequence limit: lim_{n→∞} aₙ = L (convergent) or does not exist (divergent)<br>
+            Cauchy sequences: fundamental criterion without explicit limit<br>
+            Series convergence tests: ratio test, root test, integral test, comparison test
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="volumes.html" class="topic-nav-btn prev">← Volumes</a>
+      <a href="complex.html" class="topic-nav-btn next">Complex Numbers →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

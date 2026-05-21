@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Differentiation | Ronny Best Mathematics</title>
+  <meta name="description" content="Rates of change from first principles to multivariable calculus">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">📈</span>
+  <h1>Differentiation</h1>
+  <p class="hero-sub">Rates of change from first principles to multivariable calculus</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Differentiation</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Introduction</li>
+      <li><a href="#diff-intro">What is Differentiation?</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#diff-rules">Basic Rules</a></li>
+      <li><a href="#diff-trig">Trig & Exp Derivatives</a></li>
+      <li><a href="#diff-chain">Chain, Product, Quotient</a></li>
+      <li><a href="#diff-apps">Applications</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#implicit">Implicit & Parametric</a></li>
+      <li><a href="#partial-diff">Partial Derivatives</a></li>
+      <li><a href="#taylor">Taylor & Maclaurin Series</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="diff-intro" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📈</span><h2>Introduction to Differentiation</h2><span class="level-badge badge-all">All Levels</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>The Derivative — First Principles</h3>
+          <div class="formula-box highlight">
+            f′(x) = lim<sub>h→0</sub> [f(x+h) − f(x)] / h
+          </div>
+          <p>The derivative gives the instantaneous rate of change and the gradient of the tangent line at any point.</p>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Differentiate f(x) = x² from first principles</div>
+              <p class="soln">f′(x) = lim[(x+h)² − x²]/h = lim[2xh+h²]/h = lim(2x+h) = 2x</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Notation</h3>
+          <div class="formula-box">dy/dx &nbsp; f′(x) &nbsp; Df(x) &nbsp; ẋ (dot notation in physics for time derivatives)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diff-rules" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📋</span><h2>Basic Differentiation Rules</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Power rule: d/dx(xⁿ) = nxⁿ⁻¹<br>
+            Constant: d/dx(c) = 0<br>
+            Sum/Difference: d/dx[f ± g] = f′ ± g′<br>
+            Constant multiple: d/dx[cf] = cf′
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1</div>
+              <p>Differentiate y = 4x⁵ − 3x³ + 7x − 2</p>
+              <p class="soln">dy/dx = 20x⁴ − 9x² + 7</p></div>
+            <div class="example-card"><div class="example-label">Example 2</div>
+              <p>Differentiate y = √x + 1/x²</p>
+              <p class="soln">= x^(1/2) + x^(−2) → dy/dx = (1/2)x^(−1/2) − 2x^(−3) = 1/(2√x) − 2/x³</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diff-trig" class="topic-section">
+      <div class="section-header"><span class="sec-icon">sin</span><h2>Trig, Exponential & Log Derivatives</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            d/dx(sin x) = cos x &nbsp;&nbsp; d/dx(cos x) = −sin x &nbsp;&nbsp; d/dx(tan x) = sec²x<br>
+            d/dx(sec x) = sec x tan x &nbsp;&nbsp; d/dx(cosec x) = −cosec x cot x &nbsp;&nbsp; d/dx(cot x) = −cosec²x<br>
+            d/dx(eˣ) = eˣ &nbsp;&nbsp; d/dx(aˣ) = aˣ ln a &nbsp;&nbsp; d/dx(ln x) = 1/x &nbsp;&nbsp; d/dx(log_a x) = 1/(x ln a)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1</div><p>d/dx(e^(3x)) = 3e^(3x)</p></div>
+            <div class="example-card"><div class="example-label">Example 2</div><p>d/dx(ln(x²+1)) = 2x/(x²+1)</p></div>
+            <div class="example-card"><div class="example-label">Example 3</div><p>d/dx(cos(x²)) = −2x sin(x²) [chain rule]</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diff-chain" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔗</span><h2>Product, Quotient & Chain Rules</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Product rule: d/dx(uv) = u′v + uv′<br>
+            Quotient rule: d/dx(u/v) = (u′v − uv′)/v²<br>
+            Chain rule: d/dx[f(g(x))] = f′(g(x)) · g′(x)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Product rule</div>
+              <p>Differentiate y = x² sin x</p>
+              <p class="soln">dy/dx = 2x sin x + x² cos x</p></div>
+            <div class="example-card"><div class="example-label">Example — Quotient rule</div>
+              <p>Differentiate y = (x² + 1)/(x − 2)</p>
+              <p class="soln">= [2x(x−2) − (x²+1)]/(x−2)² = (x²−4x−1)/(x−2)²</p></div>
+            <div class="example-card"><div class="example-label">Example — Chain rule</div>
+              <p>Differentiate y = (3x² + 5)⁷</p>
+              <p class="soln">= 7(3x²+5)⁶ × 6x = 42x(3x²+5)⁶</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diff-apps" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🎯</span><h2>Applications of Differentiation</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>Finding Stationary Points / Extrema</h3>
+          <div class="formula-box">
+            Set f′(x) = 0 to find stationary points.<br>
+            f′′(x) &gt; 0 → local minimum &nbsp;&nbsp; f′′(x) &lt; 0 → local maximum &nbsp;&nbsp; f′′(x) = 0 → inflection (check sign change)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example</div>
+              <p>Find and classify stationary points of f(x) = x³ − 3x + 2</p>
+              <p class="soln">f′ = 3x²−3 = 0 → x = ±1. f′′=6x. At x=1: f′′=6 &gt; 0 → min. At x=−1: f′′=−6 &lt; 0 → max.</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Rates of Change & Optimisation</h3>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Optimisation</div>
+              <p>A box with square base and open top has volume 108 cm³. Minimise surface area.</p>
+              <p class="soln">If base side = x, height = h. V = x²h = 108 → h = 108/x². SA = x² + 4xh = x² + 432/x. dSA/dx = 2x − 432/x² = 0 → x³ = 216 → x = 6, h = 3.</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>L'Hôpital's Rule</h3>
+          <div class="formula-box">If lim f(x)/g(x) is 0/0 or ∞/∞: &nbsp; lim f(x)/g(x) = lim f′(x)/g′(x)</div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — lim(x→0) sin x / x</div>
+              <p class="soln">= lim(x→0) cos x / 1 = 1</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="implicit" class="topic-section">
+      <div class="section-header"><span class="sec-icon">⚙️</span><h2>Implicit & Parametric Differentiation</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Implicit Differentiation</h3>
+          <p>Differentiate both sides with respect to x, using d/dx[f(y)] = f′(y) · dy/dx.</p>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Find dy/dx for x² + y² = 25</div>
+              <p class="soln">2x + 2y(dy/dx) = 0 → dy/dx = −x/y</p></div>
+            <div class="example-card"><div class="example-label">Example — Find dy/dx for xe^y = y</div>
+              <p class="soln">e^y + xe^y(dy/dx) = dy/dx → e^y = dy/dx(1−xe^y) → dy/dx = e^y/(1−xe^y)</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Parametric Differentiation</h3>
+          <div class="formula-box">dy/dx = (dy/dt)/(dx/dt) &nbsp;&nbsp; d²y/dx² = (d/dt[dy/dx])/(dx/dt)</div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — x = t², y = t³</div>
+              <p class="soln">dx/dt = 2t, dy/dt = 3t². dy/dx = 3t²/2t = 3t/2</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partial-diff" class="topic-section">
+      <div class="section-header"><span class="sec-icon">∂</span><h2>Partial Derivatives & Multivariable Calculus</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            ∂f/∂x: differentiate with respect to x, treating y as constant<br>
+            ∂f/∂y: differentiate with respect to y, treating x as constant<br>
+            Gradient vector: ∇f = (∂f/∂x, ∂f/∂y, ∂f/∂z)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — f(x,y) = x²y + 3xy²</div>
+              <p class="soln">∂f/∂x = 2xy + 3y². ∂f/∂y = x² + 6xy</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Critical Points (Multivariable)</h3>
+          <div class="formula-box">At critical point: ∂f/∂x = 0 and ∂f/∂y = 0. Use second derivative test (discriminant D = f_xx f_yy − (f_xy)²)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="taylor" class="topic-section">
+      <div class="section-header"><span class="sec-icon">∑</span><h2>Taylor & Maclaurin Series</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Taylor: f(x) = f(a) + f′(a)(x−a) + f′′(a)(x−a)²/2! + f′′′(a)(x−a)³/3! + ...<br>
+            Maclaurin (a=0): f(x) = f(0) + f′(0)x + f′′(0)x²/2! + ...<br><br>
+            Common series: eˣ = 1 + x + x²/2! + ... &nbsp; sin x = x − x³/3! + x⁵/5! − ...<br>
+            cos x = 1 − x²/2! + x⁴/4! − ... &nbsp;&nbsp; ln(1+x) = x − x²/2 + x³/3 − ... (|x|≤1)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="statistics.html" class="topic-nav-btn prev">← Statistics</a>
+      <a href="integration.html" class="topic-nav-btn next">Integration →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

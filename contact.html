@@ -110,7 +110,7 @@
     align-items: start;
   }
 
-  /* FORM */
+  /* FORM CARD */
   .form-card {
     background: var(--white);
     border-radius: 20px;
@@ -124,12 +124,34 @@
     color: var(--navy);
     margin-bottom: 0.4rem;
   }
-  .form-card p {
+  .form-card > p {
     color: var(--muted);
     font-size: 0.92rem;
     margin-bottom: 2rem;
     line-height: 1.6;
   }
+
+  /* delivery badges */
+  .delivery-badges {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .badge-email  { background: rgba(15,155,142,0.1);  color: var(--teal); }
+  .badge-wa     { background: rgba(37,211,102,0.12); color: #1a9c4e; }
+  .badge-sms    { background: rgba(240,165,0,0.12);  color: #b87a00; }
+
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
   .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
   label {
@@ -156,6 +178,7 @@
     background: var(--white);
   }
   textarea { resize: vertical; min-height: 130px; }
+
   .submit-btn {
     width: 100%;
     padding: 1rem;
@@ -170,21 +193,49 @@
     transition: background 0.2s, transform 0.15s;
     letter-spacing: 0.02em;
     margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
-  .submit-btn:hover { background: #0d8a7e; transform: translateY(-2px); }
-  .success-msg {
+  .submit-btn:hover:not(:disabled) { background: #0d8a7e; transform: translateY(-2px); }
+  .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  /* spinner */
+  .spinner {
+    width: 18px; height: 18px;
+    border: 3px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
     display: none;
+  }
+  .submit-btn.loading .spinner { display: block; }
+  .submit-btn.loading .btn-text { opacity: 0.7; }
+
+  /* alerts */
+  .alert {
+    display: none;
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.93rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  .alert-success {
     background: #e8f8f5;
     border: 2px solid var(--teal);
-    border-radius: 10px;
-    padding: 1.2rem;
-    color: var(--teal);
-    font-weight: 600;
-    text-align: center;
-    margin-top: 1rem;
+    color: #0b6b60;
   }
+  .alert-error {
+    background: #fff4f4;
+    border: 2px solid #e74c3c;
+    color: #c0392b;
+  }
+  .alert-title { font-weight: 700; margin-bottom: 0.2rem; display: block; }
 
-  /* SIDEBAR INFO */
+  /* SIDEBAR */
   .info-sidebar {
     display: flex;
     flex-direction: column;
@@ -217,18 +268,15 @@
   }
   .contact-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
   .contact-icon {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
   }
-  .icon-teal { background: rgba(15,155,142,0.1); }
-  .icon-gold { background: rgba(240,165,0,0.1); }
-  .icon-navy { background: rgba(10,22,40,0.08); }
+  .icon-teal  { background: rgba(15,155,142,0.1); }
+  .icon-gold  { background: rgba(240,165,0,0.1); }
+  .icon-navy  { background: rgba(10,22,40,0.08); }
+  .icon-green { background: rgba(37,211,102,0.12); }
   .contact-detail h4 {
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -245,7 +293,6 @@
   }
   .contact-detail a:hover { color: var(--teal); }
 
-  /* Response time */
   .response-badge {
     background: linear-gradient(135deg, var(--navy), var(--deep));
     border-radius: 16px;
@@ -258,16 +305,37 @@
     color: var(--gold);
     margin-bottom: 0.8rem;
   }
-  .response-badge p {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.88rem;
-    line-height: 1.6;
-  }
+  .response-badge p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; }
   .rt-row { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; }
   .rt-label { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
-  .rt-time { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+  .rt-time  { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
 
-  /* FAQ teaser */
+  /* how-it-works note */
+  .delivery-note {
+    background: rgba(15,155,142,0.06);
+    border: 2px solid rgba(15,155,142,0.18);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+  }
+  .delivery-note h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .delivery-note ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+  .delivery-note li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.4;
+  }
+  .delivery-note li span { flex-shrink: 0; }
+
   .faq-hint {
     background: rgba(15,155,142,0.08);
     border: 2px solid rgba(15,155,142,0.2);
@@ -276,12 +344,7 @@
     text-align: center;
   }
   .faq-hint p { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.6rem; }
-  .faq-hint a {
-    color: var(--teal);
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
+  .faq-hint a { color: var(--teal); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
 
   /* FOOTER */
   footer {
@@ -296,7 +359,10 @@
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 
   @media (max-width: 768px) {
@@ -329,59 +395,96 @@
 <div class="contact-wrapper">
 
   <!-- Contact Form -->
+
   <div class="form-card">
     <h2>Send Us a Message</h2>
     <p>Whether you're a student, parent, or teacher — your feedback helps us make this platform better for everyone.</p>
 
-    <div class="form-row">
-      <div class="field">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" placeholder="e.g. John" required>
+    <!-- delivery badges (visual only) -->
+    <div class="delivery-badges">
+      <span class="badge badge-email">✉ Email</span>
+      <span class="badge badge-wa">💬 WhatsApp</span>
+      <span class="badge badge-sms">📱 SMS</span>
+    </div>
+
+    <!-- THE FORM — action points to FormSubmit with your email -->
+    <form id="contactForm" action="https://formsubmit.co/ronnymwenda89@gmail.com" method="POST">
+
+      <!-- ── FormSubmit hidden config fields ── -->
+      <!-- Reply-To: when you hit Reply in Gmail it goes to the sender -->
+      <input type="hidden" name="_replyto" id="replyto_field">
+      <!-- Branded subject line -->
+      <input type="hidden" name="_subject" value="📬 New message via Ronny Best Mathematics">
+      <!-- Use the table email template (clean layout) -->
+      <input type="hidden" name="_template" value="table">
+      <!-- Disable the default FormSubmit captcha (optional — remove to re-enable) -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect back to your thank-you page after submission -->
+      <input type="hidden" name="_next" value="https://bestronny.netlify.app/contact.html?sent=1">
+      <!-- CC — add a second email here if you want a copy elsewhere -->
+      <!-- <input type="hidden" name="_cc" value="[email protected]"> -->
+
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="First Name" placeholder="e.g. John" required>
+        </div>
+        <div class="field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="Last Name" placeholder="e.g. Kamau">
+        </div>
       </div>
+
       <div class="field">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" placeholder="e.g. Kamau">
+        <label for="email">Email Address</label>
+        <input type="email" id="email_input" name="email" placeholder="your@email.com" required>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" placeholder="your@email.com" required>
-    </div>
+      <div class="field">
+        <label for="role">I am a…</label>
+        <select id="role" name="Role">
+          <option value="">Select your role</option>
+          <option>High School Student</option>
+          <option>College / University Student</option>
+          <option>Teacher or Educator</option>
+          <option>Parent or Guardian</option>
+          <option>Self-Learner</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-    <div class="field">
-      <label for="subject">I am a...</label>
-      <select id="subject">
-        <option value="">Select your role</option>
-        <option>High School Student</option>
-        <option>College / University Student</option>
-        <option>Teacher or Educator</option>
-        <option>Parent or Guardian</option>
-        <option>Self-Learner</option>
-        <option>Other</option>
-      </select>
-    </div>
+      <div class="field">
+        <label for="topic">Topic / Subject</label>
+        <select id="topic" name="Topic">
+          <option value="">What is your message about?</option>
+          <option>Question about a math lesson</option>
+          <option>Found an error or mistake</option>
+          <option>Suggestion or feature request</option>
+          <option>Partnership or collaboration</option>
+          <option>General feedback</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-    <div class="field">
-      <label for="topic">Topic / Subject</label>
-      <select id="topic">
-        <option value="">What is your message about?</option>
-        <option>Question about a math lesson</option>
-        <option>Found an error or mistake</option>
-        <option>Suggestion or feature request</option>
-        <option>Partnership or collaboration</option>
-        <option>General feedback</option>
-        <option>Other</option>
-      </select>
-    </div>
+      <div class="field">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="Message" placeholder="Tell us what's on your mind. Be as detailed as you like — we'll do our best to help!" required></textarea>
+      </div>
 
-    <div class="field">
-      <label for="message">Your Message</label>
-      <textarea id="message" placeholder="Tell us what's on your mind. Be as detailed as you like — we'll do our best to help!" required></textarea>
-    </div>
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <div class="spinner" id="spinner"></div>
+        <span class="btn-text" id="btnText">✉ Send Message</span>
+      </button>
+    </form>
 
-    <button class="submit-btn" onclick="handleSubmit()">✉ Send Message</button>
-    <div class="success-msg" id="successMsg">✅ Thank you! Your message has been received. We'll get back to you within 24–48 hours.</div>
+    <div class="alert alert-success" id="successAlert">
+      <span class="alert-title">✅ Message sent successfully!</span>
+      Thank you — we've received your message and will reply to your email within 24–48 hours. Check your inbox for a confirmation.
+    </div>
+    <div class="alert alert-error" id="errorAlert">
+      <span class="alert-title">⚠️ Something went wrong</span>
+      Please check your details and try again, or email us directly at <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>.
+    </div>
   </div>
 
   <!-- Sidebar -->
@@ -398,9 +501,17 @@
       </div>
 
       <div class="contact-item">
+        <div class="contact-icon icon-green">💬</div>
+        <div class="contact-detail">
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/254799188900" target="_blank" rel="noopener">+254 799 188 900</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
         <div class="contact-icon icon-gold">📞</div>
         <div class="contact-detail">
-          <h4>Phone / WhatsApp</h4>
+          <h4>Phone / SMS</h4>
           <a href="tel:+254799188900">+254 799 188 900</a>
         </div>
       </div>
@@ -439,9 +550,18 @@
       </div>
     </div>
 
+    <div class="delivery-note">
+      <h4>📲 How message delivery works</h4>
+      <ul>
+        <li><span>✉</span> Your message arrives in Ronny's Gmail inbox, formatted as a table.</li>
+        <li><span>💬</span> A WhatsApp notification is sent instantly to +254 799 188 900.</li>
+        <li><span>↩</span> When Ronny replies, the email goes directly back to <em>you</em> — branded as Ronny Best Mathematics.</li>
+      </ul>
+    </div>
+
     <div class="faq-hint">
       <p>Looking for help with a specific math topic? Browse our lessons first — the answer may already be there!</p>
-      <a href="/main">→ Browse Math Lessons</a>
+      <a href="/main.html">→ Browse Math Lessons</a>
     </div>
   </aside>
 
@@ -458,19 +578,69 @@
 </footer>
 
 <script>
-  function handleSubmit() {
-    const name = document.getElementById('fname').value.trim();
-    const email = document.getElementById('email').value.trim();
+  const CALLMEBOT_API_KEY = '6100170';
+  const MY_WHATSAPP_NUMBER = '254799188900';
+
+  // Keep _replyto in sync with email field so Gmail Reply-To works
+  document.getElementById('email_input').addEventListener('input', function () {
+    document.getElementById('replyto_field').value = this.value;
+  });
+
+  // Show success banner if redirected back after FormSubmit submission
+  if (window.location.search.includes('sent=1')) {
+    document.getElementById('successAlert').style.display = 'block';
+    window.history.replaceState({}, '', window.location.pathname);
+  }
+
+  // Override form submit: send WhatsApp notification, then let form POST to FormSubmit
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const fname   = document.getElementById('fname').value.trim();
+    const lname   = document.getElementById('lname').value.trim();
+    const email   = document.getElementById('email_input').value.trim();
+    const role    = document.getElementById('role').value;
+    const topic   = document.getElementById('topic').value;
     const message = document.getElementById('message').value.trim();
-    if (!name || !email || !message) {
-      alert('Please fill in your name, email, and message before sending.');
+
+    if (!fname || !email || !message) {
+      document.getElementById('errorAlert').style.display = 'block';
+      document.getElementById('errorAlert').querySelector('.alert-title').textContent = '⚠️ Missing fields';
+      document.getElementById('errorAlert').lastChild.textContent = ' Please fill in your name, email, and message.';
       return;
     }
-    document.getElementById('successMsg').style.display = 'block';
-    document.querySelector('.submit-btn').disabled = true;
-    document.querySelector('.submit-btn').textContent = '✓ Message Sent!';
-    document.querySelector('.submit-btn').style.background = '#27ae60';
-  }
+
+    // Keep replyto in sync before submit
+    document.getElementById('replyto_field').value = email;
+
+    // Show loading state
+    const btn     = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const btnText = document.getElementById('btnText');
+    btn.disabled  = true;
+    spinner.style.display = 'block';
+    btnText.textContent   = 'Sending…';
+
+    // ── Send WhatsApp notification via CallMeBot ──
+    if (CALLMEBOT_API_KEY) {
+      try {
+        const waMsg = encodeURIComponent(
+          `📬 New Contact — Ronny Best Maths\n\n` +
+          `👤 Name: ${fname} ${lname}\n` +
+          `📧 Email: ${email}\n` +
+          `🎓 Role: ${role || 'Not specified'}\n` +
+          `📚 Topic: ${topic || 'Not specified'}\n\n` +
+          `💬 Message:\n${message.slice(0, 300)}${message.length > 300 ? '…' : ''}`
+        );
+        await fetch(
+          `https://api.callmebot.com/whatsapp.php?phone=${MY_WHATSAPP_NUMBER}&text=${waMsg}&apikey=${CALLMEBOT_API_KEY}`,
+          { mode: 'no-cors' }
+        );
+      } catch (_) {
+      }
+    }
+    this.submit();
+  });
 </script>
 
 </body>

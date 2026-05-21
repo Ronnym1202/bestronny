@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vectors | Ronny Best Mathematics</title>
+  <meta name="description" content="From basic direction to vector calculus">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">➡️</span>
+  <h1>Vectors</h1>
+  <p class="hero-sub">From basic direction to vector calculus</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Vectors</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Secondary</li>
+      <li><a href="#vec-basics">Vector Basics</a></li>
+      <li><a href="#vec-ops">Operations</a></li>
+      <li><a href="#vec-dot">Dot Product</a></li>
+      <li><a href="#vec-cross">Cross Product</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#vec-lines-planes">Lines & Planes</a></li>
+      <li><a href="#vec-calculus">Vector Calculus</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="vec-basics" class="topic-section">
+      <div class="section-header"><span class="sec-icon">➡️</span><h2>Vector Fundamentals</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>Scalars vs Vectors</h3>
+          <p>A <strong>scalar</strong> has magnitude only (mass, temperature). A <strong>vector</strong> has magnitude AND direction (force, velocity).</p>
+          <div class="formula-box highlight">
+            v = (x, y, z) = xi + yj + zk<br>
+            Magnitude: |v| = √(x² + y² + z²)<br>
+            Unit vector: v̂ = v/|v|
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1</div>
+              <p>Find magnitude and unit vector of v = (3, 4, 0)</p>
+              <p class="soln">|v| = 5. v̂ = (3/5, 4/5, 0)</p></div>
+            <div class="example-card"><div class="example-label">Example 2</div>
+              <p>Find vector from A(1,2) to B(4,6)</p>
+              <p class="soln">AB = B − A = (3, 4). |AB| = 5.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vec-ops" class="topic-section">
+      <div class="section-header"><span class="sec-icon">➕</span><h2>Vector Operations</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Addition: (a₁,b₁) + (a₂,b₂) = (a₁+a₂, b₁+b₂)<br>
+            Scalar multiplication: k(a,b) = (ka, kb)<br>
+            Triangle law: AB + BC = AC &nbsp;&nbsp; Parallelogram law
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vec-dot" class="topic-section">
+      <div class="section-header"><span class="sec-icon">·</span><h2>Dot (Scalar) Product</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            a·b = |a||b|cosθ = a₁b₁ + a₂b₂ + a₃b₃<br>
+            Perpendicular vectors: a·b = 0<br>
+            Projection of a onto b: (a·b)/|b|
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Angle between vectors</div>
+              <p>a = (1,2,2), b = (2,1,−2). Find angle.</p>
+              <p class="soln">a·b = 2+2−4=0 → θ = 90°. Vectors are perpendicular!</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vec-cross" class="topic-section">
+      <div class="section-header"><span class="sec-icon">×</span><h2>Cross (Vector) Product</h2><span class="level-badge badge-secondary">A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            a×b = |a||b|sinθ n̂ (perpendicular to both a and b)<br>
+            a×b = |i  j  k |<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|a₁ a₂ a₃|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|b₁ b₂ b₃|<br>
+            = (a₂b₃−a₃b₂)i − (a₁b₃−a₃b₁)j + (a₁b₂−a₂b₁)k<br>
+            |a×b| = area of parallelogram formed by a and b
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — a=(1,2,3), b=(4,5,6)</div>
+              <p class="soln">a×b = (2×6−3×5, 3×4−1×6, 1×5−2×4) = (12−15, 12−6, 5−8) = (−3, 6, −3)</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vec-lines-planes" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📐</span><h2>Lines & Planes in 3D</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Line through a with direction d: r = a + td<br>
+            Plane with normal n through point a: n·(r−a) = 0 → n₁x + n₂y + n₃z = d<br>
+            Distance from point P to plane ax+by+cz=d: |aP_x+bP_y+cP_z−d|/√(a²+b²+c²)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Plane through 3 points</div>
+              <p>A(1,0,0), B(0,2,0), C(0,0,3)</p>
+              <p class="soln">AB = (−1,2,0), AC = (−1,0,3). n = AB×AC = (6,3,2). Equation: 6x+3y+2z=6.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vec-calculus" class="topic-section">
+      <div class="section-header"><span class="sec-icon">∇</span><h2>Vector Calculus</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Gradient: ∇f = (∂f/∂x)i + (∂f/∂y)j + (∂f/∂z)k &nbsp; (points in direction of steepest ascent)<br>
+            Divergence: ∇·F = ∂F₁/∂x + ∂F₂/∂y + ∂F₃/∂z &nbsp; (scalar)<br>
+            Curl: ∇×F &nbsp; (measures rotation of vector field)<br>
+            Laplacian: ∇²f = ∂²f/∂x² + ∂²f/∂y² + ∂²f/∂z²
+          </div>
+          <div class="callout note"><span class="callout-icon">📝</span><span>Stokes' theorem, Green's theorem, and the Divergence theorem connect line integrals, surface integrals, and volume integrals using these operators.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="integration.html" class="topic-nav-btn prev">← Integration</a>
+      <a href="matrices.html" class="topic-nav-btn next">Matrices →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

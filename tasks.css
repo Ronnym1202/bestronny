@@ -129,22 +129,6 @@ header {
     gap: 1.5rem;
 }
 
-/* ===== AD SLOTS ===== */
-.ad-slot {
-    background: #fff;
-    border: 1px solid var(--bisque-dark);
-    border-radius: var(--radius-md);
-    padding: 0.5rem;
-    text-align: center;
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.ad-top { min-height: 90px; }
-
 /* ===== CARDS ===== */
 .card {
     background: #fff;

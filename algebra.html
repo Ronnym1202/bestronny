@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algebra | Ronny Best Mathematics</title>
+  <meta name="description" content="From number laws to abstract algebra — complete guide">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">🔢</span>
+  <h1>Algebra</h1>
+  <p class="hero-sub">From number laws to abstract algebra — complete guide</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Beginner</span> <span class="level-pill pill-secondary">Secondary</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Algebra</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Beginner</li>
+      <li><a href="#number-operations">Number Operations</a></li>
+      <li><a href="#basic-algebra">Intro to Algebra</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#linear-equations">Linear Equations</a></li>
+      <li><a href="#quadratics">Quadratics</a></li>
+      <li><a href="#polynomials">Polynomials</a></li>
+      <li><a href="#inequalities">Inequalities</a></li>
+      <li><a href="#logs">Logarithms</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#abstract-algebra">Abstract Algebra</a></li>
+      <li><a href="#linear-algebra">Linear Algebra</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="number-operations" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🔢</span>
+        <h2>Number Operations & Properties</h2>
+        <span class="level-badge badge-primary">Beginner</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Fundamental Laws</h3>
+          <div class="formula-box">
+            Commutative: a + b = b + a &nbsp; | &nbsp; a × b = b × a<br>
+            Associative: (a+b)+c = a+(b+c) &nbsp; | &nbsp; (ab)c = a(bc)<br>
+            Distributive: a(b+c) = ab + ac
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Types of Numbers</h3>
+          <ul>
+            <li><strong>Natural numbers (ℕ):</strong> 1, 2, 3, 4, ...</li>
+            <li><strong>Integers (ℤ):</strong> ..., −2, −1, 0, 1, 2, ...</li>
+            <li><strong>Rational numbers (ℚ):</strong> p/q where p, q ∈ ℤ, q ≠ 0</li>
+            <li><strong>Irrational numbers:</strong> √2, π, e — cannot be expressed as fractions</li>
+            <li><strong>Real numbers (ℝ):</strong> all rational and irrational numbers</li>
+            <li><strong>Complex numbers (ℂ):</strong> a + bi where i = √(−1)</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h3>Laws of Indices / Exponents</h3>
+          <div class="formula-box">
+            aᵐ · aⁿ = aᵐ⁺ⁿ &nbsp;&nbsp; aᵐ/aⁿ = aᵐ⁻ⁿ &nbsp;&nbsp; (aᵐ)ⁿ = aᵐⁿ<br>
+            (ab)ⁿ = aⁿbⁿ &nbsp;&nbsp; a⁰ = 1 &nbsp;&nbsp; a⁻ⁿ = 1/aⁿ &nbsp;&nbsp; a^(1/n) = ⁿ√a
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1</div>
+              <p>Simplify: 2³ × 2⁴ ÷ 2²</p>
+              <p class="soln">= 2^(3+4−2) = 2⁵ = 32</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2</div>
+              <p>Simplify: (3x²y)³</p>
+              <p class="soln">= 27x⁶y³</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3</div>
+              <p>Evaluate 8^(2/3)</p>
+              <p class="soln">= (∛8)² = 2² = 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="basic-algebra" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">✏️</span>
+        <h2>Introduction to Algebra</h2>
+        <span class="level-badge badge-primary">Beginner</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Algebraic Expressions</h3>
+          <p>Algebra uses letters to represent unknown quantities. A term is a number, variable, or product of both. Like terms have the same variable(s) and power(s).</p>
+          <div class="formula-box">
+            3x + 5x = 8x &nbsp; (like terms) &nbsp;&nbsp;&nbsp; 3x + 5y cannot be simplified &nbsp; (unlike terms)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Expand and simplify</div>
+              <p>Simplify: 3(2x + 4) − 2(x − 3)</p>
+              <p class="soln">= 6x + 12 − 2x + 6 = 4x + 18</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Algebraic Identities</h3>
+          <div class="formula-box">
+            (a + b)² = a² + 2ab + b² &nbsp;&nbsp; (a − b)² = a² − 2ab + b²<br>
+            (a + b)(a − b) = a² − b²<br>
+            (a + b)³ = a³ + 3a²b + 3ab² + b³<br>
+            a³ + b³ = (a + b)(a² − ab + b²) &nbsp;&nbsp; a³ − b³ = (a − b)(a² + ab + b²)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — (x + 3)²</div>
+              <p class="soln">= x² + 6x + 9</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — Factor 25x² − 16</div>
+              <p class="soln">= (5x − 4)(5x + 4) [difference of squares]</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — Factor x³ − 8</div>
+              <p class="soln">= (x − 2)(x² + 2x + 4)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="linear-equations" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">📏</span>
+        <h2>Linear Equations & Simultaneous Equations</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Solving Linear Equations</h3>
+          <div class="formula-box">ax + b = c &nbsp;→&nbsp; x = (c − b)/a</div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1</div>
+              <p>Solve: 3x + 7 = 19</p>
+              <p class="soln">3x = 12 → x = 4</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2 — Word problem</div>
+              <p>A number doubled and increased by 5 equals 21. Find the number.</p>
+              <p class="soln">2x + 5 = 21 → x = 8</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Simultaneous Equations</h3>
+          <p>Methods: <strong>Substitution, Elimination, Matrix method</strong>.</p>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Elimination</div>
+              <p>Solve: 2x + 3y = 13, 4x − y = 5</p>
+              <p class="soln">Multiply 2nd by 3: 12x − 3y = 15. Add to 1st: 14x = 28 → x = 2. Then y = 3.</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — 3 variables</div>
+              <p>Solve: x + y + z = 6, 2x − y + z = 3, x + 2y − z = 2</p>
+              <p class="soln">Use elimination: x = 1, y = 2, z = 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quadratics" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">⌒</span>
+        <h2>Quadratic Equations & Functions</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>The Quadratic Formula</h3>
+          <div class="formula-box highlight">
+            ax² + bx + c = 0 &nbsp;→&nbsp; x = (−b ± √(b² − 4ac)) / 2a
+          </div>
+          <h4>Discriminant Δ = b² − 4ac</h4>
+          <table class="formula-table">
+            <tr><th>Δ value</th><th>Nature of roots</th></tr>
+            <tr><td>Δ &gt; 0</td><td>Two distinct real roots</td></tr>
+            <tr><td>Δ = 0</td><td>One repeated real root</td></tr>
+            <tr><td>Δ &lt; 0</td><td>Two complex conjugate roots</td></tr>
+          </table>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1 — Two real roots</div>
+              <p>Solve x² − 5x + 6 = 0</p>
+              <p class="soln">Δ = 25 − 24 = 1 → x = (5 ± 1)/2 → x = 3 or x = 2</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2 — Factoring</div>
+              <p>Factor 6x² + 11x + 4</p>
+              <p class="soln">= (3x + 4)(2x + 1)</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3 — Complex roots</div>
+              <p>Solve x² + 2x + 5 = 0</p>
+              <p class="soln">Δ = 4 − 20 = −16 → x = (−2 ± 4i)/2 = −1 ± 2i</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Completing the Square</h3>
+          <p>Write ax² + bx + c = a(x + b/2a)² + (c − b²/4a)</p>
+          <div class="formula-box">
+            Vertex form: y = a(x − h)² + k where (h, k) is the vertex
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Complete the square</div>
+              <p>Write x² + 6x + 2 in vertex form.</p>
+              <p class="soln">= (x + 3)² − 9 + 2 = (x + 3)² − 7. Vertex: (−3, −7)</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Vieta's Formulas — Sum & Product of Roots</h3>
+          <div class="formula-box">
+            If roots are α and β: &nbsp; α + β = −b/a &nbsp;&nbsp; αβ = c/a
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="polynomials" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🧮</span>
+        <h2>Polynomials & Rational Functions</h2>
+        <span class="level-badge badge-secondary">Secondary / A-Level</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Factor Theorem & Remainder Theorem</h3>
+          <div class="formula-box">
+            Remainder Theorem: When p(x) is divided by (x − a), remainder = p(a)<br>
+            Factor Theorem: (x − a) is a factor of p(x) if and only if p(a) = 0
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Factor theorem</div>
+              <p>Show (x − 2) is a factor of x³ − 3x² + x + 2, then fully factor.</p>
+              <p class="soln">p(2) = 8 − 12 + 2 + 2 = 0 ✓ → divide to get (x−2)(x²−x−1)</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Partial Fractions</h3>
+          <div class="formula-box">
+            p(x)/[(x−a)(x−b)] = A/(x−a) + B/(x−b)<br>
+            p(x)/[(x−a)(x−b)²] = A/(x−a) + B/(x−b) + C/(x−b)²<br>
+            p(x)/[(x−a)(x²+b)] = A/(x−a) + (Bx+C)/(x²+b)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Decompose 5x/[(x−1)(x+2)]</div>
+              <p class="soln">5x = A(x+2) + B(x−1). Let x=1: 5=3A→A=5/3. Let x=−2: −10=−3B→B=10/3. Answer: (5/3)/(x−1) + (10/3)/(x+2)</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Binomial Theorem</h3>
+          <div class="formula-box">
+            (a + b)ⁿ = Σ C(n,r) aⁿ⁻ʳ bʳ &nbsp;&nbsp; C(n,r) = n! / [r!(n−r)!]<br>
+            (1 + x)ⁿ ≈ 1 + nx + n(n−1)x²/2! + ... (valid for |x| &lt; 1)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Expand (2x + 3)⁴</div>
+              <p class="soln">= C(4,0)(2x)⁴ + C(4,1)(2x)³(3) + C(4,2)(2x)²(9) + C(4,3)(2x)(27) + C(4,4)(81) = 16x⁴ + 96x³ + 216x² + 216x + 81</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inequalities" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">≤</span>
+        <h2>Inequalities & Functions</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Linear Inequalities</h3>
+          <div class="callout warn"><span class="callout-icon">⚠️</span><span>When multiplying or dividing by a negative number, <strong>flip the inequality sign!</strong></span></div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example</div>
+              <p>Solve: −2x + 5 &gt; 11</p>
+              <p class="soln">−2x &gt; 6 → x &lt; −3 (flip sign when dividing by −2)</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Quadratic Inequalities</h3>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Solve x² − 4x − 5 &gt; 0</div>
+              <p class="soln">Factor: (x−5)(x+1) &gt; 0. Roots: x = 5, x = −1. Sign chart → solution: x &lt; −1 or x &gt; 5</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Functions: Domain, Range, Composition, Inverse</h3>
+          <div class="formula-box">
+            Composite function: (f∘g)(x) = f(g(x))<br>
+            Inverse: f⁻¹(x) exists iff f is one-to-one. f(f⁻¹(x)) = x
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Find inverse of f(x) = (2x + 3)/5</div>
+              <p class="soln">y = (2x+3)/5 → 5y = 2x+3 → x = (5y−3)/2 → f⁻¹(x) = (5x−3)/2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="logs" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">log</span>
+        <h2>Logarithms & Exponential Functions</h2>
+        <span class="level-badge badge-secondary">Secondary / A-Level</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Logarithm Laws</h3>
+          <div class="formula-box highlight">
+            log(ab) = log a + log b &nbsp;&nbsp; log(a/b) = log a − log b<br>
+            log(aⁿ) = n log a &nbsp;&nbsp; log_b(x) = ln x / ln b<br>
+            a^(log_a x) = x &nbsp;&nbsp; log_a(aˣ) = x &nbsp;&nbsp; log_a 1 = 0 &nbsp;&nbsp; log_a a = 1
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1</div>
+              <p>Simplify log 20 + log 5 − log 2</p>
+              <p class="soln">= log(20×5/2) = log 50</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2 — Solve exponential equation</div>
+              <p>Solve 3^(x+1) = 27</p>
+              <p class="soln">3^(x+1) = 3³ → x + 1 = 3 → x = 2</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3 — Natural log</div>
+              <p>Solve e^(2x) = 7</p>
+              <p class="soln">2x = ln 7 → x = ln 7 / 2 ≈ 0.973</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract-algebra" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🏗️</span>
+        <h2>Abstract Algebra (University)</h2>
+        <span class="level-badge badge-uni">University</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Groups</h3>
+          <p>A group (G, ∗) satisfies four axioms:</p>
+          <ul>
+            <li><strong>Closure:</strong> a, b ∈ G → a∗b ∈ G</li>
+            <li><strong>Associativity:</strong> (a∗b)∗c = a∗(b∗c)</li>
+            <li><strong>Identity:</strong> ∃ e ∈ G such that a∗e = e∗a = a</li>
+            <li><strong>Inverse:</strong> ∀ a ∈ G, ∃ a⁻¹ such that a∗a⁻¹ = e</li>
+          </ul>
+          <p>If additionally a∗b = b∗a, the group is <strong>abelian (commutative)</strong>.</p>
+        </div>
+        <div class="sub">
+          <h3>Rings & Fields</h3>
+          <ul>
+            <li><strong>Ring (R, +, ·):</strong> abelian group under +, associative and distributive under ·</li>
+            <li><strong>Field:</strong> commutative ring where every nonzero element has a multiplicative inverse (e.g., ℚ, ℝ, ℂ, ℤ_p for prime p)</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h3>Homomorphisms & Isomorphisms</h3>
+          <div class="formula-box">
+            Homomorphism: f: G → H with f(a∗b) = f(a)∗f(b)<br>
+            Isomorphism: bijective homomorphism. G ≅ H means G and H have same structure.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="linear-algebra" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">⟨⟩</span>
+        <h2>Linear Algebra (University)</h2>
+        <span class="level-badge badge-uni">University</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Vector Spaces</h3>
+          <p>A vector space V over field F satisfies closure under addition and scalar multiplication, plus 8 axioms including commutativity, associativity, distributivity, and existence of zero vector and additive inverses.</p>
+        </div>
+        <div class="sub">
+          <h3>Eigenvalues & Eigenvectors</h3>
+          <div class="formula-box highlight">
+            Av = λv &nbsp;→&nbsp; (A − λI)v = 0 &nbsp;→&nbsp; det(A − λI) = 0 (characteristic equation)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Find eigenvalues of A = [[2,1],[1,2]]</div>
+              <p class="soln">det(A−λI) = (2−λ)²−1 = 0 → λ² − 4λ + 3 = 0 → λ = 1 or λ = 3</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Linear Transformations</h3>
+          <p>T: V → W is linear if T(αu + βv) = αT(u) + βT(v). Any linear transformation from ℝⁿ to ℝᵐ can be represented as matrix multiplication.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="trigonometry.html" class="topic-nav-btn prev">← Trigonometry</a>
+      <a href="conics.html" class="topic-nav-btn next">Conics →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

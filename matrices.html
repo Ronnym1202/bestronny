@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrices | Ronny Best Mathematics</title>
+  <meta name="description" content="From basic operations to eigenvalues and transformations">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">⬜</span>
+  <h1>Matrices</h1>
+  <p class="hero-sub">From basic operations to eigenvalues and transformations</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Matrices</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Secondary</li>
+      <li><a href="#mat-intro">Introduction</a></li>
+      <li><a href="#mat-ops">Operations</a></li>
+      <li><a href="#mat-det">Determinants</a></li>
+      <li><a href="#mat-inverse">Inverse</a></li>
+      <li><a href="#mat-systems">Solving Systems</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#mat-eigen">Eigenvalues</a></li>
+      <li><a href="#mat-transforms">Transformations</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="mat-intro" class="topic-section">
+      <div class="section-header"><span class="sec-icon">⬜</span><h2>Introduction to Matrices</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>What is a Matrix?</h3>
+          <p>A matrix is a rectangular array of numbers arranged in rows and columns. An m×n matrix has m rows and n columns.</p>
+          <h4>Special Matrices</h4>
+          <table class="formula-table">
+            <tr><th>Type</th><th>Description</th></tr>
+            <tr><td>Square</th><td>Same number of rows and columns</th></tr>
+            <tr><td>Identity (I)</th><td>Square, 1s on diagonal, 0s elsewhere. AI = IA = A</th></tr>
+            <tr><td>Zero matrix</th><td>All entries are 0</th></tr>
+            <tr><td>Diagonal</th><td>Non-diagonal entries are 0</th></tr>
+            <tr><td>Symmetric</th><td>A = Aᵀ</th></tr>
+            <tr><td>Orthogonal</th><td>AᵀA = I (rows/cols are orthonormal vectors)</th></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-ops" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔢</span><h2>Matrix Operations</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Addition (same size): (A+B)ᵢⱼ = Aᵢⱼ + Bᵢⱼ<br>
+            Scalar multiplication: (kA)ᵢⱼ = kAᵢⱼ<br>
+            Multiplication: (AB)ᵢⱼ = Σₖ Aᵢₖ Bₖⱼ &nbsp; (A is m×n, B is n×p → AB is m×p)<br>
+            NOTE: AB ≠ BA in general (not commutative)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — 2×2 multiplication</div>
+              <p>[[1,2],[3,4]] × [[5,6],[7,8]]</p>
+              <p class="soln">= [[1×5+2×7, 1×6+2×8],[3×5+4×7, 3×6+4×8]] = [[19,22],[43,50]]</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Transpose</h3>
+          <div class="formula-box">(Aᵀ)ᵢⱼ = Aⱼᵢ &nbsp; (rows become columns) &nbsp;&nbsp; (AB)ᵀ = BᵀAᵀ</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-det" class="topic-section">
+      <div class="section-header"><span class="sec-icon">det</span><h2>Determinants</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            2×2: det(A) = ad − bc<br>
+            3×3: expand along row 1: det = a(ei−fh) − b(di−fg) + c(dh−eg)<br>
+            Properties: det(AB) = det(A)det(B) &nbsp;&nbsp; det(Aᵀ) = det(A) &nbsp;&nbsp; det(kA) = kⁿdet(A)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — 3×3 determinant</div>
+              <p>[[1,2,3],[4,5,6],[7,8,9]]</p>
+              <p class="soln">= 1(45−48) − 2(36−42) + 3(32−35) = 1(−3) − 2(−6) + 3(−3) = −3+12−9 = 0</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-inverse" class="topic-section">
+      <div class="section-header"><span class="sec-icon">A⁻¹</span><h2>Matrix Inverse</h2><span class="level-badge badge-secondary">A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            A⁻¹ exists iff det(A) ≠ 0 (non-singular)<br>
+            2×2 inverse: A⁻¹ = (1/det) [[d,−b],[−c,a]]<br>
+            General: A⁻¹ = (1/det(A)) × adj(A)  where adj = transpose of cofactor matrix
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Inverse of [[3,1],[5,2]]</div>
+              <p class="soln">det = 3×2−1×5 = 1. A⁻¹ = [[2,−1],[−5,3]]</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-systems" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📊</span><h2>Solving Linear Systems</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Gaussian Elimination & Row Echelon Form</h3>
+          <p>Augmented matrix [A|b]. Row operations: swap rows, multiply row by scalar, add multiple of one row to another.</p>
+          <div class="formula-box">Cramer's Rule: xᵢ = det(Aᵢ)/det(A) where Aᵢ replaces column i with b</div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Solve by matrix inverse: 2x+y=5, 5x+3y=13</div>
+              <p class="soln">A=[[2,1],[5,3]], det=1, A⁻¹=[[3,−1],[−5,2]]. [x;y] = A⁻¹[5;13] = [[3×5−13],[−25+26]] = [2;1]</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-eigen" class="topic-section">
+      <div class="section-header"><span class="sec-icon">λ</span><h2>Eigenvalues & Eigenvectors</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Av = λv &nbsp; (v ≠ 0) &nbsp;→&nbsp; (A − λI)v = 0 &nbsp;→&nbsp; det(A − λI) = 0 (characteristic equation)<br>
+            Trace = sum of eigenvalues &nbsp;&nbsp; det(A) = product of eigenvalues
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — A = [[4,1],[2,3]]</div>
+              <p class="soln">Char. eq: (4−λ)(3−λ)−2 = λ²−7λ+10=0 → λ=5 or λ=2. For λ=5: eigenvector (1,1). For λ=2: eigenvector (1,−2).</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Diagonalisation</h3>
+          <div class="formula-box">A = PDP⁻¹ where D is diagonal matrix of eigenvalues, P has eigenvectors as columns. Aⁿ = PDⁿP⁻¹</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mat-transforms" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔄</span><h2>Linear Transformations</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Common 2D Transformation Matrices</h3>
+          <table class="formula-table">
+            <tr><th>Transformation</th><th>Matrix</th></tr>
+            <tr><td>Rotation by θ (anticlockwise)</th><td>[[cosθ,−sinθ],[sinθ,cosθ]]</th></tr>
+            <tr><td>Reflection in x-axis</th><td>[[1,0],[0,−1]]</th></tr>
+            <tr><td>Reflection in y-axis</th><td>[[−1,0],[0,1]]</th></tr>
+            <tr><td>Scale by k</th><td>[[k,0],[0,k]]</th></tr>
+            <tr><td>Shear (x-direction)</th><td>[[1,k],[0,1]]</th></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="vectors.html" class="topic-nav-btn prev">← Vectors</a>
+      <a href="areas.html" class="topic-nav-btn next">Areas of Shapes →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

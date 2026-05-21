@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics & Probability | Ronny Best Mathematics</title>
+  <meta name="description" content="From data collection to statistical inference">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">📊</span>
+  <h1>Statistics & Probability</h1>
+  <p class="hero-sub">From data collection to statistical inference</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Beginner</span> <span class="level-pill pill-secondary">Secondary</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Statistics</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Beginner</li>
+      <li><a href="#data-collection">Data Collection</a></li>
+      <li><a href="#central-tendency">Central Tendency</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#dispersion">Dispersion</a></li>
+      <li><a href="#probability">Probability</a></li>
+      <li><a href="#distributions">Distributions</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#hypothesis">Hypothesis Testing</a></li>
+      <li><a href="#regression">Regression & Correlation</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="data-collection" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📊</span><h2>Data Collection & Presentation</h2><span class="level-badge badge-primary">Beginner</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>Types of Data</h3>
+          <ul><li><strong>Qualitative/Categorical:</strong> colours, names, yes/no answers</li>
+          <li><strong>Quantitative:</strong> Discrete (countable: 1,2,3...) or Continuous (measurable: heights, weights)</li>
+          <li><strong>Primary data:</strong> collected directly. <strong>Secondary:</strong> from existing sources</li></ul>
+        </div>
+        <div class="sub"><h3>Frequency Tables, Bar Charts, Histograms, Pie Charts</h3>
+          <div class="callout note"><span class="callout-icon">📝</span><span>In a histogram, area = frequency. Bars touch. Used for continuous data. Bar charts have gaps and are for discrete/categorical data.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="central-tendency" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🎯</span><h2>Measures of Central Tendency</h2><span class="level-badge badge-primary">Beginner / Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Mean, Median, Mode</h3>
+          <div class="formula-box highlight">
+            Mean: x̄ = Σx / n &nbsp;&nbsp;&nbsp; Weighted mean: x̄ = Σ(fx) / Σf<br>
+            Median: middle value (odd n), or average of two middle values (even n)<br>
+            Mode: most frequently occurring value
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1</div>
+              <p>Data: 4, 7, 7, 9, 12. Find mean, median, mode.</p>
+              <p class="soln">Mean = 39/5 = 7.8. Median = 7. Mode = 7.</p></div>
+            <div class="example-card"><div class="example-label">Example 2 — Grouped data mean</div>
+              <p>Class: 10–20 (f=3), 20–30 (f=5), 30–40 (f=2). Find mean.</p>
+              <p class="soln">x̄ = (15×3 + 25×5 + 35×2)/10 = (45+125+70)/10 = 24</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dispersion" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📏</span><h2>Measures of Dispersion</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Range = max − min<br>
+            Variance: σ² = Σ(x − x̄)²/n &nbsp;&nbsp; (population) &nbsp;&nbsp; s² = Σ(x − x̄)²/(n−1) &nbsp; (sample)<br>
+            Standard deviation: σ = √(variance)<br>
+            IQR = Q3 − Q1 &nbsp;&nbsp; Coefficient of variation: CV = (σ/x̄) × 100%
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Find SD</div>
+              <p>Data: 2, 4, 4, 4, 5, 5, 7, 9</p>
+              <p class="soln">x̄ = 5. Deviations²: 9,1,1,1,0,0,4,16. σ² = 32/8 = 4. σ = 2.</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Box Plots & Five Number Summary</h3>
+          <div class="formula-box">Min, Q1, Median (Q2), Q3, Max. IQR = Q3 − Q1. Outlier: &lt; Q1−1.5×IQR or &gt; Q3+1.5×IQR</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="probability" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🎲</span><h2>Probability</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            P(A) = favourable outcomes / total equally likely outcomes &nbsp;&nbsp; 0 ≤ P(A) ≤ 1<br>
+            P(A∪B) = P(A) + P(B) − P(A∩B) &nbsp; (Addition law)<br>
+            P(A∩B) = P(A) × P(B|A) &nbsp; (Multiplication law)<br>
+            P(A|B) = P(A∩B)/P(B) &nbsp; (Conditional probability)<br>
+            Independent events: P(A∩B) = P(A)×P(B)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Two dice</div>
+              <p>P(sum = 7) when rolling two dice?</p>
+              <p class="soln">Favourable outcomes: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6.</p></div>
+            <div class="example-card"><div class="example-label">Example — Bayes' Theorem</div>
+              <p>Disease test: P(+|Disease) = 0.99, P(+|No disease) = 0.05, P(Disease) = 0.01. Find P(Disease|+).</p>
+              <p class="soln">P(+) = 0.99×0.01 + 0.05×0.99 = 0.0594. P(D|+) = 0.0099/0.0594 ≈ 0.167.</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Permutations & Combinations</h3>
+          <div class="formula-box">
+            Permutations (ordered): P(n,r) = n!/(n−r)!<br>
+            Combinations (unordered): C(n,r) = n!/[r!(n−r)!]
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — How many ways to choose 3 from 8?</div>
+              <p class="soln">C(8,3) = 56</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="distributions" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📉</span><h2>Probability Distributions</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
+      <div class="section-body">
+        <div class="sub"><h3>Binomial Distribution</h3>
+          <div class="formula-box">P(X=r) = C(n,r) pʳ (1−p)ⁿ⁻ʳ &nbsp;&nbsp; Mean = np &nbsp;&nbsp; Variance = np(1−p)</div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Fair coin tossed 10 times. P(exactly 6 heads)?</div>
+              <p class="soln">P = C(10,6)(0.5)⁶(0.5)⁴ = 210 × (0.5)¹⁰ = 210/1024 ≈ 0.205</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Normal Distribution N(μ, σ²)</h3>
+          <div class="formula-box highlight">
+            f(x) = (1/σ√(2π)) e^(−(x−μ)²/2σ²)<br>
+            Standardise: Z = (X − μ)/σ &nbsp;&nbsp; (Z ~ N(0,1))<br>
+            68−95−99.7 rule: 1σ, 2σ, 3σ from mean
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Heights N(170, 9). P(height &gt; 173)?</div>
+              <p class="soln">Z = (173−170)/3 = 1. P(Z &gt; 1) = 1 − Φ(1) = 1 − 0.8413 = 0.1587 ≈ 15.87%</p></div>
+          </div>
+        </div>
+        <div class="sub"><h3>Poisson Distribution</h3>
+          <div class="formula-box">P(X=k) = e^(−λ) λᵏ/k! &nbsp;&nbsp; Mean = Variance = λ</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hypothesis" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔬</span><h2>Hypothesis Testing</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Steps in Hypothesis Testing</h3>
+          <ol class="sub">
+            <li>State H₀ (null hypothesis) and H₁ (alternative hypothesis)</li>
+            <li>Choose significance level α (typically 0.05)</li>
+            <li>Calculate test statistic</li>
+            <li>Find p-value or compare with critical value</li>
+            <li>Reject H₀ if p &lt; α, otherwise fail to reject</li>
+          </ol>
+          <div class="formula-box">
+            One-sample z-test: Z = (x̄ − μ₀) / (σ/√n)<br>
+            One-sample t-test: T = (x̄ − μ₀) / (s/√n) &nbsp; ~t(n−1)<br>
+            Chi-square test: χ² = Σ (O−E)²/E
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regression" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📐</span><h2>Regression & Correlation</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            Pearson correlation: r = Σ(xᵢ−x̄)(yᵢ−ȳ) / [√Σ(xᵢ−x̄)² × √Σ(yᵢ−ȳ)²] &nbsp; (−1 ≤ r ≤ 1)<br>
+            Simple linear regression: y = a + bx<br>
+            b = Σ(xᵢ−x̄)(yᵢ−ȳ)/Σ(xᵢ−x̄)² &nbsp;&nbsp; a = ȳ − bx̄
+          </div>
+          <div class="callout tip"><span class="callout-icon">💡</span><span>r = ±1 perfect linear, r = 0 no linear correlation. Correlation ≠ causation!</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="conics.html" class="topic-nav-btn prev">← Conics</a>
+      <a href="differentiation.html" class="topic-nav-btn next">Differentiation →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

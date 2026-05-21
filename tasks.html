@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Problems | Ronny Best Mathematics</title>
+    <title>Practice Problems | BestRonny Mathematics</title>
     <meta name="description" content="Practice differentiation, integration, matrices, vectors and more with step-by-step solutions. Free interactive math problems for high school and university students.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bestronny.netlify.app/tasks.html">
+    <link rel="icon" type="image/png" href="IMAGES/P2.png">
 
-    <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+            options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
+            startup: { typeset: false }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script defer src="shared.js"></script>
 
     <link rel="stylesheet" href="tasks.css">
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="shared.js"></script>
+
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:#fff9f3;color:#2e1a0c;line-height:1.7}
+        header{background:linear-gradient(160deg,#4a2508 0%,#1a3d6e 100%);color:#fff}
+        .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px}
+        .site-logo{font-family:Georgia,serif;font-size:1.25rem;font-weight:700;color:#ffe4c4;text-decoration:none}
+        .hero-block{text-align:center;padding:3rem 1.5rem 3.5rem}
+        .hero-block h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:#ffe4c4;font-family:Georgia,serif}
+    </style>
 </head>
 <body>
 
 <header>
     <div class="header-inner">
-        <a href="/" class="site-logo">Ronny Best <span>∑</span></a>
-        <nav class="header-nav">
-            <a href="/">Home</a>
+        <a href="index.html" class="site-logo">BestRonny <span>∑</span></a>
+        <nav class="header-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
             <a href="main.html">Lessons</a>
-            <a href="tasks.html" class="active">Practice</a>
+            <a href="tasks.html" class="active" aria-current="page">Practice</a>
             <a href="about.html">About</a>
             <a href="contact.html" class="nav-cta">Contact</a>
         </nav>
@@ -38,21 +64,10 @@
 
 <div class="page-wrap">
 
-    <!-- Ad slot — top leaderboard -->
-    <div class="ad-slot ad-top" aria-label="Advertisement">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="1111111111"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <!-- Intro -->
     <section class="card intro-card">
         <h2>What You Can Do Here</h2>
-        <p>This platform helps you practice and master mathematics through generated problems, instant answer checking, and detailed step-by-step solutions. Topics range from high school to university level.</p>
+        <p>Practice and master mathematics through generated problems, instant answer checking, and detailed step-by-step solutions. Topics range from high school to university level.</p>
         <div class="feature-grid">
             <div class="feature-item"><i class="fas fa-random" aria-hidden="true"></i><span>Generated problems with every click</span></div>
             <div class="feature-item"><i class="fas fa-list-ol" aria-hidden="true"></i><span>Full step-by-step solutions</span></div>
@@ -62,7 +77,7 @@
     </section>
 
     <!-- Sample problems -->
-    <section class="card">
+    <section class="card" id="samples-section">
         <h2>Sample Problems</h2>
         <div class="samples-grid">
             <div class="problem-card">
@@ -86,24 +101,13 @@
             </div>
             <div class="problem-card">
                 <h3><i class="fas fa-th" aria-hidden="true"></i> Matrices</h3>
-                <p>Find \( \det\begin{pmatrix}1&2\\3&5\end{pmatrix} \)</p>
+                <p>Find \( \det\begin{pmatrix}1&amp;2\\3&amp;5\end{pmatrix} \)</p>
                 <div class="solution">
                     <strong>Answer:</strong> \( (1)(5) - (2)(3) = 5 - 6 = -1 \)
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Ad slot — mid-page rectangle -->
-    <div class="ad-slot" aria-label="Advertisement">
-        <ins class="adsbygoogle"
-             style="display:block;text-align:center"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="2222222222"
-             data-ad-format="rectangle"
-             data-full-width-responsive="false"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
 
     <!-- Practice generator -->
     <section class="card practice-section" id="try">
@@ -130,7 +134,7 @@
         <div id="taskDisplay" class="math-display" aria-live="polite"></div>
 
         <div class="answer-row" id="answerRow" style="display:none">
-            <input type="text" id="answerInput" placeholder="Enter your answer…" autocomplete="off">
+            <input type="text" id="answerInput" placeholder="Enter your answer…" autocomplete="off" aria-label="Your answer">
             <button id="submitAnswer" class="btn btn-accent">
                 <i class="fas fa-paper-plane" aria-hidden="true"></i> Check
             </button>
@@ -143,8 +147,11 @@
     <!-- Free question -->
     <section class="card">
         <h2><i class="fas fa-keyboard" aria-hidden="true"></i> Ask Any Math Question</h2>
-        <p class="section-hint">Type any maths question in plain English or using standard notation. Powered by AI for detailed solutions.</p>
-        <textarea id="freeQuestion" placeholder="e.g. Differentiate y = 3x² + 5x · cos(x) using the product rule" rows="3"></textarea>
+        <p class="section-hint">Type any maths question in plain English or using standard notation.</p>
+        <textarea id="freeQuestion"
+                  placeholder="e.g. Differentiate y = 3x² + 5x · cos(x) using the product rule"
+                  rows="3"
+                  aria-label="Your math question"></textarea>
         <button id="solveFreeQuestion" class="btn btn-primary">
             <i class="fas fa-brain" aria-hidden="true"></i> Solve
         </button>
@@ -152,21 +159,10 @@
         <div id="freeSteps"></div>
     </section>
 
-    <!-- Ad slot — before scanner -->
-    <div class="ad-slot" aria-label="Advertisement">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="3333333333"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <!-- Image scanner -->
     <section class="card scanner-section">
         <h2><i class="fas fa-camera-retro" aria-hidden="true"></i> Scan a Question</h2>
-        <p class="section-hint">Upload or photograph a printed or handwritten math problem and get an instant solution.</p>
+        <p class="section-hint">Upload a photo of a printed or handwritten math problem and get an instant solution.</p>
 
         <label class="file-label" for="imageInput">
             <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
@@ -184,19 +180,32 @@
         <div id="userSolution" class="math-display"></div>
     </section>
 
-</div>
+</div><!-- /.page-wrap -->
 
 <footer>
     <p>
-        <a href="/">Home</a> &middot;
+        <a href="index.html">Home</a> &middot;
         <a href="main.html">Lessons</a> &middot;
         <a href="about.html">About</a> &middot;
         <a href="contact.html">Contact</a> &middot;
         <a href="privacy.html">Privacy Policy</a>
     </p>
-    <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+    <p>&copy; 2025 BestRonny Mathematics &mdash; Free Maths Education for Everyone</p>
 </footer>
 
-<script src="tasks.js"></script>
+<script defer src="tasks.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+            MathJax.typesetPromise([document.getElementById('samples-section')]).catch(function () {});
+        } else {
+            document.addEventListener('mathjax-ready', function () {
+                MathJax.typesetPromise([document.getElementById('samples-section')]).catch(function () {});
+            });
+        }
+    });
+</script>
+
 </body>
 </html>

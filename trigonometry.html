@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigonometry | Ronny Best Mathematics</title>
+  <meta name="description" content="From right triangles to Fourier series — complete guide">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">📐</span>
+  <h1>Trigonometry</h1>
+  <p class="hero-sub">From right triangles to Fourier series — complete guide</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Beginner</span> <span class="level-pill pill-secondary">Secondary</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Trigonometry</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Beginner</li>
+      <li><a href="#basic-ratios">Basic Ratios</a></li>
+      <li><a href="#unit-circle">Unit Circle</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#identities">Identities</a></li>
+      <li><a href="#sine-cosine-rules">Sine & Cosine Rules</a></li>
+      <li><a href="#compound-angles">Compound Angles</a></li>
+      <li><a href="#graphs">Trig Graphs</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#inverse-trig">Inverse Functions</a></li>
+      <li><a href="#complex-trig">Complex & Hyperbolic</a></li>
+      <li><a href="#fourier">Fourier Series</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="basic-ratios" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">📐</span>
+        <h2>Basic Trigonometric Ratios</h2>
+        <span class="level-badge badge-primary">Primary / Beginner</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>What is Trigonometry?</h3>
+          <p>Trigonometry studies relationships between angles and side lengths in triangles. The word comes from Greek: <em>trigonon</em> (triangle) + <em>metron</em> (measure).</p>
+          <div class="callout tip"><span class="callout-icon">💡</span><span><strong>Real-world uses:</strong> architects measuring roof angles, pilots navigating, GPS systems calculating distances, engineers designing bridges.</span></div>
+        </div>
+        <div class="sub">
+          <h3>The Right-Angled Triangle</h3>
+          <p>In a right-angled triangle with an acute angle θ:</p>
+          <ul>
+            <li><strong>Hypotenuse (H):</strong> longest side, always opposite the right angle</li>
+            <li><strong>Opposite (O):</strong> side directly across from angle θ</li>
+            <li><strong>Adjacent (A):</strong> side next to angle θ (not the hypotenuse)</li>
+          </ul>
+          <div class="callout note"><span class="callout-icon">📝</span><span>Memory trick: <strong>SOH CAH TOA</strong></span></div>
+          <div class="formula-box">
+            sin θ = Opposite / Hypotenuse &nbsp;&nbsp; (SOH)<br>
+            cos θ = Adjacent / Hypotenuse &nbsp;&nbsp; (CAH)<br>
+            tan θ = Opposite / Adjacent &nbsp;&nbsp;&nbsp;&nbsp; (TOA)
+          </div>
+          <h4>Reciprocal Ratios</h4>
+          <div class="formula-box">
+            cosec θ = 1/sin θ &nbsp;&nbsp; sec θ = 1/cos θ &nbsp;&nbsp; cot θ = 1/tan θ
+          </div>
+        </div>
+        <div class="sub">
+          <h4>Worked Examples</h4>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1 — Finding sin</div>
+              <p>A right triangle has opposite = 3, hypotenuse = 5. Find sin θ.</p>
+              <p class="soln">sin θ = 3/5 = 0.6 &nbsp;→&nbsp; θ = arcsin(0.6) ≈ 36.87°</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2 — Finding a side</div>
+              <p>In a right triangle, hypotenuse = 10 cm, θ = 30°. Find the opposite side.</p>
+              <p class="soln">Opposite = H × sin 30° = 10 × 0.5 = 5 cm</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3 — Application</div>
+              <p>A ladder 6 m long leans against a wall at 60° to the ground. How high does it reach?</p>
+              <p class="soln">Height = 6 × sin 60° = 6 × (√3/2) = 3√3 ≈ 5.20 m</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Special Angles</h3>
+          <table class="formula-table">
+            <tr><th>Angle</th><th>sin</th><th>cos</th><th>tan</th></tr>
+            <tr><td>0°</th><td>0</th><td>1</th><td>0</th></tr>
+            <tr><td>30°</th><td>1/2</th><td>√3/2</th><td>1/√3</th></tr>
+            <tr><td>45°</th><td>√2/2</th><td>√2/2</th><td>1</th></tr>
+            <tr><td>60°</th><td>√3/2</th><td>1/2</th><td>√3</th></tr>
+            <tr><td>90°</th><td>1</th><td>0</th><td>undefined</th></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="unit-circle" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">⭕</span>
+        <h2>The Unit Circle</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Definition</h3>
+          <p>The unit circle is a circle of radius 1 centred at the origin. For any angle θ measured anticlockwise from the positive x-axis, the point on the circle is <strong>(cos θ, sin θ)</strong>.</p>
+          <div class="formula-box">
+            cos θ = x-coordinate &nbsp;&nbsp; sin θ = y-coordinate &nbsp;&nbsp; x² + y² = 1
+          </div>
+        </div>
+        <div class="sub">
+          <h3>CAST Diagram — Signs by Quadrant</h3>
+          <table class="formula-table">
+            <tr><th>Quadrant</th><th>Angle range</th><th>Positive functions</th></tr>
+            <tr><td>I (All)</th><td>0° – 90°</th><td>sin, cos, tan all positive</th></tr>
+            <tr><td>II (Sin)</th><td>90° – 180°</th><td>sin positive only</th></tr>
+            <tr><td>III (Tan)</th><td>180° – 270°</th><td>tan positive only</th></tr>
+            <tr><td>IV (Cos)</th><td>270° – 360°</th><td>cos positive only</th></tr>
+          </table>
+          <div class="callout tip"><span class="callout-icon">💡</span><span>Remember: <strong>"All Students Take Calculus"</strong> → All, Sin, Tan, Cos.</span></div>
+        </div>
+        <div class="sub">
+          <h4>Examples</h4>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1</div>
+              <p>Find sin 150°.</p>
+              <p class="soln">150° is in Quadrant II → sin is positive. sin 150° = sin(180°−150°) = sin 30° = 1/2</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2</div>
+              <p>Find cos 240°.</p>
+              <p class="soln">240° is in Quadrant III → cos is negative. cos 240° = −cos(240°−180°) = −cos 60° = −1/2</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3</div>
+              <p>Find tan 315°.</p>
+              <p class="soln">315° is in Quadrant IV → tan is negative. tan 315° = −tan(360°−315°) = −tan 45° = −1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="identities" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🔗</span>
+        <h2>Trigonometric Identities</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Pythagorean Identities</h3>
+          <div class="formula-box highlight">
+            sin²θ + cos²θ = 1<br>
+            1 + tan²θ = sec²θ<br>
+            1 + cot²θ = cosec²θ
+          </div>
+          <p>These come directly from the Pythagorean theorem applied to the unit circle. Divide the first identity by cos²θ to get the second, by sin²θ for the third.</p>
+        </div>
+        <div class="sub">
+          <h3>Even & Odd Properties</h3>
+          <div class="formula-box">
+            sin(−θ) = −sin θ &nbsp; (odd) &nbsp;&nbsp; cos(−θ) = cos θ &nbsp; (even) &nbsp;&nbsp; tan(−θ) = −tan θ &nbsp; (odd)
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Co-function Identities</h3>
+          <div class="formula-box">
+            sin(90°−θ) = cos θ &nbsp;&nbsp; cos(90°−θ) = sin θ &nbsp;&nbsp; tan(90°−θ) = cot θ
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1 — Prove identity</div>
+              <p>Prove: (sin²θ − cos²θ) = 1 − 2cos²θ</p>
+              <p class="soln">LHS = sin²θ − cos²θ = (1 − cos²θ) − cos²θ = 1 − 2cos²θ = RHS ✓</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2</div>
+              <p>If sin θ = 5/13, find cos θ and tan θ (θ in Q1).</p>
+              <p class="soln">cos θ = √(1 − 25/169) = √(144/169) = 12/13. &nbsp; tan θ = (5/13)/(12/13) = 5/12</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 3 — Simplify</div>
+              <p>Simplify: (1 − sin²θ)/cos²θ</p>
+              <p class="soln">= cos²θ/cos²θ = 1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sine-cosine-rules" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">△</span>
+        <h2>Sine Rule & Cosine Rule</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Sine Rule</h3>
+          <p>Applies to <em>any</em> triangle. Use when you know: (i) two angles and one side, or (ii) two sides and a non-included angle.</p>
+          <div class="formula-box highlight">
+            a/sin A = b/sin B = c/sin C = 2R &nbsp; (R = circumradius)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1</div>
+              <p>Triangle ABC: a = 7, A = 30°, B = 45°. Find b.</p>
+              <p class="soln">b = a sin B / sin A = 7 × sin 45° / sin 30° = 7 × (√2/2) / (1/2) = 7√2 ≈ 9.90</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Cosine Rule</h3>
+          <p>Use when you know: (i) two sides and the included angle (SAS), or (ii) all three sides (SSS).</p>
+          <div class="formula-box">
+            a² = b² + c² − 2bc cos A &nbsp;&nbsp;&nbsp; cos A = (b² + c² − a²) / (2bc)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example 1 — SAS</div>
+              <p>b = 5, c = 7, A = 60°. Find a.</p>
+              <p class="soln">a² = 25 + 49 − 2(5)(7)cos 60° = 74 − 35 = 39 → a = √39 ≈ 6.24</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example 2 — Area</div>
+              <p>Find area of triangle with a = 5, b = 6, c = 7.</p>
+              <p class="soln">s = 9, Area = √[9×4×3×2] = √216 ≈ 14.70</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Area of a Triangle</h3>
+          <div class="formula-box">
+            Area = ½ ab sin C = ½ bc sin A = ½ ca sin B<br>
+            Heron's formula: Area = √[s(s−a)(s−b)(s−c)], where s = (a+b+c)/2
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compound-angles" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">➕</span>
+        <h2>Compound & Multiple Angle Formulas</h2>
+        <span class="level-badge badge-secondary">Secondary / A-Level</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Addition Formulas</h3>
+          <div class="formula-box">
+            sin(A ± B) = sin A cos B ± cos A sin B<br>
+            cos(A ± B) = cos A cos B ∓ sin A sin B<br>
+            tan(A ± B) = (tan A ± tan B) / (1 ∓ tan A tan B)
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Double Angle Formulas</h3>
+          <div class="formula-box">
+            sin 2A = 2 sin A cos A<br>
+            cos 2A = cos²A − sin²A = 2cos²A − 1 = 1 − 2sin²A<br>
+            tan 2A = 2 tan A / (1 − tan²A)
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Half-Angle Formulas</h3>
+          <div class="formula-box">
+            sin(A/2) = ±√[(1−cos A)/2] &nbsp;&nbsp; cos(A/2) = ±√[(1+cos A)/2]<br>
+            tan(A/2) = (1−cos A)/sin A = sin A/(1+cos A)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — sin 75°</div>
+              <p>Find sin 75° = sin(45° + 30°)</p>
+              <p class="soln">= sin45°cos30° + cos45°sin30° = (√2/2)(√3/2) + (√2/2)(1/2) = (√6+√2)/4 ≈ 0.9659</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — Double angle</div>
+              <p>If sin θ = 3/5, find sin 2θ and cos 2θ.</p>
+              <p class="soln">cos θ = 4/5 → sin 2θ = 2(3/5)(4/5) = 24/25. cos 2θ = (4/5)²−(3/5)² = 7/25</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Product-to-Sum & Sum-to-Product</h3>
+          <div class="formula-box">
+            sin A + sin B = 2 sin[(A+B)/2] cos[(A−B)/2]<br>
+            sin A − sin B = 2 cos[(A+B)/2] sin[(A−B)/2]<br>
+            cos A + cos B = 2 cos[(A+B)/2] cos[(A−B)/2]<br>
+            cos A − cos B = −2 sin[(A+B)/2] sin[(A−B)/2]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="graphs" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">📈</span>
+        <h2>Trigonometric Graphs & Transformations</h2>
+        <span class="level-badge badge-secondary">Secondary</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Key Properties of y = a sin(bx + c) + d</h3>
+          <table class="formula-table">
+            <tr><th>Parameter</th><th>Effect</th></tr>
+            <tr><td>a (amplitude)</th><td>Stretches vertically; max = a, min = −a</th></tr>
+            <tr><td>b (frequency)</th><td>Period = 2π/b</th></tr>
+            <tr><td>c (phase shift)</th><td>Horizontal shift of −c/b</th></tr>
+            <tr><td>d (vertical shift)</th><td>Moves graph up/down by d</th></tr>
+          </table>
+        </div>
+        <div class="sub">
+          <h3>Graph Sketching Steps</h3>
+          <ol class="sub"><li>Identify amplitude, period, phase shift, vertical shift</li><li>Mark key points at 0, T/4, T/2, 3T/4, T</li><li>Plot and join with smooth curve</li></ol>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Describe y = 3sin(2x − π/6) + 1</div>
+              <p>Find amplitude, period, phase shift, vertical shift.</p>
+              <p class="soln">a=3, b=2, c=−π/6, d=1. Amplitude=3, Period=π, Phase shift=π/12 right, Vertical shift=1 up.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Solving Trig Equations</h3>
+          <p>General solutions:</p>
+          <div class="formula-box">
+            sin x = k &nbsp;→&nbsp; x = arcsin(k) + 2nπ &nbsp; or &nbsp; x = π − arcsin(k) + 2nπ<br>
+            cos x = k &nbsp;→&nbsp; x = ±arccos(k) + 2nπ<br>
+            tan x = k &nbsp;→&nbsp; x = arctan(k) + nπ
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Solve 2sin x − 1 = 0 for 0° ≤ x ≤ 360°</div>
+              <p class="soln">sin x = 1/2 → x = 30° or x = 150°</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — Solve cos 2x = √3/2 for 0 ≤ x ≤ 2π</div>
+              <p class="soln">2x = π/6, 11π/6, 2π+π/6, 2π+11π/6 → x = π/12, 11π/12, 13π/12, 23π/12</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inverse-trig" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🔄</span>
+        <h2>Inverse Trigonometric Functions</h2>
+        <span class="level-badge badge-uni">University</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Definitions & Domains</h3>
+          <table class="formula-table">
+            <tr><th>Function</th><th>Domain</th><th>Range</th></tr>
+            <tr><td>arcsin x</th><td>[−1, 1]</th><td>[−π/2, π/2]</th></tr>
+            <tr><td>arccos x</th><td>[−1, 1]</th><td>[0, π]</th></tr>
+            <tr><td>arctan x</th><td>(−∞, ∞)</th><td>(−π/2, π/2)</th></tr>
+          </table>
+        </div>
+        <div class="sub">
+          <h3>Derivatives of Inverse Trig Functions</h3>
+          <div class="formula-box">
+            d/dx(arcsin x) = 1/√(1−x²) &nbsp;&nbsp; d/dx(arccos x) = −1/√(1−x²)<br>
+            d/dx(arctan x) = 1/(1+x²) &nbsp;&nbsp; d/dx(arccot x) = −1/(1+x²)<br>
+            d/dx(arcsec x) = 1/(|x|√(x²−1)) &nbsp;&nbsp; d/dx(arccsc x) = −1/(|x|√(x²−1))
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Integration Results</h3>
+          <div class="formula-box">
+            ∫ 1/√(1−x²) dx = arcsin x + C<br>
+            ∫ 1/(1+x²) dx = arctan x + C<br>
+            ∫ 1/(a²+x²) dx = (1/a) arctan(x/a) + C<br>
+            ∫ 1/√(a²−x²) dx = arcsin(x/a) + C
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Differentiate y = arctan(3x)</div>
+              <p class="soln">dy/dx = 3/(1+(3x)²) = 3/(1+9x²)</p>
+            </div>
+            <div class="example-card">
+              <div class="example-label">Example — Evaluate ∫₀¹ 1/(1+x²) dx</div>
+              <p class="soln">= [arctan x]₀¹ = arctan 1 − arctan 0 = π/4 − 0 = π/4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="complex-trig" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🌀</span>
+        <h2>Complex Exponentials & Hyperbolic Functions</h2>
+        <span class="level-badge badge-uni">University</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Euler's Formula</h3>
+          <div class="formula-box highlight">
+            e^(iθ) = cos θ + i sin θ &nbsp;&nbsp;&nbsp;&nbsp; e^(−iθ) = cos θ − i sin θ<br>
+            cos θ = (e^(iθ) + e^(−iθ)) / 2 &nbsp;&nbsp; sin θ = (e^(iθ) − e^(−iθ)) / (2i)
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Hyperbolic Functions</h3>
+          <div class="formula-box">
+            sinh x = (eˣ − e⁻ˣ)/2 &nbsp;&nbsp; cosh x = (eˣ + e⁻ˣ)/2 &nbsp;&nbsp; tanh x = sinh x/cosh x<br>
+            cosh²x − sinh²x = 1
+          </div>
+        </div>
+        <div class="sub">
+          <h3>De Moivre's Theorem</h3>
+          <div class="formula-box">
+            (cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)
+          </div>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — nth roots of unity</div>
+              <p>Find the cube roots of 1 (i.e., z³ = 1).</p>
+              <p class="soln">z = e^(2πki/3) for k = 0,1,2 → z = 1, e^(2πi/3), e^(4πi/3) = 1, −½+i√3/2, −½−i√3/2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fourier" class="topic-section">
+      <div class="section-header">
+        <span class="sec-icon">🎵</span>
+        <h2>Fourier Series (University)</h2>
+        <span class="level-badge badge-uni">University</span>
+      </div>
+      <div class="section-body">
+        <div class="sub">
+          <h3>Fourier Series Representation</h3>
+          <p>Any periodic function f(x) with period 2L can be written as:</p>
+          <div class="formula-box highlight">
+            f(x) = a₀/2 + Σ[aₙ cos(nπx/L) + bₙ sin(nπx/L)]<br><br>
+            aₙ = (1/L)∫₋ₗᴸ f(x) cos(nπx/L) dx<br>
+            bₙ = (1/L)∫₋ₗᴸ f(x) sin(nπx/L) dx
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Parseval's Theorem</h3>
+          <div class="formula-box">
+            (1/L)∫₋ₗᴸ |f(x)|² dx = a₀²/2 + Σ(aₙ² + bₙ²)
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Applications</h3>
+          <ul>
+            <li>Signal processing and audio compression (MP3, JPEG use Fourier methods)</li>
+            <li>Solving heat equation and wave equation (PDEs)</li>
+            <li>Electrical engineering — AC circuit analysis</li>
+            <li>Quantum mechanics — wavefunction decomposition</li>
+          </ul>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="example-label">Example — Square wave Fourier series</div>
+              <p>f(x) = 1 for 0 &lt; x &lt; π, f(x) = −1 for −π &lt; x &lt; 0</p>
+              <p class="soln">f(x) = (4/π)[sin x + sin(3x)/3 + sin(5x)/5 + ...] = (4/π) Σ sin((2n−1)x)/(2n−1)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="../main.html" class="topic-nav-btn prev">← All Topics</a>
+      <a href="algebra.html" class="topic-nav-btn next">Algebra →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volumes of Solids | Ronny Best Mathematics</title>
+  <meta name="description" content="From simple prisms to volumes of revolution">
+  <link rel="stylesheet" href="topic.css">
+  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../tasks.html">Practice</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="topic-hero">
+  <span class="hero-icon">📦</span>
+  <h1>Volumes of Solids</h1>
+  <p class="hero-sub">From simple prisms to volumes of revolution</p>
+  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+</section>
+
+<div class="breadcrumb">
+  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Volumes of Solids</strong>
+</div>
+
+<div class="topic-wrap">
+  <!-- TOC Sidebar -->
+  <aside class="toc-sidebar">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+
+      <li class="toc-level">Beginner</li>
+      <li><a href="#vol-basic">Basic Formulas</a></li>
+      <li class="toc-level">Secondary</li>
+      <li><a href="#vol-composite">Composite Shapes</a></li>
+      <li><a href="#vol-similar">Similar Solids</a></li>
+      <li class="toc-level">University</li>
+      <li><a href="#vol-calculus">Volumes by Calculus</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="topic-content">
+
+    <section id="vol-basic" class="topic-section">
+      <div class="section-header"><span class="sec-icon">📦</span><h2>Volume Formulas</h2><span class="level-badge badge-primary">Beginner</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <table class="formula-table">
+            <tr><th>Solid</th><th>Formula</th></tr>
+            <tr><td>Cube (side a)</th><td>V = a³</th></tr>
+            <tr><td>Cuboid</th><td>V = l × w × h</th></tr>
+            <tr><td>Cylinder (r, h)</th><td>V = πr²h</th></tr>
+            <tr><td>Sphere (r)</th><td>V = (4/3)πr³</th></tr>
+            <tr><td>Cone (r, h)</th><td>V = (1/3)πr²h</th></tr>
+            <tr><td>Pyramid (base A, height h)</th><td>V = (1/3)Ah</th></tr>
+            <tr><td>Prism</th><td>V = base area × height</th></tr>
+          </table>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example 1</div>
+              <p>Cylinder: r = 5 cm, h = 12 cm</p>
+              <p class="soln">V = π × 25 × 12 = 300π ≈ 942.5 cm³</p></div>
+            <div class="example-card"><div class="example-label">Example 2</div>
+              <p>Sphere: r = 3 cm. Find volume.</p>
+              <p class="soln">V = (4/3)π×27 = 36π ≈ 113.1 cm³</p></div>
+            <div class="example-card"><div class="example-label">Example 3 — Word problem</div>
+              <p>A conical tent has base radius 7 m and height 9 m. Find volume.</p>
+              <p class="soln">V = (1/3)π(49)(9) = 147π ≈ 461.8 m³</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vol-composite" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔲</span><h2>Composite Solids</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <p>For composite solids, add or subtract volumes of individual components.</p>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Cylinder with hemispherical ends</div>
+              <p>Cylinder r=4, h=10; each end is a hemisphere.</p>
+              <p class="soln">V = πr²h + 2×(2/3)πr³ = π×16×10 + (4/3)π×64 = 160π + 256π/3 = (480+256)π/3 = 736π/3 ≈ 770.5 cm³</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vol-similar" class="topic-section">
+      <div class="section-header"><span class="sec-icon">🔄</span><h2>Similar Solids</h2><span class="level-badge badge-secondary">Secondary</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box highlight">
+            If linear scale factor = k:<br>
+            Area scale factor = k² &nbsp;&nbsp; Volume scale factor = k³
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example</div>
+              <p>Two similar cones have radii 3 cm and 6 cm. If smaller has volume 24 cm³, find larger.</p>
+              <p class="soln">k = 6/3 = 2. V = 24 × 2³ = 24 × 8 = 192 cm³</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vol-calculus" class="topic-section">
+      <div class="section-header"><span class="sec-icon">∫∫∫</span><h2>Volumes by Calculus</h2><span class="level-badge badge-uni">University</span></div>
+      <div class="section-body">
+        <div class="sub">
+          <div class="formula-box">
+            Disc method: V = π∫ₐᵇ [f(x)]² dx &nbsp;&nbsp; (rotation about x-axis)<br>
+            Washer method: V = π∫ₐᵇ ([f(x)]² − [g(x)]²) dx<br>
+            Shell method: V = 2π∫ₐᵇ x·f(x) dx &nbsp;&nbsp; (rotation about y-axis)
+          </div>
+          <div class="example-grid">
+            <div class="example-card"><div class="example-label">Example — Derive sphere volume V = (4/3)πr³</div>
+              <p>Rotate y = √(r²−x²) about x-axis from −r to r.</p>
+              <p class="soln">V = π∫₋ᵣʳ (r²−x²)dx = π[r²x − x³/3]₋ᵣʳ = π(2r³ − 2r³/3) = (4/3)πr³ ✓</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prev / Next navigation -->
+    <div class="topic-nav">
+      <a href="areas.html" class="topic-nav-btn prev">← Areas</a>
+      <a href="limits.html" class="topic-nav-btn next">Limits →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../tasks.html">Practice</a> &middot;
+    <a href="../about.html">About</a> &middot;
+    <a href="../privacy.html">Privacy Policy</a> &middot;
+    <a href="../terms.html">Terms</a>
+  </p>
+  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+</footer>
+<script src="../shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Track topic view
+  if (typeof MathProgress !== 'undefined') {
+    const title = document.querySelector('.topic-hero h1');
+    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
+  }
+  // TOC active state on scroll
+  const sections = document.querySelectorAll('.topic-section');
+  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+</body>
+</html>
