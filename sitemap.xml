@@ -4,7 +4,7 @@
   ============================================================
   Sitemap — Ronny Best Mathematics
   https://bestronny.netlify.app
-  Last updated: 2026-05-20
+  Last updated: 2026-05-22
   Generated for: Google Search Console, Bing Webmaster Tools
   ============================================================
 -->
@@ -18,7 +18,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://bestronny.netlify.app/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -26,7 +26,7 @@
   <!-- Math Lessons Hub -->
   <url>
     <loc>https://bestronny.netlify.app/main.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -34,7 +34,7 @@
   <!-- Practice Problems -->
   <url>
     <loc>https://bestronny.netlify.app/tasks.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -42,7 +42,7 @@
   <!-- Brain Games -->
   <url>
     <loc>https://bestronny.netlify.app/mind.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -52,7 +52,7 @@
   <!-- Algebra -->
   <url>
     <loc>https://bestronny.netlify.app/algebra.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -60,7 +60,7 @@
   <!-- Trigonometry -->
   <url>
     <loc>https://bestronny.netlify.app/trigonometry.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -68,7 +68,7 @@
   <!-- Differentiation -->
   <url>
     <loc>https://bestronny.netlify.app/differentiation.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -76,7 +76,7 @@
   <!-- Integration -->
   <url>
     <loc>https://bestronny.netlify.app/integration.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -84,7 +84,7 @@
   <!-- Statistics -->
   <url>
     <loc>https://bestronny.netlify.app/statistics.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -92,7 +92,7 @@
   <!-- Limits -->
   <url>
     <loc>https://bestronny.netlify.app/limits.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -100,7 +100,7 @@
   <!-- Vectors -->
   <url>
     <loc>https://bestronny.netlify.app/vectors.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -108,7 +108,7 @@
   <!-- Matrices -->
   <url>
     <loc>https://bestronny.netlify.app/matrices.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -116,7 +116,7 @@
   <!-- Conic Sections -->
   <url>
     <loc>https://bestronny.netlify.app/conics.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -124,7 +124,7 @@
   <!-- Sequences & Series -->
   <url>
     <loc>https://bestronny.netlify.app/sequences.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -132,7 +132,7 @@
   <!-- Complex Numbers -->
   <url>
     <loc>https://bestronny.netlify.app/complex.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -140,7 +140,7 @@
   <!-- Areas Under Curves -->
   <url>
     <loc>https://bestronny.netlify.app/areas.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -148,7 +148,7 @@
   <!-- Volumes of Revolution -->
   <url>
     <loc>https://bestronny.netlify.app/volumes.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -158,7 +158,7 @@
   <!-- Learning Progress -->
   <url>
     <loc>https://bestronny.netlify.app/progress.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -166,7 +166,7 @@
   <!-- Achievements -->
   <url>
     <loc>https://bestronny.netlify.app/achievements.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -176,7 +176,7 @@
   <!-- About -->
   <url>
     <loc>https://bestronny.netlify.app/about.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
@@ -184,7 +184,7 @@
   <!-- Contact -->
   <url>
     <loc>https://bestronny.netlify.app/contact.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
@@ -192,7 +192,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://bestronny.netlify.app/privacy.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
@@ -200,7 +200,7 @@
   <!-- Terms & Conditions -->
   <url>
     <loc>https://bestronny.netlify.app/terms.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
