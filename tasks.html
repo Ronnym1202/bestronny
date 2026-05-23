@@ -1,211 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Problems | BestRonny Mathematics</title>
-    <meta name="description" content="Practice differentiation, integration, matrices, vectors and more with step-by-step solutions. Free interactive math problems for high school and university students.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bestronny.netlify.app/tasks.html">
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Practice Problems | Ronny Best Mathematics</title>
+  <meta name="description" content="Free interactive mathematics practice problems with step-by-step solutions. Covering differentiation, integration, matrices, vectors, statistics and more for high school and university students.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="math practice problems, differentiation problems, integration exercises, matrices practice, step by step solutions, free math problems">
+  <meta property="og:title" content="Math Practice Problems | Ronny Best Mathematics">
+  <meta property="og:description" content="Free interactive mathematics practice problems with instant step-by-step solutions for high school and university students.">
+  <meta property="og:url" content="https://bestronny.netlify.app/tasks.html">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://bestronny.netlify.app/tasks.html">
+  <link rel="icon" type="image/png" href="IMAGES/P2.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="preload" as="style"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
-    <script>
-        window.MathJax = {
-            tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
-            options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
-            startup: { typeset: false }
-        };
-    </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <script defer src="shared.js"></script>
-
-    <link rel="stylesheet" href="tasks.css">
-
-    <style>
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:#fff9f3;color:#2e1a0c;line-height:1.7}
-        header{background:linear-gradient(160deg,#4a2508 0%,#1a3d6e 100%);color:#fff}
-        .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px}
-        .site-logo{font-family:Georgia,serif;font-size:1.25rem;font-weight:700;color:#ffe4c4;text-decoration:none}
-        .hero-block{text-align:center;padding:3rem 1.5rem 3.5rem}
-        .hero-block h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:#ffe4c4;font-family:Georgia,serif}
-    </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
+      startup: { typeset: false }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="shared.js"></script>
+  <link rel="stylesheet" href="tasks.css">
 </head>
 <body>
 
+<!-- ═══════════════════════ HEADER (matches main.html exactly) ═══════════════════════ -->
 <header>
-    <div class="header-inner">
-        <a href="index.html" class="site-logo">BestRonny <span>∑</span></a>
-        <nav class="header-nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="main.html">Lessons</a>
-            <a href="tasks.html" class="active" aria-current="page">Practice</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
-    </div>
-    <div class="hero-block">
-        <h1>Advanced Math Practice</h1>
-        <p>Generate problems · Check answers · Learn step by step</p>
-        <div id="welcomeMessage"></div>
-    </div>
+  <a href="index.html" class="logo">Ronny Best <span class="logo-sigma">Σ</span></a>
+
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="main.html">Lessons</a></li>
+      <li><a href="tasks.html" aria-current="page" class="nav-active">Practice</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="contact.html" class="nav-contact-btn">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<div class="page-wrap">
+<!-- ═══════════════════════ HERO (matches main.html style) ═══════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-badges">
+      <span class="hero-badge badge-secondary">Secondary</span>
+      <span class="hero-badge badge-alevel">A-Level</span>
+      <span class="hero-badge badge-uni">University</span>
+    </div>
+    <h1 id="hero-heading">Practice Problems</h1>
+    <p class="hero-subtitle">Generate problems · Check answers · Learn step by step · Ask anything</p>
+    <div id="welcomeMessage"></div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">13</div><div class="stat-label">Topics</div></div>
+      <div class="stat"><div class="stat-num">80+</div><div class="stat-label">Problem Types</div></div>
+      <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Generated Problems</div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Intro -->
-    <section class="card intro-card">
-        <h2>What You Can Do Here</h2>
-        <p>Practice and master mathematics through generated problems, instant answer checking, and detailed step-by-step solutions. Topics range from high school to university level.</p>
-        <div class="feature-grid">
-            <div class="feature-item"><i class="fas fa-random" aria-hidden="true"></i><span>Generated problems with every click</span></div>
-            <div class="feature-item"><i class="fas fa-list-ol" aria-hidden="true"></i><span>Full step-by-step solutions</span></div>
-            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i><span>Instant answer feedback</span></div>
-            <div class="feature-item"><i class="fas fa-camera" aria-hidden="true"></i><span>Photo scanner for your own problems</span></div>
-        </div>
+<!-- ═══════════════════════ BREADCRUMB ═══════════════════════ -->
+<div class="breadcrumb-bar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+    <a href="main.html">Math Lessons</a>
+    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+    <span class="breadcrumb-current">Practice</span>
+  </nav>
+</div>
+
+<!-- ═══════════════════════ MAIN LAYOUT ═══════════════════════ -->
+<main id="main-content">
+<div class="page-body">
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar" aria-label="Practice sections">
+    <div class="contents-panel">
+      <div class="contents-panel-head">
+        <span class="contents-label">Contents</span>
+      </div>
+      <div class="contents-group">
+        <div class="contents-group-label">Overview</div>
+        <a class="contents-link" href="#about-practice">How to Use</a>
+        <a class="contents-link" href="#topics-covered">Topics Covered</a>
+        <a class="contents-link" href="#samples-section">Sample Problems</a>
+      </div>
+      <div class="contents-group" style="border-top:1px solid var(--cream-200);">
+        <div class="contents-group-label">Practice Tools</div>
+        <a class="contents-link" href="#try">Generate a Problem</a>
+        <a class="contents-link" href="#ask-section">Ask a Question</a>
+        <a class="contents-link" href="#scan-section">Scan an Image</a>
+      </div>
+      <div class="contents-group" style="border-top:1px solid var(--cream-200);">
+        <div class="contents-group-label">Study Tips</div>
+        <a class="contents-link" href="#how-it-works">How to Study</a>
+        <a class="contents-link" href="#exam-tips">Common Mistakes</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══ CONTENT AREA ═══ -->
+  <div class="content-area">
+
+    <!-- HOW TO USE -->
+    <section class="topic-section" id="about-practice">
+      <div class="section-header">
+        <span class="sec-icon">📖</span>
+        <h2>How to Use This Practice Page</h2>
+        <span class="level-badge badge-all">All Levels</span>
+      </div>
+      <div class="section-body">
+        <p>This practice page is designed to help high school and university students master mathematics through active problem-solving. Unlike passive reading, solving problems yourself is the most effective way to build genuine mathematical understanding and exam confidence.</p>
+        <p>Each time you click <strong>Generate Problem</strong>, a new randomised question is created from a bank of carefully designed problem types. Enter your answer, then click <strong>Check</strong> to see whether you are correct — and a full step-by-step solution is always shown so you can learn from every attempt, right or wrong.</p>
+        <p>You can also type any mathematics question in plain English into the <strong>Ask Any Math Question</strong> box, and our built-in solver will work through it for you with detailed working.</p>
+      </div>
     </section>
 
-    <!-- Sample problems -->
-    <section class="card" id="samples-section">
-        <h2>Sample Problems</h2>
+    <!-- TOPICS COVERED -->
+    <section class="topic-section" id="topics-covered">
+      <div class="section-header">
+        <span class="sec-icon">📚</span>
+        <h2>Topics Covered in This Practice Section</h2>
+        <span class="level-badge badge-all">All Levels</span>
+      </div>
+      <div class="section-body">
+        <p class="section-intro-text">The practice generator covers all 13 core areas of mathematics, from A-Level to first-year university. Each topic includes multiple problem types with fully worked solutions.</p>
+
+        <div class="topics-grid">
+
+          <article class="topic-card" id="topic-differentiation">
+            <div class="topic-icon"><span>d/dx</span></div>
+            <div class="topic-body">
+              <h3>Differentiation</h3>
+              <p>Power rule, product rule, quotient rule, and chain rule. Polynomials, trig, exponentials, and logarithms.</p>
+              <ul class="topic-list">
+                <li>Power rule: d/dx(xⁿ) = nxⁿ⁻¹</li>
+                <li>Product, quotient, and chain rules</li>
+                <li>Trig &amp; exponential derivatives</li>
+                <li>Stationary points &amp; turning points</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-integration">
+            <div class="topic-icon"><span>∫</span></div>
+            <div class="topic-body">
+              <h3>Integration</h3>
+              <p>Indefinite and definite integration, reverse power rule, trig, exponentials, and natural logarithms.</p>
+              <ul class="topic-list">
+                <li>Indefinite integrals &amp; constant of integration</li>
+                <li>Definite integrals &amp; Fundamental Theorem</li>
+                <li>Integration of sin, cos, eˣ, and 1/x</li>
+                <li>Applying limits to evaluate areas</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-matrices">
+            <div class="topic-icon"><span>[ ]</span></div>
+            <div class="topic-body">
+              <h3>Matrices</h3>
+              <p>Determinants, inverses, matrix multiplication, eigenvalues, and transpose operations.</p>
+              <ul class="topic-list">
+                <li>2×2 determinants: det = ad − bc</li>
+                <li>Testing for inverse existence</li>
+                <li>Matrix multiplication &amp; column vectors</li>
+                <li>Eigenvalues &amp; characteristic equations</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-vectors">
+            <div class="topic-icon"><span>→</span></div>
+            <div class="topic-body">
+              <h3>Vectors</h3>
+              <p>Magnitude, dot product, cross product, unit vectors, and angle between vectors in 2D and 3D.</p>
+              <ul class="topic-list">
+                <li>Magnitude: |v| = √(x²+y²+z²)</li>
+                <li>Dot product: a·b = a₁b₁ + a₂b₂ + a₃b₃</li>
+                <li>Perpendicular &amp; parallel vectors</li>
+                <li>Unit vectors &amp; direction</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-algebra">
+            <div class="topic-icon"><span>𝑥</span></div>
+            <div class="topic-body">
+              <h3>Algebra</h3>
+              <p>Linear equations, quadratics, simultaneous equations, inequalities, and factorisation.</p>
+              <ul class="topic-list">
+                <li>Solve ax + b = c</li>
+                <li>Quadratic formula &amp; discriminant</li>
+                <li>Simultaneous equations (2 variables)</li>
+                <li>Linear inequalities</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-trigonometry">
+            <div class="topic-icon"><span>△</span></div>
+            <div class="topic-body">
+              <h3>Trigonometry</h3>
+              <p>Evaluate trig functions, solve trig equations, sine rule, cosine rule, and Pythagoras.</p>
+              <ul class="topic-list">
+                <li>sin, cos, tan, sec, cosec, cot</li>
+                <li>Solve sin(x) = k, cos(x) = k</li>
+                <li>Sine &amp; cosine rules</li>
+                <li>Pythagorean theorem</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-statistics">
+            <div class="topic-icon"><span>σ</span></div>
+            <div class="topic-body">
+              <h3>Statistics</h3>
+              <p>Mean, median, mode, range, standard deviation, probability, and combinatorics.</p>
+              <ul class="topic-list">
+                <li>Mean, median, mode</li>
+                <li>Variance &amp; standard deviation</li>
+                <li>Probability calculations</li>
+                <li>Permutations &amp; combinations</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-sequences">
+            <div class="topic-icon"><span>∑</span></div>
+            <div class="topic-body">
+              <h3>Sequences &amp; Series</h3>
+              <p>Arithmetic and geometric sequences, nth term, sum formulas, and convergence.</p>
+              <ul class="topic-list">
+                <li>Arithmetic: aₙ = a + (n−1)d</li>
+                <li>Geometric: aₙ = arⁿ⁻¹</li>
+                <li>Sum of AP and GP</li>
+                <li>Sum to infinity (|r| &lt; 1)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-complex">
+            <div class="topic-icon"><span>i</span></div>
+            <div class="topic-body">
+              <h3>Complex Numbers</h3>
+              <p>Modulus, argument, conjugate, arithmetic of complex numbers in Cartesian form.</p>
+              <ul class="topic-list">
+                <li>Modulus: |z| = √(a²+b²)</li>
+                <li>Argument: arg(z) = arctan(b/a)</li>
+                <li>Conjugate &amp; division</li>
+                <li>Multiply complex numbers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-limits">
+            <div class="topic-icon"><span>lim</span></div>
+            <div class="topic-body">
+              <h3>Limits</h3>
+              <p>Direct substitution, indeterminate forms, L'Hôpital's rule, and limits at infinity.</p>
+              <ul class="topic-list">
+                <li>Direct substitution</li>
+                <li>0/0 indeterminate — factoring</li>
+                <li>L'Hôpital's rule</li>
+                <li>Limits as x → ∞</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-areas">
+            <div class="topic-icon"><span>□</span></div>
+            <div class="topic-body">
+              <h3>Areas of Shapes</h3>
+              <p>Triangles, circles, trapezoids, sectors, and surface areas of 3D solids.</p>
+              <ul class="topic-list">
+                <li>A = ½ × base × height (triangle)</li>
+                <li>A = πr² (circle)</li>
+                <li>A = ½(a + b) × h (trapezoid)</li>
+                <li>SA = 6s² (cube)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-volumes">
+            <div class="topic-icon"><span>⬡</span></div>
+            <div class="topic-body">
+              <h3>Volumes of Solids</h3>
+              <p>Cylinders, spheres, cones, rectangular boxes, and composite solids.</p>
+              <ul class="topic-list">
+                <li>V = πr²h (cylinder)</li>
+                <li>V = (4/3)πr³ (sphere)</li>
+                <li>V = (1/3)πr²h (cone)</li>
+                <li>V = l × w × h (box)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="topic-card" id="topic-logarithms">
+            <div class="topic-icon"><span>log</span></div>
+            <div class="topic-body">
+              <h3>Logarithms</h3>
+              <p>Logarithm laws, solving log and exponential equations, change of base, and natural log.</p>
+              <ul class="topic-list">
+                <li>log(ab) = log a + log b</li>
+                <li>log(aⁿ) = n log a</li>
+                <li>Solve eˣ = k → x = ln(k)</li>
+                <li>Change-of-base formula</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- /topics-grid -->
+      </div>
+    </section>
+
+    <!-- SAMPLE PROBLEMS -->
+    <section class="topic-section" id="samples-section">
+      <div class="section-header">
+        <span class="sec-icon">📝</span>
+        <h2>Sample Worked Problems</h2>
+        <span class="level-badge badge-secondary">Secondary / A-Level</span>
+      </div>
+      <div class="section-body">
+        <p style="margin-bottom:1rem;color:var(--ink-60);font-size:0.9rem;">Study these fully worked examples before attempting the practice generator.</p>
         <div class="samples-grid">
-            <div class="problem-card">
-                <h3><i class="fas fa-square-root-alt" aria-hidden="true"></i> Differentiation</h3>
-                <p>Find the derivative of \( f(x) = 3x^4 - 2x^2 + 5x - 7 \)</p>
-                <div class="solution">
-                    <strong>Answer:</strong> \( f'(x) = 12x^3 - 4x + 5 \)
-                    <ol>
-                        <li>\( \frac{d}{dx}(3x^4) = 12x^3 \)</li>
-                        <li>\( \frac{d}{dx}(-2x^2) = -4x \)</li>
-                        <li>\( \frac{d}{dx}(5x) = 5 \), \( \frac{d}{dx}(-7) = 0 \)</li>
-                    </ol>
-                </div>
+          <div class="example-card">
+            <div class="example-label">Differentiation</div>
+            <p>Find the derivative of \( f(x) = 3x^4 - 2x^2 + 5x - 7 \)</p>
+            <div class="solution-box">
+              <strong>Answer:</strong> \( f'(x) = 12x^3 - 4x + 5 \)
+              <ol>
+                <li>\( \frac{d}{dx}(3x^4) = 12x^3 \) — power rule</li>
+                <li>\( \frac{d}{dx}(-2x^2) = -4x \)</li>
+                <li>\( \frac{d}{dx}(5x) = 5 \), \( \frac{d}{dx}(-7) = 0 \)</li>
+              </ol>
             </div>
-            <div class="problem-card">
-                <h3><i class="fas fa-infinity" aria-hidden="true"></i> Integration</h3>
-                <p>Evaluate \( \int (2x^3 - 3x + 4)\, dx \)</p>
-                <div class="solution">
-                    <strong>Answer:</strong> \( \tfrac{1}{2}x^4 - \tfrac{3}{2}x^2 + 4x + C \)
-                </div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Integration</div>
+            <p>Evaluate \( \int (2x^3 - 3x + 4)\, dx \)</p>
+            <div class="solution-box">
+              <strong>Answer:</strong> \( \tfrac{1}{2}x^4 - \tfrac{3}{2}x^2 + 4x + C \)
+              <ol>
+                <li>\(\int 2x^3\,dx = \frac{1}{2}x^4\)</li>
+                <li>\(\int -3x\,dx = -\frac{3}{2}x^2\)</li>
+                <li>\(\int 4\,dx = 4x\) — always add \(+ C\)</li>
+              </ol>
             </div>
-            <div class="problem-card">
-                <h3><i class="fas fa-th" aria-hidden="true"></i> Matrices</h3>
-                <p>Find \( \det\begin{pmatrix}1&amp;2\\3&amp;5\end{pmatrix} \)</p>
-                <div class="solution">
-                    <strong>Answer:</strong> \( (1)(5) - (2)(3) = 5 - 6 = -1 \)
-                </div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Matrices</div>
+            <p>Find \( \det\begin{pmatrix}1&amp;2\\3&amp;5\end{pmatrix} \)</p>
+            <div class="solution-box">
+              <strong>Answer:</strong> \( (1)(5) - (2)(3) = 5 - 6 = -1 \)
+              <ol>
+                <li>Formula: det = ad − bc</li>
+                <li>a=1, b=2, c=3, d=5</li>
+                <li>det = (1×5) − (2×3) = −1</li>
+              </ol>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Practice generator -->
-    <section class="card practice-section" id="try">
-        <h2>Try a Problem</h2>
+    <!-- PRACTICE GENERATOR -->
+    <section class="topic-section practice-section" id="try">
+      <div class="section-header">
+        <span class="sec-icon">🎲</span>
+        <h2>Generate a Practice Problem</h2>
+        <span class="level-badge badge-all">All Topics</span>
+      </div>
+      <div class="section-body">
+        <p style="margin-bottom:1.2rem;color:var(--ink-60);font-size:0.9rem;">Select any of the 13 topics, generate a randomised problem, enter your answer, and see the full solution instantly.</p>
 
         <div class="topic-row">
-            <div class="select-wrap">
-                <label for="topicSelect">Choose a topic</label>
-                <select id="topicSelect">
-                    <option value="">— Select topic —</option>
-                    <option value="differentiation">Differentiation</option>
-                    <option value="integration">Integration</option>
-                    <option value="matrices">Matrices</option>
-                    <option value="vectors">Vectors</option>
-                    <option value="areas">Areas of Shapes</option>
-                    <option value="volumes">Volumes of Solids</option>
-                </select>
-            </div>
-            <button id="generateTaskBtn" class="btn btn-primary">
-                <i class="fas fa-dice" aria-hidden="true"></i> Generate Problem
-            </button>
+          <div class="select-wrap">
+            <label for="topicSelect">Choose a topic</label>
+            <select id="topicSelect">
+              <option value="">— Select topic —</option>
+              <optgroup label="Calculus">
+                <option value="differentiation">Differentiation</option>
+                <option value="integration">Integration</option>
+                <option value="limits">Limits &amp; Continuity</option>
+              </optgroup>
+              <optgroup label="Algebra">
+                <option value="algebra">Algebra &amp; Equations</option>
+                <option value="logarithms">Logarithms &amp; Exponentials</option>
+                <option value="sequences">Sequences &amp; Series</option>
+                <option value="complex">Complex Numbers</option>
+              </optgroup>
+              <optgroup label="Geometry">
+                <option value="trigonometry">Trigonometry</option>
+                <option value="areas">Areas of Shapes</option>
+                <option value="volumes">Volumes of Solids</option>
+              </optgroup>
+              <optgroup label="Linear Algebra">
+                <option value="matrices">Matrices</option>
+                <option value="vectors">Vectors</option>
+              </optgroup>
+              <optgroup label="Data">
+                <option value="statistics">Statistics &amp; Probability</option>
+              </optgroup>
+            </select>
+          </div>
+          <button id="generateTaskBtn" class="btn btn-primary">
+            🎲 Generate Problem
+          </button>
         </div>
 
         <div id="taskDisplay" class="math-display" aria-live="polite"></div>
 
         <div class="answer-row" id="answerRow" style="display:none">
-            <input type="text" id="answerInput" placeholder="Enter your answer…" autocomplete="off" aria-label="Your answer">
-            <button id="submitAnswer" class="btn btn-accent">
-                <i class="fas fa-paper-plane" aria-hidden="true"></i> Check
-            </button>
+          <input type="text" id="answerInput" placeholder="Type your answer here…" autocomplete="off" aria-label="Your answer">
+          <button id="submitAnswer" class="btn btn-accent">✔ Check Answer</button>
         </div>
 
         <div id="resultDisplay" aria-live="assertive"></div>
         <div id="solutionSteps" class="math-display solution-display"></div>
+      </div>
     </section>
 
-    <!-- Free question -->
-    <section class="card">
-        <h2><i class="fas fa-keyboard" aria-hidden="true"></i> Ask Any Math Question</h2>
-        <p class="section-hint">Type any maths question in plain English or using standard notation.</p>
+    <!-- FREE QUESTION -->
+    <section class="topic-section" id="ask-section">
+      <div class="section-header">
+        <span class="sec-icon">⌨️</span>
+        <h2>Ask Any Math Question</h2>
+        <span class="level-badge badge-all">All Topics</span>
+      </div>
+      <div class="section-body">
+        <p style="margin-bottom:1rem;color:var(--ink-60);font-size:0.9rem;">Type any mathematics question in plain English or standard notation. Covers all 13 topics — algebra, calculus, trigonometry, statistics, vectors, matrices, complex numbers, and more.</p>
+
+        <div class="ask-examples">
+          <span class="ask-ex-label">Try:</span>
+          <button class="example-pill" onclick="fillQ('Differentiate 3x^3 + 5x^2 - 2x + 7')">Differentiate 3x³ + 5x²</button>
+          <button class="example-pill" onclick="fillQ('Integrate sin(2x) dx')">∫ sin(2x) dx</button>
+          <button class="example-pill" onclick="fillQ('Solve x^2 - 5x + 6 = 0')">Solve x² − 5x + 6</button>
+          <button class="example-pill" onclick="fillQ('Mean of 3, 7, 9, 12, 4')">Mean of dataset</button>
+          <button class="example-pill" onclick="fillQ('Volume of sphere radius 4')">Volume sphere r=4</button>
+          <button class="example-pill" onclick="fillQ('Find the modulus of (3+4i)')">Modulus (3+4i)</button>
+        </div>
+
         <textarea id="freeQuestion"
-                  placeholder="e.g. Differentiate y = 3x² + 5x · cos(x) using the product rule"
-                  rows="3"
+                  placeholder="e.g. 'Differentiate y = 3x² + 5x · cos(x) using the product rule'&#10;or  'Solve the simultaneous equations 2x + 3y = 7 and x - y = 1'&#10;or  'Find the eigenvalues of matrix [[2,1],[1,2]]'"
+                  rows="4"
                   aria-label="Your math question"></textarea>
-        <button id="solveFreeQuestion" class="btn btn-primary">
-            <i class="fas fa-brain" aria-hidden="true"></i> Solve
+        <button id="solveFreeQuestion" class="btn btn-primary" style="margin-top:0.75rem;">
+          🧠 Solve
         </button>
         <div id="freeAnswer" aria-live="polite"></div>
         <div id="freeSteps"></div>
+      </div>
     </section>
 
-    <!-- Image scanner -->
-    <section class="card scanner-section">
-        <h2><i class="fas fa-camera-retro" aria-hidden="true"></i> Scan a Question</h2>
-        <p class="section-hint">Upload a photo of a printed or handwritten math problem and get an instant solution.</p>
+    <!-- IMAGE SCANNER -->
+    <section class="topic-section" id="scan-section">
+      <div class="section-header">
+        <span class="sec-icon">📷</span>
+        <h2>Scan a Handwritten Question</h2>
+        <span class="level-badge badge-all">All Topics</span>
+      </div>
+      <div class="section-body">
+        <p style="margin-bottom:1rem;color:var(--ink-60);font-size:0.9rem;">Upload a clear photo of a printed or handwritten mathematics problem and the system will read and solve it automatically.</p>
+
+        <div class="scan-tips">
+          <div class="scan-tip">💡 Use good lighting and hold steady</div>
+          <div class="scan-tip">✏️ Write large, clear characters</div>
+          <div class="scan-tip">✂️ Crop tightly around the question</div>
+        </div>
 
         <label class="file-label" for="imageInput">
-            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-            <span>Click to upload or drag an image here</span>
-            <small>JPEG · PNG · WEBP</small>
+          <span class="file-icon">☁️</span>
+          <span>Click to upload or drag an image here</span>
+          <small>JPEG · PNG · WEBP — max 10 MB</small>
         </label>
         <input type="file" id="imageInput" accept="image/*" aria-label="Upload math problem image">
 
-        <button id="scanImageBtn" class="btn btn-primary scan-btn">
-            <i class="fas fa-search" aria-hidden="true"></i> Scan &amp; Solve
-        </button>
+        <button id="scanImageBtn" class="btn btn-primary scan-btn">🔍 Scan &amp; Solve</button>
 
         <div id="ocrStatus" role="status"></div>
         <div id="userQuestion" class="math-display"></div>
         <div id="userSolution" class="math-display"></div>
+      </div>
     </section>
 
-</div><!-- /.page-wrap -->
+    <!-- HOW IT WORKS -->
+    <section class="topic-section" id="how-it-works">
+      <div class="section-header">
+        <span class="sec-icon">🎯</span>
+        <h2>How to Get the Most Out of Practice</h2>
+        <span class="level-badge badge-all">Study Tips</span>
+      </div>
+      <div class="section-body">
+        <div class="how-grid">
+          <div class="how-step">
+            <div class="how-num">1</div>
+            <h3>Attempt First</h3>
+            <p>Always try the problem yourself before checking the solution. Even an incorrect attempt forces your brain to engage with the material.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-num">2</div>
+            <h3>Read Every Step</h3>
+            <p>When you check your answer, read through the full step-by-step solution carefully — not just the final answer.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-num">3</div>
+            <h3>Repeat the Topic</h3>
+            <p>Generate 3–5 problems on the same topic before moving on. Spaced repetition dramatically improves retention.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-num">4</div>
+            <h3>Track Your Progress</h3>
+            <p>Your results are automatically saved. Check your <a href="achievements.html">achievements</a> and <a href="progress.html">progress tracker</a> regularly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- COMMON MISTAKES -->
+    <section class="topic-section" id="exam-tips">
+      <div class="section-header">
+        <span class="sec-icon">⚠️</span>
+        <h2>Common Mistakes to Avoid</h2>
+        <span class="level-badge badge-secondary">Exam Tips</span>
+      </div>
+      <div class="section-body">
+        <p style="margin-bottom:1rem;color:var(--ink-60);font-size:0.9rem;">Based on years of teaching experience, these are the most frequent errors students make in each area.</p>
+        <div class="mistakes-grid">
+          <div class="mistake-item">
+            <h4>d/dx &nbsp; Differentiation</h4>
+            <p>Forgetting to bring the power down before reducing the index. Also, forgetting that the derivative of a constant is always zero.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>∫ &nbsp; Integration</h4>
+            <p>Forgetting to add the constant of integration <strong>+ C</strong> in indefinite integrals — an automatic mark deduction in most marking schemes.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>[ ] &nbsp; Matrices</h4>
+            <p>Getting the determinant formula backwards: it is always ad − bc, not ad + bc. A singular matrix (det = 0) has no inverse.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>→ &nbsp; Vectors</h4>
+            <p>Confusing magnitude (a scalar) with the vector itself. For perpendicularity, the dot product must equal exactly zero.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>△ &nbsp; Trigonometry</h4>
+            <p>Using degrees when the formula requires radians. In sector/arc formulas, the angle must always be in radians.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>∑ &nbsp; Sequences</h4>
+            <p>Confusing the formula for the nth term with the sum formula. For a GP sum to infinity, |r| must be less than 1.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>□ &nbsp; Areas</h4>
+            <p>Using diameter instead of radius in A = πr². For the trapezoid, both parallel sides must be included.</p>
+          </div>
+          <div class="mistake-item">
+            <h4>⬡ &nbsp; Volumes</h4>
+            <p>Forgetting the factor of 1/3 for cones and pyramids. Always state units³ in your final answer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /content-area -->
+
+</div><!-- /page-body -->
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
-    <p>
-        <a href="index.html">Home</a> &middot;
-        <a href="main.html">Lessons</a> &middot;
-        <a href="about.html">About</a> &middot;
-        <a href="contact.html">Contact</a> &middot;
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
-    <p>&copy; 2025 BestRonny Mathematics &mdash; Free Maths Education for Everyone</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Ronny Best <span class="logo-sigma">Σ</span></a>
+      <p>Free mathematics education for everyone, everywhere.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Practice Topics</h4>
+      <ul>
+        <li><a href="#topic-differentiation">Differentiation</a></li>
+        <li><a href="#topic-integration">Integration</a></li>
+        <li><a href="#topic-algebra">Algebra</a></li>
+        <li><a href="#topic-trigonometry">Trigonometry</a></li>
+        <li><a href="#topic-statistics">Statistics</a></li>
+        <li><a href="#topic-matrices">Matrices</a></li>
+        <li><a href="#topic-vectors">Vectors</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="main.html">Lessons</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ronny Best Mathematics — Free Maths Education for Everyone</span>
+    <span>
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="about.html">About</a>
+    </span>
+  </div>
 </footer>
 
 <script defer src="tasks.js"></script>
-
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
-            MathJax.typesetPromise([document.getElementById('samples-section')]).catch(function () {});
-        } else {
-            document.addEventListener('mathjax-ready', function () {
-                MathJax.typesetPromise([document.getElementById('samples-section')]).catch(function () {});
-            });
-        }
-    });
-</script>
+  function fillQ(text) {
+    document.getElementById('freeQuestion').value = text;
+    document.getElementById('ask-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => document.getElementById('freeQuestion').focus(), 500);
+  }
 
+  // Hamburger
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    const exp = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!exp));
+    nav.classList.toggle('open');
+  });
+
+  // TOC scroll active state
+  document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.topic-section[id]');
+    const tocLinks = document.querySelectorAll('.contents-link[href^="#"]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.contents-link[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+      MathJax.typesetPromise([document.getElementById('samples-section')]).catch(() => {});
+    }
+  });
+</script>
 </body>
 </html>
