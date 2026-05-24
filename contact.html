@@ -408,75 +408,80 @@
     </div>
 
     <!-- THE FORM — action points to FormSubmit with your email -->
-    <form id="contactForm" action="https://formsubmit.co/ronnymwenda89@gmail.com" method="POST">
+    <form id="contactForm"
+      name="contact"
+      method="POST"
+      action="/contact.html?sent=1"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field">
 
-      <!-- ── FormSubmit hidden config fields ── -->
-      <!-- Reply-To: when you hit Reply in Gmail it goes to the sender -->
-      <input type="hidden" name="_replyto" id="replyto_field">
-      <!-- Branded subject line -->
-      <input type="hidden" name="_subject" value="📬 New message via Ronny Best Mathematics">
-      <!-- Use the table email template (clean layout) -->
-      <input type="hidden" name="_template" value="table">
-      <!-- Disable the default FormSubmit captcha (optional — remove to re-enable) -->
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Redirect back to your thank-you page after submission -->
-      <input type="hidden" name="_next" value="https://bestronny.netlify.app/contact.html?sent=1">
-      <!-- CC — add a second email here if you want a copy elsewhere -->
-      <!-- <input type="hidden" name="_cc" value="[email protected]"> -->
+  <!-- Required for Netlify -->
+  <input type="hidden" name="form-name" value="contact">
 
-      <div class="form-row">
-        <div class="field">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="First Name" placeholder="e.g. John" required>
-        </div>
-        <div class="field">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="Last Name" placeholder="e.g. Kamau">
-        </div>
-      </div>
+  <!-- Spam protection -->
+  <p hidden>
+    <label>
+      Don’t fill this out:
+      <input name="bot-field">
+    </label>
+  </p>
 
-      <div class="field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email_input" name="email" placeholder="your@email.com" required>
-      </div>
+  <div class="form-row">
+    <div class="field">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="First Name" placeholder="e.g. John" required>
+    </div>
 
-      <div class="field">
-        <label for="role">I am a…</label>
-        <select id="role" name="Role">
-          <option value="">Select your role</option>
-          <option>High School Student</option>
-          <option>College / University Student</option>
-          <option>Teacher or Educator</option>
-          <option>Parent or Guardian</option>
-          <option>Self-Learner</option>
-          <option>Other</option>
-        </select>
-      </div>
+    <div class="field">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="Last Name" placeholder="e.g. Kamau">
+    </div>
+  </div>
 
-      <div class="field">
-        <label for="topic">Topic / Subject</label>
-        <select id="topic" name="Topic">
-          <option value="">What is your message about?</option>
-          <option>Question about a math lesson</option>
-          <option>Found an error or mistake</option>
-          <option>Suggestion or feature request</option>
-          <option>Partnership or collaboration</option>
-          <option>General feedback</option>
-          <option>Other</option>
-        </select>
-      </div>
+  <div class="field">
+    <label for="email">Email Address</label>
+    <input type="email" id="email_input" name="email" placeholder="your@email.com" required>
+  </div>
 
-      <div class="field">
-        <label for="message">Your Message</label>
-        <textarea id="message" name="Message" placeholder="Tell us what's on your mind. Be as detailed as you like — we'll do our best to help!" required></textarea>
-      </div>
+  <div class="field">
+    <label for="role">I am a…</label>
+    <select id="role" name="Role">
+      <option value="">Select your role</option>
+      <option>High School Student</option>
+      <option>College / University Student</option>
+      <option>Teacher or Educator</option>
+      <option>Parent or Guardian</option>
+      <option>Self-Learner</option>
+      <option>Other</option>
+    </select>
+  </div>
 
-      <button type="submit" class="submit-btn" id="submitBtn">
-        <div class="spinner" id="spinner"></div>
-        <span class="btn-text" id="btnText">✉ Send Message</span>
-      </button>
-    </form>
+  <div class="field">
+    <label for="topic">Topic / Subject</label>
+    <select id="topic" name="Topic">
+      <option value="">What is your message about?</option>
+      <option>Question about a math lesson</option>
+      <option>Found an error or mistake</option>
+      <option>Suggestion or feature request</option>
+      <option>Partnership or collaboration</option>
+      <option>General feedback</option>
+      <option>Other</option>
+    </select>
+  </div>
 
+  <div class="field">
+    <label for="message">Your Message</label>
+    <textarea id="message"
+              name="Message"
+              placeholder="Tell us what's on your mind. Be as detailed as you like — we'll do our best to help!"
+              required></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    <div class="spinner" id="spinner"></div>
+    <span class="btn-text" id="btnText">✉ Send Message</span>
+  </button>
+</form>
     <div class="alert alert-success" id="successAlert">
       <span class="alert-title">✅ Message sent successfully!</span>
       Thank you — we've received your message and will reply to your email within 24–48 hours. Check your inbox for a confirmation.
@@ -551,12 +556,13 @@
     </div>
 
     <div class="delivery-note">
-      <h4>📲 How message delivery works</h4>
-      <ul>
-        <li><span>✉</span> Your message arrives in Ronny's Gmail inbox, formatted as a table.</li>
-        <li><span>💬</span> A WhatsApp notification is sent instantly to +254 799 188 900.</li>
-        <li><span>↩</span> When Ronny replies, the email goes directly back to <em>you</em> — branded as Ronny Best Mathematics.</li>
-      </ul>
+<h4>📨 Message Delivery & Response</h4>
+<ul>
+  <li><span>🔒</span> All messages are securely processed and delivered through Netlify Forms.</li>
+  <li><span>📥</span> New enquiries are instantly forwarded to Ronny Best Mathematics via email notification.</li>
+  <li><span>⚡</span> Messages are also stored securely in the Netlify dashboard for reliable tracking and management.</li>
+  <li><span>↩</span> We aim to respond to all enquiries within 24–48 hours.</li>
+</ul>
     </div>
 
     <div class="faq-hint">
@@ -578,68 +584,21 @@
 </footer>
 
 <script>
-  const CALLMEBOT_API_KEY = '6100170';
-  const MY_WHATSAPP_NUMBER = '254799188900';
-
-  // Keep _replyto in sync with email field so Gmail Reply-To works
-  document.getElementById('email_input').addEventListener('input', function () {
-    document.getElementById('replyto_field').value = this.value;
-  });
-
-  // Show success banner if redirected back after FormSubmit submission
+  // Show success message after submission
   if (window.location.search.includes('sent=1')) {
     document.getElementById('successAlert').style.display = 'block';
     window.history.replaceState({}, '', window.location.pathname);
   }
 
-  // Override form submit: send WhatsApp notification, then let form POST to FormSubmit
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const fname   = document.getElementById('fname').value.trim();
-    const lname   = document.getElementById('lname').value.trim();
-    const email   = document.getElementById('email_input').value.trim();
-    const role    = document.getElementById('role').value;
-    const topic   = document.getElementById('topic').value;
-    const message = document.getElementById('message').value.trim();
-
-    if (!fname || !email || !message) {
-      document.getElementById('errorAlert').style.display = 'block';
-      document.getElementById('errorAlert').querySelector('.alert-title').textContent = '⚠️ Missing fields';
-      document.getElementById('errorAlert').lastChild.textContent = ' Please fill in your name, email, and message.';
-      return;
-    }
-
-    // Keep replyto in sync before submit
-    document.getElementById('replyto_field').value = email;
-
-    // Show loading state
-    const btn     = document.getElementById('submitBtn');
+  // Loading animation
+  document.getElementById('contactForm').addEventListener('submit', function () {
+    const btn = document.getElementById('submitBtn');
     const spinner = document.getElementById('spinner');
     const btnText = document.getElementById('btnText');
-    btn.disabled  = true;
-    spinner.style.display = 'block';
-    btnText.textContent   = 'Sending…';
 
-    // ── Send WhatsApp notification via CallMeBot ──
-    if (CALLMEBOT_API_KEY) {
-      try {
-        const waMsg = encodeURIComponent(
-          `📬 New Contact — Ronny Best Maths\n\n` +
-          `👤 Name: ${fname} ${lname}\n` +
-          `📧 Email: ${email}\n` +
-          `🎓 Role: ${role || 'Not specified'}\n` +
-          `📚 Topic: ${topic || 'Not specified'}\n\n` +
-          `💬 Message:\n${message.slice(0, 300)}${message.length > 300 ? '…' : ''}`
-        );
-        await fetch(
-          `https://api.callmebot.com/whatsapp.php?phone=${MY_WHATSAPP_NUMBER}&text=${waMsg}&apikey=${CALLMEBOT_API_KEY}`,
-          { mode: 'no-cors' }
-        );
-      } catch (_) {
-      }
-    }
-    this.submit();
+    btn.disabled = true;
+    spinner.style.display = 'block';
+    btnText.textContent = 'Sending…';
   });
 </script>
 
