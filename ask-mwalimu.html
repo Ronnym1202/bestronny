@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Mwalimu | Ronny Best Mathematics</title>
+  <meta name="description" content="Submit your mathematics questions and receive expert guidance from Mwalimu Ronny. A structured Q&A platform for secondary and high school students in Kenya.">
+  <meta name="keywords" content="mathematics help, ask mwalimu, Kenya maths tutor, secondary school maths, Ronny Best Mathematics">
+  <link rel="icon" type="image/png" href="IMAGES/P2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, orderBy,
+             doc, updateDoc, deleteDoc, serverTimestamp, getDoc, setDoc }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInAnonymously }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAssMrRKgcX-rIcNEmH-Fw9-2noX3ibJ64",
+      authDomain: "ronny-best-maths.firebaseapp.com",
+      projectId: "ronny-best-maths",
+      storageBucket: "ronny-best-maths.firebasestorage.app",
+      messagingSenderId: "303659327110",
+      appId: "1:303659327110:web:9ada7496dca39760607b07"
+    };
+
+    const ADMIN_EMAIL = "ronnymwenda89@gmail.com";
+
+    const app  = initializeApp(firebaseConfig);
+    const db   = getFirestore(app);
+    const auth = getAuth(app);
+
+    let currentUser = null;
+    let isAdmin = false;
+
+    onAuthStateChanged(auth, async user => {
+      currentUser = user;
+      isAdmin = user && user.email === ADMIN_EMAIL;
+      document.getElementById("adminPanel").style.display = isAdmin ? "flex" : "none";
+      document.getElementById("adminLoginForm").style.display = isAdmin ? "none" : "flex";
+      document.getElementById("adminLogoutBtn").style.display = isAdmin ? "inline-flex" : "none";
+      if (isAdmin) document.getElementById("adminLoginSection").style.display = "block";
+    });
+
+    signInAnonymously(auth).catch(()=>{});
+
+    document.getElementById("adminLoginBtn").addEventListener("click", async () => {
+      const email = document.getElementById("adminEmail").value.trim();
+      const pass  = document.getElementById("adminPass").value;
+      try {
+        await signInWithEmailAndPassword(auth, email, pass);
+        document.getElementById("loginError").textContent = "";
+      } catch(e) {
+        document.getElementById("loginError").textContent = "Invalid credentials. Please try again.";
+      }
+    });
+    document.getElementById("adminLogoutBtn").addEventListener("click", () => signOut(auth));
+
+    document.getElementById("postBtn").addEventListener("click", async () => {
+      const name = document.getElementById("postName").value.trim() || "Anonymous";
+      const text = document.getElementById("postText").value.trim();
+      if (!text) { showToast("Please compose your question before submitting.", "warn"); return; }
+      if (text.length > 1000) { showToast("Your question exceeds the 1,000-character limit.", "warn"); return; }
+
+      if (currentUser) {
+        const banRef = doc(db, "banned", currentUser.uid);
+        const banSnap = await getDoc(banRef);
+        if (banSnap.exists()) { showToast("Your account has been suspended due to a policy violation.", "error"); return; }
+      }
+
+      const btn = document.getElementById("postBtn");
+      btn.disabled = true; btn.textContent = "Submitting…";
+      try {
+        await addDoc(collection(db, "questions"), {
+          name, text,
+          uid: currentUser ? currentUser.uid : "guest",
+          timestamp: serverTimestamp(),
+          answered: false,
+          pinned: false,
+          deleted: false
+        });
+        document.getElementById("postText").value = "";
+        document.getElementById("postName").value = "";
+        document.getElementById("charCount").textContent = "0";
+        showToast("Your question has been submitted successfully.", "success");
+      } catch(e) { showToast("Submission failed. Please try again shortly.", "error"); }
+      btn.disabled = false; btn.textContent = "Submit Question";
+    });
+
+    const q = query(collection(db, "questions"), orderBy("pinned","desc"), orderBy("timestamp","desc"));
+    onSnapshot(q, snapshot => {
+      const feed = document.getElementById("questionFeed");
+      feed.innerHTML = "";
+      if (snapshot.empty) {
+        feed.innerHTML = `<div class="empty-state"><div class="empty-icon">✦</div><p>No questions have been submitted yet.</p><span>Be the first to ask Mwalimu Ronny.</span></div>`;
+        return;
+      }
+      snapshot.forEach(docSnap => {
+        const d = docSnap.data();
+        if (d.deleted && !isAdmin) return;
+        feed.appendChild(buildCard(docSnap.id, d));
+      });
+      if (window.MathJax) MathJax.typesetPromise([feed]).catch(()=>{});
+    });
+
+    function buildCard(id, d) {
+      const card = document.createElement("div");
+      card.className = "q-card" + (d.pinned?" pinned":"") + (d.deleted?" deleted":"") + (d.answered?" answered":"");
+      const time = d.timestamp
+        ? new Date(d.timestamp.seconds*1000).toLocaleDateString("en-KE",{day:"numeric",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit"})
+        : "Just now";
+      card.innerHTML = `
+        <div class="q-header">
+          <div class="q-meta">
+            <span class="q-author">${esc(d.name)}</span>
+            <span class="q-time">${time}</span>
+          </div>
+          <div class="q-badges">
+            ${d.pinned?`<span class="badge badge-pin">📌 Featured</span>`:""}
+            ${d.answered?`<span class="badge badge-ans">✔ Resolved</span>`:""}
+            ${d.deleted?`<span class="badge badge-del">Removed</span>`:""}
+          </div>
+        </div>
+        <div class="q-body">${esc(d.text)}</div>
+        <div class="q-replies" id="replies-${id}"></div>
+        <div class="reply-row">
+          <input class="reply-input" id="replyIn-${id}" placeholder="Contribute a response or follow-up…" maxlength="500">
+          <input class="reply-name" id="replyName-${id}" placeholder="Your name (optional)" maxlength="40">
+          <button class="btn-reply" onclick="postReply('${id}')">Respond</button>
+        </div>
+        ${isAdmin ? `
+          <div class="admin-actions">
+            <button onclick="toggleAnswer('${id}',${d.answered})">${d.answered?"Unmark Resolved":"✔ Mark Resolved"}</button>
+            <button onclick="togglePin('${id}',${d.pinned})">${d.pinned?"Unfeature":"📌 Feature"}</button>
+            <button onclick="deleteQ('${id}',${d.deleted})" class="btn-danger">${d.deleted?"Restore":"🗑 Remove"}</button>
+            <button onclick="banUser('${d.uid}')" class="btn-ban">🚫 Suspend User</button>
+          </div>` : ""}
+      `;
+      loadReplies(id, card.querySelector(`#replies-${id}`));
+      return card;
+    }
+
+    function loadReplies(qid, container) {
+      const rq = query(collection(db,"questions",qid,"replies"), orderBy("timestamp","asc"));
+      onSnapshot(rq, snap => {
+        container.innerHTML = "";
+        snap.forEach(r => {
+          const rd = r.data();
+          if (rd.deleted && !isAdmin) return;
+          const div = document.createElement("div");
+          div.className = "reply" + (rd.isAdmin?" admin-reply":"") + (rd.deleted?" deleted-reply":"");
+          const rt = rd.timestamp
+            ? new Date(rd.timestamp.seconds*1000).toLocaleDateString("en-KE",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})
+            : "Just now";
+          div.innerHTML = `
+            <div class="r-header">
+              <span class="r-author">${esc(rd.name)}${rd.isAdmin?'<span class="mwalimu-tag">Mwalimu</span>':""}</span>
+              <span class="r-time">${rt}</span>
+            </div>
+            <p class="r-body">${esc(rd.text)}</p>
+            ${isAdmin?`<button class="btn-del-reply" onclick="deleteReply('${qid}','${r.id}',${rd.deleted})">${rd.deleted?"Restore":"Remove"}</button>`:""}
+          `;
+          container.appendChild(div);
+        });
+        if(window.MathJax) MathJax.typesetPromise([container]).catch(()=>{});
+      });
+    }
+
+    window.postReply = async (qid) => {
+      const input = document.getElementById(`replyIn-${qid}`);
+      const nameIn = document.getElementById(`replyName-${qid}`);
+      const text = input.value.trim();
+      if (!text) return;
+      if (currentUser) {
+        const banRef = doc(db,"banned",currentUser.uid);
+        const banSnap = await getDoc(banRef);
+        if (banSnap.exists()) { showToast("Your account has been suspended from contributing.", "error"); return; }
+      }
+      const name = isAdmin ? "Mwalimu Ronny" : (nameIn.value.trim() || "Anonymous");
+      await addDoc(collection(db,"questions",qid,"replies"), {
+        name, text,
+        uid: currentUser ? currentUser.uid : "guest",
+        isAdmin,
+        timestamp: serverTimestamp(),
+        deleted: false
+      });
+      input.value = "";
+      if (nameIn) nameIn.value = "";
+      if (isAdmin) await updateDoc(doc(db,"questions",qid), { answered: true });
+    };
+
+    window.toggleAnswer = async (id, current) => { await updateDoc(doc(db,"questions",id), { answered: !current }); };
+    window.togglePin    = async (id, current) => { await updateDoc(doc(db,"questions",id), { pinned: !current }); };
+    window.deleteQ      = async (id, current) => { await updateDoc(doc(db,"questions",id), { deleted: !current }); };
+    window.deleteReply  = async (qid, rid, current) => { await updateDoc(doc(db,"questions",qid,"replies",rid), { deleted: !current }); };
+    window.banUser      = async (uid) => {
+      if (uid === "guest") { showToast("Guest sessions expire automatically and cannot be suspended by UID.", "warn"); return; }
+      if (confirm("Suspend this user? They will no longer be able to submit questions or responses.")) {
+        await setDoc(doc(db,"banned",uid), { bannedAt: serverTimestamp() });
+        showToast("User suspended successfully.", "success");
+      }
+    };
+
+    function esc(str) {
+      const d = document.createElement("div"); d.textContent = String(str||""); return d.innerHTML;
+    }
+
+    function showToast(msg, type="info") {
+      const t = document.createElement("div");
+      t.className = `toast toast-${type}`;
+      t.textContent = msg;
+      document.getElementById("toastContainer").appendChild(t);
+      setTimeout(() => t.classList.add("show"), 10);
+      setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 400); }, 3500);
+    }
+  </script>
+
+  <script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f1e38;
+      --navy-mid: #1a2f52;
+      --navy-light: #243a63;
+      --gold: #c9922a;
+      --gold-light: #e8b84e;
+      --gold-bg: #fdf6e8;
+      --gold-border: rgba(201,146,42,.2);
+      --cream: #faf7f2;
+      --cream-100: #f4efe5;
+      --cream-200: #e8dfd0;
+      --ink: #1a1612;
+      --ink-60: #4a3f35;
+      --ink-40: #7a6a58;
+      --white: #ffffff;
+      --green: #1e6e36;
+      --green-bg: #e8f5ec;
+      --red: #b91c1c;
+      --red-bg: #fef2f2;
+      --blue: #1a56a8;
+      --blue-bg: #eff6ff;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 4px rgba(15,30,56,.07);
+      --shadow: 0 4px 20px rgba(15,30,56,.1);
+      --shadow-lg: 0 8px 40px rgba(15,30,56,.15);
+      --transition: .22s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--navy);
+      height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%;
+      box-shadow: 0 2px 24px rgba(0,0,0,.3);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: #fff; text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+      letter-spacing: -.01em;
+    }
+    .logo-sigma {
+      color: var(--gold-light);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    nav ul { display: flex; list-style: none; gap: 2px; }
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,.6);
+      font-size: .82rem; font-weight: 500;
+      padding: 7px 13px; border-radius: 6px;
+      transition: var(--transition);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,.1);
+      color: #fff;
+    }
+    nav a.active { color: var(--gold-light); }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, #162847 55%, #1a3560 100%);
+      padding: 72px 6% 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201,146,42,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 16px;
+      background: rgba(201,146,42,.12);
+      border: 1px solid rgba(201,146,42,.25);
+      padding: 5px 16px; border-radius: 50px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      color: #fff;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gold-light); }
+    .hero-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.05rem; font-style: italic;
+      color: rgba(255,255,255,.55);
+      max-width: 520px; margin: 0 auto 32px;
+      line-height: 1.75;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+      color: rgba(255,255,255,.5);
+      font-size: .8rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    .stat strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; color: var(--gold-light);
+      letter-spacing: -.02em; line-height: 1.2;
+    }
+
+    /* ─── LAYOUT ─── */
+    .page { max-width: 900px; margin: 40px auto 80px; padding: 0 5%; }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--ink-40);
+      margin-bottom: 14px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--cream-200);
+    }
+
+    /* ─── POLICY BOX ─── */
+    .policy-box {
+      background: linear-gradient(135deg, #fffbf0 0%, var(--gold-bg) 100%);
+      border: 1px solid var(--gold-border);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin-bottom: 28px;
+      font-size: .875rem;
+      color: var(--ink-60);
+      line-height: 1.65;
+    }
+    .policy-box strong {
+      display: block; margin-bottom: 4px;
+      color: var(--navy); font-size: .9rem;
+    }
+
+    /* ─── POST CARD ─── */
+    .post-card {
+      background: var(--white);
+      border: 1px solid var(--cream-200);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+    }
+    .post-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: var(--navy);
+      margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .post-inputs { display: flex; flex-direction: column; gap: .75rem; }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    textarea {
+      width: 100%;
+      padding: .7rem 1rem;
+      border: 1.5px solid var(--cream-200);
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      font-size: .95rem; color: var(--ink);
+      font-family: inherit;
+      transition: var(--transition);
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(201,146,42,.12);
+    }
+    textarea {
+      min-height: 100px; resize: vertical; line-height: 1.65;
+    }
+    .input-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: -4px;
+    }
+    .char-count { font-size: .78rem; color: var(--ink-40); }
+
+    .btn-post {
+      background: var(--navy);
+      color: #fff; border: none;
+      border-radius: var(--radius-sm);
+      padding: .78rem 2rem;
+      font-size: .92rem; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      letter-spacing: .02em;
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-post:hover { background: var(--navy-light); transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn-post:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      display: flex; align-items: center; gap: .5rem;
+      flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .filter-label { font-size: .8rem; font-weight: 600; color: var(--ink-40); margin-right: 4px; }
+    .filter-btn {
+      background: var(--white);
+      border: 1.5px solid var(--cream-200);
+      border-radius: 50px;
+      padding: .35rem 1rem;
+      font-size: .82rem; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      color: var(--ink-60);
+      transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold-bg);
+      border-color: var(--gold);
+      color: #7a5010;
+    }
+
+    /* ─── QUESTION CARDS ─── */
+    .q-card {
+      background: var(--white);
+      border: 1px solid var(--cream-200);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      animation: fadeUp .3s ease both;
+    }
+    .q-card:hover { box-shadow: var(--shadow); }
+    .q-card.pinned {
+      border-left: 4px solid var(--gold);
+      background: linear-gradient(135deg, #fffdf8 0%, var(--white) 100%);
+    }
+    .q-card.answered { border-left: 4px solid var(--green); }
+    .q-card.deleted { opacity: .5; background: var(--red-bg); border-left: 4px solid var(--red); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 10px;
+      margin-bottom: .8rem; flex-wrap: wrap;
+    }
+    .q-meta { display: flex; flex-direction: column; gap: 2px; }
+    .q-author { font-weight: 700; font-size: .9rem; color: var(--navy); }
+    .q-time { font-size: .75rem; color: var(--ink-40); }
+    .q-badges { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+    .badge {
+      font-size: .7rem; font-weight: 700;
+      padding: 3px 10px; border-radius: 50px;
+    }
+    .badge-pin { background: var(--gold-bg); color: #7a5010; border: 1px solid var(--gold-border); }
+    .badge-ans { background: var(--green-bg); color: var(--green); border: 1px solid rgba(30,110,54,.2); }
+    .badge-del { background: var(--red-bg); color: var(--red); border: 1px solid rgba(185,28,28,.2); }
+
+    .q-body {
+      font-family: 'Source Serif 4', serif;
+      font-size: .975rem; line-height: 1.8;
+      color: var(--ink); margin-bottom: 1.1rem;
+      white-space: pre-wrap; word-break: break-word;
+    }
+
+    /* ─── REPLIES ─── */
+    .q-replies { display: flex; flex-direction: column; gap: .6rem; margin-bottom: .9rem; }
+
+    .reply {
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      padding: .75rem 1rem;
+      border-left: 3px solid var(--cream-200);
+      font-size: .9rem;
+    }
+    .reply.admin-reply {
+      background: var(--blue-bg);
+      border-left: 3px solid var(--blue);
+    }
+    .reply.deleted-reply { opacity: .4; text-decoration: line-through; }
+
+    .r-header {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: .3rem; flex-wrap: wrap;
+    }
+    .r-author { font-weight: 700; font-size: .82rem; color: var(--navy); }
+    .r-time { font-size: .74rem; color: var(--ink-40); margin-left: auto; }
+    .mwalimu-tag {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: .65rem; padding: 2px 8px;
+      border-radius: 50px; font-weight: 700;
+      margin-left: 6px; letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .r-body {
+      font-size: .9rem; line-height: 1.7;
+      color: var(--ink-60);
+      white-space: pre-wrap; word-break: break-word;
+    }
+    .btn-del-reply {
+      background: none; border: none;
+      color: var(--red); font-size: .75rem;
+      cursor: pointer; margin-top: .35rem;
+      padding: 0; font-family: inherit;
+      font-weight: 600;
+    }
+
+    /* ─── REPLY ROW ─── */
+    .reply-row {
+      display: flex; gap: .5rem; flex-wrap: wrap;
+      padding-top: .75rem;
+      border-top: 1px solid var(--cream-200);
+    }
+    .reply-input { flex: 2; min-width: 160px; }
+    .reply-name  { flex: 1; min-width: 120px; }
+    .btn-reply {
+      background: var(--gold);
+      color: #fff; border: none;
+      border-radius: var(--radius-sm);
+      padding: .58rem 1.2rem;
+      font-size: .85rem; font-weight: 700;
+      cursor: pointer; font-family: inherit;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+    .btn-reply:hover { background: #a87220; }
+
+    /* ─── ADMIN ACTIONS ─── */
+    .admin-actions {
+      display: flex; gap: .5rem; flex-wrap: wrap;
+      margin-top: .85rem; padding-top: .85rem;
+      border-top: 1px dashed var(--cream-200);
+    }
+    .admin-actions button {
+      background: var(--cream-100);
+      border: 1px solid var(--cream-200);
+      border-radius: 6px;
+      padding: .35rem .9rem;
+      font-size: .78rem; font-weight: 700;
+      cursor: pointer; font-family: inherit;
+      color: var(--ink-60); transition: var(--transition);
+    }
+    .admin-actions button:hover { background: var(--cream-200); }
+    .btn-danger { color: var(--red)!important; border-color: rgba(185,28,28,.2)!important; }
+    .btn-ban { color: #7a1010!important; background: var(--red-bg)!important; border-color: rgba(185,28,28,.25)!important; }
+
+    /* ─── ADMIN LOGIN ─── */
+    #adminLoginSection {
+      background: var(--white);
+      border: 1px solid var(--cream-200);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-sm);
+    }
+    #adminLoginSection summary {
+      cursor: pointer;
+      font-weight: 700; color: var(--navy);
+      font-size: .9rem; user-select: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    #adminLoginForm {
+      margin-top: 1rem;
+      display: flex; flex-direction: column; gap: .65rem;
+      max-width: 380px;
+    }
+    .admin-input-row { display: flex; gap: .5rem; }
+    #loginError { color: var(--red); font-size: .82rem; }
+
+    #adminLogoutBtn {
+      background: none;
+      border: 1.5px solid var(--cream-200);
+      border-radius: 6px;
+      padding: .45rem 1.1rem;
+      font-size: .82rem; font-weight: 700;
+      cursor: pointer; color: var(--ink-60);
+      font-family: inherit; margin-top: .5rem;
+      transition: var(--transition);
+      display: none;
+    }
+    #adminLogoutBtn:hover { background: var(--cream-100); }
+
+    #adminPanel {
+      background: var(--blue-bg);
+      border: 1px solid rgba(26,86,168,.2);
+      border-radius: var(--radius-sm);
+      padding: .75rem 1rem;
+      font-size: .85rem; color: var(--blue);
+      font-weight: 700; margin-top: .75rem;
+      display: none; align-items: center; gap: 8px;
+    }
+
+    /* ─── EMPTY STATE ─── */
+    .empty-state {
+      text-align: center; padding: 4rem 1rem;
+      color: var(--ink-40);
+    }
+    .empty-icon {
+      font-size: 2.5rem; color: var(--cream-200);
+      margin-bottom: 12px; line-height: 1;
+    }
+    .empty-state p { font-size: 1rem; margin-bottom: 4px; color: var(--ink-60); }
+    .empty-state span { font-size: .88rem; }
+
+    /* ─── TOAST ─── */
+    #toastContainer {
+      position: fixed; bottom: 24px; right: 24px;
+      z-index: 9999; display: flex; flex-direction: column; gap: 8px;
+    }
+    .toast {
+      background: var(--navy); color: #fff;
+      padding: .75rem 1.25rem; border-radius: var(--radius-sm);
+      font-size: .875rem; font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      opacity: 0; transform: translateY(8px);
+      transition: .35s cubic-bezier(.4,0,.2,1);
+      max-width: 340px;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast-success { background: var(--green); }
+    .toast-error   { background: var(--red); }
+    .toast-warn    { background: #92580a; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.3);
+      padding: 40px 6%;
+      text-align: center;
+      font-size: .82rem;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
+    .footer-links a {
+      color: rgba(255,255,255,.35); text-decoration: none;
+      transition: var(--transition); font-weight: 500;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-copy { color: rgba(255,255,255,.2); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 640px) {
+      nav ul { gap: 1px; }
+      nav a { font-size: .72rem; padding: 5px 7px; }
+      .hero { padding: 52px 5% 44px; }
+      .hero-stats { gap: 20px; }
+      .reply-row { flex-direction: column; }
+      .admin-actions { flex-direction: column; }
+      .post-card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="toastContainer"></div>
+
+<header>
+  <a href="index.html" class="logo">
+    Ronny Best <span class="logo-sigma">Σ</span>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="main.html">Lessons</a></li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="ask-mwalimu.html" class="active">Ask Mwalimu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-eyebrow">✦ Expert Guidance</div>
+  <h1>Ask <span>Mwalimu</span></h1>
+  <p class="hero-sub">
+    Submit your mathematics questions and receive thoughtful, expert guidance
+    from Mwalimu Ronny and fellow learners.
+  </p>
+  <div class="hero-stats">
+    <div class="stat"><strong>Free</strong>No account required</div>
+    <div class="stat"><strong>Live</strong>Real-time responses</div>
+    <div class="stat"><strong>Safe</strong>Moderated community</div>
+  </div>
+</div>
+
+<main class="page">
+
+  <!-- Admin login (revealed on triple-click of footer) -->
+  <details id="adminLoginSection" style="display:none">
+    <summary>🔐 Instructor Access</summary>
+    <div id="adminLoginForm">
+      <input type="email" id="adminEmail" placeholder="Instructor email address">
+      <div class="admin-input-row">
+        <input type="password" id="adminPass" placeholder="Password" style="flex:1">
+        <button class="btn-post" id="adminLoginBtn" style="padding:.7rem 1.2rem">Sign In</button>
+      </div>
+      <span id="loginError"></span>
+    </div>
+    <button id="adminLogoutBtn">Sign Out</button>
+    <div id="adminPanel">✅ Signed in as Mwalimu Ronny — moderation controls are active.</div>
+  </details>
+
+  <!-- Community guidelines -->
+  <div class="policy-box">
+    <strong>📋 Community Guidelines</strong>
+    This is a respectful academic space dedicated to mathematics learning. Please ensure all
+    questions and responses are relevant, constructive, and courteous. Inappropriate content,
+    personal insults, spam, or off-topic material will be removed, and persistent violations
+    will result in a permanent suspension from the platform.
+  </div>
+
+  <!-- Post a question -->
+  <div class="section-label">Submit a Question</div>
+  <div class="post-card">
+    <div class="post-card-title">❓ What would you like to learn?</div>
+    <div class="post-inputs">
+      <input type="text" id="postName"
+        placeholder="Your name — leave blank to post as Anonymous"
+        maxlength="50">
+      <textarea id="postText"
+        placeholder="Compose your mathematics question here…&#10;&#10;Example: &quot;How do I apply the chain rule when differentiating y = sin(3x²)?&quot;&#10;&#10;You may use LaTeX notation: \( y = \sin(3x) \)"
+        maxlength="1000"></textarea>
+      <div class="input-footer">
+        <span style="font-size:.8rem;color:var(--ink-40)">LaTeX supported · e.g. \( \frac{dy}{dx} \)</span>
+        <span class="char-count"><span id="charCount">0</span> / 1,000</span>
+      </div>
+      <div>
+        <button class="btn-post" id="postBtn">Submit Question →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" id="filterAll">All Questions</button>
+    <button class="filter-btn" id="filterUnanswered">Awaiting Response</button>
+    <button class="filter-btn" id="filterAnswered">Resolved</button>
+  </div>
+
+  <!-- Live question feed -->
+  <div class="section-label">Community Questions</div>
+  <div id="questionFeed"></div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="main.html">Lessons</a>
+    <a href="tasks.html">Practice</a>
+    <a href="ask-mwalimu.html">Ask Mwalimu</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+  </div>
+  <p class="footer-copy">© 2025 Ronny Best Mathematics. All rights reserved.</p>
+</footer>
+
+<script>
+  // Reveal admin login on triple-click of footer
+  let clickCount = 0;
+  document.querySelector('footer').addEventListener('click', () => {
+    clickCount++;
+    if (clickCount >= 3) {
+      const s = document.getElementById('adminLoginSection');
+      s.style.display = 'block';
+      s.open = true;
+      clickCount = 0;
+    }
+    setTimeout(() => clickCount = 0, 1500);
+  });
+
+  // Character counter
+  const ta = document.getElementById('postText');
+  const cc = document.getElementById('charCount');
+  ta.addEventListener('input', () => {
+    const len = ta.value.length;
+    cc.textContent = len.toLocaleString();
+    cc.style.color = len > 900 ? '#b91c1c' : '';
+  });
+
+  // Filter buttons
+  document.getElementById('filterAll').addEventListener('click',         () => setFilter('all'));
+  document.getElementById('filterUnanswered').addEventListener('click',  () => setFilter('unanswered'));
+  document.getElementById('filterAnswered').addEventListener('click',    () => setFilter('answered'));
+
+  function setFilter(f) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    const map = { all: 'filterAll', unanswered: 'filterUnanswered', answered: 'filterAnswered' };
+    document.getElementById(map[f]).classList.add('active');
+    document.querySelectorAll('.q-card').forEach(c => {
+      if (f === 'all') c.style.display = '';
+      else if (f === 'answered')   c.style.display = c.classList.contains('answered') ? '' : 'none';
+      else if (f === 'unanswered') c.style.display = (!c.classList.contains('answered') && !c.classList.contains('deleted')) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

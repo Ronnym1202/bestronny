@@ -583,94 +583,84 @@
   </div>
   <p>© 2025 Ronny Best Mathematics. Free Math Education for Everyone. | ronnymwenda89@gmail.com</p>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
   // Initialize EmailJS
   emailjs.init("QjvL50X0wrEPh5h9Y");
 
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById("contactForm");
 
-  // Show success message if redirected
-  if (window.location.search.includes('sent=1')) {
-    document.getElementById('successAlert').style.display = 'block';
-    window.history.replaceState({}, '', window.location.pathname);
-  }
-
-  // Handle form submission
-  form.addEventListener('submit', function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const btn = document.getElementById('submitBtn');
-    const spinner = document.getElementById('spinner');
-    const btnText = document.getElementById('btnText');
+    const btn = document.getElementById("submitBtn");
+    const spinner = document.getElementById("spinner");
+    const btnText = document.getElementById("btnText");
 
-    // Start loading animation
     btn.disabled = true;
-    spinner.style.display = 'block';
-    btnText.textContent = 'Sending…';
+    btn.classList.add("loading");
 
-    // Collect form data
+    // Get form values
+    const firstName = document.getElementById("fname").value;
+    const lastName = document.getElementById("lname").value;
+    const email = document.getElementById("email_input").value;
+    const topic = document.getElementById("topic").value;
+    const message = document.getElementById("message").value;
+
+    // Main message to you
     const templateParams = {
-      name:
-        document.getElementById('fname').value + ' ' +
-        document.getElementById('lname').value,
-
-      email:
-        document.getElementById('email_input').value,
-
-      role:
-        document.getElementById('role').value,
-
-      title:
-        document.getElementById('topic').value,
-
-      message:
-        document.getElementById('message').value
+      name: firstName + " " + lastName,
+      email: email,
+      title: topic,
+      message: message,
+      time: new Date().toLocaleString()
     };
 
-    // Send email
+    // Send message to your Gmail
     emailjs.send(
-      'service_5ek1qpa',
-      'template_twv7eou',
+      "service_5ek1qpa",
+      "template_twv7eou",
       templateParams
     )
 
     .then(function () {
 
-      // Show success message
-      document.getElementById('successAlert').style.display = 'block';
-      document.getElementById('errorAlert').style.display = 'none';
+      // Auto reply to sender
+      emailjs.send(
+        "service_5ek1qpa",
+        "template_m65ud69",
+        {
+          name: firstName + " " + lastName,
+          email: email,
+          title: topic,
+          message: message
+        }
+      );
 
-      // Reset form
-      form.reset();
-
-      // Reset button
       btn.disabled = false;
-      spinner.style.display = 'none';
-      btnText.textContent = '✉ Send Message';
+      btn.classList.remove("loading");
 
-      // Scroll to top smoothly
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      document.getElementById("successAlert").style.display = "block";
+      document.getElementById("errorAlert").style.display = "none";
+
+      btnText.textContent = "✉ Send Message";
+
+      form.reset();
 
     })
 
     .catch(function (error) {
 
-      // Show error message
-      document.getElementById('errorAlert').style.display = 'block';
-      document.getElementById('successAlert').style.display = 'none';
-
-      // Reset button
       btn.disabled = false;
-      spinner.style.display = 'none';
-      btnText.textContent = '✉ Send Message';
+      btn.classList.remove("loading");
 
-      console.error('EmailJS Error:', error);
+      document.getElementById("errorAlert").style.display = "block";
+      document.getElementById("successAlert").style.display = "none";
+
+      btnText.textContent = "✉ Send Message";
+
+      console.error("FAILED...", error);
     });
   });
 </script>

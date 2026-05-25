@@ -1032,3 +1032,131 @@ footer {
   .hero-stats { gap: 8px; }
   .stat { padding: 0 12px; border-right: none; }
 }
+/* ═══ Ask Mwalimu nav button ═══ */
+#main-nav a.nav-ask-btn {
+  background: rgba(200,131,42,0.15);
+  color: var(--amber-light, #e8a84e);
+  border: 1px solid rgba(200,131,42,0.35);
+  border-radius: 6px;
+}
+#main-nav a.nav-ask-btn:hover {
+  background: var(--amber, #c8832a);
+  color: #fff;
+  border-color: var(--amber, #c8832a);
+}
+
+/* ═══ Sidebar Ask Mwalimu link ═══ */
+.contents-link-ask {
+  font-weight: 700 !important;
+  color: var(--amber-deep, #8c5a1a) !important;
+  background: var(--amber-bg, #fff4e3) !important;
+  border-left-color: var(--amber, #c8832a) !important;
+}
+.contents-link-ask:hover {
+  background: var(--amber, #c8832a) !important;
+  color: #fff !important;
+}
+
+/* ═══ Ask Mwalimu Banner Section ═══ */
+.ask-mwalimu-banner {
+  border: 1.5px solid rgba(200,131,42,0.3);
+  background: linear-gradient(135deg, #fffcf5 0%, #fff8ed 100%);
+}
+.ask-mwalimu-banner .section-header {
+  background: linear-gradient(135deg, var(--navy-deep, #111827) 0%, var(--navy-mid, #253354) 100%);
+  border-bottom: none;
+}
+.ask-mwalimu-banner .section-header h2 {
+  color: #e8a84e;
+}
+.ask-mwalimu-banner .section-header .sec-icon {
+  filter: none;
+}
+.ask-mwalimu-banner .level-badge {
+  background: rgba(200,131,42,0.2);
+  color: #e8a84e;
+  border-color: rgba(200,131,42,0.4);
+}
+
+.mwalimu-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.mwalimu-banner-text {
+  flex: 1;
+  min-width: 220px;
+}
+.mwalimu-banner-text p {
+  font-size: 0.97rem;
+  color: var(--ink, #1c1a18);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.mwalimu-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.mwalimu-feature-list li {
+  font-size: 0.88rem;
+  color: var(--ink-60, #4a3f32);
+  font-weight: 600;
+}
+.mwalimu-banner-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.btn-mwalimu {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--navy-deep, #111827);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+  box-shadow: 0 4px 16px rgba(26,35,64,0.2);
+  white-space: nowrap;
+}
+.btn-mwalimu:hover {
+  background: var(--amber, #c8832a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200,131,42,0.3);
+}
+.btn-mwalimu-arrow {
+  transition: transform 0.2s;
+}
+.btn-mwalimu:hover .btn-mwalimu-arrow {
+  transform: translateX(4px);
+}
+.mwalimu-note {
+  font-size: 0.78rem;
+  color: var(--ink-40, #7a6a58);
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .mwalimu-banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mwalimu-feature-list {
+    align-items: center;
+  }
+  .btn-mwalimu {
+    width: 100%;
+    justify-content: center;
+  }
+}
