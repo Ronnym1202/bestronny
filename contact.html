@@ -584,22 +584,94 @@
   <p>© 2025 Ronny Best Mathematics. Free Math Education for Everyone. | ronnymwenda89@gmail.com</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
-  // Show success message after submission
+  // Initialize EmailJS
+  emailjs.init("QjvL50X0wrEPh5h9Y");
+
+  const form = document.getElementById('contactForm');
+
+  // Show success message if redirected
   if (window.location.search.includes('sent=1')) {
     document.getElementById('successAlert').style.display = 'block';
     window.history.replaceState({}, '', window.location.pathname);
   }
 
-  // Loading animation
-  document.getElementById('contactForm').addEventListener('submit', function () {
+  // Handle form submission
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
     const btn = document.getElementById('submitBtn');
     const spinner = document.getElementById('spinner');
     const btnText = document.getElementById('btnText');
 
+    // Start loading animation
     btn.disabled = true;
     spinner.style.display = 'block';
     btnText.textContent = 'Sending…';
+
+    // Collect form data
+    const templateParams = {
+      name:
+        document.getElementById('fname').value + ' ' +
+        document.getElementById('lname').value,
+
+      email:
+        document.getElementById('email_input').value,
+
+      role:
+        document.getElementById('role').value,
+
+      title:
+        document.getElementById('topic').value,
+
+      message:
+        document.getElementById('message').value
+    };
+
+    // Send email
+    emailjs.send(
+      'service_5ek1qpa',
+      'template_twv7eou',
+      templateParams
+    )
+
+    .then(function () {
+
+      // Show success message
+      document.getElementById('successAlert').style.display = 'block';
+      document.getElementById('errorAlert').style.display = 'none';
+
+      // Reset form
+      form.reset();
+
+      // Reset button
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      btnText.textContent = '✉ Send Message';
+
+      // Scroll to top smoothly
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+    })
+
+    .catch(function (error) {
+
+      // Show error message
+      document.getElementById('errorAlert').style.display = 'block';
+      document.getElementById('successAlert').style.display = 'none';
+
+      // Reset button
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      btnText.textContent = '✉ Send Message';
+
+      console.error('EmailJS Error:', error);
+    });
   });
 </script>
 <form name="contact" netlify hidden>
