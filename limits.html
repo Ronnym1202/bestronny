@@ -1,212 +1,1031 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limits & Continuity | Ronny Best Mathematics</title>
-  <meta name="description" content="From intuitive limits to epsilon-delta proofs">
+  <title>Limits &amp; Continuity | Ronny Best Mathematics — CBC-Aligned Calculus Lessons</title>
+  <meta name="description" content="Master limits and continuity with step-by-step CBC-aligned lessons: one-sided limits, limit laws, indeterminate forms, special trigonometric and exponential limits, L'Hopital's Rule, continuity, the Intermediate Value Theorem, epsilon-delta proofs, and limits of sequences and series — with worked examples for Kenyan Senior Secondary and university students.">
+  <meta name="keywords" content="limits Kenya, continuity CBC, KCSE limits, L'Hopital's Rule, epsilon delta, indeterminate forms, intermediate value theorem, sequences and series limits">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/limits.html">
+
+  <meta property="og:title" content="Limits & Continuity | Ronny Best Mathematics">
+  <meta property="og:description" content="From intuitive limits to epsilon-delta proofs — CBC-aligned, step-by-step, with worked examples for Kenyan students.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/limits.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Limits & Continuity — From Intuitive Limits to Epsilon-Delta Proofs",
+    "description": "A CBC-aligned, step-by-step guide to limits and continuity covering one-sided limits, limit laws, indeterminate forms, special limits, L'Hopital's Rule, continuity, the Intermediate Value Theorem, epsilon-delta definitions and limits of sequences and series.",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics"
+    },
+    "dateModified": "2026-06-12"
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">🎯</span>
-  <h1>Limits & Continuity</h1>
-  <p class="hero-sub">From intuitive limits to epsilon-delta proofs</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Limits & Continuity</strong>
-</div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Secondary</li>
-      <li><a href="#lim-intro">Introduction to Limits</a></li>
-      <li><a href="#lim-laws">Limit Laws</a></li>
-      <li><a href="#lim-special">Special Limits</a></li>
-      <li><a href="#lim-continuity">Continuity</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#lim-epsilon">Epsilon-Delta</a></li>
-      <li><a href="#lim-sequences">Limits of Sequences</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="lim-intro" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🎯</span><h2>Introduction to Limits</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <p>lim_{x→a} f(x) = L means: as x gets arbitrarily close to a (but NOT equal to a), f(x) approaches L.</p>
-          <div class="formula-box highlight">
-            One-sided limits:<br>
-            lim_{x→a⁻} f(x) — left-hand limit (approach from below)<br>
-            lim_{x→a⁺} f(x) — right-hand limit (approach from above)<br>
-            Limit exists iff: lim_{x→a⁻} f(x) = lim_{x→a⁺} f(x) = L
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1 — Direct substitution</div>
-              <p>lim_{x→3} (x² + 2x − 1)</p>
-              <p class="soln">= 9 + 6 − 1 = 14</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — Indeterminate form 0/0</div>
-              <p>lim_{x→2} (x²−4)/(x−2)</p>
-              <p class="soln">Factor: (x−2)(x+2)/(x−2) = x+2. Limit = 4.</p></div>
-            <div class="example-card"><div class="example-label">Example 3 — Infinity</div>
-              <p>lim_{x→∞} (3x²+2)/(x²−1)</p>
-              <p class="soln">Divide by x²: (3+2/x²)/(1−1/x²) → 3/1 = 3</p></div>
-          </div>
-        </div>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-    </section>
-
-    <section id="lim-laws" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📋</span><h2>Limit Laws</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Sum/Difference: lim[f ± g] = lim f ± lim g<br>
-            Product: lim[fg] = (lim f)(lim g)<br>
-            Quotient: lim[f/g] = lim f / lim g (if lim g ≠ 0)<br>
-            Power: lim[f(x)]ⁿ = [lim f(x)]ⁿ<br>
-            Squeeze theorem: g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L → lim f = L
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="lim-special" class="topic-section">
-      <div class="section-header"><span class="sec-icon">⭐</span><h2>Special Limits</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            lim_{x→0} sin x / x = 1 &nbsp;&nbsp; lim_{x→0} (1−cos x)/x = 0<br>
-            lim_{x→0} (eˣ−1)/x = 1 &nbsp;&nbsp; lim_{x→0} ln(1+x)/x = 1<br>
-            lim_{x→∞} (1 + 1/x)ˣ = e &nbsp;&nbsp; lim_{x→0} (1+x)^(1/x) = e
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — lim sin(3x)/x as x→0</div>
-              <p class="soln">= 3 × lim sin(3x)/(3x) = 3 × 1 = 3</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>L'Hôpital's Rule</h3>
-          <div class="formula-box">For 0/0 or ∞/∞ forms: lim f(x)/g(x) = lim f′(x)/g′(x)</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — lim (x−sinx)/x³ as x→0</div>
-              <p class="soln">Apply L'Hôpital 3 times: → (1−cosx)/3x² → sinx/6x → cosx/6 = 1/6</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="lim-continuity" class="topic-section">
-      <div class="section-header"><span class="sec-icon">〰️</span><h2>Continuity</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>f is continuous at x = a iff:</h3>
-          <ol class="sub"><li>f(a) is defined</li><li>lim_{x→a} f(x) exists</li><li>lim_{x→a} f(x) = f(a)</li></ol>
-          <h3>Types of Discontinuity</h3>
-          <table class="formula-table">
-            <tr><th>Type</th><th>Description</th><th>Example</th></tr>
-            <tr><td>Removable</th><td>Hole; limit exists but f(a) ≠ limit</td><td>f(x) = (x²−1)/(x−1)</td></tr>
-            <tr><td>Jump</th><td>Left and right limits exist but differ</td><td>Floor function</td></tr>
-            <tr><td>Infinite</th><td>Vertical asymptote</td><td>f(x) = 1/x at 0</td></tr>
-            <tr><td>Oscillatory</th><td>Function oscillates infinitely</td><td>sin(1/x) at 0</td></tr>
-          </table>
-          <div class="callout tip"><span class="callout-icon">💡</span><span><strong>Intermediate Value Theorem:</strong> If f is continuous on [a,b] and f(a) &lt; k &lt; f(b), then ∃ c ∈ (a,b) with f(c) = k.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="lim-epsilon" class="topic-section">
-      <div class="section-header"><span class="sec-icon">ε</span><h2>Epsilon-Delta Definition</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            lim_{x→a} f(x) = L means: ∀ε &gt; 0, ∃δ &gt; 0 such that 0 &lt; |x−a| &lt; δ implies |f(x)−L| &lt; ε
-          </div>
-          <p>This is the rigorous mathematical foundation of limits. Given any tolerance ε around L, we can find a δ-neighbourhood around a that maps inside the ε-band.</p>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Prove lim_{x→2} (3x−1) = 5</div>
-              <p class="soln">Need |3x−1−5| &lt; ε. |3x−6| = 3|x−2| &lt; ε. Choose δ = ε/3. Then |x−2| &lt; δ → |f(x)−5| = 3|x−2| &lt; 3(ε/3) = ε ✓</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="lim-sequences" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∞</span><h2>Limits of Sequences & Series</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Sequence limit: lim_{n→∞} aₙ = L (convergent) or does not exist (divergent)<br>
-            Cauchy sequences: fundamental criterion without explicit limit<br>
-            Series convergence tests: ratio test, root test, integral test, comparison test
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="volumes.html" class="topic-nav-btn prev">← Volumes</a>
-      <a href="complex.html" class="topic-nav-btn next">Complex Numbers →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem" class="active" aria-current="page">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <section class="topic-hero">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>lim</span><span>ε</span><span>δ</span><span>∞</span>
+    </div>
+    <div class="topic-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Limits &amp; Continuity</span>
+      </div>
+      <div class="topic-hero-icon" aria-hidden="true">lim</div>
+      <h1>Limits &amp; Continuity</h1>
+      <p class="topic-hero-sub">
+        Limits describe the behaviour of a function as its input approaches a
+        particular value — even a value the function never actually reaches.
+        This single idea underpins all of calculus: it is how derivatives and
+        integrals are formally defined, and it is the tool used to handle
+        indeterminate forms, asymptotic behaviour, and infinite processes.
+        This lesson progresses from intuitive numerical limits through limit
+        laws, special trigonometric and exponential limits, L'Hôpital's Rule,
+        continuity and the Intermediate Value Theorem, all the way to the
+        rigorous epsilon-delta definition and limits of sequences and series —
+        following the <strong>Competency Based Curriculum (CBC)</strong>
+        Senior Secondary syllabus as set out by KICD, with worked examples in
+        the KCSE examination style.
+      </p>
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Calculus Strand</span>
+        <span class="topic-badge badge-level">Secondary · A-Level · University</span>
+        <span class="topic-badge badge-cbc">CBC / KICD Aligned</span>
+        <span class="topic-badge badge-exam">KCSE Paper 2 Topic</span>
+      </div>
+      <div class="topic-stats-row" role="list">
+        <div class="ts-item" role="listitem"><strong>9</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>18+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>3</strong><span>Levels Covered</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>Free</strong><span>No Signup</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout">
+
+    <!-- ── TOC SIDEBAR ── -->
+    <aside class="toc-sidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <span class="toc-title">On This Page</span>
+        </div>
+        <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+        <ul class="toc-list">
+          <li class="toc-group-label">Foundations</li>
+          <li><a class="toc-link" href="#lim-intro">What Is a Limit?</a></li>
+          <li><a class="toc-link" href="#lim-onesided">One-Sided Limits</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">Secondary</li>
+          <li><a class="toc-link" href="#lim-laws">Limit Laws &amp; Indeterminate Forms</a></li>
+          <li><a class="toc-link" href="#lim-special">Special Limits &amp; L'Hôpital's Rule</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">A-Level</li>
+          <li><a class="toc-link" href="#lim-continuity">Continuity</a></li>
+          <li><a class="toc-link" href="#lim-ivt">Intermediate Value Theorem</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">University</li>
+          <li><a class="toc-link" href="#lim-epsilon">Epsilon-Delta Definition</a></li>
+          <li><a class="toc-link" href="#lim-sequences">Sequences &amp; Series</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">Reference</li>
+          <li><a class="toc-link" href="#lim-sheet">Formula Sheet</a></li>
+          <li><a class="toc-link" href="#lim-errors">Common Errors</a></li>
+        </ul>
+        <div class="toc-actions">
+          <a href="tasks.html" class="toc-practice-btn">
+            <span>Practice Limits</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="topic-content" id="main-content">
+
+      <div class="cbc-context-banner">
+        <span class="ccb-icon" aria-hidden="true">📘</span>
+        <div class="ccb-text">
+          <strong>CBC Curriculum Note:</strong> Limits and continuity form the
+          gateway topic of the Calculus strand in Senior Secondary Pure
+          Mathematics. KICD requires learners to evaluate limits using
+          algebraic techniques, understand continuity and its graphical
+          interpretation, and appreciate limits as the conceptual basis for
+          differentiation and integration — all of which are examined in
+          KCSE Paper 2 and form the entry point for university-level analysis
+          courses.
+        </div>
+      </div>
+
+      <!-- ═══ SECTION: WHAT IS A LIMIT ═══ -->
+      <section id="lim-intro" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">lim</span>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>What Is a Limit?</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              A limit describes what value a function f(x) gets arbitrarily
+              close to as x approaches some value a — without necessarily
+              caring what happens (or whether anything happens) exactly at
+              x = a. We write this as lim<sub>x→a</sub> f(x) = L, read
+              "the limit of f(x) as x approaches a equals L."
+            </p>
+          </div>
+
+          <p class="body-para">
+            This distinction — "approaching" versus "equalling" — is what
+            makes limits powerful. Many of the most important functions in
+            mathematics are undefined or behave strangely at a single point,
+            but are perfectly well-behaved everywhere nearby. Limits let us
+            describe that nearby behaviour precisely, which is exactly what
+            is needed to define the gradient of a curve at a point (a limit
+            of gradients of chords) or the area under a curve (a limit of
+            sums of rectangles).
+          </p>
+
+          <h3 class="sub-heading">Evaluating Limits by Direct Substitution</h3>
+          <p class="body-para">
+            For most "ordinary" functions — polynomials, and combinations of
+            functions that are continuous at a — the limit as x→a is simply
+            found by substituting x = a directly. Problems only arise when
+            direct substitution produces an <strong>indeterminate form</strong>
+            such as 0/0 or ∞/∞, which signals that algebraic simplification is
+            needed first.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1 — Direct substitution</span> lim<sub>x→3</sub> (x² + 2x − 1)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> The function is a polynomial, so it is continuous everywhere — substitute x = 3 directly.</div>
+                <div class="we-step"><span class="step-n">Step 2</span> (3)² + 2(3) − 1 = 9 + 6 − 1</div>
+              </div>
+              <div class="we-answer">= 14</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Indeterminate form 0/0</span> lim<sub>x→2</sub> (x² − 4)/(x − 2)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Direct substitution gives 0/0 — an indeterminate form. We cannot conclude the limit is 0, 1, or undefined from this alone.</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Factorise the numerator: x² − 4 = (x−2)(x+2)</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Cancel the common factor (valid since x ≠ 2 while taking the limit): (x−2)(x+2)/(x−2) = x + 2</div>
+                <div class="we-step"><span class="step-n">Step 4</span> Now substitute x = 2 into the simplified expression: 2 + 2</div>
+              </div>
+              <div class="we-answer">= 4</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Limits at infinity</span> lim<sub>x→∞</sub> (3x² + 2)/(x² − 1)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Direct substitution gives ∞/∞ — indeterminate. Divide every term by the highest power of x in the denominator, x².</div>
+                <div class="we-step"><span class="step-n">Step 2</span> = (3 + 2/x²)/(1 − 1/x²)</div>
+                <div class="we-step"><span class="step-n">Step 3</span> As x→∞, 2/x² → 0 and 1/x² → 0, leaving (3+0)/(1−0)</div>
+              </div>
+              <div class="we-answer">= 3</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Recognising indeterminate forms:</strong> 0/0 and ∞/∞ are
+              the most common, but ∞−∞, 0×∞, 1^∞, 0⁰ and ∞⁰ are also
+              indeterminate. Each requires its own algebraic manipulation —
+              factorising, rationalising, dividing by the highest power, or
+              rewriting using logarithms — before the limit can be evaluated.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: ONE-SIDED LIMITS ═══ -->
+      <section id="lim-onesided" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⇄</span>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>One-Sided Limits &amp; Existence</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            Sometimes a function approaches different values depending on
+            whether x approaches a from below (the left) or from above
+            (the right). One-sided limits let us describe each direction
+            separately — and a two-sided limit exists only when both
+            directions agree.
+          </p>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">One-Sided Limits</div>
+            <div class="fb-math highlight-formula">
+              lim<sub>x→a⁻</sub> f(x) — left-hand limit (x approaches a from below)<br>
+              lim<sub>x→a⁺</sub> f(x) — right-hand limit (x approaches a from above)<br><br>
+              lim<sub>x→a</sub> f(x) exists &nbsp;⟺&nbsp; lim<sub>x→a⁻</sub> f(x) = lim<sub>x→a⁺</sub> f(x) = L
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> f(x) = |x|/x for x ≠ 0. Investigate lim<sub>x→0</sub> f(x)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> For x &gt; 0, |x| = x, so f(x) = x/x = 1. Thus lim<sub>x→0⁺</sub> f(x) = 1</div>
+                <div class="we-step"><span class="step-n">Step 2</span> For x &lt; 0, |x| = −x, so f(x) = −x/x = −1. Thus lim<sub>x→0⁻</sub> f(x) = −1</div>
+                <div class="we-step"><span class="step-n">Step 3</span> The left-hand and right-hand limits differ (−1 ≠ 1)</div>
+              </div>
+              <div class="we-answer">lim<sub>x→0</sub> f(x) does not exist</div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>"Does not exist" is a valid answer:</strong> Students
+              sometimes feel a limit question must have a numerical answer.
+              When one-sided limits disagree, or when a function oscillates
+              without settling (like sin(1/x) near 0), or grows without
+              bound, the correct and complete answer is that the limit
+              <em>does not exist</em> — write this explicitly.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: LIMIT LAWS ═══ -->
+      <section id="lim-laws" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">📋</span>
+          <div>
+            <span class="ls-eyebrow">Secondary · KCSE</span>
+            <h2>Limit Laws &amp; Indeterminate Forms</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Limit laws let us break a complicated limit into simpler pieces,
+              provided each piece's limit exists (and, for quotients, the
+              denominator's limit is non-zero). These laws are the formal
+              justification for "substituting term by term" that you used
+              intuitively in Example 1 above.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Algebra of Limits</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Sum / Difference</span><span class="fb-eq">lim[f(x) ± g(x)] = lim f(x) ± lim g(x)</span></div>
+              <div class="fb-row"><span class="fb-name">Constant multiple</span><span class="fb-eq">lim[k·f(x)] = k · lim f(x)</span></div>
+              <div class="fb-row"><span class="fb-name">Product</span><span class="fb-eq">lim[f(x)g(x)] = (lim f(x))(lim g(x))</span></div>
+              <div class="fb-row"><span class="fb-name">Quotient</span><span class="fb-eq">lim[f(x)/g(x)] = lim f(x) / lim g(x), &nbsp; provided lim g(x) ≠ 0</span></div>
+              <div class="fb-row"><span class="fb-name">Power</span><span class="fb-eq">lim[f(x)]ⁿ = [lim f(x)]ⁿ</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">The Squeeze (Sandwich) Theorem</h3>
+          <p class="body-para">
+            When a function f(x) is "trapped" between two other functions
+            g(x) and h(x) that both tend to the same limit L, then f(x) must
+            also tend to L — even if f(x) itself is too complicated to
+            evaluate directly. This is the standard tool for proving the
+            famous limit lim<sub>x→0</sub> sin x / x = 1.
+          </p>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">Squeeze Theorem</div>
+            <div class="fb-math highlight-formula">
+              If g(x) ≤ f(x) ≤ h(x) near a, and lim<sub>x→a</sub> g(x) = lim<sub>x→a</sub> h(x) = L, then lim<sub>x→a</sub> f(x) = L
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example — Squeeze theorem</span> Evaluate lim<sub>x→0</sub> x² sin(1/x)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> sin(1/x) oscillates between −1 and 1 for all x ≠ 0, so −1 ≤ sin(1/x) ≤ 1</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Multiply through by x² (≥ 0): −x² ≤ x² sin(1/x) ≤ x²</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Both −x² and x² tend to 0 as x→0, so by the squeeze theorem the middle expression must also tend to 0</div>
+              </div>
+              <div class="we-answer">= 0</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: SPECIAL LIMITS & L'HOPITAL ═══ -->
+      <section id="lim-special" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⭐</span>
+          <div>
+            <span class="ls-eyebrow">A-Level</span>
+            <h2>Special Limits &amp; L'Hôpital's Rule</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              A small set of "famous" limits recur throughout calculus,
+              particularly when differentiating trigonometric and exponential
+              functions from first principles. Recognising these patterns —
+              including disguised versions of them — is a key A-Level skill.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Famous Limits as x → 0</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Sine over angle</span><span class="fb-eq">lim<sub>x→0</sub> sin x / x = 1</span></div>
+              <div class="fb-row"><span class="fb-name">Cosine difference</span><span class="fb-eq">lim<sub>x→0</sub> (1 − cos x)/x = 0</span></div>
+              <div class="fb-row"><span class="fb-name">Exponential</span><span class="fb-eq">lim<sub>x→0</sub> (eˣ − 1)/x = 1</span></div>
+              <div class="fb-row"><span class="fb-name">Natural log</span><span class="fb-eq">lim<sub>x→0</sub> ln(1+x)/x = 1</span></div>
+            </div>
+          </div>
+          <div class="formula-block multi">
+            <div class="fb-label">Definitions of e</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">As x → ∞</span><span class="fb-eq">lim<sub>x→∞</sub> (1 + 1/x)ˣ = e</span></div>
+              <div class="fb-row"><span class="fb-name">As x → 0</span><span class="fb-eq">lim<sub>x→0</sub> (1 + x)^(1/x) = e</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example — Disguised standard limit</span> lim<sub>x→0</sub> sin(3x)/x</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Rewrite to expose the standard form: sin(3x)/x = 3 · sin(3x)/(3x)</div>
+                <div class="we-step"><span class="step-n">Step 2</span> As x→0, 3x→0 too, so sin(3x)/(3x) → 1 by the standard limit</div>
+              </div>
+              <div class="we-answer">= 3 × 1 = 3</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">L'Hôpital's Rule</h3>
+          <p class="body-para">
+            When a limit of a quotient gives the indeterminate form 0/0 or
+            ∞/∞, L'Hôpital's Rule allows us to differentiate the numerator
+            and denominator <strong>separately</strong> (not as a quotient
+            rule!) and take the limit of the new ratio. If the new limit is
+            still indeterminate, the rule can be applied again.
+          </p>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">L'Hôpital's Rule</div>
+            <div class="fb-math highlight-formula">
+              If lim f(x)/g(x) gives 0/0 or ∞/∞, then lim f(x)/g(x) = lim f′(x)/g′(x), provided the latter limit exists
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example — Repeated application</span> lim<sub>x→0</sub> (x − sin x)/x³</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Direct substitution gives 0/0. Differentiate top and bottom: (1 − cos x)/(3x²) — still 0/0</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Differentiate again: (sin x)/(6x) — still 0/0</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Differentiate a third time: (cos x)/6</div>
+                <div class="we-step"><span class="step-n">Step 4</span> Now substitute x = 0: cos(0)/6 = 1/6</div>
+              </div>
+              <div class="we-answer">= 1/6</div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>L'Hôpital applies only to indeterminate forms:</strong>
+              Always check that direct substitution genuinely gives 0/0 or
+              ∞/∞ before differentiating top and bottom. If the limit is not
+              indeterminate, L'Hôpital's Rule does not apply and will give a
+              wrong answer.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: CONTINUITY ═══ -->
+      <section id="lim-continuity" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">〜</span>
+          <div>
+            <span class="ls-eyebrow">A-Level</span>
+            <h2>Continuity</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Informally, a function is continuous at a point if its graph
+              has no break, jump, or hole there — you could draw it through
+              that point without lifting your pen. Formally, this requires
+              three conditions to all hold simultaneously.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">The Three Conditions for Continuity</h3>
+          <ol class="method-steps">
+            <li><strong>f(a) is defined</strong> — the function actually has a value at x = a.</li>
+            <li><strong>lim<sub>x→a</sub> f(x) exists</strong> — the left-hand and right-hand limits agree.</li>
+            <li><strong>lim<sub>x→a</sub> f(x) = f(a)</strong> — the limiting value matches the actual function value.</li>
+          </ol>
+          <p class="body-para">
+            If a function satisfies all three conditions at every point of an
+            interval, it is said to be continuous on that interval. Failing
+            any one of the three conditions produces a discontinuity, and the
+            <em>way</em> in which it fails determines the type of discontinuity.
+          </p>
+
+          <h3 class="sub-heading">Types of Discontinuity</h3>
+          <div class="identity-table">
+            <div class="it-row it-head">
+              <span>Type</span>
+              <span>Description &amp; Example</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Removable</span>
+              <span class="it-eq">A "hole" — the limit exists but either f(a) is undefined or f(a) ≠ the limit <em>e.g. f(x) = (x²−1)/(x−1) at x = 1</em></span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Jump</span>
+              <span class="it-eq">Left-hand and right-hand limits both exist but are unequal <em>e.g. the floor function ⌊x⌋ at integer values</em></span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Infinite</span>
+              <span class="it-eq">The function grows without bound near a — a vertical asymptote <em>e.g. f(x) = 1/x at x = 0</em></span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Oscillatory</span>
+              <span class="it-eq">The function oscillates infinitely often with no settling value <em>e.g. f(x) = sin(1/x) at x = 0</em></span>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Show that f(x) = (x² − 1)/(x − 1) has a removable discontinuity at x = 1, and state how to remove it.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> f(1) is undefined (0/0), so condition 1 fails — f is discontinuous at x = 1.</div>
+                <div class="we-step"><span class="step-n">Step 2</span> For x ≠ 1, simplify: (x−1)(x+1)/(x−1) = x+1, so lim<sub>x→1</sub> f(x) = 1+1 = 2. The limit exists.</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Because the limit exists but f(1) is undefined, the discontinuity is removable — define f(1) = 2 to make f continuous.</div>
+              </div>
+              <div class="we-answer">Removable discontinuity at x = 1; redefine f(1) = 2</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: INTERMEDIATE VALUE THEOREM ═══ -->
+      <section id="lim-ivt" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⊢</span>
+          <div>
+            <span class="ls-eyebrow">A-Level</span>
+            <h2>The Intermediate Value Theorem</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              The Intermediate Value Theorem (IVT) is a direct consequence of
+              continuity: a continuous function cannot "skip" values. If it
+              takes one value at one point and a different value at another
+              point, it must take every value in between somewhere in the
+              interval.
+            </p>
+          </div>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">Intermediate Value Theorem</div>
+            <div class="fb-math highlight-formula">
+              If f is continuous on [a, b] and k is any value between f(a) and f(b), then there exists at least one c ∈ (a, b) such that f(c) = k
+            </div>
+          </div>
+
+          <p class="body-para">
+            The most common application of the IVT in Senior Secondary and
+            A-Level mathematics is proving that a root of an equation
+            f(x) = 0 exists within a given interval, by showing that f
+            changes sign over that interval.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Show that x³ − x − 2 = 0 has a root between x = 1 and x = 2</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Let f(x) = x³ − x − 2. Polynomials are continuous everywhere, so f is continuous on [1, 2].</div>
+                <div class="we-step"><span class="step-n">Step 2</span> f(1) = 1 − 1 − 2 = −2</div>
+                <div class="we-step"><span class="step-n">Step 3</span> f(2) = 8 − 2 − 2 = 4</div>
+                <div class="we-step"><span class="step-n">Step 4</span> f(1) = −2 &lt; 0 and f(2) = 4 &gt; 0, so 0 lies between f(1) and f(2). By the IVT, there exists c ∈ (1,2) with f(c) = 0.</div>
+              </div>
+              <div class="we-answer">A root exists in (1, 2)</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>The IVT proves existence, not value:</strong> The
+              theorem guarantees a root exists somewhere in the interval, but
+              does not tell you its exact value. Finding the actual value
+              requires further techniques such as bisection (a numerical
+              method directly motivated by the IVT) or algebraic methods.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: EPSILON-DELTA ═══ -->
+      <section id="lim-epsilon" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">ε</span>
+          <div>
+            <span class="ls-eyebrow">University</span>
+            <h2>The Epsilon-Delta Definition</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Everything covered so far has relied on an intuitive idea of
+              "getting close to." The epsilon-delta (ε–δ) definition makes
+              this idea completely rigorous, removing any reliance on
+              intuition or motion-based language like "approaches."
+            </p>
+          </div>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">Formal Definition of a Limit</div>
+            <div class="fb-math highlight-formula">
+              lim<sub>x→a</sub> f(x) = L &nbsp;means:&nbsp; for every ε &gt; 0, there exists a δ &gt; 0 such that whenever 0 &lt; |x − a| &lt; δ, it follows that |f(x) − L| &lt; ε
+            </div>
+          </div>
+
+          <p class="body-para">
+            In plain language: no matter how small a "tolerance band" ε you
+            draw around L on the y-axis, it is always possible to find a
+            corresponding "input window" δ around a on the x-axis, such that
+            every x inside that window (other than a itself) maps to a value
+            of f(x) inside the tolerance band. The challenge in a proof is
+            always to find an explicit δ in terms of ε.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Prove that lim<sub>x→2</sub> (3x − 1) = 5 using the ε–δ definition</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1 — Target</span> We need: for every ε &gt; 0, find δ &gt; 0 such that 0 &lt; |x−2| &lt; δ ⟹ |(3x−1) − 5| &lt; ε</div>
+                <div class="we-step"><span class="step-n">Step 2 — Simplify the target expression</span> |(3x−1) − 5| = |3x − 6| = 3|x − 2|</div>
+                <div class="we-step"><span class="step-n">Step 3 — Choose δ</span> We want 3|x−2| &lt; ε, i.e. |x−2| &lt; ε/3. So choose δ = ε/3.</div>
+                <div class="we-step check-step"><span class="step-n">Step 4 — Verify</span> If 0 &lt; |x−2| &lt; δ = ε/3, then |(3x−1)−5| = 3|x−2| &lt; 3·(ε/3) = ε ✔</div>
+              </div>
+              <div class="we-answer">δ = ε/3 works for every ε &gt; 0, so lim<sub>x→2</sub>(3x−1) = 5 is proven</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Why this matters:</strong> Every limit law, every
+              theorem about continuity, and the entire foundation of calculus
+              ultimately rests on this single definition. University courses
+              in real analysis spend significant time proving familiar
+              results (like the limit laws used earlier in this lesson) from
+              this ε–δ definition alone.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: SEQUENCES & SERIES ═══ -->
+      <section id="lim-sequences" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">∞</span>
+          <div>
+            <span class="ls-eyebrow">University</span>
+            <h2>Limits of Sequences &amp; Series</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              A sequence is a list of numbers a₁, a₂, a₃, ... indexed by the
+              natural numbers. The limit of a sequence asks the same question
+              as before — what value does aₙ approach as n becomes very
+              large? — but with n restricted to whole numbers rather than
+              moving continuously.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Sequence &amp; Series Concepts</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Sequence limit</span><span class="fb-eq">lim<sub>n→∞</sub> aₙ = L (convergent), or the limit does not exist (divergent)</span></div>
+              <div class="fb-row"><span class="fb-name">Cauchy sequence</span><span class="fb-eq">A sequence whose terms become arbitrarily close to each other — equivalent to convergence in the real numbers, without referencing L directly</span></div>
+              <div class="fb-row"><span class="fb-name">Series convergence</span><span class="fb-eq">A series Σaₙ converges if the sequence of partial sums Sₙ = a₁+...+aₙ converges to a finite limit</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Common Series Convergence Tests</h3>
+          <div class="identity-table">
+            <div class="it-row it-head">
+              <span>Test</span>
+              <span>Idea</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Ratio test</span>
+              <span class="it-eq">Compute L = lim|aₙ₊₁/aₙ|. Converges if L &lt; 1, diverges if L &gt; 1, inconclusive if L = 1</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Root test</span>
+              <span class="it-eq">Compute L = lim ⁿ√|aₙ|. Same conclusions as the ratio test</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Integral test</span>
+              <span class="it-eq">For positive decreasing aₙ = f(n), Σaₙ converges iff ∫₁^∞ f(x)dx converges</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Comparison test</span>
+              <span class="it-eq">If 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges too</span>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Determine whether aₙ = (2n+1)/(n+3) converges, and if so find its limit</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Divide numerator and denominator by n (the highest power present): aₙ = (2 + 1/n)/(1 + 3/n)</div>
+                <div class="we-step"><span class="step-n">Step 2</span> As n→∞, 1/n→0 and 3/n→0</div>
+                <div class="we-step"><span class="step-n">Step 3</span> aₙ → (2+0)/(1+0)</div>
+              </div>
+              <div class="we-answer">Converges to 2</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Connection to series:</strong> The geometric series
+              Σrⁿ converges to 1/(1−r) precisely when |r| &lt; 1 — this
+              single fact, itself a limit of partial sums, underlies
+              applications from compound interest to the Sequences &amp;
+              Series strand of the CBC syllabus.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: FORMULA SHEET ═══ -->
+      <section id="lim-sheet" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">📑</span>
+          <div>
+            <span class="ls-eyebrow">Quick Reference</span>
+            <h2>Limits Formula Sheet</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            A consolidated reference of every result covered in this lesson —
+            useful for revision before KCSE Paper 2 or university calculus
+            assessments.
+          </p>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">Existence &amp; One-Sided</div>
+              <div class="fs-items">
+                <div class="fs-item">lim exists ⟺ left limit = right limit</div>
+                <div class="fs-item">lim<sub>x→a⁻</sub> f, lim<sub>x→a⁺</sub> f</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Algebra of Limits</div>
+              <div class="fs-items">
+                <div class="fs-item">lim[f±g] = lim f ± lim g</div>
+                <div class="fs-item">lim[fg] = (lim f)(lim g)</div>
+                <div class="fs-item">lim[f/g] = lim f / lim g (lim g ≠ 0)</div>
+                <div class="fs-item">Squeeze: g≤f≤h, lim g=lim h=L ⟹ lim f=L</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Special Limits (x→0)</div>
+              <div class="fs-items">
+                <div class="fs-item">sin x / x → 1</div>
+                <div class="fs-item">(1−cos x)/x → 0</div>
+                <div class="fs-item">(eˣ−1)/x → 1</div>
+                <div class="fs-item">ln(1+x)/x → 1</div>
+                <div class="fs-item">(1+1/x)ˣ → e (x→∞)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">L'Hôpital's Rule</div>
+              <div class="fs-items">
+                <div class="fs-item">0/0 or ∞/∞ ⟹ lim f/g = lim f′/g′</div>
+                <div class="fs-item">Reapply if still indeterminate</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Continuity</div>
+              <div class="fs-items">
+                <div class="fs-item">f(a) defined</div>
+                <div class="fs-item">lim<sub>x→a</sub> f(x) exists</div>
+                <div class="fs-item">lim<sub>x→a</sub> f(x) = f(a)</div>
+                <div class="fs-item">IVT: continuous + sign change ⟹ root</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Rigorous &amp; Sequences</div>
+              <div class="fs-items">
+                <div class="fs-item">ε–δ: |x−a|&lt;δ ⟹ |f(x)−L|&lt;ε</div>
+                <div class="fs-item">Ratio test: L=lim|aₙ₊₁/aₙ|</div>
+                <div class="fs-item">Geometric series: Σrⁿ → 1/(1−r), |r|&lt;1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: COMMON ERRORS ═══ -->
+      <section id="lim-errors" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⚠</span>
+          <div>
+            <span class="ls-eyebrow">Exam Tips</span>
+            <h2>Common Errors to Avoid</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <div class="errors-grid">
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> lim<sub>x→2</sub> (x²−4)/(x−2) = 0/0 = "undefined, so the limit doesn't exist"</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> Factorise and cancel first: the limit equals 4</div>
+              <div class="ec-note">0/0 means "indeterminate, needs more work" — not "the limit does not exist." Always simplify before concluding.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> Applying L'Hôpital's Rule as a quotient rule: differentiate f/g as one expression</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> Differentiate f and g <em>separately</em>, then form the new ratio f′/g′</div>
+              <div class="ec-note">L'Hôpital's Rule is not the quotient rule — mixing the two produces a completely incorrect result.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> Concluding lim<sub>x→0</sub> f(x) = f(0) for every function</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> This equality only holds if f is continuous at 0</div>
+              <div class="ec-note">For discontinuous functions, the limit and the function value at a point can differ — or one may not exist at all.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> "The limit doesn't exist because the function isn't defined at that point"</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> The limit can exist even when f(a) is undefined (removable discontinuity)</div>
+              <div class="ec-note">A limit only depends on values <em>near</em> a, never on the value (or absence of a value) exactly at a.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> lim<sub>x→∞</sub> (3x²+2)/(x²−1), dividing only the numerator by x²</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> Divide <em>every</em> term, top and bottom, by the same power of x</div>
+              <div class="ec-note">Dividing only part of the expression changes its value — the division must be applied consistently throughout.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> Using the IVT to claim the root's exact value is known</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> The IVT only guarantees a root <em>exists</em> in the interval</div>
+              <div class="ec-note">Finding the value itself requires further work — e.g. the bisection method or algebraic solving.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prev / Next navigation -->
+      <nav class="topic-nav-footer" aria-label="Lesson navigation">
+        <a href="volumes.html" class="tnf-btn tnf-prev">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><span class="tnf-label">Previous</span><span class="tnf-name">Volumes</span></span>
+        </a>
+        <a href="differentiation.html" class="tnf-btn tnf-next">
+          <span><span class="tnf-label">Next</span><span class="tnf-name">Differentiation</span></span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+
+    </main>
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
 </body>
 </html>

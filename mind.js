@@ -910,23 +910,23 @@ let calcMode = 'diff';
 let calculusScore = 0, calculusStreak = 0;
 
 const DIFF_PROBLEMS = [
-    { fn: 'f(x) = x⁵',               directive: 'Differentiate',                    ans: '5x⁴',                   working: 'Power rule: d/dx[xⁿ] = nxⁿ⁻¹\nd/dx[x⁵] = 5x⁴',                                                                              wrongs: ['4x⁵', '5x⁵', 'x⁴'] },
-    { fn: 'f(x) = 3x⁴ − 2x² + 7',    directive: 'Differentiate',                    ans: '12x³ − 4x',             working: 'd/dx[3x⁴] = 12x³\nd/dx[−2x²] = −4x\nd/dx[7] = 0\nTotal: 12x³ − 4x',                                                         wrongs: ['12x³ − 4x + 7', '12x³ + 4x', '3x³ − 2x'] },
+    { fn: 'f(x) = x⁵',                 directive: 'Differentiate',                    ans: '5x⁴',                   working: 'Power rule: d/dx[xⁿ] = nxⁿ⁻¹\nd/dx[x⁵] = 5x⁴',                                                                              wrongs: ['4x⁵', '5x⁵', 'x⁴'] },
+    { fn: 'f(x) = 3x⁴ − 2x² + 7',      directive: 'Differentiate',                    ans: '12x³ − 4x',             working: 'd/dx[3x⁴] = 12x³\nd/dx[−2x²] = −4x\nd/dx[7] = 0\nTotal: 12x³ − 4x',                                                         wrongs: ['12x³ − 4x + 7', '12x³ + 4x', '3x³ − 2x'] },
     { fn: 'f(x) = sin(x)',             directive: 'Differentiate',                    ans: 'cos(x)',                working: 'Standard result: d/dx[sin x] = cos x',                                                                                          wrongs: ['−cos(x)', 'sin(x)', '−sin(x)'] },
     { fn: 'f(x) = e^(3x)',             directive: 'Differentiate',                    ans: '3e^(3x)',               working: 'Chain rule: d/dx[e^(kx)] = k·e^(kx)\nd/dx[e^(3x)] = 3e^(3x)',                                                                  wrongs: ['e^(3x)', '3xe^(3x)', 'e^(3)'] },
     { fn: 'f(x) = x²·sin(x)',          directive: 'Differentiate (Product Rule)',     ans: '2x·sin(x) + x²·cos(x)', working: 'Product Rule: (uv)\' = u\'v + uv\'\nu = x², u\' = 2x\nv = sin x, v\' = cos x\n= 2x·sin(x) + x²·cos(x)',                       wrongs: ['2x·cos(x)', 'x²·cos(x) + 2x', '2x·sin(x)·cos(x)'] },
     { fn: 'f(x) = sin(x²)',            directive: 'Differentiate (Chain Rule)',       ans: '2x·cos(x²)',            working: 'Chain rule: d/dx[sin(u)] = cos(u)·u\'\nu = x², u\' = 2x\n= 2x·cos(x²)',                                                        wrongs: ['cos(x²)', 'cos(2x)', '2cos(x²)'] },
     { fn: 'f(x) = ln(x)',              directive: 'Differentiate',                    ans: '1/x',                   working: 'Standard result: d/dx[ln x] = 1/x',                                                                                             wrongs: ['x/ln(x)', 'ln(x)/x', '1/x²'] },
     { fn: 'f(x) = tan(x)',             directive: 'Differentiate',                    ans: 'sec²(x)',               working: 'Standard result: d/dx[tan x] = sec²x\nAlternatively = 1/cos²x',                                                                wrongs: ['cos²(x)', '1/sin²(x)', 'sec(x)·tan(x)'] },
-    { fn: 'f(x) = (2x + 1)⁶',         directive: 'Differentiate (Chain Rule)',       ans: '12(2x + 1)⁵',           working: 'Chain rule: d/dx[u⁶] = 6u⁵·u\'\nu = 2x+1, u\' = 2\n= 6·(2x+1)⁵·2 = 12(2x+1)⁵',                                              wrongs: ['6(2x+1)⁵', '12(2x+1)⁶', '(2x+1)⁵'] },
+    { fn: 'f(x) = (2x + 1)⁶',          directive: 'Differentiate (Chain Rule)',       ans: '12(2x + 1)⁵',           working: 'Chain rule: d/dx[u⁶] = 6u⁵·u\'\nu = 2x+1, u\' = 2\n= 6·(2x+1)⁵·2 = 12(2x+1)⁵',                                              wrongs: ['6(2x+1)⁵', '12(2x+1)⁶', '(2x+1)⁵'] },
 ];
 
 const INTEG_PROBLEMS = [
-    { fn: '∫ x⁴ dx',               directive: 'Integrate',                        ans: 'x⁵/5 + C',             working: 'Power rule: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C\n∫x⁴ dx = x⁵/5 + C',                                                              wrongs: ['4x³ + C', 'x⁵ + C', 'x⁵/4 + C'] },
+    { fn: '∫ x⁴ dx',                directive: 'Integrate',                        ans: 'x⁵/5 + C',             working: 'Power rule: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C\n∫x⁴ dx = x⁵/5 + C',                                                              wrongs: ['4x³ + C', 'x⁵ + C', 'x⁵/4 + C'] },
     { fn: '∫ cos(x) dx',            directive: 'Integrate',                        ans: 'sin(x) + C',           working: 'Standard result: ∫cos x dx = sin x + C',                                                                                   wrongs: ['−sin(x) + C', 'cos(x) + C', 'tan(x) + C'] },
     { fn: '∫ e^(2x) dx',            directive: 'Integrate',                        ans: '½e^(2x) + C',          working: '∫e^(kx) dx = (1/k)e^(kx) + C\n∫e^(2x) dx = (1/2)e^(2x) + C = ½e^(2x) + C',                                            wrongs: ['2e^(2x) + C', 'e^(2x) + C', 'e^x + C'] },
     { fn: '∫ 1/x dx',               directive: 'Integrate',                        ans: 'ln|x| + C',            working: 'Standard result: ∫(1/x) dx = ln|x| + C\n(The absolute value matters for x < 0)',                                          wrongs: ['x⁻² + C', '1/x² + C', 'ln(x²) + C'] },
-    { fn: '∫₀² (3x² + 2) dx',       directive: 'Evaluate the definite integral',  ans: '12',                   working: '∫(3x² + 2)dx = x³ + 2x + C\nApply limits: [x³ + 2x]₀²\n= (8 + 4) − (0 + 0) = 12',                                       wrongs: ['10', '14', '8'] },
+    { fn: '∫₀² (3x² + 2) dx',       directive: 'Evaluate the definite integral',   ans: '12',                   working: '∫(3x² + 2)dx = x³ + 2x + C\nApply limits: [x³ + 2x]₀²\n= (8 + 4) − (0 + 0) = 12',                                       wrongs: ['10', '14', '8'] },
     { fn: '∫ x·eˣ dx',              directive: 'Integrate (by parts)',             ans: 'eˣ(x − 1) + C',        working: 'Integration by parts: ∫u dv = uv − ∫v du\nu = x → du = dx\ndv = eˣdx → v = eˣ\n= xeˣ − ∫eˣdx = xeˣ − eˣ + C = eˣ(x−1) + C', wrongs: ['xeˣ + C', 'eˣ + C', 'x²eˣ/2 + C'] },
     { fn: '∫ sin²(x) dx',           directive: 'Integrate',                        ans: 'x/2 − sin(2x)/4 + C',  working: 'Use identity: sin²x = (1 − cos 2x)/2\n∫sin²x dx = ∫(1−cos 2x)/2 dx\n= x/2 − sin(2x)/4 + C',                          wrongs: ['−cos²(x)/2 + C', '−sin(x)cos(x) + C', 'x/2 + C'] },
     { fn: '∫ x/(x²+1) dx',          directive: 'Integrate (substitution)',         ans: '½ln(x²+1) + C',        working: 'Substitution: u = x²+1, du = 2x dx\n∫x/(x²+1) dx = ½∫(1/u)du = ½ln|u| + C\n= ½ln(x²+1) + C',                         wrongs: ['ln(x²+1) + C', 'arctan(x) + C', 'x²/(x²+1) + C'] },
@@ -1314,7 +1314,6 @@ function newComplex() {
             `${parseFloat((360 * 2 / n).toFixed(1))}°`
         ];
     }
-
     currentComplexProblem = { q, ans, working };
     $('complexQ').textContent = q;
 
@@ -1339,7 +1338,6 @@ function newComplex() {
         setTimeout(newComplex, 2200);
     });
 }
-
 function drawArgand(re, im) {
     if (!argandCtx) return;
     const canvas = $('argandCanvas');
@@ -1373,14 +1371,12 @@ function drawArgand(re, im) {
     ctx.fillStyle = '#4a2508'; ctx.font = 'bold 12px DM Sans, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText(`z = ${re}${im >= 0 ? '+' : ''}${im}i`, px + 8, py - 6);
 }
-
 function showComplexWorking() {
     if (!currentComplexProblem) return;
     const w = $('complexWorking');
     w.style.display = 'block';
     w.textContent = currentComplexProblem.working;
 }
-
 /* ══════════════════════════════════════════════════════════════
    BOOT
    ══════════════════════════════════════════════════════════════ */
@@ -1394,7 +1390,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(newMatrix, 100);
     setTimeout(newCalculus, 100);
     setTimeout(newComplex, 100);
-
     // Hamburger — class-based toggle
     const hamburger = document.getElementById('hamburgerBtn');
     const nav = document.getElementById('header-nav');
@@ -1404,7 +1399,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.toggle('nav-open', !isOpen);
             hamburger.setAttribute('aria-expanded', String(!isOpen));
         });
-
         // Close nav when a link is tapped on mobile
         nav.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
@@ -1412,7 +1406,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.setAttribute('aria-expanded', 'false');
             });
         });
-
         // Close nav when clicking outside
         document.addEventListener('click', e => {
             if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
@@ -1421,7 +1414,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
     // Enter key support per active game
     document.addEventListener('keydown', e => {
         if (e.key !== 'Enter') return;

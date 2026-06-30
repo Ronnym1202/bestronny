@@ -1,466 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements | Ronny Best Mathematics</title>
-    <meta name="description" content="Track your mathematics progress, earned badges, and topic mastery on the Ronny Best Mathematics platform.">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <script src="shared.js"></script>
-    <style>
-        :root {
-            --bisque:        #ffe4c4;
-            --bisque-dark:   #f5d0a9;
-            --bisque-deeper: #e8b98a;
-            --bisque-light:  #fff9f3;
-            --brown:         #7b4a1e;
-            --brown-dark:    #4a2508;
-            --brown-mid:     #a0622a;
-            --amber:         #c97b0a;
-            --green:         #2e6645;
-            --green-light:   #3d8559;
-            --blue:          #1a56a0;
-            --text:          #2e1a0c;
-            --muted:         #7a5c42;
-            --card:          #fffcf7;
-            --shadow:        0 4px 24px rgba(74,37,8,.10);
-            --radius:        14px;
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Nunito', sans-serif; background: var(--bisque-light); color: var(--text); min-height: 100vh; }
+<head>
+  <!-- ═══ META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements &amp; Badges | Ronny Best Mathematics — CBC Kenya</title>
+  <meta name="description" content="Track your mathematics achievement badges, topic mastery across all 13 CBC topics, accuracy scores, learning streaks, and full activity history on Ronny Best Mathematics. Free progress tracking for Kenyan secondary school students.">
+  <meta name="keywords" content="mathematics achievements Kenya, CBC maths progress tracker, KCSE practice badges, student progress Kenya, mathematics learning milestones, Ronny Best Mathematics">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/achievements.html">
 
-        nav {
-            background: var(--brown-dark); height: 62px;
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 2.5rem; position: sticky; top: 0; z-index: 200;
-            box-shadow: 0 2px 18px rgba(74,37,8,.4);
-        }
-        .nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-        .nav-logo span { color: var(--bisque-deeper); }
-        .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
-        .nav-links a { color: rgba(255,228,196,.7); text-decoration: none; font-size: .87rem; font-weight: 600; transition: color .2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--bisque); }
-        .nav-cta { background: var(--green) !important; color: #fff !important; padding: .4rem 1rem; border-radius: 7px; }
+  <meta property="og:title" content="Achievements &amp; Progress | Ronny Best Mathematics">
+  <meta property="og:description" content="Track your maths badges, mastery bars, and full learning history — free CBC-aligned progress tracking for Kenyan students.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bestronny.netlify.app/achievements.html">
+  <meta property="og:image" content="IMAGES/P2.png">
 
-        .page-hero {
-            background: linear-gradient(160deg, var(--brown-dark) 0%, #1a3d6e 100%);
-            padding: 3.5rem 2rem 3rem; text-align: center; position: relative; overflow: hidden;
-        }
-        .page-hero::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(ellipse 60% 80% at 80% 20%, rgba(255,228,196,.06) 0%, transparent 60%);
-            pointer-events: none;
-        }
-        .hero-icon { font-size: 3rem; margin-bottom: .75rem; display: block; position: relative; }
-        .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); color: var(--bisque); font-weight: 700; position: relative; }
-        .page-hero p { color: rgba(255,228,196,.6); margin-top: .5rem; font-size: .95rem; position: relative; }
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
 
-        .page-body { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-        .card { background: var(--card); border: 1px solid var(--bisque-dark); border-radius: var(--radius); padding: 1.75rem 2rem; box-shadow: var(--shadow); }
-        .card-title {
-            font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700;
-            color: var(--brown-dark); margin-bottom: 1.2rem; padding-bottom: .6rem;
-            border-bottom: 2px solid var(--bisque-dark); display: flex; align-items: center; gap: .5rem;
-        }
+  <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — inside <head> as required -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
 
-        /* STATS STRIP */
-        .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        .stat-box {
-            background: var(--card); border: 1.5px solid var(--bisque-dark); border-radius: var(--radius);
-            padding: 1.25rem 1rem; text-align: center; box-shadow: var(--shadow);
-            transition: transform .18s, box-shadow .18s;
-        }
-        .stat-box:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-        .stat-box .val { font-size: 2.4rem; font-weight: 800; color: var(--brown-dark); font-family: 'Cormorant Garamond', serif; line-height: 1; }
-        .stat-box .lbl { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 700; margin-top: .35rem; }
-        .stat-box.c-blue  .val { color: var(--blue); }
-        .stat-box.c-green .val { color: var(--green); }
-        .stat-box.c-amber .val { color: var(--amber); }
-        .stat-box.c-brown .val { color: var(--brown); }
+  <!-- Shared progress module — loaded before DOMContentLoaded -->
+  <script src="shared.js"></script>
 
-        /* HOW IT WORKS */
-        .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-        .how-item { background: var(--bisque-light); border: 1px solid var(--bisque-dark); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
-        .how-item .step-num {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 28px; height: 28px; border-radius: 50%; background: var(--brown-dark);
-            color: var(--bisque); font-size: .8rem; font-weight: 800; margin-bottom: .5rem;
-        }
-        .how-item strong { display: block; color: var(--brown-dark); font-size: .9rem; margin-bottom: .25rem; }
-        .how-item p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Achievements & Progress — Ronny Best Mathematics",
+    "description": "Track mathematics achievement badges and topic mastery across all 13 CBC curriculum topics for Kenyan secondary school students.",
+    "url": "https://bestronny.netlify.app/achievements.html",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    }
+  }
+  </script>
 
-        /* BADGES */
-        .badges-section-label {
-            font-size: .75rem; font-weight: 800; letter-spacing: .1em;
-            text-transform: uppercase; color: var(--muted); margin-bottom: .75rem;
-        }
-        .badges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: .75rem; margin-bottom: 1.5rem; }
-        .badge-item {
-            background: var(--bisque-light); border: 2px solid var(--bisque-dark);
-            border-radius: var(--radius); padding: 1.1rem .8rem; text-align: center;
-            transition: transform .18s, box-shadow .18s, border-color .18s;
-            position: relative;
-        }
-        .badge-item.earned { border-color: var(--amber); background: #fffbf0; }
-        .badge-item.earned:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-        .badge-item.locked { opacity: .4; filter: grayscale(.7); }
-        .badge-item .badge-icon { font-size: 1.8rem; display: block; margin-bottom: .4rem; line-height: 1; }
-        .badge-item .badge-name { font-size: .78rem; font-weight: 700; color: var(--brown-dark); line-height: 1.3; margin-bottom: .2rem; }
-        .badge-item .badge-desc { font-size: .7rem; color: var(--muted); line-height: 1.4; }
-        .badge-level {
-            position: absolute; top: 6px; right: 6px;
-            font-size: .6rem; font-weight: 800; letter-spacing: .05em;
-            text-transform: uppercase; padding: 2px 7px; border-radius: 20px;
-        }
-        .badge-level.bronze { background: #f5deb3; color: #8b6914; }
-        .badge-level.silver { background: #e8e8e8; color: #666; }
-        .badge-level.gold   { background: #fff0a0; color: #8b6914; }
+  <style>
+    /* ══════════════════════════════════════════════════
+       DESIGN TOKENS — matches index.css / topic.css
+    ══════════════════════════════════════════════════ */
+    :root {
+      --navy-950:#070f1e; --navy-900:#0a1628; --navy-800:#0f2040;
+      --navy-700:#1a3560; --navy-600:#1e4d8c; --navy-400:#4a80c8;
+      --bisque:#ffe4c4; --bisque-light:#fff3e8; --bisque-mid:#f5ddb8;
+      --bisque-dark:#e8b87a; --bisque-deep:#c8832a;
+      --cream:#faf7f2; --cream-100:#f4efe5; --cream-200:#e8dfd0; --cream-300:#d5cfc4;
+      --ink:#1a1612; --ink-70:#3a3028; --ink-50:#5a4e42; --ink-30:#9a8a78;
+      --green:#1e6e36; --green-bg:#e8f5ec; --green-dark:#155228;
+      --red:#b91c1c; --red-bg:#fef2f2;
+      --amber:#c97b0a; --amber-bg:#fef3cd;
+      --white:#ffffff;
+      --font-display:'Playfair Display',Georgia,serif;
+      --font-serif:'Lora',Georgia,serif;
+      --font-ui:'DM Sans',system-ui,sans-serif;
+      --font-mono:'JetBrains Mono','Courier New',monospace;
+      --radius-sm:8px; --radius-md:14px; --radius-lg:20px;
+      --radius-xl:28px; --radius-pill:9999px;
+      --shadow-xs:0 1px 3px rgba(10,22,40,.07);
+      --shadow-sm:0 2px 10px rgba(10,22,40,.10);
+      --shadow-md:0 6px 24px rgba(10,22,40,.13);
+      --shadow-lg:0 12px 40px rgba(10,22,40,.17);
+      --transition:.24s cubic-bezier(.4,0,.2,1);
+      --max-w:1100px; --pad-x:clamp(1.2rem,5%,4rem);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font-ui);background:var(--cream);color:var(--ink);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--navy-700);transition:color var(--transition)}
+    a:hover{color:var(--navy-900)}
+    ul,ol{list-style:none}
+    h1,h2,h3,h4,h5{font-family:var(--font-display);line-height:1.25;color:var(--navy-900);letter-spacing:-.015em}
+    p{color:var(--ink-50)}
+    :focus-visible{outline:3px solid var(--bisque-deep);outline-offset:3px;border-radius:4px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--bisque-deep);color:#fff;padding:.6rem 1.2rem;border-radius:var(--radius-sm);font-weight:700;z-index:9999;text-decoration:none;transition:top .2s}
+    .skip-link:focus{top:1rem}
 
-        /* TOPIC PROGRESS BARS — all 13 */
-        .progress-list { display: flex; flex-direction: column; gap: 1rem; }
-        .prog-row { display: flex; flex-direction: column; gap: .25rem; }
-        .prog-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: .3rem; }
-        .prog-label { font-size: .88rem; font-weight: 700; color: var(--brown); }
-        .prog-pct   { font-size: .8rem;  font-weight: 700; color: var(--muted); }
-        .prog-track { height: 11px; background: var(--bisque-dark); border-radius: 99px; overflow: hidden; }
-        .prog-fill  { height: 100%; border-radius: 99px; width: 0; transition: width 1.1s cubic-bezier(.4,0,.2,1); }
-        .c-navy    { background: linear-gradient(90deg,#1a3560,#4a80c8); }
-        .c-trig    { background: linear-gradient(90deg,#7a4a14,#c8832a); }
-        .c-stats   { background: linear-gradient(90deg,#2e6645,#4ade80); }
-        .c-limits  { background: linear-gradient(90deg,#5b3a8a,#a78bfa); }
-        .c-diff    { background: linear-gradient(90deg,#5b3a8a,#c084fc); }
-        .c-integ   { background: linear-gradient(90deg,#3a5f8a,#60a5fa); }
-        .c-vec     { background: linear-gradient(90deg,#c8832a,#fbbf24); }
-        .c-mat     { background: linear-gradient(90deg,#6b3c14,#b45309); }
-        .c-conics  { background: linear-gradient(90deg,#0e6888,#2dd4bf); }
-        .c-seq     { background: linear-gradient(90deg,#1d6e6e,#34d399); }
-        .c-complex { background: linear-gradient(90deg,#7a1060,#e879f9); }
-        .c-areas   { background: linear-gradient(90deg,#3a7a30,#4ade80); }
-        .c-vols    { background: linear-gradient(90deg,#1a5080,#38bdf8); }
+    /* HEADER */
+    .site-header{background:linear-gradient(160deg,var(--navy-950) 0%,var(--navy-800) 55%,var(--navy-700) 100%);padding:24px var(--pad-x);border-bottom:3px solid var(--bisque-dark);position:relative;overflow:hidden}
+    .site-header::before{content:"∑ ∫ π √ ∞";position:absolute;top:8%;right:4%;font-family:var(--font-mono);font-size:4rem;font-weight:700;color:rgba(255,228,196,.05);letter-spacing:.3em;transform:rotate(10deg);pointer-events:none;user-select:none}
+    .header-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .brand-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+    .brand-sigma{width:46px;height:46px;background:var(--bisque-deep);color:#fff;font-family:var(--font-display);font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);flex-shrink:0;box-shadow:0 4px 14px rgba(200,131,42,.35)}
+    .brand-text{font-family:var(--font-display);font-size:clamp(1.1rem,2.5vw,1.45rem);font-weight:700;color:var(--bisque-light);letter-spacing:-.01em;line-height:1.2}
+    .brand-text em{display:block;font-style:normal;color:var(--bisque-dark);font-size:.85em;font-weight:400;font-family:var(--font-serif)}
+    .brand-tagline{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,228,196,.45);margin-top:5px}
+    .welcome-pill{font-family:var(--font-ui);font-size:.82rem;font-weight:600;color:var(--bisque-light);background:rgba(255,228,196,.1);border:1px solid rgba(255,228,196,.2);padding:.4rem 1.2rem;border-radius:var(--radius-pill)}
 
-        /* ACTIVITY */
-        .activity-feed { display: flex; flex-direction: column; }
-        .activity-item {
-            display: flex; align-items: flex-start; gap: .75rem;
-            padding: .75rem 0; border-bottom: 1px solid var(--bisque-dark);
-            font-size: .88rem; color: var(--muted); line-height: 1.5;
-        }
-        .activity-item:last-child { border-bottom: none; }
-        .activity-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bisque-deeper); flex-shrink: 0; margin-top: .35rem; }
-        .activity-item.correct   .activity-dot { background: var(--green); }
-        .activity-item.incorrect .activity-dot { background: #dc2626; }
-        .activity-item.badge-ev  .activity-dot { background: var(--amber); }
-        .act-time { font-size: .73rem; color: #bba898; white-space: nowrap; margin-left: auto; flex-shrink: 0; }
+    /* NAV */
+    .main-nav{background:var(--navy-900);position:sticky;top:0;z-index:500;box-shadow:0 4px 20px rgba(0,0,0,.35);border-bottom:2px solid var(--bisque-dark)}
+    .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);position:relative}
+    .nav-mobile-bar{display:none;align-items:center;justify-content:space-between;padding:.7rem 0}
+    .nav-mobile-brand{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--bisque-light)}
+    .nav-mobile-brand em{font-style:normal;color:var(--bisque-dark)}
+    .nav-mobile-actions{display:flex;align-items:center;gap:8px}
+    .nav-hamburger{background:none;border:1px solid rgba(255,228,196,.25);border-radius:var(--radius-sm);padding:6px 8px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:var(--transition)}
+    .nav-hamburger:hover{background:rgba(255,228,196,.1)}
+    .ham-line{display:block;width:20px;height:2px;background:var(--bisque);border-radius:2px;transition:transform .25s,opacity .25s}
+    .nav-hamburger[aria-expanded="true"] .ham-line:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .nav-hamburger[aria-expanded="true"] .ham-line:nth-child(2){opacity:0}
+    .nav-hamburger[aria-expanded="true"] .ham-line:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .nav-search-toggle{background:none;border:1px solid rgba(255,228,196,.25);border-radius:var(--radius-sm);padding:7px;cursor:pointer;color:var(--bisque);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+    .nav-search-toggle:hover{background:rgba(255,228,196,.1)}
+    .nav-search-bar{padding:.6rem 0 .4rem;position:relative}
+    .nsb-inner{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,228,196,.2);border-radius:var(--radius-md);padding:.55rem 1rem}
+    .nsb-inner svg{color:rgba(255,228,196,.4);flex-shrink:0}
+    #siteSearch{flex:1;background:none;border:none;outline:none;font-family:var(--font-ui);font-size:.9rem;color:var(--bisque-light);min-width:0}
+    #siteSearch::placeholder{color:rgba(255,228,196,.35)}
+    #searchClear{background:none;border:none;color:rgba(255,228,196,.4);cursor:pointer;font-size:.85rem;padding:2px 6px;border-radius:4px}
+    #searchClear:hover{color:var(--bisque)}
+    .search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--navy-800);border:1px solid rgba(255,228,196,.15);border-radius:var(--radius-md);z-index:600;max-height:320px;overflow-y:auto;box-shadow:var(--shadow-lg)}
+    .sr-item{display:flex;align-items:center;gap:12px;padding:.75rem 1rem;text-decoration:none;color:var(--bisque-light);font-family:var(--font-ui);font-size:.88rem;border-bottom:1px solid rgba(255,228,196,.06);transition:background var(--transition)}
+    .sr-item:last-child{border-bottom:none}
+    .sr-item:hover{background:rgba(255,228,196,.08)}
+    .sr-item-icon{width:32px;height:32px;background:rgba(255,228,196,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--bisque-dark);flex-shrink:0}
+    .sr-item-text{display:flex;flex-direction:column;gap:2px}
+    .sr-item-name{font-weight:600;color:var(--bisque-light)}
+    .sr-item-type{font-size:.74rem;color:rgba(255,228,196,.4)}
+    .sr-no-results{padding:1rem;text-align:center;color:rgba(255,228,196,.35);font-size:.88rem}
+    .nav-list{display:flex;flex-wrap:wrap;gap:0;justify-content:center;align-items:center}
+    .nav-list>li{position:relative}
+    .nav-list>li>a{display:flex;align-items:center;gap:4px;padding:.85rem 1rem;color:rgba(255,228,196,.6);text-decoration:none;font-family:var(--font-ui);font-size:.84rem;font-weight:500;letter-spacing:.02em;position:relative;transition:color var(--transition),background var(--transition);white-space:nowrap}
+    .nav-list>li>a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:3px;background:var(--bisque-dark);transition:width var(--transition),left var(--transition);border-radius:3px 3px 0 0}
+    .nav-list>li>a:hover{color:rgba(255,228,196,.95);background:rgba(255,228,196,.05)}
+    .nav-list>li>a:hover::after,.nav-list>li>a.active::after{width:70%;left:15%}
+    .nav-list>li>a.active{color:var(--bisque);font-weight:600}
+    .nav-chevron{transition:transform var(--transition);flex-shrink:0}
+    .nav-dropdown{display:none;position:absolute;top:100%;left:0;background:var(--navy-800);border:1px solid rgba(255,228,196,.12);border-radius:var(--radius-md);min-width:200px;padding:.5rem;box-shadow:var(--shadow-lg);z-index:600;animation:dropIn .18s ease}
+    @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    .nav-has-dropdown:hover .nav-dropdown,.nav-has-dropdown:focus-within .nav-dropdown{display:block}
+    .nav-has-dropdown:hover .nav-chevron,.nav-has-dropdown:focus-within .nav-chevron{transform:rotate(180deg)}
+    .nav-dropdown li a{display:block;padding:.6rem .9rem;color:rgba(255,228,196,.55);font-family:var(--font-ui);font-size:.85rem;font-weight:400;text-decoration:none;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition)}
+    .nav-dropdown li a:hover,.nav-dropdown li a.active{background:rgba(255,228,196,.08);color:var(--bisque-light)}
 
-        /* QUICK NAV */
-        .quick-nav { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
-        .qnav-btn {
-            display: inline-flex; align-items: center; gap: .45rem;
-            padding: .6rem 1.2rem; border-radius: 8px; text-decoration: none;
-            font-size: .88rem; font-weight: 700; transition: opacity .18s, transform .15s;
-        }
-        .qnav-btn:hover { opacity: .88; transform: translateY(-1px); }
-        .qnav-btn.navy   { background: var(--brown-dark); color: var(--bisque); }
-        .qnav-btn.green  { background: var(--green); color: #fff; }
-        .qnav-btn.purple { background: #7c3aed; color: #fff; }
-        .qnav-btn.teal   { background: #0f766e; color: #fff; }
+    /* PAGE HERO */
+    .page-hero{background:linear-gradient(155deg,var(--navy-950) 0%,var(--navy-800) 50%,var(--navy-700) 100%);padding:clamp(2.5rem,6vw,4.5rem) var(--pad-x);text-align:center;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 110%,rgba(200,131,42,.15) 0%,transparent 70%);pointer-events:none}
+    .page-hero-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,228,196,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,228,196,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+    .page-hero-inner{position:relative;z-index:1;max-width:var(--max-w);margin:0 auto}
+    .hero-trophy{font-size:3.5rem;line-height:1;margin-bottom:1rem;display:block}
+    .page-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:rgba(255,243,232,.95);letter-spacing:-.025em;margin-bottom:.6rem}
+    .page-hero-desc{font-family:var(--font-serif);font-size:1rem;color:rgba(255,228,196,.55);line-height:1.8;max-width:600px;margin:0 auto}
+    .hero-badges-row{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+    .hero-badge-pill{font-family:var(--font-ui);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.28rem .85rem;border-radius:var(--radius-pill)}
+    .hbp-progress{background:rgba(30,110,54,.25);color:#6ee09b;border:1px solid rgba(30,110,54,.3)}
+    .hbp-badges{background:rgba(200,131,42,.2);color:var(--bisque-dark);border:1px solid rgba(200,131,42,.3)}
+    .hbp-free{background:rgba(255,255,255,.08);color:rgba(255,228,196,.6);border:1px solid rgba(255,228,196,.15)}
 
-        .action-bar { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
-        .btn-reset { padding: .7rem 1.5rem; border: none; border-radius: 8px; background: #dc2626; color: #fff; font-size: .9rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .18s; }
-        .btn-reset:hover { background: #b91c1c; }
-        .btn-home { padding: .7rem 1.5rem; border: none; border-radius: 8px; background: var(--brown-dark); color: var(--bisque); font-size: .9rem; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; display: inline-flex; align-items: center; transition: background .18s; }
-        .btn-home:hover { background: #3a1c05; }
+    /* MAIN */
+    .site-main{flex:1}
+    .page-body{max-width:var(--max-w);margin:0 auto;padding:clamp(1.5rem,4vw,2.5rem) var(--pad-x) clamp(2.5rem,5vw,4rem);display:flex;flex-direction:column;gap:2rem}
 
-        .empty-state { text-align: center; padding: 1.5rem; color: var(--muted); }
-        .empty-state a { color: var(--blue); font-weight: 700; }
+    /* SECTION CARD */
+    .ach-card{background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+    .ach-card-header{display:flex;align-items:center;gap:12px;padding:1.1rem 1.5rem;background:var(--cream-100);border-bottom:2px solid var(--cream-200)}
+    .ach-card-icon{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--navy-700);border-radius:var(--radius-sm);font-size:1.1rem;color:var(--bisque-dark);box-shadow:0 4px 12px rgba(10,22,40,.15)}
+    .ach-card-header h2{font-family:var(--font-display);font-size:clamp(1.05rem,2vw,1.3rem);color:var(--navy-800);margin:0}
+    .ach-card-header .ach-card-sub{font-family:var(--font-ui);font-size:.78rem;color:var(--ink-30);margin-top:1px}
+    .ach-card-body{padding:clamp(1rem,2.5vw,1.6rem) clamp(1rem,2.5vw,1.5rem) clamp(1.2rem,3vw,2rem)}
 
-        footer { background: var(--brown-dark); color: rgba(255,228,196,.45); text-align: center; padding: 2rem 1.5rem; font-size: .82rem; line-height: 1.9; }
-        footer a { color: var(--bisque-deeper); text-decoration: none; padding: 0 .4rem; }
-        footer a:hover { color: var(--bisque); text-decoration: underline; }
+    /* EDITORIAL PROSE (crawlable by AdSense bots) */
+    .editorial-prose{font-family:var(--font-ui);font-size:.95rem;line-height:1.8;color:var(--ink-50)}
+    .editorial-prose p{margin-bottom:.85rem}
+    .editorial-prose p:last-child{margin-bottom:0}
+    .editorial-prose strong{color:var(--navy-800);font-weight:600}
+    .editorial-prose a{color:var(--navy-700);font-weight:600}
 
-        @media (max-width: 640px) {
-            nav { padding: 0 1rem; }
-            .nav-links { display: none; }
-            .page-body { padding: 1rem .9rem 3rem; }
-            .card { padding: 1.2rem 1rem; }
-            .stats-strip { grid-template-columns: 1fr 1fr; }
-            .badges-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-    </style>
+    /* STATS STRIP */
+    .stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .stat-box{background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius-lg);padding:1.4rem 1rem;text-align:center;box-shadow:var(--shadow-sm);transition:transform var(--transition),box-shadow var(--transition)}
+    .stat-box:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .stat-box .s-val{font-family:var(--font-display);font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:.3rem}
+    .stat-box .s-lbl{font-family:var(--font-ui);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30)}
+    .stat-box .s-sub{font-family:var(--font-ui);font-size:.74rem;color:var(--ink-30);margin-top:.2rem}
+    .stat-navy .s-val{color:var(--navy-700)}
+    .stat-green .s-val{color:var(--green)}
+    .stat-amber .s-val{color:var(--amber)}
+    .stat-brown .s-val{color:var(--bisque-deep)}
+
+    /* HOW GRID */
+    .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .how-item{background:var(--cream-100);border:1px solid var(--cream-200);border-radius:var(--radius-md);padding:1.1rem 1.1rem}
+    .how-step-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--navy-700);color:var(--bisque-dark);font-family:var(--font-display);font-size:.9rem;font-weight:900;margin-bottom:.6rem}
+    .how-item strong{display:block;font-family:var(--font-display);font-size:.95rem;color:var(--navy-800);margin-bottom:.35rem}
+    .how-item p{font-family:var(--font-ui);font-size:.84rem;color:var(--ink-50);line-height:1.65}
+    .how-item a{color:var(--navy-700);font-weight:700}
+
+    /* BADGES */
+    .badges-section-label{font-family:var(--font-ui);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--cream-200)}
+    .badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem;margin-bottom:1.5rem}
+    .badge-item{background:var(--cream-100);border:2px solid var(--cream-200);border-radius:var(--radius-md);padding:1.1rem .9rem;text-align:center;position:relative;transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition)}
+    .badge-item.earned{border-color:var(--bisque-dark);background:#fffbf0}
+    .badge-item.earned:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--bisque-deep)}
+    .badge-item.locked{opacity:.38;filter:grayscale(.7)}
+    .badge-icon-wrap{font-size:1.9rem;display:block;margin-bottom:.45rem;line-height:1}
+    .badge-name{font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--navy-800);line-height:1.3;margin-bottom:.2rem}
+    .badge-desc{font-family:var(--font-ui);font-size:.7rem;color:var(--ink-30);line-height:1.4}
+    .badge-level-chip{position:absolute;top:6px;right:6px;font-family:var(--font-ui);font-size:.58rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px}
+    .chip-bronze{background:#f5deb3;color:#7a5200}
+    .chip-silver{background:#e8e8e8;color:#555}
+    .chip-gold{background:#fff0a0;color:#7a5200}
+
+    /* TOPIC PROGRESS */
+    .progress-list{display:flex;flex-direction:column;gap:.9rem}
+    .prog-row{display:flex;flex-direction:column;gap:.2rem}
+    .prog-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem}
+    .prog-label{font-family:var(--font-ui);font-size:.88rem;font-weight:700;color:var(--navy-800)}
+    .prog-pct{font-family:var(--font-mono);font-size:.78rem;font-weight:700;color:var(--ink-30)}
+    .prog-track{height:10px;background:var(--cream-200);border-radius:99px;overflow:hidden}
+    .prog-fill{height:100%;border-radius:99px;width:0;transition:width 1.1s cubic-bezier(.4,0,.2,1)}
+    .pf-algebra{background:linear-gradient(90deg,var(--navy-700),var(--navy-400))}
+    .pf-trigonometry{background:linear-gradient(90deg,#7a4a14,#c8832a)}
+    .pf-statistics{background:linear-gradient(90deg,#1e6e36,#4ade80)}
+    .pf-limits{background:linear-gradient(90deg,#5b3a8a,#a78bfa)}
+    .pf-differentiation{background:linear-gradient(90deg,#5b3a8a,#c084fc)}
+    .pf-integration{background:linear-gradient(90deg,#3a5f8a,#60a5fa)}
+    .pf-vectors{background:linear-gradient(90deg,var(--bisque-deep),#fbbf24)}
+    .pf-matrices{background:linear-gradient(90deg,#6b3c14,#b45309)}
+    .pf-conics{background:linear-gradient(90deg,#0e6888,#2dd4bf)}
+    .pf-sequences{background:linear-gradient(90deg,#1d6e6e,#34d399)}
+    .pf-complex{background:linear-gradient(90deg,#7a1060,#e879f9)}
+    .pf-areas{background:linear-gradient(90deg,#3a7a30,#4ade80)}
+    .pf-volumes{background:linear-gradient(90deg,#1a5080,#38bdf8)}
+
+    /* ACTIVITY */
+    .activity-feed{display:flex;flex-direction:column}
+    .act-item{display:flex;align-items:flex-start;gap:.75rem;padding:.7rem 0;border-bottom:1px solid var(--cream-200);font-family:var(--font-ui);font-size:.88rem;color:var(--ink-50);line-height:1.5}
+    .act-item:last-child{border-bottom:none}
+    .act-dot{width:8px;height:8px;border-radius:50%;background:var(--bisque-dark);flex-shrink:0;margin-top:.38rem}
+    .act-item.act-correct .act-dot{background:var(--green)}
+    .act-item.act-incorrect .act-dot{background:var(--red)}
+    .act-item.act-badge .act-dot{background:var(--amber)}
+    .act-time{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-30);white-space:nowrap;margin-left:auto;flex-shrink:0}
+
+    /* BADGE CATALOGUE TABLE */
+    .badge-catalogue{width:100%;border-collapse:collapse;margin:1rem 0}
+    .badge-catalogue th{background:var(--navy-800);color:rgba(255,228,196,.65);font-family:var(--font-ui);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.65rem 1rem;text-align:left}
+    .badge-catalogue td{font-family:var(--font-ui);font-size:.88rem;color:var(--ink-50);padding:.65rem 1rem;border-bottom:1px solid var(--cream-200);vertical-align:top;line-height:1.5}
+    .badge-catalogue tr:last-child td{border-bottom:none}
+    .badge-catalogue tr:nth-child(even) td{background:var(--cream-100)}
+    .badge-catalogue .bc-icon{font-size:1.2rem;line-height:1}
+    .bc-bronze{color:#7a5200;font-weight:700;font-size:.75rem}
+    .bc-silver{color:#555;font-weight:700;font-size:.75rem}
+    .bc-gold{color:#b07d00;font-weight:700;font-size:.75rem}
+
+    /* QUICK NAV */
+    .quick-nav{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+    .qnav-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.3rem;border-radius:var(--radius-md);text-decoration:none;font-family:var(--font-ui);font-size:.88rem;font-weight:700;transition:transform var(--transition),box-shadow var(--transition)}
+    .qnav-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .qn-navy{background:var(--navy-700);color:var(--bisque-light)}
+    .qn-green{background:var(--green);color:#fff}
+    .qn-purple{background:#7c3aed;color:#fff}
+    .qn-teal{background:#0f766e;color:#fff}
+    .qn-amber{background:var(--bisque-deep);color:#fff}
+
+    /* ACTIONS */
+    .action-bar{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+    .btn-reset{padding:.7rem 1.5rem;border:none;border-radius:var(--radius-md);background:var(--red);color:#fff;font-family:var(--font-ui);font-size:.9rem;font-weight:700;cursor:pointer;transition:background var(--transition)}
+    .btn-reset:hover{background:#991b1b}
+    .btn-home{padding:.7rem 1.5rem;border:2px solid var(--navy-700);border-radius:var(--radius-md);background:transparent;color:var(--navy-700);font-family:var(--font-ui);font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:var(--transition)}
+    .btn-home:hover{background:var(--navy-700);color:var(--bisque-light)}
+
+    /* EMPTY */
+    .empty-state{text-align:center;padding:2rem 1rem;color:var(--ink-30)}
+    .empty-state a{color:var(--navy-700);font-weight:700}
+
+    /* TIPS GRID */
+    .tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:.5rem}
+    .tip-card{background:var(--cream-100);border:1px solid var(--cream-200);border-radius:var(--radius-md);padding:1rem 1.1rem}
+    .tip-card h4{font-family:var(--font-display);font-size:.95rem;color:var(--navy-800);margin-bottom:.4rem}
+    .tip-card p{font-family:var(--font-ui);font-size:.84rem;color:var(--ink-50);line-height:1.65}
+
+    /* FOOTER */
+    .site-footer{background:var(--navy-950);border-top:3px solid var(--bisque-deep);padding:clamp(2.5rem,5vw,3.5rem) var(--pad-x) 0;margin-top:auto}
+    .footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr .9fr .9fr;gap:clamp(1.5rem,4vw,3rem);padding-bottom:clamp(2rem,4vw,3rem);border-bottom:1px solid rgba(255,228,196,.08)}
+    .footer-logo{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--bisque-light);text-decoration:none;display:block;margin-bottom:8px}
+    .footer-logo span{color:var(--bisque-dark)}
+    .footer-brand p{font-family:var(--font-ui);font-size:.85rem;color:rgba(255,228,196,.35);line-height:1.65}
+    .footer-cbc-note{font-size:.76rem!important;color:rgba(255,228,196,.25)!important;margin-top:6px;font-style:italic}
+    .footer-contact-line{margin-top:12px!important;font-size:.8rem!important}
+    .footer-contact-line a{color:var(--bisque-dark)!important;text-decoration:none;font-weight:500}
+    .footer-contact-line a:hover{color:var(--bisque)!important}
+    .footer-nav{display:contents}
+    .fn-col h4{font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,228,196,.4);margin-bottom:12px}
+    .fn-col ul{display:flex;flex-direction:column;gap:7px}
+    .fn-col a{font-family:var(--font-ui);font-size:.85rem;color:rgba(255,228,196,.4);text-decoration:none;transition:color var(--transition)}
+    .fn-col a:hover{color:var(--bisque-light)}
+    .footer-bottom{max-width:var(--max-w);margin:0 auto;padding:18px 0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+    .footer-bottom p{font-family:var(--font-ui);font-size:.78rem;color:rgba(255,228,196,.2);line-height:1.6}
+    .footer-mission{font-style:italic}
+
+    /* RESPONSIVE */
+    @media(max-width:820px){
+      .nav-mobile-bar{display:flex}
+      .nav-list{display:none;flex-direction:column;width:100%;padding:.5rem 0 1rem;border-top:1px solid rgba(255,228,196,.08);gap:0}
+      .nav-list.open{display:flex}
+      .nav-list>li>a{padding:.7rem .5rem;justify-content:space-between;font-size:.92rem}
+      .nav-list>li>a::after{display:none}
+      .nav-dropdown{position:static;box-shadow:none;border:none;background:rgba(255,228,196,.04);border-radius:var(--radius-sm);padding:.25rem .5rem;margin:0 0 .25rem .5rem;animation:none}
+      .nav-has-dropdown:hover .nav-dropdown,.nav-has-dropdown:focus-within .nav-dropdown{display:none}
+      .nav-has-dropdown.open .nav-dropdown{display:block}
+    }
+    @media(max-width:768px){
+      .stats-strip{grid-template-columns:1fr 1fr}
+      .footer-inner{grid-template-columns:1fr 1fr}
+      .how-grid{grid-template-columns:1fr 1fr}
+      .badges-grid{grid-template-columns:repeat(3,1fr)}
+      .badge-catalogue{font-size:.8rem}
+    }
+    @media(max-width:480px){
+      .stats-strip{grid-template-columns:1fr 1fr}
+      .badges-grid{grid-template-columns:repeat(2,1fr)}
+      .how-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="nav-logo">Ronny Best <span>∑</span></a>
-    <ul class="nav-links" id="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="main.html">Lessons</a></li>
-        <li><a href="tasks.html">Practice</a></li>
-        <li><a href="achievements.html" class="active">Achievements</a></li>
-        <li><a href="progress.html">My Progress</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+        <span class="brand-sigma" aria-hidden="true">Σ</span>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+      </a>
+      <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+    </div>
+    <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+  </div>
+</header>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+        <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="main.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html" class="active" aria-current="page">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
+  </div>
 </nav>
 
-<div class="page-hero">
-    <span class="hero-icon">🏆</span>
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero" role="banner">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-inner">
+    <span class="hero-trophy" aria-hidden="true">🏆</span>
     <h1>Your Achievements</h1>
-    <p>Track badges, topic mastery, and your full learning journey</p>
+    <p class="page-hero-desc">Track your badges, topic mastery across all 13 CBC mathematics topics, accuracy scores, learning streaks, and your complete activity history — all saved privately and automatically in your browser. No account or login is ever required.</p>
+    <div class="hero-badges-row">
+      <span class="hero-badge-pill hbp-progress">📈 Progress Tracking</span>
+      <span class="hero-badge-pill hbp-badges">🎖️ 22 Badges to Earn</span>
+      <span class="hero-badge-pill hbp-free">No Login Required</span>
+    </div>
+  </div>
 </div>
 
-<div class="page-body">
+<!-- ═══ MAIN ═══ -->
+<main id="main-content" class="site-main">
+  <div class="page-body">
 
-    <!-- Stats strip — 4 stats including streak -->
-    <div class="stats-strip">
-        <div class="stat-box c-blue">
-            <div class="val" id="totalProblems">—</div>
-            <div class="lbl">Problems Solved</div>
-        </div>
-        <div class="stat-box c-green">
-            <div class="val" id="correctAnswers">—</div>
-            <div class="lbl">Correct Answers</div>
-        </div>
-        <div class="stat-box c-amber">
-            <div class="val" id="accuracyScore">—</div>
-            <div class="lbl">Accuracy</div>
-        </div>
-        <div class="stat-box c-brown">
-            <div class="val" id="streakDays">—</div>
-            <div class="lbl">Day Streak</div>
-        </div>
+    <!-- LIVE STATS STRIP -->
+    <div class="stats-strip" role="list" aria-label="Your learning statistics">
+      <div class="stat-box stat-navy" role="listitem">
+        <div class="s-val" id="totalProblems">0</div>
+        <div class="s-lbl">Problems Solved</div>
+        <div class="s-sub">Cumulative total</div>
+      </div>
+      <div class="stat-box stat-green" role="listitem">
+        <div class="s-val" id="correctAnswers">0</div>
+        <div class="s-lbl">Correct Answers</div>
+        <div class="s-sub">Out of all attempts</div>
+      </div>
+      <div class="stat-box stat-amber" role="listitem">
+        <div class="s-val" id="accuracyScore">0%</div>
+        <div class="s-lbl">Accuracy</div>
+        <div class="s-sub">Correct ÷ total</div>
+      </div>
+      <div class="stat-box stat-brown" role="listitem">
+        <div class="s-val" id="streakDays">0</div>
+        <div class="s-lbl">Day Streak</div>
+        <div class="s-sub">Consecutive days</div>
+      </div>
     </div>
 
-    <!-- How it works -->
-    <div class="card">
-        <h2 class="card-title">📊 How Achievements Work</h2>
+    <!-- WHY TRACK YOUR PROGRESS — rich crawlable content -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">📘</div>
+        <div>
+          <h2>Why Track Your Mathematics Progress?</h2>
+          <p class="ach-card-sub">Research-backed reasons for monitoring your own learning</p>
+        </div>
+      </div>
+      <div class="ach-card-body">
+        <div class="editorial-prose">
+          <p>Tracking your mathematics progress is not merely a motivational tool — it is a fundamental part of the learning process itself. Research in educational psychology consistently shows that students who monitor their own performance improve significantly faster than those who do not. When you can see exactly how many problems you have solved, what percentage you answered correctly, and which specific topics still need work, you gain the ability to study more strategically and efficiently.</p>
+          <p>The <strong>Competency Based Curriculum (CBC)</strong> introduced by the Kenya Institute of Curriculum Development (KICD) places particular emphasis on self-regulated learning — the ability of students to plan, monitor, and reflect on their own academic development. This achievements system is designed to support exactly that CBC competency. By reviewing your accuracy score and topic mastery bars regularly, you practise the same reflective learning skills that the TSC and MoE frameworks identify as essential for 21st-century mathematical proficiency.</p>
+          <p>For students preparing for the <strong>Kenya Certificate of Secondary Education (KCSE)</strong>, progress tracking provides an early warning system. If your Algebra accuracy is high but your Trigonometry bar is still at 20%, that is a clear signal to spend more time on the Sine Rule, unit circle, and trigonometric identities before the examination. Effective KCSE preparation is built on this kind of honest, data-driven self-assessment — not on guessing which topics to study.</p>
+          <p>All data on this page is stored exclusively in your browser's local storage. <strong>No personal information is ever sent to a server.</strong> Your progress belongs entirely to you, is visible only on your device, and can be reset at any time using the button at the bottom of this page.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">📊</div>
+        <div>
+          <h2>How Achievements Work</h2>
+          <p class="ach-card-sub">Automatic, private, and always free</p>
+        </div>
+      </div>
+      <div class="ach-card-body">
         <div class="how-grid">
-            <div class="how-item">
-                <span class="step-num">1</span>
-                <strong>Solve Practice Problems</strong>
-                <p>Every problem solved in the <a href="tasks.html" style="color:var(--blue);font-weight:700;">Practice Section</a> automatically updates your stats.</p>
-            </div>
-            <div class="how-item">
-                <span class="step-num">2</span>
-                <strong>Earn Badges</strong>
-                <p>Unlock badges by hitting milestones — accuracy targets, problems solved, streaks, and topic mastery.</p>
-            </div>
-            <div class="how-item">
-                <span class="step-num">3</span>
-                <strong>Track All 13 Topics</strong>
-                <p>Individual progress bars show mastery across all 13 topic areas, updating in real time.</p>
-            </div>
-            <div class="how-item">
-                <span class="step-num">4</span>
-                <strong>No Login Needed</strong>
-                <p>Everything saves automatically in your browser — no account required, fully private.</p>
-            </div>
+          <div class="how-item">
+            <span class="how-step-num" aria-hidden="true">1</span>
+            <strong>Solve Practice Problems</strong>
+            <p>Every problem you attempt in the <a href="tasks.html">Practice Section</a> automatically updates your stats in real time — no manual input needed. Your topic mastery bars update instantly after each answer.</p>
+          </div>
+          <div class="how-item">
+            <span class="how-step-num" aria-hidden="true">2</span>
+            <strong>Earn Achievement Badges</strong>
+            <p>Unlock 22 unique badges by reaching milestones across five categories: problems solved, accuracy targets, learning streaks, brain game wins, and topic mastery levels from bronze through to gold.</p>
+          </div>
+          <div class="how-item">
+            <span class="how-step-num" aria-hidden="true">3</span>
+            <strong>Track All 13 CBC Topics</strong>
+            <p>Individual progress bars show your mastery level in each of the 13 Senior Secondary Pure and Applied Mathematics topics. Each bar updates as you practise, giving you a visual map of your curriculum coverage.</p>
+          </div>
+          <div class="how-item">
+            <span class="how-step-num" aria-hidden="true">4</span>
+            <strong>100% Private — No Login</strong>
+            <p>All achievement data saves automatically in your browser using local storage — a secure, device-side technology. No account, no email, no password, no server. Your progress is yours alone.</p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <!-- EARNED BADGES -->
-    <div class="card">
-        <h2 class="card-title">🎖️ Earned Badges</h2>
-        <div id="earnedBadgesGrid" class="badges-grid">
-            <div class="empty-state"><p>No badges yet — <a href="tasks.html">solve a problem</a> to earn your first!</p></div>
+    <!-- EARNED BADGES (dynamic) -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">🎖️</div>
+        <div>
+          <h2>Your Earned Badges</h2>
+          <p class="ach-card-sub">Awarded automatically as you reach milestones</p>
         </div>
-
-        <div class="badges-section-label" style="margin-top:1.5rem;">🔒 Locked — Keep Practising</div>
-        <div id="lockedBadgesGrid" class="badges-grid"></div>
+      </div>
+      <div class="ach-card-body">
+        <div class="badges-section-label">✅ Earned</div>
+        <div id="earnedBadgesGrid" class="badges-grid" role="list" aria-label="Earned badges">
+          <div class="empty-state"><p>No badges yet — <a href="tasks.html">solve a problem</a> to earn your first!</p></div>
+        </div>
+        <div class="badges-section-label" style="margin-top:1.5rem;">🔒 Still to Unlock</div>
+        <div id="lockedBadgesGrid" class="badges-grid" role="list" aria-label="Locked badges"></div>
+      </div>
     </div>
 
-    <!-- TOPIC PROGRESS — all 13 -->
-    <div class="card">
-        <h2 class="card-title">📈 Topic Mastery — All 13 Topics</h2>
+    <!-- COMPLETE BADGE CATALOGUE — fully crawlable static content -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">📋</div>
+        <div>
+          <h2>Complete Badge Catalogue — All 22 Badges</h2>
+          <p class="ach-card-sub">Every badge you can earn on Ronny Best Mathematics, with unlock conditions</p>
+        </div>
+      </div>
+      <div class="ach-card-body">
+        <div class="editorial-prose" style="margin-bottom:1.2rem;">
+          <p>There are 22 achievement badges available across five categories: <strong>Problems Solved</strong> (rewarding quantity and consistency), <strong>Accuracy</strong> (rewarding precision and correctness), <strong>Streaks</strong> (rewarding daily study habits), <strong>Games</strong> (rewarding brain game engagement), and <strong>Topic Mastery</strong> (rewarding deep competency in specific CBC curriculum areas). Badges are tiered as Bronze, Silver, or Gold to reflect the level of achievement required.</p>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="badge-catalogue">
+            <thead>
+              <tr>
+                <th>Icon</th>
+                <th>Badge Name</th>
+                <th>How to Unlock</th>
+                <th>Tier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="bc-icon">📚</td><td>Mathematics Learner</td><td>Join the platform and view your first lesson</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">👣</td><td>First Step</td><td>Attempt your very first practice problem</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">🧩</td><td>Problem Solver</td><td>Solve 10 or more practice problems in total</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">📖</td><td>Dedicated Learner</td><td>Solve 25 or more practice problems in total</td><td class="bc-silver">Silver</td></tr>
+              <tr><td class="bc-icon">🏋️</td><td>Practice Champion</td><td>Solve 50 or more practice problems in total</td><td class="bc-silver">Silver</td></tr>
+              <tr><td class="bc-icon">💯</td><td>Century Scholar</td><td>Solve 100 or more practice problems in total</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">🎓</td><td>Mathematics Veteran</td><td>Solve 250 or more practice problems in total</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">🔍</td><td>Sharp Mind</td><td>Achieve 70% or higher overall accuracy</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">⭐</td><td>Accuracy Star</td><td>Achieve 80% or higher overall accuracy</td><td class="bc-silver">Silver</td></tr>
+              <tr><td class="bc-icon">🎯</td><td>High Achiever</td><td>Achieve 90% or higher overall accuracy</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">💎</td><td>Precision Master</td><td>Achieve 95% or higher overall accuracy</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">🔥</td><td>3-Day Streak</td><td>Study and solve problems on 3 consecutive days</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">🗓️</td><td>Weekly Warrior</td><td>Study and solve problems on 7 consecutive days</td><td class="bc-silver">Silver</td></tr>
+              <tr><td class="bc-icon">🎮</td><td>Game Champion</td><td>Win 5 or more brain games in the Mind Games section</td><td class="bc-silver">Silver</td></tr>
+              <tr><td class="bc-icon">📐</td><td>Algebra Apprentice</td><td>Reach 50% mastery in the Algebra topic</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">📏</td><td>Algebra Expert</td><td>Reach 90% mastery in the Algebra topic</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">∫</td><td>Calculus Apprentice</td><td>Reach 50% mastery across calculus topics</td><td class="bc-bronze">Bronze</td></tr>
+              <tr><td class="bc-icon">∂</td><td>Calculus Master</td><td>Reach 90% mastery across calculus topics</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">△</td><td>Geometry Pro</td><td>Reach 90% mastery in Areas and Volumes topics</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">〰️</td><td>Trigonometry Wizard</td><td>Reach 90% mastery in the Trigonometry topic</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">📊</td><td>Statistics Expert</td><td>Reach 90% mastery in the Statistics topic</td><td class="bc-gold">Gold</td></tr>
+              <tr><td class="bc-icon">🌟</td><td>Well-Rounded Scholar</td><td>Record progress in all 13 CBC mathematics topics</td><td class="bc-gold">Gold</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOPIC MASTERY — all 13 -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">📈</div>
+        <div>
+          <h2>Topic Mastery — All 13 CBC Topics</h2>
+          <p class="ach-card-sub">Your practice performance across every Senior Secondary mathematics topic</p>
+        </div>
+      </div>
+      <div class="ach-card-body">
+        <div class="editorial-prose" style="margin-bottom:1.2rem;">
+          <p>These 13 topics cover the full <strong>CBC Senior Secondary Pure Mathematics and Applied Mathematics curriculum</strong> as defined by KICD and assessed in the KCSE examination. Each bar reflects your accuracy and completion rate in that topic's practice problems. A bar at 0% means you have not yet practised that topic — a bar at 100% indicates consistent correct answers across a broad range of questions in that topic area.</p>
+          <p>For students in the <strong>STEM pathway</strong>, all 13 topics are relevant. Students in the <strong>Arts and Sports Science</strong> or <strong>Social Sciences</strong> pathways may focus more on statistics, algebra, and applied mathematics topics — but building familiarity across all areas improves mathematical reasoning and KCSE preparation regardless of pathway.</p>
+        </div>
         <div class="progress-list">
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Algebra</span><span class="prog-pct" id="pct-algebra">0%</span></div><div class="prog-track"><div class="prog-fill c-navy" id="bar-algebra"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Trigonometry</span><span class="prog-pct" id="pct-trigonometry">0%</span></div><div class="prog-track"><div class="prog-fill c-trig" id="bar-trigonometry"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Statistics</span><span class="prog-pct" id="pct-statistics">0%</span></div><div class="prog-track"><div class="prog-fill c-stats" id="bar-statistics"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Limits</span><span class="prog-pct" id="pct-limits">0%</span></div><div class="prog-track"><div class="prog-fill c-limits" id="bar-limits"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Differentiation</span><span class="prog-pct" id="pct-differentiation">0%</span></div><div class="prog-track"><div class="prog-fill c-diff" id="bar-differentiation"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Integration</span><span class="prog-pct" id="pct-integration">0%</span></div><div class="prog-track"><div class="prog-fill c-integ" id="bar-integration"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Vectors</span><span class="prog-pct" id="pct-vectors">0%</span></div><div class="prog-track"><div class="prog-fill c-vec" id="bar-vectors"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Matrices</span><span class="prog-pct" id="pct-matrices">0%</span></div><div class="prog-track"><div class="prog-fill c-mat" id="bar-matrices"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Conics</span><span class="prog-pct" id="pct-conics">0%</span></div><div class="prog-track"><div class="prog-fill c-conics" id="bar-conics"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Sequences &amp; Series</span><span class="prog-pct" id="pct-sequences">0%</span></div><div class="prog-track"><div class="prog-fill c-seq" id="bar-sequences"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Complex Numbers</span><span class="prog-pct" id="pct-complex">0%</span></div><div class="prog-track"><div class="prog-fill c-complex" id="bar-complex"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Areas</span><span class="prog-pct" id="pct-areas">0%</span></div><div class="prog-track"><div class="prog-fill c-areas" id="bar-areas"></div></div></div>
-            <div class="prog-row"><div class="prog-meta"><span class="prog-label">Volumes</span><span class="prog-pct" id="pct-volumes">0%</span></div><div class="prog-track"><div class="prog-fill c-vols" id="bar-volumes"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Algebra — Linear equations, quadratics, logarithms, exponents</span><span class="prog-pct" id="pct-algebra">0%</span></div><div class="prog-track"><div class="prog-fill pf-algebra" id="bar-algebra"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Trigonometry — Ratios, identities, Sine/Cosine rules, equations</span><span class="prog-pct" id="pct-trigonometry">0%</span></div><div class="prog-track"><div class="prog-fill pf-trigonometry" id="bar-trigonometry"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Statistics — Mean, median, standard deviation, probability</span><span class="prog-pct" id="pct-statistics">0%</span></div><div class="prog-track"><div class="prog-fill pf-statistics" id="bar-statistics"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Limits — One-sided limits, continuity, L'Hôpital's Rule</span><span class="prog-pct" id="pct-limits">0%</span></div><div class="prog-track"><div class="prog-fill pf-limits" id="bar-limits"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Differentiation — Power, product, chain rules, optimisation</span><span class="prog-pct" id="pct-differentiation">0%</span></div><div class="prog-track"><div class="prog-fill pf-differentiation" id="bar-differentiation"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Integration — Definite integrals, area under curves, substitution</span><span class="prog-pct" id="pct-integration">0%</span></div><div class="prog-track"><div class="prog-fill pf-integration" id="bar-integration"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Vectors — Position vectors, dot product, cross product, planes</span><span class="prog-pct" id="pct-vectors">0%</span></div><div class="prog-track"><div class="prog-fill pf-vectors" id="bar-vectors"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Matrices — Operations, determinants, inverses, transformations</span><span class="prog-pct" id="pct-matrices">0%</span></div><div class="prog-track"><div class="prog-fill pf-matrices" id="bar-matrices"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Conic Sections — Circles, ellipses, parabolas, hyperbolas</span><span class="prog-pct" id="pct-conics">0%</span></div><div class="prog-track"><div class="prog-fill pf-conics" id="bar-conics"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Sequences &amp; Series — AP, GP, sum formulas, convergence</span><span class="prog-pct" id="pct-sequences">0%</span></div><div class="prog-track"><div class="prog-fill pf-sequences" id="bar-sequences"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Complex Numbers — Argand diagrams, modulus, argument, arithmetic</span><span class="prog-pct" id="pct-complex">0%</span></div><div class="prog-track"><div class="prog-fill pf-complex" id="bar-complex"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Areas — Plane shapes, surface area, sectors, composite figures</span><span class="prog-pct" id="pct-areas">0%</span></div><div class="prog-track"><div class="prog-fill pf-areas" id="bar-areas"></div></div></div>
+          <div class="prog-row"><div class="prog-meta"><span class="prog-label">Volumes — Prisms, cylinders, cones, spheres, similar solids</span><span class="prog-pct" id="pct-volumes">0%</span></div><div class="prog-track"><div class="prog-fill pf-volumes" id="bar-volumes"></div></div></div>
         </div>
+      </div>
+    </div>
+
+    <!-- STUDY TIPS — more crawlable content -->
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">💡</div>
+        <div>
+          <h2>Study Tips for Earning Badges Faster</h2>
+          <p class="ach-card-sub">Practical strategies for Kenyan CBC mathematics students</p>
+        </div>
+      </div>
+      <div class="ach-card-body">
+        <div class="editorial-prose" style="margin-bottom:1.2rem;">
+          <p>Earning badges is a rewarding way to stay motivated, but the real benefit is the mathematical mastery you build along the way. The following strategies are based on how CBC's competency-based approach recommends students engage with mathematics — actively, reflectively, and consistently.</p>
+        </div>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <h4>📅 Practise Daily for Streaks</h4>
+            <p>The 3-Day and 7-Day streak badges reward consistent daily practice. Even solving just 5 problems per day builds stronger long-term retention than cramming 35 problems in a single session. Spaced repetition is the most research-validated learning strategy in mathematics education.</p>
+          </div>
+          <div class="tip-card">
+            <h4>🎯 Focus on Accuracy, Not Speed</h4>
+            <p>The Accuracy Star, High Achiever, and Precision Master badges reward correctness above volume. Work through each step methodically, check your arithmetic, and re-read the question before submitting. A 90% accuracy rate on 50 problems is far more valuable than 50% accuracy on 200 problems.</p>
+          </div>
+          <div class="tip-card">
+            <h4>📚 Cover All 13 Topics for the Top Badge</h4>
+            <p>The Well-Rounded Scholar badge — the hardest gold badge — requires recorded progress in all 13 CBC topics. This mirrors what KCSE Paper 1 and Paper 2 test: broad curriculum coverage, not depth in only one or two areas. Use the topic mastery bars to identify which topics still show 0% and prioritise those.</p>
+          </div>
+          <div class="tip-card">
+            <h4>🧠 Use Brain Games for Fluency</h4>
+            <p>The Game Champion badge unlocks after winning 5 brain games. These games build mathematical fluency — the ability to recall and apply mathematical facts quickly and accurately. Fluency is a core CBC competency and reduces the cognitive load during examinations, freeing mental capacity for complex problem-solving.</p>
+          </div>
+          <div class="tip-card">
+            <h4>📖 Read the Lesson Before Practising</h4>
+            <p>Attempting practice problems cold — without reading the lesson first — produces low accuracy and slow badge progression. Each topic lesson on this site is written specifically to prepare you for the practice problems. Read the worked examples, understand the method, then attempt the problems. This is exactly the learning sequence recommended in the CBC BECF framework.</p>
+          </div>
+          <div class="tip-card">
+            <h4>❓ Ask Mwalimu When Stuck</h4>
+            <p>Low accuracy in a topic often indicates a conceptual gap — a step in the reasoning that is not yet understood. Rather than guessing repeatedly, use <a href="ask-mwalimu.html">Ask Mwalimu</a> to get a step-by-step explanation of exactly where your understanding broke down. Targeted explanation is always more efficient than repeated guessing.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- RECENT ACTIVITY -->
-    <div class="card">
-        <h2 class="card-title">🕒 Recent Activity</h2>
-        <div id="activityList" class="activity-feed">
-            <div class="empty-state"><p>No activity yet. <a href="tasks.html">Start practising</a> to see your history here.</p></div>
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">🕒</div>
+        <div>
+          <h2>Recent Activity</h2>
+          <p class="ach-card-sub">Your last 20 practice actions and badge events</p>
         </div>
+      </div>
+      <div class="ach-card-body">
+        <div id="activityList" class="activity-feed" role="feed" aria-label="Recent activity">
+          <div class="empty-state"><p>No activity yet. <a href="tasks.html">Start practising</a> to see your history here.</p></div>
+        </div>
+      </div>
     </div>
 
     <!-- QUICK NAV -->
-    <div class="card" style="text-align:center;">
-        <h2 class="card-title" style="justify-content:center;">🧭 Quick Navigation</h2>
+    <div class="ach-card">
+      <div class="ach-card-header">
+        <div class="ach-card-icon" aria-hidden="true">🧭</div>
+        <div><h2>Quick Navigation</h2></div>
+      </div>
+      <div class="ach-card-body" style="text-align:center;">
         <div class="quick-nav">
-            <a href="progress.html" class="qnav-btn navy">📊 My Progress</a>
-            <a href="tasks.html"    class="qnav-btn green">✏️ Practice Problems</a>
-            <a href="mind.html"     class="qnav-btn purple">🧠 Brain Games</a>
-            <a href="main.html"     class="qnav-btn teal">📚 Math Lessons</a>
+          <a href="progress.html"    class="qnav-btn qn-navy">📊 My Progress</a>
+          <a href="tasks.html"       class="qnav-btn qn-green">✏️ Practice Problems</a>
+          <a href="mind.html"        class="qnav-btn qn-purple">🧠 Brain Games</a>
+          <a href="main.html"        class="qnav-btn qn-teal">📚 All Lessons</a>
+          <a href="ask-mwalimu.html" class="qnav-btn qn-amber">💬 Ask Mwalimu</a>
         </div>
+      </div>
     </div>
 
-    <!-- ACTIONS -->
+    <!-- RESET -->
     <div class="action-bar">
-        <button onclick="handleReset()" class="btn-reset">🗑 Reset My Progress</button>
-        <a href="index.html" class="btn-home">← Back to Home</a>
+      <button onclick="handleReset()" class="btn-reset" aria-label="Reset all progress data">🗑️ Reset My Progress</button>
+      <a href="index.html" class="btn-home">← Back to Home</a>
     </div>
 
-</div>
+  </div>
+</main>
 
-<footer>
-    <p>
-        <a href="privacy.html">Privacy Policy</a> &middot;
-        <a href="index.html">Home</a> &middot;
-        <a href="main.html">Math Lessons</a> &middot;
-        <a href="tasks.html">Practice</a>
-    </p>
-    <p>&copy; 2025 Ronny Best Mathematics — Free Maths Education for Everyone</p>
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya · BECF</p>
+      <p class="footer-contact-line">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="fn-col">
+        <h4>Lessons</h4>
+        <ul>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="trigonometry.html">Trigonometry</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="differentiation.html">Differentiation</a></li>
+          <li><a href="integration.html">Integration</a></li>
+          <li><a href="vectors.html">Vectors</a></li>
+          <li><a href="main.html">All 13 Topics →</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="tasks.html">Practice Problems</a></li>
+          <li><a href="mind.html">Brain Games</a></li>
+          <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Site Info</h4>
+        <ul>
+          <li><a href="about.html">About Mwalimu Ronny</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+  </div>
 </footer>
 
 <script>
-/* ── ALL 22 BADGE DEFINITIONS ── */
-const ALL_BADGES = [
-    { name:"Mathematics Learner",   icon:"📚", desc:"Joined the platform",          level:"bronze" },
-    { name:"First Step",            icon:"👣", desc:"Attempted first problem",       level:"bronze" },
-    { name:"Problem Solver",        icon:"🧩", desc:"10+ problems solved",           level:"bronze" },
-    { name:"Dedicated Learner",     icon:"📖", desc:"25+ problems solved",           level:"silver" },
-    { name:"Practice Champion",     icon:"🏋️", desc:"50+ problems solved",           level:"silver" },
-    { name:"Century Scholar",       icon:"💯", desc:"100+ problems solved",          level:"gold"   },
-    { name:"Mathematics Veteran",   icon:"🎓", desc:"250+ problems solved",          level:"gold"   },
-    { name:"Sharp Mind",            icon:"🔍", desc:"70%+ accuracy",                 level:"bronze" },
-    { name:"Accuracy Star",         icon:"⭐", desc:"80%+ accuracy",                 level:"silver" },
-    { name:"High Achiever",         icon:"🎯", desc:"90%+ accuracy",                 level:"gold"   },
-    { name:"Precision Master",      icon:"💎", desc:"95%+ accuracy",                 level:"gold"   },
-    { name:"3-Day Streak",          icon:"🔥", desc:"Studied 3 days in a row",       level:"bronze" },
-    { name:"Weekly Warrior",        icon:"🗓️", desc:"Studied 7 days in a row",       level:"silver" },
-    { name:"Game Champion",         icon:"🎮", desc:"Won 5+ brain games",            level:"silver" },
-    { name:"Algebra Apprentice",    icon:"📐", desc:"50% algebra mastery",           level:"bronze" },
-    { name:"Algebra Expert",        icon:"📏", desc:"90% algebra mastery",           level:"gold"   },
-    { name:"Calculus Apprentice",   icon:"∫",  desc:"50% calculus mastery",          level:"bronze" },
-    { name:"Calculus Master",       icon:"∂",  desc:"90% calculus mastery",          level:"gold"   },
-    { name:"Geometry Pro",          icon:"△",  desc:"90% geometry mastery",          level:"gold"   },
-    { name:"Trigonometry Wizard",   icon:"〰️", desc:"90% trigonometry mastery",      level:"gold"   },
-    { name:"Statistics Expert",     icon:"📊", desc:"90% statistics mastery",        level:"gold"   },
-    { name:"Well-Rounded Scholar",  icon:"🌟", desc:"Progress in all 13 topics",     level:"gold"   },
+"use strict";
+
+const SITE_PAGES = [
+  {name:"Algebra",url:"algebra.html",icon:"𝑥",type:"Lesson"},
+  {name:"Trigonometry",url:"trigonometry.html",icon:"sin",type:"Lesson"},
+  {name:"Statistics",url:"statistics.html",icon:"σ",type:"Lesson"},
+  {name:"Limits",url:"limits.html",icon:"lim",type:"Lesson"},
+  {name:"Differentiation",url:"differentiation.html",icon:"d/dx",type:"Lesson"},
+  {name:"Integration",url:"integration.html",icon:"∫",type:"Lesson"},
+  {name:"Vectors",url:"vectors.html",icon:"→",type:"Lesson"},
+  {name:"Matrices",url:"matrices.html",icon:"[]",type:"Lesson"},
+  {name:"Conic Sections",url:"conics.html",icon:"⊙",type:"Lesson"},
+  {name:"Sequences & Series",url:"sequences.html",icon:"∑",type:"Lesson"},
+  {name:"Complex Numbers",url:"complex.html",icon:"𝑖",type:"Lesson"},
+  {name:"Areas",url:"areas.html",icon:"□",type:"Lesson"},
+  {name:"Volumes",url:"volumes.html",icon:"▣",type:"Lesson"},
+  {name:"Practice Problems",url:"tasks.html",icon:"✓",type:"Practice"},
+  {name:"Brain Games",url:"mind.html",icon:"🧠",type:"Games"},
+  {name:"Ask Mwalimu",url:"ask-mwalimu.html",icon:"?",type:"Help"},
+  {name:"Achievements",url:"achievements.html",icon:"🏆",type:"Progress"},
+  {name:"My Progress",url:"progress.html",icon:"📈",type:"Progress"},
+  {name:"About Mwalimu Ronny",url:"about.html",icon:"👤",type:"Site"},
+  {name:"Contact",url:"contact.html",icon:"✉",type:"Site"},
+  {name:"Home",url:"index.html",icon:"🏠",type:"Site"},
 ];
 
-const TOPICS_13 = [
-    "algebra","trigonometry","statistics","limits","differentiation",
-    "integration","vectors","matrices","conics","sequences","complex","areas","volumes"
+const ALL_BADGES = [
+  {name:"Mathematics Learner",icon:"📚",desc:"Joined the platform",level:"bronze"},
+  {name:"First Step",icon:"👣",desc:"Attempted first problem",level:"bronze"},
+  {name:"Problem Solver",icon:"🧩",desc:"10+ problems solved",level:"bronze"},
+  {name:"Dedicated Learner",icon:"📖",desc:"25+ problems solved",level:"silver"},
+  {name:"Practice Champion",icon:"🏋️",desc:"50+ problems solved",level:"silver"},
+  {name:"Century Scholar",icon:"💯",desc:"100+ problems solved",level:"gold"},
+  {name:"Mathematics Veteran",icon:"🎓",desc:"250+ problems solved",level:"gold"},
+  {name:"Sharp Mind",icon:"🔍",desc:"70%+ accuracy",level:"bronze"},
+  {name:"Accuracy Star",icon:"⭐",desc:"80%+ accuracy",level:"silver"},
+  {name:"High Achiever",icon:"🎯",desc:"90%+ accuracy",level:"gold"},
+  {name:"Precision Master",icon:"💎",desc:"95%+ accuracy",level:"gold"},
+  {name:"3-Day Streak",icon:"🔥",desc:"Studied 3 days in a row",level:"bronze"},
+  {name:"Weekly Warrior",icon:"🗓️",desc:"Studied 7 days in a row",level:"silver"},
+  {name:"Game Champion",icon:"🎮",desc:"Won 5+ brain games",level:"silver"},
+  {name:"Algebra Apprentice",icon:"📐",desc:"50% algebra mastery",level:"bronze"},
+  {name:"Algebra Expert",icon:"📏",desc:"90% algebra mastery",level:"gold"},
+  {name:"Calculus Apprentice",icon:"∫",desc:"50% calculus mastery",level:"bronze"},
+  {name:"Calculus Master",icon:"∂",desc:"90% calculus mastery",level:"gold"},
+  {name:"Geometry Pro",icon:"△",desc:"90% geometry mastery",level:"gold"},
+  {name:"Trigonometry Wizard",icon:"〰️",desc:"90% trigonometry mastery",level:"gold"},
+  {name:"Statistics Expert",icon:"📊",desc:"90% statistics mastery",level:"gold"},
+  {name:"Well-Rounded Scholar",icon:"🌟",desc:"Progress in all 13 topics",level:"gold"},
 ];
+
+const TOPICS_13 = ["algebra","trigonometry","statistics","limits","differentiation","integration","vectors","matrices","conics","sequences","complex","areas","volumes"];
 
 document.addEventListener("DOMContentLoaded", () => {
-    let stats = { totalSolved:0, correct:0, accuracy:0, topics:{}, badges:["Mathematics Learner"], activity:[], streak:0 };
-    try {
-        if (typeof MathProgress !== "undefined") stats = MathProgress.getStats();
-    } catch(e) {}
-    renderAll(stats);
+  /* Hamburger */
+  const hamburger = document.getElementById("hamburger");
+  const navMenu   = document.getElementById("nav-menu");
+  if (hamburger && navMenu) {
+    
+    navMenu.querySelectorAll(".nav-has-dropdown > a").forEach(t => {
+      t.addEventListener("click", e => {
+        if (window.innerWidth <= 820) { e.preventDefault(); t.closest(".nav-has-dropdown").classList.toggle("open"); }
+      });
+    });
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".main-nav")) { hamburger.setAttribute("aria-expanded","false"); navMenu.classList.remove("open"); }
+    });
+  }
 
-    // Live update when progress changes
-    window.addEventListener("mathProgressUpdate", e => renderAll(e.detail ? MathProgress.getStats() : stats));
+  /* Search */
+  const searchToggle = document.getElementById("searchToggle");
+  const navSearchBar = document.getElementById("navSearchBar");
+  const siteSearch   = document.getElementById("siteSearch");
+  const searchClear  = document.getElementById("searchClear");
+  const searchResults= document.getElementById("searchResults");
+  if (searchToggle && navSearchBar && siteSearch) {
+    searchToggle.addEventListener("click", () => {
+      const isOpen = !navSearchBar.hidden;
+      navSearchBar.hidden = isOpen;
+      searchToggle.setAttribute("aria-expanded", String(!isOpen));
+      if (!isOpen) siteSearch.focus();
+    });
+    siteSearch.addEventListener("input", () => {
+      const q = siteSearch.value.trim().toLowerCase();
+      if (searchClear) searchClear.hidden = q.length === 0;
+      if (q.length < 2) { searchResults.hidden = true; return; }
+      const matches = SITE_PAGES.filter(p => p.name.toLowerCase().includes(q) || p.type.toLowerCase().includes(q)).slice(0,8);
+      searchResults.innerHTML = matches.length
+        ? matches.map(m=>`<a class="sr-item" href="${m.url}"><div class="sr-item-icon">${m.icon}</div><div class="sr-item-text"><span class="sr-item-name">${esc(m.name)}</span><span class="sr-item-type">${m.type}</span></div></a>`).join("")
+        : `<div class="sr-no-results">No results for "${esc(siteSearch.value)}"</div>`;
+      searchResults.hidden = false;
+    });
+    if (searchClear) searchClear.addEventListener("click", () => { siteSearch.value=""; searchResults.hidden=true; searchClear.hidden=true; siteSearch.focus(); });
+    document.addEventListener("click", e => { if (!e.target.closest(".nav-search-bar")) searchResults.hidden = true; });
+    siteSearch.addEventListener("keydown", e => { if (e.key==="Escape"){navSearchBar.hidden=true; searchToggle.setAttribute("aria-expanded","false");} });
+  }
+
+  /* Welcome pill */
+  const welcome = document.getElementById("welcome");
+  if (welcome) {
+    try {
+      const user = localStorage.getItem("currentUser");
+      welcome.textContent = (user && user !== "null") ? `Welcome back, ${user}!` : "Welcome — improve your mathematics here";
+    } catch { welcome.textContent = "Welcome — improve your mathematics here"; }
+  }
+
+  /* Load progress */
+  let stats = {totalSolved:0,correct:0,accuracy:0,topics:{},badges:["Mathematics Learner"],activity:[],streak:0};
+  try { if (typeof MathProgress !== "undefined") stats = MathProgress.getStats(); } catch(e) {}
+  renderAll(stats);
+  window.addEventListener("mathProgressUpdate", () => { try { renderAll(MathProgress.getStats()); } catch(e) {} });
 });
 
 function renderAll(data) {
-    // Stats
-    animCount("totalProblems",  data.totalSolved || 0);
-    animCount("correctAnswers", data.correct     || 0);
-    document.getElementById("accuracyScore").textContent = (data.accuracy || 0) + "%";
-    document.getElementById("streakDays").textContent    = (data.streak   || 0);
+  animCount("totalProblems",  data.totalSolved || 0);
+  animCount("correctAnswers", data.correct     || 0);
+  document.getElementById("accuracyScore").textContent = (data.accuracy || 0) + "%";
+  document.getElementById("streakDays").textContent    = (data.streak   || 0);
 
-    // Topic bars — all 13
-    const topics = data.topics || {};
-    requestAnimationFrame(() => {
-        TOPICS_13.forEach(k => {
-            const pct = topics[k] || 0;
-            const bar = document.getElementById("bar-" + k);
-            const lbl = document.getElementById("pct-" + k);
-            if (bar) { setTimeout(() => { bar.style.width = pct + "%"; }, 150); }
-            if (lbl) lbl.textContent = pct + "%";
-        });
+  /* Topic bars */
+  const topics = data.topics || {};
+  requestAnimationFrame(() => {
+    TOPICS_13.forEach(k => {
+      const pct = topics[k] || 0;
+      const bar = document.getElementById("bar-" + k);
+      const lbl = document.getElementById("pct-" + k);
+      if (bar) setTimeout(() => { bar.style.width = pct + "%"; }, 180);
+      if (lbl) lbl.textContent = pct + "%";
     });
+  });
 
-    // Badges — split earned / locked
-    const earned = new Set(data.badges || []);
-    const earnedList = ALL_BADGES.filter(b => earned.has(b.name));
-    const lockedList = ALL_BADGES.filter(b => !earned.has(b.name));
-    const levelColors = { bronze:"#f5deb3", silver:"#e8e8e8", gold:"#fff0a0" };
-    const levelText   = { bronze:"#8b6914", silver:"#666",    gold:"#8b6914"  };
+  /* Badges */
+  const earned = new Set(data.badges || []);
+  const chipClass = {bronze:"chip-bronze",silver:"chip-silver",gold:"chip-gold"};
+  const earnedList = ALL_BADGES.filter(b => earned.has(b.name));
+  const lockedList = ALL_BADGES.filter(b => !earned.has(b.name));
 
-    const earnedGrid = document.getElementById("earnedBadgesGrid");
-    if (earnedList.length > 0) {
-        earnedGrid.innerHTML = earnedList.map(b => `
-            <div class="badge-item earned">
-                <span class="badge-level ${b.level}" style="background:${levelColors[b.level]};color:${levelText[b.level]}">${b.level}</span>
-                <span class="badge-icon">${b.icon}</span>
-                <div class="badge-name">${b.name}</div>
-                <div class="badge-desc">${b.desc}</div>
-            </div>`).join("");
-    } else {
-        earnedGrid.innerHTML = `<div class="empty-state"><p>No badges yet — <a href="tasks.html">solve a problem</a> to earn your first!</p></div>`;
-    }
+  const earnedGrid = document.getElementById("earnedBadgesGrid");
+  earnedGrid.innerHTML = earnedList.length > 0
+    ? earnedList.map(b=>`<div class="badge-item earned" role="listitem"><span class="badge-level-chip ${chipClass[b.level]}">${b.level}</span><span class="badge-icon-wrap" aria-hidden="true">${b.icon}</span><div class="badge-name">${esc(b.name)}</div><div class="badge-desc">${esc(b.desc)}</div></div>`).join("")
+    : `<div class="empty-state"><p>No badges yet — <a href="tasks.html">solve a problem</a> to earn your first!</p></div>`;
 
-    document.getElementById("lockedBadgesGrid").innerHTML = lockedList.map(b => `
-        <div class="badge-item locked">
-            <span class="badge-icon">${b.icon}</span>
-            <div class="badge-name">${b.name}</div>
-            <div class="badge-desc">${b.desc}</div>
-        </div>`).join("");
+  document.getElementById("lockedBadgesGrid").innerHTML = lockedList.map(b=>`<div class="badge-item locked" role="listitem" aria-label="${esc(b.name)} — locked"><span class="badge-icon-wrap" aria-hidden="true">${b.icon}</span><div class="badge-name">${esc(b.name)}</div><div class="badge-desc">${esc(b.desc)}</div></div>`).join("");
 
-    // Activity
-    const feed = document.getElementById("activityList");
-    const acts = data.activity || [];
-    if (acts.length > 0) {
-        feed.innerHTML = acts.slice(0, 20).map(item => {
-            const text = typeof item === "string" ? item : item.text;
-            const time = typeof item === "object" && item.time
-                ? new Date(item.time).toLocaleDateString("en-KE",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})
-                : "";
-            let cls = "";
-            if (text.startsWith("✓")) cls = "correct";
-            else if (text.startsWith("✗")) cls = "incorrect";
-            else if (text.includes("Badge") || text.includes("badge")) cls = "badge-ev";
-            return `<div class="activity-item ${cls}">
-                <div class="activity-dot"></div>
-                <span>${esc(text)}</span>
-                ${time ? `<span class="act-time">${time}</span>` : ""}
-            </div>`;
-        }).join("");
-    } else {
-        feed.innerHTML = `<div class="empty-state"><p>No activity yet. <a href="tasks.html">Start practising</a> to see your history.</p></div>`;
-    }
+  /* Activity */
+  const feed = document.getElementById("activityList");
+  const acts = data.activity || [];
+  if (acts.length > 0) {
+    feed.innerHTML = acts.slice(0,20).map(item => {
+      const text = typeof item==="string" ? item : (item.text || "");
+      const time = typeof item==="object" && item.time ? new Date(item.time).toLocaleDateString("en-KE",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}) : "";
+      let cls = "";
+      if (text.startsWith("✓")) cls="act-correct";
+      else if (text.startsWith("✗")) cls="act-incorrect";
+      else if (text.toLowerCase().includes("badge")) cls="act-badge";
+      return `<div class="act-item ${cls}" role="article"><div class="act-dot" aria-hidden="true"></div><span>${esc(text)}</span>${time?`<span class="act-time">${time}</span>`:""}</div>`;
+    }).join("");
+  } else {
+    feed.innerHTML = `<div class="empty-state"><p>No activity yet. <a href="tasks.html">Start practising</a> to see your history here.</p></div>`;
+  }
 }
 
 function animCount(id, target) {
-    const el = document.getElementById(id);
-    if (!el || target === 0) { if(el) el.textContent = "0"; return; }
-    let current = 0;
-    const step = Math.max(1, Math.round(target / 40));
-    const t = setInterval(() => {
-        current = Math.min(current + step, target);
-        el.textContent = current;
-        if (current >= target) clearInterval(t);
-    }, 28);
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (target === 0) { el.textContent = "0"; return; }
+  let current = 0;
+  const step = Math.max(1, Math.round(target / 40));
+  const t = setInterval(() => { current = Math.min(current + step, target); el.textContent = current; if (current >= target) clearInterval(t); }, 28);
 }
 
 function handleReset() {
-    if (!confirm("Reset ALL progress and badges? This cannot be undone.")) return;
-    try { MathProgress.resetProgress(); } catch {}
-    setTimeout(() => location.reload(), 300);
+  if (!confirm("Reset ALL progress, badges, and activity history? This cannot be undone.")) return;
+  try { if (typeof MathProgress !== "undefined") MathProgress.resetProgress(); } catch(e) {}
+  try { localStorage.removeItem("currentUser"); } catch(e) {}
+  setTimeout(() => location.reload(), 300);
 }
 
 function esc(s) {
-    const d = document.createElement("div"); d.textContent = s; return d.innerHTML;
+  const d = document.createElement("div"); d.textContent = String(s); return d.innerHTML;
 }
 </script>
 </body>

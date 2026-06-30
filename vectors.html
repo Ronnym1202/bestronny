@@ -1,205 +1,1573 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vectors | Ronny Best Mathematics</title>
-  <meta name="description" content="From basic direction to vector calculus">
+  <title>Vectors | Ronny Best Mathematics — CBC-Aligned Lesson</title>
+  <meta name="description" content="Complete CBC-aligned Vectors lesson for Kenyan secondary school and university students. Covers vector basics, operations, dot product, cross product, lines & planes in 3D, and vector calculus — with fully worked examples, KCSE exam tips, and KICD/TSC/MoE curriculum alignment.">
+  <meta name="keywords" content="vectors Kenya, CBC vectors, KCSE vectors, dot product Kenya, cross product secondary school, vector calculus Kenya, KICD mathematics vectors, position vectors, Senior Secondary mathematics">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/vectors.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vectors | Ronny Best Mathematics — CBC-Aligned Lesson">
+  <meta property="og:description" content="Comprehensive, step-by-step Vectors lesson covering all CBC Senior Secondary levels — from position vectors through to vector calculus.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/vectors.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — placed correctly inside <head> -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Vectors — Complete CBC-Aligned Mathematics Lesson",
+    "description": "A comprehensive, step-by-step lesson on Vectors for Kenyan secondary school and university students, aligned to the CBC curriculum as approved by KICD, TSC, and the Ministry of Education.",
+    "url": "https://bestronny.netlify.app/vectors.html",
+    "learningResourceType": "Lesson",
+    "educationalLevel": ["Secondary School", "Senior Secondary", "University"],
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    },
+    "educationalAlignment": [
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "Pure Mathematics — Vectors" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalFramework", "targetName": "Kenya CBC Senior Secondary Curriculum (KICD)" }
+    ]
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">➡️</span>
-  <h1>Vectors</h1>
-  <p class="hero-sub">From basic direction to vector calculus</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Vectors</strong>
+<!-- ═══ SKIP LINK ═══ -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+        <span class="brand-sigma" aria-hidden="true">Σ</span>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+      </a>
+      <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+    </div>
+    <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+  </div>
+</header>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+        <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem" aria-current="page">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══ TOPIC HERO ═══ -->
+<div class="topic-hero" role="banner" aria-label="Vectors topic overview">
+  <div class="topic-hero-bg" aria-hidden="true"></div>
+  <div class="topic-hero-symbols" aria-hidden="true">
+    <span>→</span><span>·</span><span>×</span><span>∇</span><span>|v|</span>
+  </div>
+  <div class="topic-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="math-lessons.html">Math Lessons</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Vectors</span>
+    </nav>
+    <div class="topic-hero-icon" aria-hidden="true">→</div>
+    <h1>Vectors</h1>
+    <p class="topic-hero-sub">
+      From position vectors and basic operations through dot products, cross products, and vector calculus —
+      a complete, step-by-step treatment aligned to the Kenyan CBC curriculum for all levels.
+    </p>
+    <div class="topic-meta-row" role="list" aria-label="Topic information">
+      <span class="topic-badge badge-strand" role="listitem">Pure Mathematics</span>
+      <span class="topic-badge badge-level" role="listitem">Junior Secondary</span>
+      <span class="topic-badge badge-level" role="listitem">Senior Secondary</span>
+      <span class="topic-badge badge-level" role="listitem">University</span>
+      <span class="topic-badge badge-cbc" role="listitem">CBC Aligned</span>
+      <span class="topic-badge badge-exam" role="listitem">KCSE Examined</span>
+    </div>
+    <div class="topic-stats-row" role="list" aria-label="Lesson statistics">
+      <div class="ts-item" role="listitem"><strong>11</strong><span>Sections</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>35+</strong><span>Worked Examples</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>3</strong><span>Levels</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>KICD</strong><span>Curriculum</span></div>
+    </div>
+  </div>
 </div>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
+<!-- ═══ MAIN TWO-COLUMN LAYOUT ═══ -->
+<div class="topic-layout" id="main-content">
 
-      <li class="toc-level">Secondary</li>
-      <li><a href="#vec-basics">Vector Basics</a></li>
-      <li><a href="#vec-ops">Operations</a></li>
-      <li><a href="#vec-dot">Dot Product</a></li>
-      <li><a href="#vec-cross">Cross Product</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#vec-lines-planes">Lines & Planes</a></li>
-      <li><a href="#vec-calculus">Vector Calculus</a></li>
-    </ul>
+  <!-- ── TOC SIDEBAR ── -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-sticky">
+      <div class="toc-header">
+        <span class="toc-title">Contents</span>
+      </div>
+      <div class="toc-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress">
+        <div class="toc-progress-fill" id="tocProgressFill"></div>
+      </div>
+      <ul class="toc-list" role="list">
+        <li class="toc-group-label">Junior Secondary</li>
+        <li><a href="#vec-intro" class="toc-link">What is a Vector?</a></li>
+        <li><a href="#vec-notation" class="toc-link">Vector Notation</a></li>
+        <li><a href="#vec-position" class="toc-link">Position Vectors</a></li>
+        <li class="toc-group-label">Senior Secondary</li>
+        <li><a href="#vec-ops" class="toc-link">Vector Operations</a></li>
+        <li><a href="#vec-magnitude" class="toc-link">Magnitude &amp; Unit Vectors</a></li>
+        <li><a href="#vec-dot" class="toc-link">Dot (Scalar) Product</a></li>
+        <li><a href="#vec-cross" class="toc-link">Cross (Vector) Product</a></li>
+        <li><a href="#vec-geometry" class="toc-link">Geometric Applications</a></li>
+        <li class="toc-group-label">A-Level / University</li>
+        <li><a href="#vec-lines-planes" class="toc-link">Lines &amp; Planes in 3D</a></li>
+        <li><a href="#vec-calculus" class="toc-link">Vector Calculus</a></li>
+        <li><a href="#vec-errors" class="toc-link">Common Errors</a></li>
+      </ul>
+      <div class="toc-actions">
+        <a href="tasks.html" class="toc-practice-btn" aria-label="Go to practice problems for Vectors">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Practice Problems
+        </a>
+      </div>
+    </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="topic-content">
+  <!-- ── MAIN CONTENT ── -->
+  <main class="topic-content" id="topic-main">
 
-    <section id="vec-basics" class="topic-section">
-      <div class="section-header"><span class="sec-icon">➡️</span><h2>Vector Fundamentals</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Scalars vs Vectors</h3>
-          <p>A <strong>scalar</strong> has magnitude only (mass, temperature). A <strong>vector</strong> has magnitude AND direction (force, velocity).</p>
-          <div class="formula-box highlight">
-            v = (x, y, z) = xi + yj + zk<br>
-            Magnitude: |v| = √(x² + y² + z²)<br>
-            Unit vector: v̂ = v/|v|
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>Find magnitude and unit vector of v = (3, 4, 0)</p>
-              <p class="soln">|v| = 5. v̂ = (3/5, 4/5, 0)</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div>
-              <p>Find vector from A(1,2) to B(4,6)</p>
-              <p class="soln">AB = B − A = (3, 4). |AB| = 5.</p></div>
-          </div>
-        </div>
+    <!-- CBC CONTEXT BANNER -->
+    <div class="cbc-context-banner" role="note" aria-label="CBC curriculum alignment">
+      <span class="ccb-icon" aria-hidden="true">📘</span>
+      <div class="ccb-text">
+        <strong>CBC Curriculum Alignment:</strong> Vectors appear in the <strong>Pure Mathematics</strong> strand of the Kenyan Senior Secondary curriculum as approved by the <strong>Kenya Institute of Curriculum Development (KICD)</strong>. The topic is core in the STEM pathway and examined in <strong>KCSE Paper 2</strong>. This lesson covers all competency levels from the Basic Education Curriculum Framework (BECF): foundational concepts in Junior Secondary, algebraic treatment in Senior Secondary, and advanced applications at university level — in line with TSC competency frameworks and MoE mathematics guidelines.
       </div>
-    </section>
-
-    <section id="vec-ops" class="topic-section">
-      <div class="section-header"><span class="sec-icon">➕</span><h2>Vector Operations</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Addition: (a₁,b₁) + (a₂,b₂) = (a₁+a₂, b₁+b₂)<br>
-            Scalar multiplication: k(a,b) = (ka, kb)<br>
-            Triangle law: AB + BC = AC &nbsp;&nbsp; Parallelogram law
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vec-dot" class="topic-section">
-      <div class="section-header"><span class="sec-icon">·</span><h2>Dot (Scalar) Product</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            a·b = |a||b|cosθ = a₁b₁ + a₂b₂ + a₃b₃<br>
-            Perpendicular vectors: a·b = 0<br>
-            Projection of a onto b: (a·b)/|b|
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Angle between vectors</div>
-              <p>a = (1,2,2), b = (2,1,−2). Find angle.</p>
-              <p class="soln">a·b = 2+2−4=0 → θ = 90°. Vectors are perpendicular!</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vec-cross" class="topic-section">
-      <div class="section-header"><span class="sec-icon">×</span><h2>Cross (Vector) Product</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            a×b = |a||b|sinθ n̂ (perpendicular to both a and b)<br>
-            a×b = |i  j  k |<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|a₁ a₂ a₃|<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|b₁ b₂ b₃|<br>
-            = (a₂b₃−a₃b₂)i − (a₁b₃−a₃b₁)j + (a₁b₂−a₂b₁)k<br>
-            |a×b| = area of parallelogram formed by a and b
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — a=(1,2,3), b=(4,5,6)</div>
-              <p class="soln">a×b = (2×6−3×5, 3×4−1×6, 1×5−2×4) = (12−15, 12−6, 5−8) = (−3, 6, −3)</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vec-lines-planes" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📐</span><h2>Lines & Planes in 3D</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Line through a with direction d: r = a + td<br>
-            Plane with normal n through point a: n·(r−a) = 0 → n₁x + n₂y + n₃z = d<br>
-            Distance from point P to plane ax+by+cz=d: |aP_x+bP_y+cP_z−d|/√(a²+b²+c²)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Plane through 3 points</div>
-              <p>A(1,0,0), B(0,2,0), C(0,0,3)</p>
-              <p class="soln">AB = (−1,2,0), AC = (−1,0,3). n = AB×AC = (6,3,2). Equation: 6x+3y+2z=6.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vec-calculus" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∇</span><h2>Vector Calculus</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Gradient: ∇f = (∂f/∂x)i + (∂f/∂y)j + (∂f/∂z)k &nbsp; (points in direction of steepest ascent)<br>
-            Divergence: ∇·F = ∂F₁/∂x + ∂F₂/∂y + ∂F₃/∂z &nbsp; (scalar)<br>
-            Curl: ∇×F &nbsp; (measures rotation of vector field)<br>
-            Laplacian: ∇²f = ∂²f/∂x² + ∂²f/∂y² + ∂²f/∂z²
-          </div>
-          <div class="callout note"><span class="callout-icon">📝</span><span>Stokes' theorem, Green's theorem, and the Divergence theorem connect line integrals, surface integrals, and volume integrals using these operators.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="integration.html" class="topic-nav-btn prev">← Integration</a>
-      <a href="matrices.html" class="topic-nav-btn next">Matrices →</a>
     </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 1 — WHAT IS A VECTOR?
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-intro" scroll-margin-top="90px">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">→</div>
+        <div>
+          <span class="ls-eyebrow">Section 01 · Foundations</span>
+          <h2>What is a Vector?</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Junior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>In everyday life, we distinguish between quantities that only need a size — like temperature or mass — and quantities that also need a direction — like force or wind. Understanding this distinction is the starting point of all vector mathematics.</p>
+        </div>
+
+        <h3 class="sub-heading">Scalars and Vectors Compared</h3>
+        <p class="body-para">A <strong>scalar</strong> is a quantity described completely by its magnitude (size) alone. Temperature, time, mass, distance, and speed are all scalars. A <strong>vector</strong>, however, requires both magnitude and direction to be fully described. Displacement, velocity, acceleration, force, and momentum are all vectors.</p>
+        <p class="body-para">The distinction matters enormously in real life. Saying "run 5 km" is incomplete — you must say "run 5 km north." That direction makes it a displacement vector, not merely a distance scalar. Similarly, a force of 10 N acting downward is very different from 10 N acting sideways, even though their magnitudes are equal.</p>
+
+        <div class="two-col-demo">
+          <div class="demo-item demo-yes">
+            <div class="demo-label">✓ Scalars (magnitude only)</div>
+            <div class="demo-eq">Mass: 60 kg</div>
+            <div class="demo-eq">Temperature: 37 °C</div>
+            <div class="demo-eq">Speed: 80 km/h</div>
+            <div class="demo-eq">Time: 2 hours</div>
+          </div>
+          <div class="demo-item demo-no" style="background:rgba(26,53,96,.06);border:1px solid rgba(26,53,96,.15);">
+            <div class="demo-label" style="color:var(--navy-700);">⃗ Vectors (magnitude + direction)</div>
+            <div class="demo-eq">Displacement: 5 km North</div>
+            <div class="demo-eq">Velocity: 80 km/h East</div>
+            <div class="demo-eq">Force: 100 N downward</div>
+            <div class="demo-eq">Acceleration: 9.8 m/s² down</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Why Vectors Matter in the CBC Curriculum</h3>
+        <p class="body-para">The KICD CBC Pure Mathematics curriculum introduces vectors because they provide the mathematical language for describing physical reality — from the trajectory of a projectile to the stress forces in a building. In the STEM pathway, vectors underpin physics, engineering, and computer graphics. Mastery of vectors is also essential for calculus-based work at university level, where vector fields describe phenomena such as gravitational and electromagnetic force distributions.</p>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📝</span>
+          <div><strong>KCSE Exam Note:</strong> KCSE Paper 2 regularly tests vectors in the context of geometry problems — finding midpoints, dividing lines in given ratios, and proving collinearity. These problems combine position vectors with ratio concepts and are worth significant marks. Always show your vector working fully, step by step.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 2 — VECTOR NOTATION
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-notation">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⃗</div>
+        <div>
+          <span class="ls-eyebrow">Section 02 · Language of Vectors</span>
+          <h2>Vector Notation and Representation</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Junior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">Before working with vectors algebraically, you must be fluent in the different ways they are written and drawn. Different textbooks and examination papers use different conventions — understanding all of them prevents confusion.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Standard Notations for a Vector</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Bold (print)</div>
+              <div class="fb-eq"><strong>a</strong>, <strong>b</strong>, <strong>v</strong> — used in textbooks</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Underline (handwriting)</div>
+              <div class="fb-eq">a̲, b̲, v̲ — used in handwritten work and KCSE exams</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Arrow over letters</div>
+              <div class="fb-eq">AB⃗ — vector from point A to point B</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Column vector (2D)</div>
+              <div class="fb-eq">(x, y) or written as column: [x / y]</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Column vector (3D)</div>
+              <div class="fb-eq">(x, y, z) — three-dimensional space</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Component form</div>
+              <div class="fb-eq">xi + yj + zk — using unit vectors i, j, k</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">The i, j, k Unit Vector System</h3>
+        <p class="body-para">The most fundamental vectors in 3D space are the three unit vectors along the coordinate axes:</p>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Standard Basis Unit Vectors</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">i (or î)</div>
+              <div class="fb-eq">= (1, 0, 0) — one unit in the x-direction</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">j (or ĵ)</div>
+              <div class="fb-eq">= (0, 1, 0) — one unit in the y-direction</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">k (or k̂)</div>
+              <div class="fb-eq">= (0, 0, 1) — one unit in the z-direction</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">General vector</div>
+              <div class="fb-eq">v = xi + yj + zk = (x, y, z)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Vector Notation</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1</span>
+              Write the vector (−3, 5, 2) in component form using i, j, k.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Identify the x, y, z components: x = −3, y = 5, z = 2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Write each component multiplied by its unit vector: <strong>−3i + 5j + 2k</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">v = −3i + 5j + 2k</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2</span>
+              If A = (2, 1) and B = (7, 4), write the vector AB⃗ as a column vector.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>The vector AB⃗ goes <em>from</em> A <em>to</em> B. Use the rule: AB⃗ = B − A (subtract coordinates of the starting point).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>AB⃗ = (7 − 2, 4 − 1) = <strong>(5, 3)</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Check</span>
+                <span>Note: BA⃗ = A − B = (−5, −3). This is the reverse direction — same magnitude, opposite direction.</span>
+              </div>
+            </div>
+            <div class="we-answer">AB⃗ = (5, 3)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 3 — POSITION VECTORS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-position">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">📍</div>
+        <div>
+          <span class="ls-eyebrow">Section 03 · Core Concept</span>
+          <h2>Position Vectors and Displacement</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>A position vector locates a point relative to a fixed origin O. This idea underpins nearly all KCSE vector geometry problems, including ratio division, midpoints, and proving collinearity.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Key Position Vector Relationships</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Position of A from O</div>
+              <div class="fb-eq">OA⃗ = a = (a₁, a₂, a₃)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Vector from A to B</div>
+              <div class="fb-eq">AB⃗ = OB⃗ − OA⃗ = b − a</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Midpoint M of AB</div>
+              <div class="fb-eq">OM⃗ = ½(a + b)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Point dividing AB in ratio m:n (internally)</div>
+              <div class="fb-eq">OP⃗ = (n·a + m·b) / (m + n)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Collinearity condition</div>
+              <div class="fb-eq">Points A, B, C collinear if AB⃗ = k · AC⃗ for some scalar k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Position Vectors (KCSE Style)</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Midpoint</span>
+              O is the origin. OA⃗ = 2i + 3j and OB⃗ = 6i + j. Find the position vector of M, the midpoint of AB.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Write out: a = (2, 3) and b = (6, 1).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Midpoint formula: OM⃗ = ½(a + b) = ½[(2, 3) + (6, 1)] = ½(8, 4) = <strong>(4, 2)</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Check</span>
+                <span>Verify: AM⃗ = (4−2, 2−3) = (2, −1). MB⃗ = (6−4, 1−2) = (2, −1). Equal vectors confirm M is the midpoint. ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">OM⃗ = 4i + 2j</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Internal Division</span>
+              A has position vector a = (1, 2) and B has position vector b = (7, 8). Point P divides AB internally in the ratio 2:1. Find the position vector of P.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Ratio m:n = 2:1, so m = 2, n = 1. Total parts = 3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Apply the section formula: OP⃗ = (n·a + m·b)/(m + n) = (1·(1,2) + 2·(7,8)) / 3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>= [(1, 2) + (14, 16)] / 3 = (15, 18) / 3 = <strong>(5, 6)</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">OP⃗ = 5i + 6j</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Collinearity (KCSE-style)</span>
+              OA⃗ = 2a, OB⃗ = 3b, OC⃗ = 4a + 3b. Show that A, B, C are not collinear, OR find the value of a scalar if they were. [Typical KCSE phrasing]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Find AB⃗ = OB⃗ − OA⃗ = 3b − 2a.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Find AC⃗ = OC⃗ − OA⃗ = (4a + 3b) − 2a = 2a + 3b.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>For collinearity, AB⃗ = k · AC⃗ for some scalar k. So: 3b − 2a = k(2a + 3b) = 2ka + 3kb. Comparing a-components: −2 = 2k → k = −1. Comparing b-components: 3 = 3k → k = 1. Since k = −1 and k = 1 are contradictory, A, B, C are <strong>not collinear</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">A, B, C are not collinear (no single value of k satisfies both conditions).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 4 — VECTOR OPERATIONS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-ops">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">±</div>
+        <div>
+          <span class="ls-eyebrow">Section 04 · Core Algebra</span>
+          <h2>Vector Operations</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">Vectors can be added, subtracted, and scaled (multiplied by a scalar). These operations follow clear rules that are consistent across 2D and 3D space. Understanding these operations allows you to solve force problems, velocity problems, and geometric proofs.</p>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Vector Operation Rules</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Addition</div>
+              <div class="fb-eq">(a₁, a₂, a₃) + (b₁, b₂, b₃) = (a₁+b₁, a₂+b₂, a₃+b₃)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Subtraction</div>
+              <div class="fb-eq">(a₁, a₂, a₃) − (b₁, b₂, b₃) = (a₁−b₁, a₂−b₂, a₃−b₃)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Scalar multiplication</div>
+              <div class="fb-eq">k(a₁, a₂, a₃) = (ka₁, ka₂, ka₃)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Zero vector</div>
+              <div class="fb-eq"><strong>0</strong> = (0, 0, 0) — the additive identity</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Negative vector</div>
+              <div class="fb-eq">−a = (−a₁, −a₂, −a₃) — same magnitude, opposite direction</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Triangle Law</div>
+              <div class="fb-eq">AB⃗ + BC⃗ = AC⃗ (vectors head-to-tail)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Parallelogram Law</div>
+              <div class="fb-eq">Resultant of a and b = diagonal of parallelogram formed by a and b</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Properties of Vector Addition</h3>
+        <p class="body-para">Vector addition is both commutative (a + b = b + a) and associative ((a + b) + c = a + (b + c)). Scalar multiplication distributes over vector addition: k(a + b) = ka + kb. These properties mirror those of real number arithmetic and are used constantly in proofs.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Vector Operations</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1</span>
+              a = (3, −1, 4), b = (−2, 5, 1). Find: (a) a + b, (b) 2a − 3b.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>a + b = (3+(−2), −1+5, 4+1) = <strong>(1, 4, 5)</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>First: 2a = (6, −2, 8). Then: 3b = (−6, 15, 3). So: 2a − 3b = (6−(−6), −2−15, 8−3) = <strong>(12, −17, 5)</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">(a) (1, 4, 5) &nbsp;&nbsp; (b) (12, −17, 5)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Applied: Resultant Force</span>
+              Three forces act on a particle: F₁ = (5, 3) N, F₂ = (−2, 7) N, F₃ = (1, −4) N. Find the resultant force.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Resultant = F₁ + F₂ + F₃ (vector addition is done component by component).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>x-components: 5 + (−2) + 1 = 4. y-components: 3 + 7 + (−4) = 6. Resultant = <strong>(4, 6) N</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Magnitude = √(4² + 6²) = √(16 + 36) = √52 = 2√13 ≈ 7.21 N.</span>
+              </div>
+            </div>
+            <div class="we-answer">Resultant force = (4, 6) N, magnitude = 2√13 N ≈ 7.21 N</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 5 — MAGNITUDE AND UNIT VECTORS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-magnitude">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">|v|</div>
+        <div>
+          <span class="ls-eyebrow">Section 05 · Measurement</span>
+          <h2>Magnitude and Unit Vectors</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>The magnitude of a vector is its length — a scalar value obtained from the Pythagorean theorem extended to multiple dimensions. A unit vector has magnitude exactly 1 and is used to indicate pure direction.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Magnitude and Unit Vector Formulas</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Magnitude in 2D</div>
+              <div class="fb-eq highlight-formula">|a| = √(a₁² + a₂²)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Magnitude in 3D</div>
+              <div class="fb-eq highlight-formula">|a| = √(a₁² + a₂² + a₃²)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Unit vector in direction a</div>
+              <div class="fb-eq highlight-formula">â = a / |a|</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Verification</div>
+              <div class="fb-eq">|â| = 1 always</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Vector of given length</div>
+              <div class="fb-eq">If |v| = L in direction a: v = L · â = L · (a/|a|)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Magnitude and Unit Vectors</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1</span>
+              Find the magnitude and unit vector of v = (3, −4, 0).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>|v| = √(3² + (−4)² + 0²) = √(9 + 16 + 0) = √25 = <strong>5</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Unit vector: v̂ = v / |v| = (3, −4, 0) / 5 = <strong>(3/5, −4/5, 0)</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Verify</span>
+                <span>|v̂| = √((3/5)² + (−4/5)²) = √(9/25 + 16/25) = √(25/25) = 1 ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">|v| = 5 &nbsp;&nbsp;·&nbsp;&nbsp; v̂ = (3/5, −4/5, 0)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2</span>
+              Find a vector of magnitude 6 in the direction of a = (1, 2, 2).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Find |a| = √(1 + 4 + 4) = √9 = 3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Unit vector: â = (1, 2, 2)/3 = (1/3, 2/3, 2/3).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Required vector = 6 × (1/3, 2/3, 2/3) = <strong>(2, 4, 4)</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Required vector = (2, 4, 4), with magnitude 6 ✔</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — KCSE Style</span>
+              Given p = 3i − 4j and q = 5i + 12j, find: (a) |p|, (b) |q|, (c) a unit vector in the direction of p + q.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>|p| = √(3² + (−4)²) = √(9 + 16) = √25 = <strong>5</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>|q| = √(5² + 12²) = √(25 + 144) = √169 = <strong>13</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part c</span>
+                <span>p + q = (3+5, −4+12) = (8, 8). |p + q| = √(64 + 64) = √128 = 8√2. Unit vector = (8, 8)/(8√2) = (1/√2, 1/√2) = <strong>(√2/2, √2/2)</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">|p| = 5 · |q| = 13 · unit vector in direction (p+q) = (√2/2, √2/2)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 6 — DOT PRODUCT
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-dot">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">·</div>
+        <div>
+          <span class="ls-eyebrow">Section 06 · Scalar Multiplication</span>
+          <h2>Dot (Scalar) Product</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary / A-Level</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>The dot product combines two vectors to produce a scalar (ordinary number). It is the key tool for measuring the angle between two vectors and for testing perpendicularity — both crucial in KCSE geometry and physics applications.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Dot Product — Two Equivalent Definitions</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Geometric definition</div>
+              <div class="fb-eq highlight-formula">a · b = |a| |b| cos θ</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Component definition</div>
+              <div class="fb-eq highlight-formula">a · b = a₁b₁ + a₂b₂ + a₃b₃</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Angle between vectors</div>
+              <div class="fb-eq">cos θ = (a · b) / (|a| |b|)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Perpendicular vectors</div>
+              <div class="fb-eq">a ⊥ b ⟺ a · b = 0 (θ = 90°)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Parallel vectors (same direction)</div>
+              <div class="fb-eq">a · b = |a| |b| (θ = 0°, cos 0° = 1)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Scalar projection of a onto b</div>
+              <div class="fb-eq">comp_b(a) = (a · b) / |b|</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Vector projection of a onto b</div>
+              <div class="fb-eq">proj_b(a) = [(a · b) / |b|²] b</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Key Properties of the Dot Product</h3>
+        <p class="body-para">The dot product is commutative: a · b = b · a. It distributes over addition: a · (b + c) = a · b + a · c. The dot product of a vector with itself gives the square of its magnitude: a · a = |a|². The standard unit vectors satisfy: i · i = j · j = k · k = 1, and i · j = j · k = i · k = 0.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Dot Product</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Find the angle</span>
+              Find the angle between a = (1, 2, 2) and b = (2, 1, −2).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Compute a · b = (1)(2) + (2)(1) + (2)(−2) = 2 + 2 − 4 = <strong>0</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Since a · b = 0, cos θ = 0, therefore θ = 90°.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Conclusion</span>
+                <span>The vectors are <strong>perpendicular</strong>. This result holds regardless of their magnitudes.</span>
+              </div>
+            </div>
+            <div class="we-answer">θ = 90° — the vectors are perpendicular.</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Exact angle</span>
+              Find the angle between p = (3, 0, 4) and q = (1, 1, 0), giving your answer to 1 decimal place.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>p · q = (3)(1) + (0)(1) + (4)(0) = 3 + 0 + 0 = 3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>|p| = √(9 + 0 + 16) = √25 = 5. |q| = √(1 + 1 + 0) = √2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>cos θ = (p · q) / (|p| |q|) = 3 / (5√2) = 3/(5√2) ≈ 3/7.071 ≈ 0.4243.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>θ = arccos(0.4243) ≈ <strong>64.9°</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">θ ≈ 64.9°</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Finding k for perpendicularity</span>
+              Vectors a = (k, 3, −1) and b = (2, k, 5) are perpendicular. Find k.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>For perpendicularity: a · b = 0.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>a · b = (k)(2) + (3)(k) + (−1)(5) = 2k + 3k − 5 = 5k − 5.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Set equal to zero: 5k − 5 = 0 → 5k = 5 → <strong>k = 1</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">k = 1</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 4 — Projection</span>
+              Find the scalar projection of a = (4, 1, 3) onto b = (2, −2, 1).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>a · b = (4)(2) + (1)(−2) + (3)(1) = 8 − 2 + 3 = 9.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>|b| = √(4 + 4 + 1) = √9 = 3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Scalar projection = (a · b)/|b| = 9/3 = <strong>3</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Scalar projection = 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 7 — CROSS PRODUCT
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-cross">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">×</div>
+        <div>
+          <span class="ls-eyebrow">Section 07 · Vector Multiplication</span>
+          <h2>Cross (Vector) Product</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">A-Level / University</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Unlike the dot product, the cross product of two vectors produces another vector — one that is perpendicular to both. It is defined only in 3D space and is fundamental in physics (torque, angular momentum) and finding normal vectors to planes.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Cross Product — Definition and Formula</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Geometric form</div>
+              <div class="fb-eq highlight-formula">a × b = |a| |b| sin θ n̂</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">where n̂</div>
+              <div class="fb-eq">is the unit vector perpendicular to both a and b (right-hand rule)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Determinant form</div>
+              <div class="fb-eq highlight-formula">a × b = | i  j  k |
+                                                            | a₁ a₂ a₃|
+                                                            | b₁ b₂ b₃|</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Expanded form</div>
+              <div class="fb-eq">= (a₂b₃ − a₃b₂)i − (a₁b₃ − a₃b₁)j + (a₁b₂ − a₂b₁)k</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Magnitude = Area</div>
+              <div class="fb-eq">|a × b| = area of parallelogram with sides a and b</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Triangle area</div>
+              <div class="fb-eq">Area of triangle = ½|a × b|</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Parallel test</div>
+              <div class="fb-eq">a ∥ b ⟺ a × b = 0 (sin 0° = 0)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-warn">
+          <span class="cw-icon" aria-hidden="true">⚠</span>
+          <div><strong>Critical Warning — Order Matters!</strong> The cross product is <em>anti-commutative</em>: <strong>a × b = −(b × a)</strong>. Unlike the dot product, reversing the order gives the opposite vector (same magnitude, opposite direction). Always be careful about order.</div>
+        </div>
+
+        <h3 class="sub-heading">The Right-Hand Rule</h3>
+        <p class="body-para">To determine the direction of a × b without calculation: point your right-hand fingers in the direction of a, curl them toward b, and your extended thumb points in the direction of a × b. This physical intuition helps you verify your calculated results and is essential in physics applications involving torque and magnetic force.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Cross Product</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Standard computation</span>
+              Find a × b where a = (1, 2, 3) and b = (4, 5, 6).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Apply the formula, i-component: a₂b₃ − a₃b₂ = (2)(6) − (3)(5) = 12 − 15 = <strong>−3</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>j-component (note the minus sign in front): −(a₁b₃ − a₃b₁) = −[(1)(6) − (3)(4)] = −[6 − 12] = −(−6) = <strong>6</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>k-component: a₁b₂ − a₂b₁ = (1)(5) − (2)(4) = 5 − 8 = <strong>−3</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Verify</span>
+                <span>Check perpendicularity: (−3, 6, −3)·(1, 2, 3) = −3 + 12 − 9 = 0 ✔ and (−3, 6, −3)·(4, 5, 6) = −12 + 30 − 18 = 0 ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">a × b = (−3, 6, −3) = −3i + 6j − 3k</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Area of a triangle</span>
+              Vertices A(1, 0, 0), B(0, 2, 0), C(0, 0, 3). Find the area of triangle ABC.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Find two edge vectors: AB⃗ = B − A = (−1, 2, 0). AC⃗ = C − A = (−1, 0, 3).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>AB⃗ × AC⃗: i-component = (2)(3)−(0)(0) = 6. j-component = −[(−1)(3)−(0)(−1)] = −[−3−0] = 3. k-component = (−1)(0)−(2)(−1) = 0+2 = 2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>AB⃗ × AC⃗ = (6, 3, 2). |AB⃗ × AC⃗| = √(36 + 9 + 4) = √49 = 7.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>Area of triangle = ½ × 7 = <strong>3.5 square units</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Area of △ABC = 3.5 square units</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Parallel test</span>
+              Are a = (2, −1, 3) and b = (4, −2, 6) parallel?
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Method 1</span>
+                <span>Check if b = ka: (4, −2, 6) = k(2, −1, 3). From x: k = 2. From y: k = 2. From z: k = 2. All equal → parallel. ✔</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Method 2</span>
+                <span>Compute a × b. i: (−1)(6)−(3)(−2) = −6+6 = 0. j: −[(2)(6)−(3)(4)] = −[12−12] = 0. k: (2)(−2)−(−1)(4) = −4+4 = 0. Cross product = (0,0,0). ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">Yes, a and b are parallel. (b = 2a)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 8 — GEOMETRIC APPLICATIONS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-geometry">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">△</div>
+        <div>
+          <span class="ls-eyebrow">Section 08 · Applications</span>
+          <h2>Geometric Applications of Vectors</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">One of the most powerful uses of vectors in the CBC curriculum is in plane geometry — proving properties of shapes, finding unknown points, and demonstrating collinearity or parallelism. These problems appear heavily in KCSE Paper 2 and account for a significant proportion of available marks.</p>
+
+        <div class="method-tabs">
+          <div class="mt-block">
+            <div class="mt-title">Proving Parallel Lines</div>
+            <div class="mt-desc">Show AB⃗ = k · CD⃗ for some scalar k ≠ 0. Two vectors are parallel if one is a scalar multiple of the other. If they also share a point, the lines are collinear (same line).</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Proving Collinearity</div>
+            <div class="mt-desc">Show AB⃗ = k · AC⃗. Points A, B, C are collinear if the vectors between any two pairs of points are parallel and share a common point.</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Intersection of Lines</div>
+            <div class="mt-desc">Parametric equations: set equal and solve for parameters. Two lines in 2D will always intersect (unless parallel); in 3D, they may be skew.</div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Geometry (KCSE Style)</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — KCSE Geometry Proof</span>
+              OABC is a trapezium where OA is parallel to CB and CB = ½OA. OA⃗ = a, OC⃗ = c. D is the midpoint of AB. Find OD⃗ in terms of a and c. Hence show that O, D, B are not collinear (or verify the vector equation of the line through O and D).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Since CB = ½OA and CB ∥ OA: CB⃗ = ½a. So OB⃗ = OC⃗ + CB⃗ = c + ½a.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>OA⃗ = a (given). AB⃗ = OB⃗ − OA⃗ = (c + ½a) − a = c − ½a.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>D is midpoint of AB: OD⃗ = OA⃗ + ½AB⃗ = a + ½(c − ½a) = a + ½c − ¼a = <strong>¾a + ½c</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Check</span>
+                <span>OD⃗ = ¾a + ½c. OB⃗ = ½a + c. Is OD⃗ = k·OB⃗? If so: ¾a + ½c = k(½a + c). From a: k = 3/2. From c: k = 1/2. Contradiction — O, D, B are NOT collinear. ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">OD⃗ = ¾a + ½c</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 9 — LINES AND PLANES IN 3D
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-lines-planes">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">📐</div>
+        <div>
+          <span class="ls-eyebrow">Section 09 · Three Dimensions</span>
+          <h2>Lines and Planes in 3D Space</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">A-Level / University</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>In three dimensions, vectors provide the most elegant and powerful way to describe lines and planes. This is fundamental at university level and appears in A-Level applied mathematics.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Vector Equations of Lines and Planes</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Line through point a, direction d</div>
+              <div class="fb-eq highlight-formula">r = a + t·d &nbsp;&nbsp; (t ∈ ℝ)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Parametric form</div>
+              <div class="fb-eq">x = a₁ + td₁, y = a₂ + td₂, z = a₃ + td₃</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Cartesian symmetric form</div>
+              <div class="fb-eq">(x−a₁)/d₁ = (y−a₂)/d₂ = (z−a₃)/d₃</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Plane: normal n, point a</div>
+              <div class="fb-eq highlight-formula">n · (r − a) = 0 &nbsp;&nbsp;→&nbsp;&nbsp; n · r = n · a</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Cartesian plane equation</div>
+              <div class="fb-eq">n₁x + n₂y + n₃z = d &nbsp;&nbsp; (d = n · a)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Dist. from point P to plane ax+by+cz=d</div>
+              <div class="fb-eq">Distance = |aP_x + bP_y + cP_z − d| / √(a²+b²+c²)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Angle between two planes</div>
+              <div class="fb-eq">cos θ = |n₁ · n₂| / (|n₁| |n₂|)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Lines and Planes</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Vector equation of a line</span>
+              Find the vector equation of the line through A(2, 1, −3) with direction d = (1, 2, −1).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Use the formula r = a + td. Here a = (2, 1, −3) and d = (1, 2, −1).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>r = (2, 1, −3) + t(1, 2, −1), which in parametric form is: x = 2 + t, y = 1 + 2t, z = −3 − t.</span>
+              </div>
+            </div>
+            <div class="we-answer">r = (2, 1, −3) + t(1, 2, −1), t ∈ ℝ</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Equation of a plane through 3 points</span>
+              Find the equation of the plane through A(1, 0, 0), B(0, 2, 0), C(0, 0, 3).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Find two vectors in the plane: AB⃗ = (−1, 2, 0) and AC⃗ = (−1, 0, 3).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Normal vector n = AB⃗ × AC⃗. i: (2)(3)−(0)(0) = 6. j: −[(−1)(3)−(0)(−1)] = 3. k: (−1)(0)−(2)(−1) = 2. n = (6, 3, 2).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Plane equation: n · r = n · a = (6)(1)+(3)(0)+(2)(0) = 6.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>Full equation: <strong>6x + 3y + 2z = 6</strong>.</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Verify</span>
+                <span>A(1,0,0): 6(1)+3(0)+2(0)=6 ✔  B(0,2,0): 6(0)+3(2)+2(0)=6 ✔  C(0,0,3): 6(0)+3(0)+2(3)=6 ✔</span>
+              </div>
+            </div>
+            <div class="we-answer">6x + 3y + 2z = 6 (or equivalently: 6x + 3y + 2z − 6 = 0)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Distance from a point to a plane</span>
+              Find the perpendicular distance from P(1, 2, 3) to the plane 2x − y + 2z = 9.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Identify: a = 2, b = −1, c = 2, d = 9. Point P = (1, 2, 3).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Distance = |a·Px + b·Py + c·Pz − d| / √(a² + b² + c²) = |2(1) + (−1)(2) + 2(3) − 9| / √(4 + 1 + 4).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>= |2 − 2 + 6 − 9| / √9 = |−3| / 3 = 3/3 = <strong>1 unit</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Perpendicular distance = 1 unit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 10 — VECTOR CALCULUS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-calculus">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">∇</div>
+        <div>
+          <span class="ls-eyebrow">Section 10 · University Level</span>
+          <h2>Vector Calculus</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">University</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Vector calculus extends differentiation and integration to vector-valued functions and multi-dimensional scalar fields. It is the mathematical language of physics — describing gravitational, electric, and fluid flow fields. It underpins university-level STEM courses across all Kenyan universities.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Vector Calculus Operators</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Gradient (grad f)</div>
+              <div class="fb-eq highlight-formula">∇f = (∂f/∂x)i + (∂f/∂y)j + (∂f/∂z)k</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">What gradient means</div>
+              <div class="fb-eq">Points in the direction of steepest increase of f; its magnitude is the rate of change in that direction.</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Divergence (div F)</div>
+              <div class="fb-eq highlight-formula">∇·F = ∂F₁/∂x + ∂F₂/∂y + ∂F₃/∂z &nbsp;&nbsp; (scalar)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">What divergence means</div>
+              <div class="fb-eq">Measures how much a vector field "spreads out" from a point. Positive = source; Negative = sink.</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Curl (curl F)</div>
+              <div class="fb-eq highlight-formula">∇×F = |i  j  k | / |∂/∂x ∂/∂y ∂/∂z| / |F₁ F₂ F₃|</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">What curl means</div>
+              <div class="fb-eq">Measures the rotation (circulation) of a vector field around a point. Zero curl = irrotational field.</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Laplacian (∇²f)</div>
+              <div class="fb-eq highlight-formula">∇²f = ∂²f/∂x² + ∂²f/∂y² + ∂²f/∂z²</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Directional derivative</div>
+              <div class="fb-eq">D_u f = ∇f · û (rate of change of f in direction of unit vector û)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Vector Calculus</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Gradient</span>
+              Find ∇f at the point (1, 2, 1) where f(x, y, z) = x²y + yz².
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>∂f/∂x = 2xy. ∂f/∂y = x² + z². ∂f/∂z = 2yz.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>∇f = (2xy, x² + z², 2yz).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>At (1, 2, 1): ∇f = (2(1)(2), 1² + 1², 2(2)(1)) = <strong>(4, 2, 4)</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">∇f at (1,2,1) = (4, 2, 4) = 4i + 2j + 4k</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Divergence</span>
+              Find ∇·F where F = (x²y, yz, xz²).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>∂F₁/∂x = ∂(x²y)/∂x = 2xy.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>∂F₂/∂y = ∂(yz)/∂y = z.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>∂F₃/∂z = ∂(xz²)/∂z = 2xz.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>∇·F = 2xy + z + 2xz.</span>
+              </div>
+            </div>
+            <div class="we-answer">div F = 2xy + z + 2xz</div>
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📝</span>
+          <div>
+            <strong>Integral Theorems:</strong> Three major theorems connect vector calculus integrals:
+            <strong>Green's Theorem</strong> relates a line integral around a closed 2D curve to a double integral over the enclosed region;
+            <strong>Stokes' Theorem</strong> extends this to 3D, relating a surface integral of curl F to the line integral around the boundary curve;
+            <strong>the Divergence Theorem (Gauss's Theorem)</strong> relates the volume integral of divergence to the surface integral over the boundary. These are the foundation of electromagnetism and fluid dynamics.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 11 — FORMULA SHEET
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-formula-sheet">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">📋</div>
+        <div>
+          <span class="ls-eyebrow">Section 11 · Quick Reference</span>
+          <h2>Complete Vectors Formula Sheet</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">All Levels</span>
+      </div>
+      <div class="ls-body">
+        <div class="formula-sheet-grid">
+          <div class="fs-card">
+            <div class="fs-title">Magnitude</div>
+            <div class="fs-items">
+              <div class="fs-item">2D: |a| = √(a₁² + a₂²)</div>
+              <div class="fs-item">3D: |a| = √(a₁² + a₂² + a₃²)</div>
+              <div class="fs-item">Unit vector: â = a / |a|</div>
+              <div class="fs-item">a · a = |a|²</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Position Vectors</div>
+            <div class="fs-items">
+              <div class="fs-item">AB⃗ = b − a</div>
+              <div class="fs-item">Midpoint: OM⃗ = ½(a + b)</div>
+              <div class="fs-item">Ratio m:n: (na + mb)/(m+n)</div>
+              <div class="fs-item">Collinear: AB⃗ = k·AC⃗</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Dot Product</div>
+            <div class="fs-items">
+              <div class="fs-item">a · b = a₁b₁ + a₂b₂ + a₃b₃</div>
+              <div class="fs-item">a · b = |a||b|cos θ</div>
+              <div class="fs-item">cos θ = (a·b)/(|a||b|)</div>
+              <div class="fs-item">Perp: a·b = 0</div>
+              <div class="fs-item">Proj: (a·b)/|b|²  ×  b</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Cross Product</div>
+            <div class="fs-items">
+              <div class="fs-item">a×b = |a||b|sin θ n̂</div>
+              <div class="fs-item">i: a₂b₃ − a₃b₂</div>
+              <div class="fs-item">j: −(a₁b₃ − a₃b₁)</div>
+              <div class="fs-item">k: a₁b₂ − a₂b₁</div>
+              <div class="fs-item">Area △ = ½|a×b|</div>
+              <div class="fs-item">Parallel: a×b = 0</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Lines in 3D</div>
+            <div class="fs-items">
+              <div class="fs-item">r = a + td</div>
+              <div class="fs-item">x = a₁+td₁, y = a₂+td₂, z = a₃+td₃</div>
+              <div class="fs-item">Cartesian: (x−a₁)/d₁ = (y−a₂)/d₂ = (z−a₃)/d₃</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Planes in 3D</div>
+            <div class="fs-items">
+              <div class="fs-item">n·(r−a) = 0</div>
+              <div class="fs-item">n₁x + n₂y + n₃z = d</div>
+              <div class="fs-item">Normal: n = AB⃗ × AC⃗</div>
+              <div class="fs-item">Dist = |ax₀+by₀+cz₀−d|/√(a²+b²+c²)</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Vector Calculus</div>
+            <div class="fs-items">
+              <div class="fs-item">∇f = (∂f/∂x, ∂f/∂y, ∂f/∂z)</div>
+              <div class="fs-item">div F = ∂F₁/∂x + ∂F₂/∂y + ∂F₃/∂z</div>
+              <div class="fs-item">∇²f = ∂²f/∂x² + ∂²f/∂y² + ∂²f/∂z²</div>
+              <div class="fs-item">D_u f = ∇f · û</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Key Identities</div>
+            <div class="fs-items">
+              <div class="fs-item">a × b = −(b × a)</div>
+              <div class="fs-item">a · b = b · a</div>
+              <div class="fs-item">i·i = j·j = k·k = 1</div>
+              <div class="fs-item">i·j = j·k = i·k = 0</div>
+              <div class="fs-item">i×j = k, j×k = i, k×i = j</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 12 — COMMON ERRORS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vec-errors">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⚠</div>
+        <div>
+          <span class="ls-eyebrow">Section 12 · Exam Preparation</span>
+          <h2>Common Errors in Vectors</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">All Levels</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">These are the most frequently penalised mistakes in KCSE and Senior Secondary vector assessments. Learning to recognise them in your own work is as important as learning the correct methods.</p>
+
+        <div class="errors-grid">
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>AB⃗ = A − B = (1,2) − (4,6) = (−3,−4)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>AB⃗ = B − A = (4,6) − (1,2) = (3,4)</div>
+            <div class="ec-note">AB⃗ goes <em>from</em> A <em>to</em> B. Subtract the starting point (A) from the destination (B), not the other way around.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>a · b = (a₁, a₂, a₃)(b₁, b₂, b₃) = (a₁b₁, a₂b₂, a₃b₃)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>a · b = a₁b₁ + a₂b₂ + a₃b₃ (a single scalar)</div>
+            <div class="ec-note">The dot product always produces a <em>scalar</em> (single number), not a vector. Add all component products together.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>a × b = b × a</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>a × b = −(b × a)</div>
+            <div class="ec-note">Unlike the dot product, the cross product is NOT commutative. Reversing the order negates the result — a very common sign error.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Unit vector of (3,4): û = (3,4)/7</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>|(3,4)| = √(9+16) = 5, û = (3,4)/5 = (0.6, 0.8)</div>
+            <div class="ec-note">Always calculate the magnitude first before dividing. Using 7 (sum of components) instead of 5 (magnitude) is a very frequent error.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>j-component of cross product: a₁b₃ − a₃b₁</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>j-component: −(a₁b₃ − a₃b₁) — note the negative sign!</div>
+            <div class="ec-note">The j-component of the cross product has a minus sign in front. Forgetting this sign is the single most common cross product error.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>For collinearity, just show AB⃗ = k·CD⃗ for some k.</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>Also confirm that A, B, C, D share a common point, OR use the same base point (e.g., AC⃗ and AB⃗).</div>
+            <div class="ec-note">Parallel vectors (AB⃗ = k·CD⃗) means lines are parallel — not necessarily collinear. Collinearity requires shared points, shown through position vectors from the same origin.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PREVIOUS / NEXT NAVIGATION ── -->
+    <nav class="topic-nav-footer" aria-label="Topic navigation">
+      <a href="integration.html" class="tnf-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span>
+          <span class="tnf-label">Previous Topic</span>
+          <span class="tnf-name">Integration</span>
+        </span>
+      </a>
+      <a href="matrices.html" class="tnf-btn tnf-next">
+        <span>
+          <span class="tnf-label">Next Topic</span>
+          <span class="tnf-name">Matrices</span>
+        </span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </nav>
+
   </main>
 </div>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya · BECF</p>
+      <p class="footer-contact-line">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="fn-col">
+        <h4>Lessons</h4>
+        <ul>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="trigonometry.html">Trigonometry</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="limits.html">Limits</a></li>
+          <li><a href="differentiation.html">Differentiation</a></li>
+          <li><a href="integration.html">Integration</a></li>
+          <li><a href="vectors.html" aria-current="page">Vectors</a></li>
+          <li><a href="matrices.html">Matrices</a></li>
+          <li><a href="conics.html">Conics</a></li>
+          <li><a href="sequences.html">Sequences &amp; Series</a></li>
+          <li><a href="complex.html">Complex Numbers</a></li>
+          <li><a href="areas.html">Areas</a></li>
+          <li><a href="volumes.html">Volumes</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="math-lessons.html">All Lessons</a></li>
+          <li><a href="tasks.html">Practice Problems</a></li>
+          <li><a href="mind.html">Brain Games</a></li>
+          <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>My Learning</h4>
+        <ul>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About Mwalimu Ronny</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+  </div>
 </footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+
+<!-- Scripts -->
+<script src="shared.js"></script>
+<script src="topic.js"></script>
 </body>
 </html>

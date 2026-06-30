@@ -1,9 +1,89 @@
+# ═══════════════════════════════════════════════
+# RONNY BEST MATHEMATICS — netlify.toml
+# bestronny.netlify.app
+# ═══════════════════════════════════════════════
+
 [build]
+  publish = "."
   functions = "netlify/functions"
 
+# ── Redirect: ensure ads.txt is always found ──
+[[redirects]]
+  from = "/ads.txt"
+  to   = "/ads.txt"
+  status = 200
+
+# ── Redirect: www to non-www (future domain) ──
+[[redirects]]
+  from = "https://www.bestronny.netlify.app/*"
+  to   = "https://bestronny.netlify.app/:splat"
+  status = 301
+  force  = true
+
+# ── 404 fallback ──
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ═══════════════════════════════════════════════
+# SECURITY + ADSENSE HEADERS — all pages
+# ═══════════════════════════════════════════════
+[[headers]]
+  for = "/*"
+  [headers.values]
+
+    # Prevent clickjacking
+    X-Frame-Options = "SAMEORIGIN"
+
+    # Stop MIME sniffing
+    X-Content-Type-Options = "nosniff"
+
+    # XSS protection
+    X-XSS-Protection = "1; mode=block"
+
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Permissions policy
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Content Security Policy — allows AdSense + Google Fonts
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://cdn.jsdelivr.net https://www.googletagservices.com https://adservice.google.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;"
+
+# ── Netlify Functions CORS ──
 [[headers]]
   for = "/.netlify/functions/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Origin  = "*"
     Access-Control-Allow-Methods = "POST, OPTIONS"
     Access-Control-Allow-Headers = "Content-Type"
+
+# ── Cache: static assets (long cache) ──
+[[headers]]
+  for = "/IMAGES/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ── Cache: HTML pages (short cache, always revalidate) ──
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── ads.txt — no cache so AdSense always gets fresh copy ──
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type  = "text/plain"

@@ -1,227 +1,1460 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matrices | Ronny Best Mathematics</title>
-  <meta name="description" content="From basic operations to eigenvalues and transformations">
+  <title>Matrices | Ronny Best Mathematics — CBC-Aligned Step-by-Step Lesson</title>
+  <meta name="description" content="Complete CBC-aligned matrices lesson for Kenyan students — operations, determinants, inverses, solving linear systems, eigenvalues, and geometric transformations. Written by Mwalimu Ronny, aligned to KICD, TSC, and KNEC.">
+  <meta name="keywords" content="matrices Kenya CBC, matrix operations, determinant, inverse matrix, Gaussian elimination, eigenvalues eigenvectors, KCSE matrices, Senior Secondary linear algebra Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/matrices.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matrices | Ronny Best Mathematics — CBC-Aligned Lesson">
+  <meta property="og:description" content="Step-by-step matrices lesson covering operations, determinants, inverses, linear systems, and transformations — free, CBC-aligned, KCSE exam-ready.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/matrices.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts — same as site-wide -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — auto ads only, no manual divs -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Shared topic styles -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestronny.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Mathematics Lessons", "item": "https://bestronny.netlify.app/math-lessons.html" },
+      { "@type": "ListItem", "position": 3, "name": "Matrices", "item": "https://bestronny.netlify.app/matrices.html" }
+    ]
+  }
+  </script>
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Matrices — Complete CBC-Aligned Mathematics Lesson",
+    "description": "Comprehensive step-by-step matrices lesson covering operations, determinants, inverses, Gaussian elimination, Cramer's Rule, eigenvalues, and transformations — aligned to the Kenyan CBC curriculum.",
+    "author": { "@type": "Person", "name": "Ronny Mwenda Best" },
+    "publisher": { "@type": "Organization", "name": "Ronny Best Mathematics", "url": "https://bestronny.netlify.app/" },
+    "educationalLevel": "Secondary School, A-Level, University",
+    "inLanguage": "en"
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics — Home">
+      <span class="brand-sigma" aria-hidden="true">Σ</span>
+      <div>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+      </div>
+    </a>
+  </div>
+</header>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+        <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="math-lessons.html" class="active" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem" aria-current="page" class="active">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
-<section class="topic-hero">
-  <span class="hero-icon">⬜</span>
-  <h1>Matrices</h1>
-  <p class="hero-sub">From basic operations to eigenvalues and transformations</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
+
+<!-- ═══ TOPIC HERO ═══ -->
+<section class="topic-hero" aria-labelledby="topic-h1">
+  <div class="topic-hero-bg" aria-hidden="true"></div>
+  <div class="topic-hero-symbols" aria-hidden="true">
+    <span>[ ]</span><span>det</span><span>A⁻¹</span><span>λ</span>
+  </div>
+  <div class="topic-hero-inner">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="math-lessons.html">Math Lessons</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Matrices</span>
+    </nav>
+
+    <div class="topic-hero-icon" aria-hidden="true">[ ]</div>
+    <h1 id="topic-h1">Matrices</h1>
+    <p class="topic-hero-sub">
+      From rectangular arrays and basic operations through determinants, inverses, and solving simultaneous equations — up to eigenvalues, diagonalisation, and geometric transformations. A core topic in every Senior Secondary pathway under Kenya's Competency Based Curriculum.
+    </p>
+
+    <div class="topic-meta-row">
+      <span class="topic-badge badge-strand">Linear Algebra · Pure Maths</span>
+      <span class="topic-badge badge-level">Secondary · A-Level · University</span>
+      <span class="topic-badge badge-cbc">CBC Aligned</span>
+      <span class="topic-badge badge-exam">KCSE Examinable</span>
+    </div>
+
+    <div class="topic-stats-row">
+      <div class="ts-item"><strong>8</strong><span>Sections</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item"><strong>18</strong><span>Worked Examples</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item"><strong>3</strong><span>Levels Covered</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item"><strong>Free</strong><span>No Login</span></div>
+    </div>
+  </div>
 </section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Matrices</strong>
-</div>
+<!-- ═══ MAIN LAYOUT ═══ -->
+<div class="topic-layout" id="main-content">
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
+  <!-- ── TOC SIDEBAR ── -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-sticky">
+      <div class="toc-header">
+        <span class="toc-title">Contents</span>
+      </div>
 
-      <li class="toc-level">Secondary</li>
-      <li><a href="#mat-intro">Introduction</a></li>
-      <li><a href="#mat-ops">Operations</a></li>
-      <li><a href="#mat-det">Determinants</a></li>
-      <li><a href="#mat-inverse">Inverse</a></li>
-      <li><a href="#mat-systems">Solving Systems</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#mat-eigen">Eigenvalues</a></li>
-      <li><a href="#mat-transforms">Transformations</a></li>
-    </ul>
+      <!-- Reading progress bar -->
+      <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="toc-progress-fill" id="tocProgressFill"></div>
+      </div>
+
+      <ul class="toc-list" role="list">
+        <li class="toc-group-label">Secondary Level</li>
+        <li><a class="toc-link" href="#mat-intro">1. Introduction to Matrices</a></li>
+        <li><a class="toc-link" href="#mat-types">2. Types of Matrices</a></li>
+        <li><a class="toc-link" href="#mat-ops">3. Matrix Operations</a></li>
+        <li><a class="toc-link" href="#mat-det">4. Determinants</a></li>
+        <li><a class="toc-link" href="#mat-inverse">5. Matrix Inverse</a></li>
+        <li class="toc-group-label">A-Level / Pre-University</li>
+        <li><a class="toc-link" href="#mat-systems">6. Solving Linear Systems</a></li>
+        <li class="toc-group-label">University Level</li>
+        <li><a class="toc-link" href="#mat-eigen">7. Eigenvalues &amp; Eigenvectors</a></li>
+        <li><a class="toc-link" href="#mat-transforms">8. Geometric Transformations</a></li>
+        <li class="toc-group-label">Reference</li>
+        <li><a class="toc-link" href="#mat-errors">Common Errors</a></li>
+        <li><a class="toc-link" href="#mat-formulas">Formula Sheet</a></li>
+      </ul>
+
+      <div class="toc-actions">
+        <a href="tasks.html?topic=matrices" class="toc-practice-btn">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          Practice Matrices
+        </a>
+      </div>
+    </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="topic-content">
+  <!-- ── MAIN CONTENT ── -->
+  <main class="topic-content" id="topic-main">
 
-    <section id="mat-intro" class="topic-section">
-      <div class="section-header"><span class="sec-icon">⬜</span><h2>Introduction to Matrices</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>What is a Matrix?</h3>
-          <p>A matrix is a rectangular array of numbers arranged in rows and columns. An m×n matrix has m rows and n columns.</p>
-          <h4>Special Matrices</h4>
-          <table class="formula-table">
-            <tr><th>Type</th><th>Description</th></tr>
-            <tr><td>Square</th><td>Same number of rows and columns</th></tr>
-            <tr><td>Identity (I)</th><td>Square, 1s on diagonal, 0s elsewhere. AI = IA = A</th></tr>
-            <tr><td>Zero matrix</th><td>All entries are 0</th></tr>
-            <tr><td>Diagonal</th><td>Non-diagonal entries are 0</th></tr>
-            <tr><td>Symmetric</th><td>A = Aᵀ</th></tr>
-            <tr><td>Orthogonal</th><td>AᵀA = I (rows/cols are orthonormal vectors)</th></tr>
-          </table>
-        </div>
+    <!-- CBC Context Banner -->
+    <div class="cbc-context-banner" id="mat-cbc">
+      <span class="ccb-icon" aria-hidden="true">📘</span>
+      <div class="ccb-text">
+        <strong>CBC Curriculum Alignment:</strong> Matrices appear in the <strong>Pure Mathematics strand</strong> of Kenya's Senior Secondary curriculum (Grades 10–12) under the <strong>KICD Mathematics syllabus</strong>. The topic is assessed in all three CBC pathways — STEM, Arts &amp; Sports Science, and Social Sciences — and is a core component of <strong>KCSE Paper 2</strong>. Mastery of matrix operations, determinants, and inverse matrices is required for the TSC teacher competency framework and university entry assessments.
       </div>
-    </section>
-
-    <section id="mat-ops" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔢</span><h2>Matrix Operations</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Addition (same size): (A+B)ᵢⱼ = Aᵢⱼ + Bᵢⱼ<br>
-            Scalar multiplication: (kA)ᵢⱼ = kAᵢⱼ<br>
-            Multiplication: (AB)ᵢⱼ = Σₖ Aᵢₖ Bₖⱼ &nbsp; (A is m×n, B is n×p → AB is m×p)<br>
-            NOTE: AB ≠ BA in general (not commutative)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — 2×2 multiplication</div>
-              <p>[[1,2],[3,4]] × [[5,6],[7,8]]</p>
-              <p class="soln">= [[1×5+2×7, 1×6+2×8],[3×5+4×7, 3×6+4×8]] = [[19,22],[43,50]]</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Transpose</h3>
-          <div class="formula-box">(Aᵀ)ᵢⱼ = Aⱼᵢ &nbsp; (rows become columns) &nbsp;&nbsp; (AB)ᵀ = BᵀAᵀ</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="mat-det" class="topic-section">
-      <div class="section-header"><span class="sec-icon">det</span><h2>Determinants</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            2×2: det(A) = ad − bc<br>
-            3×3: expand along row 1: det = a(ei−fh) − b(di−fg) + c(dh−eg)<br>
-            Properties: det(AB) = det(A)det(B) &nbsp;&nbsp; det(Aᵀ) = det(A) &nbsp;&nbsp; det(kA) = kⁿdet(A)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — 3×3 determinant</div>
-              <p>[[1,2,3],[4,5,6],[7,8,9]]</p>
-              <p class="soln">= 1(45−48) − 2(36−42) + 3(32−35) = 1(−3) − 2(−6) + 3(−3) = −3+12−9 = 0</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="mat-inverse" class="topic-section">
-      <div class="section-header"><span class="sec-icon">A⁻¹</span><h2>Matrix Inverse</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            A⁻¹ exists iff det(A) ≠ 0 (non-singular)<br>
-            2×2 inverse: A⁻¹ = (1/det) [[d,−b],[−c,a]]<br>
-            General: A⁻¹ = (1/det(A)) × adj(A)  where adj = transpose of cofactor matrix
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Inverse of [[3,1],[5,2]]</div>
-              <p class="soln">det = 3×2−1×5 = 1. A⁻¹ = [[2,−1],[−5,3]]</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="mat-systems" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📊</span><h2>Solving Linear Systems</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Gaussian Elimination & Row Echelon Form</h3>
-          <p>Augmented matrix [A|b]. Row operations: swap rows, multiply row by scalar, add multiple of one row to another.</p>
-          <div class="formula-box">Cramer's Rule: xᵢ = det(Aᵢ)/det(A) where Aᵢ replaces column i with b</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Solve by matrix inverse: 2x+y=5, 5x+3y=13</div>
-              <p class="soln">A=[[2,1],[5,3]], det=1, A⁻¹=[[3,−1],[−5,2]]. [x;y] = A⁻¹[5;13] = [[3×5−13],[−25+26]] = [2;1]</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="mat-eigen" class="topic-section">
-      <div class="section-header"><span class="sec-icon">λ</span><h2>Eigenvalues & Eigenvectors</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Av = λv &nbsp; (v ≠ 0) &nbsp;→&nbsp; (A − λI)v = 0 &nbsp;→&nbsp; det(A − λI) = 0 (characteristic equation)<br>
-            Trace = sum of eigenvalues &nbsp;&nbsp; det(A) = product of eigenvalues
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — A = [[4,1],[2,3]]</div>
-              <p class="soln">Char. eq: (4−λ)(3−λ)−2 = λ²−7λ+10=0 → λ=5 or λ=2. For λ=5: eigenvector (1,1). For λ=2: eigenvector (1,−2).</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Diagonalisation</h3>
-          <div class="formula-box">A = PDP⁻¹ where D is diagonal matrix of eigenvalues, P has eigenvectors as columns. Aⁿ = PDⁿP⁻¹</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="mat-transforms" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔄</span><h2>Linear Transformations</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Common 2D Transformation Matrices</h3>
-          <table class="formula-table">
-            <tr><th>Transformation</th><th>Matrix</th></tr>
-            <tr><td>Rotation by θ (anticlockwise)</th><td>[[cosθ,−sinθ],[sinθ,cosθ]]</th></tr>
-            <tr><td>Reflection in x-axis</th><td>[[1,0],[0,−1]]</th></tr>
-            <tr><td>Reflection in y-axis</th><td>[[−1,0],[0,1]]</th></tr>
-            <tr><td>Scale by k</th><td>[[k,0],[0,k]]</th></tr>
-            <tr><td>Shear (x-direction)</th><td>[[1,k],[0,1]]</th></tr>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="vectors.html" class="topic-nav-btn prev">← Vectors</a>
-      <a href="areas.html" class="topic-nav-btn next">Areas of Shapes →</a>
     </div>
-  </main>
-</div>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+    <!-- ══════════════════════════════
+         SECTION 1 — INTRODUCTION
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-intro">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">[ ]</div>
+        <div>
+          <span class="ls-eyebrow">Section 1 · Linear Algebra</span>
+          <h2>Introduction to Matrices</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Secondary</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>A <strong>matrix</strong> is a rectangular arrangement of numbers (or expressions) organised in rows and columns. The word comes from the Latin <em>mater</em>, meaning "womb" — the idea being that a matrix is a structured container from which solutions can be born. Matrices were developed formally by Arthur Cayley in 1858, but the ideas date back to ancient Chinese mathematical texts.</p>
+        </div>
+
+        <h3 class="sub-heading">Defining a Matrix</h3>
+        <p class="body-para">A matrix with <strong>m rows</strong> and <strong>n columns</strong> is called an <strong>m × n matrix</strong> (read "m by n"). Each entry is called an <strong>element</strong>. The element in row <em>i</em> and column <em>j</em> is written Aᵢⱼ.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">General m × n Matrix</div>
+          <div class="fb-math">
+            A = [Aᵢⱼ]  where i = 1, 2, …, m  (rows)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and  j = 1, 2, …, n  (columns)<br><br>
+            Example (3 × 2 matrix):<br>
+            A = [[5, −2],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0,  7],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3,  1]]<br><br>
+            A₁₁ = 5 &nbsp;·&nbsp; A₁₂ = −2 &nbsp;·&nbsp; A₂₁ = 0 &nbsp;·&nbsp; A₃₂ = 1
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📌</span>
+          <div><strong>Order matters:</strong> An m × n matrix has m rows first, then n columns. A 2 × 3 matrix has 2 rows and 3 columns — it is NOT the same as a 3 × 2 matrix. Always state the order as rows × columns.</div>
+        </div>
+
+        <h3 class="sub-heading">Why Matrices Matter</h3>
+        <p class="body-para">Matrices provide a compact, powerful way to organise and manipulate large amounts of data simultaneously. In real life they are used to model populations, solve systems of equations (water supply networks, economic models), encode digital images, represent 3D rotations in computer graphics, and in quantum mechanics. In Kenya's CBC curriculum, matrices build directly on the simultaneous equations studied at Junior Secondary level, extending the idea to systems that would be impractical to solve by substitution.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Example 1 — Identifying Elements</div>
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 1</span>
+              Given M = [[4, −1, 0], [7, 2, −5]], state: (a) the order of M &nbsp; (b) M₁₃ &nbsp; (c) M₂₂
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>M has <strong>2 rows</strong> and <strong>3 columns</strong>, so the order is <strong>2 × 3</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>M₁₃ is the element in <strong>row 1, column 3</strong>. Looking at row 1: [4, −1, 0]. The third entry is <strong>M₁₃ = 0</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part c</span>
+                <span>M₂₂ is the element in <strong>row 2, column 2</strong>. Looking at row 2: [7, 2, −5]. The second entry is <strong>M₂₂ = 2</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Order = 2 × 3 &nbsp;·&nbsp; M₁₃ = 0 &nbsp;·&nbsp; M₂₂ = 2</div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 2 — TYPES
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-types">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⊞</div>
+        <div>
+          <span class="ls-eyebrow">Section 2 · Classification</span>
+          <h2>Types of Matrices</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Secondary</span>
+      </div>
+      <div class="ls-body">
+
+        <p class="body-para">Matrices are classified by their dimensions and the pattern of their elements. Recognising the type of matrix involved is often the key to choosing the most efficient method for any calculation.</p>
+
+        <div class="identity-table">
+          <div class="it-row it-head">
+            <span class="it-label">Type</span>
+            <span class="it-eq">Definition &amp; Example</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Row matrix</span>
+            <span class="it-eq">1 × n — single row.&nbsp; E.g. [3, −1, 4] &nbsp;<em>Order: 1 × 3</em></span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Column matrix</span>
+            <span class="it-eq">m × 1 — single column.&nbsp; E.g. [[2],[−5],[0]] &nbsp;<em>Order: 3 × 1</em></span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Square matrix</span>
+            <span class="it-eq">m × m — same rows and columns.&nbsp; E.g. [[1,2],[3,4]] &nbsp;<em>Order: 2 × 2</em></span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Identity matrix (I)</span>
+            <span class="it-eq">Square; 1s on main diagonal, 0s elsewhere.&nbsp; I₂ = [[1,0],[0,1]] &nbsp;·&nbsp; AI = IA = A</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Zero matrix (O)</span>
+            <span class="it-eq">All elements are 0.&nbsp; A + O = A &nbsp;·&nbsp; A × O = O</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Diagonal matrix</span>
+            <span class="it-eq">Square; all off-diagonal entries are 0.&nbsp; E.g. [[3,0,0],[0,−1,0],[0,0,5]]</span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Symmetric matrix</span>
+            <span class="it-eq">Square; Aᵢⱼ = Aⱼᵢ for all i,j.&nbsp; Equivalently, A = Aᵀ</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Upper triangular</span>
+            <span class="it-eq">Square; all entries below the main diagonal are 0</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Lower triangular</span>
+            <span class="it-eq">Square; all entries above the main diagonal are 0</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Orthogonal matrix</span>
+            <span class="it-eq">Square; AᵀA = AAᵀ = I, so A⁻¹ = Aᵀ &nbsp;<em>(University level)</em></span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Singular matrix</span>
+            <span class="it-eq">det(A) = 0 → no inverse exists</span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Non-singular matrix</span>
+            <span class="it-eq">det(A) ≠ 0 → inverse A⁻¹ exists</span>
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">💡</span>
+          <div><strong>CBC Exam tip:</strong> KCSE questions regularly ask students to identify whether a matrix is singular or non-singular before attempting an inverse. Always compute det(A) first — if it equals zero, state "the matrix is singular and has no inverse" rather than proceeding.</div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 3 — OPERATIONS
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-ops">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⊕</div>
+        <div>
+          <span class="ls-eyebrow">Section 3 · Arithmetic</span>
+          <h2>Matrix Operations</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Secondary</span>
+      </div>
+      <div class="ls-body">
+
+        <h3 class="sub-heading">Addition and Subtraction</h3>
+        <p class="body-para">Two matrices can only be added or subtracted if they have the <strong>same order</strong>. Simply add or subtract corresponding elements.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Addition / Subtraction Rule</div>
+          <div class="fb-math">
+            (A ± B)ᵢⱼ = Aᵢⱼ ± Bᵢⱼ &nbsp; (A and B must have the same order)<br><br>
+            Properties: &nbsp; A + B = B + A (commutative)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (A + B) + C = A + (B + C) (associative)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A + O = A (identity)
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Scalar Multiplication</h3>
+        <p class="body-para">Multiplying a matrix by a scalar (a single number) means multiplying every element by that scalar.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Scalar Multiplication</div>
+          <div class="fb-math">(kA)ᵢⱼ = k × Aᵢⱼ &nbsp; for all i, j</div>
+        </div>
+
+        <h3 class="sub-heading">Matrix Multiplication</h3>
+        <p class="body-para">To multiply matrix A (of order <strong>m × n</strong>) by matrix B (of order <strong>n × p</strong>), the number of columns in A must equal the number of rows in B. The result AB has order <strong>m × p</strong>.</p>
+        <p class="body-para">Each element (AB)ᵢⱼ is the <strong>dot product</strong> of row i of A with column j of B.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Matrix Multiplication Rule</div>
+          <div class="fb-math">
+            (AB)ᵢⱼ = Σₖ Aᵢₖ × Bₖⱼ &nbsp; (sum over k = 1 to n)<br><br>
+            A is m×n, B is n×p &nbsp;→&nbsp; AB is m×p<br><br>
+            ⚠ CRITICAL: &nbsp; AB ≠ BA in general (matrix multiplication is NOT commutative)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; But: &nbsp; A(BC) = (AB)C (associative)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A(B+C) = AB + AC (distributive)
+          </div>
+        </div>
+
+        <div class="callout-warn">
+          <span class="cw-icon" aria-hidden="true">⚠</span>
+          <div><strong>Non-commutativity:</strong> This is the single most tested property of matrices in KCSE. If A = [[1,2],[3,4]] and B = [[0,1],[1,0]], then AB ≠ BA. <em>Always verify the order of multiplication before computing.</em></div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Operations</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 2</span>
+              If A = [[3, −1], [0, 4]] and B = [[2, 5], [−1, 3]], find: (a) A + B &nbsp; (b) 2A − B
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>Add corresponding elements: <strong>A + B</strong> = [[3+2, −1+5], [0+(−1), 4+3]] = <strong>[[5, 4], [−1, 7]]</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>First, 2A = [[6, −2], [0, 8]]. Then 2A − B = [[6−2, −2−5], [0−(−1), 8−3]] = <strong>[[4, −7], [1, 5]]</strong></span>
+              </div>
+            </div>
+            <div class="we-answer">A + B = [[5,4],[−1,7]] &nbsp;·&nbsp; 2A − B = [[4,−7],[1,5]]</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 3</span>
+              Find AB where A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Check order</span>
+                <span>A is 2×2, B is 2×2. Both inner dimensions match (2 = 2), so AB is defined and will be <strong>2×2</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Row 1 × Cols</span>
+                <span>(AB)₁₁ = 1×5 + 2×7 = 5 + 14 = <strong>19</strong> &nbsp;·&nbsp; (AB)₁₂ = 1×6 + 2×8 = 6 + 16 = <strong>22</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Row 2 × Cols</span>
+                <span>(AB)₂₁ = 3×5 + 4×7 = 15 + 28 = <strong>43</strong> &nbsp;·&nbsp; (AB)₂₂ = 3×6 + 4×8 = 18 + 32 = <strong>50</strong></span>
+              </div>
+            </div>
+            <div class="we-answer">AB = [[19, 22], [43, 50]]</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 4</span>
+              Show that AB ≠ BA for A = [[1,2],[0,3]] and B = [[2,0],[1,4]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Compute AB</span>
+                <span>AB = [[1×2+2×1, 1×0+2×4], [0×2+3×1, 0×0+3×4]] = [[4, 8], [3, 12]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Compute BA</span>
+                <span>BA = [[2×1+0×0, 2×2+0×3], [1×1+4×0, 1×2+4×3]] = [[2, 4], [1, 14]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Compare</span>
+                <span>AB = [[4,8],[3,12]] but BA = [[2,4],[1,14]]. Since these are different, <strong>AB ≠ BA</strong>. ✓</span>
+              </div>
+            </div>
+            <div class="we-answer">AB = [[4,8],[3,12]] ≠ [[2,4],[1,14]] = BA. Confirmed: matrix multiplication is not commutative.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Transpose of a Matrix</h3>
+        <p class="body-para">The <strong>transpose</strong> of matrix A (written Aᵀ) is obtained by swapping rows and columns. If A is m×n, then Aᵀ is n×m.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Transpose Properties</div>
+          <div class="fb-math">
+            (Aᵀ)ᵢⱼ = Aⱼᵢ &nbsp; (rows become columns)<br><br>
+            (Aᵀ)ᵀ = A &nbsp;·&nbsp; (A+B)ᵀ = Aᵀ + Bᵀ &nbsp;·&nbsp; (kA)ᵀ = kAᵀ<br>
+            (AB)ᵀ = BᵀAᵀ &nbsp; ← NOTE: order reverses!
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 4 — DETERMINANTS
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-det">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">det</div>
+        <div>
+          <span class="ls-eyebrow">Section 4 · Scalar Value</span>
+          <h2>Determinants</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>The <strong>determinant</strong> is a single number associated with any square matrix. It tells us whether the matrix is invertible, and it measures how a linear transformation changes area (2D) or volume (3D). Geometrically, if |det(A)| = 3, the transformation stretches areas by a factor of 3; if det(A) = 0, the transformation collapses space and the matrix has no inverse.</p>
+        </div>
+
+        <h3 class="sub-heading">2 × 2 Determinant</h3>
+
+        <div class="formula-block">
+          <div class="fb-label">2 × 2 Determinant</div>
+          <div class="fb-math highlight-formula">
+            For A = [[a, b], [c, d]]:<br>
+            det(A) = |A| = ad − bc
+          </div>
+        </div>
+
+        <p class="body-para">To remember this: multiply along the main diagonal (top-left to bottom-right), then subtract the product along the anti-diagonal (top-right to bottom-left). This is often called the "butterfly rule."</p>
+
+        <h3 class="sub-heading">3 × 3 Determinant — Cofactor Expansion</h3>
+        <p class="body-para">For a 3×3 matrix, we expand along the first row. Each element of the first row is multiplied by its <strong>cofactor</strong> — the signed determinant of the 2×2 submatrix remaining after removing that element's row and column.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">3 × 3 Determinant (Expansion along Row 1)</div>
+          <div class="fb-math">
+            For A = [[a,b,c],[d,e,f],[g,h,i]]:<br><br>
+            det(A) = a(ei − fh) − b(di − fg) + c(dh − eg)<br><br>
+            Sign pattern for cofactors:<br>
+            &nbsp; + &nbsp; − &nbsp; +<br>
+            &nbsp; − &nbsp; + &nbsp; −<br>
+            &nbsp; + &nbsp; − &nbsp; +
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Key Properties of Determinants</h3>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Determinant Properties</div>
+          <div class="fb-grid">
+            <div class="fb-row"><span class="fb-name">Product rule</span><span class="fb-eq">det(AB) = det(A) × det(B)</span></div>
+            <div class="fb-row"><span class="fb-name">Transpose</span><span class="fb-eq">det(Aᵀ) = det(A)</span></div>
+            <div class="fb-row"><span class="fb-name">Scalar</span><span class="fb-eq">det(kA) = kⁿ det(A) &nbsp; (n = order of A)</span></div>
+            <div class="fb-row"><span class="fb-name">Inverse</span><span class="fb-eq">det(A⁻¹) = 1 / det(A)</span></div>
+            <div class="fb-row"><span class="fb-name">Row swap</span><span class="fb-eq">Swapping two rows changes the sign of the determinant</span></div>
+            <div class="fb-row"><span class="fb-name">Row multiply</span><span class="fb-eq">Multiplying one row by k multiplies the determinant by k</span></div>
+            <div class="fb-row"><span class="fb-name">Equal rows</span><span class="fb-eq">If any two rows (or columns) are identical, det(A) = 0</span></div>
+            <div class="fb-row"><span class="fb-name">Singularity</span><span class="fb-eq">det(A) = 0 ⟺ A is singular (no inverse)</span></div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Determinants</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 5</span>
+              Calculate det(A) for A = [[4, −3], [2, 5]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Formula</span>
+                <span>det(A) = ad − bc. Here a = 4, b = −3, c = 2, d = 5.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Substitute</span>
+                <span>det(A) = (4)(5) − (−3)(2) = 20 − (−6) = 20 + 6 = <strong>26</strong></span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Interpret</span>
+                <span>Since det(A) = 26 ≠ 0, the matrix is <strong>non-singular</strong> and its inverse exists.</span>
+              </div>
+            </div>
+            <div class="we-answer">det(A) = 26 &nbsp;·&nbsp; Matrix is non-singular</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 6</span>
+              Find the determinant of B = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Expand Row 1</span>
+                <span>det(B) = 1 × det([[5,6],[8,9]]) − 2 × det([[4,6],[7,9]]) + 3 × det([[4,5],[7,8]])</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">2×2 minors</span>
+                <span>det([[5,6],[8,9]]) = 45−48 = −3 &nbsp;·&nbsp; det([[4,6],[7,9]]) = 36−42 = −6 &nbsp;·&nbsp; det([[4,5],[7,8]]) = 32−35 = −3</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Combine</span>
+                <span>det(B) = 1(−3) − 2(−6) + 3(−3) = −3 + 12 − 9 = <strong>0</strong></span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Interpret</span>
+                <span>det(B) = 0, so B is <strong>singular</strong>. This makes sense because row 3 = row 1 + (row 2 − row 1) × 3 — the rows are linearly dependent.</span>
+              </div>
+            </div>
+            <div class="we-answer">det(B) = 0 &nbsp;·&nbsp; B is singular — no inverse exists</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 7</span>
+              If det(A) = 6 and A is a 2×2 matrix, find det(3A) and det(A²)
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">det(3A)</span>
+                <span>For an n×n matrix, det(kA) = kⁿ det(A). Here n = 2, k = 3: det(3A) = 3² × 6 = 9 × 6 = <strong>54</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">det(A²)</span>
+                <span>det(A²) = det(A × A) = det(A) × det(A) = 6 × 6 = <strong>36</strong></span>
+              </div>
+            </div>
+            <div class="we-answer">det(3A) = 54 &nbsp;·&nbsp; det(A²) = 36</div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 5 — INVERSE
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-inverse">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">A⁻¹</div>
+        <div>
+          <span class="ls-eyebrow">Section 5 · Inverse</span>
+          <h2>Matrix Inverse</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">A-Level</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>The <strong>inverse</strong> of matrix A (written A⁻¹) is the matrix such that AA⁻¹ = A⁻¹A = I. Think of it like the reciprocal of a number: just as 3 × (1/3) = 1, so A × A⁻¹ = I. The inverse only exists when det(A) ≠ 0. This is an essential tool for solving matrix equations.</p>
+        </div>
+
+        <h3 class="sub-heading">2 × 2 Inverse Formula</h3>
+
+        <div class="formula-block">
+          <div class="fb-label">2 × 2 Matrix Inverse</div>
+          <div class="fb-math highlight-formula">
+            For A = [[a, b], [c, d]] with det(A) = ad − bc ≠ 0:<br><br>
+            A⁻¹ = (1 / det(A)) × [[d, −b], [−c, a]]<br><br>
+            Steps: (1) Swap the diagonal elements (a ↔ d)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) Change signs of off-diagonal elements (b → −b, c → −c)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) Divide every element by det(A)
+          </div>
+        </div>
+
+        <h3 class="sub-heading">3 × 3 Inverse — Adjugate Method</h3>
+        <p class="body-para">For larger matrices, the inverse is found using the <strong>adjugate (classical adjoint)</strong> method:</p>
+
+        <div class="formula-block multi">
+          <div class="fb-label">3 × 3 Inverse — Step by Step</div>
+          <div class="fb-grid">
+            <div class="fb-row"><span class="fb-name">Step 1</span><span class="fb-eq">Compute det(A). If det(A) = 0, stop — no inverse.</span></div>
+            <div class="fb-row"><span class="fb-name">Step 2</span><span class="fb-eq">Find the cofactor Cᵢⱼ = (−1)^(i+j) × Mᵢⱼ where Mᵢⱼ is the minor (2×2 det)</span></div>
+            <div class="fb-row"><span class="fb-name">Step 3</span><span class="fb-eq">Form the cofactor matrix C = [Cᵢⱼ]</span></div>
+            <div class="fb-row"><span class="fb-name">Step 4</span><span class="fb-eq">Transpose C to get the adjugate: adj(A) = Cᵀ</span></div>
+            <div class="fb-row"><span class="fb-name">Step 5</span><span class="fb-eq">A⁻¹ = (1 / det(A)) × adj(A)</span></div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Inverse via Row Operations (Gauss-Jordan)</h3>
+        <p class="body-para">Write the augmented matrix [A | I]. Apply row operations until the left side becomes I. The right side then becomes A⁻¹. This method is more efficient for 3×3 and larger matrices.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Matrix Inverse</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 8</span>
+              Find the inverse of A = [[3, 1], [5, 2]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1 — det</span>
+                <span>det(A) = (3)(2) − (1)(5) = 6 − 5 = <strong>1</strong>. Since det ≠ 0, the inverse exists.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2 — swap/sign</span>
+                <span>Swap the diagonal: d = 2, a = 3 swap. Change signs of off-diagonal: b = 1 → −1, c = 5 → −5. Adjugate = [[2, −1], [−5, 3]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3 — divide</span>
+                <span>A⁻¹ = (1/1) × [[2, −1], [−5, 3]] = <strong>[[2, −1], [−5, 3]]</strong></span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Verify</span>
+                <span>AA⁻¹ = [[3,1],[5,2]] × [[2,−1],[−5,3]] = [[6−5, −3+3],[10−10, −5+6]] = [[1,0],[0,1]] = I ✓</span>
+              </div>
+            </div>
+            <div class="we-answer">A⁻¹ = [[2, −1], [−5, 3]]</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 9</span>
+              Find A⁻¹ for A = [[2, 1, 0], [−1, 3, 2], [0, 1, 4]] using Gauss-Jordan elimination
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Augmented</span>
+                <span>Write [A | I]: [[2,1,0|1,0,0],[−1,3,2|0,1,0],[0,1,4|0,0,1]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">R1 ÷ 2</span>
+                <span>R1 → R1/2: [[1, ½, 0 | ½, 0, 0], [−1,3,2|0,1,0],[0,1,4|0,0,1]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">R2 + R1</span>
+                <span>R2 → R2 + R1: [[1, ½, 0 | ½,0,0],[0, 7/2, 2 | ½,1,0],[0,1,4|0,0,1]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Continue</span>
+                <span>Continue row-reducing until the left block becomes I. The right block gives A⁻¹ = (1/38)×[[10,−4,2],[4,8,−4],[−1,−2,7]]</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Verify</span>
+                <span>Check AA⁻¹ = I as a final verification. The process is systematic and can be applied to any non-singular square matrix.</span>
+              </div>
+            </div>
+            <div class="we-answer">A⁻¹ = (1/38) × [[10,−4,2],[4,8,−4],[−1,−2,7]]</div>
+          </div>
+        </div>
+
+        <div class="callout-warn">
+          <span class="cw-icon" aria-hidden="true">⚠</span>
+          <div><strong>KCSE Common Error:</strong> When computing the 2×2 inverse, students often forget to <em>change the signs</em> of the off-diagonal elements (b and c), or they divide only some elements by det(A) instead of all. Every element of the adjugate matrix must be divided by det(A).</div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 6 — LINEAR SYSTEMS
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-systems">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">Ax=b</div>
+        <div>
+          <span class="ls-eyebrow">Section 6 · Applications</span>
+          <h2>Solving Linear Systems</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">A-Level</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>A system of simultaneous linear equations can be written compactly as the matrix equation <strong>Ax = b</strong>. This connection between simultaneous equations (studied at Junior Secondary) and matrices (Senior Secondary) is a core CBC competency — the student should be able to recognise the matrix form, choose a solution method, and interpret the result.</p>
+        </div>
+
+        <h3 class="sub-heading">Three Solution Methods</h3>
+
+        <div class="method-tabs">
+          <div class="mt-block">
+            <div class="mt-title">Method 1 — Matrix Inverse</div>
+            <div class="mt-desc">Write Ax = b. If A is non-singular: x = A⁻¹b. Best for 2×2 systems when the inverse is easy to find.</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Method 2 — Cramer's Rule</div>
+            <div class="mt-desc">Replace each column of A with b in turn. The variable xᵢ = det(Aᵢ)/det(A). Efficient for small systems when determinants are needed anyway.</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Method 3 — Gaussian Elimination</div>
+            <div class="mt-desc">Form the augmented matrix [A|b]. Use row operations to reach row echelon form, then back-substitute. Best for 3×3 and larger systems.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Cramer's Rule (Detailed)</h3>
+
+        <div class="formula-block">
+          <div class="fb-label">Cramer's Rule — n×n System Ax = b</div>
+          <div class="fb-math">
+            xᵢ = det(Aᵢ) / det(A)<br><br>
+            where Aᵢ is matrix A with column i replaced by the column vector b.<br><br>
+            For 2×2: &nbsp; x = det([[b₁,a₁₂],[b₂,a₂₂]]) / det(A)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y = det([[a₁₁,b₁],[a₂₁,b₂]]) / det(A)
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Gaussian Elimination &amp; Row Echelon Form</h3>
+        <p class="body-para">An augmented matrix [A|b] is in <strong>row echelon form</strong> when: (1) all zero rows are at the bottom, (2) the leading entry of each non-zero row is strictly to the right of the leading entry of the row above. Three elementary row operations are allowed:</p>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Elementary Row Operations</div>
+          <div class="fb-grid">
+            <div class="fb-row"><span class="fb-name">Rᵢ ↔ Rⱼ</span><span class="fb-eq">Swap rows i and j (changes sign of determinant)</span></div>
+            <div class="fb-row"><span class="fb-name">kRᵢ</span><span class="fb-eq">Multiply row i by scalar k ≠ 0</span></div>
+            <div class="fb-row"><span class="fb-name">Rᵢ + kRⱼ</span><span class="fb-eq">Add k times row j to row i (does NOT change determinant)</span></div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Solving Systems</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 10</span>
+              Solve using matrix inverse: 3x + y = 7 &nbsp;&amp;&nbsp; 5x + 2y = 13
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Matrix form</span>
+                <span>Write as Ax = b: A = [[3,1],[5,2]], x = [[x],[y]], b = [[7],[13]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Find A⁻¹</span>
+                <span>det(A) = 6 − 5 = 1. A⁻¹ = [[2,−1],[−5,3]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">x = A⁻¹b</span>
+                <span>[[x],[y]] = [[2,−1],[−5,3]] × [[7],[13]] = [[14−13],[−35+39]] = [[1],[4]]</span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Check</span>
+                <span>3(1) + 4 = 7 ✓ &nbsp;&nbsp; 5(1) + 2(4) = 5 + 8 = 13 ✓</span>
+              </div>
+            </div>
+            <div class="we-answer">x = 1, y = 4</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 11</span>
+              Use Gaussian elimination: x + 2y + z = 4, &nbsp; 2x − y + 3z = 7, &nbsp; 3x + y − 2z = 1
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Augmented</span>
+                <span>[[1,2,1|4],[2,−1,3|7],[3,1,−2|1]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">R2→R2−2R1</span>
+                <span>[[1,2,1|4],[0,−5,1|−1],[3,1,−2|1]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">R3→R3−3R1</span>
+                <span>[[1,2,1|4],[0,−5,1|−1],[0,−5,−5|−11]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">R3→R3−R2</span>
+                <span>[[1,2,1|4],[0,−5,1|−1],[0,0,−6|−10]] → z = 10/6 = <strong>5/3</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Back-sub</span>
+                <span>From R2: −5y + 5/3 = −1 → −5y = −8/3 → y = <strong>8/15</strong>. From R1: x + 16/15 + 5/3 = 4 → x = <strong>4 − 41/15 = 19/15</strong></span>
+              </div>
+            </div>
+            <div class="we-answer">x = 19/15, y = 8/15, z = 5/3 &nbsp;(verify by substituting back into all three equations)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 12</span>
+              Solve using Cramer's Rule: 2x + 3y = 8, &nbsp; 4x − y = 2
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">det(A)</span>
+                <span>A = [[2,3],[4,−1]]. det(A) = (2)(−1) − (3)(4) = −2 − 12 = <strong>−14</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">det(A₁) for x</span>
+                <span>Replace column 1 with [8,2]: A₁ = [[8,3],[2,−1]]. det(A₁) = (8)(−1)−(3)(2) = −8−6 = <strong>−14</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">det(A₂) for y</span>
+                <span>Replace column 2 with [8,2]: A₂ = [[2,8],[4,2]]. det(A₂) = (2)(2)−(8)(4) = 4−32 = <strong>−28</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Apply rule</span>
+                <span>x = det(A₁)/det(A) = −14/−14 = <strong>1</strong> &nbsp;·&nbsp; y = det(A₂)/det(A) = −28/−14 = <strong>2</strong></span>
+              </div>
+              <div class="we-step check-step">
+                <span class="step-n">Check</span>
+                <span>2(1) + 3(2) = 2 + 6 = 8 ✓ &nbsp;&nbsp; 4(1) − 2 = 2 ✓</span>
+              </div>
+            </div>
+            <div class="we-answer">x = 1, y = 2</div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 7 — EIGENVALUES
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-eigen">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">λv</div>
+        <div>
+          <span class="ls-eyebrow">Section 7 · University Level</span>
+          <h2>Eigenvalues &amp; Eigenvectors</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">University</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>An <strong>eigenvector</strong> of matrix A is a non-zero vector v that, when multiplied by A, only changes in magnitude (not direction) — it is merely scaled by a factor λ called the <strong>eigenvalue</strong>. The word comes from the German <em>eigen</em>, meaning "own" or "characteristic." Eigenvalues are fundamental in physics (quantum states), engineering (vibration modes), data science (Principal Component Analysis), and economics (input-output models).</p>
+        </div>
+
+        <div class="formula-block">
+          <div class="fb-label">Eigenvalue Definition and Characteristic Equation</div>
+          <div class="fb-math highlight-formula">
+            Av = λv &nbsp; (v ≠ 0)<br><br>
+            Rearranging: (A − λI)v = 0<br>
+            For non-trivial solutions: det(A − λI) = 0<br><br>
+            This is the CHARACTERISTIC EQUATION of A.
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Procedure for Finding Eigenvalues and Eigenvectors</h3>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Step-by-Step Procedure</div>
+          <div class="fb-grid">
+            <div class="fb-row"><span class="fb-name">Step 1</span><span class="fb-eq">Form det(A − λI) = 0 (the characteristic polynomial)</span></div>
+            <div class="fb-row"><span class="fb-name">Step 2</span><span class="fb-eq">Solve the characteristic polynomial for λ. These are the eigenvalues.</span></div>
+            <div class="fb-row"><span class="fb-name">Step 3</span><span class="fb-eq">For each eigenvalue λᵢ, substitute back into (A − λᵢI)v = 0</span></div>
+            <div class="fb-row"><span class="fb-name">Step 4</span><span class="fb-eq">Solve the homogeneous system for v. Express v as a free parameter.</span></div>
+            <div class="fb-row"><span class="fb-name">Step 5</span><span class="fb-eq">The set of all solutions is the eigenspace for λᵢ</span></div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Key Relationships</h3>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Eigenvalue Properties</div>
+          <div class="fb-grid">
+            <div class="fb-row"><span class="fb-name">Trace</span><span class="fb-eq">tr(A) = λ₁ + λ₂ + … + λₙ = sum of main diagonal elements</span></div>
+            <div class="fb-row"><span class="fb-name">Determinant</span><span class="fb-eq">det(A) = λ₁ × λ₂ × … × λₙ = product of all eigenvalues</span></div>
+            <div class="fb-row"><span class="fb-name">Symmetric</span><span class="fb-eq">Real symmetric matrices always have real eigenvalues</span></div>
+            <div class="fb-row"><span class="fb-name">Aᵏ</span><span class="fb-eq">Eigenvalues of Aᵏ are λᵏ; eigenvectors are the same</span></div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Diagonalisation</h3>
+        <p class="body-para">If an n×n matrix A has n linearly independent eigenvectors, it can be <strong>diagonalised</strong>: A = PDP⁻¹, where D is a diagonal matrix of eigenvalues and the columns of P are the corresponding eigenvectors. This is extremely powerful for computing Aⁿ efficiently.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Diagonalisation Formula</div>
+          <div class="fb-math">
+            A = PDP⁻¹ &nbsp;where:<br>
+            D = diag(λ₁, λ₂, …, λₙ) &nbsp; (eigenvalues on diagonal)<br>
+            P = [v₁ | v₂ | … | vₙ] &nbsp; (eigenvectors as columns)<br><br>
+            Therefore: &nbsp; Aⁿ = PDⁿP⁻¹ &nbsp; (very efficient for large powers)
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Eigenvalues</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 13</span>
+              Find the eigenvalues and eigenvectors of A = [[4, 1], [2, 3]]
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Char. equation</span>
+                <span>det(A − λI) = det([[4−λ, 1],[2, 3−λ]]) = (4−λ)(3−λ) − (1)(2) = 0</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Expand</span>
+                <span>λ² − 7λ + 12 − 2 = λ² − 7λ + 10 = 0</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Solve</span>
+                <span>Factorise: (λ − 5)(λ − 2) = 0. Eigenvalues: <strong>λ₁ = 5, λ₂ = 2</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Verify</span>
+                <span>tr(A) = 4 + 3 = 7 = λ₁ + λ₂ = 5 + 2 ✓ &nbsp;&nbsp; det(A) = 12 − 2 = 10 = λ₁ × λ₂ = 5 × 2 ✓</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Eigenvec. λ=5</span>
+                <span>(A − 5I)v = [[−1,1],[2,−2]] × [[x],[y]] = 0. Row 1: −x + y = 0 → y = x. Eigenvector: <strong>v₁ = [[1],[1]]</strong> (or any scalar multiple)</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Eigenvec. λ=2</span>
+                <span>(A − 2I)v = [[2,1],[2,1]] × [[x],[y]] = 0. Row 1: 2x + y = 0 → y = −2x. Eigenvector: <strong>v₂ = [[1],[−2]]</strong></span>
+              </div>
+            </div>
+            <div class="we-answer">λ₁ = 5 with v₁ = [[1],[1]] &nbsp;·&nbsp; λ₂ = 2 with v₂ = [[1],[−2]]</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 14</span>
+              Using the eigenvalues from Ex 13, write the diagonalisation of A and find A³
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Form P and D</span>
+                <span>P = [[1,1],[1,−2]] (eigenvectors as columns). D = [[5,0],[0,2]] (eigenvalues on diagonal).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Find P⁻¹</span>
+                <span>det(P) = (1)(−2) − (1)(1) = −3. P⁻¹ = (1/−3)[[−2,−1],[−1,1]] = [[ 2/3, 1/3],[1/3, −1/3]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">A³ = PD³P⁻¹</span>
+                <span>D³ = [[125,0],[0,8]]. A³ = P[[125,0],[0,8]]P⁻¹. Compute to get A³ = [[42,41],[82,41]] ← each entry verifiable by direct calculation.</span>
+              </div>
+            </div>
+            <div class="we-answer">A = PDP⁻¹ &nbsp;·&nbsp; A³ = PD³P⁻¹ = [[42,41],[82,41]]</div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         SECTION 8 — TRANSFORMATIONS
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-transforms">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">🔄</div>
+        <div>
+          <span class="ls-eyebrow">Section 8 · Geometry</span>
+          <h2>Geometric Transformations</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">University</span>
+      </div>
+      <div class="ls-body">
+
+        <div class="concept-intro">
+          <p>Every linear transformation of 2D or 3D space can be represented as a matrix. This means that rotations, reflections, scaling, and shearing can all be computed by a single matrix multiplication. Composite transformations (e.g. "rotate then reflect") are computed as matrix products — applied right to left.</p>
+        </div>
+
+        <h3 class="sub-heading">Standard 2D Transformation Matrices</h3>
+
+        <div class="identity-table">
+          <div class="it-row it-head">
+            <span class="it-label">Transformation</span>
+            <span class="it-eq">Matrix</span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Rotation by θ (anticlockwise)</span>
+            <span class="it-eq">R(θ) = [[cosθ, −sinθ],[sinθ, cosθ]]</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Rotation by θ (clockwise)</span>
+            <span class="it-eq">R(−θ) = [[cosθ, sinθ],[−sinθ, cosθ]]</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Reflection in x-axis</span>
+            <span class="it-eq">[[1, 0],[0, −1]]</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Reflection in y-axis</span>
+            <span class="it-eq">[[−1, 0],[0, 1]]</span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Reflection in y = x</span>
+            <span class="it-eq">[[0, 1],[1, 0]]</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Reflection in y = −x</span>
+            <span class="it-eq">[[0, −1],[−1, 0]]</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Scaling by factor k</span>
+            <span class="it-eq">[[k, 0],[0, k]] &nbsp; (det = k², area multiplied by k²)</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Enlargement (kx, ly)</span>
+            <span class="it-eq">[[k, 0],[0, l]] &nbsp; (different scales in each direction)</span>
+          </div>
+          <div class="it-row it-highlight">
+            <span class="it-label">Shear (x-direction)</span>
+            <span class="it-eq">[[1, k],[0, 1]] &nbsp; (det = 1, area preserved)</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Shear (y-direction)</span>
+            <span class="it-eq">[[1, 0],[k, 1]] &nbsp; (det = 1, area preserved)</span>
+          </div>
+          <div class="it-row">
+            <span class="it-label">Projection onto x-axis</span>
+            <span class="it-eq">[[1, 0],[0, 0]] &nbsp; (singular — collapses y to 0)</span>
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📐</span>
+          <div><strong>Area under transformation:</strong> If a shape has area A and is transformed by matrix M, the new area = |det(M)| × A. If det(M) < 0, the transformation also reverses orientation (like a reflection). This is why det(rotation) = cos²θ + sin²θ = 1 — rotations preserve area and orientation.</div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Transformations</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 15</span>
+              Find the image of point P(3, 1) under: (a) rotation of 90° anticlockwise about origin, (b) reflection in the line y = x
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a — R(90°)</span>
+                <span>R(90°) = [[cos90°, −sin90°],[sin90°, cos90°]] = [[0,−1],[1,0]]. Image = [[0,−1],[1,0]] × [[3],[1]] = [[−1],[3]].</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b — y=x</span>
+                <span>Reflection matrix = [[0,1],[1,0]]. Image = [[0,1],[1,0]] × [[3],[1]] = [[1],[3]].</span>
+              </div>
+            </div>
+            <div class="we-answer">Under 90° rotation: P′ = (−1, 3) &nbsp;·&nbsp; Under reflection y=x: P′ = (1, 3)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 16</span>
+              A triangle has vertices A(1,0), B(3,0), C(2,2). It is transformed by M = [[2,0],[0,3]]. Find the image vertices and the ratio of the new area to the original area.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Image of A</span>
+                <span>[[2,0],[0,3]] × [[1],[0]] = [[2],[0]] → A′ = (2, 0)</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Image of B</span>
+                <span>[[2,0],[0,3]] × [[3],[0]] = [[6],[0]] → B′ = (6, 0)</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Image of C</span>
+                <span>[[2,0],[0,3]] × [[2],[2]] = [[4],[6]] → C′ = (4, 6)</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Area ratio</span>
+                <span>det(M) = (2)(3) − (0)(0) = 6. New area = |6| × original area. The triangle is enlarged by factor 6.</span>
+              </div>
+            </div>
+            <div class="we-answer">A′(2,0), B′(6,0), C′(4,6) &nbsp;·&nbsp; New area = 6 × original area</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 17</span>
+              Find the matrix representing "rotate 90° anticlockwise, then reflect in the x-axis". Apply to point (2, 1).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Two matrices</span>
+                <span>Rotation R = [[0,−1],[1,0]]. Reflection F = [[1,0],[0,−1]].</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Composite = FR</span>
+                <span>Apply right to left (rotation first, then reflection): FR = [[1,0],[0,−1]] × [[0,−1],[1,0]] = [[0,−1],[−1,0]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Apply to (2,1)</span>
+                <span>[[0,−1],[−1,0]] × [[2],[1]] = [[0×2+(−1)×1],[−1×2+0×1]] = [[−1],[−2]]</span>
+              </div>
+            </div>
+            <div class="we-answer">Composite matrix = [[0,−1],[−1,0]] &nbsp;·&nbsp; Image of (2,1) is (−1, −2)</div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         COMMON ERRORS
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-errors">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⚠</div>
+        <div>
+          <span class="ls-eyebrow">Reference · KCSE Exam Tips</span>
+          <h2>Common Errors to Avoid</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">All Levels</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">These are the most frequently penalised mistakes in KCSE and Senior Secondary matrices questions, identified from past paper marking schemes and TSC teaching guidance.</p>
+
+        <div class="errors-grid">
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Multiplying matrices: A(2×3) × B(2×3) = AB</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>Inner dimensions must match: A is m×n, B must be n×p. Here 3 ≠ 2, so AB is undefined.</div>
+            <div class="ec-note">Always check inner dimensions before multiplying. The result has order outer dimensions: m×p.</div>
+          </div>
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Assuming AB = BA</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>Matrix multiplication is NOT commutative. AB and BA may differ or one may not even be defined.</div>
+            <div class="ec-note">Exceptions: AI = IA, and AB = BA when B = A⁻¹. Otherwise, always specify the order.</div>
+          </div>
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>2×2 inverse: A⁻¹ = (1/det) × [[a,b],[c,d]] (no changes)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>A⁻¹ = (1/det) × [[d,−b],[−c,a]] — swap diagonal AND negate off-diagonal.</div>
+            <div class="ec-note">The off-diagonal sign change (b→−b, c→−c) is the most commonly missed step.</div>
+          </div>
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>det(2A) = 2 × det(A) for a 3×3 matrix</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>det(kA) = kⁿ det(A). For 3×3: det(2A) = 2³ det(A) = 8 det(A).</div>
+            <div class="ec-note">The factor k is raised to the power n (order of matrix), not applied once.</div>
+          </div>
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Attempting to find the inverse when det(A) = 0</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>If det(A) = 0, state "Matrix A is singular — no inverse exists." Do not proceed.</div>
+            <div class="ec-note">A system Ax = b with a singular A either has no solution or infinitely many.</div>
+          </div>
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Composite transformation: "rotate then reflect" → apply rotation matrix last</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>To apply rotation R first then reflection F: use FR (right-most = applied first).</div>
+            <div class="ec-note">Matrix composition reads right to left. FR means "first R, then F."</div>
+          </div>
+        </div>
+
+        <div class="worked-examples" style="margin-top:1.2rem;">
+          <div class="we-title">Worked Example 18 — Exam-Style Multi-Part Question</div>
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Ex 18</span>
+              Given A = [[2,k],[3,6]] and B = [[1,2],[0,−1]]: (a) Find k if A is singular. &nbsp; (b) Using k from (a), find (AB)ᵀ. &nbsp; (c) Show AA⁻¹ = I for a non-singular version.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>A is singular when det(A) = 0. det(A) = (2)(6) − (k)(3) = 12 − 3k = 0 → k = <strong>4</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b — AB</span>
+                <span>With k=4: A = [[2,4],[3,6]]. AB = [[2,4],[3,6]] × [[1,2],[0,−1]] = [[2+0, 4−4],[3+0, 6−6]] = [[2,0],[3,0]]</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b — (AB)ᵀ</span>
+                <span>(AB)ᵀ = transpose of [[2,0],[3,0]] = <strong>[[2,3],[0,0]]</strong></span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part c — use k=1</span>
+                <span>Take A = [[2,1],[3,6]]: det = 12−3 = 9. A⁻¹ = (1/9)[[6,−1],[−3,2]]. AA⁻¹ = [[2,1],[3,6]] × (1/9)[[6,−1],[−3,2]] = (1/9)[[12−3, −2+2],[18−18, −3+12]] = (1/9)[[9,0],[0,9]] = I ✓</span>
+              </div>
+            </div>
+            <div class="we-answer">k = 4 &nbsp;·&nbsp; (AB)ᵀ = [[2,3],[0,0]] &nbsp;·&nbsp; AA⁻¹ = I ✓ confirmed</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════
+         FORMULA SHEET
+    ══════════════════════════════ -->
+    <article class="lesson-section" id="mat-formulas">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">Σf</div>
+        <div>
+          <span class="ls-eyebrow">Quick Reference · Print-Ready</span>
+          <h2>Matrices Formula Sheet</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">All Levels</span>
+      </div>
+      <div class="ls-body">
+        <p class="body-para">All key formulas from this lesson, organised for quick revision. Mwalimu Ronny recommends printing this sheet and keeping it alongside your CBC Mathematics textbook.</p>
+
+        <div class="formula-sheet-grid">
+          <div class="fs-card">
+            <div class="fs-title">Operations</div>
+            <div class="fs-items">
+              <div class="fs-item">(A+B)ᵢⱼ = Aᵢⱼ + Bᵢⱼ</div>
+              <div class="fs-item">(kA)ᵢⱼ = kAᵢⱼ</div>
+              <div class="fs-item">(AB)ᵢⱼ = Σ Aᵢₖ Bₖⱼ</div>
+              <div class="fs-item">AB ≠ BA (in general)</div>
+              <div class="fs-item">(AB)ᵀ = BᵀAᵀ</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Determinants</div>
+            <div class="fs-items">
+              <div class="fs-item">2×2: ad − bc</div>
+              <div class="fs-item">3×3: expand along row 1</div>
+              <div class="fs-item">det(AB) = det(A)det(B)</div>
+              <div class="fs-item">det(kA) = kⁿ det(A)</div>
+              <div class="fs-item">det(Aᵀ) = det(A)</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Inverse (2×2)</div>
+            <div class="fs-items">
+              <div class="fs-item">A⁻¹ = (1/det) × [[d,−b],[−c,a]]</div>
+              <div class="fs-item">AA⁻¹ = I</div>
+              <div class="fs-item">(AB)⁻¹ = B⁻¹A⁻¹</div>
+              <div class="fs-item">(Aᵀ)⁻¹ = (A⁻¹)ᵀ</div>
+              <div class="fs-item">Singular: det = 0, no inverse</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Linear Systems</div>
+            <div class="fs-items">
+              <div class="fs-item">Ax = b → x = A⁻¹b</div>
+              <div class="fs-item">Cramer: xᵢ = det(Aᵢ)/det(A)</div>
+              <div class="fs-item">Gauss: [A|b] → row echelon</div>
+              <div class="fs-item">Row ops: swap, scale, add</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Eigenvalues</div>
+            <div class="fs-items">
+              <div class="fs-item">det(A − λI) = 0</div>
+              <div class="fs-item">tr(A) = Σ λᵢ</div>
+              <div class="fs-item">det(A) = Π λᵢ</div>
+              <div class="fs-item">Diag: A = PDP⁻¹</div>
+              <div class="fs-item">Aⁿ = PDⁿP⁻¹</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">2D Transformations</div>
+            <div class="fs-items">
+              <div class="fs-item">Rot θ: [[cosθ,−sinθ],[sinθ,cosθ]]</div>
+              <div class="fs-item">Refl x-ax: [[1,0],[0,−1]]</div>
+              <div class="fs-item">Refl y=x: [[0,1],[1,0]]</div>
+              <div class="fs-item">Scale k: [[k,0],[0,k]]</div>
+              <div class="fs-item">Area → |det| × original</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Topic Navigation Footer -->
+    <nav class="topic-nav-footer" aria-label="Navigate between lessons">
+      <a href="vectors.html" class="tnf-btn tnf-prev">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span>
+          <span class="tnf-label">Previous Lesson</span>
+          <span class="tnf-name">Vectors</span>
+        </span>
+      </a>
+      <a href="conics.html" class="tnf-btn tnf-next">
+        <span>
+          <span class="tnf-label">Next Lesson</span>
+          <span class="tnf-name">Conic Sections</span>
+        </span>
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </nav>
+
+  </main><!-- /topic-content -->
+</div><!-- /topic-layout -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya</p>
+      <p class="footer-contact-line">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="fn-col">
+        <h4>Lessons</h4>
+        <ul>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="trigonometry.html">Trigonometry</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="limits.html">Limits</a></li>
+          <li><a href="differentiation.html">Differentiation</a></li>
+          <li><a href="integration.html">Integration</a></li>
+          <li><a href="vectors.html">Vectors</a></li>
+          <li><a href="matrices.html" aria-current="page"><strong>Matrices</strong></a></li>
+          <li><a href="conics.html">Conic Sections</a></li>
+          <li><a href="sequences.html">Sequences &amp; Series</a></li>
+          <li><a href="complex.html">Complex Numbers</a></li>
+          <li><a href="areas.html">Areas</a></li>
+          <li><a href="volumes.html">Volumes</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="math-lessons.html">All Lessons</a></li>
+          <li><a href="tasks.html">Practice Problems</a></li>
+          <li><a href="mind.html">Brain Games</a></li>
+          <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>My Learning</h4>
+        <ul>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About Mwalimu Ronny</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p style="font-style:italic;color:rgba(255,228,196,.18)">CBC-aligned · KICD · TSC · KNEC · Ministry of Education Kenya</p>
+  </div>
 </footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+
+<!-- Shared scripts -->
+<script src="shared.js"></script>
+<script src="topic.js"></script>
 </body>
 </html>

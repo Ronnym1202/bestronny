@@ -1,346 +1,977 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Ronny Best Mathematics</title>
-<meta name="description" content="Learn about Ronny Best, the mathematician and educator behind Kenya's leading free mathematics learning platform for high school and college students.">
+<head>
+  <!-- ═══ META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mwalimu Ronny | Ronny Best Mathematics</title>
+  <meta name="description" content="Meet Mwalimu Ronny Mwenda Best — Mathematics and Computer Science teacher, frontend web developer, and education advocate from Embu County, Kenya. Founder of Ronny Best Mathematics, CBC Best, and a growing digital ecosystem serving Kenyan students and teachers.">
+  <meta name="keywords" content="Ronny Mwenda, Ronny Best, mathematics teacher Kenya, CBC Best Kenya, frontend developer Embu Kenya, University of Embu B.Ed Science, KICD aligned maths, free mathematics Kenya, CBC curriculum Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/about.html">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="IMAGES/P2.png">
-<style>
-:root {
-    --bisque:#ffe4c4; --bisque-dark:#f5d0a9; --bisque-deeper:#e8b98a;
-    --bisque-light:#fff9f3; --brown:#7b4a1e; --brown-dark:#4a2508;
-    --brown-mid:#a0622a; --amber:#c97b0a; --green:#2e6645;
-    --green-light:#3d8559; --text:#3b2010; --muted:#8a6a50;
-    --white:#ffffff; --card:#fffcf7;
-    --ad-border:#f5d0a9;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Nunito', sans-serif; background: var(--bisque-light); color: var(--text); overflow-x: hidden; }
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Mwalimu Ronny | Ronny Best Mathematics">
+  <meta property="og:description" content="Mathematics teacher, frontend developer, and CBC education advocate from Embu County, Kenya. Founder of Ronny Best Mathematics and CBC Best — Kenya's CBC curriculum hub.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://bestronny.netlify.app/about.html">
+  <meta property="og:image" content="https://ronnymwenda.netlify.app/profile.jpeg">
+  <meta property="og:image:alt" content="Ronny Mwenda Best — Mathematics Teacher and Developer, Embu County Kenya">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+  <meta name="twitter:title" content="About Mwalimu Ronny | Ronny Best Mathematics">
+  <meta name="twitter:description" content="Mathematics teacher, frontend developer and CBC education advocate from Embu County, Kenya.">
+  <meta name="twitter:image" content="https://ronnymwenda.netlify.app/profile.jpeg">
 
-/* ── NAV ── */
-nav {
-    background: var(--brown-dark);
-    height: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 200;
-    box-shadow: 0 2px 18px rgba(74,37,8,.4);
-}
-.nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
-.nav-logo span { color: var(--bisque-deeper); }
-.nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-.nav-links a { color: rgba(255,228,196,.7); text-decoration: none; font-size: .87rem; font-weight: 600; transition: color .2s; }
-.nav-links a:hover, .nav-links a.active { color: var(--bisque); }
-.nav-cta { background: var(--green) !important; color: #fff !important; padding: .42rem 1.1rem; border-radius: 8px; font-weight: 700 !important; }
-.nav-cta:hover { background: var(--green-light) !important; }
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
 
-/* ── HERO ── */
-.hero {
-    background: var(--brown-dark);
-    padding: 5rem 2.5rem 4.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 80% 20%, rgba(255,228,196,.07) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 60% at 20% 90%, rgba(200,120,10,.08) 0%, transparent 60%);
-    pointer-events: none;
-}
-.breadcrumb { color: var(--bisque-deeper); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; position: relative; }
-.hero h1 { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 700; line-height: 1.1; position: relative; animation: fadeUp .5s .1s ease both; }
-.hero h1 em { font-style: italic; color: var(--bisque-deeper); }
-.hero-sub { color: rgba(255,228,196,.58); font-size: 1rem; max-width: 520px; margin: 1.1rem auto 0; line-height: 1.8; position: relative; animation: fadeUp .5s .2s ease both; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-/* ── PROFILE LAYOUT ── */
-.profile-wrap {
-    max-width: 1060px;
-    margin: -1.5rem auto 0;
-    padding: 0 2rem 5rem;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2.8rem;
-    align-items: start;
-}
+  <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — Auto Ads only, no manual ad divs -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
 
-/* ── PROFILE CARD ── */
-.profile-card {
-    background: var(--card);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 40px rgba(74,37,8,.1);
-    border: 2px solid var(--bisque-dark);
-    position: sticky;
-    top: 80px;
-    animation: fadeUp .6s .3s ease both;
-}
-.pc-head {
-    background: var(--brown-dark);
-    padding: 2.2rem 1.8rem;
-    text-align: center;
-    position: relative;
-}
-.pc-head::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    background: var(--card);
-    clip-path: ellipse(55% 100% at 50% 100%);
-}
+  <link rel="stylesheet" href="index.css">
 
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 1rem;
-    border: 3px solid rgba(255,228,196,.3);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-    background: var(--brown-mid);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
+  <!-- Schema.org — Person + CreativeWork for the ecosystem -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ronny Mwenda Best",
+    "alternateName": ["Mwalimu Ronny", "Ronny Best"],
+    "jobTitle": "Mathematics and Computer Science Teacher",
+    "description": "Qualified Mathematics and Computer Science teacher and frontend web developer from Embu County, Kenya. B.Ed Science student at the University of Embu. Founder of Ronny Best Mathematics (bestronny.netlify.app) and CBC Best (cbcbest.netlify.app) — Kenya's free CBC curriculum resource hub.",
+    "url": "https://ronnymwenda.netlify.app",
+    "sameAs": [
+      "https://bestronny.netlify.app",
+      "https://cbcbest.netlify.app",
+      "https://ronnymwenda.netlify.app",
+      "https://github.com/Ronnym1202",
+      "https://x.com/ronnymwenda89",
+      "https://www.youtube.com/@RonnyBestMath"
+    ],
+    "email": "ronnymwenda89@gmail.com",
+    "telephone": "+254799188900",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" },
+    "knowsAbout": ["Mathematics", "Computer Science", "CBC Curriculum Kenya", "KICD", "Frontend Web Development", "HTML", "CSS", "JavaScript", "Statistics", "Calculus", "Algebra"]
+  }
+  </script>
 
-.avatar-initials {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: var(--bisque);
-    display: none;
-}
+  <style>
+    /* ── ABOUT PAGE EXTRAS ── */
+    .about-hero {
+      background: linear-gradient(155deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+      padding: clamp(3rem, 8vw, 5rem) var(--pad-x);
+      position: relative; overflow: hidden;
+      border-bottom: 3px solid var(--bisque-deep);
+    }
+    .about-hero::before {
+      content: "∑ ∫ π";
+      position: absolute; top: 8%; right: 5%;
+      font-family: var(--font-mono); font-size: 5rem; font-weight: 700;
+      color: rgba(255,228,196,.04); letter-spacing: .3em;
+      transform: rotate(8deg); pointer-events: none; user-select: none;
+    }
+    .about-hero-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 3rem; align-items: center; position: relative; z-index: 1;
+    }
+    .hero-cred-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,228,196,.15);
+      border-radius: var(--radius-lg); padding: 1.8rem;
+      min-width: 220px; flex-shrink: 0; backdrop-filter: blur(8px);
+    }
+    .hero-cred-label {
+      font-family: var(--font-ui); font-size: .65rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,228,196,.35); margin-bottom: 1rem;
+    }
+    .hero-cred-item {
+      display: flex; align-items: flex-start; gap: 8px; margin-bottom: .65rem;
+    }
+    .hero-cred-item:last-child { margin-bottom: 0; }
+    .hero-cred-item span:first-child { font-size: .9rem; margin-top: 1px; flex-shrink: 0; }
+    .hero-cred-item .hci-text {
+      font-family: var(--font-ui); font-size: .8rem;
+      color: rgba(255,228,196,.65); line-height: 1.5;
+    }
+    .hero-cred-item .hci-text strong { color: var(--bisque-dark); }
 
-.pc-name { font-family: 'Cormorant Garamond', serif; color: var(--bisque); font-size: 1.35rem; font-weight: 700; }
-.pc-title { color: var(--bisque-deeper); font-size: .8rem; margin-top: .3rem; font-weight: 600; letter-spacing: .03em; }
+    /* Breadcrumb row */
+    .about-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-family: var(--font-ui); font-size: .75rem;
+      color: rgba(255,228,196,.35); margin-bottom: 1.2rem;
+    }
+    .about-breadcrumb a { color: rgba(255,228,196,.45); text-decoration: none; }
+    .about-breadcrumb a:hover { color: var(--bisque-dark); }
 
-.pc-body { padding: 1.6rem 1.6rem 1.8rem; }
-.stat-row { display: flex; justify-content: space-between; align-items: center; padding: .75rem 0; border-bottom: 1px solid rgba(123,74,30,.08); }
-.stat-row:last-of-type { border-bottom: none; }
-.stat-lbl { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
-.stat-val { color: var(--brown-dark); font-weight: 700; font-size: .9rem; }
+    /* ── PROFILE LAYOUT ── */
+    .about-layout {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: clamp(2rem, 5vw, 3.5rem) var(--pad-x);
+      display: grid; grid-template-columns: 290px 1fr;
+      gap: clamp(2rem, 4vw, 3rem); align-items: start;
+    }
 
-.contact-btn {
-    display: block;
-    width: 100%;
-    padding: .85rem;
-    background: var(--green);
-    color: var(--white);
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: .93rem;
-    margin-top: 1.4rem;
-    transition: background .2s, transform .15s;
-}
-.contact-btn:hover { background: var(--green-light); transform: translateY(-1px); }
+    /* ── PROFILE CARD ── */
+    .profile-card {
+      background: var(--white); border: 1px solid var(--cream-200);
+      border-radius: var(--radius-xl); overflow: hidden;
+      box-shadow: var(--shadow-md); position: sticky; top: 80px;
+    }
+    .pc-head {
+      background: linear-gradient(160deg, var(--navy-950), var(--navy-800));
+      padding: 2rem 1.6rem; text-align: center; position: relative;
+    }
+    .pc-avatar {
+      width: 100px; height: 100px; border-radius: 50%;
+      margin: 0 auto 1rem; border: 3px solid var(--bisque-dark);
+      box-shadow: 0 6px 20px rgba(10,22,40,.3); overflow: hidden;
+      background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pc-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .pc-initials {
+      font-family: var(--font-display); font-size: 2.4rem;
+      font-weight: 900; color: var(--bisque-dark); display: none;
+    }
+    .pc-name {
+      font-family: var(--font-display); font-size: 1.2rem;
+      font-weight: 700; color: rgba(255,243,232,.95); margin-bottom: .3rem;
+    }
+    .pc-role {
+      font-family: var(--font-ui); font-size: .74rem; font-weight: 600;
+      color: rgba(255,228,196,.5); letter-spacing: .04em;
+    }
+    .pc-body { padding: 1.3rem 1.4rem 1.5rem; }
+    .pc-stat {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .65rem 0; border-bottom: 1px solid var(--cream-200); gap: 8px;
+    }
+    .pc-stat:last-of-type { border-bottom: none; }
+    .pc-stat-label {
+      font-family: var(--font-ui); font-size: .7rem; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase; color: var(--ink-30); flex-shrink: 0;
+    }
+    .pc-stat-value {
+      font-family: var(--font-ui); font-size: .84rem; font-weight: 700;
+      color: var(--navy-800); text-align: right;
+    }
+    .pc-tags {
+      display: flex; flex-wrap: wrap; gap: 5px;
+      padding: .9rem 0 .4rem; border-top: 1px solid var(--cream-200); margin-top: .4rem;
+    }
+    .pc-tag {
+      font-family: var(--font-ui); font-size: .68rem; font-weight: 700;
+      letter-spacing: .05em; text-transform: uppercase;
+      background: var(--cream-100); border: 1px solid var(--cream-200);
+      color: var(--navy-700); padding: .22rem .65rem; border-radius: var(--radius-pill);
+    }
+    .pc-contact-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; background: var(--navy-700); color: var(--bisque-light);
+      font-family: var(--font-ui); font-size: .86rem; font-weight: 700;
+      padding: .72rem 1rem; border-radius: var(--radius-md);
+      text-decoration: none; margin-top: 1rem; transition: var(--transition);
+    }
+    .pc-contact-btn:hover { background: var(--navy-800); color: var(--bisque); }
+    .pc-links { display: flex; flex-direction: column; gap: 5px; margin-top: .7rem; }
+    .pc-link {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-ui); font-size: .81rem;
+      color: var(--ink-50); text-decoration: none;
+      padding: .38rem .55rem; border-radius: var(--radius-sm); transition: var(--transition);
+    }
+    .pc-link:hover { background: var(--cream-100); color: var(--navy-700); }
+    .pc-link-icon {
+      width: 22px; height: 22px; flex-shrink: 0;
+      background: var(--cream-100); border-radius: 5px;
+      display: flex; align-items: center; justify-content: center; font-size: .72rem;
+    }
 
-/* ── STORY CARDS ── */
-.story { display: flex; flex-direction: column; gap: 1.8rem; padding-top: 1.8rem; animation: fadeUp .6s .4s ease both; }
-.sc {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 2rem 2.2rem;
-    box-shadow: 0 4px 24px rgba(74,37,8,.07);
-    border: 2px solid var(--bisque-dark);
-    border-left: 5px solid var(--bisque-deeper);
-    transition: transform .2s, box-shadow .2s;
-}
-.sc:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(74,37,8,.1); }
-.sc:nth-child(2) { border-left-color: var(--green); }
-.sc:nth-child(3) { border-left-color: var(--amber); }
-.sc:nth-child(4) { border-left-color: var(--brown-mid); }
+    /* ── STORY CARDS ── */
+    .story-column { display: flex; flex-direction: column; gap: 1.8rem; }
+    .story-card {
+      background: var(--white); border: 1px solid var(--cream-200);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.4rem, 3vw, 2rem);
+      box-shadow: var(--shadow-sm); transition: var(--transition);
+    }
+    .story-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .story-eyebrow {
+      font-family: var(--font-ui); font-size: .68rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: rgba(200,131,42,.1); border: 1px solid rgba(200,131,42,.2);
+      color: var(--bisque-deep); padding: .24rem .72rem;
+      border-radius: var(--radius-pill); display: inline-block; margin-bottom: .7rem;
+    }
+    .story-card:nth-child(2) .story-eyebrow { color: var(--green); background: var(--green-bg); border-color: rgba(30,110,54,.2); }
+    .story-card:nth-child(3) .story-eyebrow { color: #5b3a8a; background: rgba(91,58,138,.08); border-color: rgba(91,58,138,.2); }
+    .story-card:nth-child(4) .story-eyebrow { color: var(--navy-700); background: rgba(26,53,96,.06); border-color: rgba(26,53,96,.15); }
+    .story-card:nth-child(5) .story-eyebrow { color: #0e6888; background: rgba(14,104,136,.07); border-color: rgba(14,104,136,.2); }
+    .story-card:nth-child(6) .story-eyebrow { color: #c0392b; background: rgba(185,28,28,.06); border-color: rgba(185,28,28,.15); }
 
-.card-lbl { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--bisque-deeper); margin-bottom: .45rem; }
-.sc:nth-child(2) .card-lbl { color: var(--green); }
-.sc:nth-child(3) .card-lbl { color: var(--amber); }
-.sc:nth-child(4) .card-lbl { color: var(--brown-mid); }
+    .story-card h2 {
+      font-family: var(--font-display); font-size: clamp(1.2rem,2.5vw,1.5rem);
+      color: var(--navy-800); margin-bottom: .9rem;
+    }
+    .story-card p {
+      font-family: var(--font-ui); font-size: .93rem;
+      line-height: 1.82; color: var(--ink-50); margin-bottom: .8rem;
+    }
+    .story-card p:last-of-type { margin-bottom: 0; }
+    .story-card strong { color: var(--navy-800); font-weight: 600; }
+    .story-card em { font-style: italic; color: var(--navy-700); }
 
-.sc h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; color: var(--brown-dark); margin-bottom: .85rem; font-weight: 700; }
-.sc p { color: var(--muted); line-height: 1.82; font-size: .93rem; }
-.sc p + p { margin-top: .75rem; }
+    /* Pull quote */
+    .pull-quote {
+      background: var(--navy-800); border-radius: var(--radius-md);
+      padding: 1.4rem 1.6rem; margin-top: 1.2rem; position: relative; overflow: hidden;
+    }
+    .pull-quote::before {
+      content: '"'; position: absolute; top: -1.2rem; left: .8rem;
+      font-family: var(--font-display); font-size: 8rem; font-weight: 900;
+      color: rgba(255,228,196,.05); line-height: 1; pointer-events: none;
+    }
+    .pq-text {
+      font-family: var(--font-serif); font-size: 1rem; font-style: italic;
+      color: rgba(255,228,196,.7); line-height: 1.75; position: relative; z-index: 1;
+    }
+    .pq-attr {
+      font-family: var(--font-ui); font-size: .75rem; font-weight: 700;
+      letter-spacing: .06em; color: var(--bisque-dark); margin-top: .7rem;
+    }
 
-/* ── QUOTE ── */
-.quote-block {
-    background: var(--brown-dark);
-    border-radius: 14px;
-    padding: 2rem 2.2rem;
-    position: relative;
-    overflow: hidden;
-    margin-top: 1.3rem;
-}
-.quote-block::before {
-    content: '"';
-    position: absolute;
-    top: -1rem;
-    left: .8rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 7rem;
-    color: rgba(255,228,196,.08);
-    line-height: 1;
-}
-.qt { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--bisque); line-height: 1.72; position: relative; z-index: 1; font-style: italic; }
-.qa { color: var(--bisque-deeper); font-size: .82rem; font-weight: 700; margin-top: .9rem; letter-spacing: .04em; }
+    /* Ecosystem grid */
+    .ecosystem-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px; margin-top: 1.1rem;
+    }
+    .eco-card {
+      background: var(--cream-100); border: 1px solid var(--cream-200);
+      border-radius: var(--radius-md); padding: 1.1rem 1.2rem;
+      transition: var(--transition); text-decoration: none;
+      display: flex; flex-direction: column; gap: .4rem;
+    }
+    .eco-card:hover { border-color: var(--bisque-dark); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+    .eco-badge {
+      font-family: var(--font-ui); font-size: .65rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase;
+      color: var(--bisque-deep); margin-bottom: .1rem;
+    }
+    .eco-card:nth-child(1) .eco-badge { color: var(--bisque-deep); }
+    .eco-card:nth-child(2) .eco-badge { color: var(--green); }
+    .eco-card:nth-child(3) .eco-badge { color: #5b3a8a; }
+    .eco-card:nth-child(4) .eco-badge { color: var(--navy-600); }
+    .eco-name {
+      font-family: var(--font-display); font-size: 1rem;
+      font-weight: 700; color: var(--navy-800);
+    }
+    .eco-url {
+      font-family: var(--font-mono); font-size: .74rem; color: var(--ink-30);
+    }
+    .eco-desc {
+      font-family: var(--font-ui); font-size: .82rem;
+      color: var(--ink-50); line-height: 1.6; margin-top: .2rem;
+    }
+    .eco-visit {
+      font-family: var(--font-ui); font-size: .78rem; font-weight: 700;
+      color: var(--navy-700); margin-top: .5rem;
+    }
 
-/* ── VALUES ── */
-.values-sec { max-width: 1060px; margin: 0 auto; padding: 0 2rem 5rem; }
-.vals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.4rem; margin-top: 2.8rem; }
-.vc {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 1.7rem;
-    box-shadow: 0 4px 20px rgba(74,37,8,.07);
-    border: 2px solid var(--bisque-dark);
-    text-align: center;
-    transition: transform .2s, box-shadow .2s;
-}
-.vc:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(74,37,8,.12); }
-.vc-icon { font-size: 2rem; margin-bottom: .85rem; display: block; }
-.vc h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--brown-dark); font-weight: 700; margin-bottom: .4rem; }
-.vc p { color: var(--muted); font-size: .85rem; line-height: 1.65; }
+    /* CBC detail grid */
+    .cbc-detail-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 13px; margin-top: 1rem;
+    }
+    .cbc-detail-card {
+      background: var(--cream-100); border: 1px solid var(--cream-200);
+      border-left: 3px solid var(--bisque-deep); border-radius: var(--radius-md);
+      padding: 1rem 1.1rem;
+    }
+    .cbc-detail-card:nth-child(2) { border-left-color: var(--green); }
+    .cbc-detail-card:nth-child(3) { border-left-color: #5b3a8a; }
+    .cbc-detail-card:nth-child(4) { border-left-color: var(--navy-700); }
+    .cdc-org {
+      font-family: var(--font-ui); font-size: .67rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase; color: var(--bisque-deep); margin-bottom: .3rem;
+    }
+    .cbc-detail-card:nth-child(2) .cdc-org { color: var(--green); }
+    .cbc-detail-card:nth-child(3) .cdc-org { color: #5b3a8a; }
+    .cbc-detail-card:nth-child(4) .cdc-org { color: var(--navy-700); }
+    .cdc-title {
+      font-family: var(--font-display); font-size: .96rem;
+      font-weight: 700; color: var(--navy-800); margin-bottom: .3rem;
+    }
+    .cdc-desc { font-family: var(--font-ui); font-size: .82rem; color: var(--ink-50); line-height: 1.6; }
 
-/* ── FOOTER ── */
-footer { background: #2e1505; color: rgba(255,228,196,.42); text-align: center; padding: 2.4rem 2rem; font-size: .83rem; }
-.fl { margin-bottom: .75rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .1rem; }
-footer a { color: var(--bisque-deeper); text-decoration: none; padding: 0 .5rem; }
-footer a:hover { color: var(--bisque); text-decoration: underline; }
+    /* Skills grid */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px; margin-top: .9rem;
+    }
+    .skill-block {
+      background: var(--cream-100); border: 1px solid var(--cream-200);
+      border-radius: var(--radius-md); padding: .9rem 1rem;
+    }
+    .skill-block-title {
+      font-family: var(--font-ui); font-size: .7rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase; color: var(--bisque-deep); margin-bottom: .55rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tag {
+      font-family: var(--font-mono); font-size: .74rem;
+      background: var(--white); border: 1px solid var(--cream-200);
+      color: var(--navy-800); padding: .2rem .6rem; border-radius: 5px;
+    }
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    /* Philosophy list */
+    .phil-list { display: flex; flex-direction: column; gap: 0; margin-top: .8rem; }
+    .phil-item {
+      display: flex; gap: 1rem; padding: 1rem 0;
+      border-bottom: 1px solid var(--cream-200); align-items: flex-start;
+    }
+    .phil-item:last-child { border-bottom: none; }
+    .phil-num {
+      width: 34px; height: 34px; flex-shrink: 0;
+      background: var(--navy-700); color: var(--bisque-dark);
+      font-family: var(--font-display); font-size: .95rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center; border-radius: 50%;
+    }
+    .phil-body h4 { font-family: var(--font-display); font-size: .98rem; color: var(--navy-800); margin-bottom: .28rem; }
+    .phil-body p { font-family: var(--font-ui); font-size: .87rem; color: var(--ink-50); line-height: 1.7; }
 
-@media (max-width: 800px) {
-    .profile-wrap { grid-template-columns: 1fr; }
-    .profile-card { position: static; }
-    .nav-links { display: none; }
-    .profile-wrap { padding: 0 1.2rem 4rem; }
-}
-</style>
+    /* ── VALUES ── */
+    .values-section {
+      background: var(--cream-100); border-top: 1px solid var(--cream-200);
+      border-bottom: 1px solid var(--cream-200);
+      padding: clamp(3rem, 6vw, 4.5rem) var(--pad-x);
+    }
+    .values-inner { max-width: var(--max-w); margin: 0 auto; }
+    .values-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px; margin-top: 2.4rem;
+    }
+    .val-card {
+      background: var(--white); border: 1px solid var(--cream-200);
+      border-radius: var(--radius-md); padding: 1.5rem;
+      box-shadow: var(--shadow-xs); transition: var(--transition); text-align: center;
+    }
+    .val-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--bisque-dark); }
+    .val-icon { font-size: 1.8rem; margin-bottom: .8rem; display: block; line-height: 1; }
+    .val-card h3 { font-family: var(--font-display); font-size: 1rem; color: var(--navy-800); margin-bottom: .45rem; }
+    .val-card p { font-family: var(--font-ui); font-size: .86rem; color: var(--ink-50); line-height: 1.7; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .about-hero-inner { grid-template-columns: 1fr; }
+      .hero-cred-card { display: none; }
+      .about-layout { grid-template-columns: 1fr; }
+      .profile-card { position: static; }
+    }
+    @media (max-width: 768px) {
+      .cbc-detail-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .ecosystem-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <a href="/" class="nav-logo">Ronny Best <span>∑</span></a>
-    <ul class="nav-links">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+      </div>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+      <ul class="nav-list" id="nav-menu" role="list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="main.html">Math Lessons</a></li>
+        <li class="nav-has-dropdown">
+          <a href="main.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics &amp; Probability</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
         <li><a href="tasks.html">Practice</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact</a></li>
-    </ul>
-</nav>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<section class="hero">
-    <div class="breadcrumb">About Us</div>
-    <h1>The Mind Behind<br><em>Ronny Best</em></h1>
-    <p class="hero-sub">A passionate educator helping students across Africa and beyond unlock the beauty of mathematics — one step at a time.</p>
-</section>
+  <!-- HERO -->
+  <section class="about-hero" aria-labelledby="about-h1">
+    <div class="about-hero-inner">
+      <div>
+        <nav aria-label="Breadcrumb" class="about-breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page" style="color:rgba(255,228,196,.65);font-weight:600;">About</span>
+        </nav>
+        <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-ui);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bisque-dark);margin-bottom:1.2rem;">
+          <span style="width:5px;height:5px;border-radius:50%;background:var(--bisque-deep);display:block;"></span>
+          Embu County, Kenya · Teacher &amp; Developer
+          <span style="width:5px;height:5px;border-radius:50%;background:var(--bisque-deep);display:block;"></span>
+        </div>
+        <h1 id="about-h1" style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.4rem);font-weight:900;color:rgba(255,243,232,.95);letter-spacing:-.025em;line-height:1.1;margin-bottom:.9rem;">
+          Meet <span style="color:var(--bisque-dark);">Mwalimu Ronny</span>
+        </h1>
+        <p style="font-family:var(--font-serif);font-size:1rem;color:rgba(255,228,196,.58);line-height:1.8;max-width:580px;margin-bottom:1.5rem;">
+          Mathematics and Computer Science teacher, frontend web developer, and CBC education advocate from
+          <strong style="color:var(--bisque-dark);">Embu County, Kenya</strong>. B.Ed Science student at the
+          <strong style="color:var(--bisque-dark);">University of Embu</strong>. Founder of four live websites
+          serving Kenyan students and teachers — all free, all original, all CBC-aligned.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <a href="contact.html" class="btn-hero-primary" style="font-size:.9rem;padding:.7rem 1.5rem;">
+            <span>Get In Touch</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://cbcbest.netlify.app" target="_blank" rel="noopener" class="btn-hero-secondary" style="font-size:.9rem;padding:.7rem 1.4rem;">CBC Best →</a>
+        </div>
+      </div>
+      <div class="hero-cred-card" aria-hidden="true">
+        <div class="hero-cred-label">At a glance</div>
+        <div class="hero-cred-item"><span>🎓</span><div class="hci-text">B.Ed Science<br><strong>University of Embu</strong></div></div>
+        <div class="hero-cred-item"><span>📐</span><div class="hci-text">Mathematics &amp;<br><strong>Computer Science</strong></div></div>
+        <div class="hero-cred-item"><span>💻</span><div class="hci-text">Frontend Developer<br><strong>4 Live Sites</strong></div></div>
+        <div class="hero-cred-item"><span>📍</span><div class="hci-text"><strong>Embu County</strong><br>Kenya 🇰🇪</div></div>
+        <div class="hero-cred-item"><span>📘</span><div class="hci-text">CBC · KICD · KNEC<br><strong>Aligned Content</strong></div></div>
+      </div>
+    </div>
+  </section>
 
-<div class="profile-wrap">
+  <!-- MAIN -->
+  <main id="main-content">
+    <div class="about-layout">
 
-    <!-- Sidebar -->
-    <aside>
+      <!-- SIDEBAR -->
+      <aside>
         <div class="profile-card">
-            <div class="pc-head">
-                <div class="avatar">
-                    <img
-                        src="IMAGES/profile.jpeg"
-                        alt="Ronny Best — Mathematics Educator"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                    >
-                    <span class="avatar-initials" aria-hidden="true">RB</span>
-                </div>
-                <div class="pc-name">Ronny Best</div>
-                <div class="pc-title">Mathematics Educator &amp; Platform Founder</div>
+          <div class="pc-head">
+            <div class="pc-avatar">
+              <img src="https://ronnymwenda.netlify.app/profile.jpeg"
+                   alt="Ronny Mwenda Best — Mathematics Teacher and Developer, Embu County Kenya"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <span class="pc-initials" aria-hidden="true">RM</span>
             </div>
-            <div class="pc-body">
-                <div class="stat-row"><span class="stat-lbl">Based In</span><span class="stat-val">Nairobi, Kenya 🇰🇪</span></div>
-                <div class="stat-row"><span class="stat-lbl">Experience</span><span class="stat-val">10+ Years Teaching</span></div>
-                <div class="stat-row"><span class="stat-lbl">Specialization</span><span class="stat-val">Advanced Mathematics</span></div>
-                <div class="stat-row"><span class="stat-lbl">Students Helped</span><span class="stat-val">Hundreds &amp; counting</span></div>
-                <div class="stat-row"><span class="stat-lbl">Topics Covered</span><span class="stat-val">13+ Math Areas</span></div>
-                <div class="stat-row"><span class="stat-lbl">Platform Access</span><span class="stat-val">100% Free</span></div>
-                <a href="contact.html" class="contact-btn">✉ Get In Touch</a>
+            <div class="pc-name">Ronny Mwenda Best</div>
+            <div class="pc-role">Maths Teacher · Developer · CBC Advocate</div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-stat"><span class="pc-stat-label">Location</span><span class="pc-stat-value">Embu County, Kenya 🇰🇪</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Degree</span><span class="pc-stat-value">B.Ed Science (In Progress)</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Institution</span><span class="pc-stat-value">University of Embu</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Subjects</span><span class="pc-stat-value">Maths &amp; Computer Science</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Sites Built</span><span class="pc-stat-value">4 Live Deployments</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Maths Topics</span><span class="pc-stat-value">13 Core Topics</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">CBC Resources</span><span class="pc-stat-value">cbcbest.netlify.app</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Platform Cost</span><span class="pc-stat-value">100% Free</span></div>
+            <div class="pc-tags">
+              <span class="pc-tag">KICD</span>
+              <span class="pc-tag">TSC</span>
+              <span class="pc-tag">KNEC</span>
+              <span class="pc-tag">BECF</span>
+              <span class="pc-tag">HTML/CSS/JS</span>
+              <span class="pc-tag">GitHub</span>
+              <span class="pc-tag">Netlify</span>
             </div>
-        </div>
-    </aside>
-
-    <!-- Story -->
-    <div class="story">
-        <div class="sc">
-            <div class="card-lbl">Our Story</div>
-            <h2>How It All Started</h2>
-            <p>Ronny Best was born out of a simple but powerful frustration: quality math education was too expensive, too inaccessible, and too intimidating for most students in Kenya and across Africa.</p>
-            <p>After more than a decade of teaching mathematics to high school and college students, Ronny Mwenda noticed a pattern — students weren't struggling because they lacked intelligence. They were struggling because they didn't have access to clear, step-by-step explanations they could revisit at their own pace.</p>
-            <p>This platform was created to change that. Every lesson, example, and practice problem on this site is the result of years of classroom experience, refined to be as clear and approachable as possible.</p>
-        </div>
-
-        <div class="sc">
-            <div class="card-lbl">Our Mission</div>
-            <h2>Mathematics for Every Student</h2>
-            <p>We believe mathematics is not an elite subject reserved for the naturally gifted. It is a skill — and like any skill, it can be learned with the right guidance, patience, and practice.</p>
-            <p>Our mission is to provide every student — regardless of their background, school, or financial situation — with the same quality of mathematics instruction they would get from a private tutor. For free. Forever.</p>
-            <div class="quote-block">
-                <p class="qt">Mathematics isn't about memorising formulas — it's about understanding patterns and developing problem-solving skills that last a lifetime.</p>
-                <p class="qa">— Ronny Best, Founder</p>
+            <a href="contact.html" class="pc-contact-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Contact Mwalimu Ronny
+            </a>
+            <div class="pc-links">
+              <a href="mailto:ronnymwenda89@gmail.com" class="pc-link"><span class="pc-link-icon">✉</span>ronnymwenda89@gmail.com</a>
+              <a href="tel:+254799188900" class="pc-link"><span class="pc-link-icon">📞</span>+254 799 188 900</a>
+              <a href="https://github.com/Ronnym1202" target="_blank" rel="noopener" class="pc-link"><span class="pc-link-icon">⌥</span>github.com/Ronnym1202</a>
+              <a href="https://www.youtube.com/@RonnyBestMath" target="_blank" rel="noopener" class="pc-link"><span class="pc-link-icon">▶</span>YouTube — Ronny Best Math</a>
+              <a href="https://x.com/ronnymwenda89" target="_blank" rel="noopener" class="pc-link"><span class="pc-link-icon">𝕏</span>@ronnymwenda89</a>
             </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- STORY COLUMN -->
+      <div class="story-column">
+
+        <!-- 1: WHO HE IS -->
+        <div class="story-card">
+          <span class="story-eyebrow">Who Is Mwalimu Ronny</span>
+          <h2>Teacher, Developer &amp; Education Builder</h2>
+          <p>
+            <strong>Ronny Mwenda Best</strong> — known widely as <strong>"Mwalimu Ronny"</strong> (Swahili for "Teacher Ronny")
+            and online as <strong>"Ronny Best"</strong> — is a Mathematics and Computer Science teacher and
+            frontend web developer based in <strong>Embu County, Kenya</strong>.
+          </p>
+          <p>
+            He is currently pursuing a <strong>Bachelor of Education (Science)</strong> at the
+            <strong>University of Embu</strong>, majoring in Mathematics and Computer Science. His academic
+            foundation combines deep subject-matter expertise in pure and applied mathematics with the
+            pedagogical training required to make those subjects accessible to learners at every level.
+          </p>
+          <p>
+            Ronny describes his work as sitting at the intersection of three passions: <em>teaching mathematics
+            clearly</em>, <em>building websites that work</em>, and <em>making Kenya's CBC curriculum genuinely
+            understandable</em> for students, teachers, and parents who are navigating a transformative shift
+            in the country's education system. He has successfully built and deployed
+            <strong>four live websites</strong> serving thousands of Kenyan learners — all hosted on Netlify,
+            all free, all original.
+          </p>
+          <div class="pull-quote">
+            <p class="pq-text">CBC is not just a curriculum change — it is a mindset shift. It empowers learners to identify their potential early and equips them with real-world competencies. Mathematics and Computer Science are my personal commitment to Kenya's digital future.</p>
+            <p class="pq-attr">— Ronny Mwenda Best · Mathematics &amp; CS Teacher · Embu County, Kenya</p>
+          </div>
         </div>
 
-        <div class="sc">
-            <div class="card-lbl">What We Offer</div>
-            <h2>A Complete Learning Experience</h2>
-            <p>From foundational algebra to university-level calculus and complex numbers, Ronny Best Mathematics covers the full spectrum of high school and early college mathematics. Every topic includes detailed explanations, worked examples, practice problems, and real-world applications.</p>
-            <p>We also offer interactive brain games, a progress tracker, and achievement badges to keep learning engaging and motivating. Our content is specifically aligned with East African curricula while remaining globally relevant.</p>
+        <!-- 2: THE ECOSYSTEM -->
+        <div class="story-card">
+          <span class="story-eyebrow">The Ronny Mwenda Digital Ecosystem</span>
+          <h2>Four Live Sites, One Mission</h2>
+          <p>
+            Ronny has built and maintains a <strong>cohesive ecosystem of four websites</strong>, each serving
+            a distinct audience within Kenya's education and technology landscape. Every site is developed
+            solo using a clean <strong>HTML5 / CSS3 / JavaScript</strong> stack with
+            <strong>VS Code</strong>, <strong>GitHub</strong> for version control, and
+            <strong>Netlify CI/CD</strong> for automatic deployment. All share a consistent design language —
+            navy and bisque palette, structured typography, and mobile-first responsive layouts.
+          </p>
+          <div class="ecosystem-grid">
+            <a href="https://bestronny.netlify.app" target="_blank" rel="noopener" class="eco-card">
+              <div class="eco-badge">Flagship · Mathematics</div>
+              <div class="eco-name">Ronny Best Mathematics</div>
+              <div class="eco-url">bestronny.netlify.app</div>
+              <div class="eco-desc">13 free CBC-aligned Senior Secondary mathematics lesson pages — algebra through calculus and statistics — with 100+ worked examples, formula sheets, common-error guides, practice problems, and KCSE exam preparation. Aligned to KICD, TSC, and KNEC standards.</div>
+              <div class="eco-visit">Visit site →</div>
+            </a>
+            <a href="https://cbcbest.netlify.app" target="_blank" rel="noopener" class="eco-card">
+              <div class="eco-badge">CBC Hub · Education</div>
+              <div class="eco-name">CBC Best</div>
+              <div class="eco-url">cbcbest.netlify.app</div>
+              <div class="eco-desc">Kenya's most comprehensive Competency Based Curriculum resource. Covers the 2-6-3-3 structure, all three Senior Secondary pathways (STEM, Social Sciences, Arts &amp; Sports Science), all 13 KICD assessment tools, learning outcome writing models (VOC, ABCD, SMART, Mager), teacher requirements, past papers, downloadable resources, discussion forums, CBC FAQ, and CBC news. Full Maths &amp; CS hub included.</div>
+              <div class="eco-visit">Visit site →</div>
+            </a>
+            <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener" class="eco-card">
+              <div class="eco-badge">Portfolio · Developer</div>
+              <div class="eco-name">Ronny Mwenda Portfolio</div>
+              <div class="eco-url">ronnymwenda.netlify.app</div>
+              <div class="eco-desc">Professional developer portfolio showcasing Ronny's technical skills (HTML, CSS, JavaScript, SEO, Git/GitHub, Netlify), services (website development, maths tutoring, programming mentorship, SEO setup), and all four live projects. Available for hire for web projects across Kenya and remotely.</div>
+              <div class="eco-visit">Visit site →</div>
+            </a>
+            <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener" class="eco-card">
+              <div class="eco-badge">Games · Students</div>
+              <div class="eco-name">Ronny Game Hub</div>
+              <div class="eco-url">ronnygame.netlify.app</div>
+              <div class="eco-desc">An interactive browser-based games platform built for Kenyan students — clean design, smooth UX, and engaging educational games designed to make learning mathematics and logic fun. Curriculum-linked to CBC competencies including critical thinking and problem-solving.</div>
+              <div class="eco-visit">Visit site →</div>
+            </a>
+          </div>
         </div>
 
-        <div class="sc">
-            <div class="card-lbl">Our Commitment</div>
-            <h2>Always Free, Always Improving</h2>
-            <p>This platform will always be free. We are supported by responsible advertising that allows us to keep the lights on without ever charging students. Every lesson you read helps keep this resource alive for the next student who needs it.</p>
-            <p>We are constantly updating content, fixing errors, and adding new topics based on feedback from students and teachers. If you spot anything that could be improved, we always want to hear from you.</p>
+        <!-- 3: CBC ALIGNMENT -->
+        <div class="story-card">
+          <span class="story-eyebrow">CBC &amp; Curriculum Alignment</span>
+          <h2>Deeply Rooted in Kenya's CBC Framework</h2>
+          <p>
+            Ronny's work across both <strong>Ronny Best Mathematics</strong> and <strong>CBC Best</strong>
+            is not superficially labelled "CBC-aligned" — it is built from the ground up around the actual
+            KICD curriculum documents, TSC competency frameworks, and KNEC assessment structures that govern
+            Kenyan education.
+          </p>
+          <p>
+            On the mathematics side, all 13 lesson pages map directly to the <strong>Pure Mathematics</strong>
+            and <strong>Applied Mathematics</strong> strands of the Senior Secondary curriculum (Grades 10–12),
+            covering all three pathways. On the CBC Best side, the platform covers the full breadth of the
+            2-6-3-3 education structure — from Pre-Primary through to Senior Secondary — with dedicated
+            content on the <strong>7 Core Competencies</strong>, all <strong>13 KICD assessment tools</strong>,
+            four <strong>learning outcome writing models</strong>, Teacher Service Commission professional
+            standards, pathway-specific subject breakdowns, and downloadable resources including schemes of
+            work, lesson plans, and assessment rubrics.
+          </p>
+          <div class="cbc-detail-grid">
+            <div class="cbc-detail-card">
+              <div class="cdc-org">KICD</div>
+              <div class="cdc-title">Curriculum Standards</div>
+              <div class="cdc-desc">All maths topics and CBC resources mapped to KICD Senior Secondary Mathematics strands and CBC subject frameworks.</div>
+            </div>
+            <div class="cbc-detail-card">
+              <div class="cdc-org">TSC</div>
+              <div class="cdc-title">Teacher Standards</div>
+              <div class="cdc-desc">Content structured around TSC professional competency standards for formative assessment, learner-centred pedagogy, and ICT integration.</div>
+            </div>
+            <div class="cbc-detail-card">
+              <div class="cdc-org">KNEC</div>
+              <div class="cdc-title">Exam Preparation</div>
+              <div class="cdc-desc">Worked examples and practice problems mirror KCSE Paper 1 and Paper 2 format. Also covers KPSEA, KJSEA, and SSSA transitions.</div>
+            </div>
+            <div class="cbc-detail-card">
+              <div class="cdc-org">MoE Kenya</div>
+              <div class="cdc-title">All Three Pathways</div>
+              <div class="cdc-desc">Coverage across STEM, Social Sciences, and Arts &amp; Sports Science under the 2-6-3-3 structure approved by the Ministry of Education.</div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
 
-<!-- Values -->
-<section class="values-sec">
-    <div style="text-align:center;">
-        <div style="font-size:.73rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem;">What We Stand For</div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,2.6rem);color:var(--brown-dark);font-weight:700;">Our Core Values</h2>
-    </div>
-    <div class="vals-grid">
-        <div class="vc"><span class="vc-icon">🎓</span><h3>Free Education</h3><p>All lessons, examples, and practice problems are completely free — no subscriptions, no paywalls.</p></div>
-        <div class="vc"><span class="vc-icon">🔍</span><h3>Clarity First</h3><p>Every explanation is written to be understood, not just read. Complex ideas broken into simple logical steps.</p></div>
-        <div class="vc"><span class="vc-icon">🌍</span><h3>Accessibility</h3><p>Designed for students everywhere — whether you're in Nairobi, Lagos, London, or anywhere else in the world.</p></div>
-        <div class="vc"><span class="vc-icon">📈</span><h3>Real Progress</h3><p>We track your learning journey so you can see how far you've come and where to focus next.</p></div>
-    </div>
-</section>
+        <!-- 4: TECHNICAL SKILLS -->
+        <div class="story-card">
+          <span class="story-eyebrow">Technical Skills &amp; Stack</span>
+          <h2>Building with Real Tools</h2>
+          <p>
+            Ronny builds and maintains all his sites as a <strong>solo developer</strong>, handling
+            everything from design and content writing to code, SEO, deployment, and maintenance.
+            His stack is deliberate: static HTML, CSS, and JavaScript with no heavy frameworks —
+            keeping pages fast-loading and accessible even on mobile data connections common in Embu County
+            and across Kenya.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-block">
+              <div class="skill-block-title">Frontend</div>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">SEO</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-block-title">DevOps &amp; Tools</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Netlify CI/CD</span>
+                <span class="skill-tag">Firebase</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-block-title">Education</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Mathematics</span>
+                <span class="skill-tag">Computer Science</span>
+                <span class="skill-tag">CBC Curriculum</span>
+                <span class="skill-tag">KICD</span>
+                <span class="skill-tag">E-learning</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-block-title">Learning Now</div>
+              <div class="skill-tags">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Databases</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<footer>
-    <div class="fl">
-        <a href="about.html">About Us</a>|<a href="contact.html">Contact Us</a>|<a href="privacy.html">Privacy Policy</a>|<a href="terms.html">Terms of Use</a>|<a href="sitemap.html">Sitemap</a>
-    </div>
-    <p>&copy; 2025 Ronny Best Mathematics — Free Maths Education for Everyone &nbsp;|&nbsp; ronnymwenda89@gmail.com &nbsp;|&nbsp; +254-799188900</p>
-</footer>
+        <!-- 5: TEACHING PHILOSOPHY -->
+        <div class="story-card">
+          <span class="story-eyebrow">Teaching Philosophy</span>
+          <h2>How Every Lesson Is Designed</h2>
+          <p>
+            The mathematics lessons on this site are not written like textbooks. They are written as a
+            qualified teacher would explain something in a patient one-on-one session — with context,
+            common mistakes flagged, multiple solution approaches shown, and honest acknowledgement of
+            where students typically struggle. Mwalimu Ronny's design approach follows five principles:
+          </p>
+          <div class="phil-list">
+            <div class="phil-item">
+              <div class="phil-num">1</div>
+              <div class="phil-body">
+                <h4>Conceptual Before Procedural</h4>
+                <p>Before any formula, explain why it works. A student who understands where the quadratic
+                formula comes from will never forget it under exam pressure. This is the CBC
+                principle of <em>deep competency</em>, not surface memorisation.</p>
+              </div>
+            </div>
+            <div class="phil-item">
+              <div class="phil-num">2</div>
+              <div class="phil-body">
+                <h4>Multiple Representations</h4>
+                <p>Every concept appears as a formula, a numerical worked example, and — where possible —
+                a real-world context. This reflects the KICD requirement to apply competencies
+                across contexts, not merely demonstrate procedures.</p>
+              </div>
+            </div>
+            <div class="phil-item">
+              <div class="phil-num">3</div>
+              <div class="phil-body">
+                <h4>Errors Are Teaching Moments</h4>
+                <p>Every topic includes a Common Errors section showing the wrong approach alongside
+                the correct one. Understanding why something is wrong is often more instructive
+                than seeing why it is right.</p>
+              </div>
+            </div>
+            <div class="phil-item">
+              <div class="phil-num">4</div>
+              <div class="phil-body">
+                <h4>Scaffolded Difficulty</h4>
+                <p>Each lesson progresses from Foundational through Secondary to University level.
+                A Grade 10 student and a first-year university student can both use the same page
+                productively — just different sections of it.</p>
+              </div>
+            </div>
+            <div class="phil-item">
+              <div class="phil-num">5</div>
+              <div class="phil-body">
+                <h4>Exam-Authentic Format</h4>
+                <p>All worked examples mirror how KNEC presents questions in KCSE — with "Hence",
+                "Show that", multi-part questions, and marks allocated per step.
+                Students should never be surprised by exam question format.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- 6: FAQ -->
+        <div class="story-card">
+          <span class="story-eyebrow">Frequently Asked Questions</span>
+          <h2>About Mwalimu Ronny &amp; This Platform</h2>
+
+          <div class="faq-list" id="faqList" style="margin-top:.5rem;">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab1">
+                Who exactly is Mwalimu Ronny?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab1" hidden>
+                <p>Mwalimu Ronny Mwenda Best is a Mathematics and Computer Science teacher and frontend web developer from Embu County, Kenya. "Mwalimu" is a Swahili word meaning teacher — the title his students use for him. He is currently pursuing a Bachelor of Education (Science) at the University of Embu. Online he goes by "Ronny Best" across his mathematics platform, and "Ronny Mwenda" on his developer portfolio at <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">ronnymwenda.netlify.app</a>.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab2">
+                What is CBC Best and how does it relate to this site?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab2" hidden>
+                <p><a href="https://cbcbest.netlify.app" target="_blank" rel="noopener">CBC Best</a> is Ronny's companion site — Kenya's most comprehensive free resource for the Competency Based Curriculum. It covers the 2-6-3-3 structure, all three Senior Secondary pathways, all 13 KICD assessment tools, learning outcome writing models (VOC, ABCD, SMART, Mager), teacher professional standards, downloadable resources (schemes of work, lesson plans, rubrics), CBC forums, and a dedicated Mathematics &amp; Computer Science hub. This site (Ronny Best Mathematics) focuses specifically on the mathematics lessons — together the two sites form part of Ronny's four-site digital ecosystem serving Kenyan students, teachers, and parents.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab3">
+                Is all the content original — written by Ronny himself?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab3" hidden>
+                <p>Yes — every lesson, worked example, explanation, formula commentary, and CBC guide on both Ronny Best Mathematics and CBC Best is written by Mwalimu Ronny personally. No content is copied from textbooks or other websites. The worked examples are original compositions built specifically to develop understanding step by step. Ronny also builds and maintains all four sites solo — design, HTML/CSS/JS code, SEO, and content are all his own work.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab4">
+                Can teachers use materials from these sites in class?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab4" hidden>
+                <p>Absolutely — and it is strongly encouraged. The step-by-step worked examples make excellent classroom demonstration material. The formula sheets and common-error guides are useful for revision and consolidation lessons. On CBC Best, the assessment tool guides, learning outcome writing templates, and lesson plan resources are designed specifically with teachers in mind. Teachers who find gaps, errors, or topics they would like added are welcome to contact Mwalimu Ronny through the <a href="contact.html">Contact page</a> or the Ask Mwalimu feature.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab5">
+                Is Ronny available for hire for web projects or tutoring?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab5" hidden>
+                <p>Yes. Ronny offers professional services through his developer portfolio at <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">ronnymwenda.netlify.app</a>. Services include: custom responsive website development (HTML/CSS/JS), secondary and university-level mathematics tutoring (online and in-person), programming mentorship for beginners in HTML/CSS/JavaScript, and SEO and Google Search Console setup. Based in Embu County, available remotely across Kenya and East Africa. Contact: <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a> or <a href="https://wa.me/254799188900" target="_blank" rel="noopener">WhatsApp +254 799 188 900</a>.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="faq-ab6">
+                How is this platform funded if it is free?
+                <svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" id="faq-ab6" hidden>
+                <p>The platform is supported by Google AdSense advertising — contextual ads placed automatically by Google. No advertiser has any influence over the content or recommendations on this site. There are no sponsored lessons, paid placements, or affiliate links. Revenue from ads helps cover domain registration, Netlify hosting costs, and the time invested in building and maintaining the content. Every visit keeps the platform free for the next student.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /story-column -->
+    </div><!-- /about-layout -->
+
+    <!-- VALUES -->
+    <section class="values-section" aria-labelledby="values-h2">
+      <div class="values-inner">
+        <div class="section-header centered">
+          <span class="section-eyebrow">What Drives This Work</span>
+          <h2 id="values-h2">Core Values Across All Sites</h2>
+          <p class="section-sub">Six principles that guide every lesson on Ronny Best Mathematics, every guide on CBC Best, and every project Ronny builds.</p>
+        </div>
+        <div class="values-grid">
+          <div class="val-card"><span class="val-icon">🎓</span><h3>Free Education</h3><p>Every lesson, CBC guide, and resource across all four sites is completely free. No subscriptions, no paywalls, no account required — ever.</p></div>
+          <div class="val-card"><span class="val-icon">🔍</span><h3>Clarity First</h3><p>Every step of every solution is shown. Nothing is skipped with "it is obvious that…" — because if it were obvious, the student wouldn't be searching for help.</p></div>
+          <div class="val-card"><span class="val-icon">📘</span><h3>CBC Authenticity</h3><p>Content is genuinely mapped to KICD, TSC, and KNEC standards — not just labelled CBC. The CBC Best site is the proof: 13 assessment tools, 4 outcome models, 3 pathways, fully documented.</p></div>
+          <div class="val-card"><span class="val-icon">🌍</span><h3>Equal Access</h3><p>A student in a well-resourced Nairobi school and a student in a rural Embu County school deserve the same quality of instruction. These sites are built for both equally.</p></div>
+          <div class="val-card"><span class="val-icon">💻</span><h3>Kenyan-Built Tech</h3><p>Every line of code, every design decision, every piece of content is made in Embu County, Kenya — demonstrating that world-class digital education resources can be built right here.</p></div>
+          <div class="val-card"><span class="val-icon">🔄</span><h3>Continuous Improvement</h3><p>All four sites are actively maintained. Content is updated based on KNEC marking scheme changes, KICD curriculum revisions, and direct feedback from students and teachers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band" aria-labelledby="cta-about-h2">
+      <div class="cta-band-inner">
+        <h2 id="cta-about-h2">Explore the Full Ecosystem</h2>
+        <p>Start with free CBC-aligned mathematics lessons here, explore Kenya's most comprehensive CBC resource guide, or get in touch with Mwalimu Ronny directly.</p>
+        <div class="cta-btns">
+          <a href="main.html" class="btn-cta-primary">Browse All 13 Lessons</a>
+          <a href="https://cbcbest.netlify.app" target="_blank" rel="noopener" class="btn-cta-secondary">Explore CBC Best →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Related Sites</h4>
+          <ul>
+            <li><a href="https://cbcbest.netlify.app" target="_blank" rel="noopener">CBC Best</a></li>
+            <li><a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">Ronny's Portfolio</a></li>
+            <li><a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">Ronny Game Hub</a></li>
+            <li><a href="https://cbcbest.netlify.app/pathways" target="_blank" rel="noopener">CBC Pathways</a></li>
+            <li><a href="https://cbcbest.netlify.app/assessment-tools" target="_blank" rel="noopener">Assessment Tools</a></li>
+            <li><a href="https://cbcbest.netlify.app/learning-outcomes" target="_blank" rel="noopener">Learning Outcomes</a></li>
+            <li><a href="https://cbcbest.netlify.app/teacher-requirements" target="_blank" rel="noopener">Teacher Hub</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="main.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Written and maintained by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya. Part of the Ronny Mwenda digital ecosystem: <a href="https://bestronny.netlify.app" style="color:rgba(255,228,196,.4);">bestronny</a> · <a href="https://cbcbest.netlify.app" style="color:rgba(255,228,196,.4);">cbcbest</a> · <a href="https://ronnymwenda.netlify.app" style="color:rgba(255,228,196,.4);">ronnymwenda</a> · <a href="https://ronnygame.netlify.app" style="color:rgba(255,228,196,.4);">ronnygame</a></p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, step-by-step, CBC-aligned instruction.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

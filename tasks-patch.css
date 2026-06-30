@@ -1,0 +1,338 @@
+/* ═══════════════════════════════════════════════════════════════
+   tasks-patch.css — Generator section complete fix
+   Load AFTER tasks.css in <head>
+═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. White body for the generator section ── */
+#practice-generator .ps-body {
+  background: #ffffff;
+  padding: 1.5rem 1.6rem 1.8rem;
+}
+
+/* ── 2. All text inside generator body is dark ── */
+#practice-generator .ps-body .ps-intro,
+#practice-generator .ps-body > p {
+  color: #5a4e42;
+  font-size: .93rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ── 3. Label ── */
+#practice-generator .gen-label {
+  display: block;
+  color: #3a3028;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .5rem;
+}
+
+/* ── 4. HIDE the native <select> — replaced by custom dropdown ── */
+#topicSelect {
+  display: none !important;
+}
+
+/* ── 5. Custom dropdown container ── */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: .75rem 1rem;
+  background: #f4efe5;
+  border: 1.5px solid #d5cfc4;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .95rem;
+  color: #1a1612;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.custom-select-trigger:hover {
+  border-color: #c8832a;
+}
+
+.custom-select-trigger.open {
+  border-color: #c8832a;
+  box-shadow: 0 0 0 3px rgba(200,131,42,.18);
+  border-radius: 8px 8px 0 0;
+}
+
+.custom-select-arrow {
+  flex-shrink: 0;
+  transition: transform .2s;
+  color: #9a8a78;
+}
+
+.custom-select-trigger.open .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+/* ── 6. Dropdown list ── */
+.custom-select-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1.5px solid #c8832a;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: min(420px, 60vh);
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: 0 8px 24px rgba(10,22,40,.15);
+}
+
+.custom-select-dropdown.open {
+  display: block;
+}
+
+.custom-select-group-label {
+  padding: .6rem 1rem .35rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .69rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #ffffff;
+  background: #1a3560;
+  border-top: 1px solid #e8dfd0;
+  position: static; /* was sticky — caused stacked group labels to overlap while scrolling */
+}
+
+.custom-select-group-label:first-child {
+  border-top: none;
+}
+
+.custom-select-option {
+  padding: .65rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .92rem;
+  color: #1a1612;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+  border-left: 3px solid transparent;
+}
+
+.custom-select-option:hover {
+  background: #fff3e8;
+  border-left-color: #c8832a;
+  color: #0a1628;
+}
+
+.custom-select-option.selected {
+  background: #fff3e8;
+  border-left-color: #c8832a;
+  font-weight: 600;
+  color: #0a1628;
+}
+
+/* ── 7. Generate button ── */
+#generateTaskBtn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  background: #ffe4c4;
+  color: #0a1628;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: .78rem 1.6rem;
+  border: 2px solid #e8b87a;
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s, transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 16px rgba(200,131,42,.25);
+}
+
+#generateTaskBtn:hover {
+  background: #fff3e8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(200,131,42,.35);
+}
+
+/* ── 8. Generated problem box ── */
+#taskDisplay {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .97rem;
+  line-height: 1.85;
+  padding: 1rem 1.2rem;
+  background: #f4efe5;
+  border: 1px solid #d5cfc4;
+  border-left: 4px solid #1a3560;
+  border-radius: 8px;
+  margin-top: .9rem;
+  color: #1a1612;
+}
+
+#taskDisplay:empty { display: none; }
+
+/* ── 9. Answer label ── */
+#practice-generator .answer-label {
+  color: #3a3028 !important;
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: .4rem;
+}
+
+/* ── 10. Answer input ── */
+#answerInput {
+  padding: .68rem 1rem !important;
+  border: 1.5px solid #d5cfc4 !important;
+  background: #faf7f2 !important;
+  color: #1a1612 !important;
+  border-radius: 8px !important;
+}
+
+#answerInput::placeholder { color: #9a8a78 !important; }
+#answerInput:focus {
+  border-color: #c8832a !important;
+  box-shadow: 0 0 0 3px rgba(200,131,42,.15) !important;
+  background: #fff !important;
+  outline: none !important;
+}
+
+/* ── 11. Result ── */
+#resultDisplay { font-weight: 700; font-size: 1rem; padding: .5rem 0; }
+#resultDisplay.correct   { color: #1e6e36 !important; }
+#resultDisplay.incorrect { color: #b91c1c !important; }
+
+/* ── 12. Solution steps ── */
+#solutionSteps {
+  padding: 1.1rem 1.2rem;
+  background: #f4efe5;
+  border: 1px solid #d5cfc4;
+  border-left: 4px solid #c8832a;
+  border-radius: 8px;
+  margin-top: .8rem;
+  font-size: .9rem;
+  line-height: 1.8;
+  color: #1a1612;
+}
+
+#solutionSteps:empty { display: none; }
+#solutionSteps, #solutionSteps * { color: #1a1612; }
+
+#solutionSteps .steps-header {
+  color: #9a8a78 !important;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #e8dfd0;
+}
+
+#solutionSteps .solution-step {
+  display: flex;
+  gap: .75rem;
+  padding: .65rem .85rem;
+  background: #ffffff;
+  border-radius: 6px;
+  border-left: 3px solid #1a3560;
+  margin-bottom: .5rem;
+}
+
+#solutionSteps .step-num {
+  color: #c8832a !important;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 44px;
+  padding-top: 2px;
+}
+
+#solutionSteps .step-body {
+  color: #3a3028 !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .86rem;
+  line-height: 1.7;
+}
+
+#solutionSteps strong { color: #0f2040 !important; font-weight: 700; }
+
+#solutionSteps .rule-box {
+  padding: .5rem .9rem;
+  background: rgba(200,131,42,.07);
+  border-left: 3px solid #e8b87a;
+  border-radius: 0 4px 4px 0;
+  font-size: .84rem;
+  color: #7a5c00 !important;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+#solutionSteps .solution-note {
+  padding: .55rem .9rem;
+  background: rgba(200,131,42,.07);
+  border-left: 3px solid #e8b87a;
+  border-radius: 4px;
+  font-size: .86rem;
+  color: #5a4e42 !important;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+#solutionSteps .final-answer-block {
+  margin-top: .6rem;
+  padding: .7rem 1rem;
+  background: #e8f5ec;
+  border: 1.5px solid rgba(30,110,54,.35);
+  border-radius: 8px;
+  font-size: .92rem;
+  font-weight: 700;
+  color: #155228 !important;
+}
+
+/* ── 13. Free answer/steps (light bg sections) ── */
+#freeAnswer { color: #1a1612 !important; }
+#freeAnswer * { color: #1a1612 !important; }
+#freeAnswer .ans-label { color: #1a4d8c !important; }
+#freeAnswer .ans-value { color: #0f2040 !important; font-family: monospace; }
+
+#freeSteps { color: #1a1612 !important; }
+#freeSteps * { color: #3a3028 !important; }
+#freeSteps .steps-header { color: #1a3560 !important; border-bottom: 1px solid #e8dfd0; }
+#freeSteps .step-num { color: #c8832a !important; }
+#freeSteps .step-body { color: #5a4e42 !important; }
+#freeSteps strong { color: #0f2040 !important; }
+#freeSteps .rule-box { color: #7a5c00 !important; background: rgba(200,131,42,.06) !important; border-left-color: #e8b87a !important; }
+#freeSteps .solution-note { color: #5a4e42 !important; background: rgba(200,131,42,.06) !important; }
+#freeSteps .final-answer-block { color: #155228 !important; background: #e8f5ec !important; }
+
+/* ── 14. Mobile ── */
+@media (max-width: 600px) {
+  #practice-generator .generator-controls { flex-direction: column; }
+  #generateTaskBtn { width: 100%; justify-content: center; }
+}
+
+#practice-generator {
+  overflow: visible;
+}
+
+#practice-generator .ps-header-featured {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+#practice-generator .ps-body {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}

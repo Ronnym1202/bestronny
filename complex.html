@@ -1,215 +1,1403 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complex Numbers | Ronny Best Mathematics</title>
-  <meta name="description" content="From imaginary unit to complex analysis">
+  <title>Complex Numbers | Ronny Best Mathematics — CBC Senior Secondary Kenya</title>
+  <meta name="description" content="Master complex numbers with Mwalimu Ronny — imaginary unit, Argand diagrams, polar and exponential form, De Moivre's theorem, nth roots, and complex analysis. CBC-aligned for Kenyan Senior Secondary students.">
+  <meta name="keywords" content="complex numbers Kenya, imaginary numbers CBC, Argand diagram, polar form complex numbers, De Moivre's theorem, KCSE complex numbers, Senior Secondary mathematics Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/complex.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Complex Numbers | Ronny Best Mathematics">
+  <meta property="og:description" content="Comprehensive CBC-aligned complex numbers lesson — from imaginary unit to De Moivre's theorem. Free for Kenyan students.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/complex.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Complex Numbers — CBC Senior Secondary Mathematics",
+    "description": "A comprehensive, step-by-step lesson on complex numbers for Kenyan Senior Secondary students, covering the imaginary unit, arithmetic, Argand diagrams, polar form, De Moivre's theorem, and nth roots. Aligned to the KICD CBC curriculum.",
+    "url": "https://bestronny.netlify.app/complex.html",
+    "educationalLevel": "Senior Secondary",
+    "inLanguage": "en",
+    "keywords": "complex numbers, imaginary unit, Argand diagram, polar form, De Moivre's theorem, CBC Kenya, KICD, KCSE",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu"
+    },
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    },
+    "isAccessibleForFree": true
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">🌀</span>
-  <h1>Complex Numbers</h1>
-  <p class="hero-sub">From imaginary unit to complex analysis</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Complex Numbers</strong>
-</div>
+  <!-- ═══ SKIP LINK ═══ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Secondary</li>
-      <li><a href="#cplx-basics">Basics</a></li>
-      <li><a href="#cplx-ops">Operations</a></li>
-      <li><a href="#cplx-polar">Polar Form</a></li>
-      <li><a href="#cplx-demoivre">De Moivre's Theorem</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#cplx-roots">Roots & Powers</a></li>
-      <li><a href="#cplx-analysis">Complex Analysis</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="cplx-basics" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🌀</span><h2>Introduction to Complex Numbers</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <p>Complex numbers were invented to solve equations like x² + 1 = 0. They extend the real numbers.</p>
-          <div class="formula-box highlight">
-            i = √(−1) &nbsp;&nbsp; i² = −1 &nbsp;&nbsp; i³ = −i &nbsp;&nbsp; i⁴ = 1<br>
-            z = a + bi &nbsp; where a = Re(z), b = Im(z)<br>
-            Conjugate: z̄ = a − bi &nbsp;&nbsp; Modulus: |z| = √(a²+b²)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>z = 3 + 4i. Find |z| and z̄.</p>
-              <p class="soln">|z| = √(9+16) = 5. z̄ = 3 − 4i.</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — Solve x² + 4 = 0</div>
-              <p class="soln">x² = −4 → x = ±2i</p></div>
-          </div>
-        </div>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-    </section>
-
-    <section id="cplx-ops" class="topic-section">
-      <div class="section-header"><span class="sec-icon">➕</span><h2>Operations with Complex Numbers</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Add: (a+bi) + (c+di) = (a+c) + (b+d)i<br>
-            Multiply: (a+bi)(c+di) = (ac−bd) + (ad+bc)i &nbsp; (use i²=−1)<br>
-            Divide: (a+bi)/(c+di) = [(a+bi)(c−di)] / (c²+d²)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Multiply (2+3i)(1−2i)</div>
-              <p class="soln">= 2−4i+3i−6i² = 2−i+6 = 8−i</p></div>
-            <div class="example-card"><div class="example-label">Example — Divide (3+4i)/(1+2i)</div>
-              <p class="soln">Multiply by (1−2i): (3+4i)(1−2i)/5 = (3−6i+4i−8i²)/5 = (11−2i)/5 = 2.2 − 0.4i</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Argand Diagram</h3>
-          <p>Complex numbers are plotted on the Argand plane: real axis (horizontal) and imaginary axis (vertical). The modulus |z| is the distance from origin.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="cplx-polar" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🧭</span><h2>Polar & Exponential Form</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Polar: z = r(cos θ + i sin θ) = r cis θ<br>
-            r = |z| = √(a²+b²) &nbsp;&nbsp; θ = arg(z) = arctan(b/a) (with correct quadrant)<br>
-            Euler's formula: e^(iθ) = cos θ + i sin θ<br>
-            Exponential: z = re^(iθ)<br>
-            Multiplication: r₁e^(iθ₁) × r₂e^(iθ₂) = r₁r₂ e^(i(θ₁+θ₂))
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Convert 1+i to polar</div>
-              <p class="soln">r = √2, θ = π/4. z = √2 e^(iπ/4) = √2(cos45°+i sin45°)</p></div>
-            <div class="example-card"><div class="example-label">Example — Euler's identity</div>
-              <p>Show e^(iπ) + 1 = 0</p>
-              <p class="soln">e^(iπ) = cos π + i sin π = −1 + 0 = −1. So e^(iπ) + 1 = 0. ✓</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cplx-demoivre" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔮</span><h2>De Moivre's Theorem</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">(cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — (1+i)⁸</div>
-              <p class="soln">1+i = √2 e^(iπ/4). (1+i)⁸ = (√2)⁸ e^(i2π) = 16 × 1 = 16</p></div>
-            <div class="example-card"><div class="example-label">Example — Express cos3θ in terms of cosθ</div>
-              <p class="soln">cos3θ + i sin3θ = (cosθ+i sinθ)³ = cos³θ + 3cos²θ(i sinθ) + 3cosθ(i sinθ)² + (i sinθ)³. Real part: cos3θ = 4cos³θ − 3cosθ</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cplx-roots" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🌱</span><h2>nth Roots of Complex Numbers</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            nth roots of re^(iθ): &nbsp; z_k = r^(1/n) e^(i(θ+2πk)/n) &nbsp; for k = 0, 1, ..., n−1<br>
-            The n roots are equally spaced on a circle of radius r^(1/n)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Cube roots of unity (z³=1)</div>
-              <p class="soln">r=1, θ=0. z_k = e^(2πki/3), k=0,1,2. → 1, e^(2πi/3)=(−½+i√3/2), e^(4πi/3)=(−½−i√3/2)</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cplx-analysis" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔬</span><h2>Introduction to Complex Analysis</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Analytic Functions — Cauchy-Riemann Equations</h3>
-          <div class="formula-box highlight">
-            f(z) = u(x,y) + iv(x,y) is analytic iff:<br>
-            ∂u/∂x = ∂v/∂y &nbsp;&nbsp;&nbsp; ∂u/∂y = −∂v/∂x
-          </div>
-        </div>
-        <div class="sub"><h3>Cauchy's Integral Theorem & Formula</h3>
-          <div class="formula-box">
-            Cauchy: ∮_C f(z) dz = 0 for analytic f inside C<br>
-            Cauchy's formula: f(z₀) = (1/2πi) ∮_C f(z)/(z−z₀) dz<br>
-            Residue theorem: ∮_C f(z) dz = 2πi Σ Res(f, z_k)
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="limits.html" class="topic-nav-btn prev">← Limits</a>
-      <a href="sequences.html" class="topic-nav-btn next">Sequences & Series →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem" aria-current="page">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <div class="topic-hero" role="banner" aria-labelledby="topic-title">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>i</span><span>e^(iπ)</span><span>|z|</span><span>arg(z)</span>
+    </div>
+    <div class="topic-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true"> › </span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true"> › </span>
+        <span aria-current="page">Complex Numbers</span>
+      </nav>
+      <div class="topic-hero-icon" aria-hidden="true">𝑖</div>
+      <h1 id="topic-title">Complex Numbers</h1>
+      <p class="topic-hero-sub">
+        From the imaginary unit <strong>i = √(−1)</strong> through arithmetic, Argand diagrams, polar and
+        exponential form, De Moivre's theorem, and the geometry of the complex plane. Fully aligned to
+        the Kenya CBC Senior Secondary Pure Mathematics strand.
+      </p>
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Pure Mathematics</span>
+        <span class="topic-badge badge-level">Senior Secondary</span>
+        <span class="topic-badge badge-cbc">CBC · KICD Aligned</span>
+        <span class="topic-badge badge-exam">KCSE Examinable</span>
+      </div>
+      <div class="topic-stats-row">
+        <div class="ts-item"><strong>6</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>18</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>12</strong><span>Common Errors</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>Advanced</strong><span>Difficulty</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout" id="main-content">
+
+    <!-- ── TOC SIDEBAR ── -->
+    <aside class="toc-sidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <span class="toc-title">Contents</span>
+        </div>
+        <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+        <ul class="toc-list" role="list">
+          <li class="toc-group-label">Foundations</li>
+          <li><a class="toc-link" href="#cplx-intro">1 · Why Complex Numbers?</a></li>
+          <li><a class="toc-link" href="#cplx-basics">2 · The Imaginary Unit &amp; Standard Form</a></li>
+          <li class="toc-group-label">Core Operations</li>
+          <li><a class="toc-link" href="#cplx-ops">3 · Arithmetic of Complex Numbers</a></li>
+          <li><a class="toc-link" href="#cplx-argand">4 · Argand Diagram &amp; Geometry</a></li>
+          <li class="toc-group-label">Advanced Form</li>
+          <li><a class="toc-link" href="#cplx-polar">5 · Polar &amp; Exponential Form</a></li>
+          <li><a class="toc-link" href="#cplx-demoivre">6 · De Moivre's Theorem</a></li>
+          <li class="toc-group-label">Extension</li>
+          <li><a class="toc-link" href="#cplx-roots">7 · nth Roots of Complex Numbers</a></li>
+          <li><a class="toc-link" href="#cplx-errors">8 · Common Errors to Avoid</a></li>
+          <li><a class="toc-link" href="#cplx-formulasheet">9 · Formula Sheet</a></li>
+        </ul>
+        <div class="toc-actions">
+          <a href="tasks.html" class="toc-practice-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Practice Problems
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── LESSON CONTENT ── -->
+    <main class="topic-content" id="lessonContent">
+
+      <!-- CBC Context Banner -->
+      <div class="cbc-context-banner" id="cbc-context" role="note" aria-label="CBC curriculum context">
+        <span class="ccb-icon" aria-hidden="true">📘</span>
+        <div class="ccb-text">
+          <strong>CBC Curriculum Context:</strong> Complex Numbers appear in the <strong>Pure Mathematics</strong>
+          strand of the Kenya Senior Secondary curriculum (Grades 10–12), under the KICD framework approved
+          by the Ministry of Education. The topic is examinable in both KCSE Paper 1 and Paper 2 under
+          the STEM pathway and is a prerequisite for university-level engineering, physics, and mathematics.
+          All content on this page is structured to meet the KICD learning outcomes for this topic.
+        </div>
+      </div>
+
+      <!-- ══ SECTION 1 — WHY COMPLEX NUMBERS ══ -->
+      <section class="lesson-section" id="cplx-intro" aria-labelledby="h-intro">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">?</div>
+          <div>
+            <span class="ls-eyebrow">Section 1 · Motivation</span>
+            <h2 id="h-intro">Why Do Complex Numbers Exist?</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Senior Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Mathematics evolved to solve increasingly difficult problems. Real numbers cannot solve every
+              equation — when we try to find the square root of a negative number, real arithmetic fails.
+              Complex numbers were invented specifically to close this gap, and they turned out to describe
+              the physical world more accurately than real numbers alone ever could.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">The Problem That Real Numbers Cannot Solve</h3>
+          <p class="body-para">
+            Consider the equation <strong>x² = −1</strong>. No real number satisfies this: squaring any
+            positive number gives a positive result; squaring any negative number also gives a positive
+            result; and 0² = 0. There is no real x for which x² = −1. For centuries, mathematicians
+            dismissed such equations as having "no solution" and moved on.
+          </p>
+          <p class="body-para">
+            In the 16th century, Italian mathematicians Niccolò Tartaglia, Gerolamo Cardano, and later
+            Rafael Bombelli discovered that even when solving <em>real</em> cubic equations, intermediate
+            steps required the square root of negative numbers — and the final answer was always a real
+            number. The imaginary quantities cancelled out at the end. This forced mathematicians to take
+            them seriously. Cardano called them "sophistic" (fictitious), but Bombelli showed they obeyed
+            consistent rules and could be manipulated algebraically.
+          </p>
+          <p class="body-para">
+            By the 18th century, Euler introduced the notation <strong>i = √(−1)</strong>, and Gauss gave
+            complex numbers their modern geometric interpretation. Today, complex numbers are indispensable
+            in electrical engineering (alternating current analysis), quantum mechanics (wave functions),
+            fluid dynamics, signal processing, and control systems.
+          </p>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>CBC Connection:</strong> The KICD curriculum frames complex numbers as an extension
+              of the real number system — a natural progression from real numbers studied in earlier grades.
+              Understanding <em>why</em> we extend the number system is a core competency under CBC's
+              emphasis on mathematical reasoning, not just computation.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 2 — THE IMAGINARY UNIT ══ -->
+      <section class="lesson-section" id="cplx-basics" aria-labelledby="h-basics">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">𝑖</div>
+          <div>
+            <span class="ls-eyebrow">Section 2 · Foundations</span>
+            <h2 id="h-basics">The Imaginary Unit &amp; Standard Form</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Senior Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              We define a new number <strong>i</strong>, called the <em>imaginary unit</em>, with the
+              property that <strong>i² = −1</strong>. From this single definition, an entire number system
+              is built.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Definitions</h3>
+          <div class="formula-block">
+            <div class="fb-label">Core Definitions</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Imaginary unit</span>
+                <span class="fb-eq">i = √(−1) &nbsp;⟹&nbsp; i² = −1</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standard form</span>
+                <span class="fb-eq">z = a + bi &nbsp; where a, b ∈ ℝ</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Real part</span>
+                <span class="fb-eq">Re(z) = a</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Imaginary part</span>
+                <span class="fb-eq">Im(z) = b &nbsp; (note: b is real, not bi)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Conjugate</span>
+                <span class="fb-eq">z̄ = a − bi</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Modulus (magnitude)</span>
+                <span class="fb-eq">|z| = √(a² + b²) &nbsp; (always ≥ 0)</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">The Cyclic Powers of i</h3>
+          <p class="body-para">
+            A crucial pattern: successive powers of i repeat with a cycle of 4. You must memorise this
+            cycle, as it is tested directly in KCSE examinations.
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Powers of i — Cycle of 4</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">i¹</span><span class="fb-eq">= i</span></div>
+              <div class="fb-row"><span class="fb-name">i²</span><span class="fb-eq">= −1</span></div>
+              <div class="fb-row"><span class="fb-name">i³</span><span class="fb-eq">= i² × i = −i</span></div>
+              <div class="fb-row"><span class="fb-name">i⁴</span><span class="fb-eq">= i² × i² = (−1)(−1) = 1</span></div>
+              <div class="fb-row"><span class="fb-name">i⁵</span><span class="fb-eq">= i⁴ × i = i &nbsp; (cycle repeats)</span></div>
+              <div class="fb-row"><span class="fb-name">iⁿ</span><span class="fb-eq">= i^(n mod 4) &nbsp; — divide n by 4 and use the remainder</span></div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>Critical distinction:</strong> The <em>imaginary part</em> of z = 3 + 4i is
+              <em>4</em>, <strong>not 4i</strong>. Im(z) is always a real number — the coefficient
+              of i. This is a common source of errors in examinations.
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Worked Examples — Imaginary Unit</h3>
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 2</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 1</span>
+                Simplify i²³
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Step 1</span>
+                  <div>Divide the exponent by 4 to find the remainder: 23 ÷ 4 = 5 remainder <strong>3</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 2</span>
+                  <div>So i²³ = i³ = <strong>−i</strong> (using the cycle: i¹=i, i²=−1, i³=−i, i⁴=1)</div>
+                </div>
+              </div>
+              <div class="we-answer">i²³ = −i</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 2</span>
+                If z = 5 − 3i, state Re(z), Im(z), z̄, and |z|.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Identify</span>
+                  <div>z = 5 − 3i is in standard form a + bi with <strong>a = 5</strong> and <strong>b = −3</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Parts</span>
+                  <div>Re(z) = <strong>5</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Im(z) = <strong>−3</strong> (not −3i)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Conjugate</span>
+                  <div>z̄ = 5 − (−3)i = <strong>5 + 3i</strong> (change only the sign of the imaginary part)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Modulus</span>
+                  <div>|z| = √(5² + (−3)²) = √(25 + 9) = √34 ≈ <strong>5.83</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">Re(z) = 5 · Im(z) = −3 · z̄ = 5 + 3i · |z| = √34</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 3</span>
+                Solve x² + 9 = 0 over the complex numbers.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Rearrange</span>
+                  <div>x² = −9</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Square root</span>
+                  <div>x = ±√(−9) = ±√(9 × −1) = ±3√(−1) = <strong>±3i</strong></div>
+                </div>
+                <div class="we-step check-step">
+                  <span class="step-n">Check</span>
+                  <div>(3i)² = 9i² = 9(−1) = −9 ✓ &nbsp;&nbsp; (−3i)² = 9i² = −9 ✓</div>
+                </div>
+              </div>
+              <div class="we-answer">x = 3i  or  x = −3i</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 3 — ARITHMETIC ══ -->
+      <section class="lesson-section" id="cplx-ops" aria-labelledby="h-ops">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">±</div>
+          <div>
+            <span class="ls-eyebrow">Section 3 · Core Operations</span>
+            <h2 id="h-ops">Arithmetic of Complex Numbers</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Senior Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Complex numbers obey the same laws of algebra as real numbers — commutativity, associativity,
+              distributivity — with one extra rule: whenever i² appears, replace it with −1. This single
+              substitution is the key to all complex arithmetic.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Rules for the Four Operations</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Let z₁ = a + bi and z₂ = c + di</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Addition</span>
+                <span class="fb-eq">z₁ + z₂ = (a + c) + (b + d)i &nbsp; — add real to real, imaginary to imaginary</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Subtraction</span>
+                <span class="fb-eq">z₁ − z₂ = (a − c) + (b − d)i</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Multiplication</span>
+                <span class="fb-eq">z₁ × z₂ = (ac − bd) + (ad + bc)i &nbsp; — expand then replace i² = −1</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Division</span>
+                <span class="fb-eq">z₁ ÷ z₂ = (z₁ × z̄₂) / (c² + d²) &nbsp; — multiply top and bottom by the conjugate of z₂</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Useful identity</span>
+                <span class="fb-eq">z × z̄ = a² + b² = |z|² &nbsp; (always a positive real number)</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="body-para">
+            <strong>Why multiply by the conjugate when dividing?</strong> The denominator c + di is complex.
+            Multiplying both numerator and denominator by c − di turns the denominator into (c + di)(c − di)
+            = c² + d² — a real number — making the result expressible in standard form a + bi.
+          </p>
+
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">✓ Multiplication: FOIL, then replace i² = −1</div>
+              <div class="mt-desc">(a + bi)(c + di) = ac + adi + bci + bdi² = (ac − bd) + (ad + bc)i</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">✓ Division: Multiply by the conjugate</div>
+              <div class="mt-desc">Conjugate of (c + di) is (c − di). The denominator becomes c² + d².</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Worked Examples — Arithmetic</h3>
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 3</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 4</span>
+                Given z₁ = 4 + 3i and z₂ = 1 − 2i, find z₁ + z₂ and z₁ − z₂.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Add</span>
+                  <div>z₁ + z₂ = (4 + 1) + (3 + (−2))i = <strong>5 + i</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Subtract</span>
+                  <div>z₁ − z₂ = (4 − 1) + (3 − (−2))i = 3 + 5i = <strong>3 + 5i</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">z₁ + z₂ = 5 + i &nbsp;&nbsp;|&nbsp;&nbsp; z₁ − z₂ = 3 + 5i</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 5</span>
+                Multiply (2 + 3i)(1 − 4i).
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Expand</span>
+                  <div>= 2(1) + 2(−4i) + 3i(1) + 3i(−4i)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Collect</span>
+                  <div>= 2 − 8i + 3i − 12i²</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Replace</span>
+                  <div>Replace i² = −1: = 2 − 5i − 12(−1) = 2 + 12 − 5i = <strong>14 − 5i</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">(2 + 3i)(1 − 4i) = 14 − 5i</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 6</span>
+                Divide (3 + 4i) ÷ (1 + 2i). Give the answer in standard form.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Conjugate</span>
+                  <div>The conjugate of the denominator (1 + 2i) is <strong>(1 − 2i)</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Multiply</span>
+                  <div>Numerator: (3 + 4i)(1 − 2i) = 3 − 6i + 4i − 8i² = 3 − 2i + 8 = <strong>11 − 2i</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Denominator</span>
+                  <div>(1 + 2i)(1 − 2i) = 1² + 2² = <strong>5</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Result</span>
+                  <div>(3 + 4i) ÷ (1 + 2i) = (11 − 2i) / 5 = 11/5 − (2/5)i = <strong>2.2 − 0.4i</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">(3 + 4i) ÷ (1 + 2i) = 2.2 − 0.4i</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 7</span>
+                Show that z × z̄ = |z|² for z = 3 − 5i.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Conjugate</span>
+                  <div>z = 3 − 5i &nbsp;⟹&nbsp; z̄ = 3 + 5i</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Product</span>
+                  <div>z × z̄ = (3 − 5i)(3 + 5i) = 9 + 15i − 15i − 25i² = 9 + 25 = <strong>34</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Modulus²</span>
+                  <div>|z|² = (√(9 + 25))² = 34 &nbsp; ✓ &nbsp; The identity holds.</div>
+                </div>
+              </div>
+              <div class="we-answer">z × z̄ = 34 = |z|²  ✓</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 4 — ARGAND DIAGRAM ══ -->
+      <section class="lesson-section" id="cplx-argand" aria-labelledby="h-argand">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⊕</div>
+          <div>
+            <span class="ls-eyebrow">Section 4 · Geometry</span>
+            <h2 id="h-argand">The Argand Diagram</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Senior Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Jean-Robert Argand (1806) showed that complex numbers can be plotted on a plane — the
+              <strong>complex plane</strong> or <strong>Argand diagram</strong> — with real parts on the
+              horizontal axis and imaginary parts on the vertical axis. This geometric view transforms
+              algebraic operations into visual, intuitive ones.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">The Complex Plane</h3>
+          <p class="body-para">
+            Every complex number z = a + bi is a <strong>point</strong> (a, b) in the plane, or equivalently
+            a <strong>position vector</strong> from the origin to that point. The horizontal axis is called
+            the <strong>real axis</strong> (Re), and the vertical axis is the <strong>imaginary axis</strong> (Im).
+          </p>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Geometric Interpretations</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Point representation</span>
+                <span class="fb-eq">z = a + bi &nbsp;↔&nbsp; point (a, b) in the plane</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Modulus = distance</span>
+                <span class="fb-eq">|z| = distance from origin to z = √(a² + b²)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Argument = angle</span>
+                <span class="fb-eq">arg(z) = θ = angle from positive real axis (measured anticlockwise)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Conjugate reflection</span>
+                <span class="fb-eq">z̄ = reflection of z in the real axis</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Addition = vector sum</span>
+                <span class="fb-eq">z₁ + z₂ = parallelogram law of vector addition</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Multiplication by i</span>
+                <span class="fb-eq">iz = rotation of z by 90° anticlockwise</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">📐</span>
+            <div>
+              <strong>Argument conventions:</strong> The argument θ is typically given in radians and
+              expressed in the range <strong>−π &lt; θ ≤ π</strong> (principal argument). When computing
+              arg(z) = arctan(b/a), you must use the correct quadrant — do not simply evaluate arctan and
+              accept the calculator's answer without checking which quadrant the point (a, b) lies in.
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Computing the Argument — Quadrant Rules</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">arg(z) = θ based on quadrant of (a, b)</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Q1: a &gt; 0, b &gt; 0</span>
+                <span class="fb-eq">θ = arctan(b/a) &nbsp; (positive, in (0, π/2))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Q2: a &lt; 0, b &gt; 0</span>
+                <span class="fb-eq">θ = π − arctan(|b/a|) &nbsp; (in (π/2, π))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Q3: a &lt; 0, b &lt; 0</span>
+                <span class="fb-eq">θ = −π + arctan(|b/a|) &nbsp; (in (−π, −π/2))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Q4: a &gt; 0, b &lt; 0</span>
+                <span class="fb-eq">θ = −arctan(|b/a|) &nbsp; (in (−π/2, 0))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">On axes: a=0, b&gt;0</span>
+                <span class="fb-eq">θ = π/2 &nbsp;&nbsp; | &nbsp;&nbsp; a=0, b&lt;0: θ = −π/2</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Worked Examples — Argand Diagram</h3>
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 4</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 8</span>
+                Find the modulus and argument of z = −1 + √3 i.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Identify</span>
+                  <div>a = −1, b = √3. &nbsp; Point is in <strong>Quadrant 2</strong> (negative real, positive imaginary)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Modulus</span>
+                  <div>|z| = √(a² + b²) = √(1 + 3) = √4 = <strong>2</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Basic angle</span>
+                  <div>arctan(|b/a|) = arctan(√3/1) = arctan(√3) = π/3 (i.e. 60°)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Quadrant 2</span>
+                  <div>θ = π − π/3 = <strong>2π/3</strong> (i.e. 120°)</div>
+                </div>
+              </div>
+              <div class="we-answer">|z| = 2 &nbsp;&nbsp;|&nbsp;&nbsp; arg(z) = 2π/3 (or 120°)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 9</span>
+                Find the modulus and argument of z = 3 − 3i.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Identify</span>
+                  <div>a = 3, b = −3. &nbsp; Point is in <strong>Quadrant 4</strong> (positive real, negative imaginary)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Modulus</span>
+                  <div>|z| = √(9 + 9) = √18 = 3√2</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Argument</span>
+                  <div>arctan(|−3/3|) = arctan(1) = π/4. &nbsp; Q4 ⟹ θ = −π/4 (i.e. −45°)</div>
+                </div>
+              </div>
+              <div class="we-answer">|z| = 3√2 &nbsp;&nbsp;|&nbsp;&nbsp; arg(z) = −π/4 (or −45°)</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 5 — POLAR FORM ══ -->
+      <section class="lesson-section" id="cplx-polar" aria-labelledby="h-polar">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">r∠</div>
+          <div>
+            <span class="ls-eyebrow">Section 5 · Advanced Form</span>
+            <h2 id="h-polar">Polar Form &amp; Euler's Formula</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Standard form z = a + bi expresses a complex number in terms of its rectangular coordinates.
+              Polar form expresses the same number in terms of its <strong>distance from the origin</strong>
+              (modulus r) and its <strong>angle from the positive real axis</strong> (argument θ). For
+              multiplication, division, and powers, polar form is far more efficient.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Polar &amp; Exponential Form</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Polar form</span>
+                <span class="fb-eq">z = r(cos θ + i sin θ) &nbsp; abbreviated as &nbsp; z = r cis θ</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Parameters</span>
+                <span class="fb-eq">r = |z| = √(a²+b²) &nbsp;&nbsp;&nbsp; θ = arg(z)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Converting: polar → rectangular</span>
+                <span class="fb-eq">a = r cos θ &nbsp;&nbsp; b = r sin θ</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Euler's formula</span>
+                <span class="fb-eq">e^(iθ) = cos θ + i sin θ &nbsp; (Leonhard Euler, 1748)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Exponential form</span>
+                <span class="fb-eq">z = r e^(iθ)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Multiplication in polar</span>
+                <span class="fb-eq">z₁z₂ = r₁r₂ cis(θ₁ + θ₂) &nbsp; — multiply moduli, add arguments</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Division in polar</span>
+                <span class="fb-eq">z₁/z₂ = (r₁/r₂) cis(θ₁ − θ₂) &nbsp; — divide moduli, subtract arguments</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">✨</span>
+            <div>
+              <strong>Euler's Identity</strong> — considered the most beautiful equation in mathematics:
+              <br><br>
+              <strong>e^(iπ) + 1 = 0</strong>
+              <br><br>
+              This single equation connects five of the most fundamental constants in mathematics:
+              e (Euler's number), i (imaginary unit), π (pi), 1 (the multiplicative identity),
+              and 0 (the additive identity). It follows directly from Euler's formula:
+              e^(iπ) = cos π + i sin π = −1 + 0 = −1, so e^(iπ) + 1 = 0.
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Worked Examples — Polar Form</h3>
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 5</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 10</span>
+                Convert z = 1 + √3 i to polar form and exponential form.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Modulus</span>
+                  <div>r = |z| = √(1² + (√3)²) = √(1 + 3) = √4 = <strong>2</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Argument</span>
+                  <div>a = 1 &gt; 0, b = √3 &gt; 0 &nbsp;→&nbsp; Quadrant 1. &nbsp; θ = arctan(√3/1) = arctan(√3) = <strong>π/3</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Polar form</span>
+                  <div>z = 2(cos π/3 + i sin π/3) = <strong>2 cis(π/3)</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Exponential</span>
+                  <div>z = <strong>2e^(iπ/3)</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">z = 2 cis(π/3) = 2e^(iπ/3)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 11</span>
+                If z₁ = 3 cis(π/4) and z₂ = 2 cis(π/6), find z₁z₂ and z₁/z₂ in polar form.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Multiply</span>
+                  <div>z₁z₂ = (3 × 2) cis(π/4 + π/6) = 6 cis(3π/12 + 2π/12) = <strong>6 cis(5π/12)</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Divide</span>
+                  <div>z₁/z₂ = (3/2) cis(π/4 − π/6) = (3/2) cis(3π/12 − 2π/12) = <strong>(3/2) cis(π/12)</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">z₁z₂ = 6 cis(5π/12) &nbsp;&nbsp;|&nbsp;&nbsp; z₁/z₂ = (3/2) cis(π/12)</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 6 — DE MOIVRE'S THEOREM ══ -->
+      <section class="lesson-section" id="cplx-demoivre" aria-labelledby="h-demoivre">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">zⁿ</div>
+          <div>
+            <span class="ls-eyebrow">Section 6 · Advanced</span>
+            <h2 id="h-demoivre">De Moivre's Theorem</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Abraham de Moivre (1730) discovered a powerful theorem that makes computing powers and roots
+              of complex numbers straightforward. In rectangular form, raising z = a + bi to the 8th power
+              would require 7 multiplications. In polar form, it takes one step.
+            </p>
+          </div>
+
+          <div class="formula-block">
+            <div class="fb-label">De Moivre's Theorem — for all integer and rational n</div>
+            <div class="fb-math highlight-formula">
+              [r(cos θ + i sin θ)]ⁿ = rⁿ(cos nθ + i sin nθ)
+            </div>
+          </div>
+
+          <p class="body-para">
+            In words: <strong>raise the modulus to the power n</strong>, and <strong>multiply the argument by n</strong>.
+            This applies for all integer values of n (positive, negative, and zero) and can be extended to
+            rational values of n for finding roots.
+          </p>
+
+          <h3 class="sub-heading">Applications of De Moivre's Theorem</h3>
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">Application 1: Powers of complex numbers</div>
+              <div class="mt-desc">Convert to polar form, apply the theorem, convert back if needed.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Application 2: Multiple-angle identities</div>
+              <div class="mt-desc">Expand (cos θ + i sin θ)ⁿ by binomial theorem and equate real/imaginary parts to express cos(nθ) and sin(nθ) in terms of powers of cos θ and sin θ.</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Worked Examples — De Moivre's Theorem</h3>
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 6</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 12</span>
+                Compute (1 + i)⁸ using De Moivre's theorem.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Polar form</span>
+                  <div>1 + i: &nbsp; r = √(1+1) = √2 &nbsp;,&nbsp; θ = arctan(1/1) = π/4</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Write</span>
+                  <div>1 + i = √2 · (cos π/4 + i sin π/4) = √2 · cis(π/4)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Apply</span>
+                  <div>(1+i)⁸ = (√2)⁸ · cis(8 × π/4) = 2⁴ · cis(2π)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Simplify</span>
+                  <div>cis(2π) = cos 2π + i sin 2π = 1 + 0 = 1. &nbsp; So (1+i)⁸ = 16 × 1 = <strong>16</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">(1 + i)⁸ = 16</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 13</span>
+                Express cos 3θ in terms of cos θ only using De Moivre's theorem.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Setup</span>
+                  <div>By De Moivre: cos 3θ + i sin 3θ = (cos θ + i sin θ)³</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Expand</span>
+                  <div>Let c = cos θ, s = sin θ. &nbsp; (c + is)³ = c³ + 3c²(is) + 3c(is)² + (is)³</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Simplify</span>
+                  <div>= c³ + 3ic²s + 3c(i²s²) + i³s³ = c³ + 3ic²s − 3cs² − is³</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Collect</span>
+                  <div>Real part: cos 3θ = c³ − 3cs² = cos³θ − 3cosθ sin²θ</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Use identity</span>
+                  <div>Replace sin²θ = 1 − cos²θ: &nbsp; cos 3θ = cos³θ − 3cosθ(1 − cos²θ) = 4cos³θ − 3cosθ</div>
+                </div>
+              </div>
+              <div class="we-answer">cos 3θ = 4cos³θ − 3cos θ</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 14</span>
+                Find (√3 − i)⁶ in standard form a + bi.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Polar</span>
+                  <div>a = √3, b = −1 &nbsp;→&nbsp; r = √(3+1) = 2. &nbsp; Q4: θ = −arctan(1/√3) = −π/6</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Apply</span>
+                  <div>(√3−i)⁶ = 2⁶ · cis(6 × −π/6) = 64 · cis(−π)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Convert</span>
+                  <div>cis(−π) = cos(−π) + i sin(−π) = −1 + 0 = −1</div>
+                </div>
+              </div>
+              <div class="we-answer">(√3 − i)⁶ = 64 × (−1) = −64</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 7 — NTH ROOTS ══ -->
+      <section class="lesson-section" id="cplx-roots" aria-labelledby="h-roots">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">ⁿ√</div>
+          <div>
+            <span class="ls-eyebrow">Section 7 · Extension</span>
+            <h2 id="h-roots">nth Roots of Complex Numbers</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Every non-zero complex number has exactly <strong>n distinct nth roots</strong>. These roots
+              are equally spaced around a circle of radius r^(1/n) in the complex plane, forming a
+              regular n-sided polygon. This is one of the most beautiful results in complex number theory.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">nth Roots Formula</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">General formula</span>
+                <span class="fb-eq">z_k = r^(1/n) · cis((θ + 2πk)/n) &nbsp; for k = 0, 1, 2, …, n−1</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Number of roots</span>
+                <span class="fb-eq">Exactly n distinct roots</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Modulus of each root</span>
+                <span class="fb-eq">|z_k| = r^(1/n) &nbsp; (all roots have the same modulus)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Spacing between roots</span>
+                <span class="fb-eq">Angular gap = 2π/n radians = 360°/n</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Roots of Unity</h3>
+          <p class="body-para">
+            The <strong>nth roots of unity</strong> are the solutions to zⁿ = 1. These are particularly
+            important in higher mathematics. For zⁿ = 1: r = 1, θ = 0, so
+            z_k = cis(2πk/n) for k = 0, 1, …, n−1.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples · Section 7</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 15</span>
+                Find all cube roots of unity (solve z³ = 1).
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Setup</span>
+                  <div>z³ = 1. In polar form: r = 1, θ = 0. Apply the roots formula with n = 3.</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">k = 0</span>
+                  <div>z₀ = 1^(1/3) · cis((0 + 0)/3) = cis(0) = <strong>1</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">k = 1</span>
+                  <div>z₁ = cis(2π/3) = cos 120° + i sin 120° = <strong>−½ + i(√3/2)</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">k = 2</span>
+                  <div>z₂ = cis(4π/3) = cos 240° + i sin 240° = <strong>−½ − i(√3/2)</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Geometry</span>
+                  <div>The three roots form an equilateral triangle inscribed in the unit circle (radius 1), equally spaced at 120° intervals.</div>
+                </div>
+              </div>
+              <div class="we-answer">z = 1, &nbsp; −½ + (√3/2)i, &nbsp; −½ − (√3/2)i</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 16</span>
+                Find the two square roots of z = 4i.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Polar form</span>
+                  <div>4i: &nbsp; a = 0, b = 4. &nbsp; r = 4, &nbsp; θ = π/2 (positive imaginary axis)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Formula</span>
+                  <div>z_k = 4^(1/2) · cis((π/2 + 2πk)/2) = 2 · cis((π/4 + πk)) for k = 0, 1</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">k = 0</span>
+                  <div>z₀ = 2 cis(π/4) = 2(cos 45° + i sin 45°) = 2(1/√2 + i/√2) = <strong>√2 + i√2</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">k = 1</span>
+                  <div>z₁ = 2 cis(5π/4) = 2(cos 225° + i sin 225°) = 2(−1/√2 − i/√2) = <strong>−√2 − i√2</strong></div>
+                </div>
+                <div class="we-step check-step">
+                  <span class="step-n">Check k=0</span>
+                  <div>(√2 + i√2)² = 2 + 2i√2·i√2 + ... = 2 + 4i² + 4i·... let's verify: (√2)²+(i√2)²+2(√2)(i√2) = 2 − 2 + 4i·(1/2)... = 0 + 4i·1 = 4i ✓</div>
+                </div>
+              </div>
+              <div class="we-answer">√(4i) = √2 + i√2 &nbsp; and &nbsp; −√2 − i√2</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 17</span>
+                Find all fourth roots of z = 16.
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Polar</span>
+                  <div>16 is a real positive number: r = 16, θ = 0. Apply n = 4.</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Formula</span>
+                  <div>z_k = 16^(1/4) · cis(2πk/4) = 2 · cis(πk/2) for k = 0, 1, 2, 3</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Results</span>
+                  <div>k=0: 2·cis(0) = <strong>2</strong> &nbsp;&nbsp; k=1: 2·cis(π/2) = <strong>2i</strong> &nbsp;&nbsp; k=2: 2·cis(π) = <strong>−2</strong> &nbsp;&nbsp; k=3: 2·cis(3π/2) = <strong>−2i</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">⁴√16 = 2, 2i, −2, −2i &nbsp; (forming a square on the complex plane)</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 8 — COMMON ERRORS ══ -->
+      <section class="lesson-section" id="cplx-errors" aria-labelledby="h-errors">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⚠</div>
+          <div>
+            <span class="ls-eyebrow">Section 8 · Exam Preparation</span>
+            <h2 id="h-errors">Common Errors to Avoid in Examinations</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            These errors appear repeatedly in KCSE scripts and Senior Secondary assessments. Study each one
+            carefully — recognising a wrong approach is as important as knowing the correct method.
+          </p>
+
+          <div class="errors-grid">
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Im(3 + 4i) = 4i</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Im(3 + 4i) = 4</div>
+              <div class="ec-note">The imaginary part is a real number (the coefficient of i), not the term 4i itself.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> √(−4) × √(−9) = √36 = 6</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> √(−4) × √(−9) = 2i × 3i = 6i² = −6</div>
+              <div class="ec-note">The rule √a × √b = √(ab) only holds when both a and b are non-negative real numbers.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> arg(−1 − i) = arctan(−1/−1) = arctan(1) = π/4</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> (−1, −1) is in Q3: arg = −3π/4 (or 225°)</div>
+              <div class="ec-note">Always check the quadrant before stating the argument. arctan alone gives the reference angle, not the principal argument.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Dividing without multiplying by conjugate: (2+i)/(1+i) = (2+i)/(1+i)</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Multiply top and bottom by (1−i) to get a real denominator.</div>
+              <div class="ec-note">Division must eliminate the imaginary part from the denominator using the conjugate.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> (1+i)³ = 1 + i³ = 1 − i</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Use De Moivre or expand fully: (1+i)³ = 1 + 3i + 3i² + i³ = 1+3i−3−i = −2+2i</div>
+              <div class="ec-note">You cannot distribute a power over addition: (a+b)ⁿ ≠ aⁿ + bⁿ.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Forgetting that z³=1 has 3 solutions, only writing z = 1</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> zⁿ = w has exactly n complex solutions. Always find all n roots.</div>
+              <div class="ec-note">An nth degree polynomial equation has exactly n complex roots (counting multiplicity).</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Conjugate of 3 + 4i is −3 − 4i</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Conjugate of 3 + 4i is 3 − 4i</div>
+              <div class="ec-note">The conjugate changes only the sign of the imaginary part, not the real part.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> In De Moivre: (2 cis θ)³ = 2 cis(3θ)</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> (2 cis θ)³ = 2³ cis(3θ) = 8 cis(3θ)</div>
+              <div class="ec-note">Both the modulus and the argument are affected: rⁿ for the modulus, nθ for the argument.</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SECTION 9 — FORMULA SHEET ══ -->
+      <section class="lesson-section" id="cplx-formulasheet" aria-labelledby="h-formulas">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">∑</div>
+          <div>
+            <span class="ls-eyebrow">Section 9 · Quick Reference</span>
+            <h2 id="h-formulas">Complete Formula Sheet — Complex Numbers</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">Reference</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            Use this formula sheet as a quick reference during revision. All formulas are required knowledge
+            for the KCSE Senior Secondary Mathematics examination.
+          </p>
+
+          <div class="formula-sheet-grid">
+
+            <div class="fs-card">
+              <div class="fs-title">Standard Form &amp; Parts</div>
+              <div class="fs-items">
+                <div class="fs-item">z = a + bi (a, b ∈ ℝ)</div>
+                <div class="fs-item">Re(z) = a</div>
+                <div class="fs-item">Im(z) = b &nbsp; (not bi!)</div>
+                <div class="fs-item">i² = −1, &nbsp; i³ = −i, &nbsp; i⁴ = 1</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">Modulus &amp; Conjugate</div>
+              <div class="fs-items">
+                <div class="fs-item">z̄ = a − bi</div>
+                <div class="fs-item">|z| = √(a² + b²)</div>
+                <div class="fs-item">|z|² = z × z̄</div>
+                <div class="fs-item">|z₁z₂| = |z₁||z₂|</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">Arithmetic Rules</div>
+              <div class="fs-items">
+                <div class="fs-item">Add: add real to real, im to im</div>
+                <div class="fs-item">Multiply: FOIL, replace i² = −1</div>
+                <div class="fs-item">Divide: multiply by conjugate</div>
+                <div class="fs-item">Denom after conj: c² + d²</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">Polar Form</div>
+              <div class="fs-items">
+                <div class="fs-item">z = r cis θ = r(cos θ + i sin θ)</div>
+                <div class="fs-item">r = |z|, &nbsp; θ = arg(z)</div>
+                <div class="fs-item">a = r cos θ, &nbsp; b = r sin θ</div>
+                <div class="fs-item">z = re^(iθ) (Euler form)</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">Polar Arithmetic</div>
+              <div class="fs-items">
+                <div class="fs-item">z₁z₂ = r₁r₂ cis(θ₁+θ₂)</div>
+                <div class="fs-item">z₁/z₂ = (r₁/r₂) cis(θ₁−θ₂)</div>
+                <div class="fs-item">e^(iπ) + 1 = 0 (Euler's identity)</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">De Moivre's Theorem</div>
+              <div class="fs-items">
+                <div class="fs-item">(r cis θ)ⁿ = rⁿ cis(nθ)</div>
+                <div class="fs-item">Valid for all integers n</div>
+                <div class="fs-item">cos 3θ = 4cos³θ − 3cosθ</div>
+                <div class="fs-item">sin 3θ = 3sinθ − 4sin³θ</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">nth Roots</div>
+              <div class="fs-items">
+                <div class="fs-item">z_k = r^(1/n) cis((θ+2πk)/n)</div>
+                <div class="fs-item">k = 0, 1, 2, …, n−1</div>
+                <div class="fs-item">n distinct roots, equally spaced</div>
+                <div class="fs-item">Gap between roots: 2π/n</div>
+              </div>
+            </div>
+
+            <div class="fs-card">
+              <div class="fs-title">Roots of Unity (zⁿ=1)</div>
+              <div class="fs-items">
+                <div class="fs-item">z_k = cis(2πk/n)</div>
+                <div class="fs-item">Cube roots: 1, −½±(√3/2)i</div>
+                <div class="fs-item">Sum of all roots = 0</div>
+                <div class="fs-item">Product of all roots = (−1)ⁿ⁺¹</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Topic Nav Footer -->
+          <div class="topic-nav-footer">
+            <a href="sequences.html" class="tnf-btn tnf-prev">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>
+                <span class="tnf-label">Previous Topic</span>
+                <span class="tnf-name">Sequences &amp; Series</span>
+              </span>
+            </a>
+            <a href="areas.html" class="tnf-btn tnf-next">
+              <span>
+                <span class="tnf-label">Next Topic</span>
+                <span class="tnf-name">Areas</span>
+              </span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </main><!-- /topic-content -->
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conics</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html" aria-current="page">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
 </body>
 </html>

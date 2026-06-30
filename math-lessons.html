@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ═══ META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Mathematics Lessons | Ronny Best — CBC-Aligned Topics for Kenyan Students</title>
+  <meta name="description" content="Browse all 13 CBC-aligned mathematics lessons by Mwalimu Ronny — algebra, trigonometry, calculus, statistics, vectors, matrices and more. Free, step-by-step, exam-ready.">
+  <meta name="keywords" content="CBC mathematics lessons Kenya, algebra lesson, trigonometry tutorial, calculus Kenya, KCSE mathematics topics, Senior Secondary maths, free math Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/math-lessons.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="All Mathematics Lessons | Ronny Best Mathematics">
+  <meta property="og:description" content="13 free CBC-aligned maths lessons covering algebra, trigonometry, calculus, statistics and more — designed for Kenyan secondary school and college students.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bestronny.netlify.app/math-lessons.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts — same as homepage -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestronny.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Mathematics Lessons", "item": "https://bestronny.netlify.app/math-lessons.html" }
+    ]
+  }
+  </script>
+
+  <style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS — exact match to index.css v4
+═══════════════════════════════════════════ */
+:root {
+  --navy-950:  #070f1e;
+  --navy-900:  #0a1628;
+  --navy-800:  #0f2040;
+  --navy-700:  #1a3560;
+  --navy-600:  #1e4d8c;
+  --navy-400:  #4a80c8;
+
+  --bisque:        #ffe4c4;
+  --bisque-light:  #fff3e8;
+  --bisque-mid:    #f5ddb8;
+  --bisque-dark:   #e8b87a;
+  --bisque-deep:   #c8832a;
+
+  --cream:     #faf7f2;
+  --cream-100: #f4efe5;
+  --cream-200: #e8dfd0;
+  --cream-300: #d5cfc4;
+
+  --ink:       #1a1612;
+  --ink-70:    #3a3028;
+  --ink-50:    #5a4e42;
+  --ink-30:    #9a8a78;
+
+  --green:     #1e6e36;
+  --green-bg:  #e8f5ec;
+  --green-dark:#155228;
+  --red:       #b91c1c;
+  --red-bg:    #fef2f2;
+  --white:     #ffffff;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif:   'Lora', Georgia, serif;
+  --font-ui:      'DM Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-pill:9999px;
+
+  --shadow-xs:  0 1px 3px rgba(10,22,40,.07);
+  --shadow-sm:  0 2px 10px rgba(10,22,40,.10);
+  --shadow-md:  0 6px 24px rgba(10,22,40,.13);
+  --shadow-lg:  0 12px 40px rgba(10,22,40,.17);
+
+  --t: .24s cubic-bezier(.4,0,.2,1);
+  --max-w: 1200px;
+  --pad-x: clamp(1.2rem, 5%, 4rem);
+}
+
+/* ─── RESET ─── */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; scroll-behavior:smooth; }
+body {
+  font-family: var(--font-ui);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+img { max-width:100%; height:auto; display:block; }
+a { color: var(--navy-700); transition: color var(--t); }
+a:hover { color: var(--navy-900); }
+ul,ol { list-style:none; }
+h1,h2,h3,h4,h5 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--navy-900);
+  letter-spacing: -.015em;
+}
+p { color: var(--ink-50); }
+.sr-only {
+  position:absolute; width:1px; height:1px;
+  padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); border:0;
+}
+:focus-visible {
+  outline: 3px solid var(--bisque-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── SKIP LINK ─── */
+.skip-link {
+  position:absolute; top:-100%; left:1rem;
+  background:var(--bisque-deep); color:#fff;
+  padding:.6rem 1.2rem; border-radius:var(--radius-sm);
+  font-weight:700; z-index:9999;
+  text-decoration:none; transition:top .2s;
+}
+.skip-link:focus { top:1rem; }
+
+/* ═══════════════════════════════════════════
+   HEADER — matches homepage exactly
+═══════════════════════════════════════════ */
+.site-header {
+  background: linear-gradient(160deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+  padding: 24px var(--pad-x);
+  border-bottom: 3px solid var(--bisque-dark);
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: "∑ ∫ π √ ∞";
+  position:absolute; top:8%; right:4%;
+  font-family:var(--font-mono); font-size:4rem; font-weight:700;
+  color:rgba(255,228,196,.05); letter-spacing:.3em;
+  transform:rotate(10deg); pointer-events:none; user-select:none;
+}
+.header-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px;
+}
+.brand-logo {
+  display:flex; align-items:center; gap:12px;
+  text-decoration:none; color:inherit;
+}
+.brand-sigma {
+  width:46px; height:46px;
+  background:var(--bisque-deep); color:#fff;
+  font-family:var(--font-display); font-size:1.5rem; font-weight:900;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:var(--radius-sm); flex-shrink:0;
+  box-shadow:0 4px 14px rgba(200,131,42,.35);
+}
+.brand-text {
+  font-family:var(--font-display);
+  font-size:clamp(1.1rem,2.5vw,1.45rem);
+  font-weight:700; color:var(--bisque-light);
+  letter-spacing:-.01em; line-height:1.2;
+}
+.brand-text em {
+  display:block; font-style:normal; color:var(--bisque-dark);
+  font-size:.85em; font-weight:400; font-family:var(--font-serif);
+}
+.brand-tagline {
+  font-size:.72rem; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(255,228,196,.45); margin-top:5px;
+}
+
+/* ═══════════════════════════════════════════
+   MAIN NAV — sticky, matches homepage
+═══════════════════════════════════════════ */
+.main-nav {
+  background:var(--navy-900);
+  position:sticky; top:0; z-index:500;
+  box-shadow:0 4px 20px rgba(0,0,0,.35);
+  border-bottom:2px solid var(--bisque-dark);
+}
+.nav-inner {
+  max-width:var(--max-w); margin:0 auto;
+  padding:0 var(--pad-x); position:relative;
+}
+.nav-mobile-bar {
+  display:none; align-items:center;
+  justify-content:space-between; padding:.7rem 0;
+}
+.nav-mobile-brand {
+  font-family:var(--font-display); font-size:1.1rem;
+  font-weight:700; color:var(--bisque-light);
+}
+.nav-mobile-brand em { font-style:normal; color:var(--bisque-dark); }
+.nav-mobile-actions { display:flex; align-items:center; gap:8px; }
+.nav-hamburger {
+  background:none; border:1px solid rgba(255,228,196,.25);
+  border-radius:var(--radius-sm); padding:6px 8px;
+  cursor:pointer; display:flex; flex-direction:column; gap:4px;
+  transition:var(--t);
+}
+.nav-hamburger:hover { background:rgba(255,228,196,.1); }
+.ham-line { display:block; width:20px; height:2px; background:var(--bisque); border-radius:2px; transition:transform .25s,opacity .25s; }
+.nav-hamburger[aria-expanded="true"] .ham-line:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] .ham-line:nth-child(2) { opacity:0; }
+.nav-hamburger[aria-expanded="true"] .ham-line:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+
+.nav-search-toggle {
+  background:none; border:1px solid rgba(255,228,196,.25);
+  border-radius:var(--radius-sm); padding:7px; cursor:pointer;
+  color:var(--bisque); display:flex; align-items:center; justify-content:center;
+  transition:var(--t);
+}
+.nav-search-toggle:hover { background:rgba(255,228,196,.1); }
+.nav-list {
+  display:flex; flex-wrap:wrap; gap:0;
+  justify-content:center; align-items:center;
+}
+.nav-list > li { position:relative; }
+.nav-list > li > a {
+  display:flex; align-items:center; gap:4px;
+  padding:.85rem 1rem;
+  color:rgba(255,228,196,.6);
+  text-decoration:none; font-family:var(--font-ui);
+  font-size:.84rem; font-weight:500; letter-spacing:.02em;
+  position:relative; transition:color var(--t), background var(--t);
+  white-space:nowrap;
+}
+.nav-list > li > a::after {
+  content:''; position:absolute; bottom:0; left:50%;
+  width:0; height:3px; background:var(--bisque-dark);
+  transition:width var(--t),left var(--t);
+  border-radius:3px 3px 0 0;
+}
+.nav-list > li > a:hover { color:rgba(255,228,196,.95); background:rgba(255,228,196,.05); }
+.nav-list > li > a:hover::after,
+.nav-list > li > a.active::after { width:70%; left:15%; }
+.nav-list > li > a.active { color:var(--bisque); font-weight:600; }
+.nav-chevron { transition:transform var(--t); flex-shrink:0; }
+
+/* Dropdown */
+.nav-dropdown {
+  display:none; position:absolute; top:100%; left:0;
+  background:var(--navy-800); border:1px solid rgba(255,228,196,.12);
+  border-radius:var(--radius-md); min-width:200px; padding:.5rem;
+  box-shadow:var(--shadow-lg); z-index:600;
+  animation:dropIn .18s ease;
+}
+@keyframes dropIn { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:translateY(0)} }
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown:focus-within .nav-dropdown { display:block; }
+.nav-has-dropdown:hover .nav-chevron,
+.nav-has-dropdown:focus-within .nav-chevron { transform:rotate(180deg); }
+.nav-dropdown li a {
+  display:block; padding:.6rem .9rem;
+  color:rgba(255,228,196,.55); font-family:var(--font-ui);
+  font-size:.85rem; text-decoration:none; border-radius:var(--radius-sm);
+  transition:background var(--t), color var(--t);
+}
+.nav-dropdown li a:hover { background:rgba(255,228,196,.08); color:var(--bisque-light); }
+
+/* Nav search bar */
+.nav-search-bar { padding:.6rem 0 .4rem; position:relative; }
+.nsb-inner {
+  display:flex; align-items:center; gap:10px;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,228,196,.2);
+  border-radius:var(--radius-md); padding:.55rem 1rem;
+}
+.nsb-inner svg { color:rgba(255,228,196,.4); flex-shrink:0; }
+#globalSearch {
+  flex:1; background:none; border:none; outline:none;
+  font-family:var(--font-ui); font-size:.9rem;
+  color:var(--bisque-light); min-width:0;
+}
+#globalSearch::placeholder { color:rgba(255,228,196,.35); }
+#globalSearchClear { background:none; border:none; color:rgba(255,228,196,.4); cursor:pointer; font-size:.85rem; padding:2px 6px; border-radius:4px; }
+#globalSearchClear:hover { color:var(--bisque); }
+.search-results-dropdown {
+  position:absolute; top:calc(100% + 4px); left:0; right:0;
+  background:var(--navy-800); border:1px solid rgba(255,228,196,.15);
+  border-radius:var(--radius-md); z-index:600;
+  max-height:320px; overflow-y:auto; box-shadow:var(--shadow-lg);
+}
+.sr-item {
+  display:flex; align-items:center; gap:12px;
+  padding:.75rem 1rem; text-decoration:none;
+  color:var(--bisque-light); font-family:var(--font-ui);
+  font-size:.88rem; border-bottom:1px solid rgba(255,228,196,.06);
+  transition:background var(--t);
+}
+.sr-item:last-child { border-bottom:none; }
+.sr-item:hover { background:rgba(255,228,196,.08); }
+.sr-icon { width:32px; height:32px; background:rgba(255,228,196,.1); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:.85rem; font-family:var(--font-mono); color:var(--bisque-dark); flex-shrink:0; }
+.sr-name { font-weight:600; color:var(--bisque-light); display:block; font-size:.86rem; }
+.sr-type { font-size:.72rem; color:rgba(255,228,196,.4); display:block; }
+.sr-none { padding:1rem; text-align:center; color:rgba(255,228,196,.35); font-size:.88rem; font-family:var(--font-ui); }
+
+/* ═══════════════════════════════════════════
+   HERO — dark navy, lesson-page style
+═══════════════════════════════════════════ */
+.lessons-hero {
+  background:linear-gradient(155deg,var(--navy-950) 0%,var(--navy-800) 50%,var(--navy-700) 100%);
+  padding:clamp(2.5rem,7vw,5rem) var(--pad-x) clamp(2rem,5vw,3.5rem);
+  position:relative; overflow:hidden;
+}
+.lessons-hero::before {
+  content:'';
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(255,228,196,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,228,196,.025) 1px,transparent 1px);
+  background-size:60px 60px; pointer-events:none;
+}
+.hero-symbols { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.hs { position:absolute; font-family:var(--font-mono); font-weight:700; color:rgba(255,228,196,.035); line-height:1; user-select:none; }
+.hs1{font-size:8rem;top:5%;right:5%;}
+.hs2{font-size:5rem;bottom:10%;left:3%;}
+.hs3{font-size:6rem;top:55%;right:30%;}
+.hs4{font-size:4rem;top:20%;left:18%;}
+
+.hero-inner {
+  max-width:var(--max-w); margin:0 auto;
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1fr auto;
+  gap:40px; align-items:center;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-ui); font-size:.72rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--bisque-dark); margin-bottom:14px;
+}
+.eyebrow-dot { width:5px; height:5px; border-radius:50%; background:var(--bisque-deep); }
+.lessons-hero h1 {
+  font-family:var(--font-display);
+  font-size:clamp(2rem,5vw,3.4rem); font-weight:900;
+  color:rgba(255,243,232,.95); letter-spacing:-.025em; line-height:1.1;
+  margin-bottom:14px;
+}
+.hero-accent { color:var(--bisque-dark); }
+.hero-sub {
+  font-family:var(--font-serif); font-size:.97rem;
+  color:rgba(255,228,196,.58); line-height:1.8;
+  max-width:520px; margin-bottom:24px;
+}
+.hero-sub strong { color:var(--bisque-dark); font-weight:600; }
+.hero-chips { display:flex; flex-wrap:wrap; gap:8px; }
+.hero-chip {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:.35rem .9rem; border-radius:var(--radius-pill);
+  border:1.5px solid; font-family:var(--font-ui);
+  font-size:.76rem; font-weight:700; letter-spacing:.04em;
+}
+.chip-sec { background:rgba(255,255,255,.06); color:#a8d5b5; border-color:rgba(168,213,181,.3); }
+.chip-alevel { background:rgba(200,131,42,.14); color:var(--bisque-dark); border-color:rgba(200,131,42,.4); }
+.chip-uni { background:rgba(100,140,200,.14); color:#a0c0f0; border-color:rgba(100,140,200,.4); }
+
+/* Hero stats card */
+.hero-stats-card {
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,228,196,.15);
+  backdrop-filter:blur(8px); border-radius:var(--radius-lg);
+  padding:24px 28px; text-align:center; flex-shrink:0; min-width:200px;
+  box-shadow:0 8px 32px rgba(0,0,0,.25);
+}
+.hsc-stat { margin-bottom:16px; }
+.hsc-stat:last-child { margin-bottom:0; }
+.hsc-num {
+  font-family:var(--font-display); font-size:2rem; font-weight:900;
+  color:var(--bisque-dark); line-height:1;
+}
+.hsc-label {
+  font-size:.68rem; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:rgba(255,228,196,.35);
+  margin-top:3px;
+}
+.hsc-div { height:1px; background:rgba(255,228,196,.12); margin:12px 0; }
+
+/* ═══════════════════════════════════════════
+   BREADCRUMB
+═══════════════════════════════════════════ */
+.breadcrumb-bar {
+  background:var(--white); border-bottom:1px solid var(--cream-200);
+  padding:10px var(--pad-x);
+}
+.breadcrumb-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:flex; align-items:center; gap:6px;
+  font-family:var(--font-ui); font-size:.82rem; color:var(--ink-30);
+}
+.breadcrumb-inner a { color:var(--bisque-deep); text-decoration:none; font-weight:700; }
+.breadcrumb-inner a:hover { text-decoration:underline; }
+.bc-sep { color:var(--ink-30); }
+.bc-current { color:var(--ink); font-weight:700; }
+
+/* ═══════════════════════════════════════════
+   PAGE LAYOUT — sidebar + content
+═══════════════════════════════════════════ */
+.page-layout {
+  flex:1;
+  max-width:var(--max-w); margin:0 auto;
+  width:100%; padding:28px var(--pad-x) 60px;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:28px; align-items:start;
+}
+
+/* ═══════════════════════════════════════════
+   SIDEBAR — sticky contents + quick-jump
+═══════════════════════════════════════════ */
+.sidebar { position:sticky; top:70px; }
+
+.sidebar-panel {
+  background:var(--white); border:1px solid var(--cream-200);
+  border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-sm); margin-bottom:16px;
+}
+.sidebar-panel-head {
+  padding:14px 18px; border-bottom:1px solid var(--cream-200);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.sp-label {
+  font-family:var(--font-ui); font-size:.68rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-30);
+}
+.sp-count {
+  font-family:var(--font-mono); font-size:.75rem; font-weight:600;
+  color:var(--bisque-deep); background:rgba(200,131,42,.1);
+  padding:2px 8px; border-radius:var(--radius-pill);
+}
+
+.sidebar-group { padding:8px 0; }
+.sidebar-group + .sidebar-group { border-top:1px solid var(--cream-200); }
+.sg-label {
+  font-size:.66rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-30);
+  padding:6px 18px 4px;
+}
+.sidebar-link {
+  display:flex; align-items:center; gap:9px;
+  padding:8px 18px; font-family:var(--font-ui);
+  font-size:.84rem; font-weight:400; color:var(--ink-50);
+  text-decoration:none; cursor:pointer;
+  border-left:3px solid transparent;
+  transition:background var(--t), color var(--t), border-color var(--t);
+}
+.sidebar-link:hover { background:rgba(200,131,42,.06); color:var(--bisque-deep); border-left-color:var(--bisque-dark); }
+.sidebar-link.active { background:rgba(200,131,42,.08); color:var(--bisque-deep); border-left-color:var(--bisque-deep); font-weight:600; }
+.sl-icon { font-family:var(--font-mono); font-size:.82rem; width:22px; text-align:center; color:var(--bisque-deep); flex-shrink:0; }
+.sl-visited {
+  margin-left:auto; width:7px; height:7px; border-radius:50%;
+  background:var(--green); flex-shrink:0; display:none;
+}
+.sidebar-link.visited .sl-visited { display:block; }
+
+/* Progress mini panel inside sidebar */
+.progress-mini {
+  background:var(--white); border:1px solid var(--cream-200);
+  border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-sm); display:none;
+}
+.progress-mini.visible { display:block; }
+.pm-head { padding:12px 18px 8px; border-bottom:1px solid var(--cream-200); }
+.pm-label { font-size:.66rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-30); }
+.pm-body { padding:10px 18px 14px; }
+.pm-track { height:6px; border-radius:50px; background:var(--cream-200); overflow:hidden; margin-bottom:7px; }
+.pm-fill { height:100%; border-radius:50px; background:linear-gradient(90deg,var(--bisque-dark),var(--bisque-deep)); transition:width .7s cubic-bezier(.4,0,.2,1); }
+.pm-text { font-family:var(--font-ui); font-size:.8rem; color:var(--bisque-deep); font-weight:700; }
+
+/* ═══════════════════════════════════════════
+   CONTENT AREA — toolbar + grid
+═══════════════════════════════════════════ */
+.content-area { width:100%; min-width:0; }
+
+/* ─── ADVANCED TOOLBAR ─── */
+.toolbar {
+  background:var(--white); border:1px solid var(--cream-200);
+  border-radius:var(--radius-lg); padding:16px 18px;
+  box-shadow:var(--shadow-sm); margin-bottom:20px;
+}
+.toolbar-top {
+  display:flex; align-items:center; gap:12px;
+  flex-wrap:wrap; margin-bottom:12px;
+}
+.toolbar-search {
+  display:flex; align-items:center; gap:8px;
+  background:var(--cream-100); border:1.5px solid var(--cream-200);
+  border-radius:var(--radius-pill); padding:.4rem .5rem .4rem 1rem;
+  flex:1; min-width:220px; transition:border-color var(--t);
+}
+.toolbar-search:focus-within { border-color:var(--bisque-deep); }
+.toolbar-search svg { color:var(--ink-30); flex-shrink:0; }
+.toolbar-search input {
+  flex:1; border:none; outline:none; background:transparent;
+  font-family:var(--font-ui); font-size:.88rem; color:var(--ink);
+  min-width:0;
+}
+.toolbar-search input::placeholder { color:var(--ink-30); }
+.ts-clear { background:none; border:none; cursor:pointer; color:var(--ink-30); padding:3px 7px; border-radius:4px; font-size:.85rem; display:none; }
+.ts-clear:hover { color:var(--ink); }
+.ts-clear.visible { display:block; }
+
+.sort-row {
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  flex-shrink:0;
+}
+.sort-label { font-family:var(--font-ui); font-size:.76rem; font-weight:700; color:var(--ink-30); white-space:nowrap; }
+.sort-select {
+  font-family:var(--font-ui); font-size:.82rem;
+  padding:.3rem .8rem; border:1.5px solid var(--cream-200);
+  border-radius:var(--radius-pill); background:var(--cream-100);
+  color:var(--ink-50); cursor:pointer; outline:none; transition:var(--t);
+}
+.sort-select:hover, .sort-select:focus { border-color:var(--navy-700); }
+
+.view-toggles { display:flex; gap:4px; }
+.view-btn {
+  background:none; border:1.5px solid var(--cream-200);
+  border-radius:var(--radius-sm); padding:6px 8px;
+  cursor:pointer; color:var(--ink-30); display:flex;
+  align-items:center; transition:var(--t);
+}
+.view-btn:hover { border-color:var(--navy-700); color:var(--navy-700); }
+.view-btn.active { background:var(--navy-700); border-color:var(--navy-700); color:var(--bisque-light); }
+
+/* ─── FILTER PILLS ─── */
+.toolbar-filters {
+  display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+}
+.filter-btn {
+  font-family:var(--font-ui); font-size:.78rem; font-weight:600;
+  padding:.3rem .9rem; border-radius:var(--radius-pill);
+  border:1.5px solid var(--cream-200); background:var(--cream-100);
+  color:var(--ink-50); cursor:pointer; transition:var(--t);
+  white-space:nowrap; display:inline-flex; align-items:center; gap:5px;
+}
+.filter-btn:hover { border-color:var(--navy-700); color:var(--navy-700); }
+.filter-btn.active { background:var(--navy-700); border-color:var(--navy-700); color:var(--bisque-light); }
+.filter-btn .fbadge {
+  background:rgba(255,255,255,.25); font-size:.68rem;
+  padding:1px 5px; border-radius:50px; font-weight:700;
+}
+.filter-btn.active .fbadge { background:rgba(255,255,255,.2); }
+
+.toolbar-divider { height:1px; background:var(--cream-200); margin:12px 0; }
+
+/* ─── RESULTS STATUS ─── */
+.results-status {
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:8px; margin-bottom:16px;
+}
+.results-count {
+  font-family:var(--font-ui); font-size:.82rem; color:var(--ink-30);
+}
+.results-count strong { color:var(--bisque-deep); font-weight:700; }
+.active-filter-tag {
+  display:inline-flex; align-items:center; gap:5px;
+  background:rgba(200,131,42,.1); color:var(--bisque-deep);
+  border:1px solid rgba(200,131,42,.2); border-radius:var(--radius-pill);
+  font-size:.75rem; font-weight:700; padding:.2rem .7rem;
+  font-family:var(--font-ui);
+}
+.aft-remove {
+  background:none; border:none; cursor:pointer; color:var(--bisque-deep);
+  font-size:.8rem; line-height:1; padding:0; margin-left:2px;
+}
+
+/* ═══════════════════════════════════════════
+   LESSON CARDS — GRID VIEW (default)
+═══════════════════════════════════════════ */
+.lessons-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px;
+}
+.lessons-grid.view-list { grid-template-columns:1fr; }
+
+.lesson-card {
+  background:var(--white); border-radius:var(--radius-lg);
+  border:1px solid var(--cream-200); box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column; overflow:hidden;
+  position:relative; cursor:pointer;
+  transition:transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+.lesson-card.hidden { display:none; }
+.lesson-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+.lesson-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  transform:scaleX(0); transform-origin:left;
+  transition:transform var(--t);
+}
+.lesson-card:hover::before { transform:scaleX(1); }
+.lesson-card.visited::before { transform:scaleX(1); background:linear-gradient(90deg,#4ade80,var(--green)) !important; }
+
+/* Accent colours per card type */
+.lc-algebra::before    { background:var(--navy-700); }
+.lc-trig::before       { background:#7a4a14; }
+.lc-statistics::before { background:var(--green); }
+.lc-limits::before     { background:#5b3a8a; }
+.lc-diff::before       { background:#5b3a8a; }
+.lc-integration::before{ background:#3a5f8a; }
+.lc-vectors::before    { background:var(--bisque-deep); }
+.lc-matrices::before   { background:#6b3c14; }
+.lc-conics::before     { background:#0e6888; }
+.lc-sequences::before  { background:#1d6e6e; }
+.lc-complex::before    { background:#7a1060; }
+.lc-areas::before      { background:#3a7a30; }
+.lc-volumes::before    { background:#1a5080; }
+
+.card-head {
+  padding:20px 20px 12px;
+  display:flex; align-items:flex-start; gap:13px;
+}
+.card-icon {
+  width:44px; height:44px; flex-shrink:0;
+  border-radius:var(--radius-sm); background:var(--cream-100);
+  border:1px solid var(--cream-200);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:1.1rem; font-weight:700;
+  color:var(--navy-700); margin-top:2px;
+}
+.card-meta { flex:1; min-width:0; }
+.card-strand {
+  font-family:var(--font-ui); font-size:.67rem; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--bisque-deep); display:block; margin-bottom:4px;
+}
+.card-title { font-size:1.08rem; color:var(--navy-800); margin:0 0 4px; }
+.card-diff {
+  display:inline-block; font-family:var(--font-ui);
+  font-size:.68rem; font-weight:700; padding:.18rem .6rem;
+  border-radius:var(--radius-pill); letter-spacing:.04em;
+}
+.diff-1 { background:var(--green-bg); color:var(--green-dark); }
+.diff-2 { background:rgba(200,131,42,.1); color:var(--bisque-deep); }
+.diff-3 { background:rgba(91,58,138,.1); color:#5b3a8a; }
+
+.card-preview {
+  display:flex; align-items:center; gap:6px;
+  margin:0 20px 12px;
+  background:var(--cream-100); border:1px solid var(--cream-200);
+  border-radius:var(--radius-sm); padding:8px 11px; flex-wrap:wrap;
+}
+.card-preview code { font-family:var(--font-mono); font-size:.8rem; color:var(--navy-800); background:none; }
+.preview-arrow { color:var(--ink-30); font-weight:700; font-size:.85rem; }
+.preview-ans { color:var(--green) !important; font-weight:700 !important; }
+
+.card-body { padding:0 20px 12px; flex:1; }
+.card-topics {
+  display:flex; flex-direction:column; gap:4px;
+}
+.card-topics li {
+  font-family:var(--font-ui); font-size:.83rem; color:var(--ink-50);
+  padding-left:13px; position:relative; line-height:1.45;
+}
+.card-topics li::before { content:'·'; position:absolute; left:2px; color:var(--bisque-deep); font-weight:700; }
+
+.card-footer {
+  padding:12px 20px; border-top:1px solid var(--cream-200);
+  background:var(--cream-100);
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.visited-badge {
+  display:none; font-family:var(--font-ui); font-size:.68rem;
+  font-weight:700; color:var(--green); background:var(--green-bg);
+  border:1px solid rgba(30,110,54,.2); padding:.2rem .7rem;
+  border-radius:var(--radius-pill); letter-spacing:.05em;
+}
+.lesson-card.visited .visited-badge { display:inline-block; }
+.card-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--navy-800); color:var(--bisque-light);
+  font-family:var(--font-ui); font-weight:700; font-size:.82rem;
+  padding:.6rem 1.3rem; border-radius:var(--radius-pill);
+  text-decoration:none; transition:var(--t); white-space:nowrap;
+}
+.card-btn:hover { background:var(--navy-700); color:var(--bisque); }
+.lesson-card.visited .card-btn { background:var(--bisque-deep); }
+.lesson-card.visited .card-btn:hover { background:#a86820; color:#fff; }
+.card-btn svg { width:12px; height:12px; transition:transform var(--t); }
+.card-btn:hover svg { transform:translateX(3px); }
+
+/* ─── LIST VIEW ─── */
+.view-list .lesson-card {
+  flex-direction:row; align-items:center;
+}
+.view-list .lesson-card::before { top:0; left:0; bottom:0; right:auto; width:4px; height:auto; border-radius:0; transform:scaleY(1); transform-origin:top; }
+.view-list .lesson-card:hover::before { transform:scaleY(1); }
+.view-list .card-head { flex:0 0 auto; border-right:1px solid var(--cream-200); }
+.view-list .card-preview { display:none; }
+.view-list .card-body { padding:12px 16px; }
+.view-list .card-topics { display:none; }
+.view-list .card-footer { border-top:none; border-left:1px solid var(--cream-200); background:transparent; flex-direction:column; align-items:flex-end; min-width:140px; padding:12px 16px; }
+
+/* ─── NO RESULTS ─── */
+.no-results {
+  grid-column:1/-1; text-align:center;
+  padding:56px 20px; display:none;
+}
+.no-results.visible { display:block; }
+.nr-icon { font-size:2.5rem; margin-bottom:12px; }
+.nr-msg { font-family:var(--font-display); font-size:1.2rem; color:var(--navy-800); margin-bottom:8px; }
+.nr-sub { font-size:.9rem; color:var(--ink-30); margin-bottom:16px; }
+.nr-reset { background:none; border:2px solid var(--navy-700); color:var(--navy-700); font-family:var(--font-ui); font-weight:700; font-size:.88rem; padding:.5rem 1.4rem; border-radius:var(--radius-pill); cursor:pointer; transition:var(--t); }
+.nr-reset:hover { background:var(--navy-700); color:var(--bisque-light); }
+
+/* ═══════════════════════════════════════════
+   CTA BAND
+═══════════════════════════════════════════ */
+.cta-band {
+  background:linear-gradient(155deg,var(--navy-950) 0%,var(--navy-800) 55%,var(--navy-700) 100%);
+  padding:clamp(2.5rem,6vw,4rem) var(--pad-x);
+  text-align:center; position:relative; overflow:hidden;
+  border-top:3px solid var(--bisque-deep);
+}
+.cta-band::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 110%,rgba(200,131,42,.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cta-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+.cta-band h2 { font-family:var(--font-display); font-size:clamp(1.6rem,3.5vw,2.3rem); color:var(--bisque-light); margin-bottom:10px; }
+.cta-band p { font-family:var(--font-serif); font-size:.97rem; color:rgba(255,228,196,.55); line-height:1.75; margin-bottom:24px; }
+.cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.btn-cta-p {
+  background:var(--bisque); color:var(--navy-900);
+  font-family:var(--font-ui); font-weight:700; font-size:.95rem;
+  padding:.8rem 2rem; border-radius:var(--radius-pill);
+  text-decoration:none; border:2px solid var(--bisque-dark);
+  transition:var(--t); box-shadow:0 4px 20px rgba(200,131,42,.25);
+}
+.btn-cta-p:hover { background:var(--bisque-light); transform:translateY(-3px); }
+.btn-cta-s {
+  background:transparent; color:rgba(255,228,196,.75);
+  font-family:var(--font-ui); font-weight:600; font-size:.95rem;
+  padding:.8rem 2rem; border-radius:var(--radius-pill);
+  border:2px solid rgba(255,228,196,.3); text-decoration:none;
+  transition:var(--t);
+}
+.btn-cta-s:hover { background:rgba(255,228,196,.1); border-color:rgba(255,228,196,.6); color:var(--bisque); transform:translateY(-3px); }
+
+/* ═══════════════════════════════════════════
+   FOOTER — matches homepage
+═══════════════════════════════════════════ */
+.site-footer {
+  background:var(--navy-950); border-top:3px solid var(--bisque-deep);
+  padding:clamp(2.5rem,5vw,3.5rem) var(--pad-x) 0;
+}
+.footer-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:grid; grid-template-columns:1.3fr 1fr 0.9fr 0.9fr;
+  gap:clamp(1.5rem,4vw,3rem); padding-bottom:clamp(2rem,4vw,3rem);
+  border-bottom:1px solid rgba(255,228,196,.08);
+}
+.footer-logo {
+  font-family:var(--font-display); font-size:1.2rem; font-weight:700;
+  color:var(--bisque-light); text-decoration:none; display:block; margin-bottom:8px;
+}
+.footer-logo span { color:var(--bisque-dark); }
+.footer-brand p { font-family:var(--font-ui); font-size:.85rem; color:rgba(255,228,196,.35); line-height:1.65; }
+.footer-cbc { font-size:.76rem !important; color:rgba(255,228,196,.25) !important; margin-top:6px; font-style:italic; }
+.footer-contact { margin-top:12px !important; font-size:.8rem !important; }
+.footer-contact a { color:var(--bisque-dark) !important; text-decoration:none; font-weight:500; transition:color var(--t); }
+.footer-contact a:hover { color:var(--bisque) !important; }
+.fn-col h4 {
+  font-family:var(--font-ui); font-size:.7rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(255,228,196,.4); margin-bottom:12px;
+}
+.fn-col ul { display:flex; flex-direction:column; gap:7px; }
+.fn-col a { font-family:var(--font-ui); font-size:.85rem; color:rgba(255,228,196,.4); text-decoration:none; transition:color var(--t); }
+.fn-col a:hover { color:var(--bisque-light); }
+.footer-bottom {
+  max-width:var(--max-w); margin:0 auto;
+  padding:18px 0 24px; display:flex; flex-wrap:wrap;
+  justify-content:space-between; gap:8px;
+}
+.footer-bottom p { font-family:var(--font-ui); font-size:.78rem; color:rgba(255,228,196,.2); line-height:1.6; }
+
+/* ─── TOAST ─── */
+.toast {
+  position:fixed; bottom:28px; left:50%;
+  transform:translateX(-50%) translateY(80px);
+  background:var(--navy-900); color:#fff;
+  padding:11px 22px; border-radius:var(--radius-pill);
+  font-family:var(--font-ui); font-size:.85rem; font-weight:500;
+  box-shadow:0 8px 32px rgba(0,0,0,.3);
+  z-index:9999; white-space:nowrap;
+  transition:transform .35s cubic-bezier(.4,0,.2,1), opacity .35s;
+  opacity:0; pointer-events:none;
+}
+.toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes dropIn {
+  from{opacity:0;transform:translateY(-6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:1024px) {
+  .hero-inner { grid-template-columns:1fr; }
+  .hero-stats-card { display:none; }
+  .footer-inner { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:860px) {
+  .page-layout { grid-template-columns:1fr; padding-top:20px; }
+  .sidebar { position:static; display:none; }
+  .nav-mobile-bar { display:flex; }
+  .nav-list { display:none; flex-direction:column; width:100%; padding:.5rem 0 1rem; border-top:1px solid rgba(255,228,196,.08); }
+  .nav-list.open { display:flex; }
+  .nav-list > li > a { padding:.7rem .5rem; justify-content:space-between; font-size:.92rem; }
+  .nav-list > li > a::after { display:none; }
+  .nav-dropdown { position:static; box-shadow:none; border:none; background:rgba(255,228,196,.04); border-radius:var(--radius-sm); padding:.25rem .5rem; margin:0 0 .25rem .5rem; animation:none; display:none; }
+  .nav-has-dropdown.open .nav-dropdown { display:block; }
+  .nav-has-dropdown:hover .nav-dropdown, .nav-has-dropdown:focus-within .nav-dropdown { display:none; }
+}
+@media(max-width:640px) {
+  .toolbar-top { flex-direction:column; align-items:stretch; }
+  .sort-row { justify-content:space-between; }
+  .view-toggles { margin-left:auto; }
+  .toolbar-search { min-width:auto; }
+  .lessons-grid { grid-template-columns:1fr; }
+  .footer-inner { grid-template-columns:1fr; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+  .cta-btns { flex-direction:column; align-items:center; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics — Home">
+      <span class="brand-sigma" aria-hidden="true">Σ</span>
+      <div>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+      </div>
+    </a>
+  </div>
+</header>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <!-- Mobile bar -->
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="globalSearch" placeholder="Search topics, lessons…" autocomplete="off" aria-label="Search site">
+        <button id="globalSearchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResultsDropdown" class="search-results-dropdown" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+
+    <!-- Nav menu -->
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="math-lessons.html" class="active" aria-current="page" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="lessons-hero" aria-labelledby="lessons-hero-heading">
+  <div class="hero-symbols" aria-hidden="true">
+    <span class="hs hs1">∫</span><span class="hs hs2">π</span>
+    <span class="hs hs3">∞</span><span class="hs hs4">√</span>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        CBC Senior Secondary · 13 Topics
+        <span class="eyebrow-dot"></span>
+      </div>
+      <h1 id="lessons-hero-heading">
+        Mathematics <span class="hero-accent">Lessons</span>
+      </h1>
+      <p class="hero-sub">
+        Every topic from foundational algebra through advanced calculus —
+        written by <strong>Mwalimu Ronny</strong> and aligned to the
+        <strong>CBC curriculum</strong> as approved by KICD, TSC, and the Ministry of Education Kenya.
+        Free, no login required.
+      </p>
+      <div class="hero-chips">
+        <span class="hero-chip chip-sec">Secondary School</span>
+        <span class="hero-chip chip-alevel">A-Level / Pre-University</span>
+        <span class="hero-chip chip-uni">University Level</span>
+      </div>
+    </div>
+    <div class="hero-stats-card" aria-hidden="true">
+      <div class="hsc-stat">
+        <div class="hsc-num">13</div>
+        <div class="hsc-label">Topics</div>
+      </div>
+      <div class="hsc-div"></div>
+      <div class="hsc-stat">
+        <div class="hsc-num">100+</div>
+        <div class="hsc-label">Worked Examples</div>
+      </div>
+      <div class="hsc-div"></div>
+      <div class="hsc-stat">
+        <div class="hsc-num">Free</div>
+        <div class="hsc-label">Always</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <nav class="breadcrumb-inner" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep" aria-hidden="true">›</span>
+    <span class="bc-current">Mathematics Lessons</span>
+  </nav>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<main id="main-content">
+<div class="page-layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar" aria-label="Lesson categories and navigation">
+
+    <!-- Contents panel -->
+    <div class="sidebar-panel">
+      <div class="sidebar-panel-head">
+        <span class="sp-label">Contents</span>
+        <span class="sp-count" id="sbCount">13 topics</span>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Foundations</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Foundations" data-goto="algebra">
+          <span class="sl-icon">𝑥</span> Algebra <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Foundations" data-goto="sequences">
+          <span class="sl-icon">∑</span> Sequences &amp; Series <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Calculus</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Calculus" data-goto="limits">
+          <span class="sl-icon">lim</span> Limits <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Calculus" data-goto="differentiation">
+          <span class="sl-icon">d/dx</span> Differentiation <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Calculus" data-goto="integration">
+          <span class="sl-icon">∫</span> Integration <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Geometry</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Geometry" data-goto="trigonometry">
+          <span class="sl-icon">△</span> Trigonometry <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Geometry" data-goto="vectors">
+          <span class="sl-icon">→</span> Vectors <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Geometry" data-goto="conics">
+          <span class="sl-icon">○</span> Conics <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Linear Algebra</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Linear Algebra" data-goto="matrices">
+          <span class="sl-icon">[ ]</span> Matrices <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Statistics &amp; Data</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Statistics" data-goto="statistics">
+          <span class="sl-icon">σ</span> Statistics <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Mensuration</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Mensuration" data-goto="areas">
+          <span class="sl-icon">□</span> Areas <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Mensuration" data-goto="volumes">
+          <span class="sl-icon">⬡</span> Volumes <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sg-label">Advanced</div>
+        <a class="sidebar-link" href="#" data-sidebar-filter="Advanced" data-goto="complex">
+          <span class="sl-icon">i</span> Complex Numbers <span class="sl-visited" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div><!-- /sidebar-panel -->
+
+    <!-- Progress mini -->
+    <div class="progress-mini" id="progressMini">
+      <div class="pm-head">
+        <span class="pm-label">Your Progress</span>
+      </div>
+      <div class="pm-body">
+        <div class="pm-track"><div class="pm-fill" id="pmFill" style="width:0%"></div></div>
+        <p class="pm-text" id="pmText">0 / 13 topics visited</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── CONTENT AREA ── -->
+  <section aria-labelledby="lessons-section-heading">
+    <h2 id="lessons-section-heading" class="sr-only">All Mathematics Lessons</h2>
+
+    <!-- ADVANCED TOOLBAR -->
+    <div class="toolbar" role="region" aria-label="Filter, search and sort lessons">
+
+      <!-- Row 1: search + sort + view -->
+      <div class="toolbar-top">
+        <div class="toolbar-search" role="search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <label for="lessonSearch" class="sr-only">Search lessons</label>
+          <input type="search" id="lessonSearch" placeholder="Search by topic, concept, keyword…" autocomplete="off">
+          <button class="ts-clear" id="searchClear" aria-label="Clear search">✕</button>
+        </div>
+        <div class="sort-row">
+          <span class="sort-label">Sort:</span>
+          <select class="sort-select" id="sortSelect" aria-label="Sort lessons">
+            <option value="default">Default</option>
+            <option value="az">A → Z</option>
+            <option value="difficulty-asc">Easier first</option>
+            <option value="difficulty-desc">Harder first</option>
+          </select>
+          <div class="view-toggles" role="group" aria-label="View mode">
+            <button class="view-btn active" id="gridViewBtn" data-view="grid" aria-label="Grid view" title="Grid view">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6" height="6" rx="1"/><rect x="10" y="0" width="6" height="6" rx="1"/><rect x="0" y="10" width="6" height="6" rx="1"/><rect x="10" y="10" width="6" height="6" rx="1"/></svg>
+            </button>
+            <button class="view-btn" id="listViewBtn" data-view="list" aria-label="List view" title="List view">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="1" width="16" height="2.5" rx="1"/><rect x="0" y="6.5" width="16" height="2.5" rx="1"/><rect x="0" y="12" width="16" height="2.5" rx="1"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbar-divider"></div>
+
+      <!-- Row 2: filter pills -->
+      <div class="toolbar-filters" role="group" aria-label="Filter by strand">
+        <button class="filter-btn active" data-filter="all">
+          All Topics <span class="fbadge">13</span>
+        </button>
+        <button class="filter-btn" data-filter="Foundations">
+          Foundations <span class="fbadge">2</span>
+        </button>
+        <button class="filter-btn" data-filter="Calculus">
+          Calculus <span class="fbadge">3</span>
+        </button>
+        <button class="filter-btn" data-filter="Geometry">
+          Geometry <span class="fbadge">3</span>
+        </button>
+        <button class="filter-btn" data-filter="Linear Algebra">
+          Linear Algebra <span class="fbadge">1</span>
+        </button>
+        <button class="filter-btn" data-filter="Statistics">
+          Statistics <span class="fbadge">1</span>
+        </button>
+        <button class="filter-btn" data-filter="Mensuration">
+          Mensuration <span class="fbadge">2</span>
+        </button>
+        <button class="filter-btn" data-filter="Advanced">
+          Advanced <span class="fbadge">1</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Results status bar -->
+    <div class="results-status" id="resultsStatus" aria-live="polite">
+      <span class="results-count" id="resultsCount">Showing <strong>13</strong> topics</span>
+      <span id="activeFilterTag" style="display:none"></span>
+    </div>
+
+    <!-- CARDS GRID -->
+    <div class="lessons-grid" id="lessonsGrid" role="list">
+
+      <!-- ALGEBRA -->
+      <article class="lesson-card lc-algebra" id="card-algebra"
+               data-category="Foundations" data-name="Algebra"
+               data-difficulty="2"
+               data-keywords="algebra equations expressions factorization linear quadratic logarithm exponent simultaneous"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">𝑥</div>
+          <div class="card-meta">
+            <span class="card-strand">Foundations · Pure Maths</span>
+            <h3 class="card-title">Algebra</h3>
+            <span class="card-diff diff-2">Intermediate</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>2x² + 5x − 3 = 0</code>
+          <span class="preview-arrow" aria-hidden="true">→</span>
+          <code class="preview-ans">x = ½, −3</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Linear &amp; quadratic equations</li>
+            <li>Simultaneous equations</li>
+            <li>Logarithms &amp; exponents</li>
+            <li>Factorisation methods</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="algebra.html" class="card-btn" data-lesson="Algebra">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- TRIGONOMETRY -->
+      <article class="lesson-card lc-trig" id="card-trigonometry"
+               data-category="Geometry" data-name="Trigonometry"
+               data-difficulty="2"
+               data-keywords="trigonometry sine cosine tangent identities triangle unit circle angles"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">△</div>
+          <div class="card-meta">
+            <span class="card-strand">Geometry · Pure Maths</span>
+            <h3 class="card-title">Trigonometry</h3>
+            <span class="card-diff diff-2">Intermediate</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>sin²θ + cos²θ</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">1</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Sine, cosine &amp; tangent ratios</li>
+            <li>Identities &amp; unit circle</li>
+            <li>Sine rule &amp; cosine rule</li>
+            <li>Trigonometric equations</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="trigonometry.html" class="card-btn" data-lesson="Trigonometry">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- STATISTICS -->
+      <article class="lesson-card lc-statistics" id="card-statistics"
+               data-category="Statistics" data-name="Statistics"
+               data-difficulty="1"
+               data-keywords="statistics probability distributions data averages mean median mode standard deviation"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">σ</div>
+          <div class="card-meta">
+            <span class="card-strand">Applied Maths · Data</span>
+            <h3 class="card-title">Statistics</h3>
+            <span class="card-diff diff-1">Foundational</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>Mean[2,4,6,8]</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">5</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Mean, median &amp; mode</li>
+            <li>Standard deviation</li>
+            <li>Probability &amp; distributions</li>
+            <li>Data representation</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="statistics.html" class="card-btn" data-lesson="Statistics">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- LIMITS -->
+      <article class="lesson-card lc-limits" id="card-limits"
+               data-category="Calculus" data-name="Limits"
+               data-difficulty="3"
+               data-keywords="limits continuity l'hopital one-sided calculus approaching"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">lim</div>
+          <div class="card-meta">
+            <span class="card-strand">Calculus</span>
+            <h3 class="card-title">Limits</h3>
+            <span class="card-diff diff-3">Advanced</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>lim x→0 sin(x)/x</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">1</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Definition of a limit</li>
+            <li>One-sided limits</li>
+            <li>Continuity of functions</li>
+            <li>L'Hôpital's Rule</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="limits.html" class="card-btn" data-lesson="Limits">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- DIFFERENTIATION -->
+      <article class="lesson-card lc-diff" id="card-differentiation"
+               data-category="Calculus" data-name="Differentiation"
+               data-difficulty="3"
+               data-keywords="differentiation calculus derivatives rates change optimization chain rule product rule"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">d/dx</div>
+          <div class="card-meta">
+            <span class="card-strand">Calculus</span>
+            <h3 class="card-title">Differentiation</h3>
+            <span class="card-diff diff-3">Advanced</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>d/dx (x⁴)</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">4x³</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Power, product &amp; chain rules</li>
+            <li>Rates of change</li>
+            <li>Turning points &amp; optimisation</li>
+            <li>Implicit differentiation</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="differentiation.html" class="card-btn" data-lesson="Differentiation">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- INTEGRATION -->
+      <article class="lesson-card lc-integration" id="card-integration"
+               data-category="Calculus" data-name="Integration"
+               data-difficulty="3"
+               data-keywords="integration calculus area curves fundamental theorem substitution definite indefinite"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">∫</div>
+          <div class="card-meta">
+            <span class="card-strand">Calculus</span>
+            <h3 class="card-title">Integration</h3>
+            <span class="card-diff diff-3">Advanced</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>∫ 3x² dx</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">x³ + C</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Indefinite integration</li>
+            <li>Definite integrals</li>
+            <li>Area under a curve</li>
+            <li>Integration by substitution</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="integration.html" class="card-btn" data-lesson="Integration">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- VECTORS -->
+      <article class="lesson-card lc-vectors" id="card-vectors"
+               data-category="Geometry" data-name="Vectors"
+               data-difficulty="2"
+               data-keywords="vectors magnitude direction dot products position vector addition subtraction"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">→</div>
+          <div class="card-meta">
+            <span class="card-strand">Geometry · Pure Maths</span>
+            <h3 class="card-title">Vectors</h3>
+            <span class="card-diff diff-2">Intermediate</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>|AB⃗|</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">√(x²+y²)</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Vector addition &amp; subtraction</li>
+            <li>Magnitude &amp; direction</li>
+            <li>Dot product</li>
+            <li>Position vectors</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="vectors.html" class="card-btn" data-lesson="Vectors">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- MATRICES -->
+      <article class="lesson-card lc-matrices" id="card-matrices"
+               data-category="Linear Algebra" data-name="Matrices"
+               data-difficulty="2"
+               data-keywords="matrices determinants transformations linear systems operations inverse"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">[ ]</div>
+          <div class="card-meta">
+            <span class="card-strand">Linear Algebra · Pure Maths</span>
+            <h3 class="card-title">Matrices</h3>
+            <span class="card-diff diff-2">Intermediate</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>det(A)</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">ad − bc</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Matrix operations</li>
+            <li>Determinants &amp; inverses</li>
+            <li>Solving linear systems</li>
+            <li>Geometric transformations</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="matrices.html" class="card-btn" data-lesson="Matrices">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CONICS -->
+      <article class="lesson-card lc-conics" id="card-conics"
+               data-category="Geometry" data-name="Conics"
+               data-difficulty="3"
+               data-keywords="conics circles ellipses parabolas hyperbolas focus directrix standard form"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">○</div>
+          <div class="card-meta">
+            <span class="card-strand">Geometry · Pure Maths</span>
+            <h3 class="card-title">Conic Sections</h3>
+            <span class="card-diff diff-3">Advanced</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>x²/a² + y²/b²</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">1</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Circles &amp; ellipses</li>
+            <li>Parabolas &amp; hyperbolas</li>
+            <li>Standard form equations</li>
+            <li>Focus &amp; directrix</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="conics.html" class="card-btn" data-lesson="Conics">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- SEQUENCES -->
+      <article class="lesson-card lc-sequences" id="card-sequences"
+               data-category="Foundations" data-name="Sequences and Series"
+               data-difficulty="2"
+               data-keywords="sequences series arithmetic geometric convergence sum progressions"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">∑</div>
+          <div class="card-meta">
+            <span class="card-strand">Foundations · Pure Maths</span>
+            <h3 class="card-title">Sequences &amp; Series</h3>
+            <span class="card-diff diff-2">Intermediate</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>Sn = n/2(a+l)</code>
+          <span class="preview-arrow" aria-hidden="true">→</span>
+          <code class="preview-ans">AP Sum</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Arithmetic progressions</li>
+            <li>Geometric progressions</li>
+            <li>Sum of series</li>
+            <li>Convergence tests</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="sequences.html" class="card-btn" data-lesson="Sequences">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- COMPLEX NUMBERS -->
+      <article class="lesson-card lc-complex" id="card-complex"
+               data-category="Advanced" data-name="Complex Numbers"
+               data-difficulty="3"
+               data-keywords="complex numbers imaginary argand modulus argument real parts arithmetic"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">i</div>
+          <div class="card-meta">
+            <span class="card-strand">Advanced · Pure Maths</span>
+            <h3 class="card-title">Complex Numbers</h3>
+            <span class="card-diff diff-3">Advanced</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>i²</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">−1</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Real &amp; imaginary parts</li>
+            <li>Argand diagrams</li>
+            <li>Modulus &amp; argument</li>
+            <li>Complex arithmetic</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="complex.html" class="card-btn" data-lesson="Complex Numbers">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- AREAS -->
+      <article class="lesson-card lc-areas" id="card-areas"
+               data-category="Mensuration" data-name="Areas"
+               data-difficulty="1"
+               data-keywords="areas shapes formulas mensuration plane figures surface composite sector"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">□</div>
+          <div class="card-meta">
+            <span class="card-strand">Mensuration · Applied Maths</span>
+            <h3 class="card-title">Areas</h3>
+            <span class="card-diff diff-1">Foundational</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>Area △</code>
+          <span class="preview-arrow" aria-hidden="true">=</span>
+          <code class="preview-ans">½ bh</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Area of plane shapes</li>
+            <li>Composite figures</li>
+            <li>Surface area of solids</li>
+            <li>Sector &amp; segment area</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="areas.html" class="card-btn" data-lesson="Areas">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- VOLUMES -->
+      <article class="lesson-card lc-volumes" id="card-volumes"
+               data-category="Mensuration" data-name="Volumes"
+               data-difficulty="1"
+               data-keywords="volumes solids 3d mensuration prisms cylinders cones spheres pyramids"
+               role="listitem">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">⬡</div>
+          <div class="card-meta">
+            <span class="card-strand">Mensuration · Applied Maths</span>
+            <h3 class="card-title">Volumes</h3>
+            <span class="card-diff diff-1">Foundational</span>
+          </div>
+        </div>
+        <div class="card-preview">
+          <code>V = πr²h</code>
+          <span class="preview-arrow" aria-hidden="true">→</span>
+          <code class="preview-ans">Cylinder</code>
+        </div>
+        <div class="card-body">
+          <ul class="card-topics">
+            <li>Prisms &amp; cylinders</li>
+            <li>Pyramids &amp; cones</li>
+            <li>Spheres &amp; hemispheres</li>
+            <li>Composite solids</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="visited-badge">✓ Visited</span>
+          <a href="volumes.html" class="card-btn" data-lesson="Volumes">
+            Start <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- NO RESULTS -->
+      <div class="no-results" id="noResults" role="alert" aria-live="polite">
+        <div class="nr-icon">🔍</div>
+        <p class="nr-msg">No lessons found</p>
+        <p class="nr-sub" id="nrSub">Try a different search or filter.</p>
+        <button class="nr-reset" id="nrReset">Show all lessons</button>
+      </div>
+
+    </div><!-- /lessons-grid -->
+  </section>
+
+</div><!-- /page-layout -->
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>Ready to Test Your Skills?</h2>
+    <p>Work through practice problems, track your scores, and challenge yourself with brain games — all completely free, no account required.</p>
+    <div class="cta-btns">
+      <a href="tasks.html" class="btn-cta-p">Practice Problems</a>
+      <a href="ask-mwalimu.html" class="btn-cta-s">Ask Mwalimu</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+      <p class="footer-contact">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <div class="fn-col">
+      <h4>Lessons</h4>
+      <ul>
+        <li><a href="algebra.html">Algebra</a></li>
+        <li><a href="trigonometry.html">Trigonometry</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+        <li><a href="limits.html">Limits</a></li>
+        <li><a href="differentiation.html">Differentiation</a></li>
+        <li><a href="integration.html">Integration</a></li>
+        <li><a href="vectors.html">Vectors</a></li>
+        <li><a href="matrices.html">Matrices</a></li>
+        <li><a href="conics.html">Conic Sections</a></li>
+        <li><a href="sequences.html">Sequences &amp; Series</a></li>
+        <li><a href="complex.html">Complex Numbers</a></li>
+        <li><a href="areas.html">Areas</a></li>
+        <li><a href="volumes.html">Volumes</a></li>
+      </ul>
+    </div>
+    <div class="fn-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="math-lessons.html">All Lessons</a></li>
+        <li><a href="tasks.html">Practice Problems</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      </ul>
+    </div>
+    <div class="fn-col">
+      <h4>My Learning</h4>
+      <ul>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About Mwalimu Ronny</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p style="font-style:italic;color:rgba(255,228,196,.18)">Helping Kenyan students master mathematics through clear, structured, CBC-aligned instruction.</p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- SCRIPTS -->
+<script src="shared.js"></script>
+<script src="topic.js"></script>
+<script>
+"use strict";
+
+/* ── SEARCH DATA ── */
+const SITE_PAGES = [
+  { name:"Algebra", url:"algebra.html", type:"Lesson", icon:"𝑥", keywords:["algebra","linear","quadratic","logarithm","factorisation","simultaneous"] },
+  { name:"Trigonometry", url:"trigonometry.html", type:"Lesson", icon:"△", keywords:["trigonometry","sine","cosine","tangent","identity","angles","trig"] },
+  { name:"Statistics", url:"statistics.html", type:"Lesson", icon:"σ", keywords:["statistics","mean","median","mode","probability","distribution"] },
+  { name:"Limits", url:"limits.html", type:"Lesson", icon:"lim", keywords:["limits","continuity","l'hopital","calculus"] },
+  { name:"Differentiation", url:"differentiation.html", type:"Lesson", icon:"d/dx", keywords:["differentiation","derivative","chain rule","rates of change"] },
+  { name:"Integration", url:"integration.html", type:"Lesson", icon:"∫", keywords:["integration","integral","area","substitution"] },
+  { name:"Vectors", url:"vectors.html", type:"Lesson", icon:"→", keywords:["vectors","magnitude","direction","dot product"] },
+  { name:"Matrices", url:"matrices.html", type:"Lesson", icon:"[]", keywords:["matrices","determinant","inverse","transformation"] },
+  { name:"Conic Sections", url:"conics.html", type:"Lesson", icon:"○", keywords:["conics","circle","ellipse","parabola","hyperbola"] },
+  { name:"Sequences & Series", url:"sequences.html", type:"Lesson", icon:"∑", keywords:["sequences","series","arithmetic","geometric","sum"] },
+  { name:"Complex Numbers", url:"complex.html", type:"Lesson", icon:"i", keywords:["complex","imaginary","argand","modulus","argument"] },
+  { name:"Areas", url:"areas.html", type:"Lesson", icon:"□", keywords:["areas","plane shapes","surface area","sector"] },
+  { name:"Volumes", url:"volumes.html", type:"Lesson", icon:"⬡", keywords:["volumes","cylinder","cone","sphere","prism"] },
+  { name:"Practice Problems", url:"tasks.html", type:"Practice", icon:"✏", keywords:["practice","exercises","problems"] },
+  { name:"Brain Games", url:"mind.html", type:"Games", icon:"🧠", keywords:["games","puzzles","brain"] },
+  { name:"Ask Mwalimu", url:"ask-mwalimu.html", type:"Feature", icon:"💬", keywords:["ask","help","stuck","question"] },
+];
+
+/* ══════════════════════════════════════════
+   NAV / HAMBURGER / DROPDOWN
+   ► Handled exclusively by shared.js ◄
+══════════════════════════════════════════ */
+
+const PROGRESS_KEY = "bestronny_progress";
+
+function getProgress() {
+  try { const r = localStorage.getItem(PROGRESS_KEY); return r ? JSON.parse(r) : { visited:[], timestamps:{} }; }
+  catch(e) { return { visited:[], timestamps:{} }; }
+}
+function saveProgress(d) {
+  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(d)); } catch(e) {}
+}
+function markVisited(lesson) {
+  const d = getProgress();
+  if (!d.visited.includes(lesson)) d.visited.push(lesson);
+  d.timestamps[lesson] = new Date().toISOString();
+  saveProgress(d);
+  return d;
+}
+
+function showToast(msg, dur=2400) {
+  const t = document.getElementById("toast");
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), dur);
+}
+
+function escHtml(s) {
+  return s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function highlight(text, q) {
+  return escHtml(text).replace(new RegExp(`(${escHtml(q).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")})`, 'gi'), '<mark>$1</mark>');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ── Apply visited state ── */
+  function applyVisited() {
+    const d = getProgress();
+    document.querySelectorAll(".card-btn[data-lesson]").forEach(btn => {
+      if (d.visited.includes(btn.dataset.lesson)) {
+        btn.closest(".lesson-card").classList.add("visited");
+        btn.innerHTML = 'Continue <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+      }
+    });
+    updateSidebarVisited(d);
+    updateProgressMini(d);
+  }
+
+  function updateSidebarVisited(d) {
+    document.querySelectorAll(".sidebar-link[data-goto]").forEach(link => {
+      const key  = link.dataset.goto;
+      const card = document.getElementById("card-" + key);
+      if (!card) return;
+      const btn  = card.querySelector(".card-btn[data-lesson]");
+      if (btn && d.visited.includes(btn.dataset.lesson)) {
+        link.classList.add("visited");
+        const dot = link.querySelector(".sl-visited");
+        if (dot) dot.style.display = "block";
+      }
+    });
+  }
+
+  function updateProgressMini(d) {
+    const count = d.visited.length;
+    const total = 13;
+    if (count === 0) return;
+    const mini = document.getElementById("progressMini");
+    const fill = document.getElementById("pmFill");
+    const text = document.getElementById("pmText");
+    if (mini) mini.classList.add("visible");
+    if (fill) fill.style.width = Math.round((count / total) * 100) + "%";
+    if (text) text.textContent = count + " / " + total + " topics visited";
+  }
+
+  applyVisited();
+
+  /* ── Track lesson clicks ── */
+  document.querySelectorAll(".card-btn[data-lesson]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      markVisited(btn.dataset.lesson);
+      applyVisited();
+    });
+  });
+
+  /* ── Nav search bar (global search in sticky nav) ──
+     shared.js owns the hamburger. This block only handles
+     the search input/results in the nav search bar.        */
+  const searchToggle = document.getElementById("searchToggle");
+  const navSearchBar = document.getElementById("navSearchBar");
+  const globalSearch = document.getElementById("globalSearch");
+  const globalClear  = document.getElementById("globalSearchClear");
+  const resultsDD    = document.getElementById("searchResultsDropdown");
+
+  if (searchToggle && navSearchBar && globalSearch) {
+
+    searchToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !navSearchBar.hidden;
+      navSearchBar.hidden = isOpen;
+      searchToggle.setAttribute("aria-expanded", String(!isOpen));
+      if (!isOpen) {
+        globalSearch.focus();
+      } else {
+        globalSearch.value = "";
+        if (resultsDD)   resultsDD.hidden   = true;
+        if (globalClear) globalClear.hidden = true;
+      }
+    });
+
+    navSearchBar.addEventListener("click", (e) => e.stopPropagation());
+
+    globalSearch.addEventListener("input", () => {
+      const q = globalSearch.value.trim().toLowerCase();
+      if (globalClear) globalClear.hidden = !q;
+      if (q.length < 2) { if (resultsDD) resultsDD.hidden = true; return; }
+
+      const matches = SITE_PAGES.filter(p =>
+        p.name.toLowerCase().includes(q) || p.keywords.some(k => k.includes(q))
+      ).slice(0, 8);
+
+      if (!resultsDD) return;
+      if (matches.length === 0) {
+        resultsDD.innerHTML = `<p class="sr-none">No results for "<strong>${escHtml(q)}</strong>"</p>`;
+      } else {
+        resultsDD.innerHTML = matches.map(m => `
+          <a href="${m.url}" class="sr-item" role="option">
+            <div class="sr-icon">${m.icon}</div>
+            <div><span class="sr-name">${highlight(m.name, q)}</span><span class="sr-type">${m.type}</span></div>
+          </a>`).join("");
+      }
+      resultsDD.hidden = false;
+    });
+
+    if (globalClear) {
+      globalClear.addEventListener("click", () => {
+        globalSearch.value = "";
+        if (resultsDD)   resultsDD.hidden   = true;
+        if (globalClear) globalClear.hidden = true;
+        globalSearch.focus();
+      });
+    }
+
+    /* Close search results when clicking outside */
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".nav-search-bar") && resultsDD) {
+        resultsDD.hidden = true;
+      }
+    });
+
+    globalSearch.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        navSearchBar.hidden = true;
+        searchToggle.setAttribute("aria-expanded", "false");
+      }
+      if (e.key === "ArrowDown" && resultsDD && !resultsDD.hidden) {
+        const first = resultsDD.querySelector(".sr-item");
+        if (first) { first.focus(); e.preventDefault(); }
+      }
+    });
+
+    if (resultsDD) {
+      resultsDD.addEventListener("keydown", (e) => {
+        const items = [...resultsDD.querySelectorAll(".sr-item")];
+        const idx   = items.indexOf(document.activeElement);
+        if (e.key === "ArrowDown" && idx < items.length - 1) { items[idx+1].focus(); e.preventDefault(); }
+        if (e.key === "ArrowUp")  { idx > 0 ? items[idx-1].focus() : globalSearch.focus(); e.preventDefault(); }
+        if (e.key === "Escape")   { navSearchBar.hidden = true; searchToggle.setAttribute("aria-expanded","false"); }
+      });
+    }
+  }
+
+  /* ── Toolbar: search, filter, sort, view ── */
+  const lessonSearch    = document.getElementById("lessonSearch");
+  const searchClearBtn  = document.getElementById("searchClear");
+  const sortSelect      = document.getElementById("sortSelect");
+  const lessonsGrid     = document.getElementById("lessonsGrid");
+  const noResults       = document.getElementById("noResults");
+  const nrSub           = document.getElementById("nrSub");
+  const nrReset         = document.getElementById("nrReset");
+  const resultsCount    = document.getElementById("resultsCount");
+  const activeFilterTag = document.getElementById("activeFilterTag");
+
+  let currentFilter = "all";
+  let currentSort   = "default";
+  let currentView   = "grid";
+  let currentSearch = "";
+
+  function allCards() {
+    return [...lessonsGrid.querySelectorAll(".lesson-card")];
+  }
+
+  function applyAll() {
+    const q     = currentSearch.toLowerCase();
+    const cards = allCards();
+
+    cards.forEach(card => {
+      let show = true;
+      if (currentFilter !== "all" && card.dataset.category !== currentFilter) show = false;
+      if (q) {
+        const text = (
+          (card.dataset.keywords || "") + " " +
+          (card.dataset.name     || "") + " " +
+          (card.querySelector(".card-title")?.textContent || "")
+        ).toLowerCase();
+        if (!text.includes(q)) show = false;
+      }
+      card.classList.toggle("hidden", !show);
+    });
+
+    /* Sort visible cards */
+    const visible = cards.filter(c => !c.classList.contains("hidden"));
+    if (currentSort !== "default") {
+      visible.sort((a, b) => {
+        if (currentSort === "az")              return a.dataset.name.localeCompare(b.dataset.name);
+        if (currentSort === "difficulty-asc")  return +a.dataset.difficulty - +b.dataset.difficulty;
+        if (currentSort === "difficulty-desc") return +b.dataset.difficulty - +a.dataset.difficulty;
+        return 0;
+      });
+      visible.forEach(c => lessonsGrid.insertBefore(c, noResults));
+    }
+
+    /* Update count */
+    const vCount = visible.length;
+    if (resultsCount) {
+      resultsCount.innerHTML = `Showing <strong>${vCount}</strong> topic${vCount !== 1 ? "s" : ""}`;
+    }
+
+    /* No results state */
+    if (noResults) {
+      noResults.classList.toggle("visible", vCount === 0);
+      if (vCount === 0 && nrSub) {
+        nrSub.textContent = q ? `No results for "${q}".` : "No topics in this category.";
+      }
+    }
+
+    /* Active filter tag */
+    if (activeFilterTag) {
+      if (currentFilter !== "all") {
+        activeFilterTag.style.display = "inline-flex";
+        activeFilterTag.innerHTML = `${currentFilter} <button class="aft-remove" aria-label="Remove filter" id="removeFilter">✕</button>`;
+        document.getElementById("removeFilter")?.addEventListener("click", () => {
+          setFilter("all");
+          document.querySelector('[data-filter="all"]')?.classList.add("active");
+        });
+      } else {
+        activeFilterTag.style.display = "none";
+      }
+    }
+
+    /* Sidebar count */
+    const sbCount = document.getElementById("sbCount");
+    if (sbCount) sbCount.textContent = vCount + " topic" + (vCount !== 1 ? "s" : "");
+  }
+
+  function setFilter(f) {
+    currentFilter = f;
+    document.querySelectorAll(".filter-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.filter === f)
+    );
+    document.querySelectorAll(".sidebar-link[data-sidebar-filter]").forEach(l =>
+      l.classList.toggle("active", l.dataset.sidebarFilter === f)
+    );
+    applyAll();
+  }
+
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => setFilter(btn.dataset.filter));
+  });
+
+  document.querySelectorAll(".sidebar-link[data-sidebar-filter]").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      setFilter(link.dataset.sidebarFilter);
+      if (window.innerWidth < 860) {
+        document.getElementById("main-content")?.scrollIntoView({ behavior:"smooth", block:"start" });
+      }
+    });
+  });
+
+  if (lessonSearch) {
+    lessonSearch.addEventListener("input", () => {
+      currentSearch = lessonSearch.value.trim();
+      if (searchClearBtn) searchClearBtn.classList.toggle("visible", currentSearch.length > 0);
+      applyAll();
+    });
+    lessonSearch.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        lessonSearch.value = "";
+        currentSearch = "";
+        if (searchClearBtn) searchClearBtn.classList.remove("visible");
+        applyAll();
+      }
+    });
+  }
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener("click", () => {
+      if (lessonSearch) lessonSearch.value = "";
+      currentSearch = "";
+      searchClearBtn.classList.remove("visible");
+      applyAll();
+      lessonSearch?.focus();
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", () => {
+      currentSort = sortSelect.value;
+      applyAll();
+    });
+  }
+
+  if (nrReset) {
+    nrReset.addEventListener("click", () => {
+      if (lessonSearch) lessonSearch.value = "";
+      currentSearch = "";
+      if (searchClearBtn) searchClearBtn.classList.remove("visible");
+      setFilter("all");
+      if (sortSelect) sortSelect.value = "default";
+      currentSort = "default";
+      applyAll();
+    });
+  }
+
+  /* ── View toggle (grid / list) ── */
+  document.querySelectorAll(".view-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".view-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentView = btn.dataset.view;
+      lessonsGrid?.classList.toggle("view-list", currentView === "list");
+    });
+  });
+
+  /* ── Scroll-reveal entrance animation ── */
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity    = "1";
+            entry.target.style.transform  = "translateY(0)";
+          }, i * 40);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+
+    allCards().forEach(c => {
+      c.style.opacity    = "0";
+      c.style.transform  = "translateY(14px)";
+      c.style.transition = "opacity .4s ease, transform .4s ease";
+      io.observe(c);
+    });
+  }
+
+  /* ── 3-D card tilt (pointer hover devices only) ── */
+  if (window.matchMedia("(hover: hover)").matches) {
+    allCards().forEach(card => {
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - 0.5) * 6;
+        const y = ((e.clientY - r.top)  / r.height - 0.5) * 6;
+        card.style.transform = `perspective(900px) rotateX(${-y}deg) rotateY(${x}deg) translateY(-5px)`;
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+      });
+    });
+  }
+
+  /* Run initial filter/sort */
+  applyAll();
+
+}); /* end DOMContentLoaded */
+</script>
+</body>
+</html>

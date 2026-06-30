@@ -1,6 +1,6 @@
 # Ronny Best Mathematics
 
-> Free, step-by-step math lessons for high school and college students — algebra, trigonometry, calculus, and statistics, all available.
+> Free, CBC-aligned mathematics lessons for secondary school and college students in Kenya — algebra, trigonometry, calculus, statistics, and more.
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-bestronny.netlify.app-blue?style=flat-square&logo=netlify)](https://bestronny.netlify.app)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)]()
@@ -10,54 +10,74 @@
 
 ## Overview
 
-**Ronny Best Mathematics** is a free educational web platform designed to help students master mathematics through clear, structured lessons and worked examples. No sign-up, no subscription — just straightforward learning.
+**Ronny Best Mathematics** is a free educational web platform built and maintained by **Mwalimu Ronny Mwenda Best**, a Mathematics and Computer Science teacher based in Embu County, Kenya (B.Ed Science, University of Embu). The platform delivers structured, expert-led mathematics lessons fully aligned to Kenya's **Competency Based Curriculum (CBC)** as approved by KICD, TSC, and the Ministry of Education.
 
-The platform covers four core subject areas with 100+ worked examples and 50+ practice problems, all accessible 24/7 from any device.
+No sign-up, no subscription — just straightforward, curriculum-aligned learning, accessible to every student across Kenya.
+
+The platform covers **13 core mathematics topics** with 100+ worked examples and practice problems, all accessible 24/7 from any device.
 
 ---
 
 ## Features
 
-- **Step-by-Step Lessons** — Detailed walkthroughs for algebra, trigonometry, calculus, and statistics
-- **Worked Examples** — Real problems solved the way they appear in exams
-- **Practice Problems** — Graded exercises designed to mirror actual exam questions
-- **Brain Games** — Interactive activities to sharpen mathematical thinking
-- **Progress Tracking** — Monitor your learning journey and earn achievements
-- **Responsive Design** — Fully optimized for desktop and mobile devices
+- **Step-by-Step Lessons** — Detailed walkthroughs aligned to CBC Senior Secondary Mathematics strands
+- **100+ Worked Examples** — Real problems solved the way they appear in KCSE and Senior Secondary assessments
+- **Practice Problems** — Graded exercises designed to mirror actual exam question formats
+- **Brain Games** — Interactive activities to reinforce mathematical thinking
+- **Progress Tracking** — Monitor your learning journey and earn achievement badges
+- **Ask Mwalimu** — Submit questions and receive expert, step-by-step responses
+- **Responsive Design** — Fully optimised for desktop and mobile devices
 - **No Account Required** — Open access with zero barriers to learning
+- **AdSense-Compliant** — Auto Ads only; no manually placed ad units
 
 ---
 
-## Subjects Covered
+## Topics Covered
 
-| Subject | Topics |
+| Strand | Topics |
 |---|---|
-| **Algebra** | Linear equations, quadratic equations, systems of equations, exponents & logarithms |
-| **Trigonometry** | Sine/cosine/tangent ratios, unit circle, solving triangles, trigonometric equations |
-| **Calculus** | Limits & continuity, differentiation, integration, area & volume applications |
-| **Statistics** | Mean/median/mode, probability, standard deviation, data analysis |
+| **Foundations** | Algebra, Sequences & Series |
+| **Calculus** | Limits, Differentiation, Integration |
+| **Geometry** | Trigonometry, Vectors, Conic Sections |
+| **Linear Algebra** | Matrices |
+| **Statistics & Data** | Statistics & Probability |
+| **Mensuration** | Areas, Volumes |
+| **Advanced** | Complex Numbers |
+
+---
+
+## CBC Alignment
+
+All content is aligned to the **Kenya CBC Senior Secondary Mathematics curriculum**:
+
+- **KICD** — Kenya Institute of Curriculum Development standards
+- **TSC** — Teacher Service Commission competency frameworks
+- **MoE Kenya** — Ministry of Education Senior Secondary pathways (STEM, Arts & Sports Science, Social Sciences)
 
 ---
 
 ## Tech Stack
 
-- **HTML5** — Semantic page structure
-- **CSS3** — Responsive layouts and styling
-- **JavaScript** — Interactive tools and dynamic content
+- **HTML5** — Semantic, accessible page structure
+- **CSS3** — Responsive layouts, custom design tokens (navy + bisque palette)
+- **JavaScript** — Interactive filtering, search, progress tracking, toast notifications
+- **Google Fonts** — Playfair Display, Lora, DM Sans, JetBrains Mono
+- **Google AdSense** — Auto Ads (AdSense-compliant; no manually placed ad divs)
 - **Netlify** — Hosting and continuous deployment
 
 ---
 
 ## Getting Started
 
-No installation required. Simply visit the live site:
+No installation required. Visit the live site:
 
 **[https://bestronny.netlify.app](https://bestronny.netlify.app)**
 
-1. Navigate to **Math Lessons** to explore topics by subject
-2. Work through step-by-step examples at your own pace
+1. Navigate to **Math Lessons** to browse all 13 topics by strand
+2. Work through step-by-step lessons and worked examples at your own pace
 3. Test your understanding with **Practice Problems**
-4. Track your results under **Learning Progress**
+4. Submit questions via **Ask Mwalimu**
+5. Track your results under **My Progress**
 
 ---
 
@@ -65,65 +85,70 @@ No installation required. Simply visit the live site:
 
 ```
 bestronny/
-├── index.html          # Home page
-├── main/               # Math lessons
-├── tasks/              # Practice problems
-├── mind/               # Brain games
-├── achievements/       # User achievements
-├── progress/           # Learning progress tracker
-├── about/              # About page
-├── contact/            # Contact page
-├── privacy/            # Privacy policy
-└── terms/              # Terms & conditions
+├── index.html              # Home page
+├── index.css               # Homepage stylesheet
+├── index.js                # Homepage JavaScript
+├── shared.js               # Shared navigation and utilities
+├── math-lessons.html       # All lessons index page
+├── algebra.html            # Algebra lesson
+├── trigonometry.html       # Trigonometry lesson
+├── statistics.html         # Statistics lesson
+├── limits.html             # Limits lesson
+├── differentiation.html    # Differentiation lesson
+├── integration.html        # Integration lesson
+├── vectors.html            # Vectors lesson
+├── matrices.html           # Matrices lesson
+├── conics.html             # Conic Sections lesson
+├── sequences.html          # Sequences & Series lesson
+├── complex.html            # Complex Numbers lesson
+├── areas.html              # Areas lesson
+├── volumes.html            # Volumes lesson
+├── topic.css               # Shared stylesheet for all topic pages
+├── topic.js                # Shared JavaScript for all topic pages
+├── tasks.html              # Practice problems
+├── mind.html               # Brain games
+├── ask-mwalimu.html        # Ask Mwalimu feature
+├── achievements.html       # User achievements
+├── progress.html           # Learning progress tracker
+├── about.html              # About Mwalimu Ronny
+├── contact.html            # Contact page
+├── privacy.html            # Privacy policy
+└── terms.html              # Terms of use
 ```
 
 ---
 
-## AdSense Compliance Assessment
+## AdSense Compliance
 
-The site is well-positioned for Google AdSense approval. Key strengths:
+The site is built and maintained to meet Google AdSense Auto Ads requirements:
 
-✅ **Original educational content** — Substantial, high-quality math lessons  
-✅ **Clear navigation** — Intuitive site structure with logical page hierarchy  
-✅ **Privacy Policy & Terms pages** — Essential policy pages are present  
-✅ **Contact page** — Publisher contact information is accessible  
-✅ **Mobile responsive** — Renders correctly across screen sizes  
-✅ **Clean meta tags** — Proper SEO metadata (title, description, Open Graph)  
-✅ **No prohibited content** — Educational focus aligns with AdSense guidelines  
-
-**Recommendations before applying:**
-- Ensure each lesson/topic page has substantial unique content (300+ words)
-- Add an "About" page with more detail about the site's purpose and author
-- Verify the site has been live for at least a few weeks with consistent traffic
-- Make sure all navigation links resolve to complete, content-rich pages
-
----
-
-## What I Learned
-
-Building this project deepened my understanding of:
-
-- Structuring and deploying a real-world web application end-to-end
-- Writing clean, maintainable HTML, CSS, and JavaScript
-- Designing user-friendly interfaces for educational content
-- SEO best practices including meta tags and semantic markup
-- Deploying and managing a live project on Netlify
+✅ Original, substantial CBC-aligned educational content  
+✅ Clear site structure with logical page hierarchy  
+✅ Privacy Policy and Terms of Use pages present  
+✅ Contact page with publisher information  
+✅ Fully mobile responsive  
+✅ Clean semantic HTML with proper meta tags and Open Graph  
+✅ No prohibited content — educational focus fully compliant  
+✅ No manually placed ad `<div>` units — Auto Ads only  
 
 ---
 
 ## Author
 
-**Ronny Mwenda**  
-Self-taught web developer passionate about making mathematics accessible to everyone.
+**Ronny Mwenda Best (Mwalimu Ronny)**  
+Mathematics & Computer Science Teacher  
+B.Ed Science — University of Embu  
+Embu County, Kenya
 
 [![GitHub](https://img.shields.io/badge/GitHub-Ronnym1202-181717?style=flat-square&logo=github)](https://github.com/Ronnym1202)
 [![Email](https://img.shields.io/badge/Email-ronnymwenda89@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:ronnymwenda89@gmail.com)
+[![Site](https://img.shields.io/badge/Portfolio-ronnymwenda.netlify.app-0077B5?style=flat-square)](https://ronnymwenda.netlify.app)
 
 ---
 
 ## Contributing
 
-This is a personal learning project, but feedback and suggestions are welcome. Feel free to open an issue or reach out via email.
+This is an active personal and professional project. Feedback, corrections, and content suggestions are welcome. Feel free to open an issue or reach out via email.
 
 ---
 
@@ -133,4 +158,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-*Helping high school and college students master mathematics through clear, step-by-step explanations — completely free.*
+*Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction — completely free.*

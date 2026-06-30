@@ -5,10 +5,10 @@ os.makedirs(OUT, exist_ok=True)
 
 # ── shared nav / footer fragments ─────────────────────────────────────────────
 NAV = """<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
+  <a href="../math-lessons.html" class="nav-logo">Ronny Best <span>∑</span></a>
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
+    <li><a href="../math-lessons.html" class="active">Lessons</a></li>
     <li><a href="../tasks.html">Practice</a></li>
     <li><a href="../achievements.html">Achievements</a></li>
     <li><a href="../contact.html" class="nav-cta">Contact</a></li>
@@ -18,7 +18,7 @@ NAV = """<nav class="site-nav">
 FOOTER = """<footer>
   <p>
     <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
+    <a href="../math-lessons.html">Math Lessons</a> &middot;
     <a href="../tasks.html">Practice</a> &middot;
     <a href="../about.html">About</a> &middot;
     <a href="../privacy.html">Privacy Policy</a> &middot;
@@ -88,7 +88,7 @@ def wrap(hero_icon, topic_title, hero_sub, levels, breadcrumb_label, toc_html, c
 </section>
 
 <div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>{breadcrumb_label}</strong>
+  <a href="../math-lessons.html">Math Lessons</a> &rsaquo; <strong>{breadcrumb_label}</strong>
 </div>
 
 {AD_SLOT("9901000001")}
@@ -594,7 +594,7 @@ topics.append({
     "breadcrumb": "Trigonometry",
     "toc": trig_toc,
     "content": trig_content,
-    "prev_link": "../main.html",
+    "prev_link": "../math-lessons.html",
     "prev_label": "All Topics",
     "next_link": "algebra.html",
     "next_label": "Algebra",
@@ -2544,7 +2544,7 @@ simple_topic(
 # ══════════════════════ 13. SEQUENCES & SERIES ══════════════════════
 simple_topic(
   "sequences.html","Sequences & Series","∑","From arithmetic sequences to power series","Sequences & Series",
-  "complex.html","Complex Numbers","../main.html","All Topics","sequences",
+  "complex.html","Complex Numbers","../math-lessons.html","All Topics","sequences",
   """
       <li class="toc-level">Beginner</li>
       <li><a href="#seq-intro">Sequences</a></li>

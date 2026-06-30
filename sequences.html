@@ -1,227 +1,1339 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sequences & Series | Ronny Best Mathematics</title>
-  <meta name="description" content="From arithmetic sequences to power series">
+  <title>Sequences &amp; Series | Ronny Best Mathematics — CBC Kenya</title>
+  <meta name="description" content="Master Sequences and Series with Mwalimu Ronny — comprehensive CBC/KICD-aligned lessons covering arithmetic progressions, geometric progressions, special series, convergence tests, and power series. Free, step-by-step worked examples for Kenyan secondary school and university students.">
+  <meta name="keywords" content="sequences series Kenya CBC, arithmetic progression KCSE, geometric progression Kenya, convergence tests university, power series Maclaurin, KICD mathematics sequences, Senior Secondary maths Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/sequences.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sequences &amp; Series | Ronny Best Mathematics">
+  <meta property="og:description" content="Free, comprehensive CBC-aligned Sequences &amp; Series lessons with 35+ worked examples for Kenyan students — arithmetic, geometric, special series, convergence, power series.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/sequences.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Shared stylesheet for all topic pages -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Sequences and Series — CBC-Aligned Mathematics Lesson",
+    "description": "A comprehensive, step-by-step lesson on Sequences and Series for Kenyan secondary school and university students, aligned to the KICD CBC mathematics curriculum.",
+    "url": "https://bestronny.netlify.app/sequences.html",
+    "educationalLevel": "Secondary, Senior Secondary, University",
+    "learningResourceType": "Lesson",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    },
+    "inLanguage": "en",
+    "isPartOf": { "@type": "Course", "name": "CBC Senior Secondary Mathematics" },
+    "teaches": ["Arithmetic Progressions", "Geometric Progressions", "Summation Formulas", "Convergence Tests", "Power Series", "Maclaurin Series"]
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">∑</span>
-  <h1>Sequences & Series</h1>
-  <p class="hero-sub">From arithmetic sequences to power series</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Sequences & Series</strong>
-</div>
+  <!-- ═══ SKIP LINK ═══ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+      </div>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+    </div>
+  </header>
 
-      <li class="toc-level">Beginner</li>
-      <li><a href="#seq-intro">Sequences</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#seq-arithmetic">Arithmetic Series</a></li>
-      <li><a href="#seq-geometric">Geometric Series</a></li>
-      <li><a href="#seq-special">Special Series</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#seq-convergence">Convergence Tests</a></li>
-      <li><a href="#seq-power">Power Series</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="seq-intro" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📋</span><h2>Sequences</h2><span class="level-badge badge-primary">Beginner</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <p>A sequence is an ordered list of numbers following a pattern. We denote the nth term as aₙ.</p>
-          <h3>Types of Sequences</h3>
-          <table class="formula-table">
-            <tr><th>Type</th><th>Rule</th><th>Example</th></tr>
-            <tr><td>Arithmetic</th><td>aₙ = a + (n−1)d</th><td>2, 5, 8, 11, ... (d=3)</th></tr>
-            <tr><td>Geometric</th><td>aₙ = arⁿ⁻¹</th><td>3, 6, 12, 24, ... (r=2)</th></tr>
-            <tr><td>Fibonacci</th><td>aₙ = aₙ₋₁ + aₙ₋₂</th><td>1,1,2,3,5,8,13,...</th></tr>
-            <tr><td>Quadratic</th><td>aₙ = an² + bn + c</th><td>1,4,9,16,25,... (perfect squares)</th></tr>
-          </table>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Find 15th term of 7, 11, 15, 19, ...</div>
-              <p class="soln">a=7, d=4. a₁₅ = 7 + 14×4 = 7 + 56 = 63</p></div>
-            <div class="example-card"><div class="example-label">Example — Find 10th term of 3, 6, 12, 24, ...</div>
-              <p class="soln">a=3, r=2. a₁₀ = 3 × 2⁹ = 3 × 512 = 1536</p></div>
-          </div>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
         </div>
       </div>
-    </section>
 
-    <section id="seq-arithmetic" class="topic-section">
-      <div class="section-header"><span class="sec-icon">➕</span><h2>Arithmetic Series</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            nth term: aₙ = a + (n−1)d<br>
-            Sum of n terms: Sₙ = n/2 × (2a + (n−1)d) = n/2 × (first + last)
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem" aria-current="page">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <div class="topic-hero" role="banner">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>∑</span><span>∞</span><span>aₙ</span><span>Sₙ</span>
+    </div>
+    <div class="topic-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Sequences &amp; Series</span>
+      </nav>
+
+      <div class="topic-hero-icon" aria-hidden="true">∑</div>
+      <h1>Sequences &amp; Series</h1>
+      <p class="topic-hero-sub">
+        From the first term of a simple number pattern to the elegant convergence of power series,
+        this lesson covers the full Sequences &amp; Series strand of the CBC curriculum — aligned to
+        KICD, TSC, MoE, and KNEC standards for Junior Secondary through university level.
+      </p>
+
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Pure Mathematics</span>
+        <span class="topic-badge badge-level">Grade 9 → University</span>
+        <span class="topic-badge badge-cbc">CBC / KICD Aligned</span>
+        <span class="topic-badge badge-exam">KCSE &amp; KNEC</span>
+      </div>
+
+      <div class="topic-stats-row">
+        <div class="ts-item"><strong>14</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>35+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>4</strong><span>Levels</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>CBC</strong><span>Aligned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <main id="main-content">
+    <div class="topic-layout">
+
+      <!-- TOC SIDEBAR -->
+      <aside class="toc-sidebar" aria-label="Table of contents">
+        <div class="toc-sticky">
+          <div class="toc-header">
+            <span class="toc-title">Contents</span>
           </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1 — Sum 1+2+3+...+100</div>
-              <p class="soln">a=1, d=1, n=100. S = 100/2(2+99) = 50×101 = 5050</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — How many terms for sum = 1225?</div>
-              <p>Sequence: 7, 9, 11, ...</p>
-              <p class="soln">a=7, d=2. n/2(14+2(n−1)) = 1225 → n² + 6n − 1225 = 0 → n = 35 (taking positive root)</p></div>
+          <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="toc-progress-fill" id="tocProgressFill"></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li class="toc-group-label">Foundation</li>
+            <li><a class="toc-link" href="#sec-what-is">What is a Sequence?</a></li>
+            <li><a class="toc-link" href="#sec-notation">Notation &amp; Terminology</a></li>
+            <li class="toc-group-label">Junior Secondary (CBC)</li>
+            <li><a class="toc-link" href="#sec-patterns">Number Patterns (Grade 7–9)</a></li>
+            <li class="toc-group-label">Senior Secondary</li>
+            <li><a class="toc-link" href="#sec-ap">Arithmetic Progressions</a></li>
+            <li><a class="toc-link" href="#sec-gp">Geometric Progressions</a></li>
+            <li><a class="toc-link" href="#sec-special">Special Summation Formulas</a></li>
+            <li><a class="toc-link" href="#sec-telescope">Telescoping Series</a></li>
+            <li class="toc-group-label">A-Level / Senior Sec.</li>
+            <li><a class="toc-link" href="#sec-mixed">Mixed &amp; Combined Series</a></li>
+            <li><a class="toc-link" href="#sec-recurrence">Recurrence Relations</a></li>
+            <li class="toc-group-label">University</li>
+            <li><a class="toc-link" href="#sec-convergence">Convergence Tests</a></li>
+            <li><a class="toc-link" href="#sec-power">Power Series &amp; Radius</a></li>
+            <li><a class="toc-link" href="#sec-maclaurin">Maclaurin &amp; Taylor Series</a></li>
+            <li class="toc-group-label">Reference</li>
+            <li><a class="toc-link" href="#sec-formulasheet">Formula Sheet</a></li>
+            <li><a class="toc-link" href="#sec-errors">Common Errors</a></li>
+          </ul>
+          <div class="toc-actions">
+            <a href="tasks.html" class="toc-practice-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Practice Problems
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </aside>
 
-    <section id="seq-geometric" class="topic-section">
-      <div class="section-header"><span class="sec-icon">✖️</span><h2>Geometric Series</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            nth term: aₙ = arⁿ⁻¹<br>
-            Sum n terms: Sₙ = a(rⁿ−1)/(r−1) for r ≠ 1<br>
-            Infinite sum: S∞ = a/(1−r) provided |r| &lt; 1
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1 — Sum 8 terms of 3, 6, 12, ...</div>
-              <p class="soln">a=3, r=2, n=8. S₈ = 3(2⁸−1)/(2−1) = 3(255) = 765</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — Infinite series 8 + 4 + 2 + 1 + ...</div>
-              <p class="soln">a=8, r=1/2. S∞ = 8/(1−1/2) = 16</p></div>
-            <div class="example-card"><div class="example-label">Example 3 — Show 0.999... = 1</div>
-              <p class="soln">0.999... = 9/10 + 9/100 + ... = (9/10)/(1−1/10) = (9/10)/(9/10) = 1 ✓</p></div>
-          </div>
+      <!-- MAIN CONTENT -->
+      <div class="topic-content">
+
+        <!-- CBC CONTEXT BANNER -->
+        <div class="cbc-context-banner" id="sec-cbc">
+          <span class="ccb-icon">📘</span>
+          <p class="ccb-text">
+            <strong>CBC / KICD Curriculum Alignment:</strong> Sequences and Series form a core strand of the
+            Kenya CBC Senior Secondary Mathematics syllabus (KICD, 2019 revision). The topic spans the
+            <strong>Pure Mathematics</strong> strand and appears in <strong>Grade 9</strong> (number patterns),
+            <strong>Senior Secondary Forms 1–4</strong> (AP, GP, special series), and
+            <strong>A-Level / University</strong> (convergence, power series, Maclaurin/Taylor). It is
+            assessed in <strong>KCSE Paper 1 &amp; Paper 2</strong> and is a prerequisite for calculus,
+            financial mathematics, and physics applications. All worked examples in this lesson are original,
+            written by <strong>Mwalimu Ronny Mwenda Best</strong>, B.Ed Science, University of Embu.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <section id="seq-special" class="topic-section">
-      <div class="section-header"><span class="sec-icon">⭐</span><h2>Special Series & Summation Formulas</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Σ 1 = n &nbsp;&nbsp; Σ r = n(n+1)/2 &nbsp;&nbsp; Σ r² = n(n+1)(2n+1)/6<br>
-            Σ r³ = [n(n+1)/2]² = (Σr)²<br>
-            Telescoping series: Σ [f(r)−f(r+1)] = f(1)−f(n+1)
+        <!-- ══════════════════════════════════════════
+             SECTION 1 — WHAT IS A SEQUENCE?
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-what-is">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">1</div>
+            <div>
+              <span class="ls-eyebrow">Foundation</span>
+              <h2>What is a Sequence?</h2>
+            </div>
+            <span class="ls-level-badge level-foundation">Foundation</span>
           </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Σ r² from r=1 to 10</div>
-              <p class="soln">10×11×21/6 = 385</p></div>
-            <div class="example-card"><div class="example-label">Example — Σ r³ from r=1 to 5</div>
-              <p class="soln">= (5×6/2)² = 15² = 225. Check: 1+8+27+64+125 = 225 ✓</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>sequence</strong> is an ordered list of numbers, called <em>terms</em>, that follow a definite rule. The rule determines every term from its position in the list. Understanding sequences is the foundation of nearly all higher mathematics — from modelling population growth to describing oscillating electrical signals.</p>
+            </div>
 
-    <section id="seq-convergence" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔬</span><h2>Convergence Tests</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <table class="formula-table">
-            <tr><th>Test</th><th>Condition for Convergence</th></tr>
-            <tr><td>nth term test</th><td>lim aₙ ≠ 0 → diverges (if lim = 0, test fails)</th></tr>
-            <tr><td>Geometric series</th><td>|r| &lt; 1</th></tr>
-            <tr><td>p-series Σ 1/nᵖ</th><td>p &gt; 1</th></tr>
-            <tr><td>Ratio test</th><td>L = lim|aₙ₊₁/aₙ|. L&lt;1 converge, L&gt;1 diverge, L=1 inconclusive</th></tr>
-            <tr><td>Root test</th><td>L = lim|aₙ|^(1/n). Same rules as ratio test</th></tr>
-            <tr><td>Integral test</th><td>Σf(n) and ∫f(x)dx converge/diverge together (f positive, decreasing)</th></tr>
-            <tr><td>Comparison test</th><td>0 ≤ aₙ ≤ bₙ: if Σbₙ converges → Σaₙ converges</th></tr>
-            <tr><td>Alternating series</th><td>aₙ decreasing → 0 → converges (Leibniz test)</th></tr>
-          </table>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Σ n!/nⁿ — ratio test</div>
-              <p class="soln">L = lim (n+1)!/(n+1)^(n+1) × nⁿ/n! = lim nⁿ/(n+1)ⁿ = 1/e &lt; 1. Converges.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <h3 class="sub-heading">Types of Sequences</h3>
+            <p class="body-para">Every sequence has a <strong>general term formula</strong>, also written as the <em>nth term</em>, which gives any term directly from its position number n. The four most important types in the CBC curriculum are:</p>
 
-    <section id="seq-power" class="topic-section">
-      <div class="section-header"><span class="sec-icon">⚡</span><h2>Power Series & Radius of Convergence</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Power series: Σ aₙ(x−c)ⁿ = a₀ + a₁(x−c) + a₂(x−c)² + ...<br>
-            Radius of convergence: R = 1/lim|aₙ₊₁/aₙ| (ratio test on coefficients)<br>
-            Interval of convergence: (c−R, c+R) — check endpoints separately
-          </div>
-          <div class="sub"><h3>Common Maclaurin Series</h3>
-            <div class="formula-box">
-              eˣ = 1 + x + x²/2! + x³/3! + ... (R=∞)<br>
-              sin x = x − x³/3! + x⁵/5! − ... (R=∞)<br>
-              cos x = 1 − x²/2! + x⁴/4! − ... (R=∞)<br>
-              ln(1+x) = x − x²/2 + x³/3 − ... (R=1, −1&lt;x≤1)<br>
-              (1+x)ⁿ = 1 + nx + n(n−1)x²/2! + ... (R=1)
+            <div class="identity-table" role="table" aria-label="Types of sequences">
+              <div class="it-row it-head" role="row">
+                <div class="it-label" role="columnheader">Type</div>
+                <div class="it-eq" role="columnheader">General Term (aₙ)</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Arithmetic</div>
+                <div class="it-eq" role="cell">aₙ = a + (n − 1)d &nbsp;&nbsp;<em>where d = common difference</em></div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Geometric</div>
+                <div class="it-eq" role="cell">aₙ = arⁿ⁻¹ &nbsp;&nbsp;<em>where r = common ratio</em></div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Quadratic (2nd difference)</div>
+                <div class="it-eq" role="cell">aₙ = An² + Bn + C &nbsp;&nbsp;<em>constant 2nd difference</em></div>
+              </div>
+              <div class="it-row it-highlight" role="row">
+                <div class="it-label" role="cell">Fibonacci</div>
+                <div class="it-eq" role="cell">aₙ = aₙ₋₁ + aₙ₋₂ &nbsp;&nbsp;<em>each term is sum of two before it</em></div>
+              </div>
+            </div>
+
+            <div class="callout-note">
+              <span class="cn-icon">💡</span>
+              <div><strong>CBC Key Concept:</strong> The KICD syllabus emphasises recognising a sequence's <em>type</em> before applying a formula. Always identify whether differences or ratios are constant before proceeding.</div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Identifying and Finding Terms</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 1</span> Find the next two terms: 4, 7, 10, 13, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>Differences: 7−4 = 3, 10−7 = 3, 13−10 = 3. Common difference d = 3 → <strong>Arithmetic sequence</strong>.</div>
+                  <div class="we-step"><span class="step-n">Next</span>14th term: 13 + 3 = <strong>16</strong>. 15th term: 16 + 3 = <strong>19</strong>.</div>
+                </div>
+                <div class="we-answer">Next two terms: 16, 19</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 2</span> Find the next two terms: 2, 6, 18, 54, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>Ratios: 6÷2 = 3, 18÷6 = 3, 54÷18 = 3. Common ratio r = 3 → <strong>Geometric sequence</strong>.</div>
+                  <div class="we-step"><span class="step-n">Next</span>5th term: 54 × 3 = <strong>162</strong>. 6th term: 162 × 3 = <strong>486</strong>.</div>
+                </div>
+                <div class="we-answer">Next two terms: 162, 486</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 3</span> Find the nth term of: 1, 4, 9, 16, 25, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Observe</span>These are perfect squares: 1² = 1, 2² = 4, 3² = 9, 4² = 16 ...</div>
+                  <div class="we-step"><span class="step-n">Verify</span>1st differences: 3, 5, 7, 9 (odd numbers). 2nd differences: 2, 2, 2 → constant → quadratic.</div>
+                  <div class="we-step"><span class="step-n">Formula</span>aₙ = n². Check: a₅ = 5² = 25 ✔</div>
+                </div>
+                <div class="we-answer">aₙ = n²</div>
+              </div>
             </div>
           </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 2 — NOTATION
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-notation">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">2</div>
+            <div>
+              <span class="ls-eyebrow">Foundation</span>
+              <h2>Notation &amp; Terminology</h2>
+            </div>
+            <span class="ls-level-badge level-foundation">Foundation</span>
+          </div>
+          <div class="ls-body">
+            <p class="body-para">Before working with series, you must be fluent with the notation used throughout all levels of the CBC and KNEC examinations.</p>
+
+            <div class="formula-block multi">
+              <div class="fb-label">Standard Notation</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">General term:</span><span class="fb-eq">aₙ or Tₙ or uₙ — the nth term of the sequence</span></div>
+                <div class="fb-row"><span class="fb-name">First term:</span><span class="fb-eq">a₁ or simply a</span></div>
+                <div class="fb-row"><span class="fb-name">Common difference:</span><span class="fb-eq">d = aₙ − aₙ₋₁ (arithmetic only)</span></div>
+                <div class="fb-row"><span class="fb-name">Common ratio:</span><span class="fb-eq">r = aₙ / aₙ₋₁ (geometric only)</span></div>
+                <div class="fb-row"><span class="fb-name">Partial sum:</span><span class="fb-eq">Sₙ = a₁ + a₂ + a₃ + ... + aₙ</span></div>
+                <div class="fb-row"><span class="fb-name">Sigma notation:</span><span class="fb-eq">∑(r=1 to n) f(r) = f(1) + f(2) + ... + f(n)</span></div>
+                <div class="fb-row"><span class="fb-name">Infinite series:</span><span class="fb-eq">S∞ = lim(n→∞) Sₙ (exists only if series converges)</span></div>
+              </div>
+            </div>
+
+            <h3 class="sub-heading">Sigma Notation — Reading and Writing</h3>
+            <p class="body-para">Sigma notation (∑) is a compact way to write a sum. KNEC examiners use it frequently. You must be able to expand sigma notation into its terms and write a given sum in sigma form.</p>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Sigma Notation</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 4</span> Expand: ∑(r=1 to 5) (2r + 1)</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">r = 1</span>2(1) + 1 = 3</div>
+                  <div class="we-step"><span class="step-n">r = 2</span>2(2) + 1 = 5</div>
+                  <div class="we-step"><span class="step-n">r = 3</span>2(3) + 1 = 7</div>
+                  <div class="we-step"><span class="step-n">r = 4</span>2(4) + 1 = 9</div>
+                  <div class="we-step"><span class="step-n">r = 5</span>2(5) + 1 = 11</div>
+                  <div class="we-step check-step"><span class="step-n">Sum</span>3 + 5 + 7 + 9 + 11 = <strong>35</strong></div>
+                </div>
+                <div class="we-answer">∑(r=1 to 5)(2r+1) = 35</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 5</span> Write in sigma notation: 4 + 8 + 12 + 16 + 20</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Pattern</span>Each term is a multiple of 4: 4×1, 4×2, 4×3, 4×4, 4×5. General term: 4r</div>
+                  <div class="we-step"><span class="step-n">Limits</span>r runs from 1 to 5.</div>
+                </div>
+                <div class="we-answer">∑(r=1 to 5) 4r</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 3 — NUMBER PATTERNS (Grade 7–9)
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-patterns">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">3</div>
+            <div>
+              <span class="ls-eyebrow">Junior Secondary — CBC Grade 7–9</span>
+              <h2>Number Patterns (CBC Grade 7–9)</h2>
+            </div>
+            <span class="ls-level-badge level-foundation">Grade 7–9</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>In the CBC Junior Secondary curriculum (Grades 7–9), students first encounter sequences as <em>number patterns</em>. The focus is on identifying the rule, extending patterns, and finding the nth term. This lays the foundation for the formal AP and GP work in Senior Secondary.</p>
+            </div>
+
+            <h3 class="sub-heading">Method: Finding the nth Term of a Linear Sequence</h3>
+            <p class="body-para">A linear (arithmetic) pattern has a constant first difference. The nth term formula is always of the form <strong>aₙ = dn + c</strong>, where d is the common difference and c is found by substituting any known term.</p>
+
+            <ol class="method-steps">
+              <li>Find the <strong>first difference</strong> between consecutive terms — this is d.</li>
+              <li>Write the formula as aₙ = dn + c.</li>
+              <li><strong>Substitute n = 1</strong> (and use a₁ = first term) to find c.</li>
+              <li>Write the final formula and verify with at least two other terms.</li>
+            </ol>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Grade 7–9 Number Patterns</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 6</span> Find the nth term of: 5, 9, 13, 17, 21, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Step 1</span>First difference: 9 − 5 = 4. So d = 4.</div>
+                  <div class="we-step"><span class="step-n">Step 2</span>Write: aₙ = 4n + c.</div>
+                  <div class="we-step"><span class="step-n">Step 3</span>When n = 1: a₁ = 5 → 4(1) + c = 5 → c = 1.</div>
+                  <div class="we-step"><span class="step-n">Formula</span>aₙ = 4n + 1.</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>n = 3: 4(3) + 1 = 13 ✔ &nbsp;&nbsp; n = 5: 4(5) + 1 = 21 ✔</div>
+                </div>
+                <div class="we-answer">aₙ = 4n + 1</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 7</span> A pattern: 2, 6, 12, 20, 30, ... What is the nth term?</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">1st diff</span>4, 6, 8, 10 → not constant → not linear.</div>
+                  <div class="we-step"><span class="step-n">2nd diff</span>6−4 = 2, 8−6 = 2, 10−8 = 2 → constant 2nd difference → <strong>quadratic</strong>.</div>
+                  <div class="we-step"><span class="step-n">Form</span>Try aₙ = An² + Bn + C.</div>
+                  <div class="we-step"><span class="step-n">System</span>n=1: A + B + C = 2. &nbsp; n=2: 4A + 2B + C = 6. &nbsp; n=3: 9A + 3B + C = 12.</div>
+                  <div class="we-step"><span class="step-n">Solve</span>Eq2 − Eq1: 3A + B = 4. &nbsp; Eq3 − Eq2: 5A + B = 6. &nbsp; Subtract: 2A = 2 → A = 1. &nbsp; B = 4 − 3 = 1. &nbsp; C = 2 − 1 − 1 = 0.</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>n = 4: 1(16) + 1(4) + 0 = 20 ✔ &nbsp;&nbsp; n = 5: 25 + 5 = 30 ✔</div>
+                </div>
+                <div class="we-answer">aₙ = n² + n = n(n + 1)</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 8</span> Which term of the pattern 3, 7, 11, 15, ... equals 99?</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">nth term</span>d = 4, a = 3. So aₙ = 3 + (n−1)(4) = 4n − 1.</div>
+                  <div class="we-step"><span class="step-n">Set = 99</span>4n − 1 = 99 → 4n = 100 → n = 25.</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>a₂₅ = 4(25) − 1 = 99 ✔</div>
+                </div>
+                <div class="we-answer">The 25th term equals 99</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 4 — ARITHMETIC PROGRESSIONS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-ap">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">4</div>
+            <div>
+              <span class="ls-eyebrow">Senior Secondary — KCSE Core</span>
+              <h2>Arithmetic Progressions (AP)</h2>
+            </div>
+            <span class="ls-level-badge level-secondary">Senior Secondary</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>An <strong>Arithmetic Progression (AP)</strong> is a sequence where each term is obtained by adding a fixed value — the <em>common difference d</em> — to the previous term. APs model situations with uniform increase or decrease, such as a salaried employee's annual earnings growing by a fixed increment each year.</p>
+            </div>
+
+            <div class="formula-block multi">
+              <div class="fb-label">AP Core Formulae — KCSE Examinable</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">nth term:</span><span class="fb-eq highlight-formula">aₙ = a + (n − 1)d</span></div>
+                <div class="fb-row"><span class="fb-name">Sum of n terms:</span><span class="fb-eq highlight-formula">Sₙ = n/2 · (2a + (n−1)d)</span></div>
+                <div class="fb-row"><span class="fb-name">Alternate sum:</span><span class="fb-eq highlight-formula">Sₙ = n/2 · (first + last)</span></div>
+                <div class="fb-row"><span class="fb-name">Common difference:</span><span class="fb-eq">d = aₙ − aₙ₋₁ (always constant in an AP)</span></div>
+                <div class="fb-row"><span class="fb-name">Number of terms:</span><span class="fb-eq">n = (last − first)/d + 1</span></div>
+                <div class="fb-row"><span class="fb-name">Arithmetic mean:</span><span class="fb-eq">AM of a and b = (a + b)/2</span></div>
+              </div>
+            </div>
+
+            <h3 class="sub-heading">Understanding the Sum Formula</h3>
+            <p class="body-para">The formula Sₙ = n/2(2a + (n−1)d) is derived by writing the sum forwards and backwards, then adding them term by term. Every pair of terms adds to (first term + last term), and there are n such pairs, so Sₙ = n/2 × (first + last). This is the "Gauss method" — the young Gauss famously used it to sum 1 to 100 instantly.</p>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Arithmetic Progressions</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 9</span> Find the 20th term and sum of 20 terms of: 7, 11, 15, 19, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>a = 7, d = 11 − 7 = 4, n = 20.</div>
+                  <div class="we-step"><span class="step-n">20th term</span>a₂₀ = 7 + (20−1) × 4 = 7 + 76 = <strong>83</strong>.</div>
+                  <div class="we-step"><span class="step-n">Sum</span>S₂₀ = 20/2 × (7 + 83) = 10 × 90 = <strong>900</strong>.</div>
+                  <div class="we-step check-step"><span class="step-n">Alt</span>S₂₀ = 20/2(2×7 + 19×4) = 10(14 + 76) = 10(90) = 900 ✔</div>
+                </div>
+                <div class="we-answer">a₂₀ = 83 &nbsp;|&nbsp; S₂₀ = 900</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 10</span> The 5th term of an AP is 23 and the 10th term is 43. Find a, d, and S₁₅.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Setup</span>a + 4d = 23 ... (i) &nbsp;&nbsp; a + 9d = 43 ... (ii)</div>
+                  <div class="we-step"><span class="step-n">(ii)−(i)</span>5d = 20 → <strong>d = 4</strong>.</div>
+                  <div class="we-step"><span class="step-n">Find a</span>a = 23 − 4(4) = 23 − 16 = <strong>a = 7</strong>.</div>
+                  <div class="we-step"><span class="step-n">S₁₅</span>S₁₅ = 15/2 × (2×7 + 14×4) = 7.5 × (14 + 56) = 7.5 × 70 = <strong>525</strong>.</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>a₅ = 7 + 4(4) = 23 ✔ &nbsp; a₁₀ = 7 + 9(4) = 43 ✔</div>
+                </div>
+                <div class="we-answer">a = 7, d = 4, S₁₅ = 525</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 11</span> (KCSE style) How many terms of the AP: 3, 8, 13, ... must be added to give a sum of 1005?</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>a = 3, d = 5. Sₙ = 1005.</div>
+                  <div class="we-step"><span class="step-n">Apply</span>n/2(2×3 + (n−1)×5) = 1005 → n/2(6 + 5n − 5) = 1005 → n(5n + 1)/2 = 1005.</div>
+                  <div class="we-step"><span class="step-n">Simplify</span>5n² + n = 2010 → 5n² + n − 2010 = 0.</div>
+                  <div class="we-step"><span class="step-n">Quadratic</span>n = [−1 ± √(1 + 4×5×2010)] / (2×5) = [−1 ± √40201] / 10 = [−1 ± 200.5...] / 10.</div>
+                  <div class="we-step"><span class="step-n">Solve</span>Taking positive root: n = (−1 + 201) / 10 = 200/10 = <strong>20</strong>. (n must be a positive integer)</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>S₂₀ = 20/2(6 + 19×5) = 10(6+95) = 10(101) = 1010 — wait, let me re-examine: 5(400) + 20 − 2010 = 2000 + 20 − 2010 = 10 ≠ 0. Use discriminant: n = (−1 + √40201)/10. √40201 ≈ 200.5 → n ≈ 19.95 → not integer. Try n = 20: 5(400)+20 = 2020 ≠ 2010. This AP gives no integer answer — a useful exam insight: always check if the answer is an integer!</div>
+                </div>
+                <div class="we-answer">5n² + n − 2010 = 0 → no integer solution. The sum never equals exactly 1005 for this AP.</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 12</span> Sum of all integers from 1 to 200 that are divisible by 7.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">List start</span>First term a = 7. Last term ≤ 200: 7 × 28 = 196. So last = 196. d = 7.</div>
+                  <div class="we-step"><span class="step-n">No. terms</span>n = (196 − 7)/7 + 1 = 189/7 + 1 = 27 + 1 = 28.</div>
+                  <div class="we-step"><span class="step-n">Sum</span>S = 28/2 × (7 + 196) = 14 × 203 = <strong>2842</strong>.</div>
+                </div>
+                <div class="we-answer">Sum = 2842</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 13</span> Insert 4 arithmetic means between 3 and 18.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Setup</span>The sequence is: 3, _, _, _, _, 18. Total 6 terms, so n = 6.</div>
+                  <div class="we-step"><span class="step-n">Find d</span>a₆ = a + 5d → 18 = 3 + 5d → 5d = 15 → d = 3.</div>
+                  <div class="we-step"><span class="step-n">Insert</span>3 + 3 = 6, 6 + 3 = 9, 9 + 3 = 12, 12 + 3 = 15.</div>
+                </div>
+                <div class="we-answer">3, 6, 9, 12, 15, 18</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 5 — GEOMETRIC PROGRESSIONS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-gp">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">5</div>
+            <div>
+              <span class="ls-eyebrow">Senior Secondary — KCSE Core</span>
+              <h2>Geometric Progressions (GP)</h2>
+            </div>
+            <span class="ls-level-badge level-secondary">Senior Secondary</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>Geometric Progression (GP)</strong> is a sequence where each term is obtained by multiplying the previous term by a fixed value — the <em>common ratio r</em>. GPs model exponential growth and decay: population growth, compound interest, radioactive decay, and depreciation are all geometric in nature.</p>
+            </div>
+
+            <div class="formula-block multi">
+              <div class="fb-label">GP Core Formulae — KCSE Examinable</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">nth term:</span><span class="fb-eq highlight-formula">aₙ = arⁿ⁻¹</span></div>
+                <div class="fb-row"><span class="fb-name">Sum (r ≠ 1):</span><span class="fb-eq highlight-formula">Sₙ = a(rⁿ − 1)/(r − 1) &nbsp; or &nbsp; Sₙ = a(1 − rⁿ)/(1 − r)</span></div>
+                <div class="fb-row"><span class="fb-name">Infinite sum (|r| &lt; 1):</span><span class="fb-eq highlight-formula">S∞ = a / (1 − r)</span></div>
+                <div class="fb-row"><span class="fb-name">Common ratio:</span><span class="fb-eq">r = aₙ / aₙ₋₁ (constant throughout)</span></div>
+                <div class="fb-row"><span class="fb-name">Geometric mean:</span><span class="fb-eq">GM of a and b = √(ab) &nbsp; (positive roots)</span></div>
+                <div class="fb-row"><span class="fb-name">Condition for S∞:</span><span class="fb-eq">Series converges only when |r| &lt; 1 (i.e. −1 &lt; r &lt; 1)</span></div>
+              </div>
+            </div>
+
+            <div class="callout-warn">
+              <span class="cw-icon">⚠️</span>
+              <div><strong>Which GP sum formula to use?</strong> Use <em>a(rⁿ−1)/(r−1)</em> when r &gt; 1 (easier arithmetic). Use <em>a(1−rⁿ)/(1−r)</em> when r &lt; 1 (avoids negatives). Both are identical algebraically.</div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Geometric Progressions</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 14</span> Find the 8th term and sum of first 8 terms of: 3, 6, 12, 24, ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>a = 3, r = 6/3 = 2, n = 8.</div>
+                  <div class="we-step"><span class="step-n">8th term</span>a₈ = 3 × 2⁷ = 3 × 128 = <strong>384</strong>.</div>
+                  <div class="we-step"><span class="step-n">Sum</span>S₈ = 3(2⁸ − 1)/(2 − 1) = 3(256 − 1)/1 = 3 × 255 = <strong>765</strong>.</div>
+                </div>
+                <div class="we-answer">a₈ = 384, S₈ = 765</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 15</span> The 3rd term of a GP is 20 and the 6th term is 160. Find a, r, and S₁₀.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Setup</span>ar² = 20 ... (i) &nbsp;&nbsp; ar⁵ = 160 ... (ii)</div>
+                  <div class="we-step"><span class="step-n">(ii)÷(i)</span>r³ = 160/20 = 8 → r = 2.</div>
+                  <div class="we-step"><span class="step-n">Find a</span>a(4) = 20 → a = 5.</div>
+                  <div class="we-step"><span class="step-n">S₁₀</span>S₁₀ = 5(2¹⁰ − 1)/(2−1) = 5 × 1023 = <strong>5115</strong>.</div>
+                  <div class="we-step check-step"><span class="step-n">Verify</span>a₃ = 5(4) = 20 ✔ &nbsp; a₆ = 5(32) = 160 ✔</div>
+                </div>
+                <div class="we-answer">a = 5, r = 2, S₁₀ = 5115</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 16</span> Find the infinite sum of: 8 + 4 + 2 + 1 + 0.5 + ...</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>a = 8, r = 4/8 = 1/2. Since |r| = 1/2 &lt; 1, the infinite sum exists.</div>
+                  <div class="we-step"><span class="step-n">S∞</span>S∞ = 8 / (1 − 1/2) = 8 / (1/2) = 8 × 2 = <strong>16</strong>.</div>
+                </div>
+                <div class="we-answer">S∞ = 16</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 17</span> Prove that 0.̄3 = 1/3 using geometric series.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Write</span>0.333... = 3/10 + 3/100 + 3/1000 + ...</div>
+                  <div class="we-step"><span class="step-n">GP form</span>a = 3/10, r = 1/10. |r| = 0.1 &lt; 1, so infinite sum exists.</div>
+                  <div class="we-step"><span class="step-n">Apply</span>S∞ = (3/10) / (1 − 1/10) = (3/10) / (9/10) = (3/10) × (10/9) = 3/9 = <strong>1/3</strong>.</div>
+                </div>
+                <div class="we-answer">0.̄3 = 1/3 ✓ (QED)</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 18</span> (KCSE Application) A car depreciates at 15% per year. Original value: Ksh 800,000. Find value after 5 years and the total depreciation over 5 years.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Setup</span>Each year value = 85% of previous → r = 0.85. a = 800,000.</div>
+                  <div class="we-step"><span class="step-n">After 5 yr</span>a₆ = 800,000 × (0.85)⁵ = 800,000 × 0.4437... ≈ <strong>Ksh 355,014</strong>.</div>
+                  <div class="we-step"><span class="step-n">Sum</span>S₅ = 800,000(1 − 0.85⁵)/(1 − 0.85) = 800,000 × (1 − 0.4437)/0.15 = 800,000 × 3.709 ≈ Ksh 2,967,200.</div>
+                  <div class="we-step"><span class="step-n">Depreciation</span>Total depreciation = 5 × 800,000 − S₅... Note: the sum S₅ = total book values, not a depreciation sum. Value dropped from 800,000 to 355,014 → total loss ≈ <strong>Ksh 444,986</strong>.</div>
+                </div>
+                <div class="we-answer">Value after 5 years ≈ Ksh 355,014. Total value lost ≈ Ksh 444,986.</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 19</span> Insert 3 geometric means between 2 and 162.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Setup</span>Sequence: 2, _, _, _, 162. Total 5 terms. a = 2, a₅ = 162.</div>
+                  <div class="we-step"><span class="step-n">Find r</span>ar⁴ = 162 → 2r⁴ = 162 → r⁴ = 81 → r = 3 (taking positive root).</div>
+                  <div class="we-step"><span class="step-n">Insert</span>2×3 = 6, 6×3 = 18, 18×3 = 54.</div>
+                </div>
+                <div class="we-answer">2, 6, 18, 54, 162</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 6 — SPECIAL SUMMATION FORMULAS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-special">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">6</div>
+            <div>
+              <span class="ls-eyebrow">A-Level / Senior Secondary</span>
+              <h2>Special Summation Formulas</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">A-Level</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>Beyond AP and GP, there are closed-form formulas for summing the first n natural numbers, their squares, and their cubes. These are essential for KNEC Advanced Level examinations and university entrance tests. Mastering them allows evaluation of sums involving polynomials in r.</p>
+            </div>
+
+            <div class="formula-block multi">
+              <div class="fb-label">Standard Summation Results</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">∑ 1 (r=1 to n):</span><span class="fb-eq highlight-formula">= n</span></div>
+                <div class="fb-row"><span class="fb-name">∑ r (r=1 to n):</span><span class="fb-eq highlight-formula">= n(n+1)/2</span></div>
+                <div class="fb-row"><span class="fb-name">∑ r² (r=1 to n):</span><span class="fb-eq highlight-formula">= n(n+1)(2n+1)/6</span></div>
+                <div class="fb-row"><span class="fb-name">∑ r³ (r=1 to n):</span><span class="fb-eq highlight-formula">= [n(n+1)/2]² = (∑r)²</span></div>
+                <div class="fb-row"><span class="fb-name">Linearity property:</span><span class="fb-eq">∑[af(r) + bg(r)] = a·∑f(r) + b·∑g(r)</span></div>
+              </div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Special Summation Formulas</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 20</span> Evaluate ∑(r=1 to 12) r²</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Formula</span>∑r² = n(n+1)(2n+1)/6. Here n = 12.</div>
+                  <div class="we-step"><span class="step-n">Compute</span>= 12 × 13 × 25 / 6 = (12/6) × 13 × 25 = 2 × 13 × 25 = <strong>650</strong>.</div>
+                </div>
+                <div class="we-answer">∑(r=1 to 12) r² = 650</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 21</span> Find ∑(r=1 to n)(3r² − 2r + 5) in terms of n.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Split</span>= 3∑r² − 2∑r + 5∑1</div>
+                  <div class="we-step"><span class="step-n">Substitute</span>= 3·[n(n+1)(2n+1)/6] − 2·[n(n+1)/2] + 5n</div>
+                  <div class="we-step"><span class="step-n">Simplify</span>= n(n+1)(2n+1)/2 − n(n+1) + 5n</div>
+                  <div class="we-step"><span class="step-n">Factor n</span>= n [ (n+1)(2n+1)/2 − (n+1) + 5 ]</div>
+                  <div class="we-step"><span class="step-n">Expand</span>= n [ (2n²+3n+1)/2 − n − 1 + 5 ]</div>
+                  <div class="we-step"><span class="step-n">Combine</span>= n [ (2n²+3n+1 − 2n − 2 + 10)/2 ] = n(2n²+n+9)/2</div>
+                </div>
+                <div class="we-answer">∑(3r²−2r+5) = n(2n²+n+9)/2</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 22</span> Evaluate ∑(r=5 to 15) r³</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Strategy</span>∑(r=5 to 15) r³ = ∑(r=1 to 15) r³ − ∑(r=1 to 4) r³</div>
+                  <div class="we-step"><span class="step-n">n=15</span>= [15×16/2]² = 120² = 14400</div>
+                  <div class="we-step"><span class="step-n">n=4</span>= [4×5/2]² = 10² = 100</div>
+                  <div class="we-step"><span class="step-n">Answer</span>= 14400 − 100 = <strong>14300</strong>.</div>
+                </div>
+                <div class="we-answer">∑(r=5 to 15) r³ = 14300</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 7 — TELESCOPING SERIES
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-telescope">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">7</div>
+            <div>
+              <span class="ls-eyebrow">A-Level / Senior Secondary</span>
+              <h2>Telescoping Series</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">A-Level</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>telescoping series</strong> is one where most terms cancel with adjacent terms, leaving only a small number of terms in the final sum — just as a telescope collapses. They are common in KNEC advanced examinations and require expressing the general term as a <em>difference of two functions</em>: f(r) − f(r+1).</p>
+            </div>
+
+            <div class="formula-block">
+              <div class="fb-label">Telescoping Principle</div>
+              <div class="fb-math">∑(r=1 to n) [f(r) − f(r+1)] = f(1) − f(n+1)</div>
+            </div>
+
+            <p class="body-para">The key technique is <strong>partial fractions</strong>. When a general term has a product of linear factors in the denominator, use partial fractions to express it as a difference, then apply the telescoping principle.</p>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Telescoping Series</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 23</span> Find ∑(r=1 to n) 1/(r(r+1))</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">P. Fractions</span>1/(r(r+1)) = 1/r − 1/(r+1). Verify: (r+1−r)/(r(r+1)) = 1/(r(r+1)) ✔</div>
+                  <div class="we-step"><span class="step-n">Write sum</span>∑ [1/r − 1/(r+1)] = (1/1 − 1/2) + (1/2 − 1/3) + (1/3 − 1/4) + ... + (1/n − 1/(n+1))</div>
+                  <div class="we-step"><span class="step-n">Telescope</span>All middle terms cancel. Remaining: 1 − 1/(n+1) = n/(n+1).</div>
+                </div>
+                <div class="we-answer">∑(r=1 to n) 1/(r(r+1)) = n/(n+1)</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 24</span> Find ∑(r=1 to 20) 1/((2r−1)(2r+1))</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">P. Fractions</span>1/((2r−1)(2r+1)) = (1/2)[1/(2r−1) − 1/(2r+1)]</div>
+                  <div class="we-step"><span class="step-n">Sum</span>(1/2) × ∑(r=1 to 20)[1/(2r−1) − 1/(2r+1)]</div>
+                  <div class="we-step"><span class="step-n">Telescope</span>= (1/2)[1/1 − 1/41] = (1/2)[40/41] = 20/41.</div>
+                </div>
+                <div class="we-answer">∑ 1/((2r−1)(2r+1)) = 20/41</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 8 — MIXED & COMBINED SERIES
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-mixed">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">8</div>
+            <div>
+              <span class="ls-eyebrow">A-Level / KNEC Advanced</span>
+              <h2>Mixed &amp; Combined Series</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">A-Level</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>Some KNEC examination questions combine an AP and a GP in the same series — for example, an arithmetico-geometric series where each term is a product of an AP term and a GP term. These require the <em>difference method</em> or the <em>standard AP–GP product formula</em>.</p>
+            </div>
+
+            <div class="formula-block">
+              <div class="fb-label">Arithmetico-Geometric Series Sum</div>
+              <div class="fb-math">S = a/(1−r) + dr/(1−r)² &nbsp;&nbsp; (for |r| &lt; 1, infinite series)
+S_n = [a − (a+(n−1)d)rⁿ]/(1−r) + dr(1−rⁿ)/(1−r)² (finite)</div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Example — Arithmetico-Geometric Series</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 25</span> Find the sum: 1 + 2×(1/2) + 3×(1/4) + 4×(1/8) + ... (infinite)</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>General term: n × (1/2)ⁿ⁻¹. AP part: a=1, d=1. GP part: r=1/2.</div>
+                  <div class="we-step"><span class="step-n">Let S</span>S = 1 + 2(1/2) + 3(1/4) + 4(1/8) + ...</div>
+                  <div class="we-step"><span class="step-n">×(1/2)</span>S/2 = 1(1/2) + 2(1/4) + 3(1/8) + 4(1/16) + ...</div>
+                  <div class="we-step"><span class="step-n">Subtract</span>S − S/2 = 1 + (1/2) + (1/4) + (1/8) + ... (infinite GP)</div>
+                  <div class="we-step"><span class="step-n">S/2</span>= 1/(1 − 1/2) = 2.</div>
+                  <div class="we-step"><span class="step-n">Answer</span>S = 2 × 2 = <strong>4</strong>.</div>
+                </div>
+                <div class="we-answer">S = 4</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 9 — RECURRENCE RELATIONS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-recurrence">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">9</div>
+            <div>
+              <span class="ls-eyebrow">A-Level / Senior Secondary</span>
+              <h2>Recurrence Relations</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">A-Level</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>recurrence relation</strong> (also called a recursive formula) defines each term of a sequence in terms of one or more previous terms. Unlike explicit formulas, recurrence relations require you to know earlier terms before computing later ones. Fibonacci sequences and many financial models use recurrence relations.</p>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Recurrence Relations</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 26</span> A sequence is defined by uₙ₊₁ = 3uₙ − 2, with u₁ = 4. Find u₂, u₃, u₄ and describe the type of sequence.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">u₂</span>= 3(4) − 2 = 12 − 2 = <strong>10</strong></div>
+                  <div class="we-step"><span class="step-n">u₃</span>= 3(10) − 2 = 28</div>
+                  <div class="we-step"><span class="step-n">u₄</span>= 3(28) − 2 = 82</div>
+                  <div class="we-step"><span class="step-n">Type</span>Differences: 6, 18, 54 → each multiplied by 3. This is a <strong>geometric-like sequence</strong> (though shifted by a constant). The differences form a GP.</div>
+                </div>
+                <div class="we-answer">u₂ = 10, u₃ = 28, u₄ = 82</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 27</span> The Fibonacci sequence is defined by F₁ = 1, F₂ = 1, Fₙ = Fₙ₋₁ + Fₙ₋₂. Write the first 10 terms and find the ratio Fₙ/Fₙ₋₁ as n grows large.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Terms</span>1, 1, 2, 3, 5, 8, 13, 21, 34, 55</div>
+                  <div class="we-step"><span class="step-n">Ratios</span>1/1=1, 2/1=2, 3/2=1.5, 5/3=1.667, 8/5=1.6, 13/8=1.625, 21/13≈1.615, 34/21≈1.619, 55/34≈1.618</div>
+                  <div class="we-step"><span class="step-n">Limit</span>The ratio converges to φ = (1+√5)/2 ≈ <strong>1.618</strong> — the <em>Golden Ratio</em>.</div>
+                </div>
+                <div class="we-answer">First 10: 1,1,2,3,5,8,13,21,34,55. &nbsp;Ratio → φ ≈ 1.618</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 10 — CONVERGENCE TESTS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-convergence">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">10</div>
+            <div>
+              <span class="ls-eyebrow">University Level</span>
+              <h2>Convergence Tests</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">University</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>An infinite series converges if its partial sums approach a finite limit. Determining whether a series converges or diverges — and if so, to what value — is a central topic in university-level analysis. The CBC Senior Secondary curriculum introduces convergence conceptually; full formal tests are examined at university and A-level.</p>
+            </div>
+
+            <div class="identity-table" role="table" aria-label="Convergence tests summary">
+              <div class="it-row it-head" role="row">
+                <div class="it-label" role="columnheader">Test</div>
+                <div class="it-eq" role="columnheader">Condition for Convergence / Divergence</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">nth-term test</div>
+                <div class="it-eq" role="cell">If lim(aₙ) ≠ 0 → diverges. (If lim = 0, test is inconclusive)</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Geometric series</div>
+                <div class="it-eq" role="cell">Converges iff |r| &lt; 1 with sum a/(1−r)</div>
+              </div>
+              <div class="it-row it-highlight" role="row">
+                <div class="it-label" role="cell">p-series ∑1/nᵖ</div>
+                <div class="it-eq" role="cell">Converges iff p &gt; 1. Diverges if p ≤ 1</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Ratio test (D'Alembert)</div>
+                <div class="it-eq" role="cell">L = lim|aₙ₊₁/aₙ|. L&lt;1 → converges; L&gt;1 → diverges; L=1 → inconclusive</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Root test (Cauchy)</div>
+                <div class="it-eq" role="cell">L = lim|aₙ|^(1/n). Same rules as ratio test</div>
+              </div>
+              <div class="it-row it-highlight" role="row">
+                <div class="it-label" role="cell">Integral test</div>
+                <div class="it-eq" role="cell">If f is positive, continuous, decreasing: ∑f(n) and ∫f(x)dx converge or diverge together</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Comparison test</div>
+                <div class="it-eq" role="cell">0 ≤ aₙ ≤ bₙ: if ∑bₙ converges → ∑aₙ converges; if ∑aₙ diverges → ∑bₙ diverges</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Limit comparison</div>
+                <div class="it-eq" role="cell">If lim(aₙ/bₙ) = L (finite, L&gt;0): ∑aₙ and ∑bₙ both converge or both diverge</div>
+              </div>
+              <div class="it-row" role="row">
+                <div class="it-label" role="cell">Alternating (Leibniz)</div>
+                <div class="it-eq" role="cell">∑(−1)ⁿaₙ converges if aₙ is decreasing → 0</div>
+              </div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Convergence Tests</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 28</span> Test for convergence: ∑(n=1 to ∞) n!/nⁿ</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Test</span>Use the Ratio test. aₙ = n!/nⁿ.</div>
+                  <div class="we-step"><span class="step-n">aₙ₊₁</span>= (n+1)!/(n+1)ⁿ⁺¹</div>
+                  <div class="we-step"><span class="step-n">Ratio</span>|aₙ₊₁/aₙ| = [(n+1)! × nⁿ] / [(n+1)ⁿ⁺¹ × n!] = (n+1) × nⁿ / (n+1)ⁿ⁺¹ = nⁿ/(n+1)ⁿ = (n/(n+1))ⁿ = (1/(1+1/n))ⁿ</div>
+                  <div class="we-step"><span class="step-n">Limit</span>lim(n→∞) (1/(1+1/n))ⁿ = 1/e ≈ 0.368 &lt; 1.</div>
+                  <div class="we-step check-step"><span class="step-n">Result</span>Since L = 1/e &lt; 1, the series <strong>converges</strong> by the Ratio test.</div>
+                </div>
+                <div class="we-answer">Converges (L = 1/e &lt; 1)</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 29</span> Does ∑(n=1 to ∞) 1/n² converge?</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Identify</span>This is a p-series with p = 2 &gt; 1.</div>
+                  <div class="we-step"><span class="step-n">Result</span>By the p-series test, it <strong>converges</strong>. (Its sum is π²/6 ≈ 1.645 — Basel problem)</div>
+                </div>
+                <div class="we-answer">Converges (p = 2 &gt; 1). Sum = π²/6.</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 30</span> Does ∑(n=1 to ∞) 1/n converge? (The harmonic series)</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">p-series</span>p = 1. Since p ≤ 1, the p-series test says it <strong>diverges</strong>.</div>
+                  <div class="we-step"><span class="step-n">Note</span>The harmonic series diverges even though individual terms → 0. This is a crucial exam example: lim(aₙ) = 0 is necessary but NOT sufficient for convergence.</div>
+                </div>
+                <div class="we-answer">Diverges (p = 1). Classic counterexample to "terms → 0 implies convergence".</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 11 — POWER SERIES & RADIUS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-power">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">11</div>
+            <div>
+              <span class="ls-eyebrow">University Level</span>
+              <h2>Power Series &amp; Radius of Convergence</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">University</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>power series</strong> is an infinite series whose terms involve powers of a variable x. They are the building blocks of modern analysis and are used to define functions, solve differential equations, and compute values of transcendental functions to any desired accuracy.</p>
+            </div>
+
+            <div class="formula-block multi">
+              <div class="fb-label">Power Series — Key Concepts</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">General form:</span><span class="fb-eq">∑(n=0 to ∞) aₙ(x−c)ⁿ = a₀ + a₁(x−c) + a₂(x−c)² + ...</span></div>
+                <div class="fb-row"><span class="fb-name">Radius of conv. R:</span><span class="fb-eq highlight-formula">R = lim(n→∞) |aₙ/aₙ₊₁| &nbsp; (ratio of consecutive coefficients)</span></div>
+                <div class="fb-row"><span class="fb-name">Interval of conv.:</span><span class="fb-eq">(c − R, c + R) — always test endpoints separately</span></div>
+                <div class="fb-row"><span class="fb-name">R = 0:</span><span class="fb-eq">Series converges only at x = c</span></div>
+                <div class="fb-row"><span class="fb-name">R = ∞:</span><span class="fb-eq">Series converges for all x ∈ ℝ</span></div>
+              </div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Power Series</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 31</span> Find the radius of convergence of ∑(n=0 to ∞) xⁿ/n!</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Ratio test</span>aₙ = xⁿ/n! → |aₙ₊₁/aₙ| = |x|ⁿ⁺¹/(n+1)! × n!/|x|ⁿ = |x|/(n+1)</div>
+                  <div class="we-step"><span class="step-n">Limit</span>lim(n→∞) |x|/(n+1) = 0 &lt; 1 for all finite x.</div>
+                  <div class="we-step"><span class="step-n">Result</span>R = ∞. The series converges for all x ∈ ℝ. (This is the power series for eˣ.)</div>
+                </div>
+                <div class="we-answer">R = ∞ (converges everywhere)</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 32</span> Find the interval of convergence of ∑(n=1 to ∞) xⁿ/n</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Ratio test</span>|aₙ₊₁/aₙ| = |x|ⁿ⁺¹/(n+1) × n/|x|ⁿ = n|x|/(n+1) → |x| as n → ∞.</div>
+                  <div class="we-step"><span class="step-n">Converges</span>when |x| &lt; 1 → −1 &lt; x &lt; 1. R = 1.</div>
+                  <div class="we-step"><span class="step-n">Endpoints</span>x = 1: ∑1/n (harmonic series) → diverges. &nbsp; x = −1: ∑(−1)ⁿ/n (alternating harmonic) → converges.</div>
+                  <div class="we-step check-step"><span class="step-n">Interval</span>−1 ≤ x &lt; 1. (This is the series for −ln(1−x).)</div>
+                </div>
+                <div class="we-answer">Interval of convergence: [−1, 1)</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 12 — MACLAURIN & TAYLOR SERIES
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-maclaurin">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">12</div>
+            <div>
+              <span class="ls-eyebrow">University Level</span>
+              <h2>Maclaurin &amp; Taylor Series</h2>
+            </div>
+            <span class="ls-level-badge level-advanced">University</span>
+          </div>
+          <div class="ls-body">
+            <div class="concept-intro">
+              <p>A <strong>Maclaurin series</strong> is a power series expansion of a function f(x) about x = 0. A <strong>Taylor series</strong> generalises this to any centre point x = a. They allow us to approximate complex functions (like sin x, eˣ, ln x) using polynomials — the foundation of numerical methods used in engineering, physics, and computer science.</p>
+            </div>
+
+            <div class="formula-block multi">
+              <div class="fb-label">Standard Maclaurin Series — Memorise for KNEC</div>
+              <div class="fb-grid">
+                <div class="fb-row"><span class="fb-name">eˣ:</span><span class="fb-eq highlight-formula">1 + x + x²/2! + x³/3! + x⁴/4! + ... (R = ∞)</span></div>
+                <div class="fb-row"><span class="fb-name">sin x:</span><span class="fb-eq highlight-formula">x − x³/3! + x⁵/5! − x⁷/7! + ... (R = ∞)</span></div>
+                <div class="fb-row"><span class="fb-name">cos x:</span><span class="fb-eq highlight-formula">1 − x²/2! + x⁴/4! − x⁶/6! + ... (R = ∞)</span></div>
+                <div class="fb-row"><span class="fb-name">ln(1+x):</span><span class="fb-eq">x − x²/2 + x³/3 − x⁴/4 + ... (R = 1, −1 &lt; x ≤ 1)</span></div>
+                <div class="fb-row"><span class="fb-name">(1+x)ⁿ:</span><span class="fb-eq">1 + nx + n(n−1)x²/2! + n(n−1)(n−2)x³/3! + ... (R = 1)</span></div>
+                <div class="fb-row"><span class="fb-name">1/(1−x):</span><span class="fb-eq">1 + x + x² + x³ + ... (R = 1, |x| &lt; 1) — geometric series</span></div>
+              </div>
+            </div>
+
+            <div class="formula-block">
+              <div class="fb-label">General Maclaurin / Taylor Formulas</div>
+              <div class="fb-math">Maclaurin: f(x) = f(0) + f'(0)x + f''(0)x²/2! + f'''(0)x³/3! + ...
+Taylor:    f(x) = f(a) + f'(a)(x−a) + f''(a)(x−a)²/2! + ...</div>
+            </div>
+
+            <div class="worked-examples">
+              <div class="we-title">Worked Examples — Maclaurin &amp; Taylor Series</div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 33</span> Find the Maclaurin series for f(x) = eˣ up to the x⁴ term, and use it to estimate e⁰·² to 4 d.p.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Derivatives</span>f(x) = f'(x) = f''(x) = ... = eˣ. At x = 0: all derivatives = 1.</div>
+                  <div class="we-step"><span class="step-n">Series</span>eˣ = 1 + x + x²/2 + x³/6 + x⁴/24 + ...</div>
+                  <div class="we-step"><span class="step-n">x = 0.2</span>e⁰·² ≈ 1 + 0.2 + 0.04/2 + 0.008/6 + 0.0016/24</div>
+                  <div class="we-step"><span class="step-n">Compute</span>= 1 + 0.2 + 0.02 + 0.001333... + 0.0000667 ≈ <strong>1.2214</strong></div>
+                  <div class="we-step check-step"><span class="step-n">Actual</span>e⁰·² = 1.22140... ✔ (accurate to 4 d.p.)</div>
+                </div>
+                <div class="we-answer">eˣ = 1 + x + x²/2! + x³/3! + ...; e⁰·² ≈ 1.2214</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 34</span> Using the Maclaurin series for sin x, evaluate sin(0.5 rad) correct to 5 d.p.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">Series</span>sin x = x − x³/6 + x⁵/120 − x⁷/5040 + ...</div>
+                  <div class="we-step"><span class="step-n">x = 0.5</span>sin(0.5) ≈ 0.5 − (0.125)/6 + (0.03125)/120 − (0.0078125)/5040</div>
+                  <div class="we-step"><span class="step-n">Compute</span>= 0.5 − 0.020833 + 0.000260 − 0.0000016 ≈ <strong>0.47943</strong></div>
+                  <div class="we-step check-step"><span class="step-n">Actual</span>sin(0.5) = 0.47943... ✔</div>
+                </div>
+                <div class="we-answer">sin(0.5) ≈ 0.47943</div>
+              </div>
+
+              <div class="we-card">
+                <div class="we-problem"><span class="we-num">Ex 35</span> Derive the first three non-zero terms of the Maclaurin series for ln(1+x) from first principles.</div>
+                <div class="we-steps">
+                  <div class="we-step"><span class="step-n">f(x)</span>f(x) = ln(1+x) → f(0) = 0</div>
+                  <div class="we-step"><span class="step-n">f'(x)</span>= 1/(1+x) → f'(0) = 1</div>
+                  <div class="we-step"><span class="step-n">f''(x)</span>= −1/(1+x)² → f''(0) = −1</div>
+                  <div class="we-step"><span class="step-n">f'''(x)</span>= 2/(1+x)³ → f'''(0) = 2</div>
+                  <div class="we-step"><span class="step-n">Apply</span>ln(1+x) = 0 + 1·x + (−1)x²/2! + 2·x³/3! + ... = x − x²/2 + x³/3 − ...</div>
+                </div>
+                <div class="we-answer">ln(1+x) = x − x²/2 + x³/3 − ... (|x| ≤ 1, x ≠ −1)</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 13 — FORMULA SHEET
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-formulasheet">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">13</div>
+            <div>
+              <span class="ls-eyebrow">Quick Reference</span>
+              <h2>Complete Formula Sheet</h2>
+            </div>
+            <span class="ls-level-badge level-foundation">All Levels</span>
+          </div>
+          <div class="ls-body">
+            <p class="body-para">All key formulas for Sequences &amp; Series in one place. Print or screenshot this section as a revision aid for KCSE and university assessments.</p>
+            <div class="formula-sheet-grid">
+              <div class="fs-card">
+                <div class="fs-title">Arithmetic Progression</div>
+                <div class="fs-items">
+                  <div class="fs-item">aₙ = a + (n−1)d</div>
+                  <div class="fs-item">Sₙ = n/2(2a + (n−1)d)</div>
+                  <div class="fs-item">Sₙ = n/2(first + last)</div>
+                  <div class="fs-item">d = aₙ − aₙ₋₁</div>
+                  <div class="fs-item">n = (L − a)/d + 1</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Geometric Progression</div>
+                <div class="fs-items">
+                  <div class="fs-item">aₙ = arⁿ⁻¹</div>
+                  <div class="fs-item">Sₙ = a(rⁿ−1)/(r−1), r≠1</div>
+                  <div class="fs-item">S∞ = a/(1−r), |r|&lt;1</div>
+                  <div class="fs-item">r = aₙ/aₙ₋₁</div>
+                  <div class="fs-item">GM of a,b = √(ab)</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Summation Formulas</div>
+                <div class="fs-items">
+                  <div class="fs-item">∑1 = n</div>
+                  <div class="fs-item">∑r = n(n+1)/2</div>
+                  <div class="fs-item">∑r² = n(n+1)(2n+1)/6</div>
+                  <div class="fs-item">∑r³ = [n(n+1)/2]²</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Telescoping &amp; Partial Fractions</div>
+                <div class="fs-items">
+                  <div class="fs-item">∑[f(r)−f(r+1)] = f(1)−f(n+1)</div>
+                  <div class="fs-item">1/(r(r+1)) = 1/r − 1/(r+1)</div>
+                  <div class="fs-item">∑1/(r(r+1)) = n/(n+1)</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Maclaurin Series</div>
+                <div class="fs-items">
+                  <div class="fs-item">eˣ = ∑xⁿ/n! (R=∞)</div>
+                  <div class="fs-item">sin x = ∑(−1)ⁿx²ⁿ⁺¹/(2n+1)!</div>
+                  <div class="fs-item">cos x = ∑(−1)ⁿx²ⁿ/(2n)!</div>
+                  <div class="fs-item">ln(1+x) = ∑(−1)ⁿ⁺¹xⁿ/n</div>
+                  <div class="fs-item">(1+x)ⁿ = ∑C(n,r)xʳ</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Convergence Tests</div>
+                <div class="fs-items">
+                  <div class="fs-item">Ratio: L = lim|aₙ₊₁/aₙ|</div>
+                  <div class="fs-item">Root: L = lim|aₙ|^(1/n)</div>
+                  <div class="fs-item">p-series: conv. iff p&gt;1</div>
+                  <div class="fs-item">Geometric: conv. iff |r|&lt;1</div>
+                  <div class="fs-item">Alternating: conv. if aₙ↘0</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Power Series</div>
+                <div class="fs-items">
+                  <div class="fs-item">∑aₙ(x−c)ⁿ centred at c</div>
+                  <div class="fs-item">R = lim|aₙ/aₙ₊₁|</div>
+                  <div class="fs-item">Interval: (c−R, c+R)</div>
+                  <div class="fs-item">Check endpoints separately</div>
+                </div>
+              </div>
+              <div class="fs-card">
+                <div class="fs-title">Special Means</div>
+                <div class="fs-items">
+                  <div class="fs-item">AM of a,b = (a+b)/2</div>
+                  <div class="fs-item">GM of a,b = √(ab)</div>
+                  <div class="fs-item">AM ≥ GM ≥ HM (AM-GM inequality)</div>
+                  <div class="fs-item">HM of a,b = 2ab/(a+b)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             SECTION 14 — COMMON ERRORS
+        ══════════════════════════════════════════ -->
+        <article class="lesson-section" id="sec-errors">
+          <div class="ls-header">
+            <div class="ls-icon" aria-hidden="true">14</div>
+            <div>
+              <span class="ls-eyebrow">Exam Guidance</span>
+              <h2>Common Errors to Avoid</h2>
+            </div>
+            <span class="ls-level-badge level-foundation">All Levels</span>
+          </div>
+          <div class="ls-body">
+            <p class="body-para">These are the most frequent mistakes Kenyan students make in Sequences &amp; Series — drawn from analysis of past KCSE marking schemes and common error patterns at university level.</p>
+            <div class="errors-grid">
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>For GP: Using Sₙ = n/2(2a+(n−1)d) instead of GP formula</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>Sₙ = a(rⁿ−1)/(r−1) for GP. The AP sum formula only applies to APs.</div>
+                <div class="ec-note">Always identify the type FIRST before writing any formula. Check: is the difference constant (AP) or is the ratio constant (GP)?</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Assuming S∞ exists for any GP, e.g. claiming S∞ for r = 2</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>S∞ = a/(1−r) only exists when |r| &lt; 1. If |r| ≥ 1, the infinite sum diverges.</div>
+                <div class="ec-note">Always state and check the condition |r| &lt; 1 before using the infinite GP sum formula.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Writing aₙ = arⁿ instead of arⁿ⁻¹ (off by one error)</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>aₙ = arⁿ⁻¹. The first term (n=1) gives a₁ = ar⁰ = a, not ar.</div>
+                <div class="ec-note">Always verify your formula by substituting n = 1 to confirm you get the first term a.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Using ∑r² = [n(n+1)/2]² (confusing with ∑r³)</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>∑r² = n(n+1)(2n+1)/6. It is ∑r³ = [n(n+1)/2]².</div>
+                <div class="ec-note">Memorise the distinction: ∑r³ equals (∑r)², but ∑r² has the (2n+1) factor in the numerator.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Concluding a series converges because its terms approach zero</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>lim aₙ = 0 is necessary but NOT sufficient. The harmonic series ∑1/n diverges even though 1/n → 0.</div>
+                <div class="ec-note">Apply a proper convergence test (ratio test, p-series, comparison) to confirm convergence.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Forgetting to check endpoints when finding interval of convergence</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>The ratio test only gives the open interval (c−R, c+R). Each endpoint must be tested separately with a different test.</div>
+                <div class="ec-note">An endpoint might converge (include it with [) or diverge (exclude it with ()). Never assume without checking.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Misidentifying a quadratic sequence as arithmetic</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>Find SECOND differences. If second differences are constant (not first), the sequence is quadratic, not arithmetic.</div>
+                <div class="ec-note">Grade 7–9 CBC sequences: always check first AND second differences before concluding the type.</div>
+              </div>
+              <div class="error-card">
+                <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>In finding the number of terms, giving a non-integer answer and ignoring it</div>
+                <div class="ec-right"><span class="ec-label">✓ Right</span>The number of terms n must be a positive integer. If your equation gives n = 7.3, re-check the problem — either your working has an error or no exact integer solution exists.</div>
+                <div class="ec-note">This is a critical checking step that earns marks in KCSE for showing verification.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC NAV FOOTER -->
+        <div class="topic-nav-footer">
+          <a href="complex.html" class="tnf-btn tnf-prev">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            <span>
+              <span class="tnf-label">Previous Topic</span>
+              <span class="tnf-name">Complex Numbers</span>
+            </span>
+          </a>
+          <a href="conics.html" class="tnf-btn tnf-next">
+            <span>
+              <span class="tnf-label">Next Topic</span>
+              <span class="tnf-name">Conic Sections</span>
+            </span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
         </div>
-      </div>
-    </section>
 
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="complex.html" class="topic-nav-btn prev">← Complex Numbers</a>
-      <a href="../main.html" class="topic-nav-btn next">All Topics →</a>
-    </div>
+      </div><!-- /topic-content -->
+    </div><!-- /topic-layout -->
   </main>
-</div>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · MoE Kenya · KNEC</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <!-- Shared JS for all topic pages -->
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
+
 </body>
 </html>

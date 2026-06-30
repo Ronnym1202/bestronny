@@ -1,269 +1,1270 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integration | Ronny Best Mathematics</title>
-  <meta name="description" content="From basic antiderivatives to multiple integrals">
+  <title>Integration | Ronny Best Mathematics — CBC-Aligned Calculus Lessons</title>
+  <meta name="description" content="Master integration with step-by-step CBC-aligned lessons: indefinite and definite integrals, substitution, integration by parts, partial fractions, areas, volumes of revolution, improper integrals, numerical methods and multiple integrals — with worked examples for Kenyan Senior Secondary and university students.">
+  <meta name="keywords" content="integration Kenya, calculus CBC, KCSE integration, definite integrals, integration by parts, partial fractions, volumes of revolution, numerical integration, multiple integrals">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/integration.html">
+
+  <meta property="og:title" content="Integration | Ronny Best Mathematics">
+  <meta property="og:description" content="From basic antiderivatives to multiple integrals — CBC-aligned, step-by-step, with worked examples for Kenyan students.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/integration.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Integration — From Basic Antiderivatives to Multiple Integrals",
+    "description": "A CBC-aligned, step-by-step guide to integration covering standard integrals, substitution, integration by parts, partial fractions, applications, improper integrals, numerical integration and multiple integrals.",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu"
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics"
+    },
+    "dateModified": "2026-06-12"
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">∫</span>
-  <h1>Integration</h1>
-  <p class="hero-sub">From basic antiderivatives to multiple integrals</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Integration</strong>
-</div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Introduction</li>
-      <li><a href="#intg-intro">What is Integration?</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#intg-basic">Basic Integrals</a></li>
-      <li><a href="#intg-substitution">Substitution</a></li>
-      <li><a href="#intg-by-parts">Integration by Parts</a></li>
-      <li><a href="#intg-partial">Partial Fractions</a></li>
-      <li><a href="#intg-apps">Applications</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#intg-improper">Improper Integrals</a></li>
-      <li><a href="#intg-numerical">Numerical Integration</a></li>
-      <li><a href="#intg-multiple">Multiple Integrals</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="intg-intro" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∫</span><h2>Introduction to Integration</h2><span class="level-badge badge-all">All Levels</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Integration as the Reverse of Differentiation</h3>
-          <p>Integration finds the antiderivative (indefinite integral) or the area under a curve (definite integral).</p>
-          <div class="formula-box highlight">
-            If F′(x) = f(x), then ∫f(x)dx = F(x) + C (indefinite integral)<br>
-            ∫ₐᵇ f(x)dx = F(b) − F(a) (Fundamental Theorem of Calculus)
-          </div>
-        </div>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-    </section>
-
-    <section id="intg-basic" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📋</span><h2>Standard Integrals</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            ∫xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp; (n ≠ −1) &nbsp;&nbsp; ∫x⁻¹ dx = ln|x| + C<br>
-            ∫eˣ dx = eˣ + C &nbsp;&nbsp; ∫aˣ dx = aˣ/ln a + C<br>
-            ∫sin x dx = −cos x + C &nbsp;&nbsp; ∫cos x dx = sin x + C<br>
-            ∫sec²x dx = tan x + C &nbsp;&nbsp; ∫cosec²x dx = −cot x + C<br>
-            ∫1/√(1−x²) dx = arcsin x + C &nbsp;&nbsp; ∫1/(1+x²) dx = arctan x + C
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>∫(3x² − 2x + 5) dx</p>
-              <p class="soln">= x³ − x² + 5x + C</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — Definite integral</div>
-              <p>∫₁³ (x² + 1) dx</p>
-              <p class="soln">= [x³/3 + x]₁³ = (9 + 3) − (1/3 + 1) = 12 − 4/3 = 32/3</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-substitution" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔄</span><h2>Integration by Substitution</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Method: Let u = g(x), then du = g′(x) dx</h3>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>∫ 2x(x²+1)⁵ dx</p>
-              <p class="soln">Let u = x²+1, du = 2x dx. ∫u⁵ du = u⁶/6 + C = (x²+1)⁶/6 + C</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div>
-              <p>∫ cos(3x+2) dx</p>
-              <p class="soln">Let u = 3x+2, du = 3dx. (1/3)∫cos u du = (1/3)sin(3x+2) + C</p></div>
-            <div class="example-card"><div class="example-label">Example 3 — Trig substitution</div>
-              <p>∫ 1/√(4−x²) dx</p>
-              <p class="soln">Let x = 2sinθ. ∫ (2cosθ)/(2cosθ) dθ = θ = arcsin(x/2) + C</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-by-parts" class="topic-section">
-      <div class="section-header"><span class="sec-icon">✂️</span><h2>Integration by Parts</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">∫u dv = uv − ∫v du</div>
-          <div class="callout tip"><span class="callout-icon">💡</span><span>LIATE rule for choosing u: Logarithm, Inverse trig, Algebraic, Trig, Exponential.</span></div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>∫ x eˣ dx</p>
-              <p class="soln">u = x, dv = eˣdx → v = eˣ. = xeˣ − ∫eˣ dx = xeˣ − eˣ + C = (x−1)eˣ + C</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div>
-              <p>∫ x² sin x dx</p>
-              <p class="soln">Apply by parts twice: = −x²cos x + 2x sin x + 2cos x + C</p></div>
-            <div class="example-card"><div class="example-label">Example 3</div>
-              <p>∫ ln x dx</p>
-              <p class="soln">u = ln x, dv = dx → = x ln x − x + C</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-partial" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🧩</span><h2>Integration by Partial Fractions</h2><span class="level-badge badge-secondary">A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — ∫ (3x+2)/[(x−1)(x+2)] dx</div>
-              <p class="soln">Decompose: (3x+2)/[(x−1)(x+2)] = A/(x−1) + B/(x+2). A=5/3, B=4/3. ∫ = (5/3)ln|x−1| + (4/3)ln|x+2| + C</p></div>
-            <div class="example-card"><div class="example-label">Example — Repeated factor ∫ 1/[x(x−1)²] dx</div>
-              <p class="soln">= A/x + B/(x−1) + C/(x−1)². Solve: A=1, B=−1, C=1. ∫ = ln|x| − ln|x−1| − 1/(x−1) + C</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-apps" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🎯</span><h2>Applications of Integration</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Area Between Two Curves</h3>
-          <div class="formula-box">A = ∫ₐᵇ [f(x) − g(x)] dx &nbsp; where f(x) ≥ g(x) on [a,b]</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Area between y = x² and y = x</div>
-              <p class="soln">Intersect at x=0,1. A = ∫₀¹(x − x²) dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = 1/6</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Volumes of Revolution</h3>
-          <div class="formula-box">
-            About x-axis: V = π∫ₐᵇ [f(x)]² dx &nbsp;&nbsp; (Disc method)<br>
-            About y-axis: V = 2π∫ₐᵇ x·f(x) dx &nbsp; (Shell method)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Rotate y = √x from 0 to 4 about x-axis</div>
-              <p class="soln">V = π∫₀⁴ x dx = π[x²/2]₀⁴ = 8π</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Arc Length & Surface Area</h3>
-          <div class="formula-box">
-            Arc length: L = ∫ₐᵇ √[1 + (dy/dx)²] dx<br>
-            Surface of revolution: S = 2π∫ₐᵇ f(x)√[1 + (f′(x))²] dx
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-improper" class="topic-section">
-      <div class="section-header"><span class="sec-icon">♾️</span><h2>Improper Integrals</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx<br>
-            ∫₋∞^∞ f(x)dx = ∫₋∞⁰ f(x)dx + ∫₀^∞ f(x)dx
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — ∫₁^∞ 1/x² dx</div>
-              <p class="soln">= lim[−1/x]₁ᵗ = lim(−1/t + 1) = 1 (converges)</p></div>
-            <div class="example-card"><div class="example-label">Example — ∫₁^∞ 1/x dx</div>
-              <p class="soln">= lim[ln x]₁ᵗ = ∞ (diverges)</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-numerical" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🖥️</span><h2>Numerical Integration</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Trapezium rule: ∫ₐᵇ f(x)dx ≈ h/2 [f(x₀) + 2f(x₁) + ... + 2f(x_{n−1}) + f(xₙ)], h = (b−a)/n<br>
-            Simpson's rule: ≈ h/3 [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + f(xₙ)] (n even)
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="intg-multiple" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∬</span><h2>Multiple Integrals</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Double integral: ∬_R f(x,y) dA = ∫∫ f(x,y) dy dx<br>
-            Triple integral: ∭_V f(x,y,z) dV<br>
-            Polar: ∬ f(r,θ) r dr dθ &nbsp;&nbsp; Jacobian: ∂(x,y)/∂(u,v) for change of variables
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — ∫₀¹∫₀¹ (x+y) dy dx</div>
-              <p class="soln">Inner: ∫₀¹(x+y)dy = [xy + y²/2]₀¹ = x + 1/2. Outer: ∫₀¹(x+1/2)dx = [x²/2+x/2]₀¹ = 1.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="differentiation.html" class="topic-nav-btn prev">← Differentiation</a>
-      <a href="vectors.html" class="topic-nav-btn next">Vectors →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem" class="active" aria-current="page">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <section class="topic-hero">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>∫</span><span>∬</span><span>dx</span><span>∮</span>
+    </div>
+    <div class="topic-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Integration</span>
+      </div>
+      <div class="topic-hero-icon" aria-hidden="true">∫</div>
+      <h1>Integration</h1>
+      <p class="topic-hero-sub">
+        Integration is the process of finding antiderivatives and accumulated quantities —
+        the reverse operation of differentiation. This lesson takes you from the basic
+        power rule for integrals through substitution, integration by parts, partial
+        fractions, and on to real applications such as areas, volumes of revolution,
+        arc length, improper integrals, numerical methods, and multiple integrals.
+        Every method follows the <strong>Competency Based Curriculum (CBC)</strong>
+        Senior Secondary syllabus as set out by KICD, with worked examples in the
+        KCSE examination style.
+      </p>
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Calculus Strand</span>
+        <span class="topic-badge badge-level">Secondary · A-Level · University</span>
+        <span class="topic-badge badge-cbc">CBC / KICD Aligned</span>
+        <span class="topic-badge badge-exam">KCSE Paper 2 Topic</span>
+      </div>
+      <div class="topic-stats-row" role="list">
+        <div class="ts-item" role="listitem"><strong>10</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>20+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>3</strong><span>Levels Covered</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>Free</strong><span>No Signup</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout">
+
+    <!-- ── TOC SIDEBAR ── -->
+    <aside class="toc-sidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <span class="toc-title">On This Page</span>
+        </div>
+        <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+        <ul class="toc-list">
+          <li class="toc-group-label">Foundations</li>
+          <li><a class="toc-link" href="#intg-intro">What Is Integration?</a></li>
+          <li><a class="toc-link" href="#intg-notation">Notation &amp; Terminology</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">Secondary</li>
+          <li><a class="toc-link" href="#intg-basic">Standard Integrals</a></li>
+          <li><a class="toc-link" href="#intg-definite">Definite Integrals</a></li>
+          <li><a class="toc-link" href="#intg-substitution">Substitution</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">A-Level</li>
+          <li><a class="toc-link" href="#intg-by-parts">Integration by Parts</a></li>
+          <li><a class="toc-link" href="#intg-partial">Partial Fractions</a></li>
+          <li><a class="toc-link" href="#intg-apps">Applications</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">University</li>
+          <li><a class="toc-link" href="#intg-improper">Improper Integrals</a></li>
+          <li><a class="toc-link" href="#intg-numerical">Numerical Integration</a></li>
+          <li><a class="toc-link" href="#intg-multiple">Multiple Integrals</a></li>
+        </ul>
+        <ul class="toc-list">
+          <li class="toc-group-label">Reference</li>
+          <li><a class="toc-link" href="#intg-sheet">Formula Sheet</a></li>
+          <li><a class="toc-link" href="#intg-errors">Common Errors</a></li>
+        </ul>
+        <div class="toc-actions">
+          <a href="tasks.html" class="toc-practice-btn">
+            <span>Practice Integration</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="topic-content" id="main-content">
+
+      <div class="cbc-context-banner">
+        <span class="ccb-icon" aria-hidden="true">📘</span>
+        <div class="ccb-text">
+          <strong>CBC Curriculum Note:</strong> Integration falls under the Calculus strand
+          of Senior Secondary Pure Mathematics, building on the Differentiation and Limits
+          strands. KICD requires learners to demonstrate the ability to find antiderivatives,
+          evaluate definite integrals, and apply integration to real-life problems such as
+          area, volume, distance, and growth — all of which are examined in KCSE Paper 2
+          and form the foundation for university-level calculus courses.
+        </div>
+      </div>
+
+      <!-- ═══ SECTION: INTRODUCTION ═══ -->
+      <section id="intg-intro" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">∫</span>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>What Is Integration?</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Integration answers two related questions: "What function, when differentiated,
+              gives me this?" and "What is the total accumulated quantity represented by this
+              rate of change?" The first question leads to the <strong>indefinite integral</strong>
+              (a family of antiderivatives), and the second leads to the <strong>definite
+              integral</strong> (a specific numerical value, often interpreted as an area).
+            </p>
+          </div>
+
+          <p class="body-para">
+            Think of differentiation and integration as opposite operations, much like
+            multiplication and division undo each other. If a car's velocity function is
+            v(t), then differentiating its position function s(t) gives v(t). Working
+            backwards — integrating v(t) — recovers s(t), up to an unknown constant
+            representing the car's starting position. That unknown constant is precisely
+            why every indefinite integral carries a "+ C".
+          </p>
+
+          <h3 class="sub-heading">The Fundamental Theorem of Calculus</h3>
+          <p class="body-para">
+            This single theorem links the two branches of calculus. It states that if
+            F is an antiderivative of a continuous function f on an interval, then the
+            definite integral of f over that interval can be computed simply by evaluating
+            F at the endpoints and subtracting. This means we rarely need to think about
+            "area under a curve" as a sum of infinitely many rectangles in practice —
+            we just find an antiderivative and substitute.
+          </p>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">Fundamental Theorem of Calculus</div>
+            <div class="fb-math highlight-formula">
+              If F′(x) = f(x), then ∫ f(x) dx = F(x) + C &nbsp;&nbsp;(indefinite integral)<br>
+              ∫ₐᵇ f(x) dx = F(b) − F(a) &nbsp;&nbsp;(definite integral)
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Why "+ C" matters:</strong> Because the derivative of any constant is
+              zero, every antiderivative of f(x) differs only by a constant. Forgetting the
+              constant of integration is one of the most common mistakes in KCSE — examiners
+              specifically award a mark for including it in indefinite integrals (though it
+              cancels out and is omitted in definite integrals).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: NOTATION ═══ -->
+      <section id="intg-notation" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">dx</span>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>Notation &amp; Terminology</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            Before working through methods, it helps to be fluent in the language of
+            integration. The table below summarises the key terms you will meet
+            throughout this lesson and in examinations.
+          </p>
+
+          <div class="identity-table">
+            <div class="it-row it-head">
+              <span>Term</span>
+              <span>Meaning</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">∫ f(x) dx</span>
+              <span class="it-eq">The indefinite integral — a family of antiderivatives of f, written as F(x) + C</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">∫ₐᵇ f(x) dx</span>
+              <span class="it-eq">The definite integral — a single number representing net signed area between a and b</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">dx</span>
+              <span class="it-eq">Indicates the variable of integration; "with respect to x"</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">C</span>
+              <span class="it-eq">The constant of integration — represents the unknown initial value</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Integrand</span>
+              <span class="it-eq">The function being integrated, f(x)</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">Limits of integration</span>
+              <span class="it-eq">The values a (lower) and b (upper) in a definite integral</span>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>Common confusion:</strong> Students often treat <em>dx</em> as decoration
+              and drop it. In substitution and multiple integrals especially, dx (or dy, dθ, dr)
+              is essential — it tells you which variable the integration is being performed
+              with respect to, and it transforms correctly under substitution (du = g′(x) dx).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: STANDARD INTEGRALS ═══ -->
+      <section id="intg-basic" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">📋</span>
+          <div>
+            <span class="ls-eyebrow">Secondary · KCSE</span>
+            <h2>Standard Integrals</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Every integration technique eventually reduces to a handful of standard
+              results. Memorising these — and recognising when an integrand matches one
+              of them after simplification — is the single most useful skill for
+              KCSE Paper 2 calculus questions.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">The Power Rule</h3>
+          <p class="body-para">
+            The power rule for integration is the reverse of the power rule for
+            differentiation: increase the exponent by one, then divide by the new
+            exponent. This works for any real exponent n except n = −1, where the
+            result would involve dividing by zero — that special case integrates to
+            a natural logarithm instead.
+          </p>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Power &amp; Exponential Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Power rule (n ≠ −1)</span><span class="fb-eq">∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C</span></div>
+              <div class="fb-row"><span class="fb-name">Special case (n = −1)</span><span class="fb-eq">∫ x⁻¹ dx = ∫ (1/x) dx = ln|x| + C</span></div>
+              <div class="fb-row"><span class="fb-name">Constant</span><span class="fb-eq">∫ k dx = kx + C</span></div>
+              <div class="fb-row"><span class="fb-name">Natural exponential</span><span class="fb-eq">∫ eˣ dx = eˣ + C</span></div>
+              <div class="fb-row"><span class="fb-name">General exponential</span><span class="fb-eq">∫ aˣ dx = aˣ / ln a + C &nbsp;(a &gt; 0, a ≠ 1)</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Trigonometric Integrals</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Trigonometric Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Sine</span><span class="fb-eq">∫ sin x dx = −cos x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Cosine</span><span class="fb-eq">∫ cos x dx = sin x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Secant squared</span><span class="fb-eq">∫ sec²x dx = tan x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Cosecant squared</span><span class="fb-eq">∫ csc²x dx = −cot x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Sec × tan</span><span class="fb-eq">∫ sec x tan x dx = sec x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Csc × cot</span><span class="fb-eq">∫ csc x cot x dx = −csc x + C</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Inverse Trigonometric Forms</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Inverse Trig Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Arcsine</span><span class="fb-eq">∫ 1 / √(1 − x²) dx = arcsin x + C</span></div>
+              <div class="fb-row"><span class="fb-name">Arctangent</span><span class="fb-eq">∫ 1 / (1 + x²) dx = arctan x + C</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> ∫ (3x² − 2x + 5) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Integrate each term separately using the power rule.</div>
+                <div class="we-step"><span class="step-n">Step 2</span> ∫3x² dx = x³, &nbsp; ∫−2x dx = −x², &nbsp; ∫5 dx = 5x</div>
+                <div class="we-step check-step"><span class="step-n">Check</span> Differentiate the result: d/dx(x³ − x² + 5x) = 3x² − 2x + 5 ✔</div>
+              </div>
+              <div class="we-answer">= x³ − x² + 5x + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span> ∫ (4√x + 3/x²) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Rewrite roots and reciprocals as powers: √x = x^(1/2), &nbsp; 1/x² = x⁻²</div>
+                <div class="we-step"><span class="step-n">Step 2</span> ∫4x^(1/2) dx = 4 · x^(3/2)/(3/2) = (8/3)x^(3/2)</div>
+                <div class="we-step"><span class="step-n">Step 3</span> ∫3x⁻² dx = 3 · x⁻¹/(−1) = −3x⁻¹ = −3/x</div>
+              </div>
+              <div class="we-answer">= (8/3)x^(3/2) − 3/x + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span> ∫ (2eˣ − 1/x) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> ∫2eˣ dx = 2eˣ (exponential rule)</div>
+                <div class="we-step"><span class="step-n">Step 2</span> ∫−(1/x) dx = −ln|x| (the n = −1 special case)</div>
+              </div>
+              <div class="we-answer">= 2eˣ − ln|x| + C</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: DEFINITE INTEGRALS ═══ -->
+      <section id="intg-definite" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⊢</span>
+          <div>
+            <span class="ls-eyebrow">Secondary · KCSE</span>
+            <h2>Definite Integrals &amp; Area Under a Curve</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              A definite integral evaluates to a single real number. Geometrically, when
+              f(x) ≥ 0 on [a, b], this number equals the area between the curve y = f(x),
+              the x-axis, and the vertical lines x = a and x = b. If f(x) is negative on
+              part of the interval, that portion contributes a negative value — the
+              definite integral gives <strong>net signed area</strong>, not total area.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Evaluation Procedure</h3>
+          <ol class="method-steps">
+            <li>Find an antiderivative F(x) of f(x) (omit "+ C" — it cancels in the subtraction).</li>
+            <li>Write the result in square brackets with limits: [F(x)]ₐᵇ</li>
+            <li>Substitute the upper limit b into F(x), then subtract F(a) (lower limit substituted).</li>
+            <li>Simplify to a single numerical value.</li>
+          </ol>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> Evaluate ∫₁³ (x² + 1) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Antiderivative: F(x) = x³/3 + x</div>
+                <div class="we-step"><span class="step-n">Step 2</span> F(3) = 27/3 + 3 = 9 + 3 = 12</div>
+                <div class="we-step"><span class="step-n">Step 3</span> F(1) = 1/3 + 1 = 4/3</div>
+                <div class="we-step"><span class="step-n">Step 4</span> F(3) − F(1) = 12 − 4/3 = 36/3 − 4/3 = 32/3</div>
+              </div>
+              <div class="we-answer">= 32/3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Negative area</span> Evaluate ∫₀² (x² − 2x) dx and interpret the sign</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> F(x) = x³/3 − x²</div>
+                <div class="we-step"><span class="step-n">Step 2</span> F(2) = 8/3 − 4 = −4/3</div>
+                <div class="we-step"><span class="step-n">Step 3</span> F(0) = 0</div>
+                <div class="we-step"><span class="step-n">Step 4</span> F(2) − F(0) = −4/3</div>
+                <div class="we-step"><span class="step-n">Note</span> The curve lies below the x-axis on (0, 2), so the integral is negative. The actual <em>area</em> is |−4/3| = 4/3 square units.</div>
+              </div>
+              <div class="we-answer">Integral = −4/3 &nbsp;(Area = 4/3 sq. units)</div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>Sketch first:</strong> When a question asks for "area" rather than
+              "the value of the integral," always sketch the curve to identify where it
+              crosses the x-axis. Split the integral at each crossing point and take the
+              absolute value of each piece before summing — otherwise regions below the
+              axis will cancel regions above it.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: SUBSTITUTION ═══ -->
+      <section id="intg-substitution" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">🔄</span>
+          <div>
+            <span class="ls-eyebrow">Secondary / A-Level</span>
+            <h2>Integration by Substitution</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Substitution is the integration analogue of the chain rule. Whenever the
+              integrand is a composite function multiplied by the derivative of its
+              "inner function" (possibly up to a constant), substitution simplifies it
+              into a standard integral.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Method</h3>
+          <ol class="method-steps">
+            <li>Identify an inner function and let <strong>u</strong> equal it.</li>
+            <li>Differentiate to find <strong>du = g′(x) dx</strong>, and rearrange to express dx in terms of du.</li>
+            <li>Rewrite the entire integral in terms of u only — no x should remain.</li>
+            <li>Integrate using standard results, then substitute u back in terms of x.</li>
+            <li>For definite integrals, either convert the limits to u-values, or substitute back to x before evaluating.</li>
+          </ol>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> ∫ 2x(x²+1)⁵ dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Let u = x² + 1, so du = 2x dx — this matches the 2x already present.</div>
+                <div class="we-step"><span class="step-n">Step 2</span> The integral becomes ∫u⁵ du = u⁶/6 + C</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Substitute back u = x² + 1</div>
+              </div>
+              <div class="we-answer">= (x²+1)⁶ / 6 + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Constant adjustment</span> ∫ cos(3x+2) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Let u = 3x + 2, so du = 3 dx, meaning dx = du/3</div>
+                <div class="we-step"><span class="step-n">Step 2</span> ∫cos u · (du/3) = (1/3)∫cos u du = (1/3) sin u</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Substitute back u = 3x + 2</div>
+              </div>
+              <div class="we-answer">= (1/3) sin(3x+2) + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Definite with limit change</span> Evaluate ∫₀¹ x(x²+1)³ dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Let u = x² + 1, du = 2x dx, so x dx = du/2</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Change limits: when x = 0, u = 1; when x = 1, u = 2</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Integral becomes (1/2)∫₁² u³ du = (1/2)[u⁴/4]₁² = (1/8)(16 − 1)</div>
+              </div>
+              <div class="we-answer">= 15/8</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4 — Trigonometric substitution</span> ∫ 1/√(4−x²) dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Let x = 2 sin θ, so dx = 2 cos θ dθ and √(4−x²) = 2 cos θ</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Integral becomes ∫ (2 cos θ)/(2 cos θ) dθ = ∫ dθ = θ</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Since x = 2 sin θ, θ = arcsin(x/2)</div>
+              </div>
+              <div class="we-answer">= arcsin(x/2) + C</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Spotting substitution opportunities:</strong> Look for a function
+              "inside" another function (e.g. inside a bracket, square root, exponent, or
+              trig function) whose derivative — or a constant multiple of it — also appears
+              in the integrand. If you can account for every factor of x this way,
+              substitution will work.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: BY PARTS ═══ -->
+      <section id="intg-by-parts" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">✂</span>
+          <div>
+            <span class="ls-eyebrow">A-Level</span>
+            <h2>Integration by Parts</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Integration by parts is the reverse of the product rule for differentiation.
+              It is used when the integrand is a <strong>product of two different types of
+              function</strong> (e.g. a polynomial times an exponential, or a polynomial
+              times a trig function) and substitution does not simplify it.
+            </p>
+          </div>
+
+          <div class="formula-block highlight-block">
+            <div class="fb-label">Integration by Parts Formula</div>
+            <div class="fb-math highlight-formula">∫ u dv = uv − ∫ v du</div>
+          </div>
+
+          <h3 class="sub-heading">Choosing u and dv — the LIATE Rule</h3>
+          <p class="body-para">
+            The hardest part of this method is deciding which factor is u (to be
+            differentiated) and which is dv (to be integrated). The LIATE rule gives
+            a priority order for choosing u: pick whichever type appears <em>earliest</em>
+            in the list below.
+          </p>
+
+          <div class="method-tabs">
+            <div class="mt-block"><div class="mt-title">L — Logarithmic</div><div class="mt-desc">e.g. ln x, log x — choose these as u first</div></div>
+            <div class="mt-block"><div class="mt-title">I — Inverse Trig</div><div class="mt-desc">e.g. arctan x, arcsin x</div></div>
+            <div class="mt-block"><div class="mt-title">A — Algebraic</div><div class="mt-desc">e.g. x, x², x³ — polynomials</div></div>
+            <div class="mt-block"><div class="mt-title">T — Trigonometric</div><div class="mt-desc">e.g. sin x, cos x</div></div>
+            <div class="mt-block"><div class="mt-title">E — Exponential</div><div class="mt-desc">e.g. eˣ, aˣ — choose these as dv first</div></div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> ∫ x eˣ dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> By LIATE, x is Algebraic and eˣ is Exponential, so u = x (differentiate), dv = eˣ dx (integrate)</div>
+                <div class="we-step"><span class="step-n">Step 2</span> du = dx, &nbsp; v = eˣ</div>
+                <div class="we-step"><span class="step-n">Step 3</span> ∫x eˣ dx = x eˣ − ∫eˣ dx = x eˣ − eˣ</div>
+              </div>
+              <div class="we-answer">= (x − 1)eˣ + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Applying twice</span> ∫ x² sin x dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> First application: u = x², dv = sin x dx → du = 2x dx, v = −cos x</div>
+                <div class="we-step"><span class="step-n">Step 2</span> = −x² cos x + ∫2x cos x dx</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Second application on ∫2x cos x dx: u = 2x, dv = cos x dx → du = 2dx, v = sin x</div>
+                <div class="we-step"><span class="step-n">Step 4</span> ∫2x cos x dx = 2x sin x − ∫2 sin x dx = 2x sin x + 2 cos x</div>
+              </div>
+              <div class="we-answer">= −x² cos x + 2x sin x + 2 cos x + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — The "invisible" dv</span> ∫ ln x dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Write ln x as ln x · 1. Let u = ln x, dv = dx</div>
+                <div class="we-step"><span class="step-n">Step 2</span> du = (1/x) dx, &nbsp; v = x</div>
+                <div class="we-step"><span class="step-n">Step 3</span> ∫ln x dx = x ln x − ∫x · (1/x) dx = x ln x − ∫1 dx</div>
+              </div>
+              <div class="we-answer">= x ln x − x + C</div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>When integration by parts seems to loop:</strong> For integrals like
+              ∫eˣ sin x dx, applying the formula twice returns the original integral on the
+              right-hand side. Treat the original integral as an unknown I, set up the
+              equation I = (...) − I, and solve algebraically for I — this is a standard
+              A-Level technique that surprises many students the first time they meet it.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: PARTIAL FRACTIONS ═══ -->
+      <section id="intg-partial" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">🧩</span>
+          <div>
+            <span class="ls-eyebrow">A-Level</span>
+            <h2>Integration by Partial Fractions</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Rational functions (one polynomial divided by another) can often be
+              "split" into a sum of simpler fractions whose integrals are standard
+              logarithmic forms. This technique connects directly to the Algebra
+              strand's work on partial fraction decomposition.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Decomposition Patterns</h3>
+          <div class="identity-table">
+            <div class="it-row it-head">
+              <span>Denominator Type</span>
+              <span>Decomposition Form</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(x−a)(x−b)</span>
+              <span class="it-eq">A/(x−a) + B/(x−b)</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(x−a)²</span>
+              <span class="it-eq">A/(x−a) + B/(x−a)²</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(x−a)(x²+bx+c)</span>
+              <span class="it-eq">A/(x−a) + (Bx+C)/(x²+bx+c) <em>irreducible quadratic</em></span>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1 — Distinct linear factors</span> ∫ (3x+2) / [(x−1)(x+2)] dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Write (3x+2)/[(x−1)(x+2)] = A/(x−1) + B/(x+2)</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Multiply through: 3x+2 = A(x+2) + B(x−1)</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Let x = 1: 5 = 3A → A = 5/3. Let x = −2: −4 = −3B → B = 4/3</div>
+                <div class="we-step"><span class="step-n">Step 4</span> Integrate each term: (5/3)ln|x−1| + (4/3)ln|x+2|</div>
+              </div>
+              <div class="we-answer">= (5/3)ln|x−1| + (4/3)ln|x+2| + C</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Repeated factor</span> ∫ 1 / [x(x−1)²] dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Decompose: 1/[x(x−1)²] = A/x + B/(x−1) + C/(x−1)²</div>
+                <div class="we-step"><span class="step-n">Step 2</span> Multiply through and compare coefficients/substitute convenient values: A = 1, B = −1, C = 1</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Integrate: ln|x| − ln|x−1| − 1/(x−1)</div>
+              </div>
+              <div class="we-answer">= ln|x| − ln|x−1| − 1/(x−1) + C</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Check the degree first:</strong> Partial fractions only apply directly
+              when the numerator's degree is less than the denominator's. If not, perform
+              polynomial long division first to separate a polynomial part from a proper
+              fraction remainder, then decompose the remainder.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: APPLICATIONS ═══ -->
+      <section id="intg-apps" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">🎯</span>
+          <div>
+            <span class="ls-eyebrow">Secondary / A-Level</span>
+            <h2>Applications of Integration</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+
+          <h3 class="sub-heading">Area Between Two Curves</h3>
+          <p class="body-para">
+            When two curves intersect, the area enclosed between them on an interval
+            [a, b] is found by integrating the difference of the "upper" and "lower"
+            functions. The intersection points, found by solving f(x) = g(x), become
+            the limits of integration.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Area Between Curves</div>
+            <div class="fb-math">A = ∫ₐᵇ [f(x) − g(x)] dx &nbsp;&nbsp; where f(x) ≥ g(x) on [a, b]</div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Find the area between y = x and y = x²</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Find intersections: x = x² → x² − x = 0 → x = 0 or x = 1</div>
+                <div class="we-step"><span class="step-n">Step 2</span> On [0,1], y = x lies above y = x² (test x = 0.5: 0.5 &gt; 0.25)</div>
+                <div class="we-step"><span class="step-n">Step 3</span> A = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = (1/2 − 1/3) − 0</div>
+              </div>
+              <div class="we-answer">A = 1/6 square units</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Volumes of Revolution</h3>
+          <p class="body-para">
+            Rotating a region about an axis sweeps out a solid of revolution. The
+            <strong>disc method</strong> treats the solid as a stack of thin circular
+            discs (used when rotating about the x-axis), while the <strong>shell
+            method</strong> treats it as a series of nested cylindrical shells (often
+            more convenient when rotating about the y-axis).
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Volumes of Revolution</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Disc method (about x-axis)</span><span class="fb-eq">V = π ∫ₐᵇ [f(x)]² dx</span></div>
+              <div class="fb-row"><span class="fb-name">Shell method (about y-axis)</span><span class="fb-eq">V = 2π ∫ₐᵇ x f(x) dx</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Rotate y = √x, 0 ≤ x ≤ 4, about the x-axis. Find the volume.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> [f(x)]² = (√x)² = x</div>
+                <div class="we-step"><span class="step-n">Step 2</span> V = π ∫₀⁴ x dx = π [x²/2]₀⁴ = π(16/2 − 0)</div>
+              </div>
+              <div class="we-answer">V = 8π cubic units</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Arc Length and Surface Area</h3>
+          <p class="body-para">
+            The length of a curve and the surface area generated by rotating it both
+            arise from integrating expressions involving the derivative f′(x). These
+            integrals are conceptually straightforward but often require substitution
+            or numerical methods to evaluate in practice.
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Arc Length &amp; Surface of Revolution</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Arc length</span><span class="fb-eq">L = ∫ₐᵇ √[1 + (f′(x))²] dx</span></div>
+              <div class="fb-row"><span class="fb-name">Surface of revolution</span><span class="fb-eq">S = 2π ∫ₐᵇ f(x) √[1 + (f′(x))²] dx</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Kinematics: Displacement, Velocity and Acceleration</h3>
+          <p class="body-para">
+            Integration reverses the differentiation chain used in motion problems.
+            Given an acceleration function a(t), integrating once (with an initial
+            velocity condition) recovers velocity v(t); integrating again (with an
+            initial displacement condition) recovers displacement s(t). This is a
+            recurring KCSE Paper 2 application.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> A particle has acceleration a(t) = 6t − 4 m/s². If v(0) = 2 m/s and s(0) = 0, find s(t).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> v(t) = ∫(6t − 4) dt = 3t² − 4t + C₁. Since v(0) = 2, C₁ = 2 → v(t) = 3t² − 4t + 2</div>
+                <div class="we-step"><span class="step-n">Step 2</span> s(t) = ∫(3t² − 4t + 2) dt = t³ − 2t² + 2t + C₂. Since s(0) = 0, C₂ = 0</div>
+              </div>
+              <div class="we-answer">s(t) = t³ − 2t² + 2t</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: IMPROPER INTEGRALS ═══ -->
+      <section id="intg-improper" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">♾</span>
+          <div>
+            <span class="ls-eyebrow">University</span>
+            <h2>Improper Integrals</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              An integral is "improper" if at least one limit of integration is infinite,
+              or if the integrand becomes unbounded somewhere within the interval. Such
+              integrals are evaluated as limits, and they may either <strong>converge</strong>
+              (settle to a finite value) or <strong>diverge</strong> (grow without bound).
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Definitions</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Infinite upper limit</span><span class="fb-eq">∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx</span></div>
+              <div class="fb-row"><span class="fb-name">Both limits infinite</span><span class="fb-eq">∫₋∞^∞ f(x)dx = ∫₋∞⁰ f(x)dx + ∫₀^∞ f(x)dx</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1 — Converges</span> ∫₁^∞ 1/x² dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> Rewrite as a limit: lim(t→∞) ∫₁ᵗ x⁻² dx = lim(t→∞) [−1/x]₁ᵗ</div>
+                <div class="we-step"><span class="step-n">Step 2</span> = lim(t→∞) (−1/t + 1) = 0 + 1</div>
+              </div>
+              <div class="we-answer">= 1 (the integral converges)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Diverges</span> ∫₁^∞ 1/x dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> lim(t→∞) ∫₁ᵗ x⁻¹ dx = lim(t→∞) [ln x]₁ᵗ = lim(t→∞) ln t</div>
+              </div>
+              <div class="we-answer">= ∞ (the integral diverges)</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>The p-test:</strong> ∫₁^∞ 1/xᵖ dx converges if p &gt; 1 and diverges
+              if p ≤ 1. This single result — compare the two examples above where p = 2
+              and p = 1 — is one of the most frequently used facts in introductory analysis.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: NUMERICAL INTEGRATION ═══ -->
+      <section id="intg-numerical" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">🖥</span>
+          <div>
+            <span class="ls-eyebrow">University</span>
+            <h2>Numerical Integration</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Many real integrals have no elementary antiderivative, or the antiderivative
+              is too complex to be practical. Numerical methods approximate the value of
+              a definite integral by sampling the function at evenly spaced points and
+              combining the values with appropriate weights.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">The Trapezium Rule</h3>
+          <p class="body-para">
+            The trapezium rule approximates the area under the curve by replacing each
+            strip with a trapezium rather than a rectangle, giving a better estimate
+            than simple rectangle sums for smooth functions.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Trapezium Rule</div>
+            <div class="fb-math">∫ₐᵇ f(x)dx ≈ (h/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(x_{n−1}) + f(xₙ)], &nbsp; h = (b−a)/n</div>
+          </div>
+
+          <h3 class="sub-heading">Simpson's Rule</h3>
+          <p class="body-para">
+            Simpson's rule fits a parabola through each pair of strips, giving
+            significantly higher accuracy for the same number of points — but it
+            requires the number of strips n to be <strong>even</strong>.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Simpson's Rule (n even)</div>
+            <div class="fb-math">∫ₐᵇ f(x)dx ≈ (h/3)[f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + 4f(x_{n−1}) + f(xₙ)]</div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Use the trapezium rule with n = 4 strips to estimate ∫₀² x² dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span> h = (2−0)/4 = 0.5. Points: x₀=0, x₁=0.5, x₂=1, x₃=1.5, x₄=2</div>
+                <div class="we-step"><span class="step-n">Step 2</span> f-values: f(0)=0, f(0.5)=0.25, f(1)=1, f(1.5)=2.25, f(2)=4</div>
+                <div class="we-step"><span class="step-n">Step 3</span> Sum = f(x₀)+f(x₄)+2[f(x₁)+f(x₂)+f(x₃)] = (0+4)+2(0.25+1+2.25) = 4 + 7 = 11</div>
+                <div class="we-step"><span class="step-n">Step 4</span> Estimate = (h/2) × Sum = (0.5/2) × 11 = 2.75</div>
+                <div class="we-step check-step"><span class="step-n">Check</span> Exact value: ∫₀² x² dx = [x³/3]₀² = 8/3 ≈ 2.667 — the trapezium estimate is close, slightly overestimating because x² is convex.</div>
+              </div>
+              <div class="we-answer">≈ 2.75 (exact = 8/3 ≈ 2.667)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: MULTIPLE INTEGRALS ═══ -->
+      <section id="intg-multiple" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">∬</span>
+          <div>
+            <span class="ls-eyebrow">University</span>
+            <h2>Multiple Integrals</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>
+              Single integrals accumulate quantities along a line. Double and triple
+              integrals extend the same idea to regions in the plane and solids in
+              space — accumulating quantities such as area, volume, mass, or average
+              value over two- or three-dimensional domains.
+            </p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Double, Triple, Polar &amp; Jacobian</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Double integral</span><span class="fb-eq">∬_R f(x,y) dA = ∫∫ f(x,y) dy dx</span></div>
+              <div class="fb-row"><span class="fb-name">Triple integral</span><span class="fb-eq">∭_V f(x,y,z) dV</span></div>
+              <div class="fb-row"><span class="fb-name">Polar coordinates</span><span class="fb-eq">∬ f(r,θ) r dr dθ</span></div>
+              <div class="fb-row"><span class="fb-name">Jacobian (change of variables)</span><span class="fb-eq">∂(x,y)/∂(u,v) — scaling factor for area under substitution</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Evaluating Iterated Integrals</h3>
+          <p class="body-para">
+            A double integral over a rectangular region is evaluated by integrating
+            "inside-out": treat the inner variable as the variable of integration
+            while holding the outer variable constant, producing a function of the
+            outer variable alone, then integrate that result.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example</span> Evaluate ∫₀¹ ∫₀¹ (x + y) dy dx</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1 — Inner integral</span> Treat x as constant: ∫₀¹ (x+y) dy = [xy + y²/2]₀¹ = x + 1/2</div>
+                <div class="we-step"><span class="step-n">Step 2 — Outer integral</span> ∫₀¹ (x + 1/2) dx = [x²/2 + x/2]₀¹ = (1/2 + 1/2) − 0</div>
+              </div>
+              <div class="we-answer">= 1</div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div>
+              <strong>Why polar coordinates?</strong> When a region is circular or has
+              radial symmetry (e.g. a disc x²+y² ≤ R²), converting to polar coordinates
+              with the extra factor of r often turns an otherwise impossible Cartesian
+              double integral into an elementary one.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: FORMULA SHEET ═══ -->
+      <section id="intg-sheet" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">📑</span>
+          <div>
+            <span class="ls-eyebrow">Quick Reference</span>
+            <h2>Integration Formula Sheet</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            A consolidated reference of every result covered in this lesson — useful for
+            revision before KCSE Paper 2 or university calculus assessments.
+          </p>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">Power &amp; Exponential</div>
+              <div class="fs-items">
+                <div class="fs-item">∫xⁿdx = xⁿ⁺¹/(n+1) + C (n≠−1)</div>
+                <div class="fs-item">∫(1/x)dx = ln|x| + C</div>
+                <div class="fs-item">∫eˣdx = eˣ + C</div>
+                <div class="fs-item">∫aˣdx = aˣ/ln a + C</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Trigonometric</div>
+              <div class="fs-items">
+                <div class="fs-item">∫sin x dx = −cos x + C</div>
+                <div class="fs-item">∫cos x dx = sin x + C</div>
+                <div class="fs-item">∫sec²x dx = tan x + C</div>
+                <div class="fs-item">∫csc²x dx = −cot x + C</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Inverse Trig</div>
+              <div class="fs-items">
+                <div class="fs-item">∫1/√(1−x²)dx = arcsin x + C</div>
+                <div class="fs-item">∫1/(1+x²)dx = arctan x + C</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Key Techniques</div>
+              <div class="fs-items">
+                <div class="fs-item">Substitution: u = g(x), du = g′(x)dx</div>
+                <div class="fs-item">By parts: ∫u dv = uv − ∫v du</div>
+                <div class="fs-item">Partial fractions: split rational integrands</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Applications</div>
+              <div class="fs-items">
+                <div class="fs-item">Area: A = ∫ₐᵇ[f(x)−g(x)]dx</div>
+                <div class="fs-item">Disc volume: V = π∫ₐᵇ[f(x)]²dx</div>
+                <div class="fs-item">Shell volume: V = 2π∫ₐᵇ x f(x)dx</div>
+                <div class="fs-item">Arc length: L = ∫ₐᵇ√[1+(f′(x))²]dx</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Numerical &amp; Multiple</div>
+              <div class="fs-items">
+                <div class="fs-item">Trapezium: (h/2)[f₀+2f₁+...+fₙ]</div>
+                <div class="fs-item">Simpson's: (h/3)[f₀+4f₁+2f₂+...+fₙ]</div>
+                <div class="fs-item">Polar area element: r dr dθ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SECTION: COMMON ERRORS ═══ -->
+      <section id="intg-errors" class="lesson-section">
+        <div class="ls-header">
+          <span class="ls-icon" aria-hidden="true">⚠</span>
+          <div>
+            <span class="ls-eyebrow">Exam Tips</span>
+            <h2>Common Errors to Avoid</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <div class="errors-grid">
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> ∫x² dx = x³ (forgetting "+C" and the constant 1/3)</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> ∫x² dx = x³/3 + C</div>
+              <div class="ec-note">Always divide by the new exponent, and always include the constant of integration in indefinite integrals.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> ∫(1/x) dx = x⁰/0 (undefined application of the power rule)</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> ∫(1/x) dx = ln|x| + C</div>
+              <div class="ec-note">The power rule fails when n = −1; this case is always a natural logarithm — and don't forget the modulus sign.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> Area = ∫₀² (x²−2x) dx, reported as −4/3 sq. units</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> Area = |∫₀² (x²−2x) dx| = 4/3 sq. units</div>
+              <div class="ec-note">Definite integrals give signed values. "Area" must always be reported as positive — split the integral at sign changes if necessary.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> ∫cos(3x) dx = sin(3x) + C</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> ∫cos(3x) dx = (1/3)sin(3x) + C</div>
+              <div class="ec-note">When the inner function is ax + b, divide by the coefficient a after integrating — a direct consequence of the chain rule in reverse.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> ∫x eˣ dx with u = eˣ, dv = x dx (LIATE ignored)</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> u = x, dv = eˣ dx</div>
+              <div class="ec-note">Choosing u and dv the wrong way around in integration by parts often produces an integral that is harder than the original — follow LIATE.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">Wrong</span> Forgetting to change the limits of integration after substitution in a definite integral</div>
+              <div class="ec-right"><span class="ec-label">Correct</span> Convert both limits to u-values (or back-substitute before evaluating)</div>
+              <div class="ec-note">Mixing x-limits with a u-integrand is one of the most common substitution errors in A-Level exams.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prev / Next navigation -->
+      <nav class="topic-nav-footer" aria-label="Lesson navigation">
+        <a href="differentiation.html" class="tnf-btn tnf-prev">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><span class="tnf-label">Previous</span><span class="tnf-name">Differentiation</span></span>
+        </a>
+        <a href="vectors.html" class="tnf-btn tnf-next">
+          <span><span class="tnf-label">Next</span><span class="tnf-name">Vectors</span></span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+
+    </main>
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
 </body>
 </html>

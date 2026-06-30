@@ -52,7 +52,7 @@ exports.handler = async function (event) {
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",   // ✅ FIXED: updated model name
         max_tokens: 1500,
         system: `You are Mwalimu Ronny, a highly respected and warm mathematics teacher for Kenyan secondary school and university students. When given a mathematics question, provide a complete, clear, step-by-step solution.
 Guidelines:

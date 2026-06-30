@@ -1,1151 +1,1986 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ask Mwalimu | Ronny Best Mathematics</title>
-<meta name="description" content="Ask any mathematics question and get a personal reply from Mwalimu Ronny. A free, moderated Q&A community for secondary school and university students in Kenya.">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Ask Mwalimu | Ronny Best Mathematics">
-<meta property="og:description" content="Post your mathematics question and get a personal reply from Mwalimu Ronny.">
-<meta property="og:url" content="https://bestronny.netlify.app/ask-mwalimu.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://bestronny.netlify.app/IMAGES/P2.png">
-<link rel="canonical" href="https://bestronny.netlify.app/ask-mwalimu.html">
-<link rel="icon" type="image/png" href="IMAGES/P2.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script>
-  window.MathJax = {
-    tex:{ inlineMath:[['\\(','\\)']], displayMath:[['\\[','\\]']] },
-    options:{ skipHtmlTags:['script','noscript','style','textarea','pre'] },
-    startup:{ typeset:false }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-/* [YOUR FULL CSS - same as before, plus these additions] */
+<head>
+  <!-- ═══ META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Mwalimu | Ronny Best Mathematics — Free Q&A for Kenyan Students</title>
+  <meta name="description" content="Post your mathematics question and get a step-by-step reply from Mwalimu Ronny. Free, moderated Q&A community for CBC-aligned secondary and college students in Kenya.">
+  <meta name="keywords" content="ask maths question Kenya, CBC mathematics help, Mwalimu Ronny, free maths Q&A, algebra help, calculus Kenya, KCSE maths questions">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/ask-mwalimu.html">
+  <meta property="og:title" content="Ask Mwalimu | Ronny Best Mathematics">
+  <meta property="og:description" content="Post any maths question and get a personal step-by-step reply from Mwalimu Ronny — completely free, no signup required.">
+  <meta property="og:url" content="https://bestronny.netlify.app/ask-mwalimu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://bestronny.netlify.app/IMAGES/P2.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
 
-/* Add nested reply styling */
-.reply.nested {
-  margin-left: 2rem;
-  border-left: 2px solid var(--gold-border);
-  position: relative;
-}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-.reply.nested::before {
-  content: '↳';
-  position: absolute;
-  left: -1.2rem;
-  top: 0.75rem;
-  color: var(--gold);
-  font-size: 1rem;
-}
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
 
-.reply-to-badge {
-  display: inline-block;
-  background: var(--cream-200);
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-size: 0.7rem;
-  margin-right: 6px;
-  color: var(--ink-60);
-}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
 
-.reply-to-badge a {
-  color: var(--gold);
-  text-decoration: none;
-  font-weight: 600;
-}
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
+      startup: { typeset: false }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-.reply-to-badge a:hover {
-  text-decoration: underline;
-}
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "QAPage",
+    "name": "Ask Mwalimu — Ronny Best Mathematics",
+    "description": "Free moderated mathematics Q&A for Kenyan students. Post any question and receive a step-by-step answer from Mwalimu Ronny.",
+    "url": "https://bestronny.netlify.app/ask-mwalimu.html",
+    "mainEntity": {
+      "@type": "Question",
+      "name": "How can I get help with CBC mathematics in Kenya?",
+      "text": "Visit Ask Mwalimu at Ronny Best Mathematics to post any CBC-aligned mathematics question and receive a personal step-by-step response from Mwalimu Ronny — free, no account required."
+    }
+  }
+  </script>
 
-.btn-reply-to-reply {
-  background: none;
-  border: none;
-  color: var(--gold);
-  font-size: 0.7rem;
-  cursor: pointer;
-  margin-left: 8px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
+  <style>
+  /* ═══════════════════════════════════════════════
+     ASK MWALIMU PAGE — page-specific styles only
+     (index.css provides shared tokens & components)
+  ═══════════════════════════════════════════════ */
 
-.btn-reply-to-reply:hover {
-  background: var(--cream-200);
-}
+  /* ── Ask Hero ── */
+  .ask-hero {
+    background: linear-gradient(155deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+    padding: clamp(2.5rem, 7vw, 4.5rem) var(--pad-x);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--bisque-deep);
+  }
+  .ask-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,228,196,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,228,196,.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .ask-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .ask-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--bisque-dark);
+    background: rgba(200,131,42,.12);
+    border: 1px solid rgba(200,131,42,.25);
+    padding: 4px 14px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 14px;
+  }
+  .ask-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 900;
+    color: rgba(255,243,232,.95);
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .ask-hero h1 span { color: var(--bisque-dark); }
+  .ask-hero-sub {
+    font-family: var(--font-serif);
+    font-size: .98rem;
+    color: rgba(255,228,196,.58);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 20px;
+  }
+  .ask-hero-sub strong { color: rgba(255,228,196,.85); font-weight: 600; }
+  .ask-hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ask-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,228,196,.07);
+    border: 1px solid rgba(255,228,196,.14);
+    border-radius: var(--radius-pill);
+    padding: .3rem .9rem;
+    font-family: var(--font-ui);
+    font-size: .78rem;
+    font-weight: 600;
+    color: rgba(255,228,196,.65);
+  }
+  .ask-hero-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bisque-dark); flex-shrink: 0; }
+  .ask-hero-formula-box {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,228,196,.14);
+    border-radius: var(--radius-lg);
+    padding: 22px 26px;
+    text-align: center;
+    min-width: 200px;
+    flex-shrink: 0;
+    backdrop-filter: blur(6px);
+  }
+  .ahfb-label { font-family: var(--font-ui); font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,228,196,.35); margin-bottom: 10px; }
+  .ahfb-icon { font-size: 2.8rem; line-height: 1; margin-bottom: 10px; }
+  .ahfb-stat { font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; color: var(--bisque-dark); line-height: 1; }
+  .ahfb-stat-sub { font-size: .72rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,228,196,.35); margin-top: 4px; font-family: var(--font-ui); }
 
-.reply-chain {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed var(--cream-200);
-}
+  /* ── Breadcrumb ── */
+  .breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--cream-200); padding: 10px var(--pad-x); }
+  .breadcrumb { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--ink-30); }
+  .breadcrumb a { color: var(--bisque-deep); text-decoration: none; font-weight: 700; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: var(--cream-300); font-weight: 700; }
+  .breadcrumb-current { color: var(--ink); font-weight: 700; }
 
-/* Rest of your existing CSS continues here */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0f1e38;--navy-mid:#1a2f52;--navy-light:#243a63;
-  --gold:#c9922a;--gold-light:#e8b84e;--gold-bg:#fdf6e8;--gold-border:rgba(201,146,42,.2);
-  --cream:#faf7f2;--cream-100:#f4efe5;--cream-200:#e8dfd0;
-  --ink:#1a1612;--ink-60:#4a3f35;--ink-40:#7a6a58;--white:#ffffff;
-  --green:#1e6e36;--green-bg:#e8f5ec;--red:#b91c1c;--red-bg:#fef2f2;
-  --blue:#1a56a8;--blue-bg:#eff6ff;
-  --radius:14px;--radius-sm:8px;
-  --shadow-sm:0 1px 4px rgba(15,30,56,.07);
-  --shadow:0 4px 20px rgba(15,30,56,.1);
-  --shadow-lg:0 8px 40px rgba(15,30,56,.18);
-  --ease:cubic-bezier(.4,0,.2,1);--t:.22s
-}
-html{font-size:16px;scroll-behavior:smooth}
-body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;min-height:100vh}
-header{position:sticky;top:0;z-index:200;background:var(--navy);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;box-shadow:0 2px 24px rgba(0,0,0,.3);border-bottom:1px solid rgba(255,255,255,.06)}
-.logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
-.logo-sigma{color:var(--gold-light);font-size:1.5rem;line-height:1}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:6px}
-.hamburger:hover{background:rgba(255,255,255,.08)}
-.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
-#main-nav ul{display:flex;list-style:none;gap:2px}
-#main-nav a{text-decoration:none;color:rgba(255,255,255,.62);font-size:.82rem;font-weight:500;padding:7px 12px;border-radius:6px;transition:background var(--t),color var(--t);letter-spacing:.03em;text-transform:uppercase}
-#main-nav a:hover{background:rgba(255,255,255,.1);color:#fff}
-#main-nav a.active{color:var(--gold-light);background:rgba(201,146,42,.12)}
-#main-nav a.nav-ask-btn{background:rgba(201,146,42,.15);color:var(--gold-light);border:1px solid rgba(201,146,42,.3)}
-#main-nav a.nav-ask-btn:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,#162847 55%,#1a3560 100%);padding:72px 6% 64px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(201,146,42,.12) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
-.hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);margin-bottom:18px;background:rgba(201,146,42,.12);border:1px solid rgba(201,146,42,.25);padding:5px 16px;border-radius:50px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.2rem);color:#fff;font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
-.hero h1 span{color:var(--gold-light)}
-.hero-sub{font-family:'Source Serif 4',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.55);max-width:500px;margin:0 auto 32px;line-height:1.75}
-.hero-stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap}
-.stat{text-align:center;padding:0 28px;border-right:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em}
-.stat:last-child{border-right:none}
-.stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);letter-spacing:-.02em;line-height:1.2;margin-bottom:2px}
-.breadcrumb-bar{background:var(--white);border-bottom:1px solid var(--cream-200);padding:11px 6%}
-.breadcrumb{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:.83rem;color:var(--ink-40)}
-.breadcrumb a{color:var(--gold);text-decoration:none;font-weight:700}
-.breadcrumb a:hover{text-decoration:underline}
-.breadcrumb-sep{color:var(--cream-200)}
-.breadcrumb-current{color:var(--ink);font-weight:700}
-.page{max-width:900px;margin:36px auto 80px;padding:0 5%}
-.section-label{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);margin-bottom:14px}
-.section-label::after{content:'';flex:1;height:1px;background:var(--cream-200)}
-.policy-box{background:linear-gradient(135deg,#fffbf0 0%,var(--gold-bg) 100%);border:1px solid var(--gold-border);border-left:4px solid var(--gold);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin-bottom:28px;font-size:.875rem;color:var(--ink-60);line-height:1.7}
-.policy-box strong{display:block;margin-bottom:5px;color:var(--navy);font-size:.9rem}
-.community-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--radius);padding:1.4rem 1.6rem;margin-bottom:20px;display:flex;align-items:flex-start;gap:16px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden}
-.community-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 110% 50%,rgba(232,184,78,.1) 0%,transparent 60%);pointer-events:none}
-.community-banner-icon{font-size:2rem;line-height:1;flex-shrink:0;margin-top:2px}
-.community-banner-body{flex:1;position:relative;z-index:1}
-.community-banner-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:6px;display:flex;align-items:center;gap:8px}
-.community-banner-title span{background:rgba(232,184,78,.18);border:1px solid rgba(232,184,78,.3);color:var(--gold-light);font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:50px;letter-spacing:.06em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
-.community-banner-text{font-size:.875rem;color:rgba(255,255,255,.65);line-height:1.7}
-.community-banner-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.cpill{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:50px;padding:4px 12px;font-size:.75rem;color:rgba(255,255,255,.7);font-weight:500}
-.cpill-dot{width:6px;height:6px;border-radius:50%;background:var(--gold-light);flex-shrink:0}
-#adminLoginSection{background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:26px;box-shadow:var(--shadow-sm)}
-#adminLoginSection summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:.9rem;user-select:none;display:flex;align-items:center;gap:8px}
-#adminLoginForm{margin-top:1rem;display:flex;flex-direction:column;gap:.65rem;max-width:380px}
-.admin-input-row{display:flex;gap:.5rem}
-#loginError{color:var(--red);font-size:.82rem;min-height:1.2em}
-#adminStatusBar{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:26px;display:none;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:var(--shadow)}
-.admin-bar-left{display:flex;align-items:center;gap:14px}
-.admin-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#a86a1a);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:#fff;flex-shrink:0;border:2px solid rgba(255,255,255,.2)}
-.admin-bar-info{display:flex;flex-direction:column;gap:2px}
-.admin-bar-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff}
-.admin-bar-role{font-size:.75rem;color:var(--gold-light);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
-.admin-bar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.admin-stat-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:50px;padding:4px 12px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.7)}
-.admin-stat-pill span{color:var(--gold-light);font-weight:700;font-size:.82rem}
-#adminLogoutBtn{background:rgba(185,28,28,.2);border:1px solid rgba(185,28,28,.35);border-radius:6px;padding:.4rem 1rem;font-size:.78rem;font-weight:700;cursor:pointer;color:#fca5a5;font-family:inherit;transition:var(--t)}
-#adminLogoutBtn:hover{background:rgba(185,28,28,.35)}
-input[type=text],input[type=email],input[type=password],textarea{width:100%;padding:.7rem 1rem;border:1.5px solid var(--cream-200);border-radius:var(--radius-sm);background:var(--cream);font-size:.95rem;color:var(--ink);font-family:inherit;transition:border-color var(--t),box-shadow var(--t),background var(--t);outline:none}
-input:focus,textarea:focus{border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(201,146,42,.12)}
-textarea{min-height:110px;resize:vertical;line-height:1.65}
-.post-card{background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius);padding:1.75rem;margin-bottom:28px;box-shadow:var(--shadow)}
-.post-card-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.1rem;display:flex;align-items:center;gap:10px}
-.post-inputs{display:flex;flex-direction:column;gap:.75rem}
-.input-footer{display:flex;justify-content:space-between;align-items:center}
-.latex-hint{font-size:.78rem;color:var(--ink-40)}
-.char-count{font-size:.78rem;color:var(--ink-40)}
-.char-count.warn{color:var(--red);font-weight:700}
-.btn-post{background:var(--navy);color:#fff;border:none;border-radius:var(--radius-sm);padding:.78rem 2rem;font-size:.92rem;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:.02em;transition:background var(--t),transform var(--t),box-shadow var(--t);display:inline-flex;align-items:center;gap:8px}
-.btn-post:hover{background:var(--navy-light);transform:translateY(-1px);box-shadow:var(--shadow)}
-.btn-post:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.filter-bar{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:22px}
-.filter-label{font-size:.78rem;font-weight:700;color:var(--ink-40);margin-right:4px}
-.filter-btn{background:var(--white);border:1.5px solid var(--cream-200);border-radius:50px;padding:.35rem 1rem;font-size:.82rem;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink-60);transition:var(--t)}
-.filter-btn.active,.filter-btn:hover{background:var(--gold-bg);border-color:var(--gold);color:#7a5010}
-.q-card{background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius);padding:1.4rem 1.6rem;margin-bottom:18px;box-shadow:var(--shadow-sm);transition:box-shadow var(--t);animation:fadeUp .3s var(--ease) both}
-.q-card:hover{box-shadow:var(--shadow)}
-.q-card.pinned{border-left:4px solid var(--gold);background:linear-gradient(135deg,#fffdf8 0%,var(--white) 100%)}
-.q-card.answered{border-left:4px solid var(--green)}
-.q-card.deleted{opacity:.5;background:var(--red-bg);border-left:4px solid var(--red)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.q-header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:.85rem;flex-wrap:wrap}
-.q-meta{display:flex;flex-direction:column;gap:2px}
-.q-author{font-weight:700;font-size:.9rem;color:var(--navy)}
-.q-time{font-size:.75rem;color:var(--ink-40)}
-.q-badges{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.badge{font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:50px}
-.badge-pin{background:var(--gold-bg);color:#7a5010;border:1px solid var(--gold-border)}
-.badge-ans{background:var(--green-bg);color:var(--green);border:1px solid rgba(30,110,54,.2)}
-.badge-del{background:var(--red-bg);color:var(--red);border:1px solid rgba(185,28,28,.2)}
-.q-body{font-family:'Source Serif 4',serif;font-size:.975rem;line-height:1.8;color:var(--ink);margin-bottom:1.1rem;white-space:pre-wrap;word-break:break-word}
-.q-replies{display:flex;flex-direction:column;gap:.6rem;margin-bottom:.9rem}
-.reply{background:var(--cream);border-radius:var(--radius-sm);padding:.75rem 1rem;border-left:3px solid var(--cream-200);position:relative}
-.reply.deleted-reply{opacity:.4;background:var(--red-bg)}
-.reply.nested{margin-left:2rem;border-left:2px solid var(--gold-border)}
-.reply.nested::before{content:'↳';position:absolute;left:-1.2rem;top:0.75rem;color:var(--gold);font-size:1rem}
-.reply.mwalimu-reply{background:linear-gradient(135deg,#0f1e38 0%,#1a2f52 100%);border:none;border-radius:12px;padding:1.1rem 1.25rem;box-shadow:0 4px 20px rgba(15,30,56,.2);position:relative;overflow:hidden}
-.reply.mwalimu-reply::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(232,184,78,.12) 0%,transparent 70%);pointer-events:none}
-.reply.mwalimu-reply .r-header{margin-bottom:.5rem}
-.reply.mwalimu-reply .r-author-row{display:flex;align-items:center;gap:10px}
-.reply.mwalimu-reply .r-mini-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#a86a1a);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.85rem;font-weight:900;color:#fff;flex-shrink:0;border:1.5px solid rgba(232,184,78,.4)}
-.reply.mwalimu-reply .r-author{font-weight:800;font-size:.9rem;color:#fff;font-family:'Playfair Display',serif}
-.reply.mwalimu-reply .r-time{font-size:.72rem;color:rgba(255,255,255,.4);margin-left:auto}
-.reply.mwalimu-reply .r-body{font-size:.93rem;line-height:1.8;color:rgba(255,255,255,.88);white-space:pre-wrap;word-break:break-word}
-.mwalimu-verified{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,var(--gold),#a86a1a);color:#fff;font-size:.62rem;padding:2px 8px;border-radius:50px;font-weight:800;margin-left:4px;letter-spacing:.05em;text-transform:uppercase}
-.r-header{display:flex;align-items:center;gap:8px;margin-bottom:.3rem;flex-wrap:wrap}
-.r-author{font-weight:700;font-size:.82rem;color:var(--navy)}
-.r-time{font-size:.74rem;color:var(--ink-40);margin-left:auto}
-.r-body{font-size:.9rem;line-height:1.7;color:var(--ink-60);white-space:pre-wrap;word-break:break-word}
-.reply-actions{display:flex;gap:8px;margin-top:.4rem;flex-wrap:wrap}
-.btn-del-reply,.btn-edit-reply,.btn-reply-to-reply{background:none;border:none;font-size:.7rem;cursor:pointer;padding:2px 6px;font-family:inherit;font-weight:600;border-radius:4px;transition:background 0.2s}
-.btn-del-reply{color:var(--red)}
-.btn-edit-reply{color:var(--blue)}
-.btn-reply-to-reply{color:var(--gold)}
-.btn-reply-to-reply:hover{background:var(--cream-200)}
-.reply.mwalimu-reply .btn-del-reply{color:rgba(252,165,165,.7)}
-.reply.mwalimu-reply .btn-edit-reply{color:rgba(147,197,253,.8)}
-.reply-trigger-row{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding-top:.85rem;border-top:1px solid var(--cream-200);background:var(--cream-100);margin:-1.4rem -1.6rem;margin-top:.85rem;padding:.85rem 1.6rem;border-radius:0 0 var(--radius) var(--radius)}
-.q-card.answered .reply-trigger-row,.q-card.pinned .reply-trigger-row{background:transparent;margin:0;padding-top:.85rem;border-radius:0}
-.btn-open-editor{flex:1;min-width:200px;text-align:left;background:var(--cream);border:1.5px solid var(--cream-200);border-radius:var(--radius-sm);padding:.65rem 1rem;font-size:.9rem;color:var(--ink-40);font-family:inherit;cursor:pointer;transition:var(--t)}
-.btn-open-editor:hover{border-color:var(--gold);background:var(--white);color:var(--ink)}
-.btn-ai-answer{background:linear-gradient(135deg,#1a56a8,#0d3580);color:#fff;border:none;border-radius:var(--radius-sm);padding:.65rem 1.1rem;font-size:.82rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center;gap:6px;transition:opacity var(--t),transform var(--t)}
-.btn-ai-answer:hover{opacity:.88;transform:translateY(-1px)}
-.admin-controls{background:linear-gradient(135deg,#0f1e38,#1a2f52);border-radius:0 0 var(--radius) var(--radius);margin:0 -1.6rem -1.4rem;margin-top:.6rem;padding:.75rem 1.4rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-.admin-ctrl-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-right:4px;white-space:nowrap}
-.admin-btn{border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:.32rem .85rem;font-size:.75rem;font-weight:700;cursor:pointer;font-family:inherit;transition:background var(--t),border-color var(--t);background:rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
-.admin-btn:hover{background:rgba(255,255,255,.14);color:#fff}
-.admin-btn.btn-danger{color:#fca5a5;border-color:rgba(185,28,28,.3);background:rgba(185,28,28,.1)}
-.admin-btn.btn-danger:hover{background:rgba(185,28,28,.25)}
-.admin-btn.btn-ban{color:#fcd34d;border-color:rgba(202,138,4,.3);background:rgba(202,138,4,.1)}
-.admin-btn.btn-ban:hover{background:rgba(202,138,4,.2)}
-.admin-btn.btn-resolve{color:#86efac;border-color:rgba(30,110,54,.3);background:rgba(30,110,54,.1)}
-.admin-btn.btn-resolve:hover{background:rgba(30,110,54,.25)}
-.admin-btn.btn-pin{color:var(--gold-light);border-color:rgba(201,146,42,.3);background:rgba(201,146,42,.1)}
-.admin-btn.btn-pin:hover{background:rgba(201,146,42,.2)}
-.empty-state{text-align:center;padding:4rem 1rem;color:var(--ink-40)}
-.empty-icon{font-size:2.5rem;color:var(--cream-200);margin-bottom:12px;line-height:1}
-.empty-state p{font-size:1rem;margin-bottom:4px;color:var(--ink-60)}
-.empty-state span{font-size:.88rem}
-#toastContainer{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px}
-.toast{background:var(--navy);color:#fff;padding:.75rem 1.25rem;border-radius:var(--radius-sm);font-size:.875rem;font-weight:500;box-shadow:var(--shadow-lg);opacity:0;transform:translateY(8px);transition:.35s var(--ease);max-width:340px;pointer-events:none}
-.toast.show{opacity:1;transform:translateY(0)}
-.toast-success{background:var(--green)}
-.toast-error{background:var(--red)}
-.toast-warn{background:#92580a}
-.modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(10,18,35,.8);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s var(--ease)}
-.modal-overlay.open{opacity:1;pointer-events:auto}
-.modal-sheet{background:var(--white);border-radius:18px;width:100%;max-width:820px;max-height:93vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.4);transform:translateY(24px) scale(.97);transition:transform .3s var(--ease)}
-.modal-overlay.open .modal-sheet{transform:translateY(0) scale(1)}
-.modal-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06)}
-.modal-header-left{display:flex;align-items:center;gap:12px}
-.modal-header-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--gold),#a86a1a);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:900;color:#fff;border:1.5px solid rgba(232,184,78,.3)}
-.modal-header-avatar.student{background:linear-gradient(135deg,#4a6fa5,#2d4a7a)}
-.modal-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#fff}
-.modal-subtitle{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:2px}
-.modal-author-input{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:4px 10px;color:#fff;font-size:.85rem;font-family:inherit;outline:none;width:160px;margin-top:4px}
-.modal-author-input::placeholder{color:rgba(255,255,255,.4)}
-.modal-author-input:focus{border-color:var(--gold-light);background:rgba(255,255,255,.15)}
-.btn-close-modal{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;width:34px;height:34px;font-size:1.1rem;color:rgba(255,255,255,.7);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--t)}
-.btn-close-modal:hover{background:rgba(255,255,255,.18);color:#fff}
-.modal-question-strip{background:var(--gold-bg);border-bottom:1px solid var(--gold-border);padding:.6rem 1.2rem;font-size:.83rem;color:var(--ink-60);font-family:'Source Serif 4',serif;font-style:italic;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.modal-question-strip strong{color:var(--navy);font-style:normal;font-weight:700}
-.symbol-toolbar{background:var(--cream-100);border-bottom:1px solid var(--cream-200);padding:.55rem 1rem;display:flex;flex-wrap:wrap;gap:4px;flex-shrink:0;overflow-y:auto;max-height:140px}
-.sym-group{display:flex;gap:3px;align-items:center;flex-wrap:wrap}
-.sym-divider{width:1px;background:var(--cream-200);margin:0 5px;align-self:stretch;flex-shrink:0}
-.sym-label{font-size:.62rem;font-weight:700;color:var(--ink-40);text-transform:uppercase;letter-spacing:.07em;margin-right:2px;white-space:nowrap;align-self:center}
-.sym-btn{background:var(--white);border:1px solid var(--cream-200);border-radius:5px;padding:3px 7px;font-size:.88rem;cursor:pointer;transition:background var(--t),border-color var(--t);font-family:'Source Serif 4',serif;min-width:28px;text-align:center;color:var(--ink)}
-.sym-btn:hover{background:var(--gold-bg);border-color:var(--gold)}
-.template-bar{background:var(--white);border-bottom:1px solid var(--cream-200);padding:.45rem 1rem;display:flex;gap:5px;flex-wrap:wrap;flex-shrink:0;align-items:center}
-.tpl-label{font-size:.65rem;font-weight:700;color:var(--ink-40);text-transform:uppercase;letter-spacing:.07em;margin-right:2px;white-space:nowrap}
-.tpl-btn{background:var(--navy);color:var(--gold-light);border:none;border-radius:5px;padding:3px 9px;font-size:.73rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity var(--t)}
-.tpl-btn:hover{opacity:.8}
-.ai-panel{background:linear-gradient(135deg,#0f1e38,#162847);border-radius:var(--radius-sm);padding:.85rem 1rem;flex-shrink:0;display:none;flex-direction:column;gap:.5rem;margin:.5rem 1rem 0;border:1px solid rgba(232,184,78,.2)}
-.ai-panel.visible{display:flex}
-.ai-panel-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.ai-panel-title{font-size:.82rem;font-weight:700;color:var(--gold-light);display:flex;align-items:center;gap:7px}
-.ai-status{font-size:.78rem;color:rgba(255,255,255,.5)}
-.ai-thinking{display:flex;gap:4px;align-items:center}
-.ai-thinking span{width:6px;height:6px;border-radius:50%;background:var(--gold-light);animation:aiPulse 1.2s ease-in-out infinite}
-.ai-thinking span:nth-child(2){animation-delay:.2s}
-.ai-thinking span:nth-child(3){animation-delay:.4s}
-@keyframes aiPulse{0%,80%,100%{transform:scale(0);opacity:.4}40%{transform:scale(1);opacity:1}}
-.ai-result{font-size:.87rem;line-height:1.75;color:rgba(255,255,255,.8);white-space:pre-wrap;max-height:160px;overflow-y:auto}
-.btn-ai-use{background:linear-gradient(135deg,var(--gold),#a86a1a);color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:.75rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity var(--t);display:none}
-.btn-ai-use.visible{display:inline-block}
-.btn-ai-use:hover{opacity:.85}
-.modal-body{flex:1;display:flex;flex-direction:column;min-height:0;padding:.85rem 1rem;gap:.65rem;overflow:hidden}
-.editor-wrap{flex:1;display:flex;gap:.75rem;min-height:0}
-.editor-pane{flex:1;display:flex;flex-direction:column;min-width:0}
-.editor-pane-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-40);margin-bottom:4px;display:flex;align-items:center;justify-content:space-between}
-#replyEditorTA{flex:1;width:100%;resize:none;min-height:160px;font-family:'Source Serif 4',serif;font-size:.95rem;line-height:1.8;border:1.5px solid var(--cream-200);border-radius:var(--radius-sm);background:var(--cream);padding:.75rem 1rem;outline:none;color:var(--ink);transition:border-color var(--t),box-shadow var(--t)}
-#replyEditorTA:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,146,42,.12);background:var(--white)}
-.preview-pane{flex:1;min-width:0;display:flex;flex-direction:column}
-#replyPreview{flex:1;min-height:160px;border:1.5px solid var(--cream-200);border-radius:var(--radius-sm);padding:.75rem 1rem;overflow-y:auto;background:#fffef9;font-family:'Source Serif 4',serif;font-size:.95rem;line-height:1.8;color:var(--ink);word-break:break-word}
-.editor-hint{font-size:.75rem;color:var(--ink-40);line-height:1.5;flex-shrink:0}
-.modal-footer{padding:.8rem 1rem;border-top:1px solid var(--cream-200);display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-shrink:0;flex-wrap:wrap;background:var(--cream-100)}
-.modal-footer-left{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
-.modal-char-count{font-size:.78rem;color:var(--ink-40)}
-.modal-char-count.warn{color:var(--red);font-weight:700}
-.edit-badge{background:var(--gold-bg);border:1px solid var(--gold-border);color:#7a5010;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:50px;display:none}
-.edit-badge.visible{display:inline-block}
-.btn-submit-reply{background:linear-gradient(135deg,var(--gold),#a86a1a);color:#fff;border:none;border-radius:var(--radius-sm);padding:.7rem 1.8rem;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity var(--t),transform var(--t);display:flex;align-items:center;gap:8px}
-.btn-submit-reply:hover{opacity:.9;transform:translateY(-1px)}
-.btn-submit-reply:disabled{opacity:.4;cursor:not-allowed;transform:none}
-footer{background:var(--navy);color:rgba(255,255,255,.3);padding:44px 6%;text-align:center;font-size:.82rem}
-.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:14px}
-.footer-links a{color:rgba(255,255,255,.35);text-decoration:none;transition:color var(--t);font-weight:500}
-.footer-links a:hover{color:var(--gold-light)}
-.footer-copy{color:rgba(255,255,255,.2)}
-@media(max-width:768px){
-  #main-nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy);padding:14px 5%;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:199}
-  #main-nav.open{display:block}
-  #main-nav ul{flex-direction:column;gap:2px}
-  #main-nav a{display:block}
-  .hamburger{display:flex}
-  .hero{padding:52px 5% 44px}
-  .stat{padding:0 16px;border-right:none}
-  .editor-wrap{flex-direction:column}
-  .reply.nested{margin-left:0.5rem}
-}
-@media(max-width:560px){
-  .post-card,.q-card{padding:1.1rem 1.2rem}
-  header{padding:0 4%}
-  .modal-sheet{max-height:98vh;border-radius:14px 14px 0 0;align-self:flex-end}
-  .admin-controls{flex-direction:column;align-items:flex-start}
-  .reply.nested{margin-left:0.25rem}
-}
-</style>
+  /* ── Page layout ── */
+  .ask-page { max-width: 900px; margin: 0 auto; padding: 2rem var(--pad-x) 5rem; }
+
+  /* ── Info boxes ── */
+  .info-box {
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-ui);
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+  .info-box-gold {
+    background: linear-gradient(135deg, #fffdf5, #fdf6e8);
+    border: 1px solid rgba(200,131,42,.2);
+    border-left: 4px solid var(--bisque-deep);
+  }
+  .info-box-gold strong { display: block; margin-bottom: 4px; font-size: .92rem; color: var(--navy-800); }
+  .info-box-gold p { color: var(--ink-50); margin: 0; }
+
+  /* ── Community banner ── */
+  .community-banner {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+    border: 1px solid rgba(255,228,196,.1);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .community-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 110% 50%, rgba(200,131,42,.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .cb-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; position: relative; z-index: 1; }
+  .cb-body { flex: 1; position: relative; z-index: 1; }
+  .cb-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--bisque-light);
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .cb-badge {
+    background: rgba(200,131,42,.2);
+    border: 1px solid rgba(200,131,42,.3);
+    color: var(--bisque-dark);
+    font-family: var(--font-ui);
+    font-size: .65rem;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: var(--radius-pill);
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+  .cb-text { font-size: .88rem; color: rgba(255,228,196,.6); line-height: 1.7; margin-bottom: 10px; }
+  .cb-text strong { color: rgba(255,228,196,.9); font-weight: 600; }
+  .cb-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .cb-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--radius-pill);
+    padding: 3px 11px;
+    font-size: .75rem; color: rgba(255,228,196,.65); font-weight: 500;
+    font-family: var(--font-ui);
+  }
+  .cb-pill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--bisque-dark); flex-shrink: 0; }
+
+  /* ── Admin section ── */
+  .admin-login-section {
+    background: var(--white);
+    border: 1px solid var(--cream-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    display: none;
+  }
+  .admin-login-summary {
+    padding: .85rem 1.2rem;
+    font-family: var(--font-ui);
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--navy-800);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    background: var(--cream-100);
+    border-bottom: 1px solid var(--cream-200);
+  }
+  .admin-login-body { padding: 1.2rem; display: flex; flex-direction: column; gap: .65rem; max-width: 380px; }
+  .admin-input-row { display: flex; gap: .5rem; }
+  .admin-input-row input { flex: 1; }
+  #loginError { color: var(--red); font-size: .82rem; min-height: 1.1em; font-family: var(--font-ui); }
+  .btn-admin-login {
+    background: var(--navy-700); color: var(--bisque-light);
+    border: none; border-radius: var(--radius-sm);
+    padding: .7rem 1.2rem; font-size: .88rem; font-weight: 700;
+    cursor: pointer; font-family: var(--font-ui);
+    white-space: nowrap; transition: var(--transition);
+  }
+  .btn-admin-login:hover { background: var(--navy-900); }
+
+  .admin-status-bar {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    border: 1px solid rgba(255,228,196,.1);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.4rem;
+    margin-bottom: 1.25rem;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-md);
+  }
+  .asb-left { display: flex; align-items: center; gap: 12px; }
+  .asb-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bisque-deep), #7a4a14);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 1.1rem; font-weight: 900; color: #fff;
+    border: 2px solid rgba(200,131,42,.4);
+    flex-shrink: 0;
+  }
+  .asb-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--bisque-light); }
+  .asb-role { font-family: var(--font-ui); font-size: .72rem; color: var(--bisque-dark); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .asb-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .asb-stat {
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--radius-pill); padding: 4px 13px;
+    font-family: var(--font-ui); font-size: .76rem; font-weight: 600; color: rgba(255,228,196,.6);
+  }
+  .asb-stat span { color: var(--bisque-dark); font-weight: 700; font-size: .82rem; }
+  .btn-admin-logout {
+    background: rgba(185,28,28,.2); border: 1px solid rgba(185,28,28,.35);
+    border-radius: var(--radius-sm); padding: .4rem 1rem;
+    font-size: .78rem; font-weight: 700; cursor: pointer; color: #fca5a5;
+    font-family: var(--font-ui); transition: var(--transition);
+  }
+  .btn-admin-logout:hover { background: rgba(185,28,28,.35); }
+
+  /* ── Form inputs ── */
+  .ask-input {
+    width: 100%; padding: .75rem 1rem;
+    border: 1.5px solid var(--cream-200);
+    border-radius: var(--radius-sm);
+    background: var(--cream); font-size: .95rem; color: var(--ink);
+    font-family: var(--font-ui);
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    outline: none;
+  }
+  .ask-input:focus { border-color: var(--bisque-deep); background: var(--white); box-shadow: 0 0 0 3px rgba(200,131,42,.12); }
+  .ask-textarea { min-height: 110px; resize: vertical; line-height: 1.7; }
+
+  /* ── Submit question card ── */
+  .submit-card {
+    background: var(--white);
+    border: 1px solid var(--cream-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition);
+  }
+  .submit-card:focus-within { box-shadow: var(--shadow-md); }
+  .submit-card-header {
+    background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+    padding: 1rem 1.4rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .submit-card-header-icon { font-size: 1.2rem; }
+  .submit-card-header-title {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--bisque-light);
+  }
+  .submit-card-header-sub { font-family: var(--font-ui); font-size: .75rem; color: rgba(255,228,196,.45); margin-top: 1px; }
+  .submit-card-body { padding: 1.4rem; display: flex; flex-direction: column; gap: .85rem; }
+  .submit-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .char-count-text { font-family: var(--font-ui); font-size: .78rem; color: var(--ink-30); }
+  .char-count-text.warn { color: var(--red); font-weight: 700; }
+  .latex-hint-text { font-size: .76rem; color: var(--ink-30); font-family: var(--font-ui); font-style: italic; }
+  .btn-submit-q {
+    background: linear-gradient(135deg, var(--bisque-deep), #7a4a14);
+    color: #fff; border: none; border-radius: var(--radius-pill);
+    padding: .75rem 1.8rem; font-size: .92rem; font-weight: 700;
+    cursor: pointer; font-family: var(--font-ui);
+    display: inline-flex; align-items: center; gap: 7px;
+    transition: var(--transition);
+    box-shadow: 0 4px 16px rgba(200,131,42,.25);
+  }
+  .btn-submit-q:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,131,42,.35); }
+  .btn-submit-q:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+  /* ── Filter panel ── */
+  .filter-panel {
+    background: var(--white);
+    border: 1px solid var(--cream-200);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  /* Stats row */
+  .fp-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--cream-200); }
+  .fp-stat {
+    padding: .9rem 1rem; display: flex; flex-direction: column; align-items: center;
+    gap: 3px; border-right: 1px solid var(--cream-200); cursor: pointer;
+    transition: background var(--transition); position: relative;
+  }
+  .fp-stat:last-child { border-right: none; }
+  .fp-stat:hover { background: var(--cream-100); }
+  .fp-stat.fp-active { background: rgba(200,131,42,.06); }
+  .fp-stat.fp-active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--bisque-deep); border-radius: 2px 2px 0 0; }
+  .fp-stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--navy-800); line-height: 1; }
+  .fp-stat-num.green { color: var(--green); }
+  .fp-stat-num.gold { color: var(--bisque-deep); }
+  .fp-stat-num.blue { color: #1a56a8; }
+  .fp-stat-label { font-family: var(--font-ui); font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-30); white-space: nowrap; }
+
+  /* Filter controls */
+  .fp-controls {
+    padding: .7rem 1rem; display: flex; align-items: center; gap: 8px;
+    flex-wrap: wrap; background: var(--cream-100); border-bottom: 1px solid var(--cream-200);
+  }
+  .fp-label { font-family: var(--font-ui); font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-30); white-space: nowrap; flex-shrink: 0; }
+  .fp-pills { display: flex; gap: 4px; flex-wrap: wrap; flex: 1; }
+  .fp-pill {
+    background: var(--white); border: 1.5px solid var(--cream-200); border-radius: var(--radius-pill);
+    padding: .26rem .82rem; font-size: .77rem; font-weight: 600;
+    cursor: pointer; font-family: var(--font-ui); color: var(--ink-50);
+    transition: all var(--transition); white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .fp-pill:hover { border-color: var(--bisque-dark); color: var(--navy-800); background: rgba(200,131,42,.06); }
+  .fp-pill.fp-pill-active { background: var(--navy-700); border-color: var(--navy-700); color: var(--bisque-light); }
+  .fp-pill.mine.fp-pill-active { background: #1a56a8; border-color: #1a56a8; }
+  .fp-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .55; flex-shrink: 0; }
+  .fp-divider { width: 1px; height: 18px; background: var(--cream-200); margin: 0 2px; align-self: center; flex-shrink: 0; }
+  .fp-sort-wrap { display: flex; align-items: center; gap: 6px; margin-left: auto; flex-shrink: 0; }
+  .fp-sort-select {
+    appearance: none; -webkit-appearance: none;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239A8A78' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 10px center;
+    border: 1.5px solid var(--cream-200); border-radius: var(--radius-pill);
+    padding: .28rem 2.2rem .28rem .9rem; font-size: .78rem; font-weight: 600;
+    cursor: pointer; font-family: var(--font-ui); color: var(--ink-50);
+    outline: none; transition: border-color var(--transition); min-width: 150px;
+  }
+  .fp-sort-select:focus { border-color: var(--bisque-dark); }
+
+  /* Result summary */
+  .fp-summary {
+    padding: .55rem 1rem; display: flex; align-items: center;
+    justify-content: space-between; gap: 8px; flex-wrap: wrap;
+  }
+  .fp-summary-text { font-family: var(--font-ui); font-size: .75rem; color: var(--ink-30); display: flex; align-items: center; gap: 7px; }
+  .fp-summary-count { background: var(--navy-800); color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill); letter-spacing: .04em; }
+  .fp-clear-btn {
+    background: none; border: 1.5px solid var(--cream-200); border-radius: var(--radius-pill);
+    padding: .22rem .75rem; font-size: .72rem; font-weight: 600;
+    cursor: pointer; font-family: var(--font-ui); color: var(--ink-30);
+    transition: all var(--transition); display: none;
+  }
+  .fp-clear-btn.visible { display: inline-block; }
+  .fp-clear-btn:hover { border-color: var(--bisque-dark); color: var(--ink); }
+
+  /* ── Section label ── */
+  .section-label-row {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-ui); font-size: .7rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-30);
+    margin-bottom: 14px;
+  }
+  .section-label-row::after { content: ''; flex: 1; height: 1px; background: var(--cream-200); }
+
+  /* ── Question cards ── */
+  .q-card {
+    background: var(--white);
+    border: 1px solid var(--cream-200);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-xs);
+    transition: box-shadow var(--transition);
+    animation: qFadeUp .3s cubic-bezier(.4,0,.2,1) both;
+  }
+  @keyframes qFadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .q-card:hover { box-shadow: var(--shadow-sm); }
+  .q-card.q-pinned { border-left: 4px solid var(--bisque-deep); background: linear-gradient(135deg, #fffdf8 0%, var(--white) 100%); }
+  .q-card.q-answered { border-left: 4px solid var(--green); }
+  .q-card.q-deleted { opacity: .5; background: rgba(185,28,28,.04); border-left: 4px solid var(--red); }
+  .q-card.q-mine { outline: 2px solid rgba(26,86,168,.15); }
+
+  .q-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: .85rem; flex-wrap: wrap; }
+  .q-meta { display: flex; flex-direction: column; gap: 2px; }
+  .q-author { font-family: var(--font-display); font-weight: 700; font-size: .92rem; color: var(--navy-800); }
+  .q-time { font-family: var(--font-ui); font-size: .74rem; color: var(--ink-30); }
+  .q-badges { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .q-badge { font-family: var(--font-ui); font-size: .68rem; font-weight: 700; padding: 3px 10px; border-radius: var(--radius-pill); }
+  .q-badge-pin { background: rgba(200,131,42,.12); color: var(--bisque-deep); border: 1px solid rgba(200,131,42,.2); }
+  .q-badge-ans { background: var(--green-bg); color: var(--green-dark); border: 1px solid rgba(30,110,54,.2); }
+  .q-badge-del { background: rgba(185,28,28,.08); color: var(--red); border: 1px solid rgba(185,28,28,.2); }
+  .q-badge-mine { background: rgba(26,86,168,.1); color: #1a56a8; border: 1px solid rgba(26,86,168,.2); }
+
+  .q-body { font-family: var(--font-ui); font-size: .95rem; line-height: 1.75; color: var(--ink); margin-bottom: 1.1rem; white-space: pre-wrap; word-break: break-word; }
+
+  /* Replies */
+  .q-replies { display: flex; flex-direction: column; gap: .65rem; margin-bottom: .9rem; }
+  .reply {
+    background: var(--cream-100); border-radius: var(--radius-sm);
+    padding: .8rem 1rem; border-left: 3px solid var(--cream-200); position: relative;
+  }
+  .reply.reply-deleted { opacity: .45; background: rgba(185,28,28,.04); }
+  .reply.reply-nested { margin-left: 2rem; border-left: 2px solid rgba(200,131,42,.25); }
+  .reply.reply-nested::before { content: '↳'; position: absolute; left: -1.35rem; top: .8rem; color: var(--bisque-dark); font-size: .95rem; font-weight: 700; }
+  .reply.reply-mwalimu {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    border: none; border-radius: var(--radius-md);
+    padding: 1.1rem 1.3rem; box-shadow: 0 4px 16px rgba(10,22,40,.2);
+    position: relative; overflow: hidden;
+  }
+  .reply.reply-mwalimu::before { content: ''; position: absolute; top: 0; right: 0; width: 110px; height: 110px; background: radial-gradient(circle, rgba(200,131,42,.1) 0%, transparent 70%); pointer-events: none; }
+  .r-header { display: flex; align-items: center; gap: 8px; margin-bottom: .35rem; flex-wrap: wrap; }
+  .r-mini-avatar { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--bisque-deep), #7a4a14); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: .78rem; font-weight: 900; color: #fff; border: 1.5px solid rgba(200,131,42,.35); flex-shrink: 0; }
+  .r-author-name { font-family: var(--font-display); font-weight: 700; font-size: .88rem; }
+  .reply.reply-mwalimu .r-author-name { color: #fff; }
+  .reply:not(.reply-mwalimu) .r-author-name { color: var(--navy-800); }
+  .r-verified { display: inline-flex; align-items: center; gap: 4px; background: linear-gradient(135deg, var(--bisque-deep), #7a4a14); color: #fff; font-size: .6rem; padding: 2px 8px; border-radius: var(--radius-pill); font-weight: 800; letter-spacing: .05em; text-transform: uppercase; font-family: var(--font-ui); }
+  .r-time { font-family: var(--font-ui); font-size: .72rem; color: var(--ink-30); margin-left: auto; }
+  .reply.reply-mwalimu .r-time { color: rgba(255,228,196,.35); }
+  .r-body { font-family: var(--font-ui); font-size: .9rem; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+  .reply:not(.reply-mwalimu) .r-body { color: var(--ink-50); }
+  .reply.reply-mwalimu .r-body { color: rgba(255,228,196,.82); }
+  .reply-to-badge { display: inline-block; background: var(--cream-200); border-radius: 4px; padding: 2px 7px; font-size: .7rem; margin-bottom: 5px; color: var(--ink-50); font-family: var(--font-ui); }
+  .reply-to-badge a { color: var(--bisque-deep); text-decoration: none; font-weight: 700; }
+  .reply-actions { display: flex; gap: 7px; margin-top: .4rem; flex-wrap: wrap; }
+  .btn-reply-action {
+    background: none; border: none; font-size: .72rem; cursor: pointer;
+    padding: 2px 7px; font-family: var(--font-ui); font-weight: 600; border-radius: 4px; transition: background var(--transition);
+  }
+  .btn-reply-action.del { color: var(--red); }
+  .btn-reply-action.del:hover { background: rgba(185,28,28,.08); }
+  .btn-reply-action.edit { color: #1a56a8; }
+  .btn-reply-action.edit:hover { background: rgba(26,86,168,.08); }
+  .btn-reply-action.reply-to { color: var(--bisque-deep); }
+  .btn-reply-action.reply-to:hover { background: rgba(200,131,42,.1); }
+  .reply.reply-mwalimu .btn-reply-action.del { color: rgba(252,165,165,.7); }
+  .reply.reply-mwalimu .btn-reply-action.edit { color: rgba(147,197,253,.8); }
+
+  /* Reply trigger row */
+  .reply-trigger-row {
+    display: flex; gap: .5rem; align-items: center; flex-wrap: wrap;
+    padding: .85rem 1.6rem; background: var(--cream-100);
+    margin: .85rem -1.6rem -1.4rem; border-top: 1px solid var(--cream-200);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+  .q-card.q-answered .reply-trigger-row,
+  .q-card.q-pinned .reply-trigger-row { background: transparent; margin: 0; padding: .85rem 0 0; border-radius: 0; }
+  .btn-open-reply {
+    flex: 1; min-width: 180px; text-align: left;
+    background: var(--cream); border: 1.5px solid var(--cream-200); border-radius: var(--radius-sm);
+    padding: .65rem 1rem; font-size: .88rem; color: var(--ink-30);
+    font-family: var(--font-ui); cursor: pointer; transition: var(--transition);
+  }
+  .btn-open-reply:hover { border-color: var(--bisque-dark); background: var(--white); color: var(--ink); }
+  .btn-ai-answer {
+    background: linear-gradient(135deg, #1a56a8, #0d3580); color: #fff; border: none;
+    border-radius: var(--radius-sm); padding: .65rem 1.1rem; font-size: .82rem; font-weight: 700;
+    cursor: pointer; font-family: var(--font-ui); white-space: nowrap;
+    display: flex; align-items: center; gap: 6px; transition: var(--transition);
+  }
+  .btn-ai-answer:hover { opacity: .88; transform: translateY(-1px); }
+
+  /* Admin controls */
+  .admin-controls {
+    background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    margin: .6rem -1.6rem -1.4rem; padding: .75rem 1.4rem;
+    display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
+  }
+  .admin-ctrl-label { font-family: var(--font-ui); font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: rgba(255,228,196,.3); margin-right: 4px; white-space: nowrap; }
+  .btn-admin-ctrl {
+    border: 1px solid rgba(255,255,255,.12); border-radius: 6px; padding: .3rem .85rem;
+    font-size: .75rem; font-weight: 700; cursor: pointer; font-family: var(--font-ui);
+    transition: var(--transition); background: rgba(255,255,255,.06); color: rgba(255,228,196,.7);
+  }
+  .btn-admin-ctrl:hover { background: rgba(255,255,255,.14); color: #fff; }
+  .btn-admin-ctrl.resolve { color: #86efac; border-color: rgba(30,110,54,.3); background: rgba(30,110,54,.1); }
+  .btn-admin-ctrl.resolve:hover { background: rgba(30,110,54,.25); }
+  .btn-admin-ctrl.pin { color: var(--bisque-dark); border-color: rgba(200,131,42,.3); background: rgba(200,131,42,.1); }
+  .btn-admin-ctrl.pin:hover { background: rgba(200,131,42,.2); }
+  .btn-admin-ctrl.danger { color: #fca5a5; border-color: rgba(185,28,28,.3); background: rgba(185,28,28,.1); }
+  .btn-admin-ctrl.danger:hover { background: rgba(185,28,28,.25); }
+  .btn-admin-ctrl.ban { color: #fcd34d; border-color: rgba(202,138,4,.3); background: rgba(202,138,4,.1); }
+  .btn-admin-ctrl.ban:hover { background: rgba(202,138,4,.2); }
+
+  /* ── Empty state ── */
+  .empty-state-block { text-align: center; padding: 3.5rem 1rem; }
+  .es-icon { font-size: 2.5rem; margin-bottom: 12px; opacity: .35; }
+  .es-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy-800); margin-bottom: 6px; }
+  .es-sub { font-family: var(--font-ui); font-size: .88rem; color: var(--ink-30); }
+  .empty-mine-block {
+    background: rgba(26,86,168,.06); border: 1px solid rgba(26,86,168,.15);
+    border-radius: var(--radius-lg); padding: 2.5rem 1.5rem; text-align: center; margin: 1rem 0;
+  }
+  .emb-icon { font-size: 2rem; margin-bottom: 10px; }
+  .emb-title { font-family: var(--font-display); color: var(--navy-800); margin-bottom: 6px; }
+  .emb-sub { font-family: var(--font-ui); font-size: .88rem; color: var(--ink-30); max-width: 340px; margin: 0 auto 14px; line-height: 1.7; }
+  .btn-emb { background: #1a56a8; color: #fff; border: none; border-radius: var(--radius-sm); padding: .6rem 1.4rem; font-size: .85rem; font-weight: 700; cursor: pointer; font-family: var(--font-ui); transition: var(--transition); }
+  .btn-emb:hover { opacity: .85; }
+
+  /* ── Reply modal ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(7,15,30,.85); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center; padding: 16px;
+    opacity: 0; pointer-events: none; transition: opacity .25s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: auto; }
+  .modal-sheet {
+    background: var(--white); border-radius: 18px; width: 100%; max-width: 860px;
+    max-height: 94vh; display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,.4);
+    transform: translateY(24px) scale(.97); transition: transform .3s cubic-bezier(.4,0,.2,1);
+  }
+  .modal-overlay.open .modal-sheet { transform: translateY(0) scale(1); }
+  .modal-head {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+    padding: 1.1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0; border-bottom: 1px solid rgba(255,228,196,.06);
+  }
+  .modal-head-left { display: flex; align-items: center; gap: 12px; }
+  .modal-head-avatar {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: .95rem; font-weight: 900; color: #fff;
+    border: 1.5px solid rgba(255,255,255,.2);
+  }
+  .modal-head-avatar.admin { background: linear-gradient(135deg, var(--bisque-deep), #7a4a14); border-color: rgba(200,131,42,.4); }
+  .modal-head-avatar.student { background: linear-gradient(135deg, #4a6fa5, #2d4a7a); }
+  .modal-head-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: #fff; }
+  .modal-head-sub { font-family: var(--font-ui); font-size: .74rem; color: rgba(255,228,196,.4); margin-top: 2px; }
+  .modal-author-input {
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 6px;
+    padding: 4px 10px; color: #fff; font-size: .85rem; font-family: var(--font-ui);
+    outline: none; width: 165px; margin-top: 4px; transition: border-color var(--transition);
+  }
+  .modal-author-input::placeholder { color: rgba(255,228,196,.35); }
+  .modal-author-input:focus { border-color: var(--bisque-dark); }
+  .btn-close-modal {
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 8px;
+    width: 36px; height: 36px; font-size: 1.1rem; color: rgba(255,228,196,.6);
+    cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition);
+    flex-shrink: 0;
+  }
+  .btn-close-modal:hover { background: rgba(255,255,255,.18); color: #fff; }
+  .modal-q-strip {
+    background: rgba(200,131,42,.1); border-bottom: 1px solid rgba(200,131,42,.15);
+    padding: .6rem 1.2rem; font-family: var(--font-ui); font-size: .83rem; color: var(--ink-50);
+    font-style: italic; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .modal-q-strip strong { color: var(--navy-800); font-style: normal; font-weight: 700; }
+
+  /* Symbol toolbar */
+  .sym-toolbar {
+    background: var(--cream-100); border-bottom: 1px solid var(--cream-200);
+    padding: .55rem 1rem; display: flex; flex-wrap: wrap; gap: 5px;
+    flex-shrink: 0; overflow-y: auto; max-height: 148px;
+  }
+  .sym-group { display: flex; gap: 3px; align-items: center; flex-wrap: wrap; }
+  .sym-divider { width: 1px; background: var(--cream-200); margin: 0 5px; align-self: stretch; flex-shrink: 0; }
+  .sym-label { font-family: var(--font-ui); font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-30); white-space: nowrap; align-self: center; margin-right: 2px; }
+  .sym-btn {
+    background: var(--white); border: 1px solid var(--cream-200); border-radius: 5px;
+    padding: 3px 7px; font-size: .88rem; cursor: pointer; min-width: 28px; text-align: center;
+    color: var(--ink); font-family: var(--font-serif); transition: var(--transition);
+  }
+  .sym-btn:hover { background: rgba(200,131,42,.08); border-color: var(--bisque-dark); }
+
+  /* Template bar */
+  .tpl-bar {
+    background: var(--white); border-bottom: 1px solid var(--cream-200);
+    padding: .45rem 1rem; display: flex; gap: 5px; flex-wrap: wrap; flex-shrink: 0; align-items: center;
+  }
+  .tpl-label { font-family: var(--font-ui); font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-30); white-space: nowrap; }
+  .tpl-btn {
+    background: var(--navy-700); color: var(--bisque-light); border: none; border-radius: 5px;
+    padding: 3px 9px; font-size: .73rem; font-weight: 700; cursor: pointer; font-family: var(--font-ui);
+    transition: var(--transition);
+  }
+  .tpl-btn:hover { background: var(--navy-900); }
+
+  /* AI panel */
+  .ai-panel {
+    background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+    border-radius: var(--radius-sm); margin: .5rem 1rem 0;
+    padding: .85rem 1rem; flex-shrink: 0;
+    display: none; flex-direction: column; gap: .5rem;
+    border: 1px solid rgba(200,131,42,.2);
+  }
+  .ai-panel.visible { display: flex; }
+  .ai-panel-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .ai-panel-title { font-family: var(--font-ui); font-size: .82rem; font-weight: 700; color: var(--bisque-dark); display: flex; align-items: center; gap: 7px; }
+  .ai-status { font-size: .78rem; color: rgba(255,228,196,.45); }
+  .ai-thinking { display: flex; gap: 4px; align-items: center; }
+  .ai-thinking span { width: 6px; height: 6px; border-radius: 50%; background: var(--bisque-dark); animation: aiPulse 1.2s ease-in-out infinite; }
+  .ai-thinking span:nth-child(2) { animation-delay: .2s; }
+  .ai-thinking span:nth-child(3) { animation-delay: .4s; }
+  @keyframes aiPulse { 0%,80%,100% { transform:scale(0); opacity:.4; } 40% { transform:scale(1); opacity:1; } }
+  .ai-result { font-family: var(--font-ui); font-size: .87rem; line-height: 1.75; color: rgba(255,228,196,.8); white-space: pre-wrap; max-height: 160px; overflow-y: auto; }
+  .btn-ai-use {
+    display: none; background: linear-gradient(135deg, var(--bisque-deep), #7a4a14);
+    color: #fff; border: none; border-radius: 5px; padding: 4px 12px;
+    font-size: .75rem; font-weight: 700; cursor: pointer; font-family: var(--font-ui); transition: var(--transition);
+  }
+  .btn-ai-use.visible { display: inline-block; }
+  .btn-ai-use:hover { opacity: .85; }
+
+  /* Modal body */
+  .modal-body { flex: 1; display: flex; flex-direction: column; min-height: 0; padding: .85rem 1rem; gap: .65rem; overflow: hidden; }
+  .editor-wrap { flex: 1; display: flex; gap: .75rem; min-height: 0; }
+  .editor-pane { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  .editor-pane-label { font-family: var(--font-ui); font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-30); margin-bottom: 4px; display: flex; align-items: center; justify-content: space-between; }
+  #replyEditorTA {
+    flex: 1; width: 100%; resize: none; min-height: 160px;
+    font-family: var(--font-serif); font-size: .95rem; line-height: 1.8;
+    border: 1.5px solid var(--cream-200); border-radius: var(--radius-sm);
+    background: var(--cream); padding: .75rem 1rem; outline: none; color: var(--ink);
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  #replyEditorTA:focus { border-color: var(--bisque-deep); box-shadow: 0 0 0 3px rgba(200,131,42,.12); background: var(--white); }
+  .preview-pane { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  #replyPreview {
+    flex: 1; min-height: 160px; border: 1.5px solid var(--cream-200); border-radius: var(--radius-sm);
+    padding: .75rem 1rem; overflow-y: auto; background: #fffef9;
+    font-family: var(--font-serif); font-size: .95rem; line-height: 1.8; color: var(--ink); word-break: break-word;
+  }
+  .editor-hint { font-family: var(--font-ui); font-size: .75rem; color: var(--ink-30); line-height: 1.5; flex-shrink: 0; }
+  .modal-footer {
+    padding: .8rem 1rem; border-top: 1px solid var(--cream-200);
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+    flex-shrink: 0; flex-wrap: wrap; background: var(--cream-100);
+  }
+  .modal-footer-left { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+  .modal-char-count { font-family: var(--font-ui); font-size: .78rem; color: var(--ink-30); }
+  .modal-char-count.warn { color: var(--red); font-weight: 700; }
+  .edit-badge { background: rgba(200,131,42,.1); border: 1px solid rgba(200,131,42,.2); color: var(--bisque-deep); font-family: var(--font-ui); font-size: .72rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); display: none; }
+  .edit-badge.visible { display: inline-block; }
+  .btn-ai-solve-modal {
+    background: linear-gradient(135deg, #1a56a8, #0d3580); color: #fff; border: none;
+    border-radius: 5px; padding: 5px 12px; font-size: .78rem; font-weight: 700;
+    cursor: pointer; font-family: var(--font-ui); display: none; transition: var(--transition);
+  }
+  .btn-ai-solve-modal:hover { opacity: .88; }
+  .btn-submit-reply {
+    background: linear-gradient(135deg, var(--bisque-deep), #7a4a14); color: #fff; border: none;
+    border-radius: var(--radius-sm); padding: .7rem 1.8rem; font-size: .9rem; font-weight: 700;
+    cursor: pointer; font-family: var(--font-ui);
+    display: flex; align-items: center; gap: 8px; transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(200,131,42,.2);
+  }
+  .btn-submit-reply:hover { opacity: .9; transform: translateY(-1px); }
+  .btn-submit-reply:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+  /* ── Toast ── */
+  #toastContainer { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
+  .toast {
+    background: var(--navy-900); color: #fff; padding: .75rem 1.25rem;
+    border-radius: var(--radius-sm); font-family: var(--font-ui); font-size: .875rem; font-weight: 500;
+    box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(8px);
+    transition: .35s cubic-bezier(.4,0,.2,1); max-width: 340px; pointer-events: none;
+    border-left: 4px solid var(--bisque-dark);
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.toast-success { background: var(--green); border-left-color: #86efac; }
+  .toast.toast-error { background: var(--red); border-left-color: #fca5a5; }
+  .toast.toast-warn { background: #7a4a14; border-left-color: var(--bisque-dark); }
+
+  /* ── Ask footer ── */
+  .ask-footer-note {
+    text-align: center; padding: 2.5rem var(--pad-x);
+    background: var(--cream-100); border-top: 1px solid var(--cream-200);
+  }
+  .ask-footer-note p { font-family: var(--font-ui); font-size: .88rem; color: var(--ink-30); max-width: 600px; margin: 0 auto; line-height: 1.75; }
+  .ask-footer-note a { color: var(--bisque-deep); font-weight: 700; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .ask-hero-inner { grid-template-columns: 1fr; }
+    .ask-hero-formula-box { display: none; }
+    .fp-stats { grid-template-columns: repeat(2,1fr); }
+    .fp-stat:nth-child(2) { border-right: none; }
+    .fp-stat:nth-child(1), .fp-stat:nth-child(2) { border-bottom: 1px solid var(--cream-200); }
+    .fp-sort-wrap { margin-left: 0; width: 100%; }
+    .fp-sort-select { width: 100%; }
+    .editor-wrap { flex-direction: column; }
+    .reply.reply-nested { margin-left: .5rem; }
+  }
+  @media (max-width: 560px) {
+    .q-card { padding: 1.1rem 1.1rem; }
+    .reply-trigger-row { margin-left: -1.1rem; margin-right: -1.1rem; padding-left: 1.1rem; padding-right: 1.1rem; }
+    .admin-controls { margin-left: -1.1rem; margin-right: -1.1rem; padding-left: 1.1rem; border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+    .modal-sheet { max-height: 98vh; border-radius: 14px 14px 0 0; align-self: flex-end; }
+    .sym-toolbar { max-height: 120px; }
+  }
+  </style>
 </head>
 <body>
 
-<div id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+  <!-- Toast container -->
+  <div id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
 
-<!-- REPLY EDITOR MODAL -->
-<div class="modal-overlay" id="replyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-sheet">
-    <div class="modal-header">
-      <div class="modal-header-left">
-        <div class="modal-header-avatar" id="modalAvatar">R</div>
-        <div>
-          <div class="modal-title" id="modalTitle">Compose a Response</div>
-          <div class="modal-subtitle" id="modalSubtitle">Share your knowledge with the community</div>
-          <input class="modal-author-input" id="modalAuthorName" placeholder="Your name (optional)" maxlength="40">
-        </div>
-      </div>
-      <button class="btn-close-modal" id="btnCloseModal" aria-label="Close">✕</button>
-    </div>
-    <div class="modal-question-strip" id="modalQuestionStrip">
-      <strong>Question:</strong> <span id="modalQuestionText">—</span>
-    </div>
-    <div class="symbol-toolbar">
-      <span class="sym-label">Basic</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-ins="+">+</button>
-        <button class="sym-btn" data-ins="−">−</button>
-        <button class="sym-btn" data-ins="×">×</button>
-        <button class="sym-btn" data-ins="÷">÷</button>
-        <button class="sym-btn" data-ins="=">=</button>
-        <button class="sym-btn" data-ins="≠">≠</button>
-        <button class="sym-btn" data-ins="≤">≤</button>
-        <button class="sym-btn" data-ins="≥">≥</button>
-        <button class="sym-btn" data-ins="±">±</button>
-        <button class="sym-btn" data-ins="∞">∞</button>
-      </div>
-      <div class="sym-divider"></div>
-      <span class="sym-label">Powers</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-ins="²">x²</button>
-        <button class="sym-btn" data-ins="³">x³</button>
-        <button class="sym-btn" data-lat="\sqrt{}" data-cur="-1">√</button>
-        <button class="sym-btn" data-lat="^{}" data-cur="-1">xⁿ</button>
-        <button class="sym-btn" data-lat="_{}" data-cur="-1">xₙ</button>
-        <button class="sym-btn" data-lat="\frac{}{}" data-cur="-3">a/b</button>
-      </div>
-      <div class="sym-divider"></div>
-      <span class="sym-label">Trig</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-lat="\sin()" data-cur="-1">sin</button>
-        <button class="sym-btn" data-lat="\cos()" data-cur="-1">cos</button>
-        <button class="sym-btn" data-lat="\tan()" data-cur="-1">tan</button>
-        <button class="sym-btn" data-lat="\log()" data-cur="-1">log</button>
-        <button class="sym-btn" data-lat="\ln()" data-cur="-1">ln</button>
-        <button class="sym-btn" data-lat="\pi">π</button>
-        <button class="sym-btn" data-lat="\theta">θ</button>
-        <button class="sym-btn" data-lat="\alpha">α</button>
-        <button class="sym-btn" data-lat="\beta">β</button>
-        <button class="sym-btn" data-lat="\omega">ω</button>
-        <button class="sym-btn" data-lat="\Delta">Δ</button>
-        <button class="sym-btn" data-lat="\sigma">σ</button>
-        <button class="sym-btn" data-lat="\lambda">λ</button>
-      </div>
-      <div class="sym-divider"></div>
-      <span class="sym-label">Calculus</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-lat="\int_{a}^{b}" data-cur="-1">∫</button>
-        <button class="sym-btn" data-lat="\sum_{i=1}^{n}" data-cur="-1">Σ</button>
-        <button class="sym-btn" data-lat="\lim_{x \to 0}" data-cur="-1">lim</button>
-        <button class="sym-btn" data-lat="\frac{d}{dx}" data-cur="-1">d/dx</button>
-        <button class="sym-btn" data-lat="\frac{\partial}{\partial x}" data-cur="-1">∂/∂x</button>
-        <button class="sym-btn" data-lat="\nabla">∇</button>
-      </div>
-      <div class="sym-divider"></div>
-      <span class="sym-label">Sets</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-lat="\in">∈</button>
-        <button class="sym-btn" data-lat="\notin">∉</button>
-        <button class="sym-btn" data-lat="\subset">⊂</button>
-        <button class="sym-btn" data-lat="\cup">∪</button>
-        <button class="sym-btn" data-lat="\cap">∩</button>
-        <button class="sym-btn" data-lat="\mathbb{R}">ℝ</button>
-        <button class="sym-btn" data-lat="\mathbb{Z}">ℤ</button>
-        <button class="sym-btn" data-lat="\forall">∀</button>
-        <button class="sym-btn" data-lat="\exists">∃</button>
-      </div>
-      <div class="sym-divider"></div>
-      <span class="sym-label">Logic</span>
-      <div class="sym-group">
-        <button class="sym-btn" data-ins="∴">∴</button>
-        <button class="sym-btn" data-ins="∵">∵</button>
-        <button class="sym-btn" data-ins="⟹">⟹</button>
-        <button class="sym-btn" data-ins="⟺">⟺</button>
-        <button class="sym-btn" data-wrap="\\( | \\)">\(…\)</button>
-        <button class="sym-btn" data-wrap="\\[ | \\]">\[…\]</button>
-      </div>
-    </div>
-    <div class="template-bar">
-      <span class="tpl-label">Templates:</span>
-      <button class="tpl-btn" data-tpl="step">➕ Step</button>
-      <button class="tpl-btn" data-tpl="given">Given / Find</button>
-      <button class="tpl-btn" data-tpl="proof">Proof</button>
-      <button class="tpl-btn" data-tpl="formula">Formula</button>
-      <button class="tpl-btn" data-tpl="note">📝 Note</button>
-      <button class="tpl-btn" data-tpl="conclude">Conclusion</button>
-    </div>
-    <div class="ai-panel" id="aiPanel">
-      <div class="ai-panel-top">
-        <div class="ai-panel-title">🤖 Mwalimu AI — Step-by-Step Solver</div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div class="ai-thinking" id="aiThinking" style="display:none"><span></span><span></span><span></span></div>
-          <span class="ai-status" id="aiStatus">Ready</span>
-          <button class="btn-ai-use" id="btnAiUse">↓ Use this solution</button>
-        </div>
-      </div>
-      <div class="ai-result" id="aiResult">Press "AI Solve" below to generate a complete step-by-step solution for this question.</div>
-    </div>
-    <div class="modal-body">
-      <div class="editor-wrap">
-        <div class="editor-pane">
-          <div class="editor-pane-label">
-            <span>Your Response</span>
-            <span id="editorWordCount" style="font-weight:400;font-size:.7rem"></span>
+  <!-- Reply modal -->
+  <div class="modal-overlay" id="replyModal" role="dialog" aria-modal="true" aria-labelledby="modalHeadTitle">
+    <div class="modal-sheet">
+      <!-- Modal header -->
+      <div class="modal-head">
+        <div class="modal-head-left">
+          <div class="modal-head-avatar admin" id="modalAvatar">R</div>
+          <div>
+            <div class="modal-head-title" id="modalHeadTitle">Compose a Response</div>
+            <div class="modal-head-sub" id="modalHeadSub">Share your knowledge with the community</div>
+            <input class="modal-author-input" id="modalAuthorName" placeholder="Your name (optional)" maxlength="40" autocomplete="off">
           </div>
-          <textarea id="replyEditorTA" placeholder="Write your step-by-step solution here…&#10;&#10;Use the toolbar above for symbols, or type LaTeX directly.&#10;&#10;Example:&#10;Step 1: Differentiate both sides&#10;\( \frac{dy}{dx} = 2x \)&#10;&#10;Step 2: Apply the chain rule…" maxlength="4000"></textarea>
         </div>
-        <div class="preview-pane">
-          <div class="editor-pane-label">Live Preview</div>
-          <div id="replyPreview"><span style="color:var(--ink-40);font-size:.85rem;font-style:italic">Preview will appear as you type…</span></div>
+        <button class="btn-close-modal" id="btnCloseModal" aria-label="Close reply editor">✕</button>
+      </div>
+
+      <!-- Question strip -->
+      <div class="modal-q-strip" id="modalQStrip">
+        <strong>Question:</strong> <span id="modalQText">—</span>
+      </div>
+
+      <!-- Symbol toolbar -->
+      <div class="sym-toolbar" role="toolbar" aria-label="Insert mathematical symbols">
+        <span class="sym-label">Basic</span>
+        <div class="sym-group">
+          <button class="sym-btn" data-ins="+">+</button>
+          <button class="sym-btn" data-ins="−">−</button>
+          <button class="sym-btn" data-ins="×">×</button>
+          <button class="sym-btn" data-ins="÷">÷</button>
+          <button class="sym-btn" data-ins="=">=</button>
+          <button class="sym-btn" data-ins="≠">≠</button>
+          <button class="sym-btn" data-ins="≤">≤</button>
+          <button class="sym-btn" data-ins="≥">≥</button>
+          <button class="sym-btn" data-ins="±">±</button>
+          <button class="sym-btn" data-ins="∞">∞</button>
+        </div>
+        <div class="sym-divider"></div>
+        <span class="sym-label">Powers</span>
+        <div class="sym-group">
+          <button class="sym-btn" data-ins="²">x²</button>
+          <button class="sym-btn" data-ins="³">x³</button>
+          <button class="sym-btn" data-lat="\sqrt{}" data-cur="-1">√</button>
+          <button class="sym-btn" data-lat="^{}" data-cur="-1">xⁿ</button>
+          <button class="sym-btn" data-lat="\frac{}{}" data-cur="-3">a/b</button>
+        </div>
+        <div class="sym-divider"></div>
+        <span class="sym-label">Trig</span>
+        <div class="sym-group">
+          <button class="sym-btn" data-lat="\sin()">sin</button>
+          <button class="sym-btn" data-lat="\cos()">cos</button>
+          <button class="sym-btn" data-lat="\tan()">tan</button>
+          <button class="sym-btn" data-lat="\log()">log</button>
+          <button class="sym-btn" data-lat="\ln()">ln</button>
+          <button class="sym-btn" data-lat="\pi">π</button>
+          <button class="sym-btn" data-lat="\theta">θ</button>
+          <button class="sym-btn" data-lat="\alpha">α</button>
+          <button class="sym-btn" data-lat="\beta">β</button>
+          <button class="sym-btn" data-lat="\Delta">Δ</button>
+          <button class="sym-btn" data-lat="\sigma">σ</button>
+        </div>
+        <div class="sym-divider"></div>
+        <span class="sym-label">Calculus</span>
+        <div class="sym-group">
+          <button class="sym-btn" data-lat="\int_{a}^{b}">∫</button>
+          <button class="sym-btn" data-lat="\sum_{i=1}^{n}">Σ</button>
+          <button class="sym-btn" data-lat="\lim_{x \to 0}">lim</button>
+          <button class="sym-btn" data-lat="\frac{d}{dx}">d/dx</button>
+          <button class="sym-btn" data-lat="\nabla">∇</button>
+        </div>
+        <div class="sym-divider"></div>
+        <span class="sym-label">Wrap</span>
+        <div class="sym-group">
+          <button class="sym-btn" data-wrap="\( | \)">\(…\)</button>
+          <button class="sym-btn" data-wrap="\[ | \]">\[…\]</button>
         </div>
       </div>
-      <div class="editor-hint">💡 Wrap math in <strong>\( … \)</strong> for inline or <strong>\[ … \]</strong> for display equations. Preview renders LaTeX in real time.</div>
-    </div>
-    <div class="modal-footer">
-      <div class="modal-footer-left">
-        <span class="modal-char-count" id="modalCharCount">0 / 4,000</span>
-        <span class="edit-badge" id="editBadge">✏️ Editing reply</span>
-        <button class="tpl-btn" id="btnAiSolve" style="display:none;background:linear-gradient(135deg,#1a56a8,#0d3580);color:#fff;padding:5px 12px">🤖 AI Solve</button>
+
+      <!-- Template bar -->
+      <div class="tpl-bar">
+        <span class="tpl-label">Templates:</span>
+        <button class="tpl-btn" data-tpl="step">➕ Step</button>
+        <button class="tpl-btn" data-tpl="given">Given / Find</button>
+        <button class="tpl-btn" data-tpl="proof">Proof</button>
+        <button class="tpl-btn" data-tpl="formula">Formula</button>
+        <button class="tpl-btn" data-tpl="note">📝 Note</button>
+        <button class="tpl-btn" data-tpl="conclude">Conclusion</button>
       </div>
-      <button class="btn-submit-reply" id="btnSubmitReply">Post Response →</button>
-    </div>
-  </div>
-</div>
 
-<!-- HEADER -->
-<header>
-  <a href="index.html" class="logo">Ronny Best <span class="logo-sigma">Σ</span></a>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="main-nav" role="navigation" aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="main.html">Lessons</a></li>
-      <li><a href="tasks.html">Practice</a></li>
-      <li><a href="ask-mwalimu.html" class="active nav-ask-btn">Ask Mwalimu</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">✦ Expert Guidance</div>
-    <h1 id="hero-heading">Ask <span>Mwalimu</span></h1>
-    <p class="hero-sub">Submit your mathematics question and receive a thoughtful, personal reply from Mwalimu Ronny and fellow learners — completely free.</p>
-    <div class="hero-stats">
-      <div class="stat"><strong>Free</strong>No account required</div>
-      <div class="stat"><strong>Live</strong>Real-time responses</div>
-      <div class="stat"><strong>Safe</strong>Moderated community</div>
-    </div>
-  </div>
-</section>
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb-bar">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="tasks.html">Practice</a>
-    <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">Ask Mwalimu</span>
-  </nav>
-</div>
-
-<!-- MAIN -->
-<main class="page">
-  <details id="adminLoginSection" style="display:none">
-    <summary>🔐 Instructor Access</summary>
-    <div id="adminLoginForm" style="margin-top:1rem;display:flex;flex-direction:column;gap:.65rem;max-width:380px">
-      <input type="email" id="adminEmail" placeholder="Instructor email address" autocomplete="email">
-      <div class="admin-input-row">
-        <input type="password" id="adminPass" placeholder="Password" style="flex:1" autocomplete="current-password">
-        <button class="btn-post" id="adminLoginBtn" style="padding:.7rem 1.2rem;white-space:nowrap">Sign In</button>
+      <!-- AI panel -->
+      <div class="ai-panel" id="aiPanel">
+        <div class="ai-panel-top">
+          <div class="ai-panel-title">🤖 Mwalimu AI — Step-by-Step Solver</div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <div class="ai-thinking" id="aiThinking" style="display:none"><span></span><span></span><span></span></div>
+            <span class="ai-status" id="aiStatus">Ready</span>
+            <button class="btn-ai-use" id="btnAiUse">↓ Use this solution</button>
+          </div>
+        </div>
+        <div class="ai-result" id="aiResult">Press "AI Solve" below to generate a complete step-by-step solution for this question.</div>
       </div>
-      <span id="loginError" role="alert" style="color:var(--red);font-size:.82rem;min-height:1.2em"></span>
-    </div>
-  </details>
-  <div id="adminStatusBar">
-    <div class="admin-bar-left">
-      <div class="admin-avatar">R</div>
-      <div class="admin-bar-info">
-        <div class="admin-bar-name">Mwalimu Ronny</div>
-        <div class="admin-bar-role">✦ Head Instructor · Full Moderation Access</div>
-      </div>
-    </div>
-    <div class="admin-bar-right">
-      <div class="admin-stat-pill">Questions: <span id="statTotal">—</span></div>
-      <div class="admin-stat-pill">Resolved: <span id="statResolved">—</span></div>
-      <div class="admin-stat-pill">Pending: <span id="statPending">—</span></div>
-      <button id="adminLogoutBtn">Sign Out</button>
-    </div>
-  </div>
-  <div class="policy-box" role="note">
-    <strong>📋 Community Guidelines</strong>
-    This is a respectful academic space dedicated to mathematics learning. All questions and responses must be relevant, constructive, and courteous. Inappropriate content, personal insults, spam, or off-topic material will be removed immediately. Persistent violations result in a permanent suspension.
-  </div>
-  <div class="community-banner">
-    <div class="community-banner-icon">🎓</div>
-    <div class="community-banner-body">
-      <div class="community-banner-title">Open Discussion Community <span>Everyone Welcome</span></div>
-      <div class="community-banner-text">This is a <strong style="color:#fff">collaborative learning space</strong> — you don't need to wait for Mwalimu Ronny to participate. Students, teachers, and anyone who knows the answer are warmly encouraged to respond, explain, discuss, and help each other. You can post <strong style="color:#fff">as many responses as you like</strong> on any question — share your working, ask a follow-up, or offer an alternative approach.</div>
-      <div class="community-banner-pills"><span class="cpill"><span class="cpill-dot"></span>Post unlimited responses</span><span class="cpill"><span class="cpill-dot"></span>Discuss &amp; debate approaches</span><span class="cpill"><span class="cpill-dot"></span>Ask follow-up questions</span><span class="cpill"><span class="cpill-dot"></span>Help fellow students</span><span class="cpill"><span class="cpill-dot"></span>No account required</span></div>
-    </div>
-  </div>
-  <div class="section-label" id="submit-section">Submit a Question</div>
-  <div class="post-card">
-    <div class="post-card-title">❓ What would you like to learn?</div>
-    <div class="post-inputs">
-      <input type="text" id="postName" placeholder="Your name — leave blank to post as Anonymous" maxlength="50" autocomplete="off">
-      <textarea id="postText" placeholder="Compose your mathematics question here…&#10;&#10;Example: &quot;How do I apply the chain rule when differentiating y = sin(3x²)?&quot;&#10;&#10;LaTeX notation is supported: \( y = \sin(3x) \)" maxlength="1000" aria-label="Your mathematics question"></textarea>
-      <div class="input-footer"><span class="latex-hint">LaTeX supported · e.g. \( \frac{dy}{dx} \)</span><span class="char-count" id="charCountWrap"><span id="charCount">0</span> / 1,000</span></div>
-      <div><button class="btn-post" id="postBtn">Submit Question →</button></div>
-    </div>
-  </div>
-  <div class="filter-bar" role="group" aria-label="Filter questions">
-    <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" id="filterAll">All Questions</button>
-    <button class="filter-btn" id="filterUnanswered">Awaiting Response</button>
-    <button class="filter-btn" id="filterAnswered">Resolved</button>
-  </div>
-  <div class="section-label">Community Questions</div>
-  <div id="questionFeed" aria-live="polite" aria-label="Community questions feed"></div>
-</main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="main.html">Lessons</a>
-    <a href="tasks.html">Practice</a>
-    <a href="ask-mwalimu.html">Ask Mwalimu</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-  </div>
-  <p class="footer-copy">© 2025 Ronny Best Mathematics. All rights reserved.</p>
-</footer>
-
-<!-- FIREBASE MODULE -->
- <script src="shared.js"></script>
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, doc, updateDoc, serverTimestamp, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAssMrRKgcX-rIcNEmH-Fw9-2noX3ibJ64",
-  authDomain: "ronny-best-maths.firebaseapp.com",
-  projectId: "ronny-best-maths",
-  storageBucket: "ronny-best-maths.firebasestorage.app",
-  messagingSenderId: "303659327110",
-  appId: "1:303659327110:web:9ada7496dca39760607b07"
-};
-
-const ADMIN_EMAIL = "ronnymwenda89@gmail.com";
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
-
-let currentUser = null;
-let isAdmin = false;
-let feedUnsub = null;
-let modalQid = null;
-let editReplyId = null;
-let currentQText = "";
-let replyToName = null;
-let replyToId = null;
-
-// Store question texts by ID for easy lookup
-const questionTexts = new Map();
-
-onAuthStateChanged(auth, user => {
-  currentUser = user;
-  isAdmin = !!(user && user.email === ADMIN_EMAIL);
-  
-  const loginForm = document.getElementById("adminLoginForm");
-  const statusBar = document.getElementById("adminStatusBar");
-  const logoutBtns = document.querySelectorAll("#adminLogoutBtn");
-  const aiSolveBtn = document.getElementById("btnAiSolve");
-  
-  if (loginForm) loginForm.style.display = isAdmin ? "none" : "flex";
-  if (statusBar) statusBar.style.display = isAdmin ? "flex" : "none";
-  logoutBtns.forEach(b => b.style.display = isAdmin ? "inline-block" : "none");
-  if (aiSolveBtn) aiSolveBtn.style.display = isAdmin ? "inline-block" : "none";
-  if (isAdmin) document.getElementById("adminLoginSection").style.display = "block";
-  
-  subscribeFeed();
-});
-
-signInAnonymously(auth).catch(() => {});
-
-// Admin login
-document.getElementById("adminLoginBtn").addEventListener("click", async () => {
-  const email = document.getElementById("adminEmail").value.trim();
-  const pass = document.getElementById("adminPass").value;
-  try {
-    await signInWithEmailAndPassword(auth, email, pass);
-    document.getElementById("loginError").textContent = "";
-    showToast("Admin login successful!", "success");
-  } catch {
-    document.getElementById("loginError").textContent = "Invalid credentials.";
-    showToast("Login failed", "error");
-  }
-});
-
-document.querySelectorAll("#adminLogoutBtn").forEach(btn =>
-  btn.addEventListener("click", () => signOut(auth))
-);
-
-// Submit question
-document.getElementById("postBtn").addEventListener("click", async () => {
-  const name = document.getElementById("postName").value.trim() || "Anonymous";
-  const text = document.getElementById("postText").value.trim();
-  if (!text) { showToast("Please compose your question.", "warn"); return; }
-  if (text.length > 1000) { showToast("Question exceeds 1000 characters.", "warn"); return; }
-  
-  const btn = document.getElementById("postBtn");
-  btn.disabled = true;
-  btn.textContent = "Submitting…";
-  try {
-    await addDoc(collection(db, "questions"), {
-      name, text, uid: currentUser ? currentUser.uid : "guest",
-      timestamp: serverTimestamp(), answered: false, pinned: false, deleted: false
-    });
-    document.getElementById("postText").value = "";
-    document.getElementById("postName").value = "";
-    document.getElementById("charCount").textContent = "0";
-    showToast("Question submitted successfully!", "success");
-  } catch (err) {
-    showToast("Submission failed: " + err.message, "error");
-  }
-  btn.disabled = false;
-  btn.textContent = "Submit Question →";
-});
-
-// Subscribe to feed
-function subscribeFeed() {
-  if (feedUnsub) feedUnsub();
-  const feed = document.getElementById("questionFeed");
-  if (!feed) return;
-  feed.innerHTML = '<div style="text-align:center;padding:2rem;">Loading questions...</div>';
-  
-  const q = query(collection(db, "questions"), orderBy("timestamp", "desc"));
-  feedUnsub = onSnapshot(q, snapshot => {
-    feed.innerHTML = "";
-    if (snapshot.empty) {
-      feed.innerHTML = `<div class="empty-state"><div class="empty-icon">✦</div><p>No questions yet.</p><span>Be the first to ask Mwalimu Ronny.</span></div>`;
-      return;
-    }
-    
-    const docs = [];
-    snapshot.forEach(ds => docs.push({ id: ds.id, data: ds.data() }));
-    docs.sort((a, b) => {
-      if (a.data.pinned && !b.data.pinned) return -1;
-      if (!a.data.pinned && b.data.pinned) return 1;
-      const ta = a.data.timestamp ? a.data.timestamp.seconds : 0;
-      const tb = b.data.timestamp ? b.data.timestamp.seconds : 0;
-      return tb - ta;
-    });
-    
-    // Store question texts for reply modal
-    docs.forEach(({ id, data }) => {
-      questionTexts.set(id, data.text || "");
-    });
-    
-    if (isAdmin) {
-      const total = docs.length;
-      const resolved = docs.filter(d => d.data.answered && !d.data.deleted).length;
-      const pending = docs.filter(d => !d.data.answered && !d.data.deleted).length;
-      const ts = document.getElementById("statTotal");
-      const rs = document.getElementById("statResolved");
-      const ps = document.getElementById("statPending");
-      if (ts) ts.textContent = total;
-      if (rs) rs.textContent = resolved;
-      if (ps) ps.textContent = pending;
-    }
-    
-    docs.forEach(({ id, data: d }) => {
-      if (d.deleted && !isAdmin) return;
-      feed.appendChild(buildCard(id, d));
-    });
-    
-    if (window.MathJax) MathJax.typesetPromise([feed]).catch(() => {});
-    applyCurrentFilter();
-  }, error => {
-    console.error("Snapshot error:", error);
-    feed.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><p>Connection error</p><span>Unable to load questions. Please refresh the page.</span></div>`;
-  });
-}
-
-// Build question card
-function buildCard(id, d) {
-  const card = document.createElement("div");
-  card.className = "q-card" + (d.pinned ? " pinned" : "") + (d.deleted ? " deleted" : "") + (d.answered ? " answered" : "");
-  
-  const time = d.timestamp ? new Date(d.timestamp.seconds * 1000).toLocaleDateString("en-KE", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "Just now";
-  
-  card.innerHTML = `
-    <div class="q-header">
-      <div class="q-meta"><span class="q-author">${esc(d.name)}</span><span class="q-time">${time}</span></div>
-      <div class="q-badges">${d.pinned ? `<span class="badge badge-pin">📌 Featured</span>` : ""}${d.answered ? `<span class="badge badge-ans">✔ Resolved</span>` : ""}${d.deleted ? `<span class="badge badge-del">Removed</span>` : ""}</div>
-    </div>
-    <div class="q-body">${esc(d.text)}</div>
-    <div class="q-replies" id="replies-${id}"></div>
-    <div class="reply-trigger-row">
-      <button class="btn-open-editor" onclick="window.openReplyEditor('${id}', null, null)">💬 Reply to this question...</button>
-      ${isAdmin ? `<button class="btn-ai-answer" onclick="window.openAiEditor('${id}')">🤖 AI Solve</button>` : ""}
-    </div>
-    ${isAdmin ? `<div class="admin-controls">
-      <span class="admin-ctrl-label">⚙ Admin</span>
-      <button class="admin-btn btn-resolve" onclick="window.toggleAnswer('${id}',${d.answered})">${d.answered ? "↩ Unmark" : "✔ Mark Resolved"}</button>
-      <button class="admin-btn btn-pin" onclick="window.togglePin('${id}',${d.pinned})">${d.pinned ? "📌 Unfeature" : "📌 Feature"}</button>
-      <button class="admin-btn btn-danger" onclick="window.deleteQ('${id}',${d.deleted})">${d.deleted ? "↩ Restore" : "🗑 Remove"}</button>
-      <button class="admin-btn btn-ban" onclick="window.banUser('${d.uid || 'guest'}')">🚫 Suspend User</button>
-    </div>` : ""}
-  `;
-  
-  loadReplies(id, card.querySelector(`#replies-${id}`));
-  return card;
-}
-
-// Load replies for a question (with nesting support)
-function loadReplies(qid, container) {
-  if (!container) return;
-  const rq = query(collection(db, "questions", qid, "replies"), orderBy("timestamp", "asc"));
-  onSnapshot(rq, snap => {
-    container.innerHTML = "";
-    const replies = [];
-    snap.forEach(r => {
-      replies.push({ id: r.id, data: r.data() });
-    });
-    
-    // Build reply tree (simple version - just show all with reply indicators)
-    replies.forEach(reply => {
-      const rd = reply.data;
-      if (rd.deleted && !isAdmin) return;
-      
-      const div = document.createElement("div");
-      const rt = rd.timestamp ? new Date(rd.timestamp.seconds * 1000).toLocaleDateString("en-KE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) : "Just now";
-      const edited = rd.editedAt ? ` · edited` : "";
-      const replyToBadge = rd.replyToName ? `<span class="reply-to-badge">↳ Replying to <a href="#" onclick="window.scrollToReply('${rd.replyToId}')">@${esc(rd.replyToName)}</a></span>` : "";
-      
-      if (rd.isAdmin) {
-        div.className = "reply mwalimu-reply" + (rd.deleted ? " deleted-reply" : "") + (rd.replyToId ? " nested" : "");
-        div.innerHTML = `
-          <div class="r-header">
-            <div class="r-author-row">
-              <div class="r-mini-avatar">R</div>
-              <span class="r-author">Mwalimu Ronny</span>
-              <span class="mwalimu-verified">✦ Verified Instructor</span>
+      <!-- Editor body -->
+      <div class="modal-body">
+        <div class="editor-wrap">
+          <div class="editor-pane">
+            <div class="editor-pane-label">
+              <span>Your Response</span>
+              <span id="editorWordCount" style="color:var(--ink-30);font-size:.7rem"></span>
             </div>
-            <span class="r-time">${rt}${edited}</span>
+            <textarea id="replyEditorTA"
+              placeholder="Write your step-by-step solution here…&#10;&#10;Use the toolbar above for math symbols, or type LaTeX directly.&#10;&#10;Example:&#10;Step 1: Differentiate both sides&#10;\( \frac{dy}{dx} = 2x \)&#10;&#10;Step 2: Apply the chain rule…"
+              maxlength="4000"></textarea>
           </div>
-          ${replyToBadge}
-          <p class="r-body">${esc(rd.text)}</p>
-          <div class="reply-actions">
-            <button class="btn-reply-to-reply" onclick="window.openReplyEditor('${qid}', '${reply.id}', 'Mwalimu Ronny')">💬 Reply</button>
-            ${isAdmin ? `<button class="btn-edit-reply" onclick="window.openEditReply('${qid}','${reply.id}')">✏️ Edit</button>
-            <button class="btn-del-reply" onclick="window.deleteReply('${qid}','${reply.id}',${rd.deleted})">${rd.deleted ? "Restore" : "Remove"}</button>` : ""}
+          <div class="preview-pane">
+            <div class="editor-pane-label">Live Preview</div>
+            <div id="replyPreview"><span style="color:var(--ink-30);font-size:.85rem;font-style:italic">Preview appears as you type…</span></div>
           </div>
-        `;
+        </div>
+        <div class="editor-hint">💡 Wrap math in <strong>\( … \)</strong> for inline or <strong>\[ … \]</strong> for display equations. The preview renders LaTeX in real time.</div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <div class="modal-footer-left">
+          <span class="modal-char-count" id="modalCharCount">0 / 4,000</span>
+          <span class="edit-badge" id="editBadge">✏️ Editing</span>
+          <button class="btn-ai-solve-modal" id="btnAiSolveModal">🤖 AI Solve</button>
+        </div>
+        <button class="btn-submit-reply" id="btnSubmitReply">Post Response →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SKIP LINK ═══ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+      </div>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <!-- Mobile bar -->
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <!-- Nav list -->
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html" class="active" aria-current="page">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ MAIN ═══ -->
+  <main id="main-content">
+
+    <!-- Ask Hero -->
+    <section class="ask-hero" aria-labelledby="ask-hero-heading">
+      <div class="ask-hero-inner">
+        <div class="ask-hero-content">
+          <div class="ask-hero-eyebrow">✦ Free · No Account Required</div>
+          <h1 id="ask-hero-heading">Ask <span>Mwalimu</span></h1>
+          <p class="ask-hero-sub">
+            Post any mathematics question and receive a clear, <strong>step-by-step reply</strong>
+            from Mwalimu Ronny or fellow learners — completely free, CBC-aligned, and always open.
+          </p>
+          <div class="ask-hero-pills">
+            <span class="ask-hero-pill"><span class="dot"></span>No account required</span>
+            <span class="ask-hero-pill"><span class="dot"></span>LaTeX &amp; symbol support</span>
+            <span class="ask-hero-pill"><span class="dot"></span>Live responses</span>
+            <span class="ask-hero-pill"><span class="dot"></span>CBC-aligned answers</span>
+          </div>
+        </div>
+        <div class="ask-hero-formula-box" aria-hidden="true">
+          <div class="ahfb-label">Community Q&amp;A</div>
+          <div class="ahfb-icon">💬</div>
+          <div class="ahfb-stat" id="heroTotalQs">—</div>
+          <div class="ahfb-stat-sub">Questions Asked</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">Ask Mwalimu</span>
+      </nav>
+    </div>
+
+    <!-- Page body -->
+    <div class="ask-page">
+
+      <!-- Admin login (hidden, revealed by triple-click footer) -->
+      <div class="admin-login-section" id="adminLoginSection">
+        <div class="admin-login-summary" id="adminLoginToggle" role="button" tabindex="0">🔐 Instructor Access</div>
+        <div class="admin-login-body" id="adminLoginBody" style="display:none">
+          <input type="email" id="adminEmail" placeholder="Instructor email" class="ask-input" autocomplete="email">
+          <div class="admin-input-row">
+            <input type="password" id="adminPass" placeholder="Password" class="ask-input" style="flex:1" autocomplete="current-password">
+            <button class="btn-admin-login" id="btnAdminLogin">Sign In</button>
+          </div>
+          <span id="loginError" role="alert"></span>
+        </div>
+      </div>
+
+      <!-- Admin status bar -->
+      <div class="admin-status-bar" id="adminStatusBar">
+        <div class="asb-left">
+          <div class="asb-avatar">R</div>
+          <div>
+            <div class="asb-name">Mwalimu Ronny</div>
+            <div class="asb-role">✦ Head Instructor · Full Moderation</div>
+          </div>
+        </div>
+        <div class="asb-right">
+          <div class="asb-stat">Total: <span id="sbTotal">—</span></div>
+          <div class="asb-stat">Resolved: <span id="sbResolved">—</span></div>
+          <div class="asb-stat">Pending: <span id="sbPending">—</span></div>
+          <button class="btn-admin-logout" id="btnAdminLogout">Sign Out</button>
+        </div>
+      </div>
+
+      <!-- Community guidelines -->
+      <div class="info-box info-box-gold" role="note">
+        <strong>📋 Community Guidelines</strong>
+        <p>This is a respectful academic space for mathematics learning. All questions and responses must be relevant, constructive, and courteous. Inappropriate content, spam, or off-topic material is removed immediately. Persistent violations result in suspension.</p>
+      </div>
+
+      <!-- Community banner -->
+      <div class="community-banner">
+        <div class="cb-icon">🎓</div>
+        <div class="cb-body">
+          <div class="cb-title">Open Discussion Community <span class="cb-badge">Everyone Welcome</span></div>
+          <p class="cb-text">This is a <strong>collaborative learning space</strong> — you don't need to wait for Mwalimu Ronny to participate. Students, teachers, and anyone who knows the answer are warmly encouraged to respond, explain, and help each other.</p>
+          <div class="cb-pills">
+            <span class="cb-pill"><span class="cb-pill-dot"></span>Post unlimited responses</span>
+            <span class="cb-pill"><span class="cb-pill-dot"></span>Discuss &amp; debate approaches</span>
+            <span class="cb-pill"><span class="cb-pill-dot"></span>Ask follow-up questions</span>
+            <span class="cb-pill"><span class="cb-pill-dot"></span>No account required</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit question -->
+      <div class="section-label-row" id="submit-section">Submit a Question</div>
+      <div class="submit-card" id="submitCard">
+        <div class="submit-card-header">
+          <span class="submit-card-header-icon">❓</span>
+          <div>
+            <div class="submit-card-header-title">What would you like to learn?</div>
+            <div class="submit-card-header-sub">Type clearly — the more detail you give, the better the answer you will receive.</div>
+          </div>
+        </div>
+        <div class="submit-card-body">
+          <input type="text" id="postName" class="ask-input" placeholder="Your name — leave blank to post as Anonymous" maxlength="50" autocomplete="off">
+          <textarea id="postText" class="ask-input ask-textarea" maxlength="1000" aria-label="Your mathematics question" placeholder='Write your mathematics question here…&#10;&#10;Example: "How do I apply the chain rule when differentiating y = sin(3x²)?"&#10;&#10;LaTeX notation is supported: \( y = \sin(3x) \)'></textarea>
+          <div class="submit-card-footer">
+            <div>
+              <p class="latex-hint-text">LaTeX supported · e.g. \( \frac{dy}{dx} \) · Use \( … \) for inline math</p>
+              <p class="char-count-text" id="qCharCount">0 / 1,000 characters</p>
+            </div>
+            <button class="btn-submit-q" id="btnPostQ">
+              Submit Question
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter panel -->
+      <div class="filter-panel" id="filterPanel" role="region" aria-label="Filter and sort questions">
+        <!-- Stats row -->
+        <div class="fp-stats">
+          <div class="fp-stat fp-active" data-filter="all" id="fstat-all" role="button" tabindex="0" aria-label="Show all questions">
+            <span class="fp-stat-num" id="sc-total">—</span>
+            <span class="fp-stat-label">Total</span>
+          </div>
+          <div class="fp-stat" data-filter="answered" id="fstat-answered" role="button" tabindex="0" aria-label="Show resolved questions">
+            <span class="fp-stat-num green" id="sc-answered">—</span>
+            <span class="fp-stat-label">Resolved</span>
+          </div>
+          <div class="fp-stat" data-filter="unanswered" id="fstat-pending" role="button" tabindex="0" aria-label="Show pending questions">
+            <span class="fp-stat-num gold" id="sc-pending">—</span>
+            <span class="fp-stat-label">Pending</span>
+          </div>
+          <div class="fp-stat" data-filter="mine" id="fstat-mine" role="button" tabindex="0" aria-label="Show my questions">
+            <span class="fp-stat-num blue" id="sc-mine">—</span>
+            <span class="fp-stat-label">My Questions</span>
+          </div>
+        </div>
+
+        <!-- Filter pills -->
+        <div class="fp-controls">
+          <span class="fp-label">Filter</span>
+          <div class="fp-pills" id="filterPills">
+            <button class="fp-pill fp-pill-active" data-f="all">All Questions</button>
+            <button class="fp-pill" data-f="unanswered"><span class="fp-pill-dot"></span>Awaiting Reply</button>
+            <button class="fp-pill" data-f="answered"><span class="fp-pill-dot"></span>Resolved</button>
+            <button class="fp-pill" data-f="pinned">📌 Featured</button>
+            <div class="fp-divider"></div>
+            <button class="fp-pill mine" data-f="mine">👤 My Questions</button>
+            <button class="fp-pill mine" data-f="mine-answered">My Resolved</button>
+            <button class="fp-pill mine" data-f="mine-pending">My Pending</button>
+          </div>
+          <div class="fp-sort-wrap">
+            <span class="fp-label">Sort</span>
+            <select id="sortSelect" class="fp-sort-select" aria-label="Sort questions">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+              <option value="most-replies">Most replies</option>
+              <option value="unanswered-first">Unanswered first</option>
+              <option value="resolved-first">Resolved first</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="fp-summary">
+          <div class="fp-summary-text">
+            <span class="fp-summary-count" id="resultCount">—</span>
+            <span id="resultLabel">questions</span>
+          </div>
+          <button class="fp-clear-btn" id="btnClearFilter">✕ Clear filter</button>
+        </div>
+      </div>
+
+      <!-- Questions feed -->
+      <div class="section-label-row">Community Questions</div>
+      <div id="questionFeed" aria-live="polite" aria-label="Community questions feed"></div>
+
+    </div><!-- /ask-page -->
+
+    <!-- Footer note -->
+    <div class="ask-footer-note">
+      <p>All responses on this page are provided for educational purposes and are aligned to the <strong>CBC curriculum</strong> as defined by KICD and the Ministry of Education Kenya. For in-depth lessons, visit the <a href="math-lessons.html">Lessons</a> page or <a href="contact.html">contact Mwalimu Ronny</a> directly.</p>
+    </div>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <!-- Shared utilities -->
+  <script src="shared.js"></script>
+
+  <!-- Firebase module -->
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, doc, updateDoc, serverTimestamp, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyAssMrRKgcX-rIcNEmH-Fw9-2noX3ibJ64",
+    authDomain: "ronny-best-maths.firebaseapp.com",
+    projectId: "ronny-best-maths",
+    storageBucket: "ronny-best-maths.firebasestorage.app",
+    messagingSenderId: "303659327110",
+    appId: "1:303659327110:web:9ada7496dca39760607b07"
+  };
+  const ADMIN_EMAIL = "ronnymwenda89@gmail.com";
+
+  const app = initializeApp(FIREBASE_CONFIG);
+  const db  = getFirestore(app);
+  const auth = getAuth(app);
+
+  let currentUser = null;
+  let isAdmin = false;
+  let feedUnsub = null;
+  let modalQid = null;
+  let editReplyId = null;
+  let currentQText = "";
+  let replyToName = null;
+  let replyToId = null;
+  let stepCount = 1;
+  const questionTexts = new Map();
+
+  /* ─ get / set persistent UID ─ */
+  function getMyUid() { try { return localStorage.getItem("ask_mwalimu_uid") || null; } catch { return null; } }
+
+  /* ─ Auth state ─ */
+  onAuthStateChanged(auth, user => {
+    currentUser = user;
+    isAdmin = !!(user && user.email === ADMIN_EMAIL);
+    applyAdminUI();
+    subscribeFeed();
+  });
+
+  signInAnonymously(auth).then(c => {
+    try { localStorage.setItem("ask_mwalimu_uid", c.user.uid); } catch {}
+  }).catch(() => {});
+
+  function applyAdminUI() {
+    const loginSection = document.getElementById("adminLoginSection");
+    const statusBar    = document.getElementById("adminStatusBar");
+    const aiSolveBtn   = document.getElementById("btnAiSolveModal");
+    if (loginSection) loginSection.style.display = "block";
+    if (statusBar)    statusBar.style.display = isAdmin ? "flex" : "none";
+    if (aiSolveBtn)   aiSolveBtn.style.display = isAdmin ? "inline-block" : "none";
+  }
+
+  /* ─ Admin login toggle ─ */
+  document.getElementById("adminLoginToggle").addEventListener("click", () => {
+    const body = document.getElementById("adminLoginBody");
+    body.style.display = body.style.display === "none" ? "flex" : "none";
+  });
+  document.getElementById("adminLoginToggle").addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") document.getElementById("adminLoginToggle").click();
+  });
+
+  document.getElementById("btnAdminLogin").addEventListener("click", async () => {
+    const email = document.getElementById("adminEmail").value.trim();
+    const pass  = document.getElementById("adminPass").value;
+    document.getElementById("loginError").textContent = "";
+    try {
+      await signInWithEmailAndPassword(auth, email, pass);
+      document.getElementById("adminLoginBody").style.display = "none";
+      showToast("Admin login successful!", "success");
+    } catch {
+      document.getElementById("loginError").textContent = "Invalid credentials — please try again.";
+      showToast("Login failed", "error");
+    }
+  });
+
+  document.getElementById("btnAdminLogout").addEventListener("click", () => signOut(auth));
+
+  /* ─ Submit question ─ */
+  const postTextEl   = document.getElementById("postText");
+  const qCharCountEl = document.getElementById("qCharCount");
+  postTextEl.addEventListener("input", () => {
+    const len = postTextEl.value.length;
+    qCharCountEl.textContent = `${len} / 1,000 characters`;
+    qCharCountEl.className = "char-count-text" + (len > 900 ? " warn" : "");
+  });
+
+  document.getElementById("btnPostQ").addEventListener("click", async () => {
+    const name = document.getElementById("postName").value.trim() || "Anonymous";
+    const text = postTextEl.value.trim();
+    if (!text) { showToast("Please compose your question before submitting.", "warn"); return; }
+    if (text.length > 1000) { showToast("Question exceeds 1,000 characters.", "warn"); return; }
+
+    const btn = document.getElementById("btnPostQ");
+    btn.disabled = true; btn.textContent = "Submitting…";
+    try {
+      await addDoc(collection(db, "questions"), {
+        name, text,
+        uid: currentUser ? currentUser.uid : "guest",
+        timestamp: serverTimestamp(),
+        answered: false, pinned: false, deleted: false
+      });
+      postTextEl.value = ""; document.getElementById("postName").value = "";
+      qCharCountEl.textContent = "0 / 1,000 characters";
+      showToast("Question submitted successfully! You will receive a reply shortly.", "success");
+      activateFilter("mine");
+    } catch (err) {
+      showToast("Submission failed: " + err.message, "error");
+    }
+    btn.disabled = false;
+    btn.innerHTML = 'Submit Question <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  });
+
+  /* ─ Subscribe to feed ─ */
+  function subscribeFeed() {
+    if (feedUnsub) feedUnsub();
+    const feed = document.getElementById("questionFeed");
+    if (!feed) return;
+    feed.innerHTML = '<div class="empty-state-block"><div class="es-icon">⏳</div><p class="es-title">Loading questions…</p></div>';
+
+    const q = query(collection(db, "questions"), orderBy("timestamp", "desc"));
+    feedUnsub = onSnapshot(q, snapshot => {
+      feed.innerHTML = "";
+      if (snapshot.empty) {
+        feed.innerHTML = '<div class="empty-state-block"><div class="es-icon">💬</div><p class="es-title">No questions yet</p><p class="es-sub">Be the first to ask Mwalimu Ronny!</p></div>';
+        updateStats([]);
+        return;
+      }
+      const docs = [];
+      snapshot.forEach(ds => docs.push({ id: ds.id, data: ds.data() }));
+      docs.forEach(({ id, data }) => questionTexts.set(id, data.text || ""));
+
+      // Update hero counter
+      const htq = document.getElementById("heroTotalQs");
+      if (htq) htq.textContent = docs.filter(d => !d.data.deleted).length;
+
+      if (isAdmin) {
+        const t = docs.length, r = docs.filter(d => d.data.answered && !d.data.deleted).length, p = docs.filter(d => !d.data.answered && !d.data.deleted).length;
+        const sb = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+        sb("sbTotal", t); sb("sbResolved", r); sb("sbPending", p);
+      }
+
+      docs.forEach(({ id, data }) => {
+        if (data.deleted && !isAdmin) return;
+        feed.appendChild(buildCard(id, data));
+      });
+
+      if (window.MathJax) MathJax.typesetPromise([feed]).catch(() => {});
+      updateStats(docs);
+      applyFilters();
+    }, err => {
+      console.error("Feed error:", err);
+      feed.innerHTML = '<div class="empty-state-block"><div class="es-icon">⚠️</div><p class="es-title">Connection error</p><p class="es-sub">Unable to load questions. Please refresh the page.</p></div>';
+    });
+  }
+
+  /* ─ Build question card ─ */
+  function buildCard(id, d) {
+    const myUid = getMyUid();
+    const isMine = myUid && d.uid === myUid;
+    const card = document.createElement("div");
+    card.className = "q-card"
+      + (d.pinned  ? " q-pinned"  : "")
+      + (d.deleted ? " q-deleted" : "")
+      + (d.answered ? " q-answered": "")
+      + (isMine    ? " q-mine"    : "");
+    card.dataset.uid = d.uid || "";
+    card.dataset.ts  = d.timestamp ? d.timestamp.seconds : "0";
+    card.dataset.text = (d.text || "").toLowerCase();
+    card.dataset.replies  = "0";
+    card.dataset.answered = d.answered ? "1" : "0";
+    card.dataset.pinned   = d.pinned   ? "1" : "0";
+
+    const time = d.timestamp
+      ? new Date(d.timestamp.seconds * 1000).toLocaleDateString("en-KE", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" })
+      : "Just now";
+
+    card.innerHTML = `
+      <div class="q-header">
+        <div class="q-meta">
+          <span class="q-author">${esc(d.name)}</span>
+          <span class="q-time">${time}</span>
+        </div>
+        <div class="q-badges">
+          ${isMine   ? `<span class="q-badge q-badge-mine">👤 My Question</span>`   : ""}
+          ${d.pinned ? `<span class="q-badge q-badge-pin">📌 Featured</span>`       : ""}
+          ${d.answered ? `<span class="q-badge q-badge-ans">✔ Resolved</span>`    : ""}
+          ${d.deleted  ? `<span class="q-badge q-badge-del">Removed</span>`        : ""}
+        </div>
+      </div>
+      <div class="q-body">${esc(d.text)}</div>
+      <div class="q-replies" id="replies-${id}"></div>
+      <div class="reply-trigger-row">
+        <button class="btn-open-reply" onclick="window._openReplyEditor('${id}', null, null)">💬 Add a response to this question…</button>
+        ${isAdmin ? `<button class="btn-ai-answer" onclick="window._openAiEditor('${id}')">🤖 AI Solve</button>` : ""}
+      </div>
+      ${isAdmin ? `<div class="admin-controls">
+        <span class="admin-ctrl-label">⚙ Admin</span>
+        <button class="btn-admin-ctrl resolve" onclick="window._toggleAnswer('${id}',${d.answered})">${d.answered ? "↩ Unmark" : "✔ Mark Resolved"}</button>
+        <button class="btn-admin-ctrl pin"     onclick="window._togglePin('${id}',${d.pinned})">${d.pinned ? "📌 Unfeature" : "📌 Feature"}</button>
+        <button class="btn-admin-ctrl danger"  onclick="window._deleteQ('${id}',${d.deleted})">${d.deleted ? "↩ Restore" : "🗑 Remove"}</button>
+        <button class="btn-admin-ctrl ban"     onclick="window._banUser('${d.uid || 'guest'}')">🚫 Suspend User</button>
+      </div>` : ""}
+    `;
+
+    loadReplies(id, card.querySelector(`#replies-${id}`), card);
+    return card;
+  }
+
+  /* ─ Load replies ─ */
+  function loadReplies(qid, container, parentCard) {
+    if (!container) return;
+    const rq = query(collection(db, "questions", qid, "replies"), orderBy("timestamp", "asc"));
+    onSnapshot(rq, snap => {
+      container.innerHTML = "";
+      const replies = [];
+      snap.forEach(r => replies.push({ id: r.id, data: r.data() }));
+      if (parentCard) parentCard.dataset.replies = replies.filter(r => !r.data.deleted).length;
+
+      replies.forEach(reply => {
+        const rd = reply.data;
+        if (rd.deleted && !isAdmin) return;
+        const div = document.createElement("div");
+        const rt = rd.timestamp
+          ? new Date(rd.timestamp.seconds * 1000).toLocaleDateString("en-KE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })
+          : "Just now";
+        const edited = rd.editedAt ? " · edited" : "";
+        const replyToBadge = rd.replyToName
+          ? `<div class="reply-to-badge">↳ Replying to <a href="#" onclick="event.preventDefault();window._scrollToReply('${rd.replyToId}')">@${esc(rd.replyToName)}</a></div>`
+          : "";
+
+        if (rd.isAdmin) {
+          div.className = "reply reply-mwalimu" + (rd.deleted ? " reply-deleted" : "") + (rd.replyToId ? " reply-nested" : "");
+          div.innerHTML = `
+            <div class="r-header">
+              <div class="r-mini-avatar">R</div>
+              <span class="r-author-name">Mwalimu Ronny</span>
+              <span class="r-verified">✦ Verified Instructor</span>
+              <span class="r-time">${rt}${edited}</span>
+            </div>
+            ${replyToBadge}
+            <p class="r-body">${esc(rd.text)}</p>
+            <div class="reply-actions">
+              <button class="btn-reply-action reply-to" onclick="window._openReplyEditor('${qid}','${reply.id}','Mwalimu Ronny')">💬 Reply</button>
+              ${isAdmin ? `<button class="btn-reply-action edit" onclick="window._openEditReply('${qid}','${reply.id}')">✏️ Edit</button>
+              <button class="btn-reply-action del" onclick="window._deleteReply('${qid}','${reply.id}',${rd.deleted})">${rd.deleted ? "Restore" : "Remove"}</button>` : ""}
+            </div>`;
+        } else {
+          div.className = "reply" + (rd.deleted ? " reply-deleted" : "") + (rd.replyToId ? " reply-nested" : "");
+          div.id = `reply-${reply.id}`;
+          div.innerHTML = `
+            <div class="r-header">
+              <span class="r-author-name">${esc(rd.name || "Anonymous")}</span>
+              <span class="r-time">${rt}${edited}</span>
+            </div>
+            ${replyToBadge}
+            <p class="r-body">${esc(rd.text)}</p>
+            <div class="reply-actions">
+              <button class="btn-reply-action reply-to" onclick="window._openReplyEditor('${qid}','${reply.id}','${esc(rd.name || "Anonymous").replace(/'/g, "\\'")}')">💬 Reply</button>
+              ${(isAdmin || (currentUser && rd.uid === currentUser.uid)) ? `<button class="btn-reply-action edit" onclick="window._openEditReply('${qid}','${reply.id}')">✏️ Edit</button>` : ""}
+              ${isAdmin ? `<button class="btn-reply-action del" onclick="window._deleteReply('${qid}','${reply.id}',${rd.deleted})">${rd.deleted ? "Restore" : "Remove"}</button>` : ""}
+            </div>`;
+        }
+        container.appendChild(div);
+      });
+
+      if (window.MathJax) MathJax.typesetPromise([container]).catch(() => {});
+      applyFilters();
+    });
+  }
+
+  /* ─ Admin actions ─ */
+  window._toggleAnswer = async (id, cur) => { await updateDoc(doc(db, "questions", id), { answered: !cur }); showToast(!cur ? "Marked as resolved." : "Unmarked.", "success"); };
+  window._togglePin    = async (id, cur) => { await updateDoc(doc(db, "questions", id), { pinned: !cur });   showToast(!cur ? "Question featured." : "Unfeatured.", "success"); };
+  window._deleteQ      = async (id, cur) => { await updateDoc(doc(db, "questions", id), { deleted: !cur });  showToast(!cur ? "Question removed." : "Question restored.", "success"); };
+  window._deleteReply  = async (qid, rid, cur) => { await updateDoc(doc(db, "questions", qid, "replies", rid), { deleted: !cur }); showToast(!cur ? "Reply removed." : "Reply restored.", "success"); };
+  window._banUser      = async uid => {
+    if (uid === "guest") { showToast("Cannot suspend guest sessions.", "warn"); return; }
+    if (confirm("Are you sure you want to suspend this user?")) {
+      await setDoc(doc(db, "banned", uid), { bannedAt: serverTimestamp() });
+      showToast("User suspended.", "success");
+    }
+  };
+  window._scrollToReply = rid => {
+    const el = document.getElementById(`reply-${rid}`);
+    if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.style.outline = "2px solid var(--bisque-deep)"; setTimeout(() => el.style.outline = "", 2000); }
+  };
+
+  /* ─ Filter + sort engine ─ */
+  let _activeFilter = "all";
+  window.__filtersReady = false;
+
+  function applyFilters() {
+    const myUid = getMyUid();
+    const sortVal = document.getElementById("sortSelect")?.value || "newest";
+    const feed  = document.getElementById("questionFeed");
+    if (!feed) return;
+    const cards = Array.from(feed.querySelectorAll(".q-card"));
+    if (!cards.length) return;
+
+    // Sort
+    cards.sort((a, b) => {
+      const tsA = +a.dataset.ts, tsB = +b.dataset.ts;
+      const txtA = a.dataset.text, txtB = b.dataset.text;
+      const repA = +a.dataset.replies, repB = +b.dataset.replies;
+      const ansA = a.dataset.answered === "1", ansB = b.dataset.answered === "1";
+      switch (sortVal) {
+        case "newest": return tsB - tsA;
+        case "oldest": return tsA - tsB;
+        case "az":     return txtA.localeCompare(txtB);
+        case "za":     return txtB.localeCompare(txtA);
+        case "most-replies": return repB - repA;
+        case "unanswered-first": return (ansA ? 1 : 0) - (ansB ? 1 : 0);
+        case "resolved-first":  return (ansB ? 1 : 0) - (ansA ? 1 : 0);
+        default: return tsB - tsA;
+      }
+    });
+    cards.forEach(c => feed.appendChild(c));
+
+    // Filter
+    const f = _activeFilter;
+    let shown = 0;
+    cards.forEach(card => {
+      const isDel  = card.classList.contains("q-deleted");
+      const isAns  = card.classList.contains("q-answered");
+      const isPin  = card.dataset.pinned === "1";
+      const isMine = myUid && card.dataset.uid === myUid;
+      let show = false;
+      if (f === "all")           show = !isDel;
+      else if (f === "unanswered") show = !isAns && !isDel;
+      else if (f === "answered")   show = isAns && !isDel;
+      else if (f === "pinned")     show = isPin && !isDel;
+      else if (f === "mine")       show = !!isMine && !isDel;
+      else if (f === "mine-answered") show = !!isMine && isAns && !isDel;
+      else if (f === "mine-pending")  show = !!isMine && !isAns && !isDel;
+      card.style.display = show ? "" : "none";
+      if (show) shown++;
+    });
+
+    // Result text
+    const labels = { all: "questions", unanswered: "awaiting a reply", answered: "resolved questions", pinned: "featured questions", mine: "questions from you", "mine-answered": "your resolved questions", "mine-pending": "your pending questions" };
+    const rc = document.getElementById("resultCount"), rl = document.getElementById("resultLabel");
+    if (rc) rc.textContent = shown;
+    if (rl) rl.textContent = labels[f] || "questions";
+
+    // Clear btn
+    const clearBtn = document.getElementById("btnClearFilter");
+    if (clearBtn) clearBtn.classList.toggle("visible", f !== "all");
+
+    // Empty state
+    feed.querySelectorAll(".empty-mine-block, .empty-state-block.dynamic").forEach(e => e.remove());
+    if (shown === 0) {
+      const el = document.createElement("div");
+      if (f === "mine" || f === "mine-answered" || f === "mine-pending") {
+        el.className = "empty-mine-block";
+        const msgs = { mine: "You haven't asked any questions yet. Submit your first question above!", "mine-answered": "None of your questions have been answered yet — check back soon!", "mine-pending": "All your questions have been answered. Great job!" };
+        el.innerHTML = `<div class="emb-icon">👤</div><h3 class="emb-title">No questions here yet</h3><p class="emb-sub">${msgs[f]}</p><button class="btn-emb" onclick="window._activateFilter('all')">Browse all questions</button>`;
       } else {
-        div.className = "reply" + (rd.deleted ? " deleted-reply" : "") + (rd.replyToId ? " nested" : "");
-        div.innerHTML = `
-          <div class="r-header">
-            <span class="r-author">${esc(rd.name || 'Anonymous')}</span>
-            <span class="r-time">${rt}${edited}</span>
-          </div>
-          ${replyToBadge}
-          <p class="r-body">${esc(rd.text)}</p>
-          <div class="reply-actions">
-            <button class="btn-reply-to-reply" onclick="window.openReplyEditor('${qid}', '${reply.id}', '${esc(rd.name || 'Anonymous').replace(/'/g, "\\'")}')">💬 Reply</button>
-            ${(isAdmin || (currentUser && rd.uid === currentUser.uid)) ? `<button class="btn-edit-reply" onclick="window.openEditReply('${qid}','${reply.id}')">✏️ Edit</button>` : ""}
-            ${isAdmin ? `<button class="btn-del-reply" onclick="window.deleteReply('${qid}','${reply.id}',${rd.deleted})">${rd.deleted ? "Restore" : "Remove"}</button>` : ""}
-          </div>
-        `;
+        el.className = "empty-state-block dynamic";
+        el.innerHTML = `<div class="es-icon">✦</div><p class="es-title">No questions match this filter</p><p class="es-sub">Try a different filter or sort option.</p>`;
       }
-      container.appendChild(div);
-    });
-    if (window.MathJax) MathJax.typesetPromise([container]).catch(() => {});
+      feed.appendChild(el);
+    }
+
+    // Stat tile highlights
+    document.querySelectorAll(".fp-stat[data-filter]").forEach(s => s.classList.toggle("fp-active", s.dataset.filter === f));
+    window.__filtersReady = true;
+  }
+
+  function activateFilter(f) {
+    _activeFilter = f;
+    document.querySelectorAll(".fp-pill").forEach(p => p.classList.toggle("fp-pill-active", p.dataset.f === f));
+    applyFilters();
+  }
+  window._activateFilter = activateFilter;
+
+  function updateStats(docs) {
+    const myUid = getMyUid();
+    const vis = docs.filter(d => !d.data.deleted);
+    const mine = myUid ? vis.filter(d => d.data.uid === myUid).length : 0;
+    const sb = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    sb("sc-total",    vis.length);
+    sb("sc-answered", vis.filter(d => d.data.answered).length);
+    sb("sc-pending",  vis.filter(d => !d.data.answered).length);
+    sb("sc-mine",     mine);
+  }
+
+  // Wire filter pills
+  document.querySelectorAll(".fp-pill[data-f]").forEach(p => p.addEventListener("click", () => activateFilter(p.dataset.f)));
+  document.querySelectorAll(".fp-stat[data-filter]").forEach(s => {
+    s.addEventListener("click",   () => activateFilter(s.dataset.filter));
+    s.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") activateFilter(s.dataset.filter); });
   });
-}
+  document.getElementById("sortSelect")?.addEventListener("change", applyFilters);
+  document.getElementById("btnClearFilter")?.addEventListener("click", () => activateFilter("all"));
 
-// Scroll to a reply
-window.scrollToReply = function(replyId) {
-  const element = document.getElementById(`reply-${replyId}`);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    element.style.backgroundColor = 'var(--gold-bg)';
-    setTimeout(() => {
-      element.style.backgroundColor = '';
-    }, 2000);
-  }
-};
-
-// Modal functions with reply-to support
-window.openReplyEditor = function(qid, replyToIdParam = null, replyToNameParam = null) {
-  modalQid = qid;
-  editReplyId = null;
-  replyToId = replyToIdParam;
-  replyToName = replyToNameParam;
-  currentQText = questionTexts.get(qid) || "";
-  
-  document.getElementById("replyEditorTA").value = "";
-  if (replyToName) {
-    document.getElementById("replyEditorTA").value = `@${replyToName} `;
-    updatePreview();
-    updateCharCount();
-  }
-  document.getElementById("replyPreview").innerHTML = `<span style="color:var(--ink-40);font-size:.85rem;font-style:italic">Preview will appear as you type…</span>`;
-  document.getElementById("modalCharCount").textContent = `${replyToName ? `@${replyToName} `.length : 0} / 4,000`;
-  document.getElementById("editBadge").classList.remove("visible");
-  document.getElementById("btnSubmitReply").textContent = isAdmin ? "Post as Mwalimu Ronny →" : "Post Response →";
-  
-  const avatar = document.getElementById("modalAvatar");
-  if (isAdmin) {
-    avatar.textContent = "R";
-    avatar.className = "modal-header-avatar";
-    document.getElementById("modalTitle").textContent = replyToName ? `Reply to @${replyToName}` : "Reply as Mwalimu Ronny";
-    document.getElementById("modalSubtitle").textContent = replyToName ? "Your response will appear as a reply to this user" : "Your response will appear with the verified Instructor badge";
-    document.getElementById("modalAuthorName").parentElement.style.display = "none";
-  } else {
-    avatar.textContent = "?";
-    avatar.className = "modal-header-avatar student";
-    document.getElementById("modalTitle").textContent = replyToName ? `Reply to @${replyToName}` : "Compose a Response";
-    document.getElementById("modalSubtitle").textContent = replyToName ? "Your reply will be linked to this user's comment" : "Share your knowledge with the community";
-    document.getElementById("modalAuthorName").parentElement.style.display = "block";
-  }
-  
-  const strip = currentQText.length > 120 ? currentQText.slice(0, 120) + "…" : currentQText;
-  document.getElementById("modalQuestionText").textContent = strip || "—";
-  document.getElementById("aiPanel").classList.remove("visible");
-  
-  openModal();
-};
-
-window.openAiEditor = function(qid) {
-  window.openReplyEditor(qid);
-  document.getElementById("aiPanel").classList.add("visible");
-};
-
-window.openEditReply = async function(qid, rid) {
-  const snap = await getDoc(doc(db, "questions", qid, "replies", rid));
-  if (!snap.exists()) return;
-  const rd = snap.data();
-  modalQid = qid;
-  editReplyId = rid;
-  replyToId = null;
-  replyToName = null;
-  
-  document.getElementById("replyEditorTA").value = rd.text;
-  updatePreview();
-  updateCharCount();
-  document.getElementById("editBadge").classList.add("visible");
-  document.getElementById("modalTitle").textContent = "Edit Response";
-  document.getElementById("modalSubtitle").textContent = "Your changes will be saved immediately";
-  document.getElementById("btnSubmitReply").textContent = "Save Changes →";
-  
-  const avatar = document.getElementById("modalAvatar");
-  if (rd.isAdmin) {
-    avatar.textContent = "R";
-    avatar.className = "modal-header-avatar";
-  } else {
-    avatar.textContent = "?";
-    avatar.className = "modal-header-avatar student";
-  }
-  
-  currentQText = questionTexts.get(qid) || "";
-  const strip = currentQText.length > 120 ? currentQText.slice(0, 120) + "…" : currentQText;
-  document.getElementById("modalQuestionText").textContent = strip || "—";
-  document.getElementById("modalAuthorName").parentElement.style.display = "none";
-  document.getElementById("aiPanel").classList.remove("visible");
-  
-  openModal();
-};
-
-function openModal() {
-  document.getElementById("replyModal").classList.add("open");
-  document.body.style.overflow = "hidden";
-  setTimeout(() => document.getElementById("replyEditorTA").focus(), 120);
-}
-
-function closeModal() {
-  document.getElementById("replyModal").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-document.getElementById("btnCloseModal").addEventListener("click", closeModal);
-document.getElementById("replyModal").addEventListener("click", e => {
-  if (e.target === document.getElementById("replyModal")) closeModal();
-});
-
-// Submit reply
-document.getElementById("btnSubmitReply").addEventListener("click", async () => {
-  if (!modalQid) return;
-  let text = document.getElementById("replyEditorTA").value.trim();
-  if (!text) { showToast("Please write a response.", "warn"); return; }
-  
-  if (!editReplyId && currentUser) {
-    const banSnap = await getDoc(doc(db, "banned", currentUser.uid));
-    if (banSnap.exists()) { showToast("Your account has been suspended.", "error"); return; }
-  }
-  
-  const btn = document.getElementById("btnSubmitReply");
-  btn.disabled = true;
-  btn.textContent = editReplyId ? "Saving…" : "Posting…";
-  
-  try {
-    if (editReplyId) {
-      await updateDoc(doc(db, "questions", modalQid, "replies", editReplyId), { text, editedAt: serverTimestamp() });
-      showToast("Response updated successfully.", "success");
+  /* ─ Modal ─ */
+  window._openReplyEditor = function(qid, rtId = null, rtName = null) {
+    modalQid = qid; editReplyId = null; replyToId = rtId; replyToName = rtName;
+    currentQText = questionTexts.get(qid) || "";
+    document.getElementById("replyEditorTA").value = rtName ? `@${rtName} ` : "";
+    updatePreview(); updateCharCount();
+    document.getElementById("replyPreview").innerHTML = `<span style="color:var(--ink-30);font-size:.85rem;font-style:italic">Preview appears as you type…</span>`;
+    document.getElementById("editBadge").classList.remove("visible");
+    document.getElementById("btnSubmitReply").textContent = isAdmin ? "Post as Mwalimu Ronny →" : "Post Response →";
+    const av = document.getElementById("modalAvatar");
+    if (isAdmin) {
+      av.textContent = "R"; av.className = "modal-head-avatar admin";
+      document.getElementById("modalHeadTitle").textContent = rtName ? `Reply to @${rtName}` : "Reply as Mwalimu Ronny";
+      document.getElementById("modalHeadSub").textContent   = "Your response will appear with the Verified Instructor badge";
+      document.getElementById("modalAuthorName").closest("div").style.display = "none";
     } else {
-      const name = isAdmin ? "Mwalimu Ronny" : (document.getElementById("modalAuthorName").value.trim() || "Anonymous");
-      const replyData = {
-        name, text, uid: currentUser ? currentUser.uid : "guest", isAdmin, timestamp: serverTimestamp(), deleted: false
-      };
-      // Add reply-to metadata if replying to another user
-      if (replyToId && replyToName) {
-        replyData.replyToId = replyToId;
-        replyData.replyToName = replyToName;
+      av.textContent = "?"; av.className = "modal-head-avatar student";
+      document.getElementById("modalHeadTitle").textContent = rtName ? `Reply to @${rtName}` : "Compose a Response";
+      document.getElementById("modalHeadSub").textContent   = "Share your knowledge with the community";
+      document.getElementById("modalAuthorName").closest("div").style.display = "block";
+    }
+    const strip = currentQText.length > 130 ? currentQText.slice(0, 130) + "…" : currentQText;
+    document.getElementById("modalQText").textContent = strip || "—";
+    document.getElementById("aiPanel").classList.remove("visible");
+    openModal();
+  };
+
+  window._openAiEditor = function(qid) {
+    window._openReplyEditor(qid);
+    document.getElementById("aiPanel").classList.add("visible");
+  };
+
+  window._openEditReply = async function(qid, rid) {
+    const snap = await getDoc(doc(db, "questions", qid, "replies", rid));
+    if (!snap.exists()) return;
+    const rd = snap.data();
+    modalQid = qid; editReplyId = rid; replyToId = null; replyToName = null;
+    currentQText = questionTexts.get(qid) || "";
+    document.getElementById("replyEditorTA").value = rd.text;
+    updatePreview(); updateCharCount();
+    document.getElementById("editBadge").classList.add("visible");
+    document.getElementById("modalHeadTitle").textContent = "Edit Response";
+    document.getElementById("modalHeadSub").textContent   = "Your changes will be saved immediately";
+    document.getElementById("btnSubmitReply").textContent = "Save Changes →";
+    const av = document.getElementById("modalAvatar");
+    av.textContent = rd.isAdmin ? "R" : "?";
+    av.className = "modal-head-avatar " + (rd.isAdmin ? "admin" : "student");
+    document.getElementById("modalAuthorName").closest("div").style.display = "none";
+    const strip = currentQText.length > 130 ? currentQText.slice(0, 130) + "…" : currentQText;
+    document.getElementById("modalQText").textContent = strip || "—";
+    document.getElementById("aiPanel").classList.remove("visible");
+    openModal();
+  };
+
+  function openModal()  { document.getElementById("replyModal").classList.add("open"); document.body.style.overflow = "hidden"; setTimeout(() => document.getElementById("replyEditorTA").focus(), 140); }
+  function closeModal() { document.getElementById("replyModal").classList.remove("open"); document.body.style.overflow = ""; }
+
+  document.getElementById("btnCloseModal").addEventListener("click", closeModal);
+  document.getElementById("replyModal").addEventListener("click", e => { if (e.target === document.getElementById("replyModal")) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && document.getElementById("replyModal").classList.contains("open")) closeModal(); });
+
+  /* ─ Submit reply ─ */
+  document.getElementById("btnSubmitReply").addEventListener("click", async () => {
+    if (!modalQid) return;
+    const text = document.getElementById("replyEditorTA").value.trim();
+    if (!text) { showToast("Please write a response before posting.", "warn"); return; }
+
+    if (!editReplyId && currentUser) {
+      try {
+        const banSnap = await getDoc(doc(db, "banned", currentUser.uid));
+        if (banSnap.exists()) { showToast("Your account has been suspended.", "error"); return; }
+      } catch {}
+    }
+
+    const btn = document.getElementById("btnSubmitReply");
+    btn.disabled = true; btn.textContent = editReplyId ? "Saving…" : "Posting…";
+
+    try {
+      if (editReplyId) {
+        await updateDoc(doc(db, "questions", modalQid, "replies", editReplyId), { text, editedAt: serverTimestamp() });
+        showToast("Response updated successfully.", "success");
+      } else {
+        const name = isAdmin ? "Mwalimu Ronny" : (document.getElementById("modalAuthorName").value.trim() || "Anonymous");
+        const replyData = { name, text, uid: currentUser ? currentUser.uid : "guest", isAdmin, timestamp: serverTimestamp(), deleted: false };
+        if (replyToId && replyToName) { replyData.replyToId = replyToId; replyData.replyToName = replyToName; }
+        await addDoc(collection(db, "questions", modalQid, "replies"), replyData);
+        if (isAdmin) await updateDoc(doc(db, "questions", modalQid), { answered: true });
+        showToast(isAdmin ? "Response posted as Mwalimu Ronny!" : "Response posted successfully!", "success");
       }
-      await addDoc(collection(db, "questions", modalQid, "replies"), replyData);
-      if (isAdmin) await updateDoc(doc(db, "questions", modalQid), { answered: true });
-      showToast(isAdmin ? "Response posted as Mwalimu Ronny!" : "Response posted successfully!", "success");
+      closeModal();
+    } catch (err) {
+      showToast("Failed to save: " + err.message, "error");
     }
-    closeModal();
-  } catch (err) {
-    showToast("Failed to save: " + err.message, "error");
-  }
-  btn.disabled = false;
-  btn.textContent = editReplyId ? "Save Changes →" : (isAdmin ? "Post as Mwalimu Ronny →" : "Post Response →");
-});
+    btn.disabled = false;
+    btn.textContent = editReplyId ? "Save Changes →" : (isAdmin ? "Post as Mwalimu Ronny →" : "Post Response →");
+  });
 
-// AI Solve
-document.getElementById("btnAiSolve").addEventListener("click", async () => {
-  const question = currentQText;
-  if (!question) { showToast("No question text found.", "warn"); return; }
-  
-  const aiPanel = document.getElementById("aiPanel");
-  const aiResult = document.getElementById("aiResult");
-  const aiStatus = document.getElementById("aiStatus");
-  const aiThinking = document.getElementById("aiThinking");
-  const btnAiUse = document.getElementById("btnAiUse");
-  
-  aiPanel.classList.add("visible");
-  aiStatus.textContent = "Solving…";
-  aiThinking.style.display = "flex";
-  aiResult.textContent = "";
-  btnAiUse.classList.remove("visible");
-  document.getElementById("btnAiSolve").disabled = true;
-  
-  try {
-    const res = await fetch("/.netlify/functions/ai-solve", {
-      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question })
+  /* ─ AI Solve ─ */
+  document.getElementById("btnAiSolveModal")?.addEventListener("click", async () => {
+    const question = currentQText;
+    if (!question) { showToast("No question text found.", "warn"); return; }
+    const aiPanel = document.getElementById("aiPanel");
+    const aiResult = document.getElementById("aiResult");
+    const aiStatus = document.getElementById("aiStatus");
+    const aiThinking = document.getElementById("aiThinking");
+    const btnAiUse = document.getElementById("btnAiUse");
+    aiPanel.classList.add("visible");
+    aiStatus.textContent = "Solving…"; aiThinking.style.display = "flex";
+    aiResult.textContent = ""; btnAiUse.classList.remove("visible");
+    document.getElementById("btnAiSolveModal").disabled = true;
+    try {
+      const res = await fetch("/.netlify/functions/ai-solve", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question })
+      });
+      if (!res.ok) throw new Error(`Server error (${res.status})`);
+      const data = await res.json();
+      if (!data.answer) throw new Error("No solution returned");
+      aiResult.textContent = data.answer;
+      aiStatus.textContent = "✅ Solution ready"; aiThinking.style.display = "none";
+      btnAiUse.classList.add("visible");
+      if (window.MathJax) MathJax.typesetPromise([aiResult]).catch(() => {});
+    } catch (err) {
+      aiStatus.textContent = "❌ Failed"; aiThinking.style.display = "none";
+      aiResult.textContent = `Could not generate solution: ${err.message}`;
+    }
+    document.getElementById("btnAiSolveModal").disabled = false;
+  });
+
+  document.getElementById("btnAiUse")?.addEventListener("click", () => {
+    const sol = document.getElementById("aiResult").textContent;
+    if (!sol || sol.includes("Could not generate")) return;
+    document.getElementById("replyEditorTA").value = sol;
+    updatePreview(); updateCharCount();
+    showToast("AI solution pasted. Review carefully before posting.", "success");
+  });
+
+  /* ─ Symbol toolbar ─ */
+  document.querySelectorAll(".sym-btn").forEach(btn => {
+    btn.addEventListener("mousedown", e => e.preventDefault());
+    btn.addEventListener("click", () => {
+      const ta = document.getElementById("replyEditorTA");
+      const start = ta.selectionStart, end = ta.selectionEnd;
+      const sel = ta.value.substring(start, end);
+      let newText = "", newPos = -1;
+      if (btn.dataset.wrap) {
+        const [before, after] = btn.dataset.wrap.split("|");
+        newText = before + (sel || "") + after;
+        ta.setRangeText(newText, start, end, "end");
+        newPos = start + before.length + (sel || "").length + after.length;
+      } else if (btn.dataset.lat) {
+        const lat = btn.dataset.lat, cur = parseInt(btn.dataset.cur || "0");
+        newText = "\\(" + lat + "\\)";
+        ta.setRangeText(newText, start, end, "end");
+        if (cur < 0) newPos = start + newText.length - 2 + cur + 1;
+        else newPos = start + newText.length;
+      } else if (btn.dataset.ins) {
+        newText = btn.dataset.ins;
+        ta.setRangeText(newText, start, end, "end");
+        newPos = start + newText.length;
+      }
+      if (newPos >= 0) ta.setSelectionRange(newPos, newPos);
+      ta.focus(); updatePreview(); updateCharCount();
     });
-    if (!res.ok) throw new Error(`Server error (${res.status})`);
-    const data = await res.json();
-    if (!data.answer) throw new Error("No solution returned");
-    aiResult.textContent = data.answer;
-    aiStatus.textContent = "✅ Solution ready";
-    aiThinking.style.display = "none";
-    btnAiUse.classList.add("visible");
-    if (window.MathJax) MathJax.typesetPromise([aiResult]).catch(() => {});
-  } catch (err) {
-    aiStatus.textContent = "❌ Failed";
-    aiThinking.style.display = "none";
-    aiResult.textContent = `Could not generate solution: ${err.message}`;
+  });
+
+  /* ─ Templates ─ */
+  const TPL = {
+    step:     (n) => `\n\nStep ${n}: \n\\[  \\]\n`,
+    given:    () => `\n\nGiven: \nFind: \n\nSolution:\n`,
+    proof:    () => `\n\nProof:\nAssume that \nThen,\n\\[  \\]\nTherefore ∴ \n`,
+    formula:  () => `\n\n📐 Formula:\n\\[  \\]\n`,
+    note:     () => `\n\n📝 Note: `,
+    conclude: () => `\n\n✅ Conclusion:\nTherefore, the answer is \\(  \\).`
+  };
+  document.querySelectorAll(".tpl-btn[data-tpl]").forEach(btn => {
+    btn.addEventListener("mousedown", e => e.preventDefault());
+    btn.addEventListener("click", () => {
+      const ta = document.getElementById("replyEditorTA");
+      const tpl = btn.dataset.tpl === "step" ? TPL.step(stepCount++) : (TPL[btn.dataset.tpl] || TPL.note)();
+      const pos = ta.selectionStart;
+      ta.setRangeText(tpl, pos, pos, "end");
+      ta.focus(); updatePreview(); updateCharCount();
+    });
+  });
+
+  /* ─ Preview & char count ─ */
+  function updatePreview() {
+    const preview = document.getElementById("replyPreview");
+    const text = document.getElementById("replyEditorTA").value;
+    if (!text.trim()) { preview.innerHTML = `<span style="color:var(--ink-30);font-size:.85rem;font-style:italic">Preview appears as you type…</span>`; return; }
+    const d = document.createElement("div");
+    d.textContent = text;
+    preview.innerHTML = d.innerHTML.replace(/\n/g, "<br>");
+    if (window.MathJax) MathJax.typesetPromise([preview]).catch(() => {});
   }
-  document.getElementById("btnAiSolve").disabled = false;
-});
+  function updateCharCount() {
+    const len = document.getElementById("replyEditorTA").value.length;
+    const el = document.getElementById("modalCharCount");
+    el.textContent = `${len.toLocaleString()} / 4,000`;
+    el.className = "modal-char-count" + (len > 3600 ? " warn" : "");
+    const words = document.getElementById("replyEditorTA").value.trim().split(/\s+/).filter(Boolean).length;
+    const we = document.getElementById("editorWordCount");
+    if (we) we.textContent = words > 0 ? `${words} words` : "";
+  }
+  document.getElementById("replyEditorTA").addEventListener("input", () => { updatePreview(); updateCharCount(); });
 
-document.getElementById("btnAiUse").addEventListener("click", () => {
-  const solution = document.getElementById("aiResult").textContent;
-  if (!solution || solution.includes("Could not generate")) return;
-  document.getElementById("replyEditorTA").value = solution;
-  updatePreview();
-  updateCharCount();
-  showToast("AI solution pasted. Review before posting.", "success");
-});
+  /* ─ Utilities ─ */
+  function esc(str) { const d = document.createElement("div"); d.textContent = String(str || ""); return d.innerHTML; }
+  function showToast(msg, type = "info") {
+    const t = document.createElement("div");
+    t.className = `toast toast-${type}`; t.textContent = msg;
+    document.getElementById("toastContainer").appendChild(t);
+    setTimeout(() => t.classList.add("show"), 10);
+    setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 400); }, 4200);
+  }
+  window._showToast = showToast;
+  </script>
 
-// Admin actions
-window.toggleAnswer = async (id, current) => { await updateDoc(doc(db, "questions", id), { answered: !current }); showToast(`Question ${!current ? "resolved" : "unresolved"}`, "success"); };
-window.togglePin = async (id, current) => { await updateDoc(doc(db, "questions", id), { pinned: !current }); showToast(`Question ${!current ? "featured" : "unfeatured"}`, "success"); };
-window.deleteQ = async (id, current) => { await updateDoc(doc(db, "questions", id), { deleted: !current }); showToast(`Question ${!current ? "removed" : "restored"}`, "success"); };
-window.deleteReply = async (qid, rid, current) => { await updateDoc(doc(db, "questions", qid, "replies", rid), { deleted: !current }); showToast(`Reply ${!current ? "removed" : "restored"}`, "success"); };
-window.banUser = async (uid) => {
-  if (uid === "guest") { showToast("Cannot suspend guest sessions.", "warn"); return; }
-  if (confirm("Suspend this user?")) { await setDoc(doc(db, "banned", uid), { bannedAt: serverTimestamp() }); showToast("User suspended.", "success"); }
-};
+  <!-- Non-module: nav, welcome, admin reveal -->
+  <script>
+  "use strict";
 
-// Symbol toolbar
-document.querySelectorAll(".sym-btn").forEach(btn => {
-  btn.addEventListener("mousedown", e => e.preventDefault());
-  btn.addEventListener("click", () => {
-    const ta = document.getElementById("replyEditorTA");
-    const start = ta.selectionStart;
-    const end = ta.selectionEnd;
-    const sel = ta.value.substring(start, end);
-    let newText = "";
-    let newPos = -1;
+  /* ── Welcome pill ── */
+  const welcomeEl = document.getElementById("welcome");
+  if (welcomeEl) {
+    try {
+      const u = localStorage.getItem("currentUser");
+      welcomeEl.textContent = (u && u !== "null") ? `Welcome back, ${u}!` : "Welcome — improve your mathematics here";
+    } catch { welcomeEl.textContent = "Welcome — improve your mathematics here"; }
+  }
+
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById("hamburger");
+  const navMenu   = document.getElementById("nav-menu");
+  if (hamburger && navMenu) {
     
-    if (btn.dataset.wrap) {
-      const [before, after] = btn.dataset.wrap.split("|");
-      newText = before + (sel || "") + after;
-      ta.setRangeText(newText, start, end, "end");
-      newPos = start + before.length + (sel || "").length + after.length;
-    } else if (btn.dataset.lat) {
-      const lat = btn.dataset.lat;
-      const cur = parseInt(btn.dataset.cur || "0");
-      newText = "\\(" + lat + "\\)";
-      ta.setRangeText(newText, start, end, "end");
-      if (cur < 0) newPos = start + newText.length - 2 + cur + 1;
-    } else if (btn.dataset.ins) {
-      newText = btn.dataset.ins;
-      ta.setRangeText(newText, start, end, "end");
-      newPos = start + newText.length;
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
+      });
+    });
+    
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".main-nav")) {
+        hamburger.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
+      }
+    });
+  }
+
+  /* ── Search toggle ── */
+  const searchToggle = document.getElementById("searchToggle");
+  const navSearchBar = document.getElementById("navSearchBar");
+  const siteSearch   = document.getElementById("siteSearch");
+  const searchClear  = document.getElementById("searchClear");
+  const searchResults= document.getElementById("searchResults");
+
+  const SITE_PAGES = [
+    { name:"Algebra",          url:"algebra.html",       type:"Lesson",  icon:"𝑥",   kw:"algebra linear quadratic logarithm exponent factorisation" },
+    { name:"Trigonometry",     url:"trigonometry.html",  type:"Lesson",  icon:"△",   kw:"trigonometry sine cosine tangent identity" },
+    { name:"Statistics",       url:"statistics.html",    type:"Lesson",  icon:"σ",   kw:"statistics mean median mode standard deviation probability" },
+    { name:"Limits",           url:"limits.html",        type:"Lesson",  icon:"lim", kw:"limits continuity l'hopital calculus" },
+    { name:"Differentiation",  url:"differentiation.html",type:"Lesson", icon:"d/dx",kw:"differentiation derivative chain rule power rule" },
+    { name:"Integration",      url:"integration.html",   type:"Lesson",  icon:"∫",   kw:"integration integral definite indefinite substitution" },
+    { name:"Vectors",          url:"vectors.html",       type:"Lesson",  icon:"→",   kw:"vectors magnitude direction dot product" },
+    { name:"Matrices",         url:"matrices.html",      type:"Lesson",  icon:"[ ]", kw:"matrices determinant inverse transformation" },
+    { name:"Conic Sections",   url:"conics.html",        type:"Lesson",  icon:"○",   kw:"conics circle ellipse parabola hyperbola" },
+    { name:"Sequences & Series",url:"sequences.html",    type:"Lesson",  icon:"∑",   kw:"sequences series arithmetic geometric progression" },
+    { name:"Complex Numbers",  url:"complex.html",       type:"Lesson",  icon:"i",   kw:"complex imaginary argand modulus" },
+    { name:"Areas",            url:"areas.html",         type:"Lesson",  icon:"□",   kw:"area plane shapes composite surface" },
+    { name:"Volumes",          url:"volumes.html",       type:"Lesson",  icon:"⬡",   kw:"volume cylinder cone sphere prism" },
+    { name:"Practice Problems",url:"tasks.html",         type:"Practice",icon:"✏",   kw:"practice problems exercises" },
+    { name:"Brain Games",      url:"mind.html",          type:"Games",   icon:"🧠",  kw:"brain games puzzles" },
+    { name:"Ask Mwalimu",      url:"ask-mwalimu.html",   type:"Feature", icon:"💬",  kw:"ask question help mwalimu" },
+    { name:"My Progress",      url:"progress.html",      type:"Feature", icon:"📊",  kw:"progress tracking accuracy" },
+    { name:"Achievements",     url:"achievements.html",  type:"Feature", icon:"🏅",  kw:"achievements badges milestones" },
+    { name:"About",            url:"about.html",         type:"Info",    icon:"👨‍🏫",  kw:"about mwalimu ronny teacher" },
+    { name:"Contact",          url:"contact.html",       type:"Info",    icon:"✉",   kw:"contact email phone" },
+  ];
+
+  if (searchToggle && navSearchBar && siteSearch) {
+    searchToggle.addEventListener("click", () => {
+      const isOpen = !navSearchBar.hidden;
+      navSearchBar.hidden = isOpen;
+      searchToggle.setAttribute("aria-expanded", String(!isOpen));
+      if (!isOpen) siteSearch.focus();
+      else { siteSearch.value = ""; searchResults.hidden = true; searchClear.hidden = true; }
+    });
+    siteSearch.addEventListener("input", () => {
+      const q = siteSearch.value.trim().toLowerCase();
+      searchClear.hidden = q.length === 0;
+      if (q.length < 2) { searchResults.hidden = true; return; }
+      const matches = SITE_PAGES.filter(p => p.name.toLowerCase().includes(q) || p.kw.includes(q)).slice(0, 8);
+      if (!matches.length) {
+        searchResults.innerHTML = `<p class="sr-no-results">No results for "<strong>${q}</strong>"</p>`;
+      } else {
+        const hi = (t, q) => t.replace(new RegExp(`(${q})`, "gi"), "<mark>$1</mark>");
+        searchResults.innerHTML = matches.map(m => `<a href="${m.url}" class="sr-item" role="option"><div class="sr-item-icon">${m.icon}</div><div class="sr-item-text"><span class="sr-item-name">${hi(m.name, q)}</span><span class="sr-item-type">${m.type}</span></div></a>`).join("");
+      }
+      searchResults.hidden = false;
+    });
+    searchClear.addEventListener("click", () => { siteSearch.value = ""; searchResults.hidden = true; searchClear.hidden = true; siteSearch.focus(); });
+    document.addEventListener("click", e => { if (!e.target.closest(".nav-search-bar")) searchResults.hidden = true; });
+    siteSearch.addEventListener("keydown", e => {
+      if (e.key === "Escape") { navSearchBar.hidden = true; searchToggle.setAttribute("aria-expanded", "false"); }
+      if (e.key === "ArrowDown") { const f = searchResults.querySelector(".sr-item"); if (f) { f.focus(); e.preventDefault(); } }
+    });
+  }
+
+  /* ── Triple-click footer reveals admin login ── */
+  let footerClicks = 0;
+  document.getElementById("site-footer")?.addEventListener("click", () => {
+    footerClicks++;
+    if (footerClicks >= 3) {
+      document.getElementById("adminLoginSection").style.display = "block";
+      document.getElementById("adminLoginSection").scrollIntoView({ behavior: "smooth", block: "start" });
+      footerClicks = 0;
     }
-    if (newPos >= 0) ta.setSelectionRange(newPos, newPos);
-    ta.focus();
-    updatePreview();
-    updateCharCount();
+    setTimeout(() => { footerClicks = 0; }, 1500);
   });
-});
-
-// Templates
-const TPL = { step: (n=1) => `\n\nStep ${n}: \n\\[  \\]\n`, given: () => `\n\nGiven: \nFind: \n\nSolution:\n`, proof: () => `\n\nProof:\nAssume that \nThen we have\n\\[  \\]\nTherefore ∴ \n`, formula: () => `\n\n📐 Key Formula:\n\\[  \\]\n`, note: () => `\n\n📝 Note: `, conclude: () => `\n\n✅ Conclusion:\nTherefore, the answer is \\(  \\). ` };
-let stepCount = 1;
-document.querySelectorAll(".tpl-btn[data-tpl]").forEach(btn => {
-  btn.addEventListener("mousedown", e => e.preventDefault());
-  btn.addEventListener("click", () => {
-    const ta = document.getElementById("replyEditorTA");
-    const tpl = btn.dataset.tpl === "step" ? TPL.step(stepCount++) : (TPL[btn.dataset.tpl] || TPL.note)();
-    const pos = ta.selectionStart;
-    ta.setRangeText(tpl, pos, pos, "end");
-    ta.focus();
-    updatePreview();
-    updateCharCount();
-  });
-});
-
-function updatePreview() {
-  const preview = document.getElementById("replyPreview");
-  const text = document.getElementById("replyEditorTA").value;
-  if (!text.trim()) { preview.innerHTML = `<span style="color:var(--ink-40);font-size:.85rem;font-style:italic">Preview will appear as you type…</span>`; return; }
-  const div = document.createElement("div");
-  div.textContent = text;
-  preview.innerHTML = div.innerHTML.replace(/\n/g, "<br>");
-  if (window.MathJax) MathJax.typesetPromise([preview]).catch(() => {});
-}
-
-function updateCharCount() {
-  const len = document.getElementById("replyEditorTA").value.length;
-  const el = document.getElementById("modalCharCount");
-  el.textContent = `${len.toLocaleString()} / 4,000`;
-  el.classList.toggle("warn", len > 3600);
-  const words = document.getElementById("replyEditorTA").value.trim().split(/\s+/).filter(Boolean).length;
-  const wordEl = document.getElementById("editorWordCount");
-  if (wordEl) wordEl.textContent = words > 0 ? `${words} words` : "";
-}
-
-document.getElementById("replyEditorTA").addEventListener("input", () => { updatePreview(); updateCharCount(); });
-
-// Helpers
-function esc(str) { const d = document.createElement("div"); d.textContent = String(str || ""); return d.innerHTML; }
-function showToast(msg, type = "info") { const t = document.createElement("div"); t.className = `toast toast-${type}`; t.textContent = msg; document.getElementById("toastContainer").appendChild(t); setTimeout(() => t.classList.add("show"), 10); setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 400); }, 4000); }
-function applyCurrentFilter() { const active = document.querySelector(".filter-btn.active")?.id; if (active === "filterAnswered") setFilter("answered"); else if (active === "filterUnanswered") setFilter("unanswered"); else setFilter("all"); }
-function setFilter(f) { document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active")); const map = { all:"filterAll", unanswered:"filterUnanswered", answered:"filterAnswered" }; const el = document.getElementById(map[f]); if (el) el.classList.add("active"); document.querySelectorAll(".q-card").forEach(c => { if (f === "all") c.style.display = ""; else if (f === "answered") c.style.display = c.classList.contains("answered") ? "" : "none"; else c.style.display = (!c.classList.contains("answered") && !c.classList.contains("deleted")) ? "" : "none"; }); }
-window.setFilter = setFilter;
-window.applyCurrentFilter = applyCurrentFilter;
-</script>
-
-<!-- NON-MODULE SCRIPTS -->
-<script>
-const hamburger = document.getElementById("hamburgerBtn");
-const mainNav = document.getElementById("main-nav");
-if (hamburger) hamburger.addEventListener("click", () => { const exp = hamburger.getAttribute("aria-expanded") === "true"; hamburger.setAttribute("aria-expanded", String(!exp)); mainNav.classList.toggle("open"); });
-if (mainNav) mainNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { if (hamburger) hamburger.setAttribute("aria-expanded", "false"); mainNav.classList.remove("open"); }));
-
-let clickCount = 0;
-const footer = document.querySelector("footer");
-if (footer) footer.addEventListener("click", () => { clickCount++; if (clickCount >= 3) { const s = document.getElementById("adminLoginSection"); if (s) { s.style.display = "block"; s.open = true; } clickCount = 0; } setTimeout(() => clickCount = 0, 1500); });
-
-const textarea = document.getElementById("postText");
-const charCount = document.getElementById("charCount");
-const charWrap = document.getElementById("charCountWrap");
-if (textarea && charCount) textarea.addEventListener("input", () => { const len = textarea.value.length; charCount.textContent = len; if (charWrap) charWrap.classList.toggle("warn", len > 900); });
-
-document.getElementById("filterAll")?.addEventListener("click", () => window.setFilter("all"));
-document.getElementById("filterUnanswered")?.addEventListener("click", () => window.setFilter("unanswered"));
-document.getElementById("filterAnswered")?.addEventListener("click", () => window.setFilter("answered"));
-</script>
+  </script>
 </body>
 </html>

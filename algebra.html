@@ -1,499 +1,1267 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Algebra | Ronny Best Mathematics</title>
-  <meta name="description" content="From number laws to abstract algebra — complete guide">
+  <title>Algebra | CBC Senior Secondary Mathematics — Ronny Best Mathematics</title>
+  <meta name="description" content="Complete CBC-aligned Algebra lesson for Kenyan Senior Secondary students. Covers linear equations, quadratics, logarithms, polynomials, inequalities and abstract algebra with fully worked examples.">
+  <meta name="keywords" content="algebra Kenya CBC, quadratic equations Kenya, linear equations secondary school, logarithms KCSE, algebra worked examples Kenya, Senior Secondary algebra KICD">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/algebra.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Algebra | CBC Senior Secondary Mathematics — Ronny Best Mathematics">
+  <meta property="og:description" content="Complete step-by-step algebra lessons aligned to Kenya's CBC curriculum. Linear equations, quadratics, logarithms, polynomials — all with fully worked examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/algebra.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Algebra — CBC Senior Secondary Mathematics",
+    "description": "Complete CBC-aligned algebra lesson covering linear equations, quadratic equations, polynomials, logarithms, inequalities and functions for Kenyan Senior Secondary students.",
+    "url": "https://bestronny.netlify.app/algebra.html",
+    "author": { "@type": "Person", "name": "Ronny Mwenda Best", "jobTitle": "Mathematics Teacher", "alumniOf": "University of Embu" },
+    "educationalLevel": "Senior Secondary",
+    "educationalAlignment": { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "Kenya CBC Mathematics — Pure Mathematics Strand" },
+    "provider": { "@type": "EducationalOrganization", "name": "Ronny Best Mathematics", "url": "https://bestronny.netlify.app/" },
+    "isAccessibleForFree": true,
+    "inLanguage": "en"
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">🔢</span>
-  <h1>Algebra</h1>
-  <p class="hero-sub">From number laws to abstract algebra — complete guide</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Beginner</span> <span class="level-pill pill-secondary">Secondary</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Algebra</strong>
-</div>
+  <!-- ═══ SKIP LINK ═══ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Beginner</li>
-      <li><a href="#number-operations">Number Operations</a></li>
-      <li><a href="#basic-algebra">Intro to Algebra</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#linear-equations">Linear Equations</a></li>
-      <li><a href="#quadratics">Quadratics</a></li>
-      <li><a href="#polynomials">Polynomials</a></li>
-      <li><a href="#inequalities">Inequalities</a></li>
-      <li><a href="#logs">Logarithms</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#abstract-algebra">Abstract Algebra</a></li>
-      <li><a href="#linear-algebra">Linear Algebra</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="number-operations" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">🔢</span>
-        <h2>Number Operations & Properties</h2>
-        <span class="level-badge badge-primary">Beginner</span>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Fundamental Laws</h3>
-          <div class="formula-box">
-            Commutative: a + b = b + a &nbsp; | &nbsp; a × b = b × a<br>
-            Associative: (a+b)+c = a+(b+c) &nbsp; | &nbsp; (ab)c = a(bc)<br>
-            Distributive: a(b+c) = ab + ac
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Types of Numbers</h3>
-          <ul>
-            <li><strong>Natural numbers (ℕ):</strong> 1, 2, 3, 4, ...</li>
-            <li><strong>Integers (ℤ):</strong> ..., −2, −1, 0, 1, 2, ...</li>
-            <li><strong>Rational numbers (ℚ):</strong> p/q where p, q ∈ ℤ, q ≠ 0</li>
-            <li><strong>Irrational numbers:</strong> √2, π, e — cannot be expressed as fractions</li>
-            <li><strong>Real numbers (ℝ):</strong> all rational and irrational numbers</li>
-            <li><strong>Complex numbers (ℂ):</strong> a + bi where i = √(−1)</li>
-          </ul>
-        </div>
-        <div class="sub">
-          <h3>Laws of Indices / Exponents</h3>
-          <div class="formula-box">
-            aᵐ · aⁿ = aᵐ⁺ⁿ &nbsp;&nbsp; aᵐ/aⁿ = aᵐ⁻ⁿ &nbsp;&nbsp; (aᵐ)ⁿ = aᵐⁿ<br>
-            (ab)ⁿ = aⁿbⁿ &nbsp;&nbsp; a⁰ = 1 &nbsp;&nbsp; a⁻ⁿ = 1/aⁿ &nbsp;&nbsp; a^(1/n) = ⁿ√a
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example 1</div>
-              <p>Simplify: 2³ × 2⁴ ÷ 2²</p>
-              <p class="soln">= 2^(3+4−2) = 2⁵ = 32</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 2</div>
-              <p>Simplify: (3x²y)³</p>
-              <p class="soln">= 27x⁶y³</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 3</div>
-              <p>Evaluate 8^(2/3)</p>
-              <p class="soln">= (∛8)² = 2² = 4</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="basic-algebra" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">✏️</span>
-        <h2>Introduction to Algebra</h2>
-        <span class="level-badge badge-primary">Beginner</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Algebraic Expressions</h3>
-          <p>Algebra uses letters to represent unknown quantities. A term is a number, variable, or product of both. Like terms have the same variable(s) and power(s).</p>
-          <div class="formula-box">
-            3x + 5x = 8x &nbsp; (like terms) &nbsp;&nbsp;&nbsp; 3x + 5y cannot be simplified &nbsp; (unlike terms)
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Expand and simplify</div>
-              <p>Simplify: 3(2x + 4) − 2(x − 3)</p>
-              <p class="soln">= 6x + 12 − 2x + 6 = 4x + 18</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Algebraic Identities</h3>
-          <div class="formula-box">
-            (a + b)² = a² + 2ab + b² &nbsp;&nbsp; (a − b)² = a² − 2ab + b²<br>
-            (a + b)(a − b) = a² − b²<br>
-            (a + b)³ = a³ + 3a²b + 3ab² + b³<br>
-            a³ + b³ = (a + b)(a² − ab + b²) &nbsp;&nbsp; a³ − b³ = (a − b)(a² + ab + b²)
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — (x + 3)²</div>
-              <p class="soln">= x² + 6x + 9</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example — Factor 25x² − 16</div>
-              <p class="soln">= (5x − 4)(5x + 4) [difference of squares]</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example — Factor x³ − 8</div>
-              <p class="soln">= (x − 2)(x² + 2x + 4)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="linear-equations" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">📏</span>
-        <h2>Linear Equations & Simultaneous Equations</h2>
-        <span class="level-badge badge-secondary">Secondary</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Solving Linear Equations</h3>
-          <div class="formula-box">ax + b = c &nbsp;→&nbsp; x = (c − b)/a</div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example 1</div>
-              <p>Solve: 3x + 7 = 19</p>
-              <p class="soln">3x = 12 → x = 4</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 2 — Word problem</div>
-              <p>A number doubled and increased by 5 equals 21. Find the number.</p>
-              <p class="soln">2x + 5 = 21 → x = 8</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Simultaneous Equations</h3>
-          <p>Methods: <strong>Substitution, Elimination, Matrix method</strong>.</p>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Elimination</div>
-              <p>Solve: 2x + 3y = 13, 4x − y = 5</p>
-              <p class="soln">Multiply 2nd by 3: 12x − 3y = 15. Add to 1st: 14x = 28 → x = 2. Then y = 3.</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example — 3 variables</div>
-              <p>Solve: x + y + z = 6, 2x − y + z = 3, x + 2y − z = 2</p>
-              <p class="soln">Use elimination: x = 1, y = 2, z = 3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="quadratics" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">⌒</span>
-        <h2>Quadratic Equations & Functions</h2>
-        <span class="level-badge badge-secondary">Secondary</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>The Quadratic Formula</h3>
-          <div class="formula-box highlight">
-            ax² + bx + c = 0 &nbsp;→&nbsp; x = (−b ± √(b² − 4ac)) / 2a
-          </div>
-          <h4>Discriminant Δ = b² − 4ac</h4>
-          <table class="formula-table">
-            <tr><th>Δ value</th><th>Nature of roots</th></tr>
-            <tr><td>Δ &gt; 0</td><td>Two distinct real roots</td></tr>
-            <tr><td>Δ = 0</td><td>One repeated real root</td></tr>
-            <tr><td>Δ &lt; 0</td><td>Two complex conjugate roots</td></tr>
-          </table>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example 1 — Two real roots</div>
-              <p>Solve x² − 5x + 6 = 0</p>
-              <p class="soln">Δ = 25 − 24 = 1 → x = (5 ± 1)/2 → x = 3 or x = 2</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 2 — Factoring</div>
-              <p>Factor 6x² + 11x + 4</p>
-              <p class="soln">= (3x + 4)(2x + 1)</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 3 — Complex roots</div>
-              <p>Solve x² + 2x + 5 = 0</p>
-              <p class="soln">Δ = 4 − 20 = −16 → x = (−2 ± 4i)/2 = −1 ± 2i</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Completing the Square</h3>
-          <p>Write ax² + bx + c = a(x + b/2a)² + (c − b²/4a)</p>
-          <div class="formula-box">
-            Vertex form: y = a(x − h)² + k where (h, k) is the vertex
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Complete the square</div>
-              <p>Write x² + 6x + 2 in vertex form.</p>
-              <p class="soln">= (x + 3)² − 9 + 2 = (x + 3)² − 7. Vertex: (−3, −7)</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Vieta's Formulas — Sum & Product of Roots</h3>
-          <div class="formula-box">
-            If roots are α and β: &nbsp; α + β = −b/a &nbsp;&nbsp; αβ = c/a
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="polynomials" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">🧮</span>
-        <h2>Polynomials & Rational Functions</h2>
-        <span class="level-badge badge-secondary">Secondary / A-Level</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Factor Theorem & Remainder Theorem</h3>
-          <div class="formula-box">
-            Remainder Theorem: When p(x) is divided by (x − a), remainder = p(a)<br>
-            Factor Theorem: (x − a) is a factor of p(x) if and only if p(a) = 0
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Factor theorem</div>
-              <p>Show (x − 2) is a factor of x³ − 3x² + x + 2, then fully factor.</p>
-              <p class="soln">p(2) = 8 − 12 + 2 + 2 = 0 ✓ → divide to get (x−2)(x²−x−1)</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Partial Fractions</h3>
-          <div class="formula-box">
-            p(x)/[(x−a)(x−b)] = A/(x−a) + B/(x−b)<br>
-            p(x)/[(x−a)(x−b)²] = A/(x−a) + B/(x−b) + C/(x−b)²<br>
-            p(x)/[(x−a)(x²+b)] = A/(x−a) + (Bx+C)/(x²+b)
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Decompose 5x/[(x−1)(x+2)]</div>
-              <p class="soln">5x = A(x+2) + B(x−1). Let x=1: 5=3A→A=5/3. Let x=−2: −10=−3B→B=10/3. Answer: (5/3)/(x−1) + (10/3)/(x+2)</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Binomial Theorem</h3>
-          <div class="formula-box">
-            (a + b)ⁿ = Σ C(n,r) aⁿ⁻ʳ bʳ &nbsp;&nbsp; C(n,r) = n! / [r!(n−r)!]<br>
-            (1 + x)ⁿ ≈ 1 + nx + n(n−1)x²/2! + ... (valid for |x| &lt; 1)
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Expand (2x + 3)⁴</div>
-              <p class="soln">= C(4,0)(2x)⁴ + C(4,1)(2x)³(3) + C(4,2)(2x)²(9) + C(4,3)(2x)(27) + C(4,4)(81) = 16x⁴ + 96x³ + 216x² + 216x + 81</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="inequalities" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">≤</span>
-        <h2>Inequalities & Functions</h2>
-        <span class="level-badge badge-secondary">Secondary</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Linear Inequalities</h3>
-          <div class="callout warn"><span class="callout-icon">⚠️</span><span>When multiplying or dividing by a negative number, <strong>flip the inequality sign!</strong></span></div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example</div>
-              <p>Solve: −2x + 5 &gt; 11</p>
-              <p class="soln">−2x &gt; 6 → x &lt; −3 (flip sign when dividing by −2)</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Quadratic Inequalities</h3>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Solve x² − 4x − 5 &gt; 0</div>
-              <p class="soln">Factor: (x−5)(x+1) &gt; 0. Roots: x = 5, x = −1. Sign chart → solution: x &lt; −1 or x &gt; 5</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Functions: Domain, Range, Composition, Inverse</h3>
-          <div class="formula-box">
-            Composite function: (f∘g)(x) = f(g(x))<br>
-            Inverse: f⁻¹(x) exists iff f is one-to-one. f(f⁻¹(x)) = x
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Find inverse of f(x) = (2x + 3)/5</div>
-              <p class="soln">y = (2x+3)/5 → 5y = 2x+3 → x = (5y−3)/2 → f⁻¹(x) = (5x−3)/2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="logs" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">log</span>
-        <h2>Logarithms & Exponential Functions</h2>
-        <span class="level-badge badge-secondary">Secondary / A-Level</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Logarithm Laws</h3>
-          <div class="formula-box highlight">
-            log(ab) = log a + log b &nbsp;&nbsp; log(a/b) = log a − log b<br>
-            log(aⁿ) = n log a &nbsp;&nbsp; log_b(x) = ln x / ln b<br>
-            a^(log_a x) = x &nbsp;&nbsp; log_a(aˣ) = x &nbsp;&nbsp; log_a 1 = 0 &nbsp;&nbsp; log_a a = 1
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example 1</div>
-              <p>Simplify log 20 + log 5 − log 2</p>
-              <p class="soln">= log(20×5/2) = log 50</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 2 — Solve exponential equation</div>
-              <p>Solve 3^(x+1) = 27</p>
-              <p class="soln">3^(x+1) = 3³ → x + 1 = 3 → x = 2</p>
-            </div>
-            <div class="example-card">
-              <div class="example-label">Example 3 — Natural log</div>
-              <p>Solve e^(2x) = 7</p>
-              <p class="soln">2x = ln 7 → x = ln 7 / 2 ≈ 0.973</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="abstract-algebra" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">🏗️</span>
-        <h2>Abstract Algebra (University)</h2>
-        <span class="level-badge badge-uni">University</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Groups</h3>
-          <p>A group (G, ∗) satisfies four axioms:</p>
-          <ul>
-            <li><strong>Closure:</strong> a, b ∈ G → a∗b ∈ G</li>
-            <li><strong>Associativity:</strong> (a∗b)∗c = a∗(b∗c)</li>
-            <li><strong>Identity:</strong> ∃ e ∈ G such that a∗e = e∗a = a</li>
-            <li><strong>Inverse:</strong> ∀ a ∈ G, ∃ a⁻¹ such that a∗a⁻¹ = e</li>
-          </ul>
-          <p>If additionally a∗b = b∗a, the group is <strong>abelian (commutative)</strong>.</p>
-        </div>
-        <div class="sub">
-          <h3>Rings & Fields</h3>
-          <ul>
-            <li><strong>Ring (R, +, ·):</strong> abelian group under +, associative and distributive under ·</li>
-            <li><strong>Field:</strong> commutative ring where every nonzero element has a multiplicative inverse (e.g., ℚ, ℝ, ℂ, ℤ_p for prime p)</li>
-          </ul>
-        </div>
-        <div class="sub">
-          <h3>Homomorphisms & Isomorphisms</h3>
-          <div class="formula-box">
-            Homomorphism: f: G → H with f(a∗b) = f(a)∗f(b)<br>
-            Isomorphism: bijective homomorphism. G ≅ H means G and H have same structure.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="linear-algebra" class="topic-section">
-      <div class="section-header">
-        <span class="sec-icon">⟨⟩</span>
-        <h2>Linear Algebra (University)</h2>
-        <span class="level-badge badge-uni">University</span>
-      </div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Vector Spaces</h3>
-          <p>A vector space V over field F satisfies closure under addition and scalar multiplication, plus 8 axioms including commutativity, associativity, distributivity, and existence of zero vector and additive inverses.</p>
-        </div>
-        <div class="sub">
-          <h3>Eigenvalues & Eigenvectors</h3>
-          <div class="formula-box highlight">
-            Av = λv &nbsp;→&nbsp; (A − λI)v = 0 &nbsp;→&nbsp; det(A − λI) = 0 (characteristic equation)
-          </div>
-          <div class="example-grid">
-            <div class="example-card">
-              <div class="example-label">Example — Find eigenvalues of A = [[2,1],[1,2]]</div>
-              <p class="soln">det(A−λI) = (2−λ)²−1 = 0 → λ² − 4λ + 3 = 0 → λ = 1 or λ = 3</p>
-            </div>
-          </div>
-        </div>
-        <div class="sub">
-          <h3>Linear Transformations</h3>
-          <p>T: V → W is linear if T(αu + βv) = αT(u) + βT(v). Any linear transformation from ℝⁿ to ℝᵐ can be represented as matrix multiplication.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="trigonometry.html" class="topic-nav-btn prev">← Trigonometry</a>
-      <a href="conics.html" class="topic-nav-btn next">Conics →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- Mobile top bar -->
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <!-- Nav menu -->
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem" aria-current="page" class="active">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <section class="topic-hero" aria-labelledby="topic-title">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>𝑥²</span><span>∑</span><span>log</span><span>±</span><span>∞</span>
+    </div>
+    <div class="topic-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Algebra</span>
+      </nav>
+      <div class="topic-hero-icon" aria-hidden="true">𝑥</div>
+      <h1 id="topic-title">Algebra</h1>
+      <p class="topic-hero-sub">From fundamental number laws and expressions through quadratic equations, polynomials, logarithms, and beyond — fully aligned to Kenya's CBC Senior Secondary curriculum.</p>
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Pure Mathematics</span>
+        <span class="topic-badge badge-level">Grades 10 – 12</span>
+        <span class="topic-badge badge-cbc">CBC / KICD Aligned</span>
+        <span class="topic-badge badge-exam">KCSE Examinable</span>
+      </div>
+      <div class="topic-stats-row">
+        <div class="ts-item"><strong>8</strong><span>Subtopics</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>30+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>Free</strong><span>No Signup</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout" id="main-content">
+
+    <!-- ── TOC SIDEBAR ── -->
+    <aside class="toc-sidebar" id="tocSidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <h2 class="toc-title">Contents</h2>
+          <button class="toc-close" id="tocClose" aria-label="Close contents" hidden>✕</button>
+        </div>
+
+        <div class="toc-progress-bar" aria-hidden="true">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+
+        <nav aria-label="Section navigation">
+          <ul class="toc-list">
+            <li class="toc-group-label">Foundations</li>
+            <li><a href="#number-properties" class="toc-link">Number Properties &amp; Laws of Indices</a></li>
+            <li><a href="#expressions" class="toc-link">Algebraic Expressions &amp; Identities</a></li>
+            <li class="toc-group-label">Core Secondary</li>
+            <li><a href="#linear-equations" class="toc-link">Linear &amp; Simultaneous Equations</a></li>
+            <li><a href="#quadratics" class="toc-link">Quadratic Equations</a></li>
+            <li><a href="#polynomials" class="toc-link">Polynomials &amp; Factor Theorem</a></li>
+            <li><a href="#inequalities" class="toc-link">Inequalities &amp; Functions</a></li>
+            <li><a href="#logarithms" class="toc-link">Logarithms &amp; Exponentials</a></li>
+            <li class="toc-group-label">Advanced</li>
+            <li><a href="#binomial" class="toc-link">Binomial Theorem</a></li>
+            <li><a href="#partial-fractions" class="toc-link">Partial Fractions</a></li>
+            <li class="toc-group-label">Quick Reference</li>
+            <li><a href="#formula-sheet" class="toc-link">Formula Sheet</a></li>
+            <li><a href="#common-errors" class="toc-link">Common Errors</a></li>
+          </ul>
+        </nav>
+
+        <div class="toc-actions">
+          <a href="tasks.html?topic=algebra" class="toc-practice-btn">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Practice Algebra
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── CONTENT ── -->
+    <main class="topic-content" id="topicContent">
+
+      <!-- CBC Context Banner -->
+      <div class="cbc-context-banner">
+        <div class="ccb-icon" aria-hidden="true">📘</div>
+        <div class="ccb-text">
+          <strong>CBC Curriculum Context:</strong> Algebra is taught across all three Senior Secondary pathways (STEM, Arts &amp; Sports Science, Social Sciences) under the Pure Mathematics strand. It underpins all other mathematics topics and appears in both Paper 1 and Paper 2 of the KCSE examination.
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 1 — NUMBER PROPERTIES
+      ══════════════════════════════════════ -->
+      <section id="number-properties" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔢</div>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>Number Properties &amp; Laws of Indices</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">Foundation</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>Before working with unknowns, you must be fluent with the rules that govern all numbers. These properties hold for all real numbers and are the engine behind every algebraic manipulation you will ever perform. In the CBC curriculum, these are introduced at Lower Secondary (Grade 7–9) and reinforced at Senior Secondary as a launch pad for pure mathematics.</p>
+          </div>
+
+          <h3 class="sub-heading">The Three Fundamental Laws</h3>
+          <div class="formula-block">
+            <div class="fb-label">Commutative Laws</div>
+            <div class="fb-math">a + b = b + a &nbsp;&nbsp;&nbsp; a × b = b × a</div>
+          </div>
+          <div class="formula-block">
+            <div class="fb-label">Associative Laws</div>
+            <div class="fb-math">(a + b) + c = a + (b + c) &nbsp;&nbsp;&nbsp; (ab)c = a(bc)</div>
+          </div>
+          <div class="formula-block">
+            <div class="fb-label">Distributive Law</div>
+            <div class="fb-math">a(b + c) = ab + ac</div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">💡</span>
+            <div><strong>Why does this matter?</strong> These laws justify every step when you expand brackets, collect like terms, or factorise. You use them automatically — but understanding <em>why</em> they work is the difference between a student who memorises and one who can solve any unfamiliar problem.</div>
+          </div>
+
+          <h3 class="sub-heading">Laws of Indices (Exponents)</h3>
+          <p class="body-para">The laws of indices describe how powers behave under multiplication, division, and other operations. Mastery of these is essential for algebra, calculus, and logarithms.</p>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Complete Index Laws — aᵐ, aⁿ ∈ ℝ, a ≠ 0</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Product rule</span><span class="fb-eq">aᵐ × aⁿ = aᵐ⁺ⁿ</span></div>
+              <div class="fb-row"><span class="fb-name">Quotient rule</span><span class="fb-eq">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</span></div>
+              <div class="fb-row"><span class="fb-name">Power rule</span><span class="fb-eq">(aᵐ)ⁿ = aᵐⁿ</span></div>
+              <div class="fb-row"><span class="fb-name">Product power</span><span class="fb-eq">(ab)ⁿ = aⁿbⁿ</span></div>
+              <div class="fb-row"><span class="fb-name">Zero power</span><span class="fb-eq">a⁰ = 1 &nbsp;(a ≠ 0)</span></div>
+              <div class="fb-row"><span class="fb-name">Negative power</span><span class="fb-eq">a⁻ⁿ = 1/aⁿ</span></div>
+              <div class="fb-row"><span class="fb-name">Fractional power (root)</span><span class="fb-eq">a^(1/n) = ⁿ√a</span></div>
+              <div class="fb-row"><span class="fb-name">Fractional power (general)</span><span class="fb-eq">a^(m/n) = (ⁿ√a)ᵐ</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Laws of Indices</h3>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 1</span>
+                <span>Simplify: 2³ × 2⁴ ÷ 2²</span>
+              </div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Apply the product rule first: 2³ × 2⁴ = 2^(3+4) = 2⁷</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Apply the quotient rule: 2⁷ ÷ 2² = 2^(7−2) = 2⁵</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Evaluate: 2⁵ = 32</span></div>
+              </div>
+              <div class="we-answer">Answer: 32</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 2</span>
+                <span>Simplify: (3x²y)³</span>
+              </div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Apply (ab)ⁿ = aⁿbⁿ to each factor: 3³ × (x²)³ × y³</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>3³ = 27; apply power rule to x²: (x²)³ = x^(2×3) = x⁶</span></div>
+              </div>
+              <div class="we-answer">Answer: 27x⁶y³</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 3</span>
+                <span>Evaluate 8^(2/3)</span>
+              </div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Use a^(m/n) = (ⁿ√a)ᵐ. Here a = 8, m = 2, n = 3</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Find the cube root: ∛8 = 2</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Raise to the power 2: 2² = 4</span></div>
+              </div>
+              <div class="we-answer">Answer: 4</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Example 4</span>
+                <span>Simplify: (16x⁴ / 81y⁸)^(3/4)</span>
+              </div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Apply the fractional power to numerator and denominator separately</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>16^(3/4) = (⁴√16)³ = 2³ = 8; (x⁴)^(3/4) = x³</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>81^(3/4) = (⁴√81)³ = 3³ = 27; (y⁸)^(3/4) = y⁶</span></div>
+              </div>
+              <div class="we-answer">Answer: 8x³ / 27y⁶</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 2 — ALGEBRAIC EXPRESSIONS
+      ══════════════════════════════════════ -->
+      <section id="expressions" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">✏️</div>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2>Algebraic Expressions &amp; Identities</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">Foundation</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>An algebraic expression is any combination of numbers, variables, and arithmetic operations. The key skill at this stage is confidently expanding brackets, collecting like terms, and recognising the standard identities that appear repeatedly in CBC examinations. These identities are not arbitrary — each one is a factored or expanded form of the same mathematical object.</p>
+          </div>
+
+          <h3 class="sub-heading">Like and Unlike Terms</h3>
+          <p class="body-para">Terms are <strong>like terms</strong> if they have exactly the same variable(s) raised to exactly the same power(s). Only like terms can be combined by addition or subtraction.</p>
+
+          <div class="two-col-demo">
+            <div class="demo-item demo-yes">
+              <div class="demo-label">✓ Like terms (can combine)</div>
+              <div class="demo-eq">3x + 5x = 8x</div>
+              <div class="demo-eq">7x²y − 2x²y = 5x²y</div>
+            </div>
+            <div class="demo-item demo-no">
+              <div class="demo-label">✗ Unlike terms (cannot combine)</div>
+              <div class="demo-eq">3x + 5y &nbsp;→&nbsp; leave as is</div>
+              <div class="demo-eq">2x² + 3x &nbsp;→&nbsp; leave as is</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">The Standard Algebraic Identities</h3>
+          <p class="body-para">These identities are used across every topic in Senior Secondary mathematics. Recognising them instantly makes factorisation, expansion, and equation solving significantly faster.</p>
+
+          <div class="identity-table">
+            <div class="it-row it-head">
+              <span>Identity</span><span>Expanded Form</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(a + b)²</span><span class="it-eq">a² + 2ab + b²</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(a − b)²</span><span class="it-eq">a² − 2ab + b²</span>
+            </div>
+            <div class="it-row it-highlight">
+              <span class="it-label">(a + b)(a − b)</span><span class="it-eq">a² − b² &nbsp; <em>Difference of two squares</em></span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(a + b)³</span><span class="it-eq">a³ + 3a²b + 3ab² + b³</span>
+            </div>
+            <div class="it-row">
+              <span class="it-label">(a − b)³</span><span class="it-eq">a³ − 3a²b + 3ab² − b³</span>
+            </div>
+            <div class="it-row it-highlight">
+              <span class="it-label">a³ + b³</span><span class="it-eq">(a + b)(a² − ab + b²) &nbsp; <em>Sum of cubes</em></span>
+            </div>
+            <div class="it-row it-highlight">
+              <span class="it-label">a³ − b³</span><span class="it-eq">(a − b)(a² + ab + b²) &nbsp; <em>Difference of cubes</em></span>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Expressions &amp; Identities</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Expand and simplify: 3(2x + 4) − 2(x − 3)</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Expand the first bracket: 3(2x + 4) = 6x + 12</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Expand the second bracket, taking care with the negative sign: −2(x − 3) = −2x + 6</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Collect like terms: (6x − 2x) + (12 + 6) = 4x + 18</span></div>
+              </div>
+              <div class="we-answer">Answer: 4x + 18</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Expand: (x + 3)²</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Use the identity (a + b)² = a² + 2ab + b² with a = x, b = 3</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>a² = x², 2ab = 2(x)(3) = 6x, b² = 9</span></div>
+              </div>
+              <div class="we-answer">Answer: x² + 6x + 9</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span><span>Factorise: 25x² − 16</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Recognise this as a difference of two squares: a² − b²</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Identify: a = 5x (since (5x)² = 25x²) and b = 4 (since 4² = 16)</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Apply: (a + b)(a − b) = (5x + 4)(5x − 4)</span></div>
+              </div>
+              <div class="we-answer">Answer: (5x + 4)(5x − 4)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4</span><span>Factorise: x³ − 8</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Recognise as a difference of cubes: a³ − b³, with a = x, b = 2 (since 2³ = 8)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Apply: a³ − b³ = (a − b)(a² + ab + b²)</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Substitute: (x − 2)(x² + 2x + 4)</span></div>
+              </div>
+              <div class="we-answer">Answer: (x − 2)(x² + 2x + 4)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 3 — LINEAR & SIMULTANEOUS
+      ══════════════════════════════════════ -->
+      <section id="linear-equations" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📏</div>
+          <div>
+            <span class="ls-eyebrow">Core Secondary</span>
+            <h2>Linear &amp; Simultaneous Equations</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>A linear equation in one unknown contains no powers higher than 1. The golden rule of solving any equation is to perform the same operation on both sides. Simultaneous equations extend this to systems of two or more equations with two or more unknowns — a skill that models real-world problems in economics, physics, and engineering.</p>
+          </div>
+
+          <div class="formula-block">
+            <div class="fb-label">Standard linear form</div>
+            <div class="fb-math">ax + b = c &nbsp;&nbsp; ⟹ &nbsp;&nbsp; x = (c − b) / a &nbsp;&nbsp; (a ≠ 0)</div>
+          </div>
+
+          <h3 class="sub-heading">Solving Linear Equations — Method</h3>
+          <ol class="method-steps">
+            <li>Eliminate fractions by multiplying through by the LCD (if present)</li>
+            <li>Expand all brackets</li>
+            <li>Collect all variable terms on one side</li>
+            <li>Collect all constant terms on the other side</li>
+            <li>Divide both sides by the coefficient of the variable</li>
+            <li>Check: substitute your answer back into the original equation</li>
+          </ol>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Linear Equations</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Solve: 3x + 7 = 19</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Subtract 7 from both sides: 3x = 12</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Divide both sides by 3: x = 4</span></div>
+                <div class="we-step check-step"><span class="step-n">Check</span><span>3(4) + 7 = 12 + 7 = 19 ✓</span></div>
+              </div>
+              <div class="we-answer">x = 4</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Solve: (2x + 1)/3 − (x − 2)/4 = 3</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Multiply every term by the LCD = 12: 4(2x + 1) − 3(x − 2) = 36</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Expand: 8x + 4 − 3x + 6 = 36</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Collect: 5x + 10 = 36 &nbsp;→&nbsp; 5x = 26</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>x = 26/5 = 5.2</span></div>
+              </div>
+              <div class="we-answer">x = 26/5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Word Problem</span><span>A number is doubled and increased by 5, giving 21. Find the number.</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Let the number = x. Write the equation: 2x + 5 = 21</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Subtract 5: 2x = 16 &nbsp;→&nbsp; x = 8</span></div>
+              </div>
+              <div class="we-answer">The number is 8</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Simultaneous Equations</h3>
+          <p class="body-para">When two equations have two unknowns, they form a <strong>simultaneous system</strong>. The three standard methods are <em>elimination</em>, <em>substitution</em>, and <em>the matrix method</em>. All three are CBC-examinable.</p>
+
+          <div class="method-tabs">
+            <div class="mt-block">
+              <h4 class="mt-title">Method 1 — Elimination</h4>
+              <p class="mt-desc">Make the coefficient of one variable the same in both equations, then add or subtract the equations to eliminate it.</p>
+            </div>
+            <div class="mt-block">
+              <h4 class="mt-title">Method 2 — Substitution</h4>
+              <p class="mt-desc">Rearrange one equation to express one variable in terms of the other, then substitute into the second equation.</p>
+            </div>
+            <div class="mt-block">
+              <h4 class="mt-title">Method 3 — Graphical</h4>
+              <p class="mt-desc">Plot both lines on the same axes; the intersection point gives the solution. Useful for verification.</p>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Simultaneous Equations</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4 — Elimination</span><span>Solve: 2x + 3y = 13 and 4x − y = 5</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Label: equation (1) is 2x + 3y = 13; equation (2) is 4x − y = 5</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Multiply (2) by 3 to match the y-coefficient: 12x − 3y = 15. Call this (3).</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Add (1) and (3): (2x + 12x) + (3y − 3y) = 13 + 15 → 14x = 28 → x = 2</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Substitute x = 2 into (1): 4 + 3y = 13 → 3y = 9 → y = 3</span></div>
+                <div class="we-step check-step"><span class="step-n">Check</span><span>Equation (2): 4(2) − 3 = 8 − 3 = 5 ✓</span></div>
+              </div>
+              <div class="we-answer">x = 2, y = 3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 5 — Substitution</span><span>Solve: y = 3x − 1 and 2x + y = 9</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Equation (1) already expresses y in terms of x: y = 3x − 1</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Substitute into (2): 2x + (3x − 1) = 9 → 5x − 1 = 9 → 5x = 10 → x = 2</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Find y: y = 3(2) − 1 = 5</span></div>
+              </div>
+              <div class="we-answer">x = 2, y = 5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 6 — Three variables</span><span>Solve: x + y + z = 6, &nbsp;2x − y + z = 3, &nbsp;x + 2y − z = 2</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Label (1), (2), (3). Add (1) and (2): 3x + 2z = 9 — call this (4)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Add (1) and (3): 2x + 3y = 8 — call this (5). Wait — eliminate z instead.</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>From (1) − (3): −y + 2z = 4, so y = 2z − 4 — call this (5)</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Substitute (5) into (1): x + (2z − 4) + z = 6 → x + 3z = 10 — call this (6)</span></div>
+                <div class="we-step"><span class="step-n">Step 5</span><span>From (4) and (6): 3x + 2z = 9 and x + 3z = 10. Solve: x = 1, z = 3, then y = 2(3)−4 = 2</span></div>
+              </div>
+              <div class="we-answer">x = 1, y = 2, z = 3</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 4 — QUADRATIC EQUATIONS
+      ══════════════════════════════════════ -->
+      <section id="quadratics" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⌒</div>
+          <div>
+            <span class="ls-eyebrow">Core Secondary</span>
+            <h2>Quadratic Equations</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>A <strong>quadratic equation</strong> has the standard form ax² + bx + c = 0 where a ≠ 0. The word "quadratic" comes from the Latin <em>quadratus</em> (square). Quadratics model an enormous range of real-world situations — projectile motion, profit maximisation, areas, and many physics and engineering problems. The CBC curriculum requires fluency in all three solution methods: factorisation, completing the square, and the quadratic formula.</p>
+          </div>
+
+          <div class="formula-block">
+            <div class="fb-label">Standard Form &amp; Quadratic Formula</div>
+            <div class="fb-math">ax² + bx + c = 0 &nbsp;(a ≠ 0)</div>
+            <div class="fb-math highlight-formula">x = &nbsp;−b ± √(b² − 4ac) &nbsp;/ &nbsp;2a</div>
+          </div>
+
+          <h3 class="sub-heading">The Discriminant — Δ = b² − 4ac</h3>
+          <p class="body-para">Before solving, compute the discriminant to predict the nature of the roots. This is a favourite short-answer question in KCSE Paper 1.</p>
+
+          <div class="discriminant-panel">
+            <div class="dp-case dp-positive">
+              <div class="dp-value">Δ &gt; 0</div>
+              <div class="dp-name">Two distinct real roots</div>
+              <div class="dp-eg">e.g. x² − 5x + 6 = 0 → x = 2, 3</div>
+            </div>
+            <div class="dp-case dp-zero">
+              <div class="dp-value">Δ = 0</div>
+              <div class="dp-name">One repeated real root</div>
+              <div class="dp-eg">e.g. x² − 4x + 4 = 0 → x = 2 (twice)</div>
+            </div>
+            <div class="dp-case dp-negative">
+              <div class="dp-value">Δ &lt; 0</div>
+              <div class="dp-name">No real roots (complex)</div>
+              <div class="dp-eg">e.g. x² + x + 1 = 0 → complex roots</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Method 1 — Factorisation</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Solve: x² + 5x + 6 = 0 by factorisation</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Ensure the equation equals zero (it does)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Find two numbers that multiply to c = 6 and add to b = 5. Those are 2 and 3 (2 × 3 = 6; 2 + 3 = 5)</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Write as product of factors: (x + 2)(x + 3) = 0</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Zero Product Property: x + 2 = 0 → x = −2, or x + 3 = 0 → x = −3</span></div>
+                <div class="we-step check-step"><span class="step-n">Check</span><span>(−2)² + 5(−2) + 6 = 4 − 10 + 6 = 0 ✓</span></div>
+              </div>
+              <div class="we-answer">x = −2 &nbsp;or&nbsp; x = −3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Factorise: 6x² + 11x + 4</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Multiply a × c = 6 × 4 = 24. Find two numbers multiplying to 24 and adding to 11: 3 and 8.</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Split the middle term: 6x² + 3x + 8x + 4</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Group and factor: 3x(2x + 1) + 4(2x + 1) = (3x + 4)(2x + 1)</span></div>
+              </div>
+              <div class="we-answer">(3x + 4)(2x + 1)</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Method 2 — Quadratic Formula</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span><span>Solve: 2x² − 4x − 6 = 0</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Identify: a = 2, b = −4, c = −6</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Compute discriminant: Δ = (−4)² − 4(2)(−6) = 16 + 48 = 64</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Since Δ = 64 &gt; 0, there are two distinct real roots</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Apply formula: x = (4 ± √64) / 4 = (4 ± 8) / 4</span></div>
+                <div class="we-step"><span class="step-n">Step 5</span><span>x = (4 + 8)/4 = 12/4 = 3 &nbsp;&nbsp;or&nbsp;&nbsp; x = (4 − 8)/4 = −4/4 = −1</span></div>
+                <div class="we-step check-step"><span class="step-n">Check</span><span>2(3)² − 4(3) − 6 = 18 − 12 − 6 = 0 ✓</span></div>
+              </div>
+              <div class="we-answer">x = 3 &nbsp;or&nbsp; x = −1</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Method 3 — Completing the Square</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4</span><span>Solve: x² + 6x + 5 = 0 by completing the square</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Move the constant: x² + 6x = −5</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Take half the coefficient of x, then square it: (6/2)² = 9</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Add 9 to both sides: x² + 6x + 9 = −5 + 9 = 4</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Write left side as a perfect square: (x + 3)² = 4</span></div>
+                <div class="we-step"><span class="step-n">Step 5</span><span>Take square roots: x + 3 = ±2</span></div>
+                <div class="we-step"><span class="step-n">Step 6</span><span>x = −3 + 2 = −1 &nbsp;&nbsp;or&nbsp;&nbsp; x = −3 − 2 = −5</span></div>
+              </div>
+              <div class="we-answer">x = −1 &nbsp;or&nbsp; x = −5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 5 — Vertex Form</span><span>Write y = x² + 4x − 3 in vertex form and state the vertex.</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Take half the coefficient of x: (4/2)² = 4</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Add and subtract 4 inside: y = (x² + 4x + 4) − 4 − 3</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>y = (x + 2)² − 7</span></div>
+              </div>
+              <div class="we-answer">y = (x + 2)² − 7 &nbsp;&nbsp; Vertex: (−2, −7)</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Vieta's Formulas — Sum &amp; Product of Roots</h3>
+          <p class="body-para">If α and β are the roots of ax² + bx + c = 0, then:</p>
+          <div class="formula-block multi">
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Sum of roots</span><span class="fb-eq">α + β = −b/a</span></div>
+              <div class="fb-row"><span class="fb-name">Product of roots</span><span class="fb-eq">αβ = c/a</span></div>
+              <div class="fb-row"><span class="fb-name">Equation from roots</span><span class="fb-eq">x² − (α + β)x + αβ = 0</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 6 — Vieta's</span><span>The roots of x² + px + 12 = 0 are α and 3. Find p and α.</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Product of roots: α × 3 = 12 (from c/a = 12/1) → α = 4</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Sum of roots: α + 3 = −p → 4 + 3 = −p → p = −7</span></div>
+              </div>
+              <div class="we-answer">α = 4, p = −7</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 5 — POLYNOMIALS
+      ══════════════════════════════════════ -->
+      <section id="polynomials" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🧮</div>
+          <div>
+            <span class="ls-eyebrow">Core Secondary</span>
+            <h2>Polynomials &amp; Factor Theorem</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>A <strong>polynomial</strong> in x is an expression of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + … + a₁x + a₀ where aₙ ≠ 0 and all exponents are non-negative integers. The degree of the polynomial is n. The Remainder Theorem and Factor Theorem are powerful tools for factorising higher-degree polynomials without long division.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Remainder Theorem &amp; Factor Theorem</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Remainder Theorem</span><span class="fb-eq">When p(x) ÷ (x − a), remainder = p(a)</span></div>
+              <div class="fb-row it-highlight"><span class="fb-name">Factor Theorem</span><span class="fb-eq">(x − a) is a factor of p(x) ⟺ p(a) = 0</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Polynomials</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Find the remainder when p(x) = 2x³ − 3x² + x − 5 is divided by (x − 2).</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>By Remainder Theorem, remainder = p(2)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>p(2) = 2(8) − 3(4) + 2 − 5 = 16 − 12 + 2 − 5 = 1</span></div>
+              </div>
+              <div class="we-answer">Remainder = 1</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Show that (x − 2) is a factor of p(x) = x³ − 3x² + x + 2, then fully factorise p(x).</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Compute p(2): p(2) = 8 − 12 + 2 + 2 = 0. Since p(2) = 0, (x − 2) is a factor. ✓</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Divide p(x) by (x − 2) using long division or synthetic division to get the quotient: x² − x − 1</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>So p(x) = (x − 2)(x² − x − 1). Check if x² − x − 1 factors: Δ = 1 + 4 = 5, not a perfect square, so it cannot be factorised over integers.</span></div>
+              </div>
+              <div class="we-answer">p(x) = (x − 2)(x² − x − 1)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span><span>Fully factorise: p(x) = x³ + 2x² − 5x − 6</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Try integer factors of −6: ±1, ±2, ±3, ±6. Test p(1): 1 + 2 − 5 − 6 = −8 ≠ 0</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Test p(−1): −1 + 2 + 5 − 6 = 0 ✓ So (x + 1) is a factor</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Divide: p(x) ÷ (x + 1) = x² + x − 6</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Factorise x² + x − 6: find numbers multiplying to −6, adding to 1: they are 3 and −2. So (x + 3)(x − 2)</span></div>
+              </div>
+              <div class="we-answer">p(x) = (x + 1)(x + 3)(x − 2)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 6 — INEQUALITIES & FUNCTIONS
+      ══════════════════════════════════════ -->
+      <section id="inequalities" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">≤</div>
+          <div>
+            <span class="ls-eyebrow">Core Secondary</span>
+            <h2>Inequalities &amp; Functions</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠️</span>
+            <div><strong>Critical Rule:</strong> When you multiply or divide both sides of an inequality by a <em>negative number</em>, you must <strong>reverse (flip) the inequality sign</strong>. This is the most common source of errors in KCSE inequality questions.</div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Linear Inequalities</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Solve: −2x + 5 &gt; 11</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Subtract 5 from both sides: −2x &gt; 6</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Divide by −2 and flip the sign: x &lt; −3</span></div>
+              </div>
+              <div class="we-answer">x &lt; −3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Solve: 3 ≤ 2x + 1 &lt; 9 (compound inequality)</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Subtract 1 from all three parts: 2 ≤ 2x &lt; 8</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Divide all three parts by 2: 1 ≤ x &lt; 4</span></div>
+              </div>
+              <div class="we-answer">1 ≤ x &lt; 4</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Quadratic Inequalities</h3>
+            <p class="body-para">To solve a quadratic inequality, find the roots first (treating it as an equation), then use a sign chart or sketch to determine where the expression is positive or negative.</p>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span><span>Solve: x² − 4x − 5 &gt; 0</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Solve x² − 4x − 5 = 0: (x − 5)(x + 1) = 0 → x = 5 or x = −1</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>The parabola opens upward (a = 1 &gt; 0), so the expression is positive outside the roots</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>The expression is positive when x &lt; −1 or x &gt; 5</span></div>
+              </div>
+              <div class="we-answer">x &lt; −1 &nbsp;or&nbsp; x &gt; 5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4</span><span>Solve: x² − 2x − 3 ≤ 0</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Solve x² − 2x − 3 = 0: (x − 3)(x + 1) = 0 → x = 3 or x = −1</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Parabola opens upward, so expression is ≤ 0 between the roots (inclusive)</span></div>
+              </div>
+              <div class="we-answer">−1 ≤ x ≤ 3</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Functions — Domain, Range, Composite &amp; Inverse</h3>
+          <p class="body-para">A function f: A → B assigns exactly one output in B to every input in A. The <strong>domain</strong> is the set of valid inputs; the <strong>range</strong> is the set of all outputs.</p>
+
+          <div class="formula-block multi">
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Composite function</span><span class="fb-eq">(f ∘ g)(x) = f(g(x))</span></div>
+              <div class="fb-row"><span class="fb-name">Inverse function</span><span class="fb-eq">f⁻¹(x): swap x and y, then solve for y</span></div>
+              <div class="fb-row"><span class="fb-name">Key property</span><span class="fb-eq">f(f⁻¹(x)) = x = f⁻¹(f(x))</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 5</span><span>If f(x) = 2x + 3 and g(x) = x², find (f ∘ g)(x) and (g ∘ f)(x).</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>(f ∘ g)(x) = f(g(x)) = f(x²) = 2(x²) + 3 = 2x² + 3</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>(g ∘ f)(x) = g(f(x)) = g(2x + 3) = (2x + 3)²</span></div>
+              </div>
+              <div class="we-answer">(f ∘ g)(x) = 2x² + 3 &nbsp;&nbsp;; &nbsp;&nbsp;(g ∘ f)(x) = (2x + 3)²</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 6</span><span>Find the inverse of f(x) = (2x + 3) / 5</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Replace f(x) with y: y = (2x + 3) / 5</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Swap x and y: x = (2y + 3) / 5</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Solve for y: 5x = 2y + 3 → 2y = 5x − 3 → y = (5x − 3) / 2</span></div>
+              </div>
+              <div class="we-answer">f⁻¹(x) = (5x − 3) / 2</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 7 — LOGARITHMS
+      ══════════════════════════════════════ -->
+      <section id="logarithms" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">log</div>
+          <div>
+            <span class="ls-eyebrow">Core Secondary</span>
+            <h2>Logarithms &amp; Exponential Functions</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>The logarithm is the inverse of the exponential function. If aˣ = y, then log_a(y) = x. Logarithms were originally developed by John Napier in the 17th century to simplify multiplication by converting it to addition — a remarkable insight. In the CBC curriculum, logarithms appear in Pure Mathematics and are tested in KCSE Paper 1 under the Algebra strand. Their applications extend to calculus, statistics (probability distributions), and real-world problem solving (compound interest, population growth, pH scale).</p>
+          </div>
+
+          <div class="formula-block">
+            <div class="fb-label">Definition &amp; Key Relationship</div>
+            <div class="fb-math">log_a(y) = x &nbsp;⟺&nbsp; aˣ = y &nbsp;&nbsp;&nbsp; (a &gt; 0, a ≠ 1, y &gt; 0)</div>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Laws of Logarithms</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Product rule</span><span class="fb-eq">log(ab) = log a + log b</span></div>
+              <div class="fb-row"><span class="fb-name">Quotient rule</span><span class="fb-eq">log(a/b) = log a − log b</span></div>
+              <div class="fb-row"><span class="fb-name">Power rule</span><span class="fb-eq">log(aⁿ) = n log a</span></div>
+              <div class="fb-row"><span class="fb-name">Change of base</span><span class="fb-eq">log_b(x) = ln x / ln b = log x / log b</span></div>
+              <div class="fb-row"><span class="fb-name">Special values</span><span class="fb-eq">log_a 1 = 0 &nbsp;&nbsp;&nbsp; log_a a = 1</span></div>
+              <div class="fb-row"><span class="fb-name">Inverse identities</span><span class="fb-eq">a^(log_a x) = x &nbsp;&nbsp;&nbsp; log_a(aˣ) = x</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Logarithms</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Simplify: log 20 + log 5 − log 2</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Apply product rule to the first two: log 20 + log 5 = log(20 × 5) = log 100</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Apply quotient rule: log 100 − log 2 = log(100/2) = log 50</span></div>
+              </div>
+              <div class="we-answer">log 50</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Solve: 3^(x + 1) = 27</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Express 27 as a power of 3: 27 = 3³</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Since bases are equal: x + 1 = 3 → x = 2</span></div>
+              </div>
+              <div class="we-answer">x = 2</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span><span>Solve: 2^(x+1) = 5 (give answer to 3 d.p.)</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Take log (base 10) of both sides: (x + 1) log 2 = log 5</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>x + 1 = log 5 / log 2 = 0.69897 / 0.30103 ≈ 2.3219</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>x = 2.3219 − 1 = 1.322 (3 d.p.)</span></div>
+              </div>
+              <div class="we-answer">x ≈ 1.322</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4</span><span>Solve: log₂(3x − 1) = 4</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Convert from log form to exponential form: 3x − 1 = 2⁴ = 16</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>3x = 17 → x = 17/3</span></div>
+              </div>
+              <div class="we-answer">x = 17/3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 5 — Real World</span><span>A population grows according to P = 1000 × 2^(t/5). After how many years does the population reach 8000?</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Set up: 8000 = 1000 × 2^(t/5) → 8 = 2^(t/5)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Express 8 = 2³: 2^(t/5) = 2³ → t/5 = 3 → t = 15</span></div>
+              </div>
+              <div class="we-answer">After 15 years</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 8 — BINOMIAL THEOREM
+      ══════════════════════════════════════ -->
+      <section id="binomial" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⟨ ⟩</div>
+          <div>
+            <span class="ls-eyebrow">Advanced</span>
+            <h2>Binomial Theorem</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>The Binomial Theorem provides a formula for expanding (a + b)ⁿ for any positive integer n. Rather than multiplying out the brackets n times, the theorem gives each term directly using binomial coefficients. These coefficients form Pascal's Triangle and are computed using combinations.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Binomial Theorem</div>
+            <div class="fb-math">(a + b)ⁿ = Σ C(n,r) aⁿ⁻ʳ bʳ &nbsp;&nbsp; where &nbsp;&nbsp; C(n,r) = n! / [r!(n−r)!]</div>
+            <div class="fb-math">General term: T_(r+1) = C(n,r) · aⁿ⁻ʳ · bʳ</div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Binomial Theorem</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Expand (2x + 3)⁴</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Identify a = 2x, b = 3, n = 4. Compute C(4,0), C(4,1), C(4,2), C(4,3), C(4,4) = 1, 4, 6, 4, 1</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>T₁ = 1·(2x)⁴·3⁰ = 16x⁴</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>T₂ = 4·(2x)³·3¹ = 4·8x³·3 = 96x³</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>T₃ = 6·(2x)²·3² = 6·4x²·9 = 216x²</span></div>
+                <div class="we-step"><span class="step-n">Step 5</span><span>T₄ = 4·(2x)¹·3³ = 4·2x·27 = 216x; T₅ = 1·1·81 = 81</span></div>
+              </div>
+              <div class="we-answer">16x⁴ + 96x³ + 216x² + 216x + 81</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Find the term independent of x in the expansion of (x + 2/x)⁶</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>General term: T_(r+1) = C(6,r) · x^(6−r) · (2/x)^r = C(6,r) · 2^r · x^(6−r−r) = C(6,r) · 2^r · x^(6−2r)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>For the term to be independent of x, the power of x must be zero: 6 − 2r = 0 → r = 3</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>T₄ = C(6,3) · 2³ = 20 · 8 = 160</span></div>
+              </div>
+              <div class="we-answer">The term independent of x is 160</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 9 — PARTIAL FRACTIONS
+      ══════════════════════════════════════ -->
+      <section id="partial-fractions" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">A/B</div>
+          <div>
+            <span class="ls-eyebrow">Advanced</span>
+            <h2>Partial Fractions</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+
+          <div class="concept-intro">
+            <p>Partial fraction decomposition reverses the process of adding algebraic fractions. It expresses a single rational fraction as a sum of simpler fractions whose denominators are the factors of the original denominator. This technique is essential for integration in calculus and is a Senior Secondary / A-Level topic.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Partial Fraction Forms</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Distinct linear factors</span><span class="fb-eq">p(x)/[(x−a)(x−b)] = A/(x−a) + B/(x−b)</span></div>
+              <div class="fb-row"><span class="fb-name">Repeated linear factor</span><span class="fb-eq">p(x)/[(x−a)(x−b)²] = A/(x−a) + B/(x−b) + C/(x−b)²</span></div>
+              <div class="fb-row"><span class="fb-name">Irreducible quadratic</span><span class="fb-eq">p(x)/[(x−a)(x²+b)] = A/(x−a) + (Bx+C)/(x²+b)</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <h3 class="we-title">Worked Examples — Partial Fractions</h3>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span><span>Decompose: 5x / [(x−1)(x+2)]</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Write: 5x / [(x−1)(x+2)] = A/(x−1) + B/(x+2)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Multiply both sides by (x−1)(x+2): 5x = A(x+2) + B(x−1)</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Let x = 1: 5 = 3A → A = 5/3</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Let x = −2: −10 = −3B → B = 10/3</span></div>
+              </div>
+              <div class="we-answer">(5/3)/(x−1) + (10/3)/(x+2)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span><span>Decompose: (3x + 5) / [(x+1)(x−2)]</span></div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Write: (3x + 5) / [(x+1)(x−2)] = A/(x+1) + B/(x−2)</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>3x + 5 = A(x−2) + B(x+1)</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Let x = −1: 2 = −3A → A = −2/3. Let x = 2: 11 = 3B → B = 11/3</span></div>
+              </div>
+              <div class="we-answer">(−2/3)/(x+1) + (11/3)/(x−2)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           FORMULA SHEET
+      ══════════════════════════════════════ -->
+      <section id="formula-sheet" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📋</div>
+          <div>
+            <span class="ls-eyebrow">Quick Reference</span>
+            <h2>Algebra Formula Sheet</h2>
+          </div>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">All key formulae from this lesson in one place. Print or bookmark this section for revision.</p>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">Indices</div>
+              <div class="fs-items">
+                <div class="fs-item">aᵐ · aⁿ = aᵐ⁺ⁿ</div>
+                <div class="fs-item">aᵐ / aⁿ = aᵐ⁻ⁿ</div>
+                <div class="fs-item">(aᵐ)ⁿ = aᵐⁿ</div>
+                <div class="fs-item">a^(m/n) = (ⁿ√a)ᵐ</div>
+                <div class="fs-item">a⁰ = 1, a⁻ⁿ = 1/aⁿ</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Identities</div>
+              <div class="fs-items">
+                <div class="fs-item">(a+b)² = a²+2ab+b²</div>
+                <div class="fs-item">(a−b)² = a²−2ab+b²</div>
+                <div class="fs-item">(a+b)(a−b) = a²−b²</div>
+                <div class="fs-item">a³+b³ = (a+b)(a²−ab+b²)</div>
+                <div class="fs-item">a³−b³ = (a−b)(a²+ab+b²)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Quadratics</div>
+              <div class="fs-items">
+                <div class="fs-item">x = (−b ± √(b²−4ac)) / 2a</div>
+                <div class="fs-item">Δ = b²−4ac</div>
+                <div class="fs-item">α + β = −b/a</div>
+                <div class="fs-item">αβ = c/a</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Logarithms</div>
+              <div class="fs-items">
+                <div class="fs-item">log(ab) = log a + log b</div>
+                <div class="fs-item">log(a/b) = log a − log b</div>
+                <div class="fs-item">log(aⁿ) = n log a</div>
+                <div class="fs-item">log_b(x) = ln x / ln b</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           COMMON ERRORS
+      ══════════════════════════════════════ -->
+      <section id="common-errors" class="lesson-section">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⚠</div>
+          <div>
+            <span class="ls-eyebrow">Quick Reference</span>
+            <h2>Common Errors to Avoid</h2>
+          </div>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">These are the most frequent algebra mistakes in KCSE examinations. Being aware of them is the first step to avoiding them.</p>
+          <div class="errors-grid">
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> (a + b)² = a² + b²</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> (a + b)² = a² + 2ab + b²</div>
+              <div class="ec-note">The middle term 2ab is always forgotten.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> −(a − b) = −a − b</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> −(a − b) = −a + b</div>
+              <div class="ec-note">A negative outside a bracket changes every sign inside.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Flipping inequality when dividing by positive</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Only flip when dividing/multiplying by a negative</div>
+              <div class="ec-note">Many students flip the sign regardless of the sign of the divisor.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> log(a + b) = log a + log b</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> log(ab) = log a + log b</div>
+              <div class="ec-note">The product rule applies to log of a product, not a sum.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Writing only one root for a quadratic</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> Always check if ± gives two roots</div>
+              <div class="ec-note">The ± sign means there are (usually) two solutions.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span> Solving x² = 9 as x = 3 only</div>
+              <div class="ec-right"><span class="ec-label">✓ Correct</span> x = ±3 (both 3 and −3 satisfy it)</div>
+              <div class="ec-note">Taking the square root always gives ± unless stated otherwise.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── TOPIC NAVIGATION ── -->
+      <nav class="topic-nav-footer" aria-label="Next and previous topics">
+        <a href="trigonometry.html" class="tnf-btn tnf-prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span><span class="tnf-label">Previous</span><span class="tnf-name">Trigonometry</span></span>
+        </a>
+        <a href="statistics.html" class="tnf-btn tnf-next">
+          <span><span class="tnf-label">Next</span><span class="tnf-name">Statistics</span></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+    </main>
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>My Learning</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
 </body>
 </html>

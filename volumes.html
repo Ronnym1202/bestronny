@@ -1,176 +1,1349 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volumes of Solids | Ronny Best Mathematics</title>
-  <meta name="description" content="From simple prisms to volumes of revolution">
+  <title>Volumes of Solids | Ronny Best Mathematics — CBC-Aligned Lesson</title>
+  <meta name="description" content="Complete CBC-aligned Volumes of Solids lesson for Kenyan secondary school and university students. Covers prisms, cylinders, cones, spheres, pyramids, composite solids, similar solids, and volumes of revolution — fully worked examples, KCSE exam tips, KICD/TSC/MoE aligned.">
+  <meta name="keywords" content="volumes of solids Kenya, CBC volumes, KCSE volumes, volume cylinder cone sphere Kenya, composite solids secondary school, volumes of revolution calculus Kenya, KICD mathematics volumes, similar solids scale factor, Senior Secondary mathematics Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/volumes.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Volumes of Solids | Ronny Best Mathematics — CBC-Aligned Lesson">
+  <meta property="og:description" content="Comprehensive, step-by-step Volumes lesson covering all CBC Senior Secondary levels — from basic solid formulas through to volumes of revolution by calculus.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/volumes.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+ 
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — correctly placed inside <head> -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Volumes of Solids — Complete CBC-Aligned Mathematics Lesson",
+    "description": "A comprehensive, step-by-step lesson on Volumes of Solids for Kenyan secondary school and university students, aligned to the CBC curriculum as approved by KICD, TSC, and the Ministry of Education.",
+    "url": "https://bestronny.netlify.app/volumes.html",
+    "learningResourceType": "Lesson",
+    "educationalLevel": ["Junior Secondary", "Senior Secondary", "University"],
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    },
+    "educationalAlignment": [
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "Applied Mathematics — Mensuration and Volumes" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalFramework", "targetName": "Kenya CBC Senior Secondary Curriculum (KICD)" }
+    ]
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">📦</span>
-  <h1>Volumes of Solids</h1>
-  <p class="hero-sub">From simple prisms to volumes of revolution</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Volumes of Solids</strong>
+<!-- ═══ SKIP LINK ═══ -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+        <span class="brand-sigma" aria-hidden="true">Σ</span>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+      </a>
+      <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
+    </div>
+    <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+  </div>
+</header>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+        <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="math-lessons.html" class="nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem" aria-current="page">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══ TOPIC HERO ═══ -->
+<div class="topic-hero" role="banner" aria-label="Volumes of Solids topic overview">
+  <div class="topic-hero-bg" aria-hidden="true"></div>
+  <div class="topic-hero-symbols" aria-hidden="true">
+    <span>V</span><span>π</span><span>r³</span><span>∫</span><span>h</span>
+  </div>
+  <div class="topic-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="math-lessons.html">Math Lessons</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Volumes of Solids</span>
+    </nav>
+    <div class="topic-hero-icon" aria-hidden="true">▣</div>
+    <h1>Volumes of Solids</h1>
+    <p class="topic-hero-sub">
+      From the volume of a simple cube or cylinder through composite solids, similar solid scale factors,
+      and volumes of revolution by calculus — a complete, step-by-step treatment for all CBC levels.
+    </p>
+    <div class="topic-meta-row" role="list" aria-label="Topic information">
+      <span class="topic-badge badge-strand" role="listitem">Applied Mathematics</span>
+      <span class="topic-badge badge-level" role="listitem">Junior Secondary</span>
+      <span class="topic-badge badge-level" role="listitem">Senior Secondary</span>
+      <span class="topic-badge badge-level" role="listitem">University</span>
+      <span class="topic-badge badge-cbc" role="listitem">CBC Aligned</span>
+      <span class="topic-badge badge-exam" role="listitem">KCSE Examined</span>
+    </div>
+    <div class="topic-stats-row" role="list" aria-label="Lesson statistics">
+      <div class="ts-item" role="listitem"><strong>9</strong><span>Sections</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>30+</strong><span>Worked Examples</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>3</strong><span>Levels</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>KICD</strong><span>Curriculum</span></div>
+    </div>
+  </div>
 </div>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
+<!-- ═══ MAIN TWO-COLUMN LAYOUT ═══ -->
+<div class="topic-layout" id="main-content">
 
-      <li class="toc-level">Beginner</li>
-      <li><a href="#vol-basic">Basic Formulas</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#vol-composite">Composite Shapes</a></li>
-      <li><a href="#vol-similar">Similar Solids</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#vol-calculus">Volumes by Calculus</a></li>
-    </ul>
+  <!-- ── TOC SIDEBAR ── -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-sticky">
+      <div class="toc-header">
+        <span class="toc-title">Contents</span>
+      </div>
+      <div class="toc-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress">
+        <div class="toc-progress-fill" id="tocProgressFill"></div>
+      </div>
+      <ul class="toc-list" role="list">
+        <li class="toc-group-label">Junior Secondary</li>
+        <li><a href="#vol-intro" class="toc-link">Why Volume Matters</a></li>
+        <li><a href="#vol-prisms" class="toc-link">Prisms &amp; Cuboids</a></li>
+        <li><a href="#vol-cylinders" class="toc-link">Cylinders</a></li>
+        <li class="toc-group-label">Senior Secondary</li>
+        <li><a href="#vol-pyramids-cones" class="toc-link">Pyramids &amp; Cones</a></li>
+        <li><a href="#vol-spheres" class="toc-link">Spheres &amp; Hemispheres</a></li>
+        <li><a href="#vol-composite" class="toc-link">Composite Solids</a></li>
+        <li><a href="#vol-similar" class="toc-link">Similar Solids</a></li>
+        <li class="toc-group-label">University / A-Level</li>
+        <li><a href="#vol-calculus" class="toc-link">Volumes by Calculus</a></li>
+        <li><a href="#vol-errors" class="toc-link">Common Errors</a></li>
+      </ul>
+      <div class="toc-actions">
+        <a href="tasks.html" class="toc-practice-btn" aria-label="Go to practice problems for Volumes">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Practice Problems
+        </a>
+      </div>
+    </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="topic-content">
+  <!-- ── MAIN CONTENT ── -->
+  <main class="topic-content" id="topic-main">
 
-    <section id="vol-basic" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📦</span><h2>Volume Formulas</h2><span class="level-badge badge-primary">Beginner</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <table class="formula-table">
-            <tr><th>Solid</th><th>Formula</th></tr>
-            <tr><td>Cube (side a)</th><td>V = a³</th></tr>
-            <tr><td>Cuboid</th><td>V = l × w × h</th></tr>
-            <tr><td>Cylinder (r, h)</th><td>V = πr²h</th></tr>
-            <tr><td>Sphere (r)</th><td>V = (4/3)πr³</th></tr>
-            <tr><td>Cone (r, h)</th><td>V = (1/3)πr²h</th></tr>
-            <tr><td>Pyramid (base A, height h)</th><td>V = (1/3)Ah</th></tr>
-            <tr><td>Prism</th><td>V = base area × height</th></tr>
-          </table>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>Cylinder: r = 5 cm, h = 12 cm</p>
-              <p class="soln">V = π × 25 × 12 = 300π ≈ 942.5 cm³</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div>
-              <p>Sphere: r = 3 cm. Find volume.</p>
-              <p class="soln">V = (4/3)π×27 = 36π ≈ 113.1 cm³</p></div>
-            <div class="example-card"><div class="example-label">Example 3 — Word problem</div>
-              <p>A conical tent has base radius 7 m and height 9 m. Find volume.</p>
-              <p class="soln">V = (1/3)π(49)(9) = 147π ≈ 461.8 m³</p></div>
-          </div>
-        </div>
+    <!-- CBC CONTEXT BANNER -->
+    <div class="cbc-context-banner" role="note" aria-label="CBC curriculum alignment">
+      <span class="ccb-icon" aria-hidden="true">📘</span>
+      <div class="ccb-text">
+        <strong>CBC Curriculum Alignment:</strong> Volumes of Solids falls under the <strong>Measurement and Mensuration</strong> strand of the Applied Mathematics component in the Kenyan Senior Secondary curriculum, as approved by the <strong>Kenya Institute of Curriculum Development (KICD)</strong>. It is examined in <strong>KCSE Paper 1</strong> and underpins real-world applications in engineering, architecture, and physical sciences. This lesson progresses from foundational 3D shapes in Junior Secondary, through composite and similar solids in Senior Secondary, to volumes of revolution at university level — covering all competency levels in the Basic Education Curriculum Framework (BECF) and aligned to TSC teaching standards and MoE assessment guidelines.
       </div>
-    </section>
-
-    <section id="vol-composite" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔲</span><h2>Composite Solids</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <p>For composite solids, add or subtract volumes of individual components.</p>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Cylinder with hemispherical ends</div>
-              <p>Cylinder r=4, h=10; each end is a hemisphere.</p>
-              <p class="soln">V = πr²h + 2×(2/3)πr³ = π×16×10 + (4/3)π×64 = 160π + 256π/3 = (480+256)π/3 = 736π/3 ≈ 770.5 cm³</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vol-similar" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔄</span><h2>Similar Solids</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            If linear scale factor = k:<br>
-            Area scale factor = k² &nbsp;&nbsp; Volume scale factor = k³
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example</div>
-              <p>Two similar cones have radii 3 cm and 6 cm. If smaller has volume 24 cm³, find larger.</p>
-              <p class="soln">k = 6/3 = 2. V = 24 × 2³ = 24 × 8 = 192 cm³</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vol-calculus" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∫∫∫</span><h2>Volumes by Calculus</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            Disc method: V = π∫ₐᵇ [f(x)]² dx &nbsp;&nbsp; (rotation about x-axis)<br>
-            Washer method: V = π∫ₐᵇ ([f(x)]² − [g(x)]²) dx<br>
-            Shell method: V = 2π∫ₐᵇ x·f(x) dx &nbsp;&nbsp; (rotation about y-axis)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Derive sphere volume V = (4/3)πr³</div>
-              <p>Rotate y = √(r²−x²) about x-axis from −r to r.</p>
-              <p class="soln">V = π∫₋ᵣʳ (r²−x²)dx = π[r²x − x³/3]₋ᵣʳ = π(2r³ − 2r³/3) = (4/3)πr³ ✓</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="areas.html" class="topic-nav-btn prev">← Areas</a>
-      <a href="limits.html" class="topic-nav-btn next">Limits →</a>
     </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 1 — WHY VOLUME MATTERS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-intro">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">▣</div>
+        <div>
+          <span class="ls-eyebrow">Section 01 · Introduction</span>
+          <h2>Why Volume Matters</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Junior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Volume measures the amount of three-dimensional space enclosed within a solid object. It is one of the most practically important mathematical concepts — from estimating how much water fills a tank, to calculating how much concrete is needed for a building foundation.</p>
+        </div>
+
+        <h3 class="sub-heading">Volume in Everyday Life in Kenya</h3>
+        <p class="body-para">Volume is not an abstract concept — it governs decisions made every day. A water vendor needs to know the volume of their storage tank to price deliveries correctly. A farmer constructing a grain silo must calculate the cylindrical capacity to avoid over-ordering materials. An architect designing a school building must compute the volume of concrete required for each column. A nurse calculating a medicine dose in a syringe uses volume. Every career in the STEM pathway — engineering, medicine, agriculture, architecture — depends on volumetric reasoning.</p>
+
+        <p class="body-para">The KICD CBC curriculum introduces volumes in Junior Secondary as part of the Measurement strand, building on area concepts. In Senior Secondary, the topic deepens to include composite solids, scale factors for similar solids, and real-world design problems. At university level, calculus-based methods allow volumes of curved shapes that cannot be computed from simple formulas.</p>
+
+        <h3 class="sub-heading">Units of Volume</h3>
+        <p class="body-para">Volume is measured in cubic units. The choice of unit depends on the size of the object being measured. For small objects (laboratory containers, household items), we use cubic centimetres (cm³) or millilitres (1 mL = 1 cm³). For room-sized objects, cubic metres (m³) apply. For large-scale engineering (dams, reservoirs), megalitres or cubic kilometres may be used. Always convert all linear dimensions to the same unit before computing volume.</p>
+
+        <div class="formula-block">
+          <div class="fb-label">Unit Conversions for Volume</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">1 cm³</div>
+              <div class="fb-eq">= 1 mL (millilitre)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">1 litre</div>
+              <div class="fb-eq">= 1 000 cm³ = 1 000 mL</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">1 m³</div>
+              <div class="fb-eq">= 1 000 000 cm³ = 1 000 litres</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">1 km³</div>
+              <div class="fb-eq">= 10⁹ m³</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📝</span>
+          <div><strong>KCSE Exam Note:</strong> Volume problems in KCSE Paper 1 often combine unit conversion with the volume formula. A very common error is mixing cm and m in the same calculation. Always convert all given lengths to the same unit at the very start, before applying any formula.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 2 — PRISMS AND CUBOIDS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-prisms">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">□</div>
+        <div>
+          <span class="ls-eyebrow">Section 02 · Basic Solids</span>
+          <h2>Prisms and Cuboids</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Junior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>A prism is any solid with two identical, parallel polygonal faces (the bases) joined by rectangular side faces. The volume of any prism is found by the same universal rule: multiply the base area by the perpendicular height.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Volume Formulas — Prisms</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">General prism</div>
+              <div class="fb-eq highlight-formula">V = A_base × h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Cube (side a)</div>
+              <div class="fb-eq highlight-formula">V = a³</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Cuboid (rectangular prism)</div>
+              <div class="fb-eq highlight-formula">V = l × w × h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Triangular prism</div>
+              <div class="fb-eq">V = (½ × base × height of triangle) × length of prism</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Trapezoidal prism</div>
+              <div class="fb-eq">V = ½(a + b) × h_trap × l &nbsp;&nbsp; (a, b parallel sides; h_trap trapezium height)</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Understanding the Prism Formula</h3>
+        <p class="body-para">The formula V = A_base × h works because you are essentially stacking infinitely many identical thin cross-sections on top of each other. This is the same principle used in calculus — Cavalieri's Principle states that if two solids have the same height and equal cross-sectional areas at every level, they have equal volumes. This is why a slanted prism has the same volume as an upright prism with the same base and perpendicular height.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Prisms and Cuboids</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Cube</span>
+              A storage cube has side length 15 cm. Find its volume in litres.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Apply V = a³ = 15³ = 15 × 15 × 15 = <strong>3 375 cm³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Convert to litres: 3 375 ÷ 1 000 = <strong>3.375 litres</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 3 375 cm³ = 3.375 litres</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Cuboid (word problem)</span>
+              A water storage tank is 2.5 m long, 1.8 m wide, and 1.2 m deep. How many litres of water does it hold when full?
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>All dimensions are in metres. V = l × w × h = 2.5 × 1.8 × 1.2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = 2.5 × 1.8 = 4.5. Then 4.5 × 1.2 = <strong>5.4 m³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Convert: 1 m³ = 1 000 litres. So 5.4 m³ = <strong>5 400 litres</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Capacity = 5.4 m³ = 5 400 litres</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Triangular Prism</span>
+              A triangular prism has a right-angled triangular base with legs 6 cm and 8 cm. The prism is 20 cm long. Find its volume.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Area of triangular base = ½ × 6 × 8 = 24 cm².</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = A_base × length = 24 × 20 = <strong>480 cm³</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 480 cm³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 4 — Finding a missing dimension</span>
+              A cuboid has volume 360 cm³. Its length is 12 cm and width is 5 cm. Find its height.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Use V = l × w × h. Substitute: 360 = 12 × 5 × h = 60h.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>h = 360 / 60 = <strong>6 cm</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Height = 6 cm</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 3 — CYLINDERS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-cylinders">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">○</div>
+        <div>
+          <span class="ls-eyebrow">Section 03 · Circular Solids</span>
+          <h2>Cylinders</h2>
+        </div>
+        <span class="ls-level-badge level-foundation">Junior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>A cylinder is a prism whose base is a circle. It is one of the most common shapes in engineering and everyday life — water pipes, cooking pots, oil drums, pillars, and gas cylinders are all essentially cylindrical.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Cylinder Formulas</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Volume</div>
+              <div class="fb-eq highlight-formula">V = πr²h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Curved surface area</div>
+              <div class="fb-eq">CSA = 2πrh</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Total surface area</div>
+              <div class="fb-eq">TSA = 2πrh + 2πr² = 2πr(h + r)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Hollow cylinder (pipe)</div>
+              <div class="fb-eq">V = π(R² − r²)h &nbsp;&nbsp; (R = outer radius, r = inner radius)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Cylinders</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Standard cylinder</span>
+              A cylindrical tank has radius 5 cm and height 12 cm. Find its volume, giving the answer in terms of π and as a decimal (use π ≈ 3.142).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V = πr²h = π × 5² × 12 = π × 25 × 12 = <strong>300π cm³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Decimal: 300 × 3.142 = <strong>942.6 cm³</strong> (to 1 d.p.).</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 300π cm³ ≈ 942.6 cm³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — KCSE-style: find radius</span>
+              A cylinder holds 2 litres of water when full. Its height is 25 cm. Find its radius, correct to 1 decimal place. (Use π = 3.142)
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Convert: 2 litres = 2 000 cm³. So V = 2 000 cm³ and h = 25 cm.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>From V = πr²h: r² = V / (πh) = 2 000 / (3.142 × 25) = 2 000 / 78.55 ≈ 25.463.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>r = √25.463 ≈ <strong>5.0 cm</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Radius ≈ 5.0 cm</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Hollow pipe</span>
+              A metal pipe has outer diameter 10 cm, inner diameter 8 cm, and length 50 cm. Find the volume of metal used.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Outer radius R = 5 cm, inner radius r = 4 cm, h = 50 cm.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = π(R² − r²)h = π(25 − 16) × 50 = π × 9 × 50 = 450π cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Decimal: 450 × 3.142 ≈ <strong>1 413.9 cm³</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Volume of metal = 450π ≈ 1 413.9 cm³</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 4 — PYRAMIDS AND CONES
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-pyramids-cones">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">△</div>
+        <div>
+          <span class="ls-eyebrow">Section 04 · Tapering Solids</span>
+          <h2>Pyramids and Cones</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Pyramids and cones are "pointed" solids where the cross-section shrinks to zero at the apex. Because of this tapering, their volumes are exactly one-third of the corresponding prism or cylinder with the same base and height — a result that can be proved by calculus or by Cavalieri's Principle.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Pyramids and Cones — Formulas</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">General pyramid</div>
+              <div class="fb-eq highlight-formula">V = ⅓ × A_base × h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Square pyramid (side a, height h)</div>
+              <div class="fb-eq">V = ⅓ a²h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Rectangular pyramid</div>
+              <div class="fb-eq">V = ⅓ × l × w × h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Cone</div>
+              <div class="fb-eq highlight-formula">V = ⅓πr²h</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Slant height of cone</div>
+              <div class="fb-eq">l = √(r² + h²) &nbsp;&nbsp; (by Pythagoras)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Frustum (truncated cone)</div>
+              <div class="fb-eq">V = ⅓πh(R² + Rr + r²) &nbsp;&nbsp; (R = large radius, r = small radius)</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Why the Factor of ⅓?</h3>
+        <p class="body-para">The factor ⅓ arises because the cross-sectional area of a cone or pyramid shrinks quadratically as you move from base to apex. If you integrate the area at each height from 0 to h, you get exactly one-third of the base area multiplied by h. This is one of the earliest non-trivial results in mensuration, known to ancient Egyptian mathematicians over 3 500 years ago. You can also verify it physically: a cone-shaped vessel filled three times and poured into a cylinder of identical base and height will fill the cylinder exactly.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Pyramids and Cones</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Square pyramid</span>
+              The Great Pyramid of Giza has a square base of side 230 m and a height of approximately 138 m. Estimate its volume.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>A_base = 230² = 52 900 m².</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = ⅓ × 52 900 × 138 = ⅓ × 7 300 200 = <strong>2 433 400 m³</strong> (approximately 2.43 million cubic metres).</span>
+              </div>
+            </div>
+            <div class="we-answer">V ≈ 2 433 400 m³ ≈ 2.43 × 10⁶ m³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Cone (tent problem)</span>
+              A conical tent has base radius 7 m and height 9 m. Find: (a) the volume, (b) the slant height.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>V = ⅓πr²h = ⅓ × π × 49 × 9 = ⅓ × 441π = 147π ≈ 147 × 3.142 ≈ <strong>461.9 m³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>Slant height l = √(r² + h²) = √(49 + 81) = √130 ≈ <strong>11.4 m</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">(a) V = 147π ≈ 461.9 m³ &nbsp;&nbsp; (b) l ≈ 11.4 m</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Frustum</span>
+              A bucket (frustum shape) has top radius 20 cm, bottom radius 12 cm, and height 30 cm. Find its volume.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Identify: R = 20, r = 12, h = 30.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = ⅓πh(R² + Rr + r²) = ⅓ × π × 30 × (400 + 240 + 144).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>= 10π × 784 = 7 840π ≈ 7 840 × 3.142 ≈ <strong>24 633 cm³</strong> ≈ 24.6 litres.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 7 840π ≈ 24 633 cm³ ≈ 24.6 litres</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 4 — Find height given volume</span>
+              A cone has volume 462 cm³ and base radius 7 cm. Find its perpendicular height. (Use π = 22/7)
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>From V = ⅓πr²h: h = 3V / (πr²) = 3 × 462 / (22/7 × 49).</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>= 1 386 / (22 × 7) = 1 386 / 154 = <strong>9 cm</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Height = 9 cm</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 5 — SPHERES AND HEMISPHERES
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-spheres">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">◉</div>
+        <div>
+          <span class="ls-eyebrow">Section 05 · Curved Solids</span>
+          <h2>Spheres and Hemispheres</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>A sphere is perfectly symmetric in all directions from its centre — every point on its surface is exactly the same distance (the radius) from the centre. Spherical shapes appear in ball bearings, planets, water droplets, and storage tanks. The volume formula requires a factor of 4/3π — a result most elegantly derived by calculus.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Sphere and Hemisphere Formulas</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Volume of sphere</div>
+              <div class="fb-eq highlight-formula">V = (4/3)πr³</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Surface area of sphere</div>
+              <div class="fb-eq">SA = 4πr²</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Volume of hemisphere</div>
+              <div class="fb-eq highlight-formula">V = (2/3)πr³</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Curved SA of hemisphere</div>
+              <div class="fb-eq">CSA = 2πr²</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Total SA of hemisphere</div>
+              <div class="fb-eq">TSA = 2πr² + πr² = 3πr²</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Given volume, find r</div>
+              <div class="fb-eq">r = ∛(3V / 4π)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Spheres and Hemispheres</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Sphere volume</span>
+              A solid metal sphere has radius 6 cm. Find its volume in terms of π, and as a decimal to 1 d.p.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V = (4/3)πr³ = (4/3) × π × 6³ = (4/3) × π × 216 = 4 × 72π = <strong>288π cm³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Decimal: 288 × 3.142 = <strong>904.9 cm³</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 288π cm³ ≈ 904.9 cm³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Find radius from volume</span>
+              A spherical balloon has volume 904.32 cm³. Find its radius (use π = 3.142).
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>From V = (4/3)πr³: r³ = 3V / (4π) = 3 × 904.32 / (4 × 3.142) = 2 712.96 / 12.568 ≈ 215.85.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>r = ∛215.85 ≈ <strong>6.0 cm</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Radius = 6.0 cm</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Hemisphere word problem</span>
+              A hemispherical bowl has an internal radius of 9 cm. Find how many full cups of water (each cup holds 200 cm³) it can hold.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V_hemisphere = (2/3)πr³ = (2/3) × π × 729 = 486π ≈ 486 × 3.142 ≈ 1 527.0 cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Number of cups = 1 527 ÷ 200 = 7.635 → <strong>7 full cups</strong> (take the whole number part only).</span>
+              </div>
+            </div>
+            <div class="we-answer">The bowl holds 7 full cups of water.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 6 — COMPOSITE SOLIDS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-composite">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">⊕</div>
+        <div>
+          <span class="ls-eyebrow">Section 06 · Combined Shapes</span>
+          <h2>Composite Solids</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Most real-world objects are not perfect simple solids — they combine multiple 3D shapes. A composite solid is one formed by joining (adding) or carving out (subtracting) two or more basic solids. The strategy is always the same: identify the component shapes, find each volume separately, then add or subtract.</p>
+        </div>
+
+        <div class="method-tabs">
+          <div class="mt-block">
+            <div class="mt-title">Addition Strategy</div>
+            <div class="mt-desc">Used when shapes are joined together. Example: a cylinder topped with a hemisphere (like a hot water cylinder). V_total = V_cylinder + V_hemisphere.</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Subtraction Strategy</div>
+            <div class="mt-desc">Used when a shape is hollowed out or has a cavity. Example: a solid cylinder with a conical hole bored into one end. V_solid = V_cylinder − V_cone.</div>
+          </div>
+          <div class="mt-block">
+            <div class="mt-title">Mixed Strategy</div>
+            <div class="mt-desc">Some solids require both. Always sketch the shape first, identify every component, and write the formula before substituting numbers.</div>
+          </div>
+        </div>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Composite Solids</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Cylinder + Hemisphere (Addition)</span>
+              A hot water tank consists of a cylinder of radius 40 cm and height 100 cm, with a hemispherical cap of the same radius on each end. Find the total volume.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V_cylinder = πr²h = π × 1 600 × 100 = 160 000π cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Two hemispheres = one full sphere: V_sphere = (4/3)πr³ = (4/3) × π × 64 000 = 256 000π/3 cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>V_total = 160 000π + 256 000π/3 = (480 000π + 256 000π)/3 = 736 000π/3 ≈ 770 634 cm³ ≈ <strong>770.6 litres</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Total volume ≈ 770 634 cm³ ≈ 770.6 litres</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Cylinder with conical hole (Subtraction)</span>
+              A solid cylinder of radius 6 cm and height 20 cm has a conical hole of the same radius and height 8 cm bored into one end. Find the remaining volume. (Use π = 3.142)
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V_cylinder = π × 36 × 20 = 720π cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V_cone = ⅓ × π × 36 × 8 = 96π cm³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>Remaining volume = 720π − 96π = 624π ≈ 624 × 3.142 ≈ <strong>1 960.6 cm³</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Remaining volume = 624π ≈ 1 960.6 cm³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Real-world: grain silo</span>
+              A grain silo consists of a cylinder of diameter 4 m and height 8 m, topped by a conical roof of the same base radius and slant height 3 m. Find the total volume that can be stored inside. (Use π = 3.142)
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>r = 2 m for both shapes. For the cone: l = 3, r = 2, so h_cone = √(l² − r²) = √(9 − 4) = √5 ≈ 2.236 m.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V_cylinder = π × 4 × 8 = 32π ≈ 100.54 m³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>V_cone = ⅓ × π × 4 × 2.236 = (8.944/3)π ≈ 2.981π ≈ 9.37 m³.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>Total ≈ 100.54 + 9.37 = <strong>109.91 m³</strong> ≈ 109 900 litres of grain.</span>
+              </div>
+            </div>
+            <div class="we-answer">Total silo capacity ≈ 109.9 m³ ≈ 109 900 litres</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 7 — SIMILAR SOLIDS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-similar">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">∝</div>
+        <div>
+          <span class="ls-eyebrow">Section 07 · Scale Factors</span>
+          <h2>Similar Solids and Scale Factors</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">Senior Secondary</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>Two solids are similar if they have exactly the same shape but different sizes — every corresponding length is in the same ratio. Understanding how volume scales with the linear scale factor is essential for solving proportion-based KCSE problems and real-world manufacturing challenges.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Similar Solids — Scale Factor Relationships</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Linear scale factor</div>
+              <div class="fb-eq highlight-formula">k = L₂ / L₁ &nbsp;&nbsp; (ratio of any corresponding lengths)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Area scale factor</div>
+              <div class="fb-eq highlight-formula">A₂ / A₁ = k²</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Volume scale factor</div>
+              <div class="fb-eq highlight-formula">V₂ / V₁ = k³</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Finding k from volumes</div>
+              <div class="fb-eq">k = ∛(V₂ / V₁)</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Finding k from areas</div>
+              <div class="fb-eq">k = √(A₂ / A₁)</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Why Volume Scales as k³</h3>
+        <p class="body-para">When every linear dimension is multiplied by k, area (which involves two dimensions multiplied together) scales as k × k = k². Volume involves three dimensions, so it scales as k × k × k = k³. This has profound practical consequences: if you double the size of a container (k = 2), its volume becomes 2³ = 8 times larger, not 2 times larger. A water tank with twice the radius and height holds 8 times as much water — something that surprises people who think linearly.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Similar Solids</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Classic KCSE problem</span>
+              Two similar cones have base radii 3 cm and 6 cm. The smaller cone has volume 24 cm³. Find the volume of the larger cone.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Linear scale factor: k = 6/3 = 2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Volume scale factor: k³ = 2³ = 8.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>V_large = 8 × V_small = 8 × 24 = <strong>192 cm³</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">Volume of larger cone = 192 cm³</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Find the linear scale factor</span>
+              Two similar spheres have volumes 27 cm³ and 125 cm³. Find: (a) the ratio of their radii, (b) the ratio of their surface areas.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>Volume ratio = 125/27. k³ = 125/27 → k = ∛(125/27) = 5/3. Radii ratio = 5:3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>Area ratio = k² = (5/3)² = 25/9. Surface areas are in ratio 25:9.</span>
+              </div>
+            </div>
+            <div class="we-answer">(a) Radii ratio = 5:3 &nbsp;&nbsp; (b) Surface areas ratio = 25:9</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — KCSE-style multi-step</span>
+              A manufacturer makes two similar cylindrical tins. The smaller tin has diameter 8 cm and holds 600 cm³ of paint. The larger tin has diameter 12 cm. Find: (a) the volume of the larger tin, (b) the height of the larger tin.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Part a</span>
+                <span>k = 12/8 = 3/2. Volume ratio = k³ = (3/2)³ = 27/8. V_large = 600 × 27/8 = 600 × 3.375 = <strong>2 025 cm³</strong>.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Part b</span>
+                <span>From V_small = πr²h: 600 = π × 16 × h → h_small = 600/(16π) ≈ 11.94 cm. h_large = k × h_small = (3/2) × 11.94 ≈ <strong>17.9 cm</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">(a) V_large = 2 025 cm³ &nbsp;&nbsp; (b) h_large ≈ 17.9 cm</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 8 — VOLUMES BY CALCULUS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-calculus">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">∫</div>
+        <div>
+          <span class="ls-eyebrow">Section 08 · University / A-Level</span>
+          <h2>Volumes by Calculus (Volumes of Revolution)</h2>
+        </div>
+        <span class="ls-level-badge level-advanced">University</span>
+      </div>
+      <div class="ls-body">
+        <div class="concept-intro">
+          <p>When a curve is rotated about an axis, it sweeps out a three-dimensional solid. The volume of this solid of revolution can be computed exactly using integration. This technique extends mensuration far beyond the reach of simple formulas and is used in engineering to design turbine blades, lenses, and precision components.</p>
+        </div>
+
+        <div class="formula-block multi">
+          <div class="fb-label">Methods for Volumes of Revolution</div>
+          <div class="fb-grid">
+            <div class="fb-row">
+              <div class="fb-name">Disc method (about x-axis)</div>
+              <div class="fb-eq highlight-formula">V = π ∫ₐᵇ [f(x)]² dx</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Disc method (about y-axis)</div>
+              <div class="fb-eq">V = π ∫_c^d [g(y)]² dy &nbsp;&nbsp; (where x = g(y))</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Washer method (hollow, about x-axis)</div>
+              <div class="fb-eq highlight-formula">V = π ∫ₐᵇ ([f(x)]² − [g(x)]²) dx</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">Shell method (about y-axis)</div>
+              <div class="fb-eq highlight-formula">V = 2π ∫ₐᵇ x · f(x) dx</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">When to use disc/washer</div>
+              <div class="fb-eq">Rotation about x-axis, integrating in x. Cross-sections are circles (discs) or annuli (washers).</div>
+            </div>
+            <div class="fb-row">
+              <div class="fb-name">When to use shell</div>
+              <div class="fb-eq">Rotation about y-axis but integrating in x — often avoids the need to re-express x in terms of y.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">The Disc Method — Intuition</h3>
+        <p class="body-para">Imagine slicing the solid of revolution into infinitely many thin discs perpendicular to the axis of rotation. Each disc at position x has radius f(x) and thickness dx, giving a volume of π[f(x)]²dx. Summing all these infinitely thin discs from x = a to x = b via integration gives the total volume. This is the continuous generalisation of the formula V = A × h for a prism.</p>
+
+        <div class="worked-examples">
+          <div class="we-title">Worked Examples — Volumes of Revolution</div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 1 — Derive the sphere formula</span>
+              By rotating y = √(r² − x²) (the upper semicircle) about the x-axis from x = −r to x = r, derive V = (4/3)πr³.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Use disc method: V = π ∫₋ᵣʳ [f(x)]² dx = π ∫₋ᵣʳ (r² − x²) dx.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Integrate: π [r²x − x³/3]₋ᵣʳ.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>At x = r: r³ − r³/3 = 2r³/3. At x = −r: −r³ + r³/3 = −2r³/3. Subtract: 2r³/3 − (−2r³/3) = 4r³/3.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 4</span>
+                <span>V = π × 4r³/3 = <strong>(4/3)πr³</strong> ✓ — the standard sphere formula is derived.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = (4/3)πr³ ✓ (proved by integration)</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 2 — Disc method</span>
+              Find the volume of the solid formed when the region bounded by y = x², x = 0, x = 3, and y = 0 is rotated 360° about the x-axis.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>V = π ∫₀³ (x²)² dx = π ∫₀³ x⁴ dx.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>= π [x⁵/5]₀³ = π (243/5 − 0) = 243π/5.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>≈ 243 × 3.142 / 5 ≈ <strong>152.8 cubic units</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 243π/5 ≈ 152.8 cubic units</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 3 — Washer method</span>
+              The region between y = √x and y = x (for 0 ≤ x ≤ 1) is rotated about the x-axis. Find the volume of the solid formed.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>Outer function: f(x) = √x (larger). Inner function: g(x) = x (smaller). Check: at x = 0.25, √0.25 = 0.5 > 0.25 ✔.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>V = π ∫₀¹ [(√x)² − x²] dx = π ∫₀¹ [x − x²] dx.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>= π [x²/2 − x³/3]₀¹ = π (1/2 − 1/3) = π × 1/6 = <strong>π/6 cubic units</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = π/6 ≈ 0.524 cubic units</div>
+          </div>
+
+          <div class="we-card">
+            <div class="we-problem">
+              <span class="we-num">Example 4 — Shell method</span>
+              Find the volume of the solid formed when the region bounded by y = 2x − x² and y = 0 is rotated about the y-axis. Use the shell method.
+            </div>
+            <div class="we-steps">
+              <div class="we-step">
+                <span class="step-n">Step 1</span>
+                <span>The curve crosses the x-axis at y = 0: 2x − x² = 0 → x(2 − x) = 0 → x = 0 and x = 2. Limits: a = 0, b = 2.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 2</span>
+                <span>Shell method: V = 2π ∫₀² x(2x − x²) dx = 2π ∫₀² (2x² − x³) dx.</span>
+              </div>
+              <div class="we-step">
+                <span class="step-n">Step 3</span>
+                <span>= 2π [2x³/3 − x⁴/4]₀² = 2π [(16/3) − (16/4)] = 2π [16/3 − 4] = 2π × 4/3 = <strong>8π/3</strong>.</span>
+              </div>
+            </div>
+            <div class="we-answer">V = 8π/3 ≈ 8.38 cubic units</div>
+          </div>
+        </div>
+
+        <div class="callout-note">
+          <span class="cn-icon" aria-hidden="true">📝</span>
+          <div>
+            <strong>Pappus's Centroid Theorem</strong> provides an elegant shortcut for volumes of revolution: the volume of a solid of revolution equals the area of the 2D region multiplied by the distance travelled by the centroid of that region. For a region of area A whose centroid is at distance d̄ from the axis of rotation: <strong>V = 2π d̄ A</strong>. This is particularly useful for standard shapes like rectangles and circles where the centroid position is immediately known.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 9 — FORMULA SHEET + COMMON ERRORS
+    ══════════════════════════════════════ -->
+    <section class="lesson-section" id="vol-errors">
+      <div class="ls-header">
+        <div class="ls-icon" aria-hidden="true">📋</div>
+        <div>
+          <span class="ls-eyebrow">Section 09 · Reference &amp; Exam Prep</span>
+          <h2>Formula Sheet and Common Errors</h2>
+        </div>
+        <span class="ls-level-badge level-secondary">All Levels</span>
+      </div>
+      <div class="ls-body">
+
+        <h3 class="sub-heading">Complete Volume Formula Sheet</h3>
+        <div class="formula-sheet-grid">
+          <div class="fs-card">
+            <div class="fs-title">Prisms</div>
+            <div class="fs-items">
+              <div class="fs-item">Cube: V = a³</div>
+              <div class="fs-item">Cuboid: V = lwh</div>
+              <div class="fs-item">Triangular prism: V = ½bh × l</div>
+              <div class="fs-item">General: V = A_base × h</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Cylinder</div>
+            <div class="fs-items">
+              <div class="fs-item">V = πr²h</div>
+              <div class="fs-item">Hollow: V = π(R²−r²)h</div>
+              <div class="fs-item">CSA = 2πrh</div>
+              <div class="fs-item">TSA = 2πr(h + r)</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Pyramid &amp; Cone</div>
+            <div class="fs-items">
+              <div class="fs-item">Pyramid: V = ⅓A_base × h</div>
+              <div class="fs-item">Cone: V = ⅓πr²h</div>
+              <div class="fs-item">Slant h: l = √(r² + h²)</div>
+              <div class="fs-item">Frustum: V = ⅓πh(R²+Rr+r²)</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Sphere</div>
+            <div class="fs-items">
+              <div class="fs-item">V = (4/3)πr³</div>
+              <div class="fs-item">Hemisphere: V = (2/3)πr³</div>
+              <div class="fs-item">SA = 4πr²</div>
+              <div class="fs-item">Hemi CSA = 2πr²</div>
+              <div class="fs-item">Hemi TSA = 3πr²</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Similar Solids</div>
+            <div class="fs-items">
+              <div class="fs-item">k = L₂/L₁ (linear scale)</div>
+              <div class="fs-item">Area ratio = k²</div>
+              <div class="fs-item">Volume ratio = k³</div>
+              <div class="fs-item">k = ∛(V₂/V₁)</div>
+            </div>
+          </div>
+          <div class="fs-card">
+            <div class="fs-title">Volumes of Revolution</div>
+            <div class="fs-items">
+              <div class="fs-item">Disc (x-axis): π∫[f(x)]²dx</div>
+              <div class="fs-item">Washer: π∫([f]²−[g]²)dx</div>
+              <div class="fs-item">Shell (y-axis): 2π∫x·f(x)dx</div>
+              <div class="fs-item">Pappus: V = 2πd̄A</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading" style="margin-top:1.8rem;">Common Errors in Volume Problems</h3>
+        <div class="errors-grid">
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>V of cone = πr²h (same as cylinder)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>V of cone = ⅓πr²h (one-third of cylinder)</div>
+            <div class="ec-note">The ⅓ factor is the most commonly dropped term in cone and pyramid problems. Always include it.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Similar cones, k = 2: V_large = 2 × V_small</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>V_large = k³ × V_small = 8 × V_small</div>
+            <div class="ec-note">Volume scales as the CUBE of the linear scale factor, not as k itself. This is the most common error in similar solids problems.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Mixing units: r = 5 cm, h = 1.2 m → V = π(5²)(1.2)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>Convert first: h = 120 cm → V = π(25)(120) = 3 000π cm³</div>
+            <div class="ec-note">Always convert every dimension to the same unit before substituting into any formula. A common exam trap.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Using diameter instead of radius: V = π(10²)h</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>If diameter = 10, then r = 5: V = π(5²)h = 25πh</div>
+            <div class="ec-note">All volume formulas use the RADIUS. When a problem gives diameter, halve it immediately before substituting.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>V of revolution: V = ∫f(x)dx (missing π and the square)</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>V = π∫[f(x)]²dx (must square the function and multiply by π)</div>
+            <div class="ec-note">In the disc method, you are computing the area of circles (πr²). The function gives the radius r = f(x), so it must be squared. Forgetting either π or the square is common.</div>
+          </div>
+
+          <div class="error-card">
+            <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Frustum volume: V = ⅓πh(R + r)²</div>
+            <div class="ec-right"><span class="ec-label">✓ Right</span>V = ⅓πh(R² + Rr + r²) — three terms, not (R+r)²</div>
+            <div class="ec-note">(R + r)² = R² + 2Rr + r² which has coefficient 2 in the middle term. The correct frustum formula has coefficient 1. Memorise it carefully.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PREVIOUS / NEXT NAVIGATION ── -->
+    <nav class="topic-nav-footer" aria-label="Topic navigation">
+      <a href="areas.html" class="tnf-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span>
+          <span class="tnf-label">Previous Topic</span>
+          <span class="tnf-name">Areas of Shapes</span>
+        </span>
+      </a>
+      <a href="limits.html" class="tnf-btn tnf-next">
+        <span>
+          <span class="tnf-label">Next Topic</span>
+          <span class="tnf-name">Limits</span>
+        </span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </nav>
+
   </main>
 </div>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya · BECF</p>
+      <p class="footer-contact-line">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="fn-col">
+        <h4>Lessons</h4>
+        <ul>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="trigonometry.html">Trigonometry</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="limits.html">Limits</a></li>
+          <li><a href="differentiation.html">Differentiation</a></li>
+          <li><a href="integration.html">Integration</a></li>
+          <li><a href="vectors.html">Vectors</a></li>
+          <li><a href="matrices.html">Matrices</a></li>
+          <li><a href="conics.html">Conics</a></li>
+          <li><a href="sequences.html">Sequences &amp; Series</a></li>
+          <li><a href="complex.html">Complex Numbers</a></li>
+          <li><a href="areas.html">Areas</a></li>
+          <li><a href="volumes.html" aria-current="page">Volumes</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="math-lessons.html">All Lessons</a></li>
+          <li><a href="tasks.html">Practice Problems</a></li>
+          <li><a href="mind.html">Brain Games</a></li>
+          <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>My Learning</h4>
+        <ul>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About Mwalimu Ronny</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+  </div>
 </footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+
+<!-- Scripts -->
+<script src="shared.js"></script>
+<script src="topic.js"></script>
 </body>
 </html>

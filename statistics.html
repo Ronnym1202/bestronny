@@ -1,254 +1,1485 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- ═══ META ═══ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Statistics & Probability | Ronny Best Mathematics</title>
-  <meta name="description" content="From data collection to statistical inference">
+  <title>Statistics &amp; Probability | Ronny Best Mathematics</title>
+  <meta name="description" content="Comprehensive CBC-aligned Statistics and Probability lessons for Kenyan students — data collection, measures of central tendency, dispersion, probability, distributions, hypothesis testing, and regression. Aligned to KICD, TSC, KNEC, and Ministry of Education frameworks.">
+  <meta name="keywords" content="statistics Kenya CBC, probability KCSE, measures of central tendency, standard deviation, normal distribution, hypothesis testing, regression, KICD mathematics Kenya, Senior Secondary statistics">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/statistics.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Statistics &amp; Probability | Ronny Best Mathematics">
+  <meta property="og:description" content="Free CBC-aligned Statistics and Probability lessons with worked examples for Kenyan students — from data collection to regression analysis.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/statistics.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+ 
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- AdSense — Auto Ads only, no manual ad divs -->
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <!-- Shared stylesheet for all topic pages -->
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Statistics and Probability — Ronny Best Mathematics",
+    "description": "Comprehensive CBC-aligned Statistics and Probability lessons covering data collection, central tendency, dispersion, probability, distributions, hypothesis testing, and regression for Kenyan secondary school and university students.",
+    "url": "https://bestronny.netlify.app/statistics.html",
+    "educationalLevel": ["Secondary", "University"],
+    "learningResourceType": "Lesson",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "Course", "name": "Ronny Best Mathematics", "url": "https://bestronny.netlify.app/" },
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "about": ["Statistics", "Probability", "Data Analysis", "CBC Mathematics Kenya", "KCSE Mathematics"]
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">📊</span>
-  <h1>Statistics & Probability</h1>
-  <p class="hero-sub">From data collection to statistical inference</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Beginner</span> <span class="level-pill pill-secondary">Secondary</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Statistics</strong>
-</div>
+  <!-- ═══ SKIP LINK ═══ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Beginner</li>
-      <li><a href="#data-collection">Data Collection</a></li>
-      <li><a href="#central-tendency">Central Tendency</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#dispersion">Dispersion</a></li>
-      <li><a href="#probability">Probability</a></li>
-      <li><a href="#distributions">Distributions</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#hypothesis">Hypothesis Testing</a></li>
-      <li><a href="#regression">Regression & Correlation</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="data-collection" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📊</span><h2>Data Collection & Presentation</h2><span class="level-badge badge-primary">Beginner</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Types of Data</h3>
-          <ul><li><strong>Qualitative/Categorical:</strong> colours, names, yes/no answers</li>
-          <li><strong>Quantitative:</strong> Discrete (countable: 1,2,3...) or Continuous (measurable: heights, weights)</li>
-          <li><strong>Primary data:</strong> collected directly. <strong>Secondary:</strong> from existing sources</li></ul>
-        </div>
-        <div class="sub"><h3>Frequency Tables, Bar Charts, Histograms, Pie Charts</h3>
-          <div class="callout note"><span class="callout-icon">📝</span><span>In a histogram, area = frequency. Bars touch. Used for continuous data. Bar charts have gaps and are for discrete/categorical data.</span></div>
-        </div>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-    </section>
-
-    <section id="central-tendency" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🎯</span><h2>Measures of Central Tendency</h2><span class="level-badge badge-primary">Beginner / Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Mean, Median, Mode</h3>
-          <div class="formula-box highlight">
-            Mean: x̄ = Σx / n &nbsp;&nbsp;&nbsp; Weighted mean: x̄ = Σ(fx) / Σf<br>
-            Median: middle value (odd n), or average of two middle values (even n)<br>
-            Mode: most frequently occurring value
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>Data: 4, 7, 7, 9, 12. Find mean, median, mode.</p>
-              <p class="soln">Mean = 39/5 = 7.8. Median = 7. Mode = 7.</p></div>
-            <div class="example-card"><div class="example-label">Example 2 — Grouped data mean</div>
-              <p>Class: 10–20 (f=3), 20–30 (f=5), 30–40 (f=2). Find mean.</p>
-              <p class="soln">x̄ = (15×3 + 25×5 + 35×2)/10 = (45+125+70)/10 = 24</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dispersion" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📏</span><h2>Measures of Dispersion</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Range = max − min<br>
-            Variance: σ² = Σ(x − x̄)²/n &nbsp;&nbsp; (population) &nbsp;&nbsp; s² = Σ(x − x̄)²/(n−1) &nbsp; (sample)<br>
-            Standard deviation: σ = √(variance)<br>
-            IQR = Q3 − Q1 &nbsp;&nbsp; Coefficient of variation: CV = (σ/x̄) × 100%
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Find SD</div>
-              <p>Data: 2, 4, 4, 4, 5, 5, 7, 9</p>
-              <p class="soln">x̄ = 5. Deviations²: 9,1,1,1,0,0,4,16. σ² = 32/8 = 4. σ = 2.</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Box Plots & Five Number Summary</h3>
-          <div class="formula-box">Min, Q1, Median (Q2), Q3, Max. IQR = Q3 − Q1. Outlier: &lt; Q1−1.5×IQR or &gt; Q3+1.5×IQR</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="probability" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🎲</span><h2>Probability</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            P(A) = favourable outcomes / total equally likely outcomes &nbsp;&nbsp; 0 ≤ P(A) ≤ 1<br>
-            P(A∪B) = P(A) + P(B) − P(A∩B) &nbsp; (Addition law)<br>
-            P(A∩B) = P(A) × P(B|A) &nbsp; (Multiplication law)<br>
-            P(A|B) = P(A∩B)/P(B) &nbsp; (Conditional probability)<br>
-            Independent events: P(A∩B) = P(A)×P(B)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Two dice</div>
-              <p>P(sum = 7) when rolling two dice?</p>
-              <p class="soln">Favourable outcomes: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6.</p></div>
-            <div class="example-card"><div class="example-label">Example — Bayes' Theorem</div>
-              <p>Disease test: P(+|Disease) = 0.99, P(+|No disease) = 0.05, P(Disease) = 0.01. Find P(Disease|+).</p>
-              <p class="soln">P(+) = 0.99×0.01 + 0.05×0.99 = 0.0594. P(D|+) = 0.0099/0.0594 ≈ 0.167.</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Permutations & Combinations</h3>
-          <div class="formula-box">
-            Permutations (ordered): P(n,r) = n!/(n−r)!<br>
-            Combinations (unordered): C(n,r) = n!/[r!(n−r)!]
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — How many ways to choose 3 from 8?</div>
-              <p class="soln">C(8,3) = 56</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="distributions" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📉</span><h2>Probability Distributions</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Binomial Distribution</h3>
-          <div class="formula-box">P(X=r) = C(n,r) pʳ (1−p)ⁿ⁻ʳ &nbsp;&nbsp; Mean = np &nbsp;&nbsp; Variance = np(1−p)</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Fair coin tossed 10 times. P(exactly 6 heads)?</div>
-              <p class="soln">P = C(10,6)(0.5)⁶(0.5)⁴ = 210 × (0.5)¹⁰ = 210/1024 ≈ 0.205</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Normal Distribution N(μ, σ²)</h3>
-          <div class="formula-box highlight">
-            f(x) = (1/σ√(2π)) e^(−(x−μ)²/2σ²)<br>
-            Standardise: Z = (X − μ)/σ &nbsp;&nbsp; (Z ~ N(0,1))<br>
-            68−95−99.7 rule: 1σ, 2σ, 3σ from mean
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Heights N(170, 9). P(height &gt; 173)?</div>
-              <p class="soln">Z = (173−170)/3 = 1. P(Z &gt; 1) = 1 − Φ(1) = 1 − 0.8413 = 0.1587 ≈ 15.87%</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Poisson Distribution</h3>
-          <div class="formula-box">P(X=k) = e^(−λ) λᵏ/k! &nbsp;&nbsp; Mean = Variance = λ</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="hypothesis" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔬</span><h2>Hypothesis Testing</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Steps in Hypothesis Testing</h3>
-          <ol class="sub">
-            <li>State H₀ (null hypothesis) and H₁ (alternative hypothesis)</li>
-            <li>Choose significance level α (typically 0.05)</li>
-            <li>Calculate test statistic</li>
-            <li>Find p-value or compare with critical value</li>
-            <li>Reject H₀ if p &lt; α, otherwise fail to reject</li>
-          </ol>
-          <div class="formula-box">
-            One-sample z-test: Z = (x̄ − μ₀) / (σ/√n)<br>
-            One-sample t-test: T = (x̄ − μ₀) / (s/√n) &nbsp; ~t(n−1)<br>
-            Chi-square test: χ² = Σ (O−E)²/E
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="regression" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📐</span><h2>Regression & Correlation</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Pearson correlation: r = Σ(xᵢ−x̄)(yᵢ−ȳ) / [√Σ(xᵢ−x̄)² × √Σ(yᵢ−ȳ)²] &nbsp; (−1 ≤ r ≤ 1)<br>
-            Simple linear regression: y = a + bx<br>
-            b = Σ(xᵢ−x̄)(yᵢ−ȳ)/Σ(xᵢ−x̄)² &nbsp;&nbsp; a = ȳ − bx̄
-          </div>
-          <div class="callout tip"><span class="callout-icon">💡</span><span>r = ±1 perfect linear, r = 0 no linear correlation. Correlation ≠ causation!</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="conics.html" class="topic-nav-btn prev">← Conics</a>
-      <a href="differentiation.html" class="topic-nav-btn next">Differentiation →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <!-- Mobile top bar -->
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <!-- Nav list -->
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="active nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" class="active" role="menuitem" aria-current="page">Statistics &amp; Probability</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <section class="topic-hero" aria-labelledby="topic-h1">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>σ</span><span>μ</span><span>P(A)</span><span>r</span><span>χ²</span>
+    </div>
+    <div class="topic-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Statistics &amp; Probability</span>
+      </nav>
+      <div class="topic-hero-icon" aria-hidden="true">σ</div>
+      <h1 id="topic-h1">Statistics &amp; Probability</h1>
+      <p class="topic-hero-sub">
+        From data collection and frequency tables through to hypothesis testing and regression analysis —
+        comprehensive coverage of the Applied Mathematics strand as defined by KICD for Kenya's
+        Competency Based Curriculum. Aligned to KCSE and Senior Secondary assessment frameworks.
+      </p>
+      <div class="topic-meta-row" role="list">
+        <span class="topic-badge badge-strand" role="listitem">Applied Mathematics</span>
+        <span class="topic-badge badge-level" role="listitem">Junior Secondary → University</span>
+        <span class="topic-badge badge-cbc" role="listitem">CBC Aligned</span>
+        <span class="topic-badge badge-exam" role="listitem">KCSE Paper 2</span>
+      </div>
+      <div class="topic-stats-row" role="list">
+        <div class="ts-item" role="listitem"><strong>10</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>35+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>3</strong><span>Levels</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item" role="listitem"><strong>KNEC</strong><span>Exam Ready</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout" id="main-content">
+
+    <!-- TOC SIDEBAR -->
+    <aside class="toc-sidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <span class="toc-title">Contents</span>
+        </div>
+        <div class="toc-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+        <ul class="toc-list" role="list">
+          <li class="toc-group-label">Foundational</li>
+          <li><a href="#data-collection" class="toc-link">1. Data Collection &amp; Presentation</a></li>
+          <li><a href="#central-tendency" class="toc-link">2. Central Tendency</a></li>
+          <li class="toc-group-label">Secondary</li>
+          <li><a href="#dispersion" class="toc-link">3. Measures of Dispersion</a></li>
+          <li><a href="#probability" class="toc-link">4. Probability</a></li>
+          <li><a href="#permutations" class="toc-link">5. Permutations &amp; Combinations</a></li>
+          <li><a href="#distributions" class="toc-link">6. Probability Distributions</a></li>
+          <li class="toc-group-label">Advanced</li>
+          <li><a href="#normal-dist" class="toc-link">7. Normal Distribution</a></li>
+          <li><a href="#sampling" class="toc-link">8. Sampling &amp; Estimation</a></li>
+          <li><a href="#hypothesis" class="toc-link">9. Hypothesis Testing</a></li>
+          <li><a href="#regression" class="toc-link">10. Regression &amp; Correlation</a></li>
+        </ul>
+        <div class="toc-actions">
+          <a href="tasks.html?topic=statistics" class="toc-practice-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Practice Statistics
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="topic-content">
+
+      <!-- CBC CONTEXT BANNER -->
+      <div class="cbc-context-banner" id="cbc-context">
+        <span class="ccb-icon" aria-hidden="true">📘</span>
+        <div class="ccb-text">
+          <strong>CBC / KICD Curriculum Context:</strong> Statistics and Probability forms a core strand of
+          Applied Mathematics in Kenya's Senior Secondary curriculum (Grades 10–12) under the Competency Based
+          Curriculum (CBC) framework. According to KICD guidelines, students across all three Senior Secondary
+          pathways — <strong>STEM, Arts &amp; Sports Science, and Social Sciences</strong> — engage with
+          statistical reasoning and probability theory. Mastery of this strand is assessed in
+          <strong>KCSE Mathematics Paper 2</strong> (KNEC) and in the Senior Secondary School Assessment (SSSA).
+          The TSC competency framework requires teachers to develop students' ability to collect, organise,
+          analyse, and interpret data as a cross-cutting competency under the BECF (Basic Education Curriculum Framework).
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 1: DATA COLLECTION & PRESENTATION
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="data-collection" aria-labelledby="h2-data">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📊</div>
+          <div>
+            <span class="ls-eyebrow">Section 1 · Applied Mathematics</span>
+            <h2 id="h2-data">Data Collection &amp; Presentation</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">Foundational</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Statistics begins with data — without carefully collected, organised, and presented data,
+            no analysis is possible. In the CBC curriculum, students first encounter data handling in
+            Grade 7 and progressively deepen their understanding through Senior Secondary. This section
+            covers the essential vocabulary and tools every statistician — and every KCSE student — must master.</p>
+          </div>
+
+          <h3 class="sub-heading">Types of Data</h3>
+          <p class="body-para">
+            All data falls into one of two broad categories depending on its nature. Understanding which type
+            of data you have determines which graphs, calculations, and statistical tests are appropriate.
+          </p>
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">Qualitative (Categorical) Data</div>
+              <div class="mt-desc">Describes qualities or categories — cannot be measured numerically.
+              Examples: gender, blood type, colour preferences, pass/fail results, county of residence.
+              Further divided into <strong>nominal</strong> (no order: eye colour) and <strong>ordinal</strong>
+              (ordered categories: grade A, B, C, D, E).</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Quantitative (Numerical) Data</div>
+              <div class="mt-desc">Represents measurable quantities expressed as numbers.
+              <strong>Discrete data</strong> takes only specific values (countable): number of students, goals scored.
+              <strong>Continuous data</strong> can take any value in a range (measurable): heights, temperatures, masses, time.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Primary vs Secondary Data</div>
+              <div class="mt-desc"><strong>Primary data</strong> is collected directly by the researcher
+              through questionnaires, interviews, observation, or experiments. <strong>Secondary data</strong>
+              comes from existing sources: KNBS reports, government records, published research, internet databases.
+              Primary data is more specific but costly; secondary is cheaper but may be outdated or biased.</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Frequency Tables &amp; Grouped Frequency Distributions</h3>
+          <p class="body-para">
+            A <strong>frequency table</strong> organises raw data by listing each value (or class interval) and
+            how often it occurs. When data is continuous or has a wide range, we group it into class intervals
+            (also called bins or classes). Each class has a <strong>lower class boundary</strong>,
+            <strong>upper class boundary</strong>, <strong>class width</strong>, and <strong>midpoint</strong>.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Frequency Tables</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> Construct a frequency table for: 12, 15, 14, 13, 12, 16, 15, 14, 13, 12, 16, 15, 14, 13, 16</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>List distinct values: 12, 13, 14, 15, 16.</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Tally each occurrence: 12 appears 3 times, 13 appears 3 times, 14 appears 3 times, 15 appears 3 times, 16 appears 3 times.</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Record frequencies: Value 12 → f = 3; Value 13 → f = 3; Value 14 → f = 3; Value 15 → f = 3; Value 16 → f = 3. Total Σf = 15.</span></div>
+              </div>
+              <div class="we-answer">Σf = 15 ✓ (matches total data points)</div>
+            </div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span> The masses (kg) of 30 students are recorded. Construct a grouped frequency table with class width 5, starting at 40 kg.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Choose class intervals: 40–44, 45–49, 50–54, 55–59, 60–64. Width = 5 for each.</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>Identify class boundaries (for continuous data): 39.5–44.5, 44.5–49.5, 49.5–54.5, 54.5–59.5, 59.5–64.5.</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>Calculate midpoints: 42, 47, 52, 57, 62. These are used when calculating the mean from grouped data: midpoint = (lower boundary + upper boundary) ÷ 2.</span></div>
+                <div class="we-step"><span class="step-n">Step 4</span><span>Tally raw data into each interval and record frequencies. Ensure Σf = 30.</span></div>
+              </div>
+              <div class="we-answer">Class boundaries and midpoints are critical for grouped data calculations.</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Statistical Diagrams: Bar Charts, Histograms, Pie Charts, Stem-and-Leaf</h3>
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">📝</span>
+            <div>
+              <strong>KCSE Key Distinction:</strong> A <strong>histogram</strong> is used for <em>continuous</em> data —
+              bars touch, and <em>area</em> represents frequency (not height, unless class widths are equal).
+              When class widths are unequal, plot <strong>frequency density</strong> on the y-axis, where
+              <strong>Frequency Density = Frequency ÷ Class Width</strong>.
+              A <strong>bar chart</strong> is for discrete or categorical data — bars have gaps and height represents frequency.
+              This distinction is frequently tested in KCSE Paper 2.
+            </div>
+          </div>
+
+          <div class="formula-block">
+            <div class="fb-label">Key Formulae — Data Presentation</div>
+            <div class="fb-math">
+              Frequency Density = Frequency ÷ Class Width<br>
+              Relative Frequency = f ÷ Σf &nbsp;&nbsp; (gives proportion, between 0 and 1)<br>
+              Cumulative Frequency = running total of frequencies<br>
+              Pie chart angle for class = (f ÷ Σf) × 360°
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example — Histogram with Unequal Class Widths</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span> Data: Age 0–9 (f=10, w=10), Age 10–14 (f=15, w=5), Age 15–29 (f=30, w=15), Age 30–49 (f=20, w=20). Calculate frequency densities.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Formula</span><span>Frequency Density = Frequency ÷ Class Width</span></div>
+                <div class="we-step"><span class="step-n">0–9</span><span>FD = 10 ÷ 10 = <strong>1.0</strong></span></div>
+                <div class="we-step"><span class="step-n">10–14</span><span>FD = 15 ÷ 5 = <strong>3.0</strong></span></div>
+                <div class="we-step"><span class="step-n">15–29</span><span>FD = 30 ÷ 15 = <strong>2.0</strong></span></div>
+                <div class="we-step"><span class="step-n">30–49</span><span>FD = 20 ÷ 20 = <strong>1.0</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Verify</span><span>Check: Area = FD × Width. (1.0×10) + (3.0×5) + (2.0×15) + (1.0×20) = 10 + 15 + 30 + 20 = 75 ✔ (equals Σf)</span></div>
+              </div>
+              <div class="we-answer">Plot Frequency Density on y-axis; each bar's area equals its class frequency.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 2: CENTRAL TENDENCY
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="central-tendency" aria-labelledby="h2-ct">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🎯</div>
+          <div>
+            <span class="ls-eyebrow">Section 2 · Applied Mathematics</span>
+            <h2 id="h2-ct">Measures of Central Tendency</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">Foundational / Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>A measure of central tendency is a single value that summarises a dataset by describing
+            the centre or most typical value. The three measures — mean, median, and mode — each have
+            distinct advantages and are appropriate in different contexts. Choosing the wrong measure
+            is a common error in KCSE examinations.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Core Formulae — Central Tendency</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Mean (ungrouped)</span>
+                <span class="fb-eq">x̄ = Σx ÷ n</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Weighted / grouped mean</span>
+                <span class="fb-eq">x̄ = Σ(f × x) ÷ Σf &nbsp;&nbsp; (x = midpoint)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Assumed mean method</span>
+                <span class="fb-eq">x̄ = A + Σ(f × d) ÷ Σf &nbsp;&nbsp; where d = x − A</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Median (ungrouped, odd n)</span>
+                <span class="fb-eq">Middle value at position (n + 1) ÷ 2</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Median (ungrouped, even n)</span>
+                <span class="fb-eq">Average of values at positions n/2 and (n/2 + 1)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Median (grouped)</span>
+                <span class="fb-eq highlight-formula">Md = L + [(n/2 − F) ÷ f] × h</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Mode (grouped)</span>
+                <span class="fb-eq highlight-formula">Mo = L + [Δ₁ ÷ (Δ₁ + Δ₂)] × h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">🔑</span>
+            <div>
+              In the grouped median formula: <strong>L</strong> = lower class boundary of the median class;
+              <strong>n</strong> = total frequency; <strong>F</strong> = cumulative frequency before the median class;
+              <strong>f</strong> = frequency of the median class; <strong>h</strong> = class width.
+              In the modal class formula: <strong>Δ₁</strong> = difference between modal class frequency and the class before;
+              <strong>Δ₂</strong> = difference between modal class frequency and the class after.
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Mean, Median, Mode</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> Find the mean, median, and mode of: 3, 7, 8, 5, 7, 9, 2, 7, 4.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Mean</span><span>Σx = 3+7+8+5+7+9+2+7+4 = 52. n = 9. <strong>x̄ = 52 ÷ 9 ≈ 5.78</strong></span></div>
+                <div class="we-step"><span class="step-n">Median</span><span>Sort ascending: 2, 3, 4, 5, <strong>7</strong>, 7, 7, 8, 9. Position = (9+1)÷2 = 5th. <strong>Median = 7</strong></span></div>
+                <div class="we-step"><span class="step-n">Mode</span><span>7 appears 3 times — more than any other value. <strong>Mode = 7</strong></span></div>
+              </div>
+              <div class="we-answer">Mean ≈ 5.78, Median = 7, Mode = 7</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span> Calculate the mean of grouped data: Class 20–29 (f=4), 30–39 (f=9), 40–49 (f=14), 50–59 (f=10), 60–69 (f=3). Total Σf = 40.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Midpoints</span><span>x: 24.5, 34.5, 44.5, 54.5, 64.5</span></div>
+                <div class="we-step"><span class="step-n">f × x</span><span>4×24.5=98, 9×34.5=310.5, 14×44.5=623, 10×54.5=545, 3×64.5=193.5</span></div>
+                <div class="we-step"><span class="step-n">Σ(fx)</span><span>98 + 310.5 + 623 + 545 + 193.5 = <strong>1770</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Mean</span><span>x̄ = 1770 ÷ 40 = <strong>44.25</strong></span></div>
+              </div>
+              <div class="we-answer">Mean = 44.25</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Assumed Mean Method</span> Same data as Example 2. Use A = 44.5 as the assumed mean.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Deviations d</span><span>d = x − 44.5 → −20, −10, 0, +10, +20</span></div>
+                <div class="we-step"><span class="step-n">f × d</span><span>4×(−20)=−80, 9×(−10)=−90, 14×0=0, 10×(+10)=100, 3×(+20)=60</span></div>
+                <div class="we-step"><span class="step-n">Σ(fd)</span><span>−80 + (−90) + 0 + 100 + 60 = <strong>−10</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Mean</span><span>x̄ = 44.5 + (−10 ÷ 40) = 44.5 − 0.25 = <strong>44.25 ✓</strong></span></div>
+              </div>
+              <div class="we-answer">Same answer (44.25) with simpler arithmetic — preferred in KCSE under time pressure.</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4 — Grouped Median</span> Using the same distribution (Σf=40), find the median.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><span>Cumulative frequencies: 4, 13, 27, 37, 40.</span></div>
+                <div class="we-step"><span class="step-n">Step 2</span><span>n/2 = 20. The 20th value lies in class 40–49 (cumulative reaches 27 here). Median class = <strong>40–49</strong>.</span></div>
+                <div class="we-step"><span class="step-n">Step 3</span><span>L = 39.5 (lower boundary), F = 13 (cum. freq. before), f = 14 (median class freq.), h = 10 (width).</span></div>
+                <div class="we-step check-step"><span class="step-n">Apply</span><span>Md = 39.5 + [(20 − 13) ÷ 14] × 10 = 39.5 + (7/14)×10 = 39.5 + 5 = <strong>44.5</strong></span></div>
+              </div>
+              <div class="we-answer">Median = 44.5</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Which Measure to Use?</h3>
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">Use the Mean when…</div>
+              <div class="mt-desc">Data is roughly symmetrical with no extreme outliers. The mean uses every data value and is ideal for further statistical calculations (variance, z-scores). Best for: test scores, heights, continuous measurements.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Use the Median when…</div>
+              <div class="mt-desc">Data is skewed or contains outliers. The median is resistant to extreme values. Best for: income distributions (where a few millionaires skew the mean), house prices, age distributions in a group with elderly members.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Use the Mode when…</div>
+              <div class="mt-desc">You need the most popular or most frequent category. The only measure usable for <em>nominal</em> (non-ordered categorical) data. Best for: most popular shoe size, most common blood type, most-chosen subject.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 3: DISPERSION
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="dispersion" aria-labelledby="h2-disp">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📏</div>
+          <div>
+            <span class="ls-eyebrow">Section 3 · Secondary</span>
+            <h2 id="h2-disp">Measures of Dispersion</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Two datasets can have the same mean but behave very differently. Measures of dispersion describe
+            how spread out data is around the centre. A small standard deviation means values cluster closely
+            around the mean; a large standard deviation indicates greater spread. In KCSE examinations,
+            standard deviation and variance from grouped data are among the most frequently tested skills.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Dispersion Formulae</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Range</span>
+                <span class="fb-eq">Range = Maximum value − Minimum value</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Interquartile Range</span>
+                <span class="fb-eq">IQR = Q₃ − Q₁</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Population Variance</span>
+                <span class="fb-eq highlight-formula">σ² = Σ(x − x̄)² ÷ n = Σx² ÷ n − x̄²</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Sample Variance</span>
+                <span class="fb-eq">s² = Σ(x − x̄)² ÷ (n − 1)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standard Deviation</span>
+                <span class="fb-eq highlight-formula">σ = √[Σ(x − x̄)² ÷ n] &nbsp; or &nbsp; σ = √[Σ(fx²) ÷ Σf − x̄²]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Grouped SD (simplified)</span>
+                <span class="fb-eq">σ = √[Σ(fd²) ÷ Σf − (Σfd ÷ Σf)²] &nbsp; where d = x − A</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Coefficient of Variation</span>
+                <span class="fb-eq">CV = (σ ÷ x̄) × 100%</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Outlier boundaries</span>
+                <span class="fb-eq">Below Q₁ − 1.5×IQR &nbsp; or &nbsp; Above Q₃ + 1.5×IQR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Standard Deviation</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1 — Ungrouped</span> Find the population standard deviation of: 4, 7, 13, 2, 1, 9, 8, 6.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Mean</span><span>x̄ = (4+7+13+2+1+9+8+6) ÷ 8 = 50 ÷ 8 = 6.25</span></div>
+                <div class="we-step"><span class="step-n">Deviations²</span><span>(4−6.25)²=5.0625, (7−6.25)²=0.5625, (13−6.25)²=45.5625, (2−6.25)²=18.0625, (1−6.25)²=27.5625, (9−6.25)²=7.5625, (8−6.25)²=3.0625, (6−6.25)²=0.0625</span></div>
+                <div class="we-step"><span class="step-n">Σ(x−x̄)²</span><span>5.0625+0.5625+45.5625+18.0625+27.5625+7.5625+3.0625+0.0625 = <strong>107.5</strong></span></div>
+                <div class="we-step"><span class="step-n">Variance</span><span>σ² = 107.5 ÷ 8 = <strong>13.4375</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">SD</span><span>σ = √13.4375 ≈ <strong>3.67</strong></span></div>
+              </div>
+              <div class="we-answer">Standard Deviation σ ≈ 3.67</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Shortcut Formula</span> Same data: 4, 7, 13, 2, 1, 9, 8, 6. Use σ² = Σx²/n − x̄².</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Σx²</span><span>4²+7²+13²+2²+1²+9²+8²+6² = 16+49+169+4+1+81+64+36 = <strong>420</strong></span></div>
+                <div class="we-step"><span class="step-n">σ²</span><span>420 ÷ 8 − (6.25)² = 52.5 − 39.0625 = <strong>13.4375 ✓</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">SD</span><span>σ = √13.4375 ≈ <strong>3.67 ✓</strong> — same answer, much faster</span></div>
+              </div>
+              <div class="we-answer">The shortcut formula σ² = Σx²/n − x̄² is strongly preferred in KCSE under time pressure.</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Grouped Standard Deviation</span> Class: 10–19 (f=5, x=14.5), 20–29 (f=12, x=24.5), 30–39 (f=18, x=34.5), 40–49 (f=10, x=44.5), 50–59 (f=5, x=54.5). Use A = 34.5.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">d = x − A</span><span>−20, −10, 0, +10, +20</span></div>
+                <div class="we-step"><span class="step-n">fd</span><span>5×(−20)=−100, 12×(−10)=−120, 18×0=0, 10×10=100, 5×20=100. Σfd = −20</span></div>
+                <div class="we-step"><span class="step-n">fd²</span><span>5×400=2000, 12×100=1200, 18×0=0, 10×100=1000, 5×400=2000. Σfd² = 6200</span></div>
+                <div class="we-step"><span class="step-n">Σf</span><span>5+12+18+10+5 = 50</span></div>
+                <div class="we-step check-step"><span class="step-n">σ</span><span>σ = √[6200÷50 − (−20÷50)²] = √[124 − 0.16] = √123.84 ≈ <strong>11.13</strong></span></div>
+              </div>
+              <div class="we-answer">σ ≈ 11.13</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Box Plots and the Five-Number Summary</h3>
+          <p class="body-para">
+            A box plot (box-and-whisker diagram) provides a visual summary of distribution using five values.
+            It clearly shows skewness and highlights outliers — skills increasingly assessed in CBC Senior Secondary assessments.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Five-Number Summary</div>
+            <div class="fb-math">
+              Min, Q₁ (lower quartile), Q₂ (median), Q₃ (upper quartile), Max<br>
+              Q₁ = value at position (n+1)/4 &nbsp;&nbsp; Q₃ = value at position 3(n+1)/4<br>
+              For <em>grouped</em> data, use the interpolation formula (same as median formula above).<br>
+              Outlier fences: Lower = Q₁ − 1.5×IQR &nbsp;·&nbsp; Upper = Q₃ + 1.5×IQR
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 4: PROBABILITY
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="probability" aria-labelledby="h2-prob">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🎲</div>
+          <div>
+            <span class="ls-eyebrow">Section 4 · Secondary</span>
+            <h2 id="h2-prob">Probability</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Probability is the mathematical measure of how likely an event is to occur. It was formalised
+            by mathematicians including Kolmogorov in the 20th century, though its roots trace back to
+            17th-century gambling problems solved by Pascal and Fermat. In the CBC curriculum, probability
+            builds from simple equally-likely outcomes in Grade 8 to conditional probability and Bayes' theorem
+            at university level.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Probability Formulae</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Classical probability</span>
+                <span class="fb-eq highlight-formula">P(A) = n(A) ÷ n(S) &nbsp; (0 ≤ P(A) ≤ 1)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Complement rule</span>
+                <span class="fb-eq">P(A') = 1 − P(A)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Addition law (general)</span>
+                <span class="fb-eq">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Mutually exclusive events</span>
+                <span class="fb-eq">P(A ∪ B) = P(A) + P(B) &nbsp; [since P(A ∩ B) = 0]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Multiplication law (dependent)</span>
+                <span class="fb-eq">P(A ∩ B) = P(A) × P(B|A)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Independent events</span>
+                <span class="fb-eq">P(A ∩ B) = P(A) × P(B)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Conditional probability</span>
+                <span class="fb-eq">P(A|B) = P(A ∩ B) ÷ P(B)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Bayes' Theorem</span>
+                <span class="fb-eq highlight-formula">P(A|B) = [P(B|A) × P(A)] ÷ P(B)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Probability</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> A bag contains 5 red, 4 blue, and 3 green marbles. One marble is drawn at random. Find: (a) P(red), (b) P(not blue), (c) P(red or green).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">n(S)</span><span>Total = 5 + 4 + 3 = 12</span></div>
+                <div class="we-step"><span class="step-n">(a)</span><span>P(red) = 5/12</span></div>
+                <div class="we-step"><span class="step-n">(b)</span><span>P(not blue) = 1 − P(blue) = 1 − 4/12 = <strong>8/12 = 2/3</strong></span></div>
+                <div class="we-step"><span class="step-n">(c)</span><span>Red and green are mutually exclusive (a marble can't be both): P(red or green) = 5/12 + 3/12 = <strong>8/12 = 2/3</strong></span></div>
+              </div>
+              <div class="we-answer">(a) 5/12 &nbsp; (b) 2/3 &nbsp; (c) 2/3</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Tree Diagram / Without Replacement</span> A bag has 6 white and 4 black balls. Two balls are drawn without replacement. Find P(both black) and P(one of each colour).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">P(1st black)</span><span>4/10 = 2/5</span></div>
+                <div class="we-step"><span class="step-n">P(both black)</span><span>P(B₁ ∩ B₂) = 4/10 × 3/9 = 12/90 = <strong>2/15</strong></span></div>
+                <div class="we-step"><span class="step-n">One of each</span><span>P(WB) + P(BW) = (6/10 × 4/9) + (4/10 × 6/9) = 24/90 + 24/90 = 48/90 = <strong>8/15</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Verify</span><span>P(WW) + P(WB or BW) + P(BB) = 6/10×5/9 + 8/15 + 2/15 = 30/90 + 48/90 + 12/90 = 90/90 = 1 ✓</span></div>
+              </div>
+              <div class="we-answer">P(both black) = 2/15 &nbsp;·&nbsp; P(one of each) = 8/15</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3 — Conditional Probability</span> In a class, P(passes Maths) = 0.70, P(passes English) = 0.60, P(passes both) = 0.45. Given a student passes Maths, what is P(also passes English)?</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Formula</span><span>P(English | Maths) = P(Maths ∩ English) ÷ P(Maths)</span></div>
+                <div class="we-step"><span class="step-n">Substitute</span><span>= 0.45 ÷ 0.70 = <strong>0.643</strong> (3 s.f.)</span></div>
+              </div>
+              <div class="we-answer">P(English | Maths) ≈ 0.643 ≈ 64.3%</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4 — Bayes' Theorem (A-Level / University)</span> A disease affects 1% of the population. A test is 95% accurate (95% sensitivity: P(+|disease) = 0.95) and has a 5% false positive rate (P(+|no disease) = 0.05). A person tests positive. Find P(disease | positive test).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Given</span><span>P(D) = 0.01, P(D') = 0.99, P(+|D) = 0.95, P(+|D') = 0.05</span></div>
+                <div class="we-step"><span class="step-n">P(+)</span><span>Total probability law: P(+) = P(+|D)×P(D) + P(+|D')×P(D') = 0.95×0.01 + 0.05×0.99 = 0.0095 + 0.0495 = <strong>0.059</strong></span></div>
+                <div class="we-step"><span class="step-n">Bayes</span><span>P(D|+) = [P(+|D) × P(D)] ÷ P(+) = 0.0095 ÷ 0.059 ≈ <strong>0.161</strong></span></div>
+              </div>
+              <div class="we-answer">P(disease | positive test) ≈ 16.1% — Despite 95% accuracy, a positive result only means ~16% chance of disease when prevalence is low. This is why screening programmes must be carefully designed.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 5: PERMUTATIONS & COMBINATIONS
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="permutations" aria-labelledby="h2-perm">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔢</div>
+          <div>
+            <span class="ls-eyebrow">Section 5 · Secondary / A-Level</span>
+            <h2 id="h2-perm">Permutations &amp; Combinations</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Counting methods — permutations and combinations — form the foundation of probability calculations
+            for complex events. They answer questions like "how many ways can a committee be chosen?" or
+            "how many different arrangements of letters are possible?" The distinction between when order
+            matters (permutations) and when it does not (combinations) is fundamental and frequently tested in KCSE.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Counting Principles &amp; Formulae</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Multiplication principle</span>
+                <span class="fb-eq">If event A can occur in m ways and B in n ways, both together: m × n ways</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Factorial</span>
+                <span class="fb-eq">n! = n × (n−1) × (n−2) × … × 2 × 1 &nbsp;&nbsp; (0! = 1)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Permutations (ordered)</span>
+                <span class="fb-eq highlight-formula">P(n,r) = ⁿPᵣ = n! ÷ (n−r)!</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Permutations with repeats</span>
+                <span class="fb-eq">n! ÷ (a! × b! × c! × …) &nbsp; (if a items identical, b identical, etc.)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Combinations (unordered)</span>
+                <span class="fb-eq highlight-formula">C(n,r) = ⁿCᵣ = n! ÷ [r! × (n−r)!]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Symmetry of combinations</span>
+                <span class="fb-eq">C(n,r) = C(n, n−r)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Counting</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> How many 3-letter arrangements can be made from the letters of the word MATHS (no repetition)?</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Note</span><span>Order matters (arrangements/permutations). n = 5, r = 3.</span></div>
+                <div class="we-step"><span class="step-n">P(5,3)</span><span>= 5! ÷ (5−3)! = 5! ÷ 2! = 120 ÷ 2 = <strong>60 arrangements</strong></span></div>
+              </div>
+              <div class="we-answer">60 different 3-letter arrangements</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span> A committee of 4 is to be chosen from 9 candidates. How many different committees are possible? How many if the committee must include a specific person, Atieno?</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Note</span><span>Order does not matter (committees), so use combinations.</span></div>
+                <div class="we-step"><span class="step-n">Total</span><span>C(9,4) = 9! ÷ (4! × 5!) = (9×8×7×6) ÷ (4×3×2×1) = 3024 ÷ 24 = <strong>126 committees</strong></span></div>
+                <div class="we-step"><span class="step-n">Include Atieno</span><span>Atieno's seat is fixed; choose remaining 3 from 8: C(8,3) = 8!÷(3!×5!) = 336÷6 = <strong>56 committees</strong></span></div>
+              </div>
+              <div class="we-answer">126 total committees; 56 committees including Atieno</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span> How many arrangements of the letters in KENYA are there? How many start with K?</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">All 5 letters distinct</span><span>Total arrangements = 5! = <strong>120</strong></span></div>
+                <div class="we-step"><span class="step-n">Starting with K</span><span>Fix K in position 1; arrange remaining 4 letters: 4! = <strong>24</strong></span></div>
+              </div>
+              <div class="we-answer">120 total; 24 starting with K</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 6: PROBABILITY DISTRIBUTIONS
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="distributions" aria-labelledby="h2-dist">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📉</div>
+          <div>
+            <span class="ls-eyebrow">Section 6 · Secondary / A-Level</span>
+            <h2 id="h2-dist">Discrete Probability Distributions</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>A probability distribution describes all possible outcomes of a random variable and their
+            corresponding probabilities. For a discrete random variable X, the probability function assigns
+            a probability P(X = x) to each possible value x. This section covers the binomial distribution —
+            the most important discrete distribution in the CBC Senior Secondary syllabus — and introduces
+            the Poisson distribution for events occurring over time or space.</p>
+          </div>
+
+          <h3 class="sub-heading">Discrete Probability Distribution — Basics</h3>
+          <div class="formula-block">
+            <div class="fb-label">Properties of a Discrete Probability Distribution</div>
+            <div class="fb-math">
+              0 ≤ P(X = x) ≤ 1 for all x<br>
+              Σ P(X = x) = 1 &nbsp; (probabilities sum to 1)<br>
+              Expected value: E(X) = μ = Σ[x × P(X = x)]<br>
+              Variance: Var(X) = E(X²) − [E(X)]² = Σ[x² × P(X=x)] − μ²
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example — Probability Distribution Table</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> X takes values 1, 2, 3, 4 with probabilities 0.1, k, 0.3, 0.2 respectively. Find k, E(X), and Var(X).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Find k</span><span>Σ P = 1: 0.1 + k + 0.3 + 0.2 = 1 → k = 1 − 0.6 = <strong>0.4</strong></span></div>
+                <div class="we-step"><span class="step-n">E(X)</span><span>= 1(0.1) + 2(0.4) + 3(0.3) + 4(0.2) = 0.1 + 0.8 + 0.9 + 0.8 = <strong>2.6</strong></span></div>
+                <div class="we-step"><span class="step-n">E(X²)</span><span>= 1²(0.1) + 2²(0.4) + 3²(0.3) + 4²(0.2) = 0.1 + 1.6 + 2.7 + 3.2 = <strong>7.6</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Var(X)</span><span>= E(X²) − [E(X)]² = 7.6 − (2.6)² = 7.6 − 6.76 = <strong>0.84</strong></span></div>
+              </div>
+              <div class="we-answer">k = 0.4; E(X) = 2.6; Var(X) = 0.84</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Binomial Distribution B(n, p)</h3>
+          <p class="body-para">
+            The binomial distribution models the number of successes X in n <em>independent</em> trials,
+            each with a constant probability of success p. Conditions required: (1) fixed number of trials n,
+            (2) only two outcomes per trial (success/failure), (3) trials are independent, (4) constant probability p.
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Binomial Distribution</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Probability function</span>
+                <span class="fb-eq highlight-formula">P(X = r) = C(n,r) × pʳ × (1−p)ⁿ⁻ʳ</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Mean</span>
+                <span class="fb-eq">μ = E(X) = np</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Variance</span>
+                <span class="fb-eq">σ² = Var(X) = np(1−p) = npq &nbsp; where q = 1−p</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standard Deviation</span>
+                <span class="fb-eq">σ = √(npq)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Binomial Distribution</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2</span> A fair coin is tossed 8 times. Find: (a) P(exactly 5 heads), (b) P(at most 2 heads), (c) Mean and SD of heads.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Setup</span><span>X ~ B(8, 0.5). n = 8, p = 0.5, q = 0.5.</span></div>
+                <div class="we-step"><span class="step-n">(a)</span><span>P(X=5) = C(8,5) × (0.5)⁵ × (0.5)³ = 56 × (0.5)⁸ = 56 ÷ 256 = <strong>0.2188</strong></span></div>
+                <div class="we-step"><span class="step-n">(b)</span><span>P(X ≤ 2) = P(0) + P(1) + P(2).<br>P(0) = (0.5)⁸ = 1/256 ≈ 0.0039<br>P(1) = C(8,1)(0.5)⁸ = 8/256 ≈ 0.0313<br>P(2) = C(8,2)(0.5)⁸ = 28/256 ≈ 0.1094<br>P(X≤2) ≈ 0.0039+0.0313+0.1094 = <strong>0.1445</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">(c)</span><span>Mean = np = 8×0.5 = <strong>4</strong>. SD = √(npq) = √(8×0.5×0.5) = √2 ≈ <strong>1.414</strong></span></div>
+              </div>
+              <div class="we-answer">(a) 0.2188 &nbsp; (b) 0.1445 &nbsp; (c) Mean = 4, SD ≈ 1.414</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 3</span> In a multiple-choice test with 10 questions, each with 4 options, a student guesses all answers randomly. Find P(at least 3 correct).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Setup</span><span>X ~ B(10, 0.25). P(correct by guessing) = 1/4.</span></div>
+                <div class="we-step"><span class="step-n">Complement</span><span>P(X ≥ 3) = 1 − P(X ≤ 2) = 1 − [P(0) + P(1) + P(2)]</span></div>
+                <div class="we-step"><span class="step-n">P(0)</span><span>= (0.75)¹⁰ ≈ 0.0563</span></div>
+                <div class="we-step"><span class="step-n">P(1)</span><span>= C(10,1)(0.25)¹(0.75)⁹ = 10×0.25×0.0751 ≈ 0.1877</span></div>
+                <div class="we-step"><span class="step-n">P(2)</span><span>= C(10,2)(0.25)²(0.75)⁸ = 45×0.0625×0.1001 ≈ 0.2816</span></div>
+                <div class="we-step check-step"><span class="step-n">Answer</span><span>P(X≥3) = 1 − (0.0563+0.1877+0.2816) = 1 − 0.5256 = <strong>0.4744</strong></span></div>
+              </div>
+              <div class="we-answer">P(at least 3 correct) ≈ 0.474 ≈ 47.4%</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Poisson Distribution Po(λ)</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Poisson Distribution — for rare events over a fixed time/space</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Probability function</span>
+                <span class="fb-eq highlight-formula">P(X = k) = e⁻λ × λᵏ ÷ k!</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Mean = Variance</span>
+                <span class="fb-eq">E(X) = Var(X) = λ</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Conditions</span>
+                <span class="fb-eq">Events occur independently, at a constant average rate λ, singly (not simultaneously)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example — Poisson Distribution</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 4</span> Customers arrive at a bank at an average rate of 3 per minute. Find P(exactly 5 arrive in a given minute) and P(fewer than 2 arrive).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Setup</span><span>X ~ Po(3). λ = 3, e⁻³ ≈ 0.0498.</span></div>
+                <div class="we-step"><span class="step-n">P(X=5)</span><span>= e⁻³ × 3⁵ ÷ 5! = 0.0498 × 243 ÷ 120 = 0.0498 × 2.025 ≈ <strong>0.1008</strong></span></div>
+                <div class="we-step"><span class="step-n">P(X&lt;2)</span><span>= P(0) + P(1) = e⁻³×3⁰/0! + e⁻³×3¹/1! = 0.0498 + 0.1494 = <strong>0.1992</strong></span></div>
+              </div>
+              <div class="we-answer">P(X=5) ≈ 0.101; P(X&lt;2) ≈ 0.199</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 7: NORMAL DISTRIBUTION
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="normal-dist" aria-labelledby="h2-norm">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔔</div>
+          <div>
+            <span class="ls-eyebrow">Section 7 · A-Level / University</span>
+            <h2 id="h2-norm">The Normal Distribution N(μ, σ²)</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">Advanced</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>The normal distribution is the most important probability distribution in statistics.
+            Its characteristic bell-shaped curve arises naturally in many biological, physical, and social
+            measurements — heights of people, errors in measurements, exam marks. The Central Limit Theorem
+            (discussed in Section 8) guarantees that sample means follow a normal distribution, making it
+            fundamental to statistical inference.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Normal Distribution Formulae</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Probability density function</span>
+                <span class="fb-eq">f(x) = (1/σ√(2π)) × e^[−(x−μ)²/(2σ²)]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standardisation (Z-score)</span>
+                <span class="fb-eq highlight-formula">Z = (X − μ) ÷ σ &nbsp;&nbsp; (Z ~ N(0,1))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">68-95-99.7 Empirical Rule</span>
+                <span class="fb-eq">P(μ−σ &lt; X &lt; μ+σ) = 68.27%, P(μ−2σ &lt; X &lt; μ+2σ) = 95.45%, P(μ−3σ &lt; X &lt; μ+3σ) = 99.73%</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standard normal tables</span>
+                <span class="fb-eq">Φ(z) = P(Z ≤ z) &nbsp; (read from tables or use symmetry)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Symmetry</span>
+                <span class="fb-eq">P(Z &gt; z) = 1 − Φ(z) &nbsp;·&nbsp; P(Z &lt; −z) = 1 − Φ(z)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Normal Distribution</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> Exam scores follow N(65, 10²). Find: (a) P(score &gt; 80), (b) P(50 &lt; score &lt; 75), (c) The score at the 90th percentile.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Setup</span><span>μ = 65, σ = 10</span></div>
+                <div class="we-step"><span class="step-n">(a)</span><span>Z = (80−65)/10 = 1.5. P(X&gt;80) = P(Z&gt;1.5) = 1 − Φ(1.5) = 1 − 0.9332 = <strong>0.0668 (6.68%)</strong></span></div>
+                <div class="we-step"><span class="step-n">(b)</span><span>Z₁ = (50−65)/10 = −1.5; Z₂ = (75−65)/10 = 1.0.<br>P(−1.5 &lt; Z &lt; 1.0) = Φ(1.0) − Φ(−1.5) = 0.8413 − (1−0.9332) = 0.8413 − 0.0668 = <strong>0.7745</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">(c)</span><span>From tables, Φ(1.2816) = 0.90. So Z = 1.2816.<br>X = μ + Zσ = 65 + 1.2816×10 = 65 + 12.816 ≈ <strong>77.8</strong></span></div>
+              </div>
+              <div class="we-answer">(a) 6.68% &nbsp; (b) 77.45% &nbsp; (c) ≈ 77.8 marks</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Normal Approximation to Binomial</span> X ~ B(100, 0.4). Use normal approximation to find P(X &gt; 45).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Conditions</span><span>np = 40 &gt; 5 and nq = 60 &gt; 5 ✓ — normal approximation is valid.</span></div>
+                <div class="we-step"><span class="step-n">Parameters</span><span>μ = np = 40. σ = √(npq) = √(100×0.4×0.6) = √24 ≈ 4.899</span></div>
+                <div class="we-step"><span class="step-n">Continuity correction</span><span>P(X &gt; 45) ≈ P(X &gt; 45.5) with continuity correction.</span></div>
+                <div class="we-step check-step"><span class="step-n">Z-score</span><span>Z = (45.5 − 40) ÷ 4.899 ≈ 1.122. P(Z&gt;1.122) = 1 − Φ(1.12) ≈ 1 − 0.8686 = <strong>0.1314</strong></span></div>
+              </div>
+              <div class="we-answer">P(X &gt; 45) ≈ 0.131 ≈ 13.1%</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 8: SAMPLING & ESTIMATION
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="sampling" aria-labelledby="h2-samp">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔭</div>
+          <div>
+            <span class="ls-eyebrow">Section 8 · University</span>
+            <h2 id="h2-samp">Sampling, Estimation &amp; the Central Limit Theorem</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>We rarely have access to an entire population. Instead, we use a <strong>sample</strong> to make
+            inferences about population parameters. The Central Limit Theorem is the theoretical backbone that
+            makes this possible — it guarantees that sample means will be approximately normally distributed
+            for sufficiently large samples, regardless of the population's shape.</p>
+          </div>
+
+          <h3 class="sub-heading">Sampling Methods</h3>
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">Simple Random Sampling</div>
+              <div class="mt-desc">Every member of the population has an equal probability of being selected. Can be achieved using a random number table or computer-generated random numbers. Eliminates selection bias but requires a complete sampling frame.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Stratified Sampling</div>
+              <div class="mt-desc">Population divided into non-overlapping strata (e.g. by gender, county, school year). Sample taken proportionally from each stratum. Ensures representation of subgroups — particularly important in educational surveys.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Systematic Sampling</div>
+              <div class="mt-desc">Select every kth member after a random start. If population size N and sample size n, then k = N/n. Simple to implement but can introduce bias if there is periodicity in the population.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">Cluster Sampling</div>
+              <div class="mt-desc">Population divided into natural clusters (e.g. schools, villages). A random selection of whole clusters is surveyed. Cost-effective for geographically dispersed populations but less precise than stratified sampling.</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">The Central Limit Theorem (CLT)</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Central Limit Theorem &amp; Sampling Distribution of the Mean</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">CLT Statement</span>
+                <span class="fb-eq">For large n (≥30), X̄ ~ N(μ, σ²/n) regardless of the population distribution.</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Standard Error of the Mean</span>
+                <span class="fb-eq highlight-formula">SE = σ ÷ √n &nbsp;&nbsp; (or s ÷ √n for sample SD)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Z-score for sample mean</span>
+                <span class="fb-eq">Z = (X̄ − μ) ÷ (σ/√n)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">95% Confidence Interval for μ</span>
+                <span class="fb-eq highlight-formula">CI = X̄ ± 1.96 × (σ/√n)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">99% Confidence Interval for μ</span>
+                <span class="fb-eq">CI = X̄ ± 2.576 × (σ/√n)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example — Confidence Interval</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> A sample of 50 students has a mean score of 72 marks with SD = 8. Construct a 95% confidence interval for the population mean.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Given</span><span>n = 50, X̄ = 72, s = 8. Use Z = 1.96 for 95% CI.</span></div>
+                <div class="we-step"><span class="step-n">SE</span><span>= 8 ÷ √50 = 8 ÷ 7.071 ≈ 1.131</span></div>
+                <div class="we-step"><span class="step-n">Margin of Error</span><span>= 1.96 × 1.131 ≈ 2.217</span></div>
+                <div class="we-step check-step"><span class="step-n">CI</span><span>72 ± 2.22 → <strong>(69.78, 74.22)</strong></span></div>
+              </div>
+              <div class="we-answer">We are 95% confident the population mean lies between 69.78 and 74.22 marks.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 9: HYPOTHESIS TESTING
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="hypothesis" aria-labelledby="h2-hyp">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔬</div>
+          <div>
+            <span class="ls-eyebrow">Section 9 · University</span>
+            <h2 id="h2-hyp">Hypothesis Testing</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Hypothesis testing provides a systematic, objective framework for using sample data to make
+            decisions about population parameters. It is the engine of scientific research, medical trials,
+            quality control, and policy evaluation. A hypothesis test never proves a hypothesis — it either
+            provides evidence against the null hypothesis or fails to do so.</p>
+          </div>
+
+          <h3 class="sub-heading">The Five-Step Procedure for Hypothesis Testing</h3>
+          <ol class="method-steps">
+            <li><strong>State the hypotheses:</strong> The <strong>null hypothesis H₀</strong> is the default assumption (no effect, no difference, equals the claimed value). The <strong>alternative hypothesis H₁</strong> (or Hₐ) is what you are trying to find evidence for. H₁ determines whether the test is one-tailed or two-tailed.</li>
+            <li><strong>Choose the significance level α:</strong> Typically α = 0.05 (5%) or α = 0.01 (1%). This is the probability of rejecting H₀ when it is actually true (Type I error rate).</li>
+            <li><strong>Select the test and calculate the test statistic:</strong> For means with known σ: Z-test. For means with unknown σ and small n: t-test. For proportions: Z-test. For goodness of fit / independence: Chi-square test.</li>
+            <li><strong>Find the p-value or critical value:</strong> The p-value is the probability of observing a test statistic at least as extreme as the one computed, assuming H₀ is true.</li>
+            <li><strong>Make a decision:</strong> If p-value &lt; α (or test statistic falls in rejection region): <em>Reject H₀</em>. If p-value ≥ α: <em>Fail to reject H₀</em>. Never say "accept H₁" — the test cannot prove H₁, only provide evidence for it.</li>
+          </ol>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Test Statistics</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">One-sample Z-test (σ known)</span>
+                <span class="fb-eq highlight-formula">Z = (X̄ − μ₀) ÷ (σ ÷ √n)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">One-sample t-test (σ unknown)</span>
+                <span class="fb-eq highlight-formula">T = (X̄ − μ₀) ÷ (s ÷ √n) ~ t(n−1)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Z-test for proportion</span>
+                <span class="fb-eq">Z = (p̂ − p₀) ÷ √[p₀(1−p₀)/n]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Chi-square goodness of fit</span>
+                <span class="fb-eq highlight-formula">χ² = Σ [(O − E)² ÷ E] ~ χ²(df)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Chi-square independence</span>
+                <span class="fb-eq">df = (rows − 1) × (cols − 1) &nbsp;&nbsp; Expected: E = (row total × col total) ÷ grand total</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Hypothesis Testing</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1 — Z-test</span> A teacher claims the average score for a large standardised test is 70. A sample of 36 students has x̄ = 73.2, σ = 9.6. Test at α = 0.05 (two-tailed).</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">H₀ and H₁</span><span>H₀: μ = 70 &nbsp;·&nbsp; H₁: μ ≠ 70 (two-tailed)</span></div>
+                <div class="we-step"><span class="step-n">Critical values</span><span>At α = 0.05 two-tailed: Z_crit = ±1.96</span></div>
+                <div class="we-step"><span class="step-n">Test statistic</span><span>Z = (73.2 − 70) ÷ (9.6 ÷ √36) = 3.2 ÷ (9.6 ÷ 6) = 3.2 ÷ 1.6 = <strong>2.00</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Decision</span><span>|Z| = 2.00 &gt; 1.96. <strong>Reject H₀.</strong> There is sufficient evidence at 5% significance that the mean score differs from 70.</span></div>
+              </div>
+              <div class="we-answer">Reject H₀. The sample mean of 73.2 is significantly different from 70.</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Chi-Square Test of Independence</span> A survey of 200 students asks whether they prefer Science or Arts, and records their gender. Observed: (Male: Science=60, Arts=40), (Female: Science=50, Arts=50). Test at α = 0.05 whether subject preference is independent of gender.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">H₀ and H₁</span><span>H₀: Subject preference is independent of gender. H₁: They are associated.</span></div>
+                <div class="we-step"><span class="step-n">Row/Col totals</span><span>Male=100, Female=100. Science=110, Arts=90. Grand total=200.</span></div>
+                <div class="we-step"><span class="step-n">Expected values</span><span>E(M,Sci) = 100×110/200 = 55; E(M,Arts) = 100×90/200 = 45; E(F,Sci) = 55; E(F,Arts) = 45.</span></div>
+                <div class="we-step"><span class="step-n">χ²</span><span>= (60−55)²/55 + (40−45)²/45 + (50−55)²/55 + (50−45)²/45<br>= 25/55 + 25/45 + 25/55 + 25/45<br>= 0.455 + 0.556 + 0.455 + 0.556 = <strong>2.02</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">Decision</span><span>df = (2−1)(2−1) = 1. Critical value χ²(1, 0.05) = 3.841. Since 2.02 &lt; 3.841, <strong>Fail to reject H₀.</strong> No significant association at 5% level.</span></div>
+              </div>
+              <div class="we-answer">Fail to reject H₀. Insufficient evidence of association between gender and subject preference.</div>
+            </div>
+          </div>
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠</span>
+            <div>
+              <strong>Type I and Type II Errors:</strong><br>
+              <em>Type I Error (False Positive):</em> Rejecting H₀ when it is actually true. Probability = α (the significance level you set).<br>
+              <em>Type II Error (False Negative):</em> Failing to reject H₀ when H₁ is actually true. Probability = β.<br>
+              <em>Power of the test</em> = 1 − β = probability of correctly rejecting a false H₀.<br>
+              Reducing α decreases Type I error but increases Type II error — there is always a trade-off.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 10: REGRESSION & CORRELATION
+      ══════════════════════════════════════════════════ -->
+      <article class="lesson-section" id="regression" aria-labelledby="h2-reg">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📐</div>
+          <div>
+            <span class="ls-eyebrow">Section 10 · University</span>
+            <h2 id="h2-reg">Regression &amp; Correlation</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Correlation measures the strength and direction of a linear relationship between two variables.
+            Regression goes further — it models the relationship as an equation that allows prediction.
+            Both tools are essential in economics, medicine, education research, and engineering.
+            A critical principle: <em>correlation does not imply causation</em>. Two variables may be
+            correlated because they share a common cause, not because one causes the other.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Correlation &amp; Regression Formulae</div>
+            <div class="fb-grid">
+              <div class="fb-row">
+                <span class="fb-name">Pearson's r (correlation coefficient)</span>
+                <span class="fb-eq highlight-formula">r = Σ(xᵢ−x̄)(yᵢ−ȳ) ÷ [√Σ(xᵢ−x̄)² × √Σ(yᵢ−ȳ)²]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Computational form of r</span>
+                <span class="fb-eq">r = [nΣxy − ΣxΣy] ÷ √{[nΣx² − (Σx)²][nΣy² − (Σy)²]}</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Regression line y on x</span>
+                <span class="fb-eq">ŷ = a + bx &nbsp; (use for predicting y from x)</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Gradient b</span>
+                <span class="fb-eq highlight-formula">b = [nΣxy − ΣxΣy] ÷ [nΣx² − (Σx)²]</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Intercept a</span>
+                <span class="fb-eq">a = ȳ − b×x̄ &nbsp;&nbsp; (line always passes through (x̄, ȳ))</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Coefficient of determination</span>
+                <span class="fb-eq">r² = proportion of variance in y explained by x</span>
+              </div>
+              <div class="fb-row">
+                <span class="fb-name">Spearman's rank correlation</span>
+                <span class="fb-eq">rₛ = 1 − [6Σd²] ÷ [n(n²−1)] &nbsp;&nbsp; (d = difference in ranks)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">📊</span>
+            <div>
+              <strong>Interpreting r:</strong>
+              r = +1 (perfect positive linear correlation) · r = −1 (perfect negative linear correlation) ·
+              r = 0 (no linear correlation) · |r| &gt; 0.8 (strong) · 0.5 &lt; |r| &lt; 0.8 (moderate) ·
+              |r| &lt; 0.5 (weak). Note: r measures only <em>linear</em> relationships;
+              two variables can have r = 0 but still be strongly related in a non-linear way.
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Example — Correlation and Regression</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 1</span> Five students: x = hours studied (2, 4, 6, 8, 10) and y = test score (45, 55, 65, 72, 80). Find r and the regression equation.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Sums</span><span>n=5, Σx=30, Σy=317, Σx²=220, Σy²=20383, Σxy=2070</span></div>
+                <div class="we-step"><span class="step-n">Means</span><span>x̄ = 30/5 = 6; ȳ = 317/5 = 63.4</span></div>
+                <div class="we-step"><span class="step-n">r numerator</span><span>nΣxy − ΣxΣy = 5×2070 − 30×317 = 10350 − 9510 = <strong>840</strong></span></div>
+                <div class="we-step"><span class="step-n">r denominator</span><span>√{[5×220−900][5×20383−100489]} = √{[1100−900][101915−100489]} = √{200 × 1426} = √285200 ≈ <strong>534.04</strong></span></div>
+                <div class="we-step"><span class="step-n">r</span><span>= 840 ÷ 534.04 ≈ <strong>0.972</strong> — strong positive correlation ✓</span></div>
+                <div class="we-step"><span class="step-n">b</span><span>= 840 ÷ 200 = <strong>4.2</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">a &amp; equation</span><span>a = 63.4 − 4.2×6 = 63.4 − 25.2 = <strong>38.2</strong>. Regression line: <strong>ŷ = 38.2 + 4.2x</strong></span></div>
+              </div>
+              <div class="we-answer">r ≈ 0.972 (very strong positive). Predicted score for 7 hours: ŷ = 38.2 + 4.2×7 = 67.6</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Example 2 — Spearman's Rank Correlation</span> Five judges rank five contestants A–E in two categories. Ranks: Category 1: A=1, B=3, C=2, D=5, E=4. Category 2: A=2, B=1, C=4, D=3, E=5. Find rₛ.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Differences d</span><span>A: 1−2=−1; B: 3−1=2; C: 2−4=−2; D: 5−3=2; E: 4−5=−1</span></div>
+                <div class="we-step"><span class="step-n">d²</span><span>1, 4, 4, 4, 1 → Σd² = <strong>14</strong></span></div>
+                <div class="we-step check-step"><span class="step-n">rₛ</span><span>= 1 − 6×14 ÷ [5×(25−1)] = 1 − 84 ÷ 120 = 1 − 0.7 = <strong>0.3</strong></span></div>
+              </div>
+              <div class="we-answer">rₛ = 0.3 — weak positive rank correlation between the two judges.</div>
+            </div>
+          </div>
+
+          <!-- Common Errors -->
+          <h3 class="sub-heading">Common Errors in Statistics</h3>
+          <div class="errors-grid">
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Using mean when data has extreme outliers</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>Use median for skewed distributions or data with outliers</div>
+              <div class="ec-note">Example: One student scores 2, all others score 80–90. Mean is misleading; median better represents the group.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>In histogram, plotting frequency on y-axis when class widths are unequal</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>Plot frequency density = frequency ÷ class width</div>
+              <div class="ec-note">The area of each bar, not the height, must equal the frequency.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>P(A and B) = P(A) + P(B) for any two events</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>P(A ∩ B) = P(A) × P(B) only when A and B are independent</div>
+              <div class="ec-note">Always check independence or use P(A ∩ B) = P(A) × P(B|A).</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>Dividing by n when calculating sample variance/SD</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>For a sample: divide by (n−1) to get unbiased estimate</div>
+              <div class="ec-note">σ² = Σ(x−x̄)²/n (population); s² = Σ(x−x̄)²/(n−1) (sample estimate).</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>"Correlation proves causation" — claiming X causes Y because r is high</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>Correlation only indicates that X and Y move together linearly</div>
+              <div class="ec-note">Ice cream sales and drowning rates are positively correlated — both driven by hot weather, not by each other.</div>
+            </div>
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong</span>After failing to reject H₀, concluding "H₀ is true" or "H₀ is accepted"</div>
+              <div class="ec-right"><span class="ec-label">✓ Right</span>"There is insufficient evidence to reject H₀ at the α level"</div>
+              <div class="ec-note">Hypothesis tests cannot prove a null hypothesis; they can only fail to disprove it given the sample size.</div>
+            </div>
+          </div>
+
+          <!-- Formula Sheet -->
+          <h3 class="sub-heading">Quick Reference Formula Sheet</h3>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">Central Tendency</div>
+              <div class="fs-items">
+                <div class="fs-item">x̄ = Σx/n</div>
+                <div class="fs-item">x̄ grouped = Σ(fx)/Σf</div>
+                <div class="fs-item">Md = L + [(n/2−F)/f]×h</div>
+                <div class="fs-item">Mo = L + [Δ₁/(Δ₁+Δ₂)]×h</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Dispersion</div>
+              <div class="fs-items">
+                <div class="fs-item">σ² = Σx²/n − x̄²</div>
+                <div class="fs-item">σ grouped = √[Σfd²/Σf − (Σfd/Σf)²]</div>
+                <div class="fs-item">IQR = Q₃ − Q₁</div>
+                <div class="fs-item">CV = (σ/x̄) × 100%</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Probability</div>
+              <div class="fs-items">
+                <div class="fs-item">P(A∪B) = P(A)+P(B)−P(A∩B)</div>
+                <div class="fs-item">P(A|B) = P(A∩B)/P(B)</div>
+                <div class="fs-item">P(A∩B) = P(A)×P(B|A)</div>
+                <div class="fs-item">P(A') = 1 − P(A)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Distributions</div>
+              <div class="fs-items">
+                <div class="fs-item">Binomial: P(r) = C(n,r)pʳqⁿ⁻ʳ</div>
+                <div class="fs-item">B(n,p): μ=np, σ²=npq</div>
+                <div class="fs-item">Poisson: P(k) = e⁻λλᵏ/k!</div>
+                <div class="fs-item">Po(λ): μ = Var = λ</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Normal Distribution</div>
+              <div class="fs-items">
+                <div class="fs-item">Z = (X − μ)/σ</div>
+                <div class="fs-item">68-95-99.7% rule</div>
+                <div class="fs-item">P(Z&gt;z) = 1 − Φ(z)</div>
+                <div class="fs-item">CI: X̄ ± z × σ/√n</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Regression</div>
+              <div class="fs-items">
+                <div class="fs-item">b = [nΣxy−ΣxΣy]/[nΣx²−(Σx)²]</div>
+                <div class="fs-item">a = ȳ − bx̄</div>
+                <div class="fs-item">r = Sxy/√(Sxx×Syy)</div>
+                <div class="fs-item">rₛ = 1 − 6Σd²/[n(n²−1)]</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Hypothesis Tests</div>
+              <div class="fs-items">
+                <div class="fs-item">Z = (X̄−μ₀)/(σ/√n)</div>
+                <div class="fs-item">T = (X̄−μ₀)/(s/√n)</div>
+                <div class="fs-item">χ² = Σ(O−E)²/E</div>
+                <div class="fs-item">SE = σ/√n</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Counting</div>
+              <div class="fs-items">
+                <div class="fs-item">ⁿPᵣ = n!/(n−r)!</div>
+                <div class="fs-item">ⁿCᵣ = n!/[r!(n−r)!]</div>
+                <div class="fs-item">Repeats: n!/(a!b!c!…)</div>
+                <div class="fs-item">C(n,r) = C(n,n−r)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- TOPIC NAV FOOTER -->
+      <nav class="topic-nav-footer" aria-label="Navigate between topics">
+        <a href="conics.html" class="tnf-btn tnf-prev">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          <span>
+            <span class="tnf-label">Previous</span>
+            <span class="tnf-name">Conic Sections</span>
+          </span>
+        </a>
+        <a href="differentiation.html" class="tnf-btn tnf-next">
+          <span>
+            <span class="tnf-label">Next</span>
+            <span class="tnf-name">Differentiation</span>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+
+    </main><!-- /topic-content -->
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · KNEC · Ministry of Education Kenya</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Other Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>More Lessons</h4>
+          <ul>
+            <li><a href="conics.html">Conic Sections</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. All rights reserved. Written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, step-by-step, CBC-aligned instruction.</p>
+    </div>
+  </footer>
+
+  <!-- Shared JS for all topic pages -->
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
+
 </body>
 </html>

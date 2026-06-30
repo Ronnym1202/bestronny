@@ -1,710 +1,1183 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Math Brain Games by Ronny Best — free interactive maths challenges for Primary, Secondary, and University students. Master arithmetic, algebra, trigonometry, calculus, matrices, series, and complex numbers through engaging games.">
-    <meta name="keywords" content="math games, maths brain games, algebra games, calculus games, trigonometry games, matrix games, educational maths, primary maths, secondary maths, university maths, Kenya maths, interactive maths">
-    <meta name="author" content="Ronny Best">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#4a2508">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Math Brain Games – Ronny Best">
-    <meta property="og:description" content="Free interactive maths games for all levels — from primary arithmetic to university calculus and complex numbers.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ronnybest.com/mind.html">
-    <title>Math Brain Games – Ronny Best | Interactive Maths for All Levels</title>
-    <link rel="icon" type="image/png" href="IMAGES/P2.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="mind.css">
+<head>
+  <!-- ═══ META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Brain Games | Ronny Best Mathematics — Free CBC-Aligned Interactive Practice</title>
+  <meta name="description" content="Free interactive mathematics brain games for Kenyan students — Primary through University. Covers arithmetic, algebra, trigonometry, graphs, factorisation, calculus, matrices, series and complex numbers. CBC and KICD aligned. By Mwalimu Ronny Mwenda Best.">
+  <meta name="keywords" content="math games Kenya, CBC maths games, free maths practice, algebra games Kenya, trigonometry games, calculus games, KCSE maths practice, primary maths games Kenya, university maths games, brain games mathematics">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/mind.html">
+
+  <meta property="og:title" content="Math Brain Games | Ronny Best Mathematics — CBC-Aligned Interactive Practice">
+  <meta property="og:description" content="Free procedurally generated maths brain games for Primary, Secondary, and University students in Kenya. Unlimited practice, instant feedback, step-by-step working.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bestronny.netlify.app/mind.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+  <!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="topic.css">
+  <link rel="stylesheet" href="mind.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Math Brain Games — Ronny Best Mathematics",
+    "applicationCategory": "EducationalApplication",
+    "description": "Free interactive, procedurally generated mathematics brain games for Primary, Secondary, and University students in Kenya — covering arithmetic, algebra, trigonometry, graphs, factorisation, calculus, matrices, series, and complex numbers. Fully aligned to the CBC/KICD curriculum.",
+    "url": "https://bestronny.netlify.app/mind.html",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Mwenda Best",
+      "jobTitle": "Mathematics and Computer Science Teacher",
+      "alumniOf": "University of Embu",
+      "address": { "@type": "PostalAddress", "addressRegion": "Embu County", "addressCountry": "KE" }
+    },
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Ronny Best Mathematics",
+      "url": "https://bestronny.netlify.app/"
+    },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KES", "description": "Free — no account required" },
+    "educationalLevel": "Primary School, Secondary School, University",
+    "teaches": "Mathematics",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "dateModified": "2026-06-13"
+  }
+  </script>
 </head>
 <body>
 
-<!-- Skip to content for accessibility -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<!-- ═══ SKIP LINKS ═══ -->
+<a href="#main-content" class="skip-link">Skip to games</a>
+<a href="#game-sidebar" class="skip-link skip-link-2">Skip to game navigation</a>
 
-<!-- HEADER -->
-<header role="banner">
-    <div class="header-inner">
-        <a href="index.html" class="site-logo" aria-label="Ronny Best home">RonnyBest <span aria-hidden="true">∑</span></a>
-        <nav class="header-nav" id="header-nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="main.html">Lessons</a>
-            <a href="tasks.html">Practice</a>
-            <a href="ask-mwalimu.html">Ask Mwalimu</a>
-            <a href="mind.html" class="active" aria-current="page">Brain Games</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="header-nav">
-            <span></span><span></span><span></span>
-        </button>
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+        <span class="brand-sigma" aria-hidden="true">Σ</span>
+        <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+      </a>
+      <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
     </div>
-    <div class="hero-block">
-        <div class="hero-badges" aria-label="Available difficulty levels">
-            <span class="hero-badge badge-primary">🟢 Primary</span>
-            <span class="hero-badge badge-secondary">🟡 Secondary</span>
-            <span class="hero-badge badge-uni">🔴 University</span>
-        </div>
-        <h1>Math Brain Games</h1>
-        <p>Challenge yourself across every level — from everyday arithmetic to advanced university calculus</p>
-        <div class="hero-stats" aria-label="Platform overview">
-            <div class="hstat"><strong>11</strong><span>Games</span></div>
-            <div class="hstat-div" aria-hidden="true"></div>
-            <div class="hstat"><strong>3</strong><span>Levels</span></div>
-            <div class="hstat-div" aria-hidden="true"></div>
-            <div class="hstat"><strong>∞</strong><span>Questions</span></div>
-        </div>
-    </div>
+    <p id="welcome" class="welcome-pill" aria-live="polite"></p>
+  </div>
 </header>
 
-<div class="page-wrap">
-
-<!-- ── EDUCATIONAL INTRO (AdSense content depth) ─────────────── -->
-<section class="edu-intro" aria-label="About Math Brain Games">
-    <div class="edu-intro-inner">
-        <h2>Why Play Maths Brain Games?</h2>
-        <p>Research consistently shows that active, game-based practice is one of the most effective ways to build mathematical fluency. Unlike passive revision, these interactive challenges force you to recall, apply, and reason — the three pillars of deep mathematical understanding. Whether you are a primary school learner building confidence with times tables, a secondary student wrestling with quadratic equations, or a university student tackling infinite series, targeted practice through instant feedback is what cements knowledge.</p>
-        <div class="edu-grid">
-            <div class="edu-card">
-                <span class="edu-icon" aria-hidden="true">⚡</span>
-                <h3>Instant Feedback</h3>
-                <p>Every answer is checked immediately. You see exactly where you went wrong and why — so you learn from mistakes rather than repeating them.</p>
-            </div>
-            <div class="edu-card">
-                <span class="edu-icon" aria-hidden="true">📈</span>
-                <h3>Progressive Difficulty</h3>
-                <p>Games scale from single-digit arithmetic right through to eigenvalue problems and convergence tests, so there is always the right level of challenge.</p>
-            </div>
-            <div class="edu-card">
-                <span class="edu-icon" aria-hidden="true">🎯</span>
-                <h3>Curriculum Aligned</h3>
-                <p>Content mirrors standard Primary, Secondary, and University syllabuses — covering number, algebra, geometry, trigonometry, calculus, and beyond.</p>
-            </div>
-            <div class="edu-card">
-                <span class="edu-icon" aria-hidden="true">🏆</span>
-                <h3>Personal Records</h3>
-                <p>Your best scores are saved locally so you can track genuine improvement over time and challenge yourself to beat your own record each session.</p>
-            </div>
-        </div>
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-mobile-bar">
+      <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+      <div class="nav-mobile-actions">
+        <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+        </button>
+      </div>
     </div>
+    <div class="nav-search-bar" id="navSearchBar" hidden>
+      <div class="nsb-inner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+        <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+    <ul class="nav-list" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-has-dropdown">
+        <a href="main.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <ul class="nav-dropdown" role="menu">
+          <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+          <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+          <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+          <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+          <li role="none"><a href="differentiation.html" role="menuitem">Differentiation</a></li>
+          <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+          <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+          <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+          <li role="none"><a href="conics.html" role="menuitem">Conic Sections</a></li>
+          <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+          <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+          <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+          <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+        </ul>
+      </li>
+      <li><a href="tasks.html">Practice</a></li>
+      <li><a href="mind.html" class="active" aria-current="page">Brain Games</a></li>
+      <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="progress.html">My Progress</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══ GAMES HERO ═══ -->
+<section class="topic-hero" aria-labelledby="games-heading">
+  <div class="topic-hero-bg" aria-hidden="true"></div>
+  <div class="topic-hero-symbols" aria-hidden="true">
+    <span>+</span><span>×</span><span>∑</span><span>ℂ</span><span>∂</span>
+  </div>
+  <div class="topic-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <span aria-current="page">Brain Games</span>
+    </nav>
+    <div class="topic-hero-icon" aria-hidden="true">🧠</div>
+    <h1 id="games-heading">Math Brain Games</h1>
+    <p class="topic-hero-sub">
+      Sharpen your mathematical thinking with free, procedurally generated challenges — from primary arithmetic to university calculus and complex analysis. Every question is freshly generated, so practice never runs out. Instant feedback and full worked solutions mean you genuinely learn from every attempt, not just pass the time. Content follows the same <strong>CBC/KICD</strong> progression used throughout this site.
+    </p>
+    <div class="topic-meta-row">
+      <span class="topic-badge badge-strand">11 Games</span>
+      <span class="topic-badge badge-level">Primary · Secondary · University</span>
+      <span class="topic-badge badge-cbc">CBC / KICD Aligned</span>
+      <span class="topic-badge badge-exam">∞ Questions</span>
+    </div>
+    <div class="topic-stats-row" role="list">
+      <div class="ts-item" role="listitem"><strong>11</strong><span>Games</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>3</strong><span>Levels</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>∞</strong><span>Questions</span></div>
+      <div class="ts-div" aria-hidden="true"></div>
+      <div class="ts-item" role="listitem"><strong>Free</strong><span>No Signup</span></div>
+    </div>
+
+    <!-- QUICK JUMP BUTTONS — visible in hero so users can jump immediately -->
+    <div class="hero-quick-jump" role="navigation" aria-label="Jump to game level">
+      <span class="hqj-label">Jump to:</span>
+      <a href="#panel-primary" class="hqj-btn hqj-primary" onclick="switchLevel('primary', document.querySelector('[data-level=primary]'))">
+        🟢 Primary Games
+      </a>
+      <a href="#panel-secondary" class="hqj-btn hqj-secondary" onclick="switchLevel('secondary', document.querySelector('[data-level=secondary]'))">
+        🟡 Secondary Games
+      </a>
+      <a href="#panel-university" class="hqj-btn hqj-uni" onclick="switchLevel('university', document.querySelector('[data-level=university]'))">
+        🔴 University Games
+      </a>
+    </div>
+  </div>
 </section>
 
-<main class="main-col" id="main-content">
+<!-- ═══ PAGE WRAP ═══ -->
+<div class="mind-page-wrap">
 
-    <!-- LEVEL SELECTOR -->
-    <div class="level-selector" role="tablist" aria-label="Select difficulty level">
-        <button class="level-tab active" data-level="primary" role="tab" aria-selected="true" aria-controls="panel-primary" onclick="switchLevel('primary', this)">
-            <span class="lt-emoji" aria-hidden="true">🟢</span>
-            <div class="lt-info">
-                <strong>Primary</strong>
-                <span>Ages 8–12</span>
+  <!-- ══════════════════════════════════════════════════════
+       COLLAPSIBLE EDUCATIONAL INTRO
+  ══════════════════════════════════════════════════════ -->
+  <details class="mind-collapsible" id="edu-intro-details">
+    <summary class="mind-collapsible-summary" aria-expanded="false">
+      <span class="mcs-icon" aria-hidden="true">📖</span>
+      <span class="mcs-text">Why interactive games accelerate maths learning — &amp; curriculum overview</span>
+      <span class="mcs-chevron" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </span>
+    </summary>
+
+    <div class="mind-collapsible-body">
+
+      <!-- Educational intro -->
+      <section class="mind-edu-intro" aria-labelledby="why-games-heading">
+        <div class="mind-edu-inner">
+          <h2 id="why-games-heading">Why Interactive Games Accelerate Mathematics Learning</h2>
+          <p>Educational research consistently shows that <strong>active retrieval practice</strong> — recalling and applying knowledge under mild time pressure with immediate feedback — is significantly more effective than passive revision. These games are designed around that principle. Rather than re-reading notes, you are forced to retrieve, apply, and reason under real conditions. Each incorrect answer comes with a full worked solution, so you understand exactly what went wrong and why — converting mistakes into lasting learning rather than frustration.</p>
+          <p>Whether you are a <strong>primary learner</strong> building confidence with arithmetic and times tables, a <strong>secondary student</strong> wrestling with quadratic equations and trigonometric rules for KCSE, or a <strong>university student</strong> practising eigenvalues and infinite series convergence, targeted active practice is what separates memorisation from genuine mathematical understanding. All games on this page are aligned to the <strong>Competency Based Curriculum (CBC)</strong> progression approved by KICD and the Ministry of Education Kenya.</p>
+          <div class="mind-edu-grid">
+            <div class="mind-edu-card">
+              <span class="mind-edu-icon" aria-hidden="true">⚡</span>
+              <h3>Instant Feedback</h3>
+              <p>Every answer is checked in real time. You see immediately whether you were right, what the correct answer is, and — via the "Show Working" button — the full step-by-step method.</p>
             </div>
-            <span class="lt-count">3 games</span>
+            <div class="mind-edu-card">
+              <span class="mind-edu-icon" aria-hidden="true">🎯</span>
+              <h3>Procedurally Generated Questions</h3>
+              <p>Every question is mathematically generated fresh each round using randomised parameters. You will never see the exact same question twice, forcing your brain to apply principles rather than pattern-match.</p>
+            </div>
+            <div class="mind-edu-card">
+              <span class="mind-edu-icon" aria-hidden="true">📈</span>
+              <h3>Progressive Difficulty</h3>
+              <p>Games scale from single-digit arithmetic right through to eigenvalue problems and convergence tests. Within each game, modes let you select your level.</p>
+            </div>
+            <div class="mind-edu-card">
+              <span class="mind-edu-icon" aria-hidden="true">🏆</span>
+              <h3>Personal Records &amp; Progress</h3>
+              <p>Your best scores are saved locally in your browser. Scores integrate with your <a href="progress.html">My Progress</a> dashboard alongside your lesson and practice problem history.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ronny Edu Games cross-promotion -->
+      <section class="ronnygame-banner" aria-labelledby="ronnygame-heading">
+        <div class="rg-banner-inner">
+          <div class="rg-banner-text">
+            <div class="rg-eyebrow">🎮 Also by Mwalimu Ronny</div>
+            <h2 id="ronnygame-heading">Ronny Edu Games — Maths &amp; Computer Science</h2>
+            <p>Mwalimu Ronny also runs a <strong>dedicated educational games platform</strong> at <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener noreferrer">ronnygame.netlify.app</a> — hosting <strong>24 free games across Mathematics and Computer Science</strong>, from Primary through University level.</p>
+            <div class="rg-subjects">
+              <div class="rg-subject">
+                <span class="rg-subject-icon" aria-hidden="true">∑</span>
+                <div>
+                  <strong>Mathematics (12 games)</strong>
+                  <p>Arithmetic Blast, Algebra Blitz, Trigonometry, Statistics, Geometry, Sequences, Derivatives, Integration, Matrices, Limits, Complex Numbers, Probability</p>
+                </div>
+              </div>
+              <div class="rg-subject">
+                <span class="rg-subject-icon" aria-hidden="true">&lt;/&gt;</span>
+                <div>
+                  <strong>Computer Science (12 games)</strong>
+                  <p>Binary Explorer, Logic Gates, Programming Concepts, Sorting Visualiser, Big-O Complexity, Data Structures, Boolean Algebra, Search Algorithms, Recursion, Network Protocols, Cybersecurity, ASCII</p>
+                </div>
+              </div>
+            </div>
+            <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener noreferrer" class="rg-cta-btn">Visit Ronny Edu Games →</a>
+          </div>
+          <div class="rg-banner-badge" aria-hidden="true">
+            <div class="rg-badge-circle">
+              <span class="rg-big-num">24</span>
+              <span class="rg-big-label">Free Games</span>
+              <span class="rg-big-sub">Maths &amp; CS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curriculum overview -->
+      <section class="mind-curriculum" aria-labelledby="curriculum-heading">
+        <div class="mind-curriculum-inner">
+          <h2 id="curriculum-heading">What Each Level Covers — CBC Curriculum Alignment</h2>
+          <div class="mind-level-cards">
+
+            <div class="mind-level-card mlc-primary">
+              <div class="mlc-header">
+                <span class="mlc-emoji" aria-hidden="true">🟢</span>
+                <div>
+                  <h3>Primary Level Games (Ages 8–12)</h3>
+                  <span class="mlc-tag">3 Games · Foundation Stage</span>
+                </div>
+              </div>
+              <div class="mlc-body">
+                <p>The primary games reinforce foundational number sense, arithmetic fluency, and first geometry concepts — all mapped to the CBC Lower Primary and Upper Primary mathematics strands.</p>
+                <div class="mlc-games">
+                  <div class="mlc-game"><strong>⚔️ Number Ninja</strong><p>Rapid arithmetic challenge — addition, subtraction, and multiplication under a 15-second timer. Ten rounds with a streak multiplier.</p></div>
+                  <div class="mlc-game"><strong>⚡ Times Table Blitz</strong><p>Choose any table from 2 to 12 and answer as many questions as possible in 60 seconds. Personal bests are saved per table.</p></div>
+                  <div class="mlc-game"><strong>🔷 Shape Quest</strong><p>Apply real area and perimeter formulas to rectangles, right-angled triangles, circles, and parallelograms — with properly labelled SVG diagrams.</p></div>
+                </div>
+                <div class="mlc-formulas">
+                  <strong>Key formulas used:</strong>
+                  <span>Rectangle: A = lw · P = 2(l+w)</span>
+                  <span>Triangle: A = ½bh</span>
+                  <span>Circle: A = πr² · C = 2πr</span>
+                  <span>Parallelogram: A = bh</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mind-level-card mlc-secondary">
+              <div class="mlc-header">
+                <span class="mlc-emoji" aria-hidden="true">🟡</span>
+                <div>
+                  <h3>Secondary Level Games (Ages 13–17)</h3>
+                  <span class="mlc-tag">4 Games · KCSE / CBC Senior Secondary</span>
+                </div>
+              </div>
+              <div class="mlc-body">
+                <p>The secondary games target the core algebraic, trigonometric, and graphical skills that appear in KCSE Paper 1 and Paper 2, and in the CBC Senior Secondary Pure Mathematics strand.</p>
+                <div class="mlc-games">
+                  <div class="mlc-game"><strong>𝑥 Algebra Duel</strong><p>Three modes on a single 90-second timer: linear equations (10 pts), quadratic equations (20 pts), and simultaneous equations (25 pts).</p></div>
+                  <div class="mlc-game"><strong>△ Trig Challenge</strong><p>Five question types with real SVG triangle diagrams: finding sides using sin, cos, arctan, and the Sine and Cosine Rules.</p></div>
+                  <div class="mlc-game"><strong>📉 Graph Decoder</strong><p>A mathematical function is plotted on a properly labelled coordinate canvas. Students must identify the equation, gradient, y-intercept, roots, or vertex.</p></div>
+                  <div class="mlc-game"><strong>🧩 Factor Storm</strong><p>Factorise quadratic expressions before an 8-second storm sweeps in. Over 200 unique factorisation problems are pre-generated.</p></div>
+                </div>
+                <div class="mlc-formulas">
+                  <strong>Key formulas used:</strong>
+                  <span>Quadratic formula: x = (−b ± √(b²−4ac)) / 2a</span>
+                  <span>Sine Rule: a/sin A = b/sin B</span>
+                  <span>Cosine Rule: c² = a² + b² − 2ab cos C</span>
+                  <span>SOH CAH TOA · Gradient = rise/run</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mind-level-card mlc-uni">
+              <div class="mlc-header">
+                <span class="mlc-emoji" aria-hidden="true">🔴</span>
+                <div>
+                  <h3>University Level Games (Age 18+)</h3>
+                  <span class="mlc-tag">4 Games · Degree Level</span>
+                </div>
+              </div>
+              <div class="mlc-body">
+                <p>The university games cover the core computational skills of a first-year mathematics or engineering degree: differential and integral calculus, linear algebra, real analysis of series, and complex number arithmetic.</p>
+                <div class="mlc-games">
+                  <div class="mlc-game"><strong>∂ Calculus Duel</strong><p>Two modes: Differentiation (power rule, chain rule, product rule, trig, eˣ, ln x) and Integration (indefinite, definite, by parts, substitution).</p></div>
+                  <div class="mlc-game"><strong>⬛ Matrix Cipher</strong><p>Four operations: Determinants (2×2), Matrix Multiplication, Inverses, and Eigenvalues. The working panel shows every line of the calculation.</p></div>
+                  <div class="mlc-game"><strong>∑ Series Verdict</strong><p>Given an infinite series, select the best convergence test from eight available tests, write reasoning, and deliver a converge/diverge verdict.</p></div>
+                  <div class="mlc-game"><strong>ℂ Complex Arena</strong><p>Four modes: Arithmetic, Modulus and Argument (with live Argand diagram), De Moivre's Theorem, and Roots of Unity.</p></div>
+                </div>
+                <div class="mlc-formulas">
+                  <strong>Key formulas used:</strong>
+                  <span>Power rule: d/dx[xⁿ] = nxⁿ⁻¹</span>
+                  <span>Integration by parts: ∫u dv = uv − ∫v du</span>
+                  <span>Ratio test: L = lim|aₙ₊₁/aₙ| → converges if L &lt; 1</span>
+                  <span>De Moivre: (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ</span>
+                  <span>Eigenvalues: det(A − λI) = 0</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /mind-collapsible-body -->
+  </details>
+
+  <!-- ══════════════════════════════════════════════════════
+       GAMES LAYOUT — SIDEBAR + MAIN
+  ══════════════════════════════════════════════════════ -->
+  <div class="mind-game-layout">
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="mind-game-sidebar" id="game-sidebar" aria-label="Game navigation sidebar">
+      <div class="mgn-header">
+        <h2 class="mgn-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          All Games
+        </h2>
+      </div>
+
+      <nav aria-label="Games list" id="games-sidebar-nav">
+
+        <!-- Primary group -->
+        <div class="mgn-group">
+          <div class="mgn-level-label mgn-label-primary">
+            <span class="mgn-dot mgn-dot-green" aria-hidden="true"></span>
+            Primary · Ages 8–12
+          </div>
+          <button class="mgn-link active" id="slink-p-ninja"
+            onclick="jumpToGame('p-ninja','primary',this)"
+            aria-controls="p-ninja" aria-current="true"
+            title="Number Ninja — Rapid arithmetic">
+            <span class="mgn-link-icon" aria-hidden="true">⚔️</span>
+            Number Ninja
+            <span class="mgn-diff mgn-diff-1" aria-label="Difficulty 1 of 3">★</span>
+          </button>
+          <button class="mgn-link" id="slink-p-blitz"
+            onclick="jumpToGame('p-blitz','primary',this)"
+            aria-controls="p-blitz"
+            title="Times Table Blitz — 60-second multiplication challenge">
+            <span class="mgn-link-icon" aria-hidden="true">⚡</span>
+            Times Blitz
+            <span class="mgn-diff mgn-diff-1" aria-label="Difficulty 1 of 3">★</span>
+          </button>
+          <button class="mgn-link" id="slink-p-shape"
+            onclick="jumpToGame('p-shape','primary',this)"
+            aria-controls="p-shape"
+            title="Shape Quest — Area and perimeter">
+            <span class="mgn-link-icon" aria-hidden="true">🔷</span>
+            Shape Quest
+            <span class="mgn-diff mgn-diff-2" aria-label="Difficulty 2 of 3">★★</span>
+          </button>
+        </div>
+
+        <!-- Secondary group -->
+        <div class="mgn-group">
+          <div class="mgn-level-label mgn-label-secondary">
+            <span class="mgn-dot mgn-dot-amber" aria-hidden="true"></span>
+            Secondary · Ages 13–17
+          </div>
+          <button class="mgn-link" id="slink-s-algebra"
+            onclick="jumpToGame('s-algebra','secondary',this)"
+            aria-controls="s-algebra"
+            title="Algebra Duel — Linear, quadratic, simultaneous">
+            <span class="mgn-link-icon" aria-hidden="true">𝑥</span>
+            Algebra Duel
+            <span class="mgn-diff mgn-diff-2" aria-label="Difficulty 2 of 3">★★</span>
+          </button>
+          <button class="mgn-link" id="slink-s-trig"
+            onclick="jumpToGame('s-trig','secondary',this)"
+            aria-controls="s-trig"
+            title="Trig Challenge — SOH CAH TOA, Sine and Cosine Rules">
+            <span class="mgn-link-icon" aria-hidden="true">△</span>
+            Trig Challenge
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+          <button class="mgn-link" id="slink-s-graph"
+            onclick="jumpToGame('s-graph','secondary',this)"
+            aria-controls="s-graph"
+            title="Graph Decoder — Read functions from graphs">
+            <span class="mgn-link-icon" aria-hidden="true">📉</span>
+            Graph Decoder
+            <span class="mgn-diff mgn-diff-2" aria-label="Difficulty 2 of 3">★★</span>
+          </button>
+          <button class="mgn-link" id="slink-s-factor"
+            onclick="jumpToGame('s-factor','secondary',this)"
+            aria-controls="s-factor"
+            title="Factor Storm — Factorise before the storm">
+            <span class="mgn-link-icon" aria-hidden="true">🧩</span>
+            Factor Storm
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+        </div>
+
+        <!-- University group -->
+        <div class="mgn-group">
+          <div class="mgn-level-label mgn-label-uni">
+            <span class="mgn-dot mgn-dot-red" aria-hidden="true"></span>
+            University · Age 18+
+          </div>
+          <button class="mgn-link" id="slink-u-calculus"
+            onclick="jumpToGame('u-calculus','university',this)"
+            aria-controls="u-calculus"
+            title="Calculus Duel — Differentiation and integration">
+            <span class="mgn-link-icon" aria-hidden="true">∂</span>
+            Calculus Duel
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+          <button class="mgn-link" id="slink-u-matrix"
+            onclick="jumpToGame('u-matrix','university',this)"
+            aria-controls="u-matrix"
+            title="Matrix Cipher — Determinants, multiplication, eigenvalues">
+            <span class="mgn-link-icon" aria-hidden="true">⬛</span>
+            Matrix Cipher
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+          <button class="mgn-link" id="slink-u-series"
+            onclick="jumpToGame('u-series','university',this)"
+            aria-controls="u-series"
+            title="Series Verdict — Convergence tests for infinite series">
+            <span class="mgn-link-icon" aria-hidden="true">∑</span>
+            Series Verdict
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+          <button class="mgn-link" id="slink-u-complex"
+            onclick="jumpToGame('u-complex','university',this)"
+            aria-controls="u-complex"
+            title="Complex Arena — Arithmetic, Argand, De Moivre, roots of unity">
+            <span class="mgn-link-icon" aria-hidden="true">ℂ</span>
+            Complex Arena
+            <span class="mgn-diff mgn-diff-3" aria-label="Difficulty 3 of 3">★★★</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Sidebar footer links -->
+      <div class="mgn-footer">
+        <a href="tasks.html" class="mgn-footer-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Practice Problems
+        </a>
+        <a href="progress.html" class="mgn-footer-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+          My Progress
+        </a>
+      </div>
+    </aside>
+
+    <!-- ══════════════════════════════════════════════════
+         GAMES MAIN AREA
+    ══════════════════════════════════════════════════ -->
+    <main class="mind-games-main" id="main-content" aria-label="Interactive games">
+
+      <!-- Live status bar — announces current game to screen readers -->
+      <div class="mind-status-bar" role="status" aria-live="polite" aria-atomic="true" id="gameStatusBar">
+        <span class="msb-dot msb-dot-green" aria-hidden="true"></span>
+        <span id="gameStatusText">Select a game from the sidebar or tabs below to begin.</span>
+      </div>
+
+      <!-- LEVEL SELECTOR TABS -->
+      <div class="level-selector" role="tablist" aria-label="Select difficulty level">
+        <button class="level-tab active" data-level="primary" role="tab" aria-selected="true" aria-controls="panel-primary" onclick="switchLevel('primary', this)">
+          <span class="lt-emoji" aria-hidden="true">🟢</span>
+          <div class="lt-info">
+            <strong>Primary</strong>
+            <span>Ages 8–12</span>
+          </div>
+          <span class="lt-count">3 games</span>
         </button>
         <button class="level-tab" data-level="secondary" role="tab" aria-selected="false" aria-controls="panel-secondary" onclick="switchLevel('secondary', this)">
-            <span class="lt-emoji" aria-hidden="true">🟡</span>
-            <div class="lt-info">
-                <strong>Secondary</strong>
-                <span>Ages 13–17</span>
-            </div>
-            <span class="lt-count">4 games</span>
+          <span class="lt-emoji" aria-hidden="true">🟡</span>
+          <div class="lt-info">
+            <strong>Secondary</strong>
+            <span>Ages 13–17</span>
+          </div>
+          <span class="lt-count">4 games</span>
         </button>
         <button class="level-tab" data-level="university" role="tab" aria-selected="false" aria-controls="panel-university" onclick="switchLevel('university', this)">
-            <span class="lt-emoji" aria-hidden="true">🔴</span>
-            <div class="lt-info">
-                <strong>University</strong>
-                <span>Ages 18+</span>
-            </div>
-            <span class="lt-count">4 games</span>
+          <span class="lt-emoji" aria-hidden="true">🔴</span>
+          <div class="lt-info">
+            <strong>University</strong>
+            <span>Ages 18+</span>
+          </div>
+          <span class="lt-count">4 games</span>
         </button>
-    </div>
+      </div>
 
-    <!-- ============================================================
-         PRIMARY LEVEL
-         ============================================================ -->
-    <div class="level-panel active" id="panel-primary" role="tabpanel" aria-labelledby="tab-primary">
-
-        <!-- Game nav for primary -->
+      <!-- ══════════════════════════════════
+           PRIMARY LEVEL
+      ══════════════════════════════════ -->
+      <div class="level-panel active" id="panel-primary" role="tabpanel" aria-labelledby="tab-primary">
         <nav class="game-tabs" role="tablist" aria-label="Primary games">
-            <button class="gtab active" onclick="showGame('p-ninja', this, 'primary')" role="tab" aria-selected="true" aria-controls="p-ninja">
-                <span aria-hidden="true">⚔️</span> Number Ninja
-            </button>
-            <button class="gtab" onclick="showGame('p-blitz', this, 'primary')" role="tab" aria-selected="false" aria-controls="p-blitz">
-                <span aria-hidden="true">⚡</span> Times Blitz
-            </button>
-            <button class="gtab" onclick="showGame('p-shape', this, 'primary')" role="tab" aria-selected="false" aria-controls="p-shape">
-                <span aria-hidden="true">🔷</span> Shape Quest
-            </button>
+          <button class="gtab active" onclick="showGame('p-ninja', this, 'primary')" role="tab" aria-selected="true" aria-controls="p-ninja"><span aria-hidden="true">⚔️</span> Number Ninja</button>
+          <button class="gtab" onclick="showGame('p-blitz', this, 'primary')" role="tab" aria-selected="false" aria-controls="p-blitz"><span aria-hidden="true">⚡</span> Times Blitz</button>
+          <button class="gtab" onclick="showGame('p-shape', this, 'primary')" role="tab" aria-selected="false" aria-controls="p-shape"><span aria-hidden="true">🔷</span> Shape Quest</button>
         </nav>
 
         <!-- P1: NUMBER NINJA -->
         <section id="p-ninja" class="game-panel active" role="tabpanel" aria-label="Number Ninja game">
-            <div class="gp-header">
-                <div class="gp-badge badge-p">Primary</div>
-                <h2>⚔️ Number Ninja</h2>
-                <p>A rapid chain of arithmetic hits you one after another. Each question tests addition, subtraction, or multiplication. You have <strong>15 seconds per round</strong> — survive all 10 rounds without breaking your streak! Faster answers earn higher bonus points, and a streak of 3 or more fires a bonus multiplier.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 1 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+          <div class="gp-header">
+            <div class="gp-badge badge-p">Primary</div>
+            <h2>⚔️ Number Ninja</h2>
+            <p>A rapid chain of arithmetic strikes — addition, subtraction, and multiplication — ten rounds with a 15-second timer each. Faster answers earn more points; a streak of 3+ correct answers fires a bonus multiplier.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 1 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="ninja-arena" aria-live="polite" aria-atomic="true">
+              <div class="ninja-chain">
+                <div class="chain-display">
+                  <span class="chain-start" id="ninjaStart" aria-label="First number">—</span>
+                  <span class="chain-op" id="ninjaOp" aria-label="Operation">+</span>
+                  <span class="chain-val" id="ninjaVal" aria-label="Second number">—</span>
+                  <span class="chain-eq" aria-hidden="true">=</span>
+                  <span class="chain-blank" aria-label="Your answer goes here">?</span>
                 </div>
+              </div>
+              <div class="ninja-progress">
+                <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Round progress"><div class="progress-fill" id="ninjaProgress" style="width:0%"></div></div>
+                <span id="ninjaRound" aria-live="polite">Round 1 / 10</span>
+              </div>
             </div>
-            <div class="gp-body">
-                <div class="ninja-arena" aria-live="polite" aria-atomic="true">
-                    <div class="ninja-chain" id="ninjaChain">
-                        <div class="chain-display">
-                            <span class="chain-start" id="ninjaStart" aria-label="First number">—</span>
-                            <span class="chain-op" id="ninjaOp" aria-label="Operation">+</span>
-                            <span class="chain-val" id="ninjaVal" aria-label="Second number">—</span>
-                            <span class="chain-eq" aria-hidden="true">=</span>
-                            <span class="chain-blank" aria-label="Your answer goes here">?</span>
-                        </div>
-                    </div>
-                    <div class="ninja-progress">
-                        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Round progress">
-                            <div class="progress-fill" id="ninjaProgress" style="width:0%"></div>
-                        </div>
-                        <span id="ninjaRound" aria-live="polite">Round 1 / 10</span>
-                    </div>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="ninjaScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Chain <strong id="ninjaStreak">0</strong></span>
-                    <span class="pill">⏱ <strong id="ninjaTimer">15</strong>s</span>
-                </div>
-                <div class="control-row">
-                    <label for="ninjaInput" class="sr-only">Your answer</label>
-                    <input type="number" id="ninjaInput" placeholder="Your answer…" autocomplete="off" aria-label="Enter your answer">
-                    <button onclick="checkNinja()" class="btn-primary">Strike ⚔️</button>
-                    <button onclick="startNinja()" class="btn-start">▶ Start</button>
-                </div>
-                <div class="result" id="ninjaResult" role="status" aria-live="polite"></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="ninjaScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Chain <strong id="ninjaStreak">0</strong></span>
+              <span class="pill">⏱ <strong id="ninjaTimer" aria-live="off">15</strong>s</span>
             </div>
-            <!-- Game guide -->
-            <div class="game-guide">
-                <h3>How to Play</h3>
-                <p>Press <strong>Start</strong>, then type your answer and hit <strong>Strike</strong> (or press <kbd>Enter</kbd>). Points are awarded based on speed: answer within 5 seconds for maximum points. Build a streak of 3+ correct answers to earn a 🔥 bonus. A wrong answer or timeout resets your streak.</p>
+            <div class="control-row">
+              <label for="ninjaInput" class="sr-only">Your answer</label>
+              <input type="number" id="ninjaInput" placeholder="Your answer…" autocomplete="off" aria-label="Enter your answer" aria-describedby="p-ninja-q">
+              <button onclick="checkNinja()" class="btn-primary">Strike ⚔️</button>
+              <button onclick="startNinja()" class="btn-start">▶ Start</button>
             </div>
+            <div class="result" id="ninjaResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>How to Play &amp; Why It Works</h3>
+            <p>Press <strong>Start</strong>, then type your answer and click <strong>Strike</strong> (or press <kbd>Enter</kbd>). Points scale with speed: answer within 5 seconds for 15 points; within 10 seconds for 10 points; any correct answer earns at least 5 points. Building a streak of 3+ correct answers adds a 🔥 bonus on each subsequent answer.</p>
+          </div>
         </section>
 
         <!-- P2: TIMES TABLE BLITZ -->
         <section id="p-blitz" class="game-panel" role="tabpanel" aria-label="Times Table Blitz game">
-            <div class="gp-header">
-                <div class="gp-badge badge-p">Primary</div>
-                <h2>⚡ Times Table Blitz</h2>
-                <p>The fastest way to master multiplication tables. Choose any table from 2 to 12, then answer as many questions as you can in <strong>60 seconds</strong>. Your personal best is saved so you can track your improvement. Consistent daily practice is the proven route to instant recall.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 1 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-p">Primary</div>
+            <h2>⚡ Times Table Blitz</h2>
+            <p>Choose any times table from 2 to 12 and answer as many questions as possible in 60 seconds. Your best score per table is saved so you can track improvement over time.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 1 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="table-selector">
+              <p>Choose a times table:</p>
+              <div class="table-grid" id="tableGrid" role="group" aria-label="Select multiplication table"></div>
             </div>
-            <div class="gp-body">
-                <div class="table-selector">
-                    <p>Choose a times table:</p>
-                    <div class="table-grid" id="tableGrid" role="group" aria-label="Select multiplication table"></div>
-                </div>
-                <div class="display-card eq-card" id="blitzQuestion" aria-live="polite">
-                    <span class="display-eq">Select a table above ↑</span>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="blitzScore">0</strong></span>
-                    <span class="pill pill-fire">🏆 Best <strong id="blitzBest">0</strong></span>
-                    <span class="pill">⏱ <strong id="blitzTimer">—</strong></span>
-                </div>
-                <div class="control-row">
-                    <label for="blitzInput" class="sr-only">Your answer</label>
-                    <input type="number" id="blitzInput" placeholder="Answer…" autocomplete="off" aria-label="Type your multiplication answer">
-                    <button onclick="checkBlitz()" class="btn-primary">Submit</button>
-                </div>
-                <div class="result" id="blitzResult" role="status" aria-live="polite"></div>
+            <div class="display-card eq-card" id="blitzQuestion" aria-live="polite"><span class="display-eq">Select a table above ↑</span></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="blitzScore">0</strong></span>
+              <span class="pill pill-fire">🏆 Best <strong id="blitzBest">0</strong></span>
+              <span class="pill">⏱ <strong id="blitzTimer" aria-live="off">—</strong></span>
             </div>
-            <div class="game-guide">
-                <h3>Why Times Tables Matter</h3>
-                <p>Strong multiplication recall is the foundation of virtually every topic in secondary and university mathematics — from fractions and algebra to calculus. Studies show that students who achieve automatic recall of tables up to 12 progress significantly faster through secondary maths. Use this blitz daily for just 3 minutes to build that foundation.</p>
+            <div class="control-row">
+              <label for="blitzInput" class="sr-only">Your answer</label>
+              <input type="number" id="blitzInput" placeholder="Answer…" autocomplete="off" aria-label="Type your multiplication answer">
+              <button onclick="checkBlitz()" class="btn-primary">Submit</button>
             </div>
+            <div class="result" id="blitzResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Why Times Tables Are the Foundation of All Mathematics</h3>
+            <p>Strong multiplication recall underpins fraction simplification, algebraic factorisation, trigonometric ratio recognition, matrix multiplication, and integration by hand. The target is <em>automatic</em> recall — a response time under 2 seconds. The ×7 and ×8 tables are statistically the most commonly missed; focus extra sessions there.</p>
+          </div>
         </section>
 
         <!-- P3: SHAPE QUEST -->
         <section id="p-shape" class="game-panel" role="tabpanel" aria-label="Shape Quest game">
-            <div class="gp-header">
-                <div class="gp-badge badge-p">Primary</div>
-                <h2>🔷 Shape Quest</h2>
-                <p>Identify shapes, calculate areas and perimeters, and solve geometry problems using real formulas. Questions cover <strong>rectangles, right-angled triangles, circles, and parallelograms</strong>. Understanding 2D geometry is essential for all further work in mensuration, coordinate geometry, and trigonometry.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-p">Primary</div>
+            <h2>🔷 Shape Quest</h2>
+            <p>Apply real area and perimeter formulas to rectangles, right-angled triangles, circles, and parallelograms — with clearly labelled diagrams generated fresh each round.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="shape-arena">
+              <div class="shape-display" id="shapeDisplay" aria-label="Shape diagram" role="img"></div>
+              <div class="shape-question" id="shapeQuestion" aria-live="polite">Press Start to begin!</div>
             </div>
-            <div class="gp-body">
-                <div class="shape-arena">
-                    <div class="shape-display" id="shapeDisplay" aria-label="Shape diagram" role="img"></div>
-                    <div class="shape-question" id="shapeQuestion" aria-live="polite">Press Start to begin!</div>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="shapeScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="shapeStreak">0</strong></span>
-                </div>
-                <div class="options-grid" id="shapeOptions" role="group" aria-label="Answer options"></div>
-                <div class="control-row">
-                    <button onclick="startShape()" class="btn-start">▶ Start</button>
-                </div>
-                <div class="result" id="shapeResult" role="status" aria-live="polite"></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="shapeScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="shapeStreak">0</strong></span>
             </div>
-            <div class="game-guide">
-                <h3>Key Formulas Used</h3>
-                <ul class="formula-list">
-                    <li><strong>Rectangle area:</strong> A = length × width</li>
-                    <li><strong>Rectangle perimeter:</strong> P = 2(l + w)</li>
-                    <li><strong>Triangle area:</strong> A = ½ × base × height</li>
-                    <li><strong>Circle area:</strong> A = πr² &nbsp;|&nbsp; Circumference: C = 2πr</li>
-                    <li><strong>Parallelogram area:</strong> A = base × perpendicular height</li>
-                </ul>
-            </div>
+            <div class="options-grid" id="shapeOptions" role="group" aria-label="Answer options"></div>
+            <div class="control-row"><button onclick="startShape()" class="btn-start">▶ Start</button></div>
+            <div class="result" id="shapeResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Formulas Used in Shape Quest</h3>
+            <ul class="formula-list">
+              <li><strong>Rectangle area:</strong> A = length × width</li>
+              <li><strong>Rectangle perimeter:</strong> P = 2(l + w)</li>
+              <li><strong>Right triangle area:</strong> A = ½ × base × height</li>
+              <li><strong>Circle area:</strong> A = πr² (use π ≈ 3.14)</li>
+              <li><strong>Circumference:</strong> C = 2πr</li>
+              <li><strong>Parallelogram area:</strong> A = base × perpendicular height</li>
+            </ul>
+          </div>
         </section>
+      </div><!-- /panel-primary -->
 
-    </div><!-- /panel-primary -->
-
-
-    <!-- ============================================================
-         SECONDARY LEVEL
-         ============================================================ -->
-    <div class="level-panel" id="panel-secondary" role="tabpanel" aria-labelledby="tab-secondary">
-
+      <!-- ══════════════════════════════════
+           SECONDARY LEVEL
+      ══════════════════════════════════ -->
+      <div class="level-panel" id="panel-secondary" role="tabpanel" aria-labelledby="tab-secondary">
         <nav class="game-tabs" role="tablist" aria-label="Secondary games">
-            <button class="gtab active" onclick="showGame('s-algebra', this, 'secondary')" role="tab" aria-selected="true" aria-controls="s-algebra">
-                <span aria-hidden="true">𝑥</span> Algebra Duel
-            </button>
-            <button class="gtab" onclick="showGame('s-trig', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-trig">
-                <span aria-hidden="true">△</span> Trig Challenge
-            </button>
-            <button class="gtab" onclick="showGame('s-graph', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-graph">
-                <span aria-hidden="true">📉</span> Graph Decoder
-            </button>
-            <button class="gtab" onclick="showGame('s-factor', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-factor">
-                <span aria-hidden="true">🧩</span> Factor Storm
-            </button>
+          <button class="gtab active" onclick="showGame('s-algebra', this, 'secondary')" role="tab" aria-selected="true" aria-controls="s-algebra"><span aria-hidden="true">𝑥</span> Algebra Duel</button>
+          <button class="gtab" onclick="showGame('s-trig', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-trig"><span aria-hidden="true">△</span> Trig Challenge</button>
+          <button class="gtab" onclick="showGame('s-graph', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-graph"><span aria-hidden="true">📉</span> Graph Decoder</button>
+          <button class="gtab" onclick="showGame('s-factor', this, 'secondary')" role="tab" aria-selected="false" aria-controls="s-factor"><span aria-hidden="true">🧩</span> Factor Storm</button>
         </nav>
 
         <!-- S1: ALGEBRA DUEL -->
         <section id="s-algebra" class="game-panel active" role="tabpanel" aria-label="Algebra Duel game">
-            <div class="gp-header">
-                <div class="gp-badge badge-s">Secondary</div>
-                <h2>𝑥 Algebra Duel</h2>
-                <p>Solve equations against the clock across three escalating modes: <strong>Linear</strong> (10 pts), <strong>Quadratic</strong> (20 pts), and <strong>Simultaneous</strong> (25 pts). A 90-second timer keeps the pressure on. Master all three modes to build the algebraic fluency needed for A-level and beyond.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-s">Secondary</div>
+            <h2>𝑥 Algebra Duel</h2>
+            <p>Solve equations against a 90-second timer across three escalating modes: <strong>Linear</strong> (10 pts), <strong>Quadratic</strong> (20 pts), and <strong>Simultaneous</strong> (25 pts).</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="algebra-type-row" role="group" aria-label="Equation type">
+              <button class="atype-btn active" data-type="linear" onclick="setAlgebraType('linear',this)" aria-pressed="true">Linear</button>
+              <button class="atype-btn" data-type="quadratic" onclick="setAlgebraType('quadratic',this)" aria-pressed="false">Quadratic</button>
+              <button class="atype-btn" data-type="simultaneous" onclick="setAlgebraType('simultaneous',this)" aria-pressed="false">Simultaneous</button>
             </div>
-            <div class="gp-body">
-                <div class="algebra-type-row" role="group" aria-label="Equation type">
-                    <button class="atype-btn active" data-type="linear" onclick="setAlgebraType('linear',this)" aria-pressed="true">Linear</button>
-                    <button class="atype-btn" data-type="quadratic" onclick="setAlgebraType('quadratic',this)" aria-pressed="false">Quadratic</button>
-                    <button class="atype-btn" data-type="simultaneous" onclick="setAlgebraType('simultaneous',this)" aria-pressed="false">Simultaneous</button>
-                </div>
-                <div class="display-card eq-card" id="algebraEq" aria-live="polite">
-                    <span class="display-eq" style="font-size:1.4rem;">Press ▶ Start to begin</span>
-                </div>
-                <div class="algebra-note" id="algebraNote" role="note"></div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="algebraScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="algebraStreak">0</strong></span>
-                    <span class="pill">⏱ <strong id="algebraTimer">—</strong>s</span>
-                </div>
-                <div id="algebraInputArea" class="algebra-input-area" aria-label="Answer inputs"></div>
-                <div class="control-row">
-                    <button onclick="checkAlgebra()" class="btn-primary">Submit Answer</button>
-                    <button onclick="startAlgebra()" class="btn-start">▶ Start</button>
-                    <button onclick="skipAlgebra()" class="btn-ghost">Skip (−5)</button>
-                </div>
-                <div class="result" id="algebraResult" role="status" aria-live="polite"></div>
+            <div class="display-card eq-card" id="algebraEq" aria-live="polite"><span class="display-eq" style="font-size:1.4rem;">Press ▶ Start to begin</span></div>
+            <div class="algebra-note" id="algebraNote" role="note"></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="algebraScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="algebraStreak">0</strong></span>
+              <span class="pill">⏱ <strong id="algebraTimer" aria-live="off">—</strong>s</span>
             </div>
-            <div class="game-guide">
-                <h3>Solving Strategies</h3>
-                <ul class="formula-list">
-                    <li><strong>Linear (ax + b = c):</strong> Isolate x by subtracting b, then dividing by a.</li>
-                    <li><strong>Quadratic (x² + bx + c = 0):</strong> Factorise or use the quadratic formula x = (−b ± √(b²−4ac)) / 2a.</li>
-                    <li><strong>Simultaneous:</strong> Eliminate one variable by adding or subtracting multiples of each equation.</li>
-                </ul>
+            <div id="algebraInputArea" class="algebra-input-area" aria-label="Answer inputs"></div>
+            <div class="control-row">
+              <button onclick="checkAlgebra()" class="btn-primary">Submit Answer</button>
+              <button onclick="startAlgebra()" class="btn-start">▶ Start</button>
+              <button onclick="skipAlgebra()" class="btn-ghost">Skip (−5)</button>
             </div>
+            <div class="result" id="algebraResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Solving Strategies</h3>
+            <ul class="formula-list">
+              <li><strong>Linear (ax + b = c):</strong> Subtract b from both sides, then divide by a. Always check by substituting your answer back.</li>
+              <li><strong>Quadratic (x² + bx + c = 0):</strong> Try factorising first — find two numbers that multiply to c and add to b. If that fails, use x = (−b ± √(b²−4ac)) / 2a.</li>
+              <li><strong>Simultaneous:</strong> Choose elimination or substitution method.</li>
+            </ul>
+          </div>
         </section>
 
         <!-- S2: TRIG CHALLENGE -->
         <section id="s-trig" class="game-panel" role="tabpanel" aria-label="Trigonometry Challenge game">
-            <div class="gp-header">
-                <div class="gp-badge badge-s">Secondary</div>
-                <h2>△ Trig Challenge</h2>
-                <p>Apply <strong>sin, cos, tan</strong> to right-angled triangles, and use the <strong>Sine Rule</strong> and <strong>Cosine Rule</strong> for non-right triangles. Questions are procedurally generated with labelled diagrams. Give answers to 2 decimal places. Use the Hint button if you need a formula reminder.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-s">Secondary</div>
+            <h2>△ Trig Challenge</h2>
+            <p>Apply sin, cos, and tan to right-angled triangles, and use the Sine Rule and Cosine Rule for general triangles — all with labelled SVG diagrams. Give answers to 2 decimal places.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="trig-arena">
+              <div class="trig-diagram" aria-label="Triangle diagram">
+                <svg id="trigSVG" viewBox="0 0 300 220" width="300" height="220" aria-hidden="true"></svg>
+              </div>
+              <div class="trig-question" id="trigQuestion" aria-live="polite"><p>Press <strong>▶ New Problem</strong> to load a triangle.</p></div>
             </div>
-            <div class="gp-body">
-                <div class="trig-arena">
-                    <div class="trig-diagram" aria-label="Triangle diagram">
-                        <svg id="trigSVG" viewBox="0 0 300 220" width="300" height="220" aria-hidden="true"></svg>
-                    </div>
-                    <div class="trig-question" id="trigQuestion" aria-live="polite">
-                        <p>Press <strong>▶ New Problem</strong> to load a triangle.</p>
-                    </div>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="trigScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="trigStreak">0</strong></span>
-                </div>
-                <div class="trig-hint" id="trigHint" style="display:none" role="note"></div>
-                <div class="control-row">
-                    <label for="trigInput" class="sr-only">Your numerical answer</label>
-                    <input type="number" id="trigInput" placeholder="Answer (2 d.p.)…" step="0.01" autocomplete="off" aria-label="Type your answer to 2 decimal places">
-                    <button onclick="checkTrig()" class="btn-primary">Submit</button>
-                    <button onclick="newTrig()" class="btn-start">▶ New Problem</button>
-                    <button onclick="showTrigHint()" class="btn-hint">💡 Hint</button>
-                </div>
-                <div class="result" id="trigResult" role="status" aria-live="polite"></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="trigScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="trigStreak">0</strong></span>
             </div>
-            <div class="game-guide">
-                <h3>Essential Trigonometry Rules</h3>
-                <ul class="formula-list">
-                    <li><strong>SOH:</strong> sin θ = Opposite / Hypotenuse</li>
-                    <li><strong>CAH:</strong> cos θ = Adjacent / Hypotenuse</li>
-                    <li><strong>TOA:</strong> tan θ = Opposite / Adjacent</li>
-                    <li><strong>Sine Rule:</strong> a / sin A = b / sin B = c / sin C</li>
-                    <li><strong>Cosine Rule:</strong> c² = a² + b² − 2ab·cos(C)</li>
-                </ul>
+            <div class="trig-hint" id="trigHint" style="display:none" role="note"></div>
+            <div class="control-row">
+              <label for="trigInput" class="sr-only">Your numerical answer</label>
+              <input type="number" id="trigInput" placeholder="Answer (2 d.p.)…" step="0.01" autocomplete="off" aria-label="Type your answer to 2 decimal places">
+              <button onclick="checkTrig()" class="btn-primary">Submit</button>
+              <button onclick="newTrig()" class="btn-start">▶ New Problem</button>
+              <button onclick="showTrigHint()" class="btn-hint">💡 Hint</button>
             </div>
+            <div class="result" id="trigResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Essential Trigonometry Rules</h3>
+            <ul class="formula-list">
+              <li><strong>SOH:</strong> sin θ = Opposite / Hypotenuse</li>
+              <li><strong>CAH:</strong> cos θ = Adjacent / Hypotenuse</li>
+              <li><strong>TOA:</strong> tan θ = Opposite / Adjacent</li>
+              <li><strong>Sine Rule:</strong> a / sin A = b / sin B = c / sin C</li>
+              <li><strong>Cosine Rule:</strong> c² = a² + b² − 2ab·cos C</li>
+            </ul>
+            <p style="margin-top:.8rem; font-size:.85rem; color:var(--ink-50);">Answers within ±0.05 of the correct value are accepted, matching KCSE marking tolerance.</p>
+          </div>
         </section>
 
         <!-- S3: GRAPH DECODER -->
         <section id="s-graph" class="game-panel" role="tabpanel" aria-label="Graph Decoder game">
-            <div class="gp-header">
-                <div class="gp-badge badge-s">Secondary</div>
-                <h2>📉 Graph Decoder</h2>
-                <p>A function is plotted on a coordinate grid. Your task is to identify the <strong>equation, gradient, y-intercept, or roots</strong> from what you see. This game sharpens the ability to read and interpret graphs — a critical skill in both examinations and real-world data analysis.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-s">Secondary</div>
+            <h2>📉 Graph Decoder</h2>
+            <p>A function is plotted on a coordinate grid. Identify the equation, gradient, y-intercept, roots, or turning point from the graph.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 2 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="graph-arena">
+              <canvas id="graphCanvas" width="420" height="320" aria-label="Function graph — answer the question below" role="img"></canvas>
             </div>
-            <div class="gp-body">
-                <div class="graph-arena">
-                    <canvas id="graphCanvas" width="420" height="320" aria-label="Function graph — read the question below to identify the correct answer" role="img"></canvas>
-                </div>
-                <div class="graph-question" id="graphQuestion" aria-live="polite">
-                    <p>Press <strong>▶ New Graph</strong> to load a question.</p>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="graphScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="graphStreak">0</strong></span>
-                </div>
-                <div class="options-grid" id="graphOptions" role="group" aria-label="Answer options"></div>
-                <div class="control-row">
-                    <button onclick="newGraph()" class="btn-start">▶ New Graph</button>
-                </div>
-                <div class="result" id="graphResult" role="status" aria-live="polite"></div>
+            <div class="graph-question" id="graphQuestion" aria-live="polite"><p>Press <strong>▶ New Graph</strong> to load a question.</p></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="graphScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="graphStreak">0</strong></span>
             </div>
-            <div class="game-guide">
-                <h3>Reading Graphs — Quick Tips</h3>
-                <ul class="formula-list">
-                    <li><strong>Gradient:</strong> Rise ÷ Run — pick two clear points on a straight line.</li>
-                    <li><strong>y-intercept:</strong> Where the graph crosses the y-axis (x = 0).</li>
-                    <li><strong>Roots / x-intercepts:</strong> Where the graph crosses the x-axis (y = 0).</li>
-                    <li><strong>Parabola vertex:</strong> The turning point of a quadratic curve.</li>
-                </ul>
-            </div>
+            <div class="options-grid" id="graphOptions" role="group" aria-label="Answer options"></div>
+            <div class="control-row"><button onclick="newGraph()" class="btn-start">▶ New Graph</button></div>
+            <div class="result" id="graphResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Graph Reading — Key Techniques</h3>
+            <ul class="formula-list">
+              <li><strong>Gradient (slope):</strong> Pick two clear grid points. Gradient = rise ÷ run.</li>
+              <li><strong>y-intercept:</strong> Where the graph crosses the y-axis — read y when x = 0.</li>
+              <li><strong>Roots / x-intercepts:</strong> Where the graph crosses the x-axis.</li>
+              <li><strong>Parabola vertex:</strong> The highest or lowest point — coordinates (h, k) where h = −b/2a.</li>
+            </ul>
+          </div>
         </section>
 
         <!-- S4: FACTOR STORM -->
         <section id="s-factor" class="game-panel" role="tabpanel" aria-label="Factor Storm game">
-            <div class="gp-header">
-                <div class="gp-badge badge-s">Secondary</div>
-                <h2>🧩 Factor Storm</h2>
-                <p>Factorise algebraic expressions before the storm hits. Questions include <strong>simple trinomials</strong> (x² + bx + c) and the <strong>difference of two squares</strong>. You have 8 seconds before the storm sweeps in. Factorisation is a gateway skill — it underpins solving quadratics, simplifying fractions, and calculus.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-s">Secondary</div>
+            <h2>🧩 Factor Storm</h2>
+            <p>Factorise quadratic expressions — simple trinomials and difference of two squares — before an 8-second storm depletes the bar. Over 200 procedurally generated problems.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="display-card eq-card storm-card">
+              <span class="display-eq" id="factorEq" style="font-size:1.5rem;" aria-live="polite">—</span>
             </div>
-            <div class="gp-body">
-                <div class="display-card eq-card storm-card">
-                    <span class="display-eq" id="factorEq" style="font-size:1.5rem;" aria-live="polite">—</span>
-                </div>
-                <div class="storm-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="8" aria-label="Time remaining">
-                    <div class="storm-bar" id="stormBar"></div>
-                    <span class="storm-label">Storm approaching…</span>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="factorScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="factorStreak">0</strong></span>
-                </div>
-                <div class="options-grid" id="factorOptions" role="group" aria-label="Factorisation options"></div>
-                <div class="control-row">
-                    <button onclick="startFactorStorm()" class="btn-start">▶ Start Storm</button>
-                </div>
-                <div class="result" id="factorResult" role="status" aria-live="polite"></div>
+            <div class="storm-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="8" aria-label="Time remaining — storm approaches">
+              <div class="storm-bar" id="stormBar"></div>
+              <span class="storm-label">Storm approaching…</span>
             </div>
-            <div class="game-guide">
-                <h3>Factorisation Methods</h3>
-                <ul class="formula-list">
-                    <li><strong>Trinomial (x² + bx + c):</strong> Find two numbers that multiply to c and add to b. Write as (x + p)(x + q).</li>
-                    <li><strong>Difference of squares (a² − b²):</strong> Always factors as (a + b)(a − b). Recognise this pattern instantly.</li>
-                    <li><strong>Check:</strong> Expand your answer mentally to verify — this takes 3 seconds and eliminates errors.</li>
-                </ul>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="factorScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="factorStreak">0</strong></span>
             </div>
+            <div class="options-grid" id="factorOptions" role="group" aria-label="Factorisation options"></div>
+            <div class="control-row"><button onclick="startFactorStorm()" class="btn-start">▶ Start Storm</button></div>
+            <div class="result" id="factorResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Factorisation Methods</h3>
+            <ul class="formula-list">
+              <li><strong>Simple trinomial (x² + bx + c):</strong> Find two integers p, q such that p × q = c and p + q = b. Write as (x + p)(x + q).</li>
+              <li><strong>Difference of two squares (a² − b²):</strong> Always factors as (a + b)(a − b).</li>
+              <li><strong>3-second mental check:</strong> After selecting, mentally expand the two brackets to verify.</li>
+            </ul>
+          </div>
         </section>
+      </div><!-- /panel-secondary -->
 
-    </div><!-- /panel-secondary -->
-
-
-    <!-- ============================================================
-         UNIVERSITY LEVEL
-         ============================================================ -->
-    <div class="level-panel" id="panel-university" role="tabpanel" aria-labelledby="tab-university">
-
+      <!-- ══════════════════════════════════
+           UNIVERSITY LEVEL
+      ══════════════════════════════════ -->
+      <div class="level-panel" id="panel-university" role="tabpanel" aria-labelledby="tab-university">
         <nav class="game-tabs" role="tablist" aria-label="University games">
-            <button class="gtab active" onclick="showGame('u-calculus', this, 'university')" role="tab" aria-selected="true" aria-controls="u-calculus">
-                <span aria-hidden="true">∂</span> Calculus Duel
-            </button>
-            <button class="gtab" onclick="showGame('u-matrix', this, 'university')" role="tab" aria-selected="false" aria-controls="u-matrix">
-                <span aria-hidden="true">⬛</span> Matrix Cipher
-            </button>
-            <button class="gtab" onclick="showGame('u-series', this, 'university')" role="tab" aria-selected="false" aria-controls="u-series">
-                <span aria-hidden="true">∑</span> Series Verdict
-            </button>
-            <button class="gtab" onclick="showGame('u-complex', this, 'university')" role="tab" aria-selected="false" aria-controls="u-complex">
-                <span aria-hidden="true">ℂ</span> Complex Arena
-            </button>
+          <button class="gtab active" onclick="showGame('u-calculus', this, 'university')" role="tab" aria-selected="true" aria-controls="u-calculus"><span aria-hidden="true">∂</span> Calculus Duel</button>
+          <button class="gtab" onclick="showGame('u-matrix', this, 'university')" role="tab" aria-selected="false" aria-controls="u-matrix"><span aria-hidden="true">⬛</span> Matrix Cipher</button>
+          <button class="gtab" onclick="showGame('u-series', this, 'university')" role="tab" aria-selected="false" aria-controls="u-series"><span aria-hidden="true">∑</span> Series Verdict</button>
+          <button class="gtab" onclick="showGame('u-complex', this, 'university')" role="tab" aria-selected="false" aria-controls="u-complex"><span aria-hidden="true">ℂ</span> Complex Arena</button>
         </nav>
 
         <!-- U1: CALCULUS DUEL -->
         <section id="u-calculus" class="game-panel active" role="tabpanel" aria-label="Calculus Duel game">
-            <div class="gp-header">
-                <div class="gp-badge badge-u">University</div>
-                <h2>∂ Calculus Duel</h2>
-                <p>Test your command of differential and integral calculus. <strong>Differentiation</strong> questions cover the power rule, chain rule, product rule, and standard derivatives (sin, cos, eˣ, ln x). <strong>Integration</strong> questions include indefinite integrals, definite integrals, integration by parts, and substitution. Click <em>Show Working</em> after each question to study the full method.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-u">University</div>
+            <h2>∂ Calculus Duel</h2>
+            <p>Two modes — <strong>Differentiation</strong> (power rule, chain rule, product rule, trig, eˣ, ln x) and <strong>Integration</strong> (indefinite, definite, by parts, substitution). Click Show Working after each question to study the full method.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="calc-mode-row" role="group" aria-label="Calculus mode">
+              <button class="atype-btn active" data-cmode="diff" onclick="setCalcMode('diff',this)" aria-pressed="true">Differentiation</button>
+              <button class="atype-btn" data-cmode="integ" onclick="setCalcMode('integ',this)" aria-pressed="false">Integration</button>
             </div>
-            <div class="gp-body">
-                <div class="calc-mode-row" role="group" aria-label="Calculus mode">
-                    <button class="atype-btn active" data-cmode="diff" onclick="setCalcMode('diff',this)" aria-pressed="true">Differentiation</button>
-                    <button class="atype-btn" data-cmode="integ" onclick="setCalcMode('integ',this)" aria-pressed="false">Integration</button>
-                </div>
-                <div class="display-card series-card" id="calculusCard">
-                    <div class="calc-directive" id="calculusDirective">—</div>
-                    <div class="calc-fn" id="calculusFn" aria-live="polite">—</div>
-                    <div class="calc-domain" id="calculusDomain"></div>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="calculusScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="calculusStreak">0</strong></span>
-                </div>
-                <div class="options-grid four-col" id="calculusOptions" role="group" aria-label="Answer options"></div>
-                <div class="control-row">
-                    <button onclick="newCalculus()" class="btn-start">▶ New Question</button>
-                    <button onclick="showCalculusWorking()" class="btn-hint">💡 Show Working</button>
-                </div>
-                <div class="working-panel" id="calculusWorking" style="display:none" aria-label="Step-by-step working"></div>
-                <div class="result" id="calculusResult" role="status" aria-live="polite"></div>
+            <div class="display-card series-card" id="calculusCard">
+              <div class="calc-directive" id="calculusDirective">—</div>
+              <div class="calc-fn" id="calculusFn" aria-live="polite">—</div>
+              <div class="calc-domain" id="calculusDomain"></div>
             </div>
-            <div class="game-guide">
-                <h3>Core Calculus Rules</h3>
-                <ul class="formula-list">
-                    <li><strong>Power Rule (diff):</strong> d/dx[xⁿ] = nxⁿ⁻¹</li>
-                    <li><strong>Chain Rule:</strong> d/dx[f(g(x))] = f′(g(x)) · g′(x)</li>
-                    <li><strong>Product Rule:</strong> (uv)′ = u′v + uv′</li>
-                    <li><strong>Power Rule (integ):</strong> ∫xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp;(n ≠ −1)</li>
-                    <li><strong>Integration by Parts:</strong> ∫u dv = uv − ∫v du</li>
-                </ul>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="calculusScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="calculusStreak">0</strong></span>
             </div>
+            <div class="options-grid four-col" id="calculusOptions" role="group" aria-label="Answer options"></div>
+            <div class="control-row">
+              <button onclick="newCalculus()" class="btn-start">▶ New Question</button>
+              <button onclick="showCalculusWorking()" class="btn-hint">💡 Show Working</button>
+            </div>
+            <div class="working-panel" id="calculusWorking" style="display:none" aria-label="Step-by-step working"></div>
+            <div class="result" id="calculusResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Core Calculus Rules</h3>
+            <ul class="formula-list">
+              <li><strong>Power Rule (diff):</strong> d/dx[xⁿ] = nxⁿ⁻¹</li>
+              <li><strong>Chain Rule:</strong> d/dx[f(g(x))] = f′(g(x))·g′(x)</li>
+              <li><strong>Product Rule:</strong> (uv)′ = u′v + uv′</li>
+              <li><strong>Power Rule (integ):</strong> ∫xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1)</li>
+              <li><strong>Integration by Parts:</strong> ∫u dv = uv − ∫v du</li>
+            </ul>
+          </div>
         </section>
 
         <!-- U2: MATRIX CIPHER -->
         <section id="u-matrix" class="game-panel" role="tabpanel" aria-label="Matrix Cipher game">
-            <div class="gp-header">
-                <div class="gp-badge badge-u">University</div>
-                <h2>⬛ Matrix Cipher</h2>
-                <p>Work through four categories of linear algebra problems: <strong>Determinants</strong> (2×2 matrices), <strong>Matrix Multiplication</strong> (find a single element of the product), <strong>Matrix Inverses</strong> (find an element of A⁻¹), and <strong>Eigenvalues</strong> (solve the characteristic equation). Each correct answer earns 30 points. Use <em>Show Steps</em> to see the full method.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-u">University</div>
+            <h2>⬛ Matrix Cipher</h2>
+            <p>Four operations: <strong>Determinants</strong> (2×2), <strong>Matrix Multiplication</strong> (find one element of AB), <strong>Inverses</strong> (element of A⁻¹), and <strong>Eigenvalues</strong> (characteristic equation).</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="matrix-op-row" role="group" aria-label="Matrix operation">
+              <button class="atype-btn active" data-mop="det" onclick="setMatrixOp('det',this)" aria-pressed="true">Determinant</button>
+              <button class="atype-btn" data-mop="mult" onclick="setMatrixOp('mult',this)" aria-pressed="false">Multiplication</button>
+              <button class="atype-btn" data-mop="inv" onclick="setMatrixOp('inv',this)" aria-pressed="false">Inverse</button>
+              <button class="atype-btn" data-mop="eigen" onclick="setMatrixOp('eigen',this)" aria-pressed="false">Eigenvalues</button>
             </div>
-            <div class="gp-body">
-                <div class="matrix-op-row" role="group" aria-label="Matrix operation">
-                    <button class="atype-btn active" data-mop="det" onclick="setMatrixOp('det',this)" aria-pressed="true">Determinant</button>
-                    <button class="atype-btn" data-mop="mult" onclick="setMatrixOp('mult',this)" aria-pressed="false">Multiplication</button>
-                    <button class="atype-btn" data-mop="inv" onclick="setMatrixOp('inv',this)" aria-pressed="false">Inverse</button>
-                    <button class="atype-btn" data-mop="eigen" onclick="setMatrixOp('eigen',this)" aria-pressed="false">Eigenvalues</button>
-                </div>
-                <div class="matrix-arena" id="matrixArena" aria-label="Matrix display">
-                    <p class="matrix-prompt">Select an operation above to begin.</p>
-                </div>
-                <div class="matrix-question" id="matrixQuestion" aria-live="polite"></div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="matrixScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="matrixStreak">0</strong></span>
-                </div>
-                <div class="options-grid four-col" id="matrixOptions" role="group" aria-label="Answer options"></div>
-                <div class="control-row">
-                    <button onclick="newMatrix()" class="btn-start">▶ New Problem</button>
-                    <button onclick="showMatrixWorking()" class="btn-hint">💡 Show Steps</button>
-                </div>
-                <div class="working-panel" id="matrixWorking" style="display:none" aria-label="Step-by-step working"></div>
-                <div class="result" id="matrixResult" role="status" aria-live="polite"></div>
+            <div class="matrix-arena" id="matrixArena" aria-label="Matrix display"><p class="matrix-prompt">Select an operation above to begin.</p></div>
+            <div class="matrix-question" id="matrixQuestion" aria-live="polite"></div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="matrixScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="matrixStreak">0</strong></span>
             </div>
-            <div class="game-guide">
-                <h3>Key Matrix Formulas</h3>
-                <ul class="formula-list">
-                    <li><strong>2×2 Determinant:</strong> det[[a,b],[c,d]] = ad − bc</li>
-                    <li><strong>2×2 Inverse:</strong> A⁻¹ = (1/det A) × [[d,−b],[−c,a]] &nbsp;(if det A ≠ 0)</li>
-                    <li><strong>Matrix Product (AB):</strong> Row of A · Column of B (dot product)</li>
-                    <li><strong>Characteristic Equation:</strong> det(A − λI) = 0 gives eigenvalues λ</li>
-                </ul>
+            <div class="options-grid four-col" id="matrixOptions" role="group" aria-label="Answer options"></div>
+            <div class="control-row">
+              <button onclick="newMatrix()" class="btn-start">▶ New Problem</button>
+              <button onclick="showMatrixWorking()" class="btn-hint">💡 Show Steps</button>
             </div>
+            <div class="working-panel" id="matrixWorking" style="display:none" aria-label="Step-by-step working"></div>
+            <div class="result" id="matrixResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Key Matrix Formulas</h3>
+            <ul class="formula-list">
+              <li><strong>2×2 Determinant:</strong> det[[a,b],[c,d]] = ad − bc</li>
+              <li><strong>2×2 Inverse:</strong> A⁻¹ = (1/det A) × [[d,−b],[−c,a]]</li>
+              <li><strong>Matrix Product (AB):</strong> Element (i,j) = row i of A · column j of B</li>
+              <li><strong>Characteristic Equation:</strong> det(A − λI) = 0 gives the eigenvalues λ</li>
+            </ul>
+          </div>
         </section>
 
         <!-- U3: SERIES VERDICT -->
         <section id="u-series" class="game-panel" role="tabpanel" aria-label="Series Verdict game">
-            <div class="gp-header">
-                <div class="gp-badge badge-u">University</div>
-                <h2>∑ Series Verdict</h2>
-                <p>Determine whether an infinite series <strong>converges or diverges</strong>. Select the most appropriate convergence test from eight available tests, write your reasoning, then deliver your verdict. Choosing the <em>optimal test</em> earns a 10-point bonus on top of the standard 25 points. This mirrors the analytical thinking required in real analysis and mathematical physics.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-u">University</div>
+            <h2>∑ Series Verdict</h2>
+            <p>Determine whether an infinite series converges or diverges. Select the optimal convergence test from eight available tests — choosing the best test earns a 10-point bonus on top of the 25-point verdict.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="display-card series-card" id="seriesCard">
+              <div class="series-sigma" aria-hidden="true">∑</div>
+              <div class="series-term" id="seriesTermU" aria-live="polite">—</div>
+              <div class="series-range">n = 1 to ∞</div>
             </div>
-            <div class="gp-body">
-                <div class="display-card series-card" id="seriesCard">
-                    <div class="series-sigma" aria-hidden="true">∑</div>
-                    <div class="series-term" id="seriesTermU" aria-live="polite">—</div>
-                    <div class="series-range">n = 1 to ∞</div>
-                </div>
-                <div class="verdict-tests">
-                    <p class="shelf-label">Select the best convergence test to apply:</p>
-                    <div class="test-btns" id="seriesTestBtns" role="group" aria-label="Convergence tests">
-                        <button onclick="selectSeriesTest('divergence')" class="stest-btn" data-test="divergence">Divergence Test</button>
-                        <button onclick="selectSeriesTest('geometric')" class="stest-btn" data-test="geometric">Geometric Series</button>
-                        <button onclick="selectSeriesTest('ptest')" class="stest-btn" data-test="ptest">p-Series Test</button>
-                        <button onclick="selectSeriesTest('ratio')" class="stest-btn" data-test="ratio">Ratio Test</button>
-                        <button onclick="selectSeriesTest('comparison')" class="stest-btn" data-test="comparison">Comparison Test</button>
-                        <button onclick="selectSeriesTest('alternating')" class="stest-btn" data-test="alternating">Alternating Series</button>
-                        <button onclick="selectSeriesTest('integral')" class="stest-btn" data-test="integral">Integral Test</button>
-                        <button onclick="selectSeriesTest('roottest')" class="stest-btn" data-test="roottest">Root Test</button>
-                    </div>
-                </div>
-                <div class="selected-test-display" id="selectedTestDisplay" role="note"></div>
-                <label for="seriesReasoning" class="sr-only">Write your working and reasoning here</label>
-                <textarea id="seriesReasoning" rows="3" placeholder="Write your working here: state L, the comparison series, or integral bound…" aria-label="Working and reasoning"></textarea>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="seriesScoreU">0</strong></span>
-                    <span class="pill pill-fire">🏆 Best Streak <strong id="seriesStreakU">0</strong></span>
-                </div>
-                <div class="dual-btns">
-                    <button onclick="submitSeriesVerdict(true)" class="btn-yes">Converges ✓</button>
-                    <button onclick="submitSeriesVerdict(false)" class="btn-no">Diverges ✗</button>
-                </div>
-                <div class="control-row" style="margin-top:10px">
-                    <button onclick="newSeries()" class="btn-ghost">New Series</button>
-                    <button onclick="showSeriesFullSolution()" class="btn-hint">💡 Full Solution</button>
-                </div>
-                <div class="working-panel" id="seriesSolution" style="display:none" aria-label="Full solution"></div>
-                <div class="result" id="seriesResultU" role="status" aria-live="polite"></div>
+            <div class="verdict-tests">
+              <p class="shelf-label">Select the best convergence test to apply:</p>
+              <div class="test-btns" id="seriesTestBtns" role="group" aria-label="Convergence tests">
+                <button onclick="selectSeriesTest('divergence')" class="stest-btn" data-test="divergence">Divergence Test</button>
+                <button onclick="selectSeriesTest('geometric')" class="stest-btn" data-test="geometric">Geometric Series</button>
+                <button onclick="selectSeriesTest('ptest')" class="stest-btn" data-test="ptest">p-Series Test</button>
+                <button onclick="selectSeriesTest('ratio')" class="stest-btn" data-test="ratio">Ratio Test</button>
+                <button onclick="selectSeriesTest('comparison')" class="stest-btn" data-test="comparison">Comparison Test</button>
+                <button onclick="selectSeriesTest('alternating')" class="stest-btn" data-test="alternating">Alternating Series</button>
+                <button onclick="selectSeriesTest('integral')" class="stest-btn" data-test="integral">Integral Test</button>
+                <button onclick="selectSeriesTest('roottest')" class="stest-btn" data-test="roottest">Root Test</button>
+              </div>
             </div>
-            <div class="game-guide">
-                <h3>Convergence Test Summary</h3>
-                <ul class="formula-list">
-                    <li><strong>Divergence:</strong> If lim aₙ ≠ 0, the series diverges immediately.</li>
-                    <li><strong>Geometric (∑arⁿ):</strong> Converges iff |r| &lt; 1. Sum = a/(1−r).</li>
-                    <li><strong>p-Series (∑1/nᵖ):</strong> Converges iff p &gt; 1.</li>
-                    <li><strong>Ratio Test:</strong> Compute L = lim|aₙ₊₁/aₙ|. Converges if L &lt; 1.</li>
-                    <li><strong>Alternating (Leibniz):</strong> Converges if terms decrease monotonically to 0.</li>
-                    <li><strong>Integral Test:</strong> ∑aₙ and ∫f(x)dx share their convergence fate.</li>
-                </ul>
+            <div class="selected-test-display" id="selectedTestDisplay" role="note"></div>
+            <label for="seriesReasoning" class="sr-only">Write your working and reasoning</label>
+            <textarea id="seriesReasoning" rows="3" placeholder="Write your working: state L, the comparison series, or integral bound…" aria-label="Working and reasoning"></textarea>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="seriesScoreU">0</strong></span>
+              <span class="pill pill-fire">🏆 Streak <strong id="seriesStreakU">0</strong></span>
             </div>
+            <div class="dual-btns">
+              <button onclick="submitSeriesVerdict(true)" class="btn-yes">Converges ✓</button>
+              <button onclick="submitSeriesVerdict(false)" class="btn-no">Diverges ✗</button>
+            </div>
+            <div class="control-row" style="margin-top:10px">
+              <button onclick="newSeries()" class="btn-ghost">New Series</button>
+              <button onclick="showSeriesFullSolution()" class="btn-hint">💡 Full Solution</button>
+            </div>
+            <div class="working-panel" id="seriesSolution" style="display:none" aria-label="Full solution"></div>
+            <div class="result" id="seriesResultU" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Convergence Test Selector Guide</h3>
+            <ul class="formula-list">
+              <li><strong>Divergence Test:</strong> Always try first. If lim aₙ ≠ 0, the series diverges immediately.</li>
+              <li><strong>Geometric (∑arⁿ):</strong> Converges iff |r| &lt; 1; sum = a/(1−r).</li>
+              <li><strong>p-Series (∑1/nᵖ):</strong> Converges iff p &gt; 1.</li>
+              <li><strong>Ratio Test:</strong> Best for factorials and exponentials. L = lim|aₙ₊₁/aₙ|. Converges if L &lt; 1.</li>
+              <li><strong>Alternating Series (Leibniz):</strong> Converges if bₙ decreasing and bₙ → 0.</li>
+              <li><strong>Integral Test:</strong> If f(x) is continuous, positive, and decreasing, ∑aₙ and ∫f(x)dx share fate.</li>
+            </ul>
+          </div>
         </section>
 
         <!-- U4: COMPLEX ARENA -->
         <section id="u-complex" class="game-panel" role="tabpanel" aria-label="Complex Arena game">
-            <div class="gp-header">
-                <div class="gp-badge badge-u">University</div>
-                <h2>ℂ Complex Arena</h2>
-                <p>Master the arithmetic and geometry of complex numbers across four modes: <strong>Arithmetic</strong> (add, subtract, multiply), <strong>Modulus &amp; Argument</strong> (with Argand diagram), <strong>De Moivre's Theorem</strong> (powers of complex numbers in polar form), and <strong>Roots of Unity</strong> (equally spaced points on the unit circle). Each correct answer earns 30 points.</p>
-                <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars">
-                    <span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span>
-                </div>
+          <div class="gp-header">
+            <div class="gp-badge badge-u">University</div>
+            <h2>ℂ Complex Arena</h2>
+            <p>Four modes: <strong>Arithmetic</strong> (add, subtract, multiply complex numbers), <strong>Modulus &amp; Argument</strong> (with live Argand diagram), <strong>De Moivre's Theorem</strong>, and <strong>Roots of Unity</strong>. 30 points per correct answer.</p>
+            <div class="difficulty-stars" aria-label="Difficulty: 3 out of 3 stars"><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span><span class="star filled" aria-hidden="true">★</span></div>
+          </div>
+          <div class="gp-body">
+            <div class="complex-mode-row" role="group" aria-label="Complex number topic">
+              <button class="atype-btn active" data-cop="basic" onclick="setComplexOp('basic',this)" aria-pressed="true">Arithmetic</button>
+              <button class="atype-btn" data-cop="modarg" onclick="setComplexOp('modarg',this)" aria-pressed="false">Mod &amp; Arg</button>
+              <button class="atype-btn" data-cop="demoivre" onclick="setComplexOp('demoivre',this)" aria-pressed="false">De Moivre</button>
+              <button class="atype-btn" data-cop="roots" onclick="setComplexOp('roots',this)" aria-pressed="false">Roots of Unity</button>
             </div>
-            <div class="gp-body">
-                <div class="complex-mode-row" role="group" aria-label="Complex number topic">
-                    <button class="atype-btn active" data-cop="basic" onclick="setComplexOp('basic',this)" aria-pressed="true">Arithmetic</button>
-                    <button class="atype-btn" data-cop="modarg" onclick="setComplexOp('modarg',this)" aria-pressed="false">Mod &amp; Arg</button>
-                    <button class="atype-btn" data-cop="demoivre" onclick="setComplexOp('demoivre',this)" aria-pressed="false">De Moivre</button>
-                    <button class="atype-btn" data-cop="roots" onclick="setComplexOp('roots',this)" aria-pressed="false">Roots of Unity</button>
-                </div>
-                <div class="display-card series-card" id="complexCard">
-                    <div class="complex-q" id="complexQ" aria-live="polite">Press ▶ New Problem to begin</div>
-                </div>
-                <div class="argand-wrap" id="argandWrap" style="display:none">
-                    <canvas id="argandCanvas" width="300" height="300" aria-label="Argand diagram showing the complex number as a vector" role="img"></canvas>
-                </div>
-                <div class="pill-row">
-                    <span class="pill">Score <strong id="complexScore">0</strong></span>
-                    <span class="pill pill-fire">🔥 Streak <strong id="complexStreak">0</strong></span>
-                </div>
-                <div class="options-grid four-col" id="complexOptions" role="group" aria-label="Answer options"></div>
-                <div class="control-row">
-                    <button onclick="newComplex()" class="btn-start">▶ New Problem</button>
-                    <button onclick="showComplexWorking()" class="btn-hint">💡 Working</button>
-                </div>
-                <div class="working-panel" id="complexWorking" style="display:none" aria-label="Step-by-step working"></div>
-                <div class="result" id="complexResult" role="status" aria-live="polite"></div>
+            <div class="display-card series-card" id="complexCard">
+              <div class="complex-q" id="complexQ" aria-live="polite">Press ▶ New Problem to begin</div>
             </div>
-            <div class="game-guide">
-                <h3>Complex Number Essentials</h3>
-                <ul class="formula-list">
-                    <li><strong>Arithmetic:</strong> (a+bi)+(c+di) = (a+c)+(b+d)i &nbsp;|&nbsp; use i² = −1 for multiplication</li>
-                    <li><strong>Modulus:</strong> |z| = √(a² + b²)</li>
-                    <li><strong>Argument:</strong> arg(z) = arctan(b/a), adjusted for quadrant</li>
-                    <li><strong>De Moivre:</strong> (cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)</li>
-                    <li><strong>nth Roots of Unity:</strong> zₖ = e^(2πik/n) for k = 0, 1, …, n−1</li>
-                </ul>
+            <div class="argand-wrap" id="argandWrap" style="display:none">
+              <canvas id="argandCanvas" width="300" height="300" aria-label="Argand diagram showing the complex number" role="img"></canvas>
             </div>
+            <div class="pill-row">
+              <span class="pill">Score <strong id="complexScore">0</strong></span>
+              <span class="pill pill-fire">🔥 Streak <strong id="complexStreak">0</strong></span>
+            </div>
+            <div class="options-grid four-col" id="complexOptions" role="group" aria-label="Answer options"></div>
+            <div class="control-row">
+              <button onclick="newComplex()" class="btn-start">▶ New Problem</button>
+              <button onclick="showComplexWorking()" class="btn-hint">💡 Working</button>
+            </div>
+            <div class="working-panel" id="complexWorking" style="display:none" aria-label="Step-by-step working"></div>
+            <div class="result" id="complexResult" role="status" aria-live="polite"></div>
+          </div>
+          <div class="game-guide">
+            <h3>Complex Number Essentials</h3>
+            <ul class="formula-list">
+              <li><strong>Arithmetic:</strong> (a+bi)±(c+di) = (a±c)+(b±d)i · Multiply using FOIL and i² = −1</li>
+              <li><strong>Modulus:</strong> |z| = √(a² + b²)</li>
+              <li><strong>Argument:</strong> arg(z) = arctan(b/a), adjusted for the correct quadrant (CAST)</li>
+              <li><strong>De Moivre:</strong> (cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)</li>
+              <li><strong>nth Roots of Unity:</strong> zₖ = e^(2πik/n) for k = 0, 1, …, n−1</li>
+            </ul>
+          </div>
         </section>
+      </div><!-- /panel-university -->
 
-    </div><!-- /panel-university -->
+    </main><!-- /mind-games-main -->
 
-    <!-- ── ABOUT THIS PLATFORM (AdSense content depth) ────────── -->
-    <section class="about-platform" aria-label="About Ronny Best Math Learning Platform">
-        <h2>About This Platform</h2>
-        <div class="about-grid">
-            <div>
-                <h3>Built for Kenyan Students — Useful Everywhere</h3>
-                <p>Ronny Best is a mathematics educator whose platform is designed to bridge the gap between classroom instruction and genuine understanding. The games on this page follow the curriculum progression from lower primary through secondary school to university-level mathematics, making it useful for students at any stage of their journey.</p>
-                <p>Every game generates questions procedurally — meaning you will never see the exact same question twice. This forces genuine understanding rather than pattern memorisation. Scores are tracked locally in your browser, so you can return each day and measure real progress.</p>
-            </div>
-            <div>
-                <h3>Who These Games Are For</h3>
-                <ul class="formula-list">
-                    <li><strong>Primary learners (8–12):</strong> Building number sense, multiplication fluency, and first geometry concepts.</li>
-                    <li><strong>Secondary students (13–17):</strong> Consolidating algebra, trigonometry, coordinate geometry, and factorisation for national examinations.</li>
-                    <li><strong>University students (18+):</strong> Practising calculus, linear algebra, real analysis, and complex analysis at degree level.</li>
-                    <li><strong>Teachers and tutors:</strong> Use these games as warm-up starters or assessment tools in class sessions.</li>
-                </ul>
-            </div>
+  </div><!-- /mind-game-layout -->
+
+  <!-- ══════════════════════════════════════════════════════
+       HOW TO GET THE MOST FROM THESE GAMES
+  ══════════════════════════════════════════════════════ -->
+  <section class="mind-how-section" aria-labelledby="how-games-heading">
+    <div class="mind-how-inner">
+      <h2 id="how-games-heading">How to Get the Maximum Benefit from Brain Games Practice</h2>
+      <p>Games are most effective when integrated into a structured study routine rather than used as a substitute for it.</p>
+      <div class="mind-how-steps">
+        <div class="mind-how-step">
+          <div class="mhs-num" aria-hidden="true">1</div>
+          <div class="mhs-body">
+            <h3>Read the lesson page first</h3>
+            <p>Always read the corresponding lesson on this site before playing the game. For the Trig Challenge, read the <a href="trigonometry.html">Trigonometry lesson</a>. For Algebra Duel, read the <a href="algebra.html">Algebra lesson</a>. Games that come after reading produce mastery.</p>
+          </div>
         </div>
-    </section>
-
-</main>
-
-<footer class="page-footer" role="contentinfo">
-    <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="index.html">Home</a>
-        <a href="main.html">Math Lessons</a>
-        <a href="tasks.html">Practice</a>
-        <a href="about.html">About</a>
+        <div class="mind-how-step">
+          <div class="mhs-num" aria-hidden="true">2</div>
+          <div class="mhs-body">
+            <h3>Play one focused session per topic</h3>
+            <p>Ten to fifteen minutes on one game is more effective than thirty minutes flipping between games. This is <em>deliberate practice</em> — targeted effort in a specific area of weakness, with immediate corrective feedback.</p>
+          </div>
+        </div>
+        <div class="mind-how-step">
+          <div class="mhs-num" aria-hidden="true">3</div>
+          <div class="mhs-body">
+            <h3>Always read the "Show Working" explanations</h3>
+            <p>When you answer incorrectly, open the working panel and read every step carefully. Understanding your specific error is three times more valuable than getting a correct answer.</p>
+          </div>
+        </div>
+        <div class="mind-how-step">
+          <div class="mhs-num" aria-hidden="true">4</div>
+          <div class="mhs-body">
+            <h3>Attempt the practice problems before the exam</h3>
+            <p>After several game sessions, move to the <a href="tasks.html">Practice Problems</a> page for longer, KCSE-style questions. The games build speed and fluency; the practice problems build the sustained analytical thinking needed to write full exam solutions.</p>
+          </div>
+        </div>
+        <div class="mind-how-step">
+          <div class="mhs-num" aria-hidden="true">5</div>
+          <div class="mhs-body">
+            <h3>Ask Mwalimu when stuck</h3>
+            <p>If a particular question type keeps defeating you, post your specific question on <a href="ask-mwalimu.html">Ask Mwalimu</a>. Mwalimu Ronny will respond with a personalised explanation.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>© 2025 Ronny Best Math Learning Platform · All games are original educational content.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════════════════ -->
+  <section class="mind-about-section" aria-labelledby="about-games-heading">
+    <div class="mind-about-inner">
+      <div class="mind-about-grid">
+        <div>
+          <h2 id="about-games-heading">Built by a Teacher, for Learners</h2>
+          <p>Every game on this page was designed by <strong>Mwalimu Ronny Mwenda Best</strong>, a Mathematics and Computer Science teacher based in <strong>Embu County, Kenya</strong>, and a B.Ed Science student at the <strong>University of Embu</strong>. Every problem type, every worked solution, and every hint was written and tested personally to ensure they genuinely reflect the concepts and common errors encountered in Kenyan classrooms.</p>
+          <p>The design principle is simple: <em>every wrong answer should teach something</em>. For a more extensive collection of free educational games covering both Mathematics and Computer Science topics, visit <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener noreferrer"><strong>ronnygame.netlify.app</strong></a>.</p>
+        </div>
+        <div>
+          <h3>Who These Games Are For</h3>
+          <ul class="formula-list" style="margin-bottom:1rem;">
+            <li><strong>Primary learners (8–12):</strong> Building arithmetic fluency aligned to CBC Lower/Upper Primary Mathematics.</li>
+            <li><strong>Secondary students (13–17):</strong> Consolidating algebra, trigonometry, graphs, and factorisation for KCSE.</li>
+            <li><strong>University students (18+):</strong> Practising calculus, linear algebra, real analysis, and complex analysis.</li>
+            <li><strong>Teachers and tutors:</strong> Use these games as warm-up starters or end-of-lesson consolidation activities.</li>
+            <li><strong>Self-study learners:</strong> Anyone revising mathematics independently will benefit from the unlimited questions and instant worked feedback.</li>
+          </ul>
+          <a href="about.html" class="btn-outline-navy">About Mwalimu Ronny →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /mind-page-wrap -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+      <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+      <p class="footer-cbc-note">Aligned to KICD · TSC · Ministry of Education Kenya</p>
+      <p class="footer-contact-line">
+        <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+254799188900">+254 799 188 900</a>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="fn-col">
+        <h4>Lessons</h4>
+        <ul>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="trigonometry.html">Trigonometry</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="limits.html">Limits</a></li>
+          <li><a href="differentiation.html">Differentiation</a></li>
+          <li><a href="integration.html">Integration</a></li>
+          <li><a href="vectors.html">Vectors</a></li>
+          <li><a href="matrices.html">Matrices</a></li>
+          <li><a href="conics.html">Conic Sections</a></li>
+          <li><a href="sequences.html">Sequences &amp; Series</a></li>
+          <li><a href="complex.html">Complex Numbers</a></li>
+          <li><a href="areas.html">Areas</a></li>
+          <li><a href="volumes.html">Volumes</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="main.html">All Lessons</a></li>
+          <li><a href="tasks.html">Practice Problems</a></li>
+          <li><a href="mind.html">Brain Games</a></li>
+          <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          <li><a href="https://ronnygame.netlify.app" target="_blank" rel="noopener noreferrer">Ronny Edu Games ↗</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>My Learning</h4>
+        <ul>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About Mwalimu Ronny</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ronny Best Mathematics. All rights reserved. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+    <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC/KICD-aligned, expert-led instruction.</p>
+  </div>
 </footer>
 
-</div><!-- /page-wrap -->
-
+<script src="shared.js"></script>
+<script src="topic.js"></script>
 <script src="mind.js"></script>
 </body>
 </html>

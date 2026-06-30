@@ -1,273 +1,1421 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
-     crossorigin="anonymous"></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Differentiation | Ronny Best Mathematics</title>
-  <meta name="description" content="Rates of change from first principles to multivariable calculus">
+  <title>Differentiation | Ronny Best Mathematics — CBC-Aligned Calculus Lessons</title>
+  <meta name="description" content="Master differentiation from first principles to multivariable calculus. CBC-aligned, KICD-approved step-by-step lessons covering all rules, applications, implicit and parametric differentiation for Kenyan secondary school and university students.">
+  <meta name="keywords" content="differentiation Kenya, calculus CBC Kenya, derivative rules, chain rule product rule quotient rule, turning points, rates of change, KCSE differentiation, Senior Secondary Mathematics Kenya">
+  <meta name="author" content="Ronny Mwenda Best">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bestronny.netlify.app/differentiation.html">
+
+  <meta property="og:title" content="Differentiation | Ronny Best Mathematics">
+  <meta property="og:description" content="Complete differentiation guide from first principles to partial derivatives — CBC-aligned for Kenyan students.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bestronny.netlify.app/differentiation.html">
+  <meta property="og:image" content="IMAGES/P2.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="IMAGES/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RonnyMaths">
+<link rel="apple-touch-icon" href="IMAGES/icon-192.png">
+<!-- Consent Mode defaults (must come BEFORE AdSense script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Differentiation — Complete CBC-Aligned Guide",
+    "description": "Comprehensive differentiation lessons from first principles to multivariable calculus, aligned to Kenya's CBC curriculum.",
+    "author": { "@type": "Person", "name": "Ronny Mwenda Best", "jobTitle": "Mathematics Teacher" },
+    "publisher": { "@type": "Organization", "name": "Ronny Best Mathematics", "url": "https://bestronny.netlify.app/" },
+    "educationalLevel": ["Secondary", "Senior Secondary", "University"],
+    "learningResourceType": "Lesson",
+    "inLanguage": "en",
+    "url": "https://bestronny.netlify.app/differentiation.html"
+  }
+  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a href="../main.html" class="nav-logo">Ronny Best <span>∑</span></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../main.html" class="active">Lessons</a></li>
-    <li><a href="../tasks.html">Practice</a></li>
-    <li><a href="../ask-mwalimu.html">Ask Mwalimu</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-<section class="topic-hero">
-  <span class="hero-icon">📈</span>
-  <h1>Differentiation</h1>
-  <p class="hero-sub">Rates of change from first principles to multivariable calculus</p>
-  <div class="level-pills"><span class="level-pill pill-primary">Secondary</span> <span class="level-pill pill-secondary">A-Level</span> <span class="level-pill pill-uni">University</span></div>
-</section>
 
-<div class="breadcrumb">
-  <a href="../main.html">Math Lessons</a> &rsaquo; <strong>Differentiation</strong>
-</div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="topic-wrap">
-  <!-- TOC Sidebar -->
-  <aside class="toc-sidebar">
-    <h3>Contents</h3>
-    <ul class="toc-list">
-
-      <li class="toc-level">Introduction</li>
-      <li><a href="#diff-intro">What is Differentiation?</a></li>
-      <li class="toc-level">Secondary</li>
-      <li><a href="#diff-rules">Basic Rules</a></li>
-      <li><a href="#diff-trig">Trig & Exp Derivatives</a></li>
-      <li><a href="#diff-chain">Chain, Product, Quotient</a></li>
-      <li><a href="#diff-apps">Applications</a></li>
-      <li class="toc-level">University</li>
-      <li><a href="#implicit">Implicit & Parametric</a></li>
-      <li><a href="#partial-diff">Partial Derivatives</a></li>
-      <li><a href="#taylor">Taylor & Maclaurin Series</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="topic-content">
-
-    <section id="diff-intro" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📈</span><h2>Introduction to Differentiation</h2><span class="level-badge badge-all">All Levels</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>The Derivative — First Principles</h3>
-          <div class="formula-box highlight">
-            f′(x) = lim<sub>h→0</sub> [f(x+h) − f(x)] / h
-          </div>
-          <p>The derivative gives the instantaneous rate of change and the gradient of the tangent line at any point.</p>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Differentiate f(x) = x² from first principles</div>
-              <p class="soln">f′(x) = lim[(x+h)² − x²]/h = lim[2xh+h²]/h = lim(2x+h) = 2x</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Notation</h3>
-          <div class="formula-box">dy/dx &nbsp; f′(x) &nbsp; Df(x) &nbsp; ẋ (dot notation in physics for time derivatives)</div>
-        </div>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo" aria-label="Ronny Best Mathematics Home">
+          <span class="brand-sigma" aria-hidden="true">Σ</span>
+          <span class="brand-text">Ronny Best <em>Mathematics</em></span>
+        </a>
+        <p class="brand-tagline">Free · CBC-Aligned · Expert-Led</p>
       </div>
-    </section>
-
-    <section id="diff-rules" class="topic-section">
-      <div class="section-header"><span class="sec-icon">📋</span><h2>Basic Differentiation Rules</h2><span class="level-badge badge-secondary">Secondary</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Power rule: d/dx(xⁿ) = nxⁿ⁻¹<br>
-            Constant: d/dx(c) = 0<br>
-            Sum/Difference: d/dx[f ± g] = f′ ± g′<br>
-            Constant multiple: d/dx[cf] = cf′
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div>
-              <p>Differentiate y = 4x⁵ − 3x³ + 7x − 2</p>
-              <p class="soln">dy/dx = 20x⁴ − 9x² + 7</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div>
-              <p>Differentiate y = √x + 1/x²</p>
-              <p class="soln">= x^(1/2) + x^(−2) → dy/dx = (1/2)x^(−1/2) − 2x^(−3) = 1/(2√x) − 2/x³</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="diff-trig" class="topic-section">
-      <div class="section-header"><span class="sec-icon">sin</span><h2>Trig, Exponential & Log Derivatives</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box">
-            d/dx(sin x) = cos x &nbsp;&nbsp; d/dx(cos x) = −sin x &nbsp;&nbsp; d/dx(tan x) = sec²x<br>
-            d/dx(sec x) = sec x tan x &nbsp;&nbsp; d/dx(cosec x) = −cosec x cot x &nbsp;&nbsp; d/dx(cot x) = −cosec²x<br>
-            d/dx(eˣ) = eˣ &nbsp;&nbsp; d/dx(aˣ) = aˣ ln a &nbsp;&nbsp; d/dx(ln x) = 1/x &nbsp;&nbsp; d/dx(log_a x) = 1/(x ln a)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example 1</div><p>d/dx(e^(3x)) = 3e^(3x)</p></div>
-            <div class="example-card"><div class="example-label">Example 2</div><p>d/dx(ln(x²+1)) = 2x/(x²+1)</p></div>
-            <div class="example-card"><div class="example-label">Example 3</div><p>d/dx(cos(x²)) = −2x sin(x²) [chain rule]</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="diff-chain" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🔗</span><h2>Product, Quotient & Chain Rules</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Product rule: d/dx(uv) = u′v + uv′<br>
-            Quotient rule: d/dx(u/v) = (u′v − uv′)/v²<br>
-            Chain rule: d/dx[f(g(x))] = f′(g(x)) · g′(x)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Product rule</div>
-              <p>Differentiate y = x² sin x</p>
-              <p class="soln">dy/dx = 2x sin x + x² cos x</p></div>
-            <div class="example-card"><div class="example-label">Example — Quotient rule</div>
-              <p>Differentiate y = (x² + 1)/(x − 2)</p>
-              <p class="soln">= [2x(x−2) − (x²+1)]/(x−2)² = (x²−4x−1)/(x−2)²</p></div>
-            <div class="example-card"><div class="example-label">Example — Chain rule</div>
-              <p>Differentiate y = (3x² + 5)⁷</p>
-              <p class="soln">= 7(3x²+5)⁶ × 6x = 42x(3x²+5)⁶</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="diff-apps" class="topic-section">
-      <div class="section-header"><span class="sec-icon">🎯</span><h2>Applications of Differentiation</h2><span class="level-badge badge-secondary">Secondary / A-Level</span></div>
-      <div class="section-body">
-        <div class="sub"><h3>Finding Stationary Points / Extrema</h3>
-          <div class="formula-box">
-            Set f′(x) = 0 to find stationary points.<br>
-            f′′(x) &gt; 0 → local minimum &nbsp;&nbsp; f′′(x) &lt; 0 → local maximum &nbsp;&nbsp; f′′(x) = 0 → inflection (check sign change)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example</div>
-              <p>Find and classify stationary points of f(x) = x³ − 3x + 2</p>
-              <p class="soln">f′ = 3x²−3 = 0 → x = ±1. f′′=6x. At x=1: f′′=6 &gt; 0 → min. At x=−1: f′′=−6 &lt; 0 → max.</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Rates of Change & Optimisation</h3>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Optimisation</div>
-              <p>A box with square base and open top has volume 108 cm³. Minimise surface area.</p>
-              <p class="soln">If base side = x, height = h. V = x²h = 108 → h = 108/x². SA = x² + 4xh = x² + 432/x. dSA/dx = 2x − 432/x² = 0 → x³ = 216 → x = 6, h = 3.</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>L'Hôpital's Rule</h3>
-          <div class="formula-box">If lim f(x)/g(x) is 0/0 or ∞/∞: &nbsp; lim f(x)/g(x) = lim f′(x)/g′(x)</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — lim(x→0) sin x / x</div>
-              <p class="soln">= lim(x→0) cos x / 1 = 1</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="implicit" class="topic-section">
-      <div class="section-header"><span class="sec-icon">⚙️</span><h2>Implicit & Parametric Differentiation</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <h3>Implicit Differentiation</h3>
-          <p>Differentiate both sides with respect to x, using d/dx[f(y)] = f′(y) · dy/dx.</p>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — Find dy/dx for x² + y² = 25</div>
-              <p class="soln">2x + 2y(dy/dx) = 0 → dy/dx = −x/y</p></div>
-            <div class="example-card"><div class="example-label">Example — Find dy/dx for xe^y = y</div>
-              <p class="soln">e^y + xe^y(dy/dx) = dy/dx → e^y = dy/dx(1−xe^y) → dy/dx = e^y/(1−xe^y)</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Parametric Differentiation</h3>
-          <div class="formula-box">dy/dx = (dy/dt)/(dx/dt) &nbsp;&nbsp; d²y/dx² = (d/dt[dy/dx])/(dx/dt)</div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — x = t², y = t³</div>
-              <p class="soln">dx/dt = 2t, dy/dt = 3t². dy/dx = 3t²/2t = 3t/2</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="partial-diff" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∂</span><h2>Partial Derivatives & Multivariable Calculus</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            ∂f/∂x: differentiate with respect to x, treating y as constant<br>
-            ∂f/∂y: differentiate with respect to y, treating x as constant<br>
-            Gradient vector: ∇f = (∂f/∂x, ∂f/∂y, ∂f/∂z)
-          </div>
-          <div class="example-grid">
-            <div class="example-card"><div class="example-label">Example — f(x,y) = x²y + 3xy²</div>
-              <p class="soln">∂f/∂x = 2xy + 3y². ∂f/∂y = x² + 6xy</p></div>
-          </div>
-        </div>
-        <div class="sub"><h3>Critical Points (Multivariable)</h3>
-          <div class="formula-box">At critical point: ∂f/∂x = 0 and ∂f/∂y = 0. Use second derivative test (discriminant D = f_xx f_yy − (f_xy)²)</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="taylor" class="topic-section">
-      <div class="section-header"><span class="sec-icon">∑</span><h2>Taylor & Maclaurin Series</h2><span class="level-badge badge-uni">University</span></div>
-      <div class="section-body">
-        <div class="sub">
-          <div class="formula-box highlight">
-            Taylor: f(x) = f(a) + f′(a)(x−a) + f′′(a)(x−a)²/2! + f′′′(a)(x−a)³/3! + ...<br>
-            Maclaurin (a=0): f(x) = f(0) + f′(0)x + f′′(0)x²/2! + ...<br><br>
-            Common series: eˣ = 1 + x + x²/2! + ... &nbsp; sin x = x − x³/3! + x⁵/5! − ...<br>
-            cos x = 1 − x²/2! + x⁴/4! − ... &nbsp;&nbsp; ln(1+x) = x − x²/2 + x³/3 − ... (|x|≤1)
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prev / Next navigation -->
-    <div class="topic-nav">
-      <a href="statistics.html" class="topic-nav-btn prev">← Statistics</a>
-      <a href="integration.html" class="topic-nav-btn next">Integration →</a>
+      <p id="welcome" class="welcome-pill" aria-live="polite"></p>
     </div>
-  </main>
-</div>
+  </header>
 
-<footer>
-  <p>
-    <a href="../index.html">Home</a> &middot;
-    <a href="../main.html">Math Lessons</a> &middot;
-    <a href="../tasks.html">Practice</a> &middot;
-    <a href="../about.html">About</a> &middot;
-    <a href="../privacy.html">Privacy Policy</a> &middot;
-    <a href="../terms.html">Terms</a>
-  </p>
-  <p>&copy; 2025 Ronny Best Mathematics &mdash; Free Maths Education for Everyone</p>
-</footer>
-<script src="../shared.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Track topic view
-  if (typeof MathProgress !== 'undefined') {
-    const title = document.querySelector('.topic-hero h1');
-    if (title) MathProgress.recordTopicViewed(title.textContent.trim());
-  }
-  // TOC active state on scroll
-  const sections = document.querySelectorAll('.topic-section');
-  const tocLinks  = document.querySelectorAll('.toc-list a[href^="#"]');
-  const observer  = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => observer.observe(s));
-});
-</script>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-brand">Ronny Best <em>Maths</em></span>
+        <div class="nav-mobile-actions">
+          <button class="nav-search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-search-bar" id="navSearchBar" hidden>
+        <div class="nsb-inner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="siteSearch" placeholder="Search topics, lessons, examples…" autocomplete="off" aria-label="Search site">
+          <button id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div id="searchResults" class="search-results" role="listbox" hidden></div>
+      </div>
+
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="math-lessons.html" class="active nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Lessons <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="algebra.html" role="menuitem">Algebra</a></li>
+            <li role="none"><a href="trigonometry.html" role="menuitem">Trigonometry</a></li>
+            <li role="none"><a href="statistics.html" role="menuitem">Statistics</a></li>
+            <li role="none"><a href="limits.html" role="menuitem">Limits</a></li>
+            <li role="none"><a href="differentiation.html" role="menuitem" class="active">Differentiation</a></li>
+            <li role="none"><a href="integration.html" role="menuitem">Integration</a></li>
+            <li role="none"><a href="vectors.html" role="menuitem">Vectors</a></li>
+            <li role="none"><a href="matrices.html" role="menuitem">Matrices</a></li>
+            <li role="none"><a href="conics.html" role="menuitem">Conics</a></li>
+            <li role="none"><a href="sequences.html" role="menuitem">Sequences &amp; Series</a></li>
+            <li role="none"><a href="complex.html" role="menuitem">Complex Numbers</a></li>
+            <li role="none"><a href="areas.html" role="menuitem">Areas</a></li>
+            <li role="none"><a href="volumes.html" role="menuitem">Volumes</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Practice</a></li>
+        <li><a href="mind.html">Brain Games</a></li>
+        <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="progress.html">My Progress</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ TOPIC HERO ═══ -->
+  <div class="topic-hero" role="banner">
+    <div class="topic-hero-bg" aria-hidden="true"></div>
+    <div class="topic-hero-symbols" aria-hidden="true">
+      <span>d/dx</span><span>f′</span><span>∂</span><span>∇</span>
+    </div>
+    <div class="topic-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="math-lessons.html">Lessons</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Differentiation</span>
+      </nav>
+      <div class="topic-hero-icon" aria-hidden="true">d/dx</div>
+      <h1>Differentiation</h1>
+      <p class="topic-hero-sub">
+        From the definition of a derivative through to partial differentiation and Taylor series —
+        a complete, step-by-step guide for all levels of the Kenyan mathematics curriculum.
+      </p>
+      <div class="topic-meta-row">
+        <span class="topic-badge badge-strand">Pure Mathematics</span>
+        <span class="topic-badge badge-cbc">CBC Aligned</span>
+        <span class="topic-badge badge-level">Senior Secondary</span>
+        <span class="topic-badge badge-exam">KCSE Examinable</span>
+      </div>
+      <div class="topic-stats-row">
+        <div class="ts-item"><strong>9</strong><span>Sections</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>30+</strong><span>Worked Examples</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>All Levels</strong><span>Covered</span></div>
+        <div class="ts-div" aria-hidden="true"></div>
+        <div class="ts-item"><strong>KICD</strong><span>Approved</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN LAYOUT ═══ -->
+  <div class="topic-layout" id="main-content">
+
+    <!-- ── TOC SIDEBAR ── -->
+    <aside class="toc-sidebar" aria-label="Table of contents">
+      <div class="toc-sticky">
+        <div class="toc-header">
+          <span class="toc-title">Contents</span>
+        </div>
+        <div class="toc-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="toc-progress-fill" id="tocProgressFill"></div>
+        </div>
+        <ul class="toc-list" role="list">
+          <li class="toc-group-label">Introduction</li>
+          <li><a href="#intro" class="toc-link">What is Differentiation?</a></li>
+          <li><a href="#first-principles" class="toc-link">First Principles</a></li>
+          <li class="toc-group-label">Core Rules</li>
+          <li><a href="#basic-rules" class="toc-link">Basic Rules</a></li>
+          <li><a href="#trig-exp-log" class="toc-link">Trig, Exp &amp; Log</a></li>
+          <li><a href="#product-quotient-chain" class="toc-link">Product, Quotient &amp; Chain</a></li>
+          <li class="toc-group-label">Applications</li>
+          <li><a href="#stationary-points" class="toc-link">Stationary Points</a></li>
+          <li><a href="#rates-optimisation" class="toc-link">Rates &amp; Optimisation</a></li>
+          <li><a href="#tangents-normals" class="toc-link">Tangents &amp; Normals</a></li>
+          <li class="toc-group-label">Advanced</li>
+          <li><a href="#implicit-parametric" class="toc-link">Implicit &amp; Parametric</a></li>
+          <li><a href="#partial-derivatives" class="toc-link">Partial Derivatives</a></li>
+          <li><a href="#taylor-maclaurin" class="toc-link">Taylor &amp; Maclaurin</a></li>
+          <li class="toc-group-label">Reference</li>
+          <li><a href="#formula-sheet" class="toc-link">Formula Sheet</a></li>
+          <li><a href="#common-errors" class="toc-link">Common Errors</a></li>
+        </ul>
+        <div class="toc-actions">
+          <a href="tasks.html#differentiation" class="toc-practice-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            Practice Differentiation
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="topic-content" id="main-content">
+
+      <!-- CBC Context Banner -->
+      <div class="cbc-context-banner" role="note">
+        <span class="ccb-icon" aria-hidden="true">📘</span>
+        <div class="ccb-text">
+          <strong>CBC / KICD Curriculum Alignment:</strong> Differentiation falls under the
+          <strong>Pure Mathematics</strong> strand of the Senior Secondary school curriculum as defined
+          by the Kenya Institute of Curriculum Development (KICD). It is examined in the KCSE Mathematics
+          Paper 2 and features across all three Senior Secondary pathways: <strong>STEM, Social Sciences,
+          and Arts &amp; Sports Science</strong>. This topic also supports core competencies of the
+          <strong>Basic Education Curriculum Framework (BECF)</strong> — specifically critical thinking,
+          problem solving, and communication of mathematical reasoning.
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 1 — WHAT IS DIFFERENTIATION?
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="intro" aria-labelledby="intro-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📈</div>
+          <div>
+            <span class="ls-eyebrow">Introduction</span>
+            <h2 id="intro-h2">What is Differentiation?</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Differentiation is the branch of calculus that studies <em>how quantities change</em>. It gives us
+            the exact rate at which one variable changes with respect to another — the mathematical language of
+            motion, growth, and optimisation.</p>
+          </div>
+          <p class="body-para">
+            Consider a car travelling along a straight road. Its position changes over time. The <strong>speed</strong>
+            at any instant is the rate of change of position with respect to time. Differentiation gives us a precise
+            way to calculate that instantaneous rate — not an average over an interval, but the exact value at a
+            single moment. This idea underpins engineering, economics, physics, biology, and every quantitative
+            science taught at Kenyan universities.
+          </p>
+          <p class="body-para">
+            In the CBC Senior Secondary curriculum, differentiation is introduced as part of the
+            <strong>Pure Mathematics</strong> strand. Students are expected to understand the derivative conceptually,
+            apply the standard rules fluently, and use differentiation to solve practical problems involving rates of
+            change, optimisation, and curve sketching.
+          </p>
+
+          <h3 class="sub-heading">The Gradient of a Curve</h3>
+          <p class="body-para">
+            For a straight line, the gradient (slope) is constant: rise ÷ run. For a curve, the gradient is
+            <em>different at every point</em>. The derivative of a function gives the gradient of the
+            <strong>tangent line</strong> to the curve at any chosen point.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Geometric Interpretation</div>
+            <div class="fb-math">
+              If y = f(x), then f′(x) = gradient of the tangent to the curve at x<br><br>
+              f′(x) &gt; 0  →  curve is rising (increasing) at x<br>
+              f′(x) &lt; 0  →  curve is falling (decreasing) at x<br>
+              f′(x) = 0  →  tangent is horizontal → possible stationary point
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Notation for the Derivative</h3>
+          <p class="body-para">Several equivalent notations are used across different contexts and textbooks:</p>
+          <div class="formula-block multi">
+            <div class="fb-label">Derivative Notation — All Forms</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Leibniz notation</span><span class="fb-eq">dy/dx &nbsp; (read: "dee y by dee x")</span></div>
+              <div class="fb-row"><span class="fb-name">Lagrange / prime</span><span class="fb-eq">f′(x) &nbsp; (read: "f prime of x")</span></div>
+              <div class="fb-row"><span class="fb-name">Operator notation</span><span class="fb-eq">Df(x) or D[f(x)]</span></div>
+              <div class="fb-row"><span class="fb-name">Newton / dot (physics)</span><span class="fb-eq">ẋ &nbsp; (used when differentiating with respect to time)</span></div>
+              <div class="fb-row"><span class="fb-name">Second derivative</span><span class="fb-eq">d²y/dx² &nbsp; or &nbsp; f′′(x)</span></div>
+              <div class="fb-row"><span class="fb-name">nth derivative</span><span class="fb-eq">dⁿy/dxⁿ &nbsp; or &nbsp; f⁽ⁿ⁾(x)</span></div>
+            </div>
+          </div>
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">ℹ️</span>
+            <div><strong>KCSE Exam Note:</strong> In Kenya Certificate of Secondary Education (KCSE) and
+            CBC Senior Secondary assessments, Leibniz notation (dy/dx) is the most commonly used and expected
+            in solutions. Always state your working using this notation unless the question specifies otherwise.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2 — FIRST PRINCIPLES
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="first-principles" aria-labelledby="fp-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">lim</div>
+          <div>
+            <span class="ls-eyebrow">Foundations</span>
+            <h2 id="fp-h2">Differentiation from First Principles</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>First principles shows <em>where the derivative comes from</em>. Before applying any rules, every
+            student should understand this foundational definition — it is the formal mathematical foundation
+            upon which all differentiation rests.</p>
+          </div>
+          <p class="body-para">
+            The idea begins with a secant line — a straight line connecting two points on a curve. If those
+            two points are very close together, the secant line approximates the tangent. As the horizontal
+            distance between the points approaches zero, the secant line becomes the tangent, and its gradient
+            becomes the derivative.
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Definition — The Derivative from First Principles</div>
+            <div class="fb-math highlight-formula">
+              f′(x) = lim<sub>h→0</sub> [f(x + h) − f(x)] / h
+            </div>
+          </div>
+          <p class="body-para">
+            Here, <strong>h</strong> represents the small horizontal change (sometimes written as Δx or δx).
+            As h approaches 0, we are making the interval smaller and smaller until we arrive at the
+            instantaneous rate of change at exactly the point x.
+          </p>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — First Principles</div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Ex 1</span>
+                Differentiate f(x) = x² from first principles
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Step 1</span>
+                  <div>Write f(x + h): &nbsp; <strong>f(x + h) = (x + h)² = x² + 2xh + h²</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 2</span>
+                  <div>Form f(x + h) − f(x): &nbsp; <strong>(x² + 2xh + h²) − x² = 2xh + h²</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 3</span>
+                  <div>Divide by h: &nbsp; <strong>(2xh + h²) / h = 2x + h</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 4</span>
+                  <div>Take the limit as h → 0: &nbsp; <strong>lim(2x + h) = 2x</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">∴ f′(x) = 2x</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Ex 2</span>
+                Differentiate f(x) = 3x² − 5x + 2 from first principles
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Step 1</span>
+                  <div>f(x + h) = 3(x+h)² − 5(x+h) + 2 = <strong>3x² + 6xh + 3h² − 5x − 5h + 2</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 2</span>
+                  <div>f(x+h) − f(x) = <strong>6xh + 3h² − 5h</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 3</span>
+                  <div>Divide by h: <strong>6x + 3h − 5</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 4</span>
+                  <div>As h → 0: <strong>6x − 5</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">∴ f′(x) = 6x − 5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem">
+                <span class="we-num">Ex 3</span>
+                Differentiate f(x) = 1/x from first principles
+              </div>
+              <div class="we-steps">
+                <div class="we-step">
+                  <span class="step-n">Step 1</span>
+                  <div>f(x+h) = 1/(x+h)</div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 2</span>
+                  <div>f(x+h) − f(x) = 1/(x+h) − 1/x = <strong>[x − (x+h)] / [x(x+h)] = −h / [x(x+h)]</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 3</span>
+                  <div>Divide by h: <strong>−1 / [x(x+h)]</strong></div>
+                </div>
+                <div class="we-step">
+                  <span class="step-n">Step 4</span>
+                  <div>As h → 0: <strong>−1/x²</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">∴ f′(x) = −1/x²</div>
+            </div>
+
+          </div><!-- /worked-examples -->
+
+          <div class="callout-warn">
+            <span class="cw-icon" aria-hidden="true">⚠️</span>
+            <div><strong>Exam Requirement:</strong> In KCSE and CBC Senior Secondary assessments, when a question
+            says <em>"differentiate from first principles"</em>, you <em>must</em> show the limit definition.
+            Simply applying a rule (e.g. power rule) will earn zero marks even if the answer is correct.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 3 — BASIC RULES
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="basic-rules" aria-labelledby="br-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📋</div>
+          <div>
+            <span class="ls-eyebrow">Core Rules</span>
+            <h2 id="br-h2">Basic Differentiation Rules</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Once first principles are understood, these four rules allow us to differentiate almost any
+            polynomial function instantly — without repeating the limit process each time.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">The Four Basic Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Power Rule</span><span class="fb-eq">d/dx(xⁿ) = nxⁿ⁻¹ &nbsp; (for any real n)</span></div>
+              <div class="fb-row"><span class="fb-name">Constant Rule</span><span class="fb-eq">d/dx(c) = 0 &nbsp; (the derivative of any constant is zero)</span></div>
+              <div class="fb-row"><span class="fb-name">Constant Multiple</span><span class="fb-eq">d/dx[c·f(x)] = c·f′(x)</span></div>
+              <div class="fb-row"><span class="fb-name">Sum / Difference</span><span class="fb-eq">d/dx[f(x) ± g(x)] = f′(x) ± g′(x)</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Applying the Power Rule — Special Cases</h3>
+          <p class="body-para">
+            The power rule applies not only to positive integer powers but also to negative powers,
+            fractional powers, and roots. The key step is to rewrite the expression in the form xⁿ first.
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Rewriting Before Differentiating</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Square root</span><span class="fb-eq">√x = x^(1/2) &nbsp;→&nbsp; d/dx = (1/2)x^(−1/2) = 1/(2√x)</span></div>
+              <div class="fb-row"><span class="fb-name">Cube root</span><span class="fb-eq">∛x = x^(1/3) &nbsp;→&nbsp; d/dx = (1/3)x^(−2/3)</span></div>
+              <div class="fb-row"><span class="fb-name">Reciprocal</span><span class="fb-eq">1/x = x^(−1) &nbsp;→&nbsp; d/dx = −x^(−2) = −1/x²</span></div>
+              <div class="fb-row"><span class="fb-name">Reciprocal square</span><span class="fb-eq">1/x² = x^(−2) &nbsp;→&nbsp; d/dx = −2x^(−3) = −2/x³</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Basic Rules</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Differentiate y = 4x⁵ − 3x³ + 7x − 2</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>Differentiate term by term using power rule + constant rule:</div>
+                </div>
+                <div class="we-step"><span class="step-n">Working</span>
+                  <div>d/dx(4x⁵) = <strong>20x⁴</strong> &nbsp;·&nbsp; d/dx(−3x³) = <strong>−9x²</strong> &nbsp;·&nbsp; d/dx(7x) = <strong>7</strong> &nbsp;·&nbsp; d/dx(−2) = <strong>0</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">dy/dx = 20x⁴ − 9x² + 7</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Differentiate y = √x + 1/x²</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Rewrite</span>
+                  <div>y = x^(1/2) + x^(−2)</div>
+                </div>
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>d/dx(x^(1/2)) = (1/2)x^(−1/2) &nbsp;·&nbsp; d/dx(x^(−2)) = −2x^(−3)</div>
+                </div>
+                <div class="we-step"><span class="step-n">Simplify</span>
+                  <div>= 1/(2√x) − 2/x³</div>
+                </div>
+              </div>
+              <div class="we-answer">dy/dx = 1/(2√x) − 2/x³</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 3</span> Differentiate y = (3x² − 2x + 5) / x &nbsp;&nbsp;(simplify first)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Simplify</span>
+                  <div>Divide each term by x: &nbsp; y = 3x − 2 + 5x^(−1)</div>
+                </div>
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>d/dx(3x) = 3 &nbsp;·&nbsp; d/dx(−2) = 0 &nbsp;·&nbsp; d/dx(5x^(−1)) = −5x^(−2)</div>
+                </div>
+              </div>
+              <div class="we-answer">dy/dx = 3 − 5/x²</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 4 — TRIG, EXP, LOG
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="trig-exp-log" aria-labelledby="tel-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">sin</div>
+          <div>
+            <span class="ls-eyebrow">Standard Results</span>
+            <h2 id="tel-h2">Derivatives of Trig, Exponential &amp; Log Functions</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>These are <em>standard results</em> that must be memorised. They are proved using first principles
+            or limits of trigonometric functions, but at secondary level you are expected to know and apply them directly.</p>
+          </div>
+
+          <div class="identity-table" role="table" aria-label="Standard derivatives">
+            <div class="it-row it-head">
+              <div class="it-label">Function f(x)</div>
+              <div class="it-eq">Derivative f′(x)</div>
+            </div>
+            <div class="it-row it-highlight">
+              <div class="it-label">sin x</div>
+              <div class="it-eq">cos x</div>
+            </div>
+            <div class="it-row">
+              <div class="it-label">cos x</div>
+              <div class="it-eq">−sin x</div>
+            </div>
+            <div class="it-row it-highlight">
+              <div class="it-label">tan x</div>
+              <div class="it-eq">sec²x</div>
+            </div>
+            <div class="it-row">
+              <div class="it-label">sec x</div>
+              <div class="it-eq">sec x · tan x</div>
+            </div>
+            <div class="it-row it-highlight">
+              <div class="it-label">cosec x</div>
+              <div class="it-eq">−cosec x · cot x</div>
+            </div>
+            <div class="it-row">
+              <div class="it-label">cot x</div>
+              <div class="it-eq">−cosec²x</div>
+            </div>
+            <div class="it-row it-highlight">
+              <div class="it-label">eˣ</div>
+              <div class="it-eq">eˣ &nbsp; <em>(the exponential function is its own derivative)</em></div>
+            </div>
+            <div class="it-row">
+              <div class="it-label">aˣ (a &gt; 0, a ≠ 1)</div>
+              <div class="it-eq">aˣ · ln a</div>
+            </div>
+            <div class="it-row it-highlight">
+              <div class="it-label">ln x (x &gt; 0)</div>
+              <div class="it-eq">1/x</div>
+            </div>
+            <div class="it-row">
+              <div class="it-label">log_a x</div>
+              <div class="it-eq">1 / (x · ln a)</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Standard Derivatives</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find d/dx [e^(3x)]</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Rule</span>
+                  <div>This is a composite function: outer = eˣ, inner = 3x. Use chain rule.</div>
+                </div>
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>d/dx[e^(3x)] = e^(3x) × d/dx(3x) = e^(3x) × 3</div>
+                </div>
+              </div>
+              <div class="we-answer">= 3e^(3x)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Find d/dx [ln(x² + 1)]</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Rule</span>
+                  <div>d/dx[ln(u)] = (1/u) × u′ by chain rule. Here u = x² + 1.</div>
+                </div>
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>= (1/(x²+1)) × 2x</div>
+                </div>
+              </div>
+              <div class="we-answer">= 2x/(x² + 1)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 3</span> Find d/dx [sin(3x) + cos(x²)]</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Term 1</span>
+                  <div>d/dx[sin(3x)] = cos(3x) × 3 = <strong>3cos(3x)</strong></div>
+                </div>
+                <div class="we-step"><span class="step-n">Term 2</span>
+                  <div>d/dx[cos(x²)] = −sin(x²) × 2x = <strong>−2x·sin(x²)</strong></div>
+                </div>
+              </div>
+              <div class="we-answer">= 3cos(3x) − 2x·sin(x²)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 4</span> Differentiate y = 5 · 2ˣ</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Rule</span>
+                  <div>d/dx(aˣ) = aˣ · ln a. Here a = 2.</div>
+                </div>
+                <div class="we-step"><span class="step-n">Apply</span>
+                  <div>dy/dx = 5 × 2ˣ × ln 2</div>
+                </div>
+              </div>
+              <div class="we-answer">dy/dx = 5 · 2ˣ · ln 2</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 5 — PRODUCT, QUOTIENT, CHAIN
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="product-quotient-chain" aria-labelledby="pqc-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">🔗</div>
+          <div>
+            <span class="ls-eyebrow">Composite Rules</span>
+            <h2 id="pqc-h2">Product, Quotient &amp; Chain Rules</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>These three rules extend differentiation to <em>combinations</em> of functions — products, quotients,
+            and compositions. They are among the most frequently examined rules in both KCSE and CBC Senior
+            Secondary mathematics.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">The Three Composite Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Product Rule</span><span class="fb-eq">d/dx(uv) = u′v + uv′ &nbsp;&nbsp; [where u and v are functions of x]</span></div>
+              <div class="fb-row"><span class="fb-name">Quotient Rule</span><span class="fb-eq">d/dx(u/v) = (u′v − uv′) / v² &nbsp;&nbsp; [v ≠ 0]</span></div>
+              <div class="fb-row"><span class="fb-name">Chain Rule</span><span class="fb-eq">d/dx[f(g(x))] = f′(g(x)) · g′(x) &nbsp;&nbsp; (function of a function)</span></div>
+              <div class="fb-row"><span class="fb-name">Chain Rule (Leibniz)</span><span class="fb-eq">dy/dx = (dy/du) × (du/dx)</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">How to Choose Which Rule to Use</h3>
+          <div class="method-tabs">
+            <div class="mt-block">
+              <div class="mt-title">🔵 Product Rule</div>
+              <div class="mt-desc">Use when differentiating two functions <strong>multiplied together</strong>, e.g. y = x² · sin x or y = e^x · ln x. Neither can be simplified away.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">🟠 Quotient Rule</div>
+              <div class="mt-desc">Use when differentiating one function <strong>divided by another</strong>, e.g. y = sin x / x². Can also be done via product rule with a negative power.</div>
+            </div>
+            <div class="mt-block">
+              <div class="mt-title">🟢 Chain Rule</div>
+              <div class="mt-desc">Use when differentiating a <strong>function inside another function</strong>, e.g. y = (3x+1)⁵ or y = sin(x²). The inner function is the key.</div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Product Rule</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Differentiate y = x² · sin x</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Identify</span><div>u = x² → u′ = 2x &nbsp;&nbsp; v = sin x → v′ = cos x</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = u′v + uv′ = (2x)(sin x) + (x²)(cos x)</div></div>
+              </div>
+              <div class="we-answer">dy/dx = 2x sin x + x² cos x</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Differentiate y = e^x · ln x</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Identify</span><div>u = eˣ → u′ = eˣ &nbsp;&nbsp; v = ln x → v′ = 1/x</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = eˣ · ln x + eˣ · (1/x)</div></div>
+                <div class="we-step"><span class="step-n">Factor</span><div>= eˣ(ln x + 1/x)</div></div>
+              </div>
+              <div class="we-answer">dy/dx = eˣ(ln x + 1/x)</div>
+            </div>
+
+            <div class="we-title" style="margin-top:1.2rem;">Worked Examples — Quotient Rule</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 3</span> Differentiate y = (x² + 1)/(x − 2)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Identify</span><div>u = x²+1 → u′ = 2x &nbsp;&nbsp; v = x−2 → v′ = 1</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = [2x(x−2) − (x²+1)(1)] / (x−2)²</div></div>
+                <div class="we-step"><span class="step-n">Expand</span><div>= [2x² − 4x − x² − 1] / (x−2)² = (x² − 4x − 1)/(x−2)²</div></div>
+              </div>
+              <div class="we-answer">dy/dx = (x² − 4x − 1) / (x − 2)²</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 4</span> Differentiate y = sin x / x²</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Identify</span><div>u = sin x → u′ = cos x &nbsp;&nbsp; v = x² → v′ = 2x</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = [x² cos x − sin x · 2x] / x⁴</div></div>
+                <div class="we-step"><span class="step-n">Factor</span><div>= x[x cos x − 2 sin x] / x⁴ = (x cos x − 2 sin x) / x³</div></div>
+              </div>
+              <div class="we-answer">dy/dx = (x cos x − 2 sin x) / x³</div>
+            </div>
+
+            <div class="we-title" style="margin-top:1.2rem;">Worked Examples — Chain Rule</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 5</span> Differentiate y = (3x² + 5)⁷</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Identify</span><div>Outer: u⁷, Inner: u = 3x²+5 → u′ = 6x</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = 7(3x²+5)⁶ × 6x</div></div>
+              </div>
+              <div class="we-answer">dy/dx = 42x(3x² + 5)⁶</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 6</span> Differentiate y = √(4x³ − x)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Rewrite</span><div>y = (4x³ − x)^(1/2). Inner: u = 4x³−x → u′ = 12x²−1</div></div>
+                <div class="we-step"><span class="step-n">Apply</span><div>dy/dx = (1/2)(4x³−x)^(−1/2) × (12x²−1)</div></div>
+              </div>
+              <div class="we-answer">dy/dx = (12x² − 1) / [2√(4x³ − x)]</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 6 — STATIONARY POINTS
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="stationary-points" aria-labelledby="sp-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">∧∨</div>
+          <div>
+            <span class="ls-eyebrow">Applications</span>
+            <h2 id="sp-h2">Stationary Points, Maxima &amp; Minima</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>A stationary point is any point where the gradient equals zero — that is, where the tangent line is
+            horizontal. Identifying and classifying stationary points is one of the most important applications of
+            differentiation in KCSE and CBC Senior Secondary assessments.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Procedure: Finding &amp; Classifying Stationary Points</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Step 1</span><span class="fb-eq">Find f′(x) and set f′(x) = 0. Solve for x.</span></div>
+              <div class="fb-row"><span class="fb-name">Step 2</span><span class="fb-eq">Find y-coordinates: substitute each x back into f(x).</span></div>
+              <div class="fb-row"><span class="fb-name">Step 3</span><span class="fb-eq">Find f′′(x) — the second derivative.</span></div>
+              <div class="fb-row"><span class="fb-name">Classify: f′′ &lt; 0</span><span class="fb-eq">Local maximum (curve is concave down at that point)</span></div>
+              <div class="fb-row"><span class="fb-name">Classify: f′′ &gt; 0</span><span class="fb-eq">Local minimum (curve is concave up at that point)</span></div>
+              <div class="fb-row"><span class="fb-name">Classify: f′′ = 0</span><span class="fb-eq">Inconclusive — check sign of f′(x) on either side (first derivative test)</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Stationary Points</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find and classify all stationary points of f(x) = x³ − 3x + 2</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><div>f′(x) = 3x² − 3. Set f′(x) = 0: &nbsp; 3x² − 3 = 0 &nbsp;→&nbsp; x² = 1 &nbsp;→&nbsp; <strong>x = 1 or x = −1</strong></div></div>
+                <div class="we-step"><span class="step-n">Step 2</span><div>f(1) = 1 − 3 + 2 = <strong>0</strong> &nbsp;·&nbsp; f(−1) = −1 + 3 + 2 = <strong>4</strong></div></div>
+                <div class="we-step"><span class="step-n">Step 3</span><div>f′′(x) = 6x</div></div>
+                <div class="we-step"><span class="step-n">Classify</span><div>At x = 1: f′′(1) = 6 &gt; 0 → <strong>local minimum (1, 0)</strong><br>At x = −1: f′′(−1) = −6 &lt; 0 → <strong>local maximum (−1, 4)</strong></div></div>
+                <div class="we-step check-step"><span class="step-n">✓ Check</span><div>The function is a cubic with positive leading coefficient, so it should have a maximum to the left and a minimum to the right. ✔</div></div>
+              </div>
+              <div class="we-answer">Local maximum at (−1, 4); Local minimum at (1, 0)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Find the turning points of y = 2x³ + 3x² − 12x + 1 and determine their nature</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><div>dy/dx = 6x² + 6x − 12 = 0 &nbsp;→&nbsp; 6(x² + x − 2) = 0 &nbsp;→&nbsp; 6(x+2)(x−1) = 0</div></div>
+                <div class="we-step"><span class="step-n">x values</span><div><strong>x = −2 or x = 1</strong></div></div>
+                <div class="we-step"><span class="step-n">y values</span><div>y(−2) = 2(−8)+3(4)−12(−2)+1 = −16+12+24+1 = <strong>21</strong><br>y(1) = 2+3−12+1 = <strong>−6</strong></div></div>
+                <div class="we-step"><span class="step-n">d²y/dx²</span><div>= 12x + 6</div></div>
+                <div class="we-step"><span class="step-n">Classify</span><div>At x = −2: 12(−2)+6 = −18 &lt; 0 → <strong>maximum</strong><br>At x = 1: 12(1)+6 = 18 &gt; 0 → <strong>minimum</strong></div></div>
+              </div>
+              <div class="we-answer">Maximum at (−2, 21); Minimum at (1, −6)</div>
+            </div>
+
+          </div>
+
+          <div class="callout-note">
+            <span class="cn-icon" aria-hidden="true">ℹ️</span>
+            <div><strong>Point of Inflection:</strong> A point of inflection occurs where the curve changes concavity
+            (concave up to concave down or vice versa). It is found where f′′(x) = 0 AND the sign of f′′(x) changes.
+            If f′′(x) = 0 but does not change sign, it is NOT a point of inflection.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 7 — RATES & OPTIMISATION
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="rates-optimisation" aria-labelledby="ro-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📐</div>
+          <div>
+            <span class="ls-eyebrow">Applications</span>
+            <h2 id="ro-h2">Rates of Change &amp; Optimisation</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Rates of change and optimisation are the most practically valuable applications of differentiation.
+            They appear in every field from engineering and physics to economics and biology — and in every
+            KCSE Paper 2 examination.</p>
+          </div>
+
+          <h3 class="sub-heading">Connected Rates of Change</h3>
+          <p class="body-para">
+            When two quantities are related through an equation, their rates of change are connected through
+            the chain rule. If y depends on x which depends on t (time), then:
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Connected Rates of Change</div>
+            <div class="fb-math">dy/dt = (dy/dx) × (dx/dt)</div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Rates of Change &amp; Optimisation</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> The radius of a circle is increasing at 3 cm/s. Find the rate at which the area increases when the radius is 5 cm.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Given</span><div>dr/dt = 3 cm/s. Find dA/dt when r = 5.</div></div>
+                <div class="we-step"><span class="step-n">Formula</span><div>A = πr² &nbsp;→&nbsp; dA/dr = 2πr</div></div>
+                <div class="we-step"><span class="step-n">Chain rule</span><div>dA/dt = (dA/dr) × (dr/dt) = 2πr × 3 = 6πr</div></div>
+                <div class="we-step"><span class="step-n">Substitute</span><div>When r = 5: &nbsp; dA/dt = 6π × 5 = <strong>30π cm²/s</strong></div></div>
+              </div>
+              <div class="we-answer">Rate of increase of area = 30π ≈ 94.25 cm²/s</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2 — Optimisation</span> A farmer has 120 m of fencing. He wants to enclose a rectangular field against a straight wall (no fence needed on the wall side). Find the maximum area he can enclose.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Let</span><div>Length parallel to wall = L. Width = w. Only three sides need fencing: L + 2w = 120 → L = 120 − 2w</div></div>
+                <div class="we-step"><span class="step-n">Area</span><div>A = L × w = (120 − 2w)w = 120w − 2w²</div></div>
+                <div class="we-step"><span class="step-n">Maximise</span><div>dA/dw = 120 − 4w = 0 &nbsp;→&nbsp; <strong>w = 30 m</strong></div></div>
+                <div class="we-step"><span class="step-n">Check</span><div>d²A/dw² = −4 &lt; 0 &nbsp;→&nbsp; maximum confirmed. L = 120 − 60 = 60 m.</div></div>
+              </div>
+              <div class="we-answer">Maximum area = 60 × 30 = 1800 m²</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 3 — Optimisation</span> A box with a square base and open top has volume 256 cm³. Find the dimensions that minimise the surface area.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Let</span><div>Base side = x, height = h. Volume: V = x²h = 256 → h = 256/x²</div></div>
+                <div class="we-step"><span class="step-n">SA</span><div>SA = x² + 4xh = x² + 4x(256/x²) = x² + 1024/x</div></div>
+                <div class="we-step"><span class="step-n">Minimise</span><div>d(SA)/dx = 2x − 1024/x² = 0 &nbsp;→&nbsp; 2x³ = 1024 &nbsp;→&nbsp; x³ = 512 &nbsp;→&nbsp; <strong>x = 8 cm</strong></div></div>
+                <div class="we-step"><span class="step-n">Height</span><div>h = 256/64 = <strong>4 cm</strong></div></div>
+                <div class="we-step check-step"><span class="step-n">✓</span><div>d²(SA)/dx² = 2 + 2048/x³. At x=8: = 2 + 4 = 6 &gt; 0 → minimum ✔</div></div>
+              </div>
+              <div class="we-answer">Minimum surface area when x = 8 cm, h = 4 cm. SA = 64 + 128 = 192 cm²</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 8 — TANGENTS & NORMALS
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="tangents-normals" aria-labelledby="tn-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">∠</div>
+          <div>
+            <span class="ls-eyebrow">Applications</span>
+            <h2 id="tn-h2">Equations of Tangents &amp; Normals</h2>
+          </div>
+          <span class="ls-level-badge level-secondary">Secondary / A-Level</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>The derivative gives the gradient of the tangent line to a curve at any point. The normal is
+            perpendicular to the tangent at that same point. Both are regularly examined in KCSE Paper 2.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Key Relationships</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Gradient of tangent</span><span class="fb-eq">m_T = f′(x₁) &nbsp; evaluated at the given point x₁</span></div>
+              <div class="fb-row"><span class="fb-name">Gradient of normal</span><span class="fb-eq">m_N = −1/m_T &nbsp; (perpendicular → product of gradients = −1)</span></div>
+              <div class="fb-row"><span class="fb-name">Equation of tangent</span><span class="fb-eq">y − y₁ = m_T (x − x₁)</span></div>
+              <div class="fb-row"><span class="fb-name">Equation of normal</span><span class="fb-eq">y − y₁ = m_N (x − x₁)</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Tangents &amp; Normals</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find the equation of the tangent to y = x³ − 2x at the point (2, 4)</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Step 1</span><div>dy/dx = 3x² − 2. At x = 2: m = 3(4) − 2 = <strong>10</strong></div></div>
+                <div class="we-step"><span class="step-n">Step 2</span><div>Tangent: y − 4 = 10(x − 2) &nbsp;→&nbsp; y = 10x − 20 + 4</div></div>
+              </div>
+              <div class="we-answer">Tangent: y = 10x − 16</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Find the equation of the normal to y = x² + 3x at x = 1</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">y-coord</span><div>y(1) = 1 + 3 = 4. Point: (1, 4)</div></div>
+                <div class="we-step"><span class="step-n">Tangent m</span><div>dy/dx = 2x+3. At x=1: m_T = 5</div></div>
+                <div class="we-step"><span class="step-n">Normal m</span><div>m_N = −1/5</div></div>
+                <div class="we-step"><span class="step-n">Equation</span><div>y − 4 = −(1/5)(x − 1) &nbsp;→&nbsp; 5y − 20 = −x + 1 &nbsp;→&nbsp; x + 5y = 21</div></div>
+              </div>
+              <div class="we-answer">Normal: x + 5y = 21</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 9 — IMPLICIT & PARAMETRIC
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="implicit-parametric" aria-labelledby="ip-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⚙️</div>
+          <div>
+            <span class="ls-eyebrow">Advanced</span>
+            <h2 id="ip-h2">Implicit &amp; Parametric Differentiation</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">A-Level / University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Not all functions are written as y = f(x). Implicit and parametric forms require specialised
+            differentiation techniques that extend beyond the standard rules.</p>
+          </div>
+
+          <h3 class="sub-heading">Implicit Differentiation</h3>
+          <p class="body-para">
+            An <strong>implicit function</strong> is one where y cannot easily be isolated — e.g. x² + y² = 25.
+            To differentiate, apply d/dx to both sides. When you differentiate a term involving y, multiply by dy/dx
+            using the chain rule (since y is a function of x).
+          </p>
+          <div class="formula-block">
+            <div class="fb-label">Key Principle</div>
+            <div class="fb-math">d/dx[f(y)] = f′(y) · dy/dx &nbsp;&nbsp; (chain rule applied to y)</div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Implicit Differentiation</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find dy/dx for x² + y² = 25</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Differentiate</span><div>d/dx(x²) + d/dx(y²) = d/dx(25) &nbsp;→&nbsp; 2x + 2y(dy/dx) = 0</div></div>
+                <div class="we-step"><span class="step-n">Solve</span><div>2y(dy/dx) = −2x &nbsp;→&nbsp; dy/dx = −x/y</div></div>
+              </div>
+              <div class="we-answer">dy/dx = −x/y</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Find dy/dx for x³ + y³ = 6xy</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Differentiate</span><div>3x² + 3y²(dy/dx) = 6y + 6x(dy/dx)</div></div>
+                <div class="we-step"><span class="step-n">Collect</span><div>3y²(dy/dx) − 6x(dy/dx) = 6y − 3x²</div></div>
+                <div class="we-step"><span class="step-n">Factor</span><div>(dy/dx)(3y² − 6x) = 6y − 3x²</div></div>
+                <div class="we-step"><span class="step-n">Solve</span><div>dy/dx = (6y − 3x²)/(3y² − 6x) = (2y − x²)/(y² − 2x)</div></div>
+              </div>
+              <div class="we-answer">dy/dx = (2y − x²)/(y² − 2x)</div>
+            </div>
+
+          </div>
+
+          <h3 class="sub-heading">Parametric Differentiation</h3>
+          <p class="body-para">
+            In <strong>parametric equations</strong>, both x and y are expressed as functions of a third variable
+            (the parameter), usually t. To find dy/dx, use the chain rule in the form:
+          </p>
+          <div class="formula-block multi">
+            <div class="fb-label">Parametric Derivatives</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">First derivative</span><span class="fb-eq">dy/dx = (dy/dt) ÷ (dx/dt)</span></div>
+              <div class="fb-row"><span class="fb-name">Second derivative</span><span class="fb-eq">d²y/dx² = [d/dt(dy/dx)] ÷ (dx/dt)</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Parametric Differentiation</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 3</span> Given x = t², y = t³, find dy/dx and d²y/dx² in terms of t</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Derivatives</span><div>dx/dt = 2t &nbsp;&nbsp; dy/dt = 3t²</div></div>
+                <div class="we-step"><span class="step-n">dy/dx</span><div>dy/dx = 3t²/(2t) = <strong>3t/2</strong></div></div>
+                <div class="we-step"><span class="step-n">d²y/dx²</span><div>d/dt(dy/dx) = d/dt(3t/2) = 3/2. &nbsp; d²y/dx² = (3/2) ÷ (2t) = <strong>3/(4t)</strong></div></div>
+              </div>
+              <div class="we-answer">dy/dx = 3t/2 &nbsp;&nbsp; d²y/dx² = 3/(4t)</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 4</span> The parametric equations of a curve are x = 2cos t, y = 3sin t. Find the gradient at t = π/4.</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Derivatives</span><div>dx/dt = −2sin t &nbsp;&nbsp; dy/dt = 3cos t</div></div>
+                <div class="we-step"><span class="step-n">dy/dx</span><div>dy/dx = 3cos t / (−2sin t) = −(3/2)cot t</div></div>
+                <div class="we-step"><span class="step-n">At t = π/4</span><div>cot(π/4) = 1 &nbsp;→&nbsp; dy/dx = −3/2</div></div>
+              </div>
+              <div class="we-answer">Gradient at t = π/4 is −3/2</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 10 — PARTIAL DERIVATIVES
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="partial-derivatives" aria-labelledby="pd-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">∂</div>
+          <div>
+            <span class="ls-eyebrow">University Level</span>
+            <h2 id="pd-h2">Partial Derivatives &amp; Multivariable Calculus</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>When a function depends on more than one variable — e.g. temperature depends on both position and time
+            — we need partial derivatives to study how the function changes with respect to each variable
+            independently while holding the others fixed.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Partial Derivative Rules</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">∂f/∂x</span><span class="fb-eq">Differentiate with respect to x, treating all other variables as constants</span></div>
+              <div class="fb-row"><span class="fb-name">∂f/∂y</span><span class="fb-eq">Differentiate with respect to y, treating all other variables as constants</span></div>
+              <div class="fb-row"><span class="fb-name">Gradient vector</span><span class="fb-eq">∇f = (∂f/∂x, ∂f/∂y) &nbsp; — points in the direction of steepest increase</span></div>
+              <div class="fb-row"><span class="fb-name">Critical points</span><span class="fb-eq">Set ∂f/∂x = 0 AND ∂f/∂y = 0 simultaneously</span></div>
+            </div>
+          </div>
+
+          <div class="worked-examples">
+            <div class="we-title">Worked Examples — Partial Derivatives</div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find all partial derivatives of f(x, y) = x²y + 3xy² − 5y</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">∂f/∂x</span><div>Treat y as constant: &nbsp; <strong>∂f/∂x = 2xy + 3y²</strong></div></div>
+                <div class="we-step"><span class="step-n">∂f/∂y</span><div>Treat x as constant: &nbsp; <strong>∂f/∂y = x² + 6xy − 5</strong></div></div>
+                <div class="we-step"><span class="step-n">∂²f/∂x²</span><div>Differentiate ∂f/∂x again w.r.t. x: &nbsp; <strong>= 2y</strong></div></div>
+                <div class="we-step"><span class="step-n">∂²f/∂y²</span><div>Differentiate ∂f/∂y again w.r.t. y: &nbsp; <strong>= 6x</strong></div></div>
+                <div class="we-step"><span class="step-n">Mixed ∂²f/∂x∂y</span><div>Differentiate ∂f/∂x w.r.t. y: &nbsp; <strong>= 2x + 6y</strong></div></div>
+              </div>
+              <div class="we-answer">∂f/∂x = 2xy + 3y² &nbsp;·&nbsp; ∂f/∂y = x² + 6xy − 5</div>
+            </div>
+
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 2</span> Find the critical points of f(x, y) = x³ − 3x + y² − 4y</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">∂f/∂x = 0</span><div>3x² − 3 = 0 &nbsp;→&nbsp; x = ±1</div></div>
+                <div class="we-step"><span class="step-n">∂f/∂y = 0</span><div>2y − 4 = 0 &nbsp;→&nbsp; y = 2</div></div>
+              </div>
+              <div class="we-answer">Critical points at (1, 2) and (−1, 2)</div>
+            </div>
+
+          </div>
+
+          <h3 class="sub-heading">The Second Derivative Test for Two Variables</h3>
+          <div class="formula-block multi">
+            <div class="fb-label">Discriminant D = f_xx · f_yy − (f_xy)²</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">D &gt; 0, f_xx &gt; 0</span><span class="fb-eq">Local minimum</span></div>
+              <div class="fb-row"><span class="fb-name">D &gt; 0, f_xx &lt; 0</span><span class="fb-eq">Local maximum</span></div>
+              <div class="fb-row"><span class="fb-name">D &lt; 0</span><span class="fb-eq">Saddle point (neither max nor min)</span></div>
+              <div class="fb-row"><span class="fb-name">D = 0</span><span class="fb-eq">Inconclusive — further analysis needed</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 11 — TAYLOR & MACLAURIN
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="taylor-maclaurin" aria-labelledby="tm-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">∑</div>
+          <div>
+            <span class="ls-eyebrow">University Level</span>
+            <h2 id="tm-h2">Taylor &amp; Maclaurin Series</h2>
+          </div>
+          <span class="ls-level-badge level-advanced">University</span>
+        </div>
+        <div class="ls-body">
+          <div class="concept-intro">
+            <p>Taylor and Maclaurin series express functions as infinite polynomials using their derivatives.
+            This powerful technique allows computers to compute transcendental functions like sin, cos, and eˣ
+            numerically, and underpins much of numerical analysis and physics.</p>
+          </div>
+
+          <div class="formula-block multi">
+            <div class="fb-label">Taylor &amp; Maclaurin Series</div>
+            <div class="fb-grid">
+              <div class="fb-row"><span class="fb-name">Taylor Series (about x = a)</span><span class="fb-eq">f(x) = f(a) + f′(a)(x−a) + f′′(a)(x−a)²/2! + f′′′(a)(x−a)³/3! + ···</span></div>
+              <div class="fb-row"><span class="fb-name">Maclaurin Series (a = 0)</span><span class="fb-eq">f(x) = f(0) + f′(0)x + f′′(0)x²/2! + f′′′(0)x³/3! + ···</span></div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Common Maclaurin Series — Must Know</h3>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">eˣ (all x)</div>
+              <div class="fs-items">
+                <div class="fs-item">eˣ = 1 + x + x²/2! + x³/3! + x⁴/4! + ···</div>
+                <div class="fs-item">= Σ xⁿ/n! (n=0 to ∞)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">sin x (all x)</div>
+              <div class="fs-items">
+                <div class="fs-item">sin x = x − x³/3! + x⁵/5! − x⁷/7! + ···</div>
+                <div class="fs-item">= Σ (−1)ⁿ x^(2n+1)/(2n+1)!</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">cos x (all x)</div>
+              <div class="fs-items">
+                <div class="fs-item">cos x = 1 − x²/2! + x⁴/4! − x⁶/6! + ···</div>
+                <div class="fs-item">= Σ (−1)ⁿ x^(2n)/(2n)!</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">ln(1+x) (|x| ≤ 1)</div>
+              <div class="fs-items">
+                <div class="fs-item">ln(1+x) = x − x²/2 + x³/3 − x⁴/4 + ···</div>
+                <div class="fs-item">Valid for −1 &lt; x ≤ 1</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="worked-examples" style="margin-top:1.4rem;">
+            <div class="we-title">Worked Example — Maclaurin Series</div>
+            <div class="we-card">
+              <div class="we-problem"><span class="we-num">Ex 1</span> Find the Maclaurin series for f(x) = eˣ up to the x³ term</div>
+              <div class="we-steps">
+                <div class="we-step"><span class="step-n">Evaluate</span><div>f(0) = e⁰ = 1. f′(x) = eˣ → f′(0) = 1. f′′(x) = eˣ → f′′(0) = 1. f′′′(x) = eˣ → f′′′(0) = 1.</div></div>
+                <div class="we-step"><span class="step-n">Series</span><div>eˣ ≈ 1 + x + x²/2! + x³/3! = 1 + x + x²/2 + x³/6</div></div>
+              </div>
+              <div class="we-answer">eˣ ≈ 1 + x + x²/2 + x³/6 + ···</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 12 — FORMULA SHEET
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="formula-sheet" aria-labelledby="fs-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">📌</div>
+          <div>
+            <span class="ls-eyebrow">Reference</span>
+            <h2 id="fs-h2">Complete Differentiation Formula Sheet</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">Use this as your quick-reference summary for all rules and standard results covered in this lesson.</p>
+          <div class="formula-sheet-grid">
+            <div class="fs-card">
+              <div class="fs-title">First Principles</div>
+              <div class="fs-items">
+                <div class="fs-item">f′(x) = lim[h→0] [f(x+h)−f(x)]/h</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Power &amp; Basic Rules</div>
+              <div class="fs-items">
+                <div class="fs-item">d/dx(xⁿ) = nxⁿ⁻¹</div>
+                <div class="fs-item">d/dx(c) = 0</div>
+                <div class="fs-item">d/dx[cf(x)] = c·f′(x)</div>
+                <div class="fs-item">d/dx[f ± g] = f′ ± g′</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Composite Rules</div>
+              <div class="fs-items">
+                <div class="fs-item">Product: (uv)′ = u′v + uv′</div>
+                <div class="fs-item">Quotient: (u/v)′ = (u′v−uv′)/v²</div>
+                <div class="fs-item">Chain: d/dx[f(g)] = f′(g)·g′</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Trig Derivatives</div>
+              <div class="fs-items">
+                <div class="fs-item">d/dx(sin x) = cos x</div>
+                <div class="fs-item">d/dx(cos x) = −sin x</div>
+                <div class="fs-item">d/dx(tan x) = sec²x</div>
+                <div class="fs-item">d/dx(sec x) = sec x tan x</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Exp &amp; Log</div>
+              <div class="fs-items">
+                <div class="fs-item">d/dx(eˣ) = eˣ</div>
+                <div class="fs-item">d/dx(aˣ) = aˣ ln a</div>
+                <div class="fs-item">d/dx(ln x) = 1/x</div>
+                <div class="fs-item">d/dx(log_a x) = 1/(x ln a)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Parametric</div>
+              <div class="fs-items">
+                <div class="fs-item">dy/dx = (dy/dt)/(dx/dt)</div>
+                <div class="fs-item">d²y/dx² = [d(dy/dx)/dt]/(dx/dt)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Tangents &amp; Normals</div>
+              <div class="fs-items">
+                <div class="fs-item">Tangent: y−y₁ = f′(x₁)(x−x₁)</div>
+                <div class="fs-item">Normal: m_N = −1/f′(x₁)</div>
+              </div>
+            </div>
+            <div class="fs-card">
+              <div class="fs-title">Stationary Points</div>
+              <div class="fs-items">
+                <div class="fs-item">Set f′(x) = 0 to find</div>
+                <div class="fs-item">f′′ &gt; 0 → minimum</div>
+                <div class="fs-item">f′′ &lt; 0 → maximum</div>
+                <div class="fs-item">f′′ = 0 → use 1st deriv. test</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 13 — COMMON ERRORS
+      ══════════════════════════════════════════ -->
+      <section class="lesson-section" id="common-errors" aria-labelledby="ce-h2">
+        <div class="ls-header">
+          <div class="ls-icon" aria-hidden="true">⚠️</div>
+          <div>
+            <span class="ls-eyebrow">Exam Preparation</span>
+            <h2 id="ce-h2">Common Errors &amp; How to Avoid Them</h2>
+          </div>
+          <span class="ls-level-badge level-foundation">All Levels</span>
+        </div>
+        <div class="ls-body">
+          <p class="body-para">
+            These are the errors most frequently seen by examiners in KCSE and CBC Senior Secondary marking scripts.
+            Recognising and avoiding these errors can mean the difference between a B and an A.
+          </p>
+          <div class="errors-grid">
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> d/dx(x⁵) = x⁴</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> d/dx(x⁵) = 5x⁴</div>
+              <div class="ec-note">Forgot to bring down the power. Power rule: multiply by n, then reduce power by 1.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> d/dx(sin x²) = cos x²</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> d/dx(sin(x²)) = 2x·cos(x²)</div>
+              <div class="ec-note">Chain rule was not applied. The inner function x² gives a factor of 2x.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> d/dx(x² · sin x) = 2x · cos x</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> = 2x·sin x + x²·cos x</div>
+              <div class="ec-note">Product rule forgotten. Both terms must appear: u′v AND uv′.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> d/dx(e^(x²)) = e^(x²)</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> = 2x·e^(x²)</div>
+              <div class="ec-note">Chain rule: the inner function x² gives a factor of 2x. eˣ is its own derivative only when the exponent is exactly x.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> d/dx(7) = 1</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> d/dx(7) = 0</div>
+              <div class="ec-note">The derivative of any constant is zero, not 1. Confusing with integration.</div>
+            </div>
+
+            <div class="error-card">
+              <div class="ec-wrong"><span class="ec-label">✗ Wrong:</span> f′′ = 0 means inflection point</div>
+              <div class="ec-right"><span class="ec-label">✓ Right:</span> Also check sign change of f′′</div>
+              <div class="ec-note">f′′(x₀) = 0 alone does not confirm inflection. The sign of f′′ must change at that point.</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── TOPIC NAVIGATION FOOTER ── -->
+      <nav class="topic-nav-footer" aria-label="Adjacent lessons">
+        <a href="limits.html" class="tnf-btn tnf-prev">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>
+            <span class="tnf-label">Previous Lesson</span>
+            <span class="tnf-name">Limits</span>
+          </span>
+        </a>
+        <a href="integration.html" class="tnf-btn tnf-next">
+          <span>
+            <span class="tnf-label">Next Lesson</span>
+            <span class="tnf-name">Integration</span>
+          </span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+      </nav>
+
+    </main><!-- /topic-content -->
+
+  </div><!-- /topic-layout -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ronny Best <span>Mathematics</span></a>
+        <p>Free CBC-aligned mathematics education for every student, everywhere in Kenya.</p>
+        <p class="footer-cbc-note">Aligned to KICD · TSC · MoE Kenya · BECF</p>
+        <p class="footer-contact-line">
+          <a href="mailto:ronnymwenda89@gmail.com">ronnymwenda89@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+254799188900">+254 799 188 900</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="fn-col">
+          <h4>Lessons</h4>
+          <ul>
+            <li><a href="algebra.html">Algebra</a></li>
+            <li><a href="trigonometry.html">Trigonometry</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="limits.html">Limits</a></li>
+            <li><a href="differentiation.html">Differentiation</a></li>
+            <li><a href="integration.html">Integration</a></li>
+            <li><a href="vectors.html">Vectors</a></li>
+            <li><a href="matrices.html">Matrices</a></li>
+            <li><a href="conics.html">Conics</a></li>
+            <li><a href="sequences.html">Sequences &amp; Series</a></li>
+            <li><a href="complex.html">Complex Numbers</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="volumes.html">Volumes</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="math-lessons.html">All Lessons</a></li>
+            <li><a href="tasks.html">Practice Problems</a></li>
+            <li><a href="mind.html">Brain Games</a></li>
+            <li><a href="ask-mwalimu.html">Ask Mwalimu</a></li>
+          </ul>
+        </div>
+        <div class="fn-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="progress.html">My Progress</a></li>
+            <li><a href="about.html">About Mwalimu Ronny</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ronny Best Mathematics. Content written and reviewed by Mwalimu Ronny Mwenda Best, B.Ed Science (University of Embu), Embu County, Kenya.</p>
+      <p class="footer-mission">Helping Kenyan students master mathematics through clear, structured, CBC-aligned, expert-led instruction.</p>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="topic.js"></script>
 </body>
 </html>
