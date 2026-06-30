@@ -1,7 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
-   RONNY BEST MATHEMATICS — topic.js  v4.0
+   RONNY BEST MATHEMATICS — topic.js  v4.1
    Shared by all lesson/topic pages
-   Handles: nav hamburger · search · TOC active · progress bar
+   Handles: nav hamburger · search · TOC active · progress bar ·
+            independent two-pane scrolling (sidebar + content)
    ═══════════════════════════════════════════════════════════════ */
 "use strict";
 
@@ -63,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Support both id="nav-menu" and id="navList"
   const navMenu   = document.getElementById("nav-menu") || document.getElementById("navList");
 
-  
+
 
   /* ══════════════════════════════════════════
      SEARCH — supports both navSearchBar and searchBar IDs
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchClear  = document.getElementById("searchClear");
   const searchResults= document.getElementById("searchResults");
 
-  
+
 
   /* Toggle button (mobile only) */
   if (searchToggle && searchBar) {
@@ -153,6 +154,25 @@ document.addEventListener("DOMContentLoaded", () => {
       searchResults.hidden = true;
     }
   });
+
+  /* ══════════════════════════════════════════
+     SYNC NAV HEIGHT — keeps the sticky sidebar's
+     top offset and section scroll-margin accurate
+     on any device, even after webfonts load.
+  ══════════════════════════════════════════ */
+  const mainNav = document.getElementById("main-nav") || document.querySelector(".main-nav");
+
+  function syncNavHeight() {
+    if (!mainNav) return;
+    const h = Math.ceil(mainNav.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--nav-h", h + "px");
+  }
+  syncNavHeight();
+  window.addEventListener("resize", syncNavHeight, { passive: true });
+  window.addEventListener("orientationchange", syncNavHeight, { passive: true });
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncNavHeight).catch(() => {});
+  }
 
   /* ══════════════════════════════════════════
      TOC ACTIVE STATE + READING PROGRESS
