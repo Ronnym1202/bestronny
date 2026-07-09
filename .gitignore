@@ -1,2 +1,27 @@
 # Local Netlify folder
 .netlify
+
+# Android signing key — NEVER commit this
+android.keystore
+*.keystore
+*.jks
+
+# Build outputs — large, regenerable, not needed in git
+app-release-signed.apk
+app-release-bundle.aab
+app-release-unsigned-aligned.apk
+*.apk
+*.aab
+*.idsig
+
+# Android/Gradle build artifacts
+/build/
+/app/build/
+/.gradle/
+/gradle/
+/gradlew
+/gradlew.bat
+local.properties
+
+# Bubblewrap generated files that reference local paths
+twa-manifest.json

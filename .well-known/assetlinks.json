@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ronnymwenda.bestmaths",
+    "sha256_cert_fingerprints": ["8B:4F:B4:5E:6E:C6:79:19:94:79:A7:02:BA:5E:BA:B2:85:C1:04:49:5C:A0:B6:5A:82:2C:03:89:AB:20:3F:1D"]
+  }
+}]

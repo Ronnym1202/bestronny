@@ -27,7 +27,7 @@ const CORE = [
   "/complex.html",
   "/areas.html",
   "/volumes.html",
-  "/IMAGES/P2.png",
+  "/IMAGES/og-image.png",
   "/IMAGES/icon-192.png",
   "/IMAGES/icon-512.png",
   "/manifest.json"

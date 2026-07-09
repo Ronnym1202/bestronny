@@ -69,7 +69,7 @@ def head(title, desc, topic_id):
   <meta name="description" content="{desc}">
   {ADSENSE_SCRIPT}
   <link rel="stylesheet" href="topic.css">
-  <link rel="icon" type="image/png" href="../IMAGES/P2.png">
+  <link rel="icon" type="image/png" href="../IMAGES/og-image.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>

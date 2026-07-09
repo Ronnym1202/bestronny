@@ -16,7 +16,7 @@
   <meta property="og:description" content="Free step-by-step CBC-aligned algebra, trigonometry, calculus and statistics lessons with worked examples, practice problems, and expert guidance from a qualified Kenyan teacher.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bestronny.netlify.app/">
-  <meta property="og:image" content="IMAGES/P2.png">
+  <meta property="og:image" content="IMAGES/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ronny Best Mathematics | Free CBC-Aligned Maths Lessons">
   <meta name="twitter:description" content="Free CBC-aligned maths lessons for Kenyan secondary school and college students.">
@@ -27,8 +27,8 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
 
  <!-- PWA -->
 <link rel="manifest" href="manifest.json">
@@ -50,7 +50,17 @@
       wait_for_update: 500
     });
   </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
+  <script>
+window.addeventlistener('load', function() {
+  settimeout(function() {
+    var s = document.createelement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202';
+    s.crossorigin = 'anonymous';
+    document.head.appendchild(s);
+  }, 2000);
+});
+</script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="index.css">
